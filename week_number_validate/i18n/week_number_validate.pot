@@ -1,0 +1,29 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* week_number_validate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-01 00:13+0000\n"
+"PO-Revision-Date: 2017-12-01 00:13+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: week_number_validate
+#: code:addons/week_number_validate/models/sale_order.py:14
+#: model:ir.model.fields,field_description:week_number_validate.field_sale_order_date_validator
+#, python-format
+msgid "Date Validator"
+msgstr ""
+
+#. module: week_number_validate
+#: model:ir.model,name:week_number_validate.model_sale_order
+msgid "Sales Order"
+msgstr ""
+

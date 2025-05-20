@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="waybill_complement10" inherit_id="l10n_mx_edi_extended.cfdiv33_ext">
+        <xpath expr="//*[name()='cfdi:Comprobante']" position="attributes" t-if="record.l10n_mx_edi_origin">
+            <attribute name="xmlns__cartaporte">http://www.sat.gob.mx/CartaPorte</attribute>
+        </xpath>
+        <xpath expr="*" position="inside">
+            <t t-if="record.l10n_mx_edi_waybill_complement and not record.l10n_mx_edi_skip_waybill">
+                <cfdi:Complemento
+                    xmlns:cfdi="http://www.sat.gob.mx/cfd/3">
+                    <!--t t-set="distancias" t-value="record._l10n_mx_edi_waybill_distance()"/-->
+                    <cartaporte:CartaPorte
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://www.sat.gob.mx/CartaPorte http://www.sat.gob.mx/sitio_internet/cfd/CartaPorte/CartaPorte.xsd"
+                        xmlns:cartaporte="http://www.sat.gob.mx/CartaPorte"
+                        Version="1.0"
+                        t-att-TranspInternac="transp_internac"
+                        t-att-EntradaSalidaMerc="entrada_salida_merc"
+                        t-att-ViaEntradaSalida="via_entrada_salida"
+                        t-att-TotalDistRec="distancias['total']">
+                        <cartaporte:Ubicaciones>
+                            <cartaporte:Ubicacion>
+                                <t t-set="id_orig" t-value="False"/>
+                                <t t-if="cant_trans">
+                                    <t t-set="id_orig" t-value="'OR000001'"/>
+                                </t>
+                                <cartaporte:Origen 
+                                    t-att-IDOrigen="id_orig" 
+                                    t-att-RFCRemitente="record.travel_ids[0].partner_id.vat" 
+                                    t-att-NombreRemitente="record.travel_ids[0].partner_id.name" 
+                                    t-att-FechaHoraSalida="record.travel_ids[0].date_start_real.strftime('%Y-%m-%dT%H:%M:%S')"/>
+                                <!--cartaporte:Domicilio 
+                                    t-att-Calle="record.travel_ids[0].departure_address_id.street_name" 
+                                    t-att-Localidad="record.travel_ids[0].departure_address_id.l10n_mx_edi_locality_id.code" 
+                                    t-att-Municipio="record.travel_ids[0].departure_address_id.city_id.l10n_mx_edi_code" 
+                                    t-att-Estado="record.travel_ids[0].departure_address_id.state_id.code" 
+                                    t-att-Pais="record.travel_ids[0].departure_address_id.country_id.l10n_mx_edi_code" 
+                                    t-att-CodigoPostal="record.travel_ids[0].departure_address_id.zip"/-->
+                            </cartaporte:Ubicacion>
+                            <t t-set="num_delivery" t-value="0"/>
+                            <t t-foreach="record.travel_ids" t-as="travel">
+                                <t t-foreach="travel.delivery_ids" t-as="delyvery">
+                                    <cartaporte:Ubicacion
+                                        t-att-DistanciaRecorrida="distancias[str(num_delivery)]">
+                                        <t t-set="id_dest" t-value="False"/>
+                                        <t t-if="cant_trans">
+                                            <t t-set="id_dest" t-value="'DE' + str(delyvery.sequence).zfill(6)"/>
+                                        </t>
+                                        <cartaporte:Destino 
+                                            t-att-IDDestino="id_dest"
+                                            t-att-RFCDestinatario="delyvery.partner_id.parent_id.vat"
+                                            t-att-FechaHoraProgLlegada="delyvery.date_time_delivery.strftime('%Y-%m-%dT%H:%M:%S')"/>
+                                        <!--cartaporte:Domicilio 
+                                            t-att-Calle="delyvery.partner_id.street_name" 
+                                            t-att-Localidad="delyvery.partner_id.l10n_mx_edi_locality_id.code" 
+                                            t-att-Municipio="delyvery.partner_id.city_id.l10n_mx_edi_code" 
+                                            t-att-Estado="delyvery.partner_id.state_id.code" 
+                                            t-att-Pais="delyvery.partner_id.country_id.l10n_mx_edi_code" 
+                                            t-att-CodigoPostal="delyvery.partner_id.zip"/-->
+                                    </cartaporte:Ubicacion>
+                                    <t t-set="num_delivery" t-value="num_delivery + 1"/>
+                                </t>
+                            </t>
+                        </cartaporte:Ubicaciones>
+                        <t t-set="weight_total" t-value="record._get_transportable_weights('weight', False)"/>
+                        <t t-set="qty_total" t-value="len(record.mapped('travel_ids').mapped('transportable_line_ids').mapped('transportable_id'))"/>
+                        <cartaporte:Mercancias 
+                            t-att-PesoNetoTotal="weight_total" 
+                            t-att-NumTotalMercancias="qty_total">
+                            <t t-foreach="record.mapped('travel_ids').mapped('transportable_line_ids').mapped('transportable_id')" t-as="transportable">
+                                <t t-set="weight" t-value="record._get_transportable_weights('weight', transportable.id)"/>
+                                <t t-set="qty" t-value="sum(record.mapped('travel_ids').mapped('transportable_line_ids').filtered(lambda x: x.transportable_id.id == transportable.id).mapped('quantity'))"/>
+                                <cartaporte:Mercancia 
+                                    t-att-BienesTransp="transportable.products_services_id.code" 
+                                    t-att-Descripcion="transportable.name"
+                                    t-att-Cantidad="qty" 
+                                    t-att-ClaveUnidad="transportable.uom_id.l10n_mx_edi_code_sat_id.code" 
+                                    t-att-MaterialPeligroso="'Sí' if transportable.dangerous else False" 
+                                    t-att-Embalaje="transportable.packing_type_id.code"
+                                    t-att-CveMaterialPeligroso="transportable.dangerous_material_id.code"
+                                    t-att-PesoEnKg="weight">
+                                    <!-- ValorMercancia=""-->
+                                    <t t-if="cant_trans">
+                                        <t t-foreach="record.mapped('travel_ids').mapped('transportable_line_ids').filtered(lambda x: x.transportable_id.id == transportable.id)" t-as="cant_tran">
+                                            <t t-set="id_dest" t-value="'DE' + str(cant_tran.delivery_id.sequence).zfill(6)"/>
+                                            <cartaporte:CantidadTransporta 
+                                                t-att-Cantidad="cant_tran.quantity" 
+                                                IDOrigen="OR000001" 
+                                                t-att-IDDestino="id_dest" 
+                                                CvesTransporte="01"/>
+                                        </t>
+                                    </t>
+                                    <!--t t-set="net_weight" t-value="record._get_transportable_weights('net_weight', transportable.id)"/-->
+                                    <!--t t-set="tara_weight" t-value="record._get_transportable_weights('tara_weight', transportable.id)"/-->
+                                    <!--cartaporte:DetalleMercancia 
+                                        t-att-UnidadPeso="transportable.unit_weight_id.code"
+                                        t-att-PesoBruto="weight"
+                                        t-att-PesoNeto="net_weight"
+                                        t-att-PesoTara="tara_weight"/-->
+                                </cartaporte:Mercancia>
+                            </t>
+                            <cartaporte:AutotransporteFederal 
+                                t-att-PermSCT="record.company_id.stc_type_permit.code"
+                                t-att-NumPermisoSCT="record.company_id.sct_reg"
+                                t-att-NombreAseg="record.travel_ids[0].insurance_supplier_id.name"
+                                t-att-NumPolizaSeguro="record.travel_ids[0].insurance_policy">
+                                <cartaporte:IdentificacionVehicular 
+                                    t-att-ConfigVehicular="record.travel_ids[0].unit_id.conf_vehicle.code"
+                                    t-att-PlacaVM="record.travel_ids[0].unit_id.license_plate"
+                                    t-att-AnioModeloVM="record.travel_ids[0].unit_id.year_model"/>
+                                <cartaporte:Remolques>
+                                    <cartaporte:Remolque 
+                                        t-att-SubTipoRem="record.travel_ids[0].trailer1_id.sub_type_rem.code"
+                                        t-att-Placa="record.travel_ids[0].trailer1_id.license_plate"/>
+                                    <t t-if="record.travel_ids[0].trailer2_id">
+                                        <cartaporte:Remolque 
+                                        t-att-SubTipoRem="record.travel_ids[0].trailer2_id.sub_type_rem.code"
+                                        t-att-Placa="record.travel_ids[0].trailer2_id.license_plate"/>
+                                    </t>
+                                </cartaporte:Remolques>
+                            </cartaporte:AutotransporteFederal>
+                        </cartaporte:Mercancias>
+                        <cartaporte:FiguraTransporte CveTransporte="01">
+                            <cartaporte:Operadores>
+                                <cartaporte:Operador
+                                    t-att-RFCOperador="record.travel_ids[0].employee_id.rfc"
+                                    t-att-NumLicencia="record.travel_ids[0].employee_id.driver_license"
+                                    t-att-NombreOperador="record.travel_ids[0].employee_id.name">
+                                    <!--cartaporte:Domicilio 
+                                        t-att-Calle="record.travel_ids[0].employee_id.address_home_id.street_name"
+                                        t-att-Localidad="record.travel_ids[0].employee_id.address_home_id.l10n_mx_edi_locality_id.code" 
+                                        t-att-Municipio="record.travel_ids[0].employee_id.address_home_id.city_id.l10n_mx_edi_code"
+                                        t-att-Estado="record.travel_ids[0].employee_id.address_home_id.state_id.code"
+                                        t-att-Pais="record.travel_ids[0].employee_id.address_home_id.country_id.l10n_mx_edi_code"
+                                        t-att-CodigoPostal="record.travel_ids[0].employee_id.address_home_id.zip" /-->
+                                </cartaporte:Operador>
+                                <t t-if="record.travel_ids[0].employee_two_id">
+                                    <cartaporte:Operador
+                                    t-att-RFCOperador="record.travel_ids[0].employee_two_id.rfc"
+                                    t-att-NumLicencia="record.travel_ids[0].employee_two_id.driver_license"
+                                    t-att-NombreOperador="record.travel_ids[0].employee_two_id.name">
+                                        <!--cartaporte:Domicilio 
+                                            t-att-Calle="record.travel_ids[0].employee_two_id.address_home_id.street_name"
+                                            t-att-Localidad="record.travel_ids[0].employee_two_id.address_home_id.l10n_mx_edi_locality_id.code" 
+                                            t-att-Municipio="record.travel_ids[0].employee_two_id.address_home_id.city_id.l10n_mx_edi_code"
+                                            t-att-Estado="record.travel_ids[0].employee_two_id.address_home_id.state_id.code"
+                                            t-att-Pais="record.travel_ids[0].employee_two_id.address_home_id.country_id.l10n_mx_edi_code"
+                                            t-att-CodigoPostal="record.travel_ids[0].employee_two_id.address_home_id.zip" /-->
+                                    </cartaporte:Operador>
+                                </t>
+                            </cartaporte:Operadores>
+                        </cartaporte:FiguraTransporte>
+                     </cartaporte:CartaPorte>
+                </cfdi:Complemento>
+            </t>
+        </xpath>
+    </template>
+</odoo>

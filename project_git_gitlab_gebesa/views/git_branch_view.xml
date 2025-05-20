@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_git_branch" model="ir.ui.view">
+        <field name="name">project.git.branch.form</field>
+        <field name="model">project.git.branch</field>
+        <field name="inherit_id" ref="project_git.view_git_branch_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='url']" position="after">
+                    <field name="merged"/>
+                    <field name="protected"/>
+                    <field name="developers_can_push"/>
+                    <field name="developers_can_merge"/>
+                    <field name="can_push"/>
+                    <field name="default"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+    <record id="view_git_branch_tree" model="ir.ui.view">
+        <field name="name">project.git.branch.tree</field>
+        <field name="model">project.git.branch</field>
+        <field name="inherit_id" ref="project_git.view_git_branch_tree"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='repository_id']" position="after">
+                    <field name="merged"/>
+                    <field name="protected"/>
+                    <field name="default"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>

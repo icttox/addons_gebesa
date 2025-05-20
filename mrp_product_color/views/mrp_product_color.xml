@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_product_color_form'>
+        	<field name='name'>mrp.product.color.form</field>
+        	<field name='model'>mrp.product.color</field>
+        	<field name='arch' type='xml'>
+        		<form string='Color'>
+        			<header>
+        			</header>
+        			<sheet>
+    					<div class="oe_title">
+        					<label for="code" class="oe_edit_only" />
+        					<h1>
+        						<field name='code'/>
+        					</h1>
+        				</div>
+                        <group>
+        					<field name='name'/>
+        				</group>
+        			</sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+        		</form>
+        	</field>
+        </record>
+
+        <record model='ir.ui.view' id='mrp_product_color_tree'>
+        	<field name='name'>mrp.product.color.tree</field>
+        	<field name='model'>mrp.product.color</field>
+        	<field name='arch' type='xml'>
+        		<tree string='Color'>
+        			<field name='code'/>
+        			<field name='name'/>
+                    <field name='write_uid'/>
+                    <field name='write_date'/>
+        		</tree>
+        	</field>
+        </record>
+
+        <record id='action_mrp_product_color' model='ir.actions.act_window'>
+        	<field name='name'>Color</field>
+        	<field name='res_model'>mrp.product.color</field>
+        	<field name='view_type'>form</field>
+        	<field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="mrp_product_color_menu" name="Color" parent="stock.menu_stock_config_settings" action="action_mrp_product_color"/>
+    </data>
+</odoo>

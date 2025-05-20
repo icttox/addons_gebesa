@@ -1,0 +1,247 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_mx_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-24 00:11+0000\n"
+"PO-Revision-Date: 2017-09-24 00:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid ",\n"
+"                        <span>PLACE OF EXPEDITION </span>"
+msgstr ""
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<b><span>No. Items: </span></b>"
+msgstr "<b><span>No. Partidas: </span></b>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<b><span>Total</span></b>"
+msgstr ""
+
+#. module: l10n_mx_pos
+#: code:addons/l10n_mx_pos/models/point_of_sale.py:164
+#, python-format
+msgid "<br/> Cancellation date: %scancellation_date"
+msgstr ""
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>Certification date and time:</span>"
+msgstr "<span>Fecha y hora de certificación:</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>DESCRIPTION</span>"
+msgstr "<span>DESCRIPCIÓN</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>Discount</span>"
+msgstr "<span>Descuento</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>Emitter:</span>"
+msgstr "<span>Emisor:</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>Fiscal folio:</span>"
+msgstr "<span>Folio fiscal:</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>PART NO</span>"
+msgstr "<span>NO. PARTE</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>QUANTITY</span>"
+msgstr "<span>CANTIDAD</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>Ret.</span>"
+msgstr ""
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>Serial number of SAT certificate:</span>"
+msgstr "<span>Número de Serie del Certificado del SAT:</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>Serial number of emitter certificate:</span>"
+msgstr "<span>Número de serie del certificado del emisor:</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>Sub Total</span>"
+msgstr "<span>Subtotal</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>THE PAYMENT OF THIS INVOICE IS </span>"
+msgstr "<span>EL PAGO DE ESTA FACTURA ES </span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>THIS IS A PRINTED REPRESENTATION OF A CFDI</span>"
+msgstr "<span>ESTA ES UNA REPRESENTACIÓN IMPRESA DE UN CFDI</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>TOTAL</span>"
+msgstr ""
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>Total amount with letters</span>"
+msgstr "<span>Monto total en letras</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>UNIT PRICE</span>"
+msgstr "<span>VALOR UNIT</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<span>UoM</span>"
+msgstr "<span>UdM</span>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<strong><span>Account Number</span></strong>"
+msgstr "<strong><span>Número de Cuenta</span></strong>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<strong><span>Digital stamp SAT</span></strong>"
+msgstr "<strong><span>Sello digital SAT</span></strong>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<strong><span>Digital stamp of the emitter</span></strong>"
+msgstr "<strong><span>Sello digital del emisor</span></strong>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<strong><span>Original chain complement of digital certification SAT</span></strong>"
+msgstr "<strong><span>Cadena original del complemento de certificación digital SAT</span></strong>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.report_xml_session_document
+msgid "<strong><span>Payment Method</span></strong>"
+msgstr "<strong><span>Método de Pago</span></strong>"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.view_pos_session_inherit_form_l10n_mx_base
+msgid "Cancel XMLs"
+msgstr ""
+
+#. module: l10n_mx_pos
+#: model:ir.actions.server,name:l10n_mx_pos.create_invoice_pos_server_action
+msgid "Create invoice PoS"
+msgstr "Crear factura PdV"
+
+#. module: l10n_mx_pos
+#: model:ir.model.fields,field_description:l10n_mx_pos.field_report_l10n_mx_pos_report_xml_session_display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: l10n_mx_pos
+#: code:addons/l10n_mx_pos/models/point_of_sale.py:261
+#, python-format
+msgid "Error in XML generation!"
+msgstr "Error en la generación del XML!"
+
+#. module: l10n_mx_pos
+#: model:ir.ui.view,arch_db:l10n_mx_pos.view_pos_session_inherit_form_l10n_mx_base
+msgid "Generate XMLs"
+msgstr "Generar XMLs"
+
+#. module: l10n_mx_pos
+#: model:ir.model.fields,field_description:l10n_mx_pos.field_report_l10n_mx_pos_report_xml_session_id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_mx_pos
+#: model:ir.model.fields,help:l10n_mx_pos.field_pos_order_xml_generated
+msgid "Indicate if this order was consider in the session XML"
+msgstr "Indica si esta orden ya fue considerada en el XML de la sesión"
+
+#. module: l10n_mx_pos
+#: model:ir.model.fields,field_description:l10n_mx_pos.field_report_l10n_mx_pos_report_xml_session___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: l10n_mx_pos
+#: code:addons/l10n_mx_pos/models/point_of_sale.py:274
+#, python-format
+msgid "Orders in session %s."
+msgstr "Ordenes en la sesión %s."
+
+#. module: l10n_mx_pos
+#: model:ir.filters,name:l10n_mx_pos.orders_filter_paid
+msgid "Paid orders with partner"
+msgstr ""
+
+#. module: l10n_mx_pos
+#: code:addons/l10n_mx_pos/models/point_of_sale.py:388
+#: code:addons/l10n_mx_pos/models/point_of_sale.py:468
+#, python-format
+msgid "Please provide a partner for the sale."
+msgstr ""
+
+#. module: l10n_mx_pos
+#: model:ir.model,name:l10n_mx_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr ""
+
+#. module: l10n_mx_pos
+#: model:ir.model.fields,field_description:l10n_mx_pos.field_pos_order_xml_generated
+msgid "XML Generated"
+msgstr "XML Generado"
+
+#. module: l10n_mx_pos
+#: model:ir.actions.report.xml,name:l10n_mx_pos.report_xmlsession
+msgid "XML Session"
+msgstr "XML Sesión"
+
+#. module: l10n_mx_pos
+#: model:ir.model,name:l10n_mx_pos.model_pos_session
+msgid "pos.session"
+msgstr ""
+
+#. module: l10n_mx_pos
+#: model:ir.model,name:l10n_mx_pos.model_report_l10n_mx_pos_report_xml_session
+msgid "report.l10n_mx_pos.report_xml_session"
+msgstr ""
+
+#. module: l10n_mx_pos
+#: code:addons/l10n_mx_pos/models/point_of_sale.py:169
+#: code:addons/l10n_mx_pos/models/point_of_sale.py:191
+#, python-format
+msgid "with_partner"
+msgstr "con_cliente"
+
+#. module: l10n_mx_pos
+#: code:addons/l10n_mx_pos/models/point_of_sale.py:173
+#: code:addons/l10n_mx_pos/models/point_of_sale.py:189
+#, python-format
+msgid "wo_partner"
+msgstr "sin_cliente"
+

@@ -1,0 +1,141 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sales_order_dealer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20211011\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-21 21:14+0000\n"
+"PO-Revision-Date: 2023-03-21 15:17-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_res_partner_dealer__active
+msgid "Active"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_mrp_production__dealer_id
+#: model:ir.model.fields,field_description:sales_order_dealer.field_sale_order__dealer_id
+msgid "Comerciante"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model,name:sales_order_dealer.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model_terms:ir.actions.act_window,help:sales_order_dealer.action_res_partner_dealer
+msgid "Create Partner Dealer"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_res_partner_dealer__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_res_partner_dealer__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_sale_order__customer_delivery_date
+msgid "Customer delivery date"
+msgstr "Fecha de entrega al cliente"
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_res_partner_dealer__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_res_partner_dealer__id
+msgid "ID"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_res_partner_dealer____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_res_partner_dealer__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_res_partner_dealer__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_res_partner_dealer__name
+msgid "Name"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_sale_order__order_replaced
+msgid ""
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_res_partner_dealer__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.actions.act_window,name:sales_order_dealer.action_res_partner_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_mrp_production__partner_dealer_id
+#: model:ir.model.fields,field_description:sales_order_dealer.field_sale_order__partner_dealer_id
+#: model:ir.ui.menu,name:sales_order_dealer.res_partner_dealer_menu
+#: model_terms:ir.ui.view,arch_db:sales_order_dealer.view_res_partner_dealer_form
+#: model_terms:ir.ui.view,arch_db:sales_order_dealer.view_res_partner_dealer_tree
+msgid "Partner Dealer"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model,name:sales_order_dealer.model_res_partner_dealer
+msgid "Partner dealer"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model,name:sales_order_dealer.model_mrp_production
+msgid "Production Order"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model,name:sales_order_dealer.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_res_partner__requires_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_res_users__requires_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_sale_order__requires_dealer
+msgid "Requires dealer"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_sale_order__shipment_date
+msgid "Shipment Date"
+msgstr "Fecha de embarque"
+
+#. module: sales_order_dealer
+#: model:ir.model.fields,field_description:sales_order_dealer.field_sale_order__supplier_ref
+msgid "Supplier Ref"
+msgstr ""
+
+#. module: sales_order_dealer
+#: model:ir.model,name:sales_order_dealer.model_sale_order
+msgid "sale.order"
+msgstr ""

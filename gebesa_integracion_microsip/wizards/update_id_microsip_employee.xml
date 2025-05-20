@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='update_id_microsip_employee_wizards'>
+            <field name='name'>update.id.microsip.employee.wizards</field>
+            <field name='model'>update.id.microsip.employee</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <group>
+                    </group>
+                    <footer>
+                        <button name="update_id_microsip" string="Import" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_update_id_microsip_employee" model="ir.actions.act_window">
+            <field name="name">Import Employee Microsip Id</field>
+            <field name="res_model">update.id.microsip.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="update_id_microsip_employee_menu" name="Import Employee Microsip Id" parent="gebesa_integracion_microsip.microsip_payroll_submenu" action="action_update_id_microsip_employee" groups="hr_payroll.group_hr_payroll_user"/>
+    </data>
+</odoo>

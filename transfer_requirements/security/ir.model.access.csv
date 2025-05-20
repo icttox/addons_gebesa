@@ -1,0 +1,2 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+trans_requi_manager,transfer_requirements_manager,model_transfer_requirements,group_manager_transfer_requirements,1,1,1,1

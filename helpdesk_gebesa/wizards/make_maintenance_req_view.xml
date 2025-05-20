@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='make_maintenance_req_wizard'>
+        	<field name='name'>make.maintenance.req</field>
+        	<field name='model'>make.maintenance.req</field>
+        	<field name='arch' type='xml'>
+        		<form>
+        			<group>
+        				<field name='employee_id'/>
+                        <field name='tipo'/>
+                        <field name='equipment_id'/>
+                        <field name='user_id'/>
+        			</group>
+        			<footer>
+                        <button name="request_maintenance" string="Request Maintenance" type="object" class="oe_highlight"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+    </data>
+</odoo>

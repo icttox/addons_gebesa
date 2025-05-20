@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="maintenance_request_informatica_gebesa_form" model="ir.ui.view">
+            <field name="name">maintenance.request.informatica.gebesa.form</field>
+            <field name="model">maintenance.request</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/group/field[@name='close_date']" position="after">
+                    <field name="tipo_mante"/>
+                </xpath>
+                <xpath expr="//form/sheet/group/group[2]/field[@name='priority']" position="after">
+                    <field name="garantia"/>
+                </xpath>
+                <xpath expr="//form/sheet/field[@name='description']" position="after">
+                    <field name="technical_description" placeholder="Technical Description ......."/>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='equipment_id']" position="attributes">
+                    <attribute name="domain">[('employee_id', '=', employee_id), ('employee_id', '!=', False)]</attribute>
+                </xpath>
+                <xpath expr="//field[@name='request_date']" position="replace">
+                    <field name="request_date" readonly='0'/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

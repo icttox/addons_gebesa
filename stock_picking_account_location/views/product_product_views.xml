@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model='ir.ui.view' id='product_normal_form_view'>
+        <field name='name'>product.normal.fifo.balance.form.view</field>
+        <field name='model'>product.product</field>
+        <field name='inherit_id' ref="product.product_normal_form_view"/>
+        <field name='arch' type='xml'>
+            <button name="toggle_active" position="after">
+                <button type="object"
+                    name="action_view_fifo_balance"
+                    class="oe_stat_button"
+                    icon="fa-dashboard"
+                    string="FIFO Balance"
+                    groups="base.group_user">
+                </button>
+            </button>
+        </field>
+    </record>
+</odoo>

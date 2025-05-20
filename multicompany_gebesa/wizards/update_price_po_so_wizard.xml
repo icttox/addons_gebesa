@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="update_price_po_so_wizard" model="ir.ui.view">
+            <field name="name">Update Price Po So</field>
+            <field name="model">update.price.po.so.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Update Price">
+                    <group>
+                        <group>
+                            <field name="new_price"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="apply_new_price" class="oe_highlight" string="Update" type="object"/>or
+                        <button class="oe_link" special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

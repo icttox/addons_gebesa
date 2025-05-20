@@ -1,0 +1,62 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_picking_review_buttom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-27 14:20+0000\n"
+"PO-Revision-Date: 2017-04-27 14:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_review_buttom
+#: code:addons/stock_picking_review_buttom/models/stock.py:29
+#, python-format
+msgid "Already reviewed"
+msgstr "Ya ésta revisado"
+
+#. module: stock_picking_review_buttom
+#: code:addons/stock_picking_review_buttom/models/stock.py:15
+#, python-format
+msgid "Change"
+msgstr "Revisar"
+
+#. module: stock_picking_review_buttom
+#: model:ir.ui.view,arch_db:stock_picking_review_buttom.view_picking_form
+msgid "Check"
+msgstr "Revisar"
+
+#. module: stock_picking_review_buttom
+#: code:addons/stock_picking_review_buttom/models/stock.py:43
+#, python-format
+msgid "Needs to be reviewed"
+msgstr "Necesita estar revisado"
+
+#. module: stock_picking_review_buttom
+#: code:addons/stock_picking_review_buttom/models/stock.py:13
+#, python-format
+msgid "No Review"
+msgstr "No Revisado"
+
+#. module: stock_picking_review_buttom
+#: code:addons/stock_picking_review_buttom/models/stock.py:14
+#, python-format
+msgid "Review"
+msgstr "Revisado"
+
+#. module: stock_picking_review_buttom
+#: model:ir.model,name:stock_picking_review_buttom.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"
+
+#. module: stock_picking_review_buttom
+#: code:addons/stock_picking_review_buttom/models/stock.py:26
+#, python-format
+msgid "You can not modify this picking"
+msgstr "No puedes modificar este picking"

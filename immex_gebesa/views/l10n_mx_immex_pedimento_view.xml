@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="view_l10_mx_pedimento_Action">
+            <field name="name">Pedimento</field>
+            <field name="res_model">l10n.mx.immex.pedimento</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('clave_documento', 'in', ['IN', 'V1', 'AF', 'RT'])]</field>
+            <field name="context">{'create':False, 'edit':False, 'delete':False}</field>
+            <field name="groups_id" eval="[(6,0, [ref('system_administrator.group_system_administrator_gebesa')])]"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Pedimento
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="view_l10_mx_pedimento_action_admin">
+            <field name="name">Pedimento(Admin)</field>
+            <field name="res_model">l10n.mx.immex.pedimento</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Pedimento
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="pedimento_menu" name="Pedimento" parent="immex_menu" sequence="10"/>
+        <menuitem id="immex_report" name="Reportes" parent="immex_menu" sequence="30"/>
+        <menuitem id="immex_report_anexo24" name="Anexo 24" parent="immex_report" sequence="10"/>
+        <menuitem id="immex_report_anexo31" name="Anexo 31" parent="immex_report" sequence="11"/>
+
+        <menuitem id="pedimento_submenu" name="Pedimento" parent="pedimento_menu" action="view_l10_mx_pedimento_Action"/>
+        <menuitem id="pedimento_submenu_admin" name="Pedimento(admin)" parent="pedimento_menu" action="view_l10_mx_pedimento_action_admin" sequence="1" groups="system_administrator.group_system_administrator_gebesa"/>
+
+
+        <record model="ir.ui.view" id="view_l10_mx_Action_pedimento_form">
+            <field name="name">Tipo de tabla.form</field>
+            <field name="model">l10n.mx.immex.pedimento</field>
+            <field name="arch" type="xml">
+                <form string="Pedimento Form">
+                    <header>
+                        <button string="Expediente digital" name="descargar_expediente_digital" type="object" default_focus="1" class="btn-primary"/>
+                    </header>
+                    <sheet>
+                        <group col="6" colspan="2">
+                            <field name='patente'/>
+                            <field name='num_pedimento'/>
+                            <field name='clave_aduana'/>
+                            <field name='pedimento_num'/>
+                            <field name='tipo_operacion'/>
+                            <field name='clave_documento'/>
+                            <field name='clave_seccion_aduanera'/>
+                            <field name='curp_contribuyente'/>
+                            <field name='rfc_contribuyente'/>
+                            <field name='curp_agente'/>
+                            <field name='tipo_cambio'/>
+                            <field name='total_flete'/>
+                            <field name='total_seguros'/>
+                            <field name='total_embalages'/>
+                            <field name='total_otros_inc'/>
+                            <field name='total_otros_ded'/>
+                            <field name='peso'/>
+                            <field name='output_medio_transporte'/>
+                            <field name='input_medio_transporte'/>
+                            <field name='medio_transporte'/>
+                            <field name='clave_destino'/>
+                            <field name='nombre_contribuyente'/>
+                            <field name='calle_contribuyente'/>
+                            <field name='num_interior_contribuyente'/>
+                            <field name='num_exterior_contribuyente'/>
+                            <field name='cp'/>
+                            <field name='ciudad'/>
+                            <field name='estado'/>
+                            <field name='pais'/>
+                            <field name='tipo_pedimento'/>
+                            <field name='fecha_pedimento'/>
+                            <field name='fecha_pago_real'/>
+                            <field name='resumen_id'/>
+                            <field name='regime_changed'/>
+                        </group>
+                        <group>
+                            <field name='rectified_with_id'/>
+                        </group>
+                        <notebook>
+                            <page string="Partida">
+                                <div>
+                                    <field name="partida_ids">
+                                        <tree editable="bottom">
+                                            <field name='secuencia_fraccion'/>
+                                            <field name='descripcion'/>
+                                            <field name='pedimento_num'/>
+                                            <field name='cantidad_udm_comercial'/>
+                                            <field name='cantidad_udm_tarifa'/>
+                                            <field name='udm_comercial'/>
+                                            <field name='udm_tarifa'/>
+                                            <field name='clave_documento'/>
+                                            <field name='precio_unitario'/>
+                                            <field name='amount'/>
+                                            <field name='fecha_pago_real'/>
+                                            <field name='resumen_id'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Factura">
+                                <div>
+                                    <field name="factura_ids">
+                                        <tree> 
+                                            <field name='uuid'/>
+                                            <field name='fecha_facturacion'/>
+                                            <field name='num_factura'/>
+                                            <field name='moneda_factura'/>
+                                            <field name='monto_usd'/>
+                                            <field name='monto_extranjera'/>
+                                            <field name='id_fiscal_proveedor'/>
+                                            <field name='nombre_proveedor'/>
+                                            <field name='fecha_real_pago'/>
+                                            <field name='clave_documento'/>
+                                            <field name='resumen_id'/>
+                                            <field name='invoice_id'/>
+                                            <button name="check_vucem" icon="fa-puzzle-piece" type="object" string="Check Vucem"/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Rectificaciones">
+                                <div>
+                                    <field name="rectificaciones_ids">
+                                        <tree editable="bottom">
+                                            <field name='clave_documento_anterior'/>
+                                            <field name='num_pedimento_anterior'/>
+                                            <field name='patente_aduanal_anterior'/>
+                                            <field name='clave_aduanal_anterior'/>
+                                            <field name='fecha_operacion_anterior'/>
+                                            <field name='clave_documento'/>
+                                            <field name='resumen_id'/>
+                                            <field name='fecha_pago'/>
+                                            <field name='fecha_pago_real'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Transporte">
+                                <div>
+                                    <field name="transporte_ids">
+                                        <tree editable="bottom">
+                                            <field name='pais_transportista'/>
+                                            <field name='id_transporte'/>
+                                            <field name='fecha_pago_transport'/>
+                                            <field name='clave_documento'/>
+                                            <field name='resumen_id'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Contenedor">
+                                <div>
+                                    <field name="contenedor_ids">
+                                        <tree editable="bottom">
+                                            <field name='fecha_pago_contenedor'/>
+                                            <field name='num_contenedor'/>
+                                            <field name='clave_documento'/>
+                                            <field name='tipo_contenedor'/>
+                                            <field name='resumen_id'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Fechas">
+                                <div>
+                                    <field name="fechas_ids">
+                                        <tree editable="bottom">
+                                            <field name='fecha_validacion_pago'/>
+                                            <field name='tipo_fecha'/>
+                                            <field name='clave_documento'/>
+                                            <field name='fecha_operacion'/>
+                                            <field name='resumen_id'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Casos">
+                                <div>
+                                    <field name="casos_ids">
+                                        <tree editable="bottom">
+                                            <field name='tipo_pedimento'/>
+                                            <field name='clave_caso'/>
+                                            <field name='clave_documento'/>
+                                            <field name='id_caso'/>
+                                            <field name='fecha_validacion_pago'/>
+                                            <field name='resumen_id'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Observaciones">
+                                <div>
+                                    <field name="observaciones_ids">
+                                        <tree editable="bottom">
+                                            <field name='tipo_pedimento'/>
+                                            <field name='secuencia'/>
+                                            <field name='fecha_pago_real'/>
+                                            <field name='observaciones'/>
+                                            <field name='clave_documento'/>
+                                            <field name='resumen_id'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Guias">
+                                <div>
+                                    <field name="guias_ids">
+                                        <tree editable="bottom">
+                                            <field name='numero_guia'/>
+                                            <field name='tipo_guia'/>
+                                            <field name='fecha_pago_guia'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Cuentas">
+                                <div>
+                                    <field name="cuentas_ids">
+                                        <tree editable="bottom">
+                                                <field name='patente'/>
+                                                <field name='clave_aduana'/>
+                                                <field name='clave_institucion'/>
+                                                <field name='numero_cuenta'/>
+                                                <field name='folio_constancia'/>
+                                                <field name='fecha_constancia'/>
+                                                <field name='tipo_cuenta'/>
+                                                <field name='clave_garantia'/>
+                                                <field name='valor_unitario_titulo'/>
+                                                <field name='total_garantia'/>
+                                                <field name='cantidad'/>
+                                                <field name='titulos'/>
+                                                <field name='fecha_pago_real'/>
+                                                <field name='clave_documento'/>
+                                                <field name='pedimento_id'/>
+                                                <field name='resumen_id'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Tasas">
+                                <div>
+                                    <field name="tasas_ids">
+                                        <tree editable="bottom">
+                                            <field name='tipo_tasa'/>
+                                            <field name='tasa'/>
+                                            <field name='fecha_pago_real'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Contribuciones">
+                                <div>
+                                    <field name="contribuciones_ids">
+                                        <tree editable="bottom">
+                                            <field name='clave_contribucion'/>
+                                            <field name='forma_pago'/>
+                                            <field name='importe'/>
+                                            <field name='fecha_pago_real'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Destinatarios">
+                                <div>
+                                    <field name="destinatarios_ids">
+                                        <tree editable="bottom">
+                                            <field name='patente'/>
+                                            <field name='clave_aduana'/>
+                                            <field name='id_fiscal_destinatario'/>
+                                            <field name='nombre_destinatario'/>
+                                            <field name='calle_destinatario'/>
+                                            <field name='num_interior_destinatario'/>
+                                            <field name='num_exterior_destinatario'/>
+                                            <field name='cp_destinatario'/>
+                                            <field name='ciudad_destinatario'/>
+                                            <field name='pais_destinatario'/>
+                                            <field name='fecha_pago_real'/>
+                                            <field name='clave_documento'/>
+                                            <field name='pedimento_id'/>
+                                            <field name='resumen_id'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Diferencias">
+                                <div>
+                                    <field name="diferencias_ids">
+                                        <tree editable="bottom">
+                                                <field name='clave_contribucion'/>
+                                                <field name='forma_pago'/>
+                                                <field name='importe'/>
+                                                <field name='fecha_pago_real'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Selección">
+                                <div>
+                                    <field name="seleccion_ids">
+                                        <tree editable="bottom">
+                                            <field name='fecha'/>
+                                            <field name='consecutivo'/>
+                                            <field name='hora'/>
+                                            <field name='numero'/>
+                                            <field name='semaforo'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Documentos digitalizados">
+                                <div>
+                                    <field name="documentos_digitalizados_ids" readonly="1">
+                                        <tree editable="bottom">
+                                            <field name='name'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Descargos">
+                                <div>
+                                    <field name="descargos_ids" readonly="1">
+                                        <tree editable="bottom">
+                                            <field name='fecha_operacion_original'/>
+                                            <field name='fraccion_areancelaria_original'/>
+                                            <field name='udm_original'/>
+                                            <field name='cantidad'/>
+                                            <field name='fecha_pago_real'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div> 
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_l10_mx_Action_pedimento_view_tree">
+            <field name="name">Pedimento.tree</field>
+            <field name="model">l10n.mx.immex.pedimento</field>
+            <field name="arch" type="xml">
+                <tree string="Pedimento Tree">
+                    <field name='patente'/>
+                    <field name='num_pedimento'/>
+                    <field name='clave_aduana'/>
+                    <field name='pedimento_num'/>
+                    <field name='tipo_operacion'/>
+                    <field name='clave_documento'/>
+                    <field name='clave_seccion_aduanera'/>
+                    <field name='curp_contribuyente'/>
+                    <field name='rfc_contribuyente'/>
+                    <field name='curp_agente'/>
+                    <field name='tipo_cambio'/>
+                    <field name='total_flete'/>
+                    <field name='total_seguros'/>
+                    <field name='total_embalages'/>
+                    <field name='total_otros_inc'/>
+                    <field name='total_otros_ded'/>
+                    <field name='peso'/>
+                    <field name='output_medio_transporte'/>
+                    <field name='input_medio_transporte'/>
+                    <field name='medio_transporte'/>
+                    <field name='clave_destino'/>
+                    <field name='nombre_contribuyente'/>
+                    <field name='calle_contribuyente'/>
+                    <field name='num_interior_contribuyente'/>
+                    <field name='num_exterior_contribuyente'/>
+                    <field name='cp'/>
+                    <field name='ciudad'/>
+                    <field name='estado'/>
+                    <field name='pais'/>
+                    <field name='tipo_pedimento'/>
+                    <field name='fecha_pedimento'/>
+                    <field name='fecha_pago_real'/>
+                    <field name='resumen_id'/>
+                    <field name='regime_changed'/>
+                    <field name='rectified_with_id'/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

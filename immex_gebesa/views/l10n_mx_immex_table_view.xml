@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="view_l10_mx_Action">
+            <field name="name">Registrar datos</field>
+            <field name="res_model">l10n.mx.immex.table</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Registrar datos
+                </p>
+            </field>
+        </record>
+
+         <menuitem id="table_date_menu" name="Datos immex" parent="configuration_menu"
+                  action="view_l10_mx_Action"/>
+
+        <record model="ir.ui.view" id="view_l10_mx_Action_form">
+            <field name="name">Dato.form</field>
+            <field name="model">l10n.mx.immex.table</field>
+            <field name="arch" type="xml">
+                <form string="Ruta Form" create ="false" edit="false" delete ="false">
+                    <sheet>
+                        <group>
+                            <field name='typestr'/>
+                            <field name='type_id'/>
+                            <field name='field_name'/>
+                            <field name='field_value'/>
+                            <field name='wizard_id'/>
+                            <field name='rownum'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_l10_mx_Action_view_tree">
+            <field name="name">Dato.tree</field>
+            <field name="model">l10n.mx.immex.table</field>
+            <field name="arch" type="xml">
+                <tree string="Ruta Tree" create ="false" edit="false" delete ="false">
+                    <field name='typestr'/>
+                    <field name='type_id'/>
+                    <field name='field_name'/>
+                    <field name='field_value'/>
+                    <field name='wizard_id'/>
+                    <field name='rownum'/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

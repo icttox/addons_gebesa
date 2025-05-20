@@ -1,0 +1,616 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* gebesa_reconcile_advance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-25 18:38+0000\n"
+"PO-Revision-Date: 2020-11-25 12:59-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/res_partner.py:22
+#, python-format
+msgid "Account Customer Advance"
+msgstr "Cuenta de Anticipo Cliente"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Account Reconcile Advance"
+msgstr "Cuenta de Anticipo a Conciliar"
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/res_partner.py:14
+#, python-format
+msgid "Account Supplier Advance"
+msgstr "Cuenta de Anticipo Proveedor"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__date_post
+msgid "Accounting Date"
+msgstr "Contabilidad Fecha"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__move_id
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__move_id
+msgid "Accounting Entry"
+msgstr "Movimiento Contable"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__journal_id
+msgid "Accounting Journal where Entries will be posted"
+msgstr "Diario contable donde se contabilizarán las entradas"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_needaction
+msgid "Action Needed"
+msgstr "Accion necesaria"
+
+#. module: gebesa_reconcile_advance
+#: selection:account.payment,prepayment_type:0
+msgid "Advance"
+msgstr "Anticipo"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__av_aml_ids
+msgid "Advance Entry Lines"
+msgstr "Lineas Contables Anticipo"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__partner_id
+msgid "Advance Partner"
+msgstr "Anticipo Socio"
+
+#. module: gebesa_reconcile_advance
+#: model:res.groups,name:gebesa_reconcile_advance.group_gra_manager
+msgid "Advance Reconcile Manager"
+msgstr "Administrador Concilia Anticipo "
+
+#. module: gebesa_reconcile_advance
+#: model:res.groups,name:gebesa_reconcile_advance.group_gra_user
+msgid "Advance Reconcile User"
+msgstr "Usuario Concilia Anticipo"
+
+#. module: gebesa_reconcile_advance
+#: selection:account.payment,prepayment_type:0
+msgid "Advance Refund"
+msgstr "Reembolso Anticipo"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__payment_ids
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Advances"
+msgstr "Anticipos"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__payment_ids
+msgid "Advances to be used"
+msgstr "Anticipos para usar"
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:256
+#, python-format
+msgid ""
+"All Invoices and Advances must beregistered in the same currency\n"
+"Please verify..."
+msgstr "Todas las Facturas y Anticipos deben se estar registrados en la misma momenda, Por favor verifique..."
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_account_payment__account_analytic_id
+msgid "Analytic Account"
+msgstr "Cuenta Analitica"
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:366
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:419
+#, python-format
+msgid "Application of advance to invoice: "
+msgstr "Aplicación del anticipo a la factura"
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:515
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:579
+#, python-format
+msgid "Application of advance: "
+msgstr "Aplicación del anticipo"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_attachment_count
+msgid "Attachment Count"
+msgstr "Archivos adjuntos"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.account_payment_customer_tree_view
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.account_payment_supplier_tree_view
+msgid "By Apply"
+msgstr "Aplicado Por"
+
+#. module: gebesa_reconcile_advance
+#: selection:gebesa.reconcile.advance,state:0
+msgid "Cancel"
+msgstr "Cancelado"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Cancel Advance"
+msgstr "Anticipo Cancelado"
+
+#. module: gebesa_reconcile_advance
+#: model:res.groups,name:gebesa_reconcile_advance.group_cancel_advance_reconcile
+msgid "Cancel Advance Reconcile"
+msgstr "Cancelar Conciliacion de Anticipo"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model,name:gebesa_reconcile_advance.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__company_id
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_account_invoice__reconcile_advance_ids
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_account_payment__reconcile_advance_ids
+msgid "Conciliaciones de anticipo"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.account_invoice_reconcile_view
+msgid "Conciliaciones de anticipos"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model,name:gebesa_reconcile_advance.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__account_analytic_id
+msgid "Costs Center"
+msgstr "Centro de Costos"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.actions.act_window,help:gebesa_reconcile_advance.gebesa_reconcile_advance_customer_action
+msgid "Create Your First Customer Advance Reconciliation"
+msgstr "Cree su primera conciliación anticipada de cliente"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.actions.act_window,help:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_action
+msgid "Create Your First Supplier Advance Reconciliation"
+msgstr "Cree su primera conciliación anticipada de proveedores"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_res_partner__property_account_customer_advance_id
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_res_users__property_account_customer_advance_id
+msgid "Cuenta de Anticipo Cliente"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_res_partner__property_account_supplier_advance_id
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_res_users__property_account_supplier_advance_id
+msgid "Cuenta de Anticipo Proveedor"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.actions.act_window,name:gebesa_reconcile_advance.gebesa_reconcile_advance_customer_action
+#: model:ir.ui.menu,name:gebesa_reconcile_advance.gebesa_reconcile_advance_customer_menu
+msgid "Customer Advance Reconciliation"
+msgstr "Anticipo Cliente Reconciliación"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Customer Debts"
+msgstr "Deudas Clientes"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Customer Invoices"
+msgstr "Facturas de cliente"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Customer Payments"
+msgstr "Pagos de cliente"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__date_post
+msgid "Date to be used in Journal Entries when posted"
+msgstr "Fecha usada en la Entrada de Diario mostrada"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_res_company__advance_tax_id
+msgid "Default Advance Tax"
+msgstr "Impuesto anticipado predeterminado"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_res_company__advance_tax_cust_id
+msgid "Default Advance Tax Customer"
+msgstr "Cliente predeterminado de impuestos anticipados"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__date
+msgid "Document Date"
+msgstr "Fecha del Documento"
+
+#. module: gebesa_reconcile_advance
+#: selection:gebesa.reconcile.advance,state:0
+msgid "Done"
+msgstr "Hecho"
+
+#. module: gebesa_reconcile_advance
+#: selection:gebesa.reconcile.advance,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:222
+#, python-format
+msgid ""
+"Error!\n"
+"Please Field the Invoices &                               Advances Fields."
+msgstr ""
+"¡Error!\n"
+"Ingrese los campos Facturas y Anticipos."
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:662
+#, python-format
+msgid ""
+"Error!\n"
+"You do not have privileges to                             disengage an advance.\n"
+"Check with your                             system administrator."
+msgstr ""
+"¡Error!\n"
+"No tiene privilegios para cancelar un anticipo.\n"
+"Consulte con el administrador de su sistema."
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_res_partner__property_account_customer_advance_id
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_res_users__property_account_customer_advance_id
+msgid "Esta cuenta puede ser usada para el pago de anticipo de Clientes"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_res_partner__property_account_supplier_advance_id
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_res_users__property_account_supplier_advance_id
+msgid "Esta cuenta puede ser usada para el pago de anticipo de Proveedores"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: selection:account.payment,prepayment_type:0
+msgid "Factoraje"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_account_payment__due_date_advance
+msgid "Fecha Vencimiento Anticipo"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Partners)"
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:243
+#, python-format
+msgid ""
+"For integration issues, only an advance isallowed per application,\n"
+"To apply another advance will have to createanother application."
+msgstr ""
+"Para problemas de integración, solo se permite un avance por aplicación,\n"
+"Para aplicar otro avance habrá que crear otra aplicación."
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_advance_tree
+msgid "Gebesa Reconcile Advance"
+msgstr "Gebesa Reconciliar Anticipo"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__id
+msgid "ID"
+msgstr "Id"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si se marca, los nuevos mensajes requieren su atención"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model,name:gebesa_reconcile_advance.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__ai_aml_ids
+msgid "Invoice Entry Lines"
+msgstr "Líneas de entrada de facturas"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__invoice_ids
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Invoices & Debts"
+msgstr "Facturas y deudas"
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:251
+#, python-format
+msgid "Invoices can not include a date subsequentto that of the Conciliation"
+msgstr "Las facturas no pueden incluir una fecha posterior a la de la Conciliación."
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__invoice_ids
+msgid "Invoices to be used in this Advance"
+msgstr "Facturas usadas en este Anticipo"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model,name:gebesa_reconcile_advance.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_ids
+msgid "Messages"
+msgstr "Mensages"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__name
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__name
+msgid "Name of this Advance Document"
+msgstr "Nombre de este Documento Anticipo"
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:20
+#, python-format
+msgid "No puedes eliminar una concilacion en estatus Hecho"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: selection:account.payment,prepayment_type:0
+msgid "Normal"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero de Acciones"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_has_error_counter
+msgid "Number of error"
+msgstr "Número de error"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes sin leer"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Other Info"
+msgstr "Otra Información"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__partner_id
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: gebesa_reconcile_advance
+#: selection:gebesa.reconcile.advance,type:0
+msgid "Payment"
+msgstr "pago"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Payment Entry Lines"
+msgstr "Líneas de entrada de pago"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model,name:gebesa_reconcile_advance.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_account_payment__pending_amount
+msgid "Pending Amount"
+msgstr "Monto Pendiente"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_account_payment__prepayment_type
+msgid "Prepayment Type"
+msgstr "Tipo de prepago"
+
+#. module: gebesa_reconcile_advance
+#: selection:gebesa.reconcile.advance,type:0
+msgid "Receipt"
+msgstr "Recibo"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Receipt Entry Lines"
+msgstr "Líneas de entrada de recibos"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Reconcile"
+msgstr "Conciliar"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_account_payment__responsible_id
+msgid "Responsible Advance"
+msgstr "Responsable del Anticipo"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__state
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__state
+msgid "State"
+msgstr "Status"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.actions.act_window,name:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_action
+#: model:ir.ui.menu,name:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_menu
+msgid "Supplier Advance Reconciliation"
+msgstr "Conciliación anticipada de proveedores"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Supplier Debts"
+msgstr "Deudas Proveedor"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Supplier Invoices"
+msgstr "Facturas Proveedor"
+
+#. module: gebesa_reconcile_advance
+#: model_terms:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Supplier Payments"
+msgstr "Pagos Proveedor"
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/res_partner.py:24
+#, python-format
+msgid "This account will be used for advance payment of Customers"
+msgstr "Esta cuenta puede ser usada para el pago de anticipo de Clientes"
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/res_partner.py:16
+#, python-format
+msgid "This account will be used for advance payment of Suppliers"
+msgstr "Esta cuenta puede ser usada para el pago de anticipo de Proveedores"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_unread
+msgid "Unread Messages"
+msgstr "Los mensajes no leídos"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Los mensajes no leídos Contador"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes de sitios web"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance__website_message_ids
+msgid "Website communication history"
+msgstr "Sitio Web historial de comunicación"
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model,name:gebesa_reconcile_advance.model_gebesa_reconcile_advance
+msgid "gebesa.reconcile.advance"
+msgstr ""

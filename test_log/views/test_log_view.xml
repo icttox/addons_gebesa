@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="test_log_menu" name="Test Log" web_icon="" icon="fa-usd"/>
+        <menuitem id="menu_test_log"
+            name="Test Log"
+            parent="test_log_menu"
+            sequence="3" />   
+
+        <record model='ir.ui.view' id='test_log_view_tree'>
+            <field name='name'>test.log.view.tree</field>
+            <field name='model'>test.log</field>
+            <field name='arch' type='xml'>
+                <tree string='Test Log'>
+                    <field name='name'/>
+                    <field name='user_id'/>
+                    <field name='priority' widget="priority"/>
+                    <field name="company_id"/>
+                    <field name='department_id'/>
+                    <field name='test_execution_date'/>
+                    <field name='module_id'/>
+                    <field name='number_test_request'/>
+                    <field name="successful_test" widget="boolean_toggle"/>
+                    <field name="policy_revised" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_log_search_form" model="ir.ui.view">
+            <field name="name">view.log.search.form</field>
+            <field name="model">test.log</field>
+            <field name="arch" type="xml">
+               <search string="Test Logs">
+                    <field name="name" string="Test"/>
+                    <field name="module_id"/>
+                    <field name="company_id"/>
+                    <field name="department_id"/>
+                    <field name="user_id"/>
+                    <field name="status"/>
+                    <filter string="My Tests" name="my_tests" domain="[('user_id','=',uid)]"/>
+                    <filter string="My Followed Tests" name="my_followed_tests" domain="[('message_is_follower', '=', True)]" />
+                    <separator/>
+                    <filter string="Starred" name="starred" domain="[('priority','in',[2, 3])]"/>
+                    <separator/>
+                    <filter string="Unread Messages" name="message_needaction" domain="[('message_needaction','=',True)]"/>
+                    <separator/>
+                    <filter string="My Activities" name="activities_my"
+                        domain="[('activity_ids.user_id', '=', uid)]"/>
+                    <separator/>
+                    <filter string="My Late Activities" name="my_activities_overdue"
+                        domain="[('activity_ids.date_deadline', '&lt;', context_today().strftime('%Y-%m-%d')), ('activity_ids.user_id', '=', uid)]"
+                        help="Show all records which has next action date is before today"/>
+                    <filter string="My Today Activities" name="my_activities_today"
+                        domain="[('activity_ids.date_deadline', '=', context_today().strftime('%Y-%m-%d')), ('activity_ids.user_id', '=', uid)]"/>
+                    <filter string="My Future Activities" name="my_activities_upcoming_all"
+                        domain="[('activity_ids.date_deadline', '&gt;', context_today().strftime('%Y-%m-%d')), ('activity_ids.user_id', '=', uid)
+                        ]"/>
+                    <separator/>
+                    <filter string="Late Activities" name="activities_overdue"
+                        domain="[('activity_ids.date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]"
+                        help="Show all records which has next action date is before today"/>
+                    <filter string="Today Activities" name="activities_today"
+                        domain="[('activity_ids.date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter string="Future Activities" name="activities_upcoming_all"
+                        domain="[('activity_ids.date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))]"/>
+
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter string="Department" name="department" context="{'group_by':'department_id'}"/>
+                        <filter string="Assigned to" name="user" context="{'group_by':'user_id'}"/>
+                        <filter string="Module" name="module" context="{'group_by':'module_id'}"/>
+                        <filter string="Company" name="company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="test_log_view_kanban">
+            <field name="name">test.log.view.kanban</field>
+            <field name="model">test.log</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="status" class="o_kanban_mobile">
+                    <field name='name'/>
+                    <field name='user_id'/>
+                    <field name='priority' widget="priority"/>
+                    <field name='department_id'/>
+                    <field name="module_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <strong><span><field name="name"/></span></strong>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <field name="user_id"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <field name="company_id"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <field name="department_id"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <field name="module_id"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <field name="priority" widget="priority"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='test_log_view_form'>
+            <field name='name'>test.log.view.form</field>
+            <field name='model'>test.log</field>
+            <field name="arch" type="xml">
+                <form string="Test Log">
+                    <header>
+                        <button name="in_process" string="In Process" type="object" class="oe_highlight" attrs="{'invisible':[('status','!=', 'new')]}"/>
+                        <button name="prueba_exitosa" string="Prueba Exitosa" type="object" class="oe_highlight" attrs="{'invisible':[('status','!=', 'process')]}"/>
+                        <field name="status" widget="statusbar"/>
+                        <button name="prueba_fallida" string="Prueba Fallida" type="object" class="oe_highlight" attrs="{'invisible':[('status','!=', 'process')]}"/>
+                        <button name="policy_revised_accounting" string="Revisar Póliza" type="object" class="oe_highlight" attrs="{'invisible':[('status','!=', 'new')]}" groups="account.group_account_manager"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" class="oe_inline" style="font-size:30px;" readonly="True" required="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="user_id" readonly="True" required="1"/>
+                                <field name="priority" widget="priority" readonly="True"/>                                
+                                <field name="company_id" readonly="True" required="1"/>
+                                <field name="department_id" readonly="True" required="1"/>
+                                <field name="description_test" readonly="True" required="1"/>
+                                <field name="expected_results" readonly="True" required="1"/>
+                                <!--field name="results_obtained"/-->
+                                <field name="additional_notes"/>
+                            </group>
+                            <group>
+                                <field name="test_execution_date"/>
+                                <field name="successful_test" widget="boolean_toggle"/>
+                                <field name="policy_revised" widget="boolean_toggle" readonly="True"/>
+                                <field name="module_id" readonly="True" required="1"/>
+                                <field name="number_test_request" readonly="True"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="description_page" string="Resultados Obtenidos">
+                                <field name="results_obtained" type="html"/>
+                                <div class="oe_clear"/>
+                            </page>
+                            <page string="Moves">
+                                <field name="move_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                   </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="test_log_view_form_inherit" model="ir.ui.view">
+	        <field name="name">test.log.view.form.inherit</field>
+	        <field name="model">test.log</field>
+	        <field name="inherit_id" ref="test_log.test_log_view_form"/>
+	        <field name="groups_id" eval="[(4, ref('system_administrator.group_system_administrator_gebesa'))]"/>
+	        <field name="arch" type="xml">
+	        	<xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </xpath>
+                <xpath expr="//field[@name='priority']" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </xpath>
+                <xpath expr="//field[@name='description_test']" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </xpath>
+                <xpath expr="//field[@name='expected_results']" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </xpath>
+                <xpath expr="//field[@name='module_id']" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </xpath>
+                <xpath expr="//field[@name='number_test_request']" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </xpath>
+	        </field>
+	    </record>
+
+        <record id='action_test_log_form' model='ir.actions.act_window'>
+            <field name='name'>Test Log</field>
+            <field name='res_model'>test.log</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>kanban,tree,form</field>
+            <field name="search_view_id" ref="view_log_search_form"/>
+            <field name="context">{'search_default_my_activities_overdue': 1}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a test log.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="action_test_log_form" id="menu_action_test_log_form" parent="menu_test_log" sequence="30"/>
+    </data>
+</odoo>

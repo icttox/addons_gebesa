@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record model="res.groups" id="group_manager_cost_multicurrency">
+            <field name="name">Cost Multicurrency</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="account.email_template_edi_invoice" model="mail.template">
+        <field name="report_name" eval=""/>
+        <field name="report_template" eval="False"/>
+        <field name="att_default" eval="True"/>
+    </record>
+</odoo>

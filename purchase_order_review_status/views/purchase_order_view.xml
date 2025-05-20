@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id='purchase_order_review_status_form' model='ir.ui.view'>
+			<field name='name'>purchase.order.review.status.form</field>
+			<field name='model'>purchase.order</field>
+			<field name='inherit_id' ref="purchase.purchase_order_form"/>
+			<field name='arch' type='xml'>
+				<xpath expr="//field[@name='state']" position="before">
+					<button name="action_review" attrs="{'invisible': ['|',('review', '=', 'yes_review'), ('state', '=', 'cancel')]}" type="object" string="Review Purchase" groups="purchase_order_review_status.group_review"/>
+				</xpath>
+				<xpath expr="//field[@name='currency_id']" position="after">
+					<field name="review" readonly="1"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record id='action_po_line_validation' model='ir.actions.act_window'>
+            <field name='name'>Purchase Order Lines</field>
+            <field name='res_model'>purchase.order.line</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+            <field name="domain">[('order_id.state', 'in', ['purchase','done'])]</field>
+        </record>
+
+        <menuitem id="po_line_validation_menu" name="PO Lines Validation" parent="purchase.menu_procurement_management" action="action_po_line_validation"/>
+
+        <record model='ir.ui.view' id='purchase_line_tree'>
+            <field name='name'>purchase.line.tree</field>
+            <field name='model'>purchase.order.line</field>
+            <field name='arch' type='xml'>
+                <tree string='Purchase Order Lines To Validate' editable='top' create="false" delete="false">
+                    <field name="warehouse_id" readonly="1"/>
+                    <field name="order_id" readonly="1"/>
+                    <field name="product_id" readonly="1"/>
+                    <field name="product_qty" readonly="1"/>
+                    <field name="product_uom" readonly="1"/>
+                    <field name="partner_id" readonly="1"/>
+                    <field name="origin" readonly="1"/>
+                    <field name="related_segment" readonly="1"/>
+                    <field name="reviewed"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="purchase_order_line_form_view">
+            <field name="name">purchase.order.line.form.view</field>
+            <field name="model">purchase.order.line</field>
+            <field name="arch" type="xml">
+                <form string='Purchase Line'>
+                    <sheet>
+                        <h4>
+                            <separator string='Purchase Line'/>
+                        </h4>           
+                        <group>
+                            <group>
+                                <field name="warehouse_id" readonly="1"/>
+			                    <field name="order_id" readonly="1"/>
+			                    <field name="product_id" readonly="1"/>
+			                    <field name="product_qty" readonly="1"/>
+			                    <field name="product_uom" readonly="1"/>
+			                    <field name="partner_id" readonly="1"/>
+			                    <field name="origin" readonly="1"/>
+                                <field name="related_segment" readonly="1"/>
+			                    <field name="reviewed"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id='action_purchase_order_line' model='ir.actions.act_window'>
+            <field name='name'>Purchase Order Lines (draft)</field>
+            <field name='res_model'>purchase.order.line</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+            <field name="domain">[('order_id.state', 'in', ['draft','sent'])]</field>
+        </record>
+
+        <menuitem id="purchase_order_line_menu" name="Purchase Order Lines (draft)" parent="purchase.menu_procurement_management" action="action_purchase_order_line"/>
+
+        <record model='ir.ui.view' id='pol_gebesa_tree_admin'>
+            <field name='name'>pol.gebesa.tree.admin</field>
+            <field name='model'>purchase.order.line</field>
+            <field name="groups_id" eval="[(6,0, [ref('purchase_order_review_status.group_po_lines_masive_editor')])]" />
+            <field name="inherit_id" ref="purchase_order_review_status.purchase_line_tree"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//tree" position="replace">
+                    <tree string='Purchase Order Line' delete="false">
+                        <field name="warehouse_id" readonly="1"/>
+                        <field name="order_id" readonly="1"/>
+                        <field name="product_id" readonly="1"/>
+                        <field name="product_qty" readonly="1"/>
+                        <field name="product_uom" readonly="1"/>
+                        <field name="partner_id" readonly="1"/>
+                        <field name="origin" readonly="1"/>
+                        <field name="price_unit"/>
+                    </tree>
+                </xpath>
+            </field>
+        </record>   
+	</data>
+</odoo>

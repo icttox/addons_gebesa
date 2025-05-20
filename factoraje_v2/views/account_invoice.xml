@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='account_invoice_factoraje_form'>
+            <field name='name'>account.invoice.factoraje.form</field>
+            <field name='model'>account.invoice</field>
+            <field name='priority'>3</field>
+            <field name='inherit_id' ref="account.invoice_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//button[@name='action_invoice_draft']" position="after">
+                    <button name="action_factoraje" string="Enviar a Factoraje" type="object" attrs="{'invisible': [['state', 'not in', ['open']]]}"/>
+                </xpath>
+                <xpath expr="//notebook/page/field[@name='comment']" position="before">
+                	<field name='factoraje_v2'/>
+                </xpath>
+                <xpath expr="//notebook/page/group/group/field[@name='journal_id']" position="after">
+                	<field name='factoraje_journal_id' domain="[('type', 'in', ['bank', 'cash'])]" widget="selection"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

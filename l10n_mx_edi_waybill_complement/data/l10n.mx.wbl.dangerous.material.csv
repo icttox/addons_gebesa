@@ -1,0 +1,2286 @@
+id,code,name,division
+l10n_mx_wbl_dangerous_material_0004,0004,"PICRATO DE AMONIO seco o humedecido con menos de 10%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0005,0005,"CARTUCHOS PARA ARMAS, con carga explosiva",1.1F
+l10n_mx_wbl_dangerous_material_0006,0006,"CARTUCHOS PARA ARMAS, con carga explosiva",1.1E
+l10n_mx_wbl_dangerous_material_0007,0007,"CARTUCHOS PARA ARMAS, con carga explosiva",1.2F
+l10n_mx_wbl_dangerous_material_0009,0009,"MUNICIONES INCENDIARIAS con o sin carga detonante, carga expulsora o carga propulsora",1.2G
+l10n_mx_wbl_dangerous_material_0010,0010,MUNICIONES INCENDIARIAS con o sin carga detonante carga expulsora o carga propulsora,1.3G
+l10n_mx_wbl_dangerous_material_0012,0012,"CARTUCHOS PARA ARMAS, CON PROYECTIL INERTE, o CARTUCHOS PARA ARMAS DE PEQUEÑO CALIBRE",1.4S
+l10n_mx_wbl_dangerous_material_0014,0014,"CARTUCHOS PARA ARMAS, SIN BALA, o CARTUCHOS PARA ARMAS DE PEQUEÑO CALIBRE, SIN BALA",1.4S
+l10n_mx_wbl_dangerous_material_0015,0015,MUNICIONES FUMIGENAS con o sin carga detonante carga expulsora o carga propulsora,1.2G
+l10n_mx_wbl_dangerous_material_0016,0016,"MUNICIONES FUMIGENAS con o sin carga detonante, carga expulsora o carga propulsora",1.3G
+l10n_mx_wbl_dangerous_material_0018,0018,"MUNICIONES LACRIMOGENAS con carga detonante, carga expulsora o carga propulsora",1.2G
+l10n_mx_wbl_dangerous_material_0019,0019,"MUNICIONES LACRIMOGENAS con carga detonante, carga expulsora o carga propulsora",1.3G
+l10n_mx_wbl_dangerous_material_0020,0020,"MUNICIONES TOXICAS con carga detonante, carga expulsora o carga propulsora",1.2K
+l10n_mx_wbl_dangerous_material_0021,0021,"MUNICIONES TOXICAS con carga detonante, carga expulsora o carga propulsora",1.3K
+l10n_mx_wbl_dangerous_material_0027,0027,POLVORA NEGRA en forma de granos o de polvo,1.1D
+l10n_mx_wbl_dangerous_material_0028,0028,POLVORA NEGRA COMPRIMIDA o POLVORA NEGRA EN COMPRIMIDOS,1.1D
+l10n_mx_wbl_dangerous_material_0029,0029,DETONADORES NO ELECTRICOS para voladuras,1.1B
+l10n_mx_wbl_dangerous_material_0030,0030,DETONADORES ELECTRICOS para voladuras,1.1B
+l10n_mx_wbl_dangerous_material_0033,0033,BOMBAS con carga explosiva,1.1F
+l10n_mx_wbl_dangerous_material_0034,0034,BOMBAS con carga explosiva,1.1D
+l10n_mx_wbl_dangerous_material_0035,0035,BOMBAS con carga explosiva,1.2D
+l10n_mx_wbl_dangerous_material_0037,0037,BOMBAS DE ILUMINACION PARA FOTOGRAFIA,1.1F
+l10n_mx_wbl_dangerous_material_0038,0038,BOMBAS DE ILUMINACION PARA FOTOGRAFIA,1.1D
+l10n_mx_wbl_dangerous_material_0039,0039,BOMBAS DE ILUMINACION PARA FOTOGRAFIA,1.2G
+l10n_mx_wbl_dangerous_material_0042,0042,PETARDOS sin detonador,1.1D
+l10n_mx_wbl_dangerous_material_0043,0043,DETONADORES CON EXPLOSIVO,1.1D
+l10n_mx_wbl_dangerous_material_0044,0044,CEBOS TIPO CAPSULA,1.4S
+l10n_mx_wbl_dangerous_material_0048,0048,CARGAS DE DEMOLICION,1.1D
+l10n_mx_wbl_dangerous_material_0049,0049,CARTUCHOS FULGURANTES,1.1G
+l10n_mx_wbl_dangerous_material_0050,0050,CARTUCHOS FULGURANTES,1.3G
+l10n_mx_wbl_dangerous_material_0054,0054,CARTUCHOS DE SEÑALES,1.3G
+l10n_mx_wbl_dangerous_material_0055,0055,CARTUCHOS VACIOS CEBADOS(CON FULMINANTE),1.4S
+l10n_mx_wbl_dangerous_material_0056,0056,CARGAS DE PROFUNDIDAD,1.1D
+l10n_mx_wbl_dangerous_material_0059,0059,CARGAS HUECAS sin detonador,1.1D
+l10n_mx_wbl_dangerous_material_0060,0060,CARGAS EXPLOSIVAS PARA PETARDOS MULTIPLICADORES ,1.1D
+l10n_mx_wbl_dangerous_material_0065,0065,MECHA DETONANTE flexible,1.1D
+l10n_mx_wbl_dangerous_material_0066,0066,MECHA DE ENCENDIDO,1.4G
+l10n_mx_wbl_dangerous_material_0070,0070,CIZALLAS CORTACABLES CON CARGA EXPLOSIVA,1.4S
+l10n_mx_wbl_dangerous_material_0072,0072,"CICLOTRIMETILENTRINITRAMINA (CICLONITA; RDX; HEXOGENO) HUMEDECIDA con no menos de 15%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0073,0073,DETONADORES PARA MUNICIONES,1.1B
+l10n_mx_wbl_dangerous_material_0074,0074,"DIAZODINITROFENOL HUMEDECIDO con no menos de 40%, en masa, de agua o de una mezcla de alcohol y agua",1.1A
+l10n_mx_wbl_dangerous_material_0075,0075,"DINITRATO DE DIETILENGLICOL DESENSIBILIZADO con no menos de 25%, en masa, inhibidor no volátil insoluble en agua",1.1D
+l10n_mx_wbl_dangerous_material_0076,0076,"DINITROFENOL seco o humedecido con menos de 15%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0077,0077,"DINITROFENOLATOS de metales alcalinos, secos o humedecidos con menos de 15%, en masa, de agua",1.3C
+l10n_mx_wbl_dangerous_material_0078,0078,"DINITRORRESORCINOL seco o humedecido con menos de 15%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0079,0079,HEXANITRODIFENILAMINA (DIPICRILAMINA; HEXILO),1.1D
+l10n_mx_wbl_dangerous_material_0081,0081,"EXPLOSIVOS PARA VOLADURAS, TIPO A",1.1D
+l10n_mx_wbl_dangerous_material_0082,0082,"EXPLOSIVOS PARA VOLADURAS, TIPO B",1.1D
+l10n_mx_wbl_dangerous_material_0083,0083,"EXPLOSIVOS PARA VOLADURAS, TIPO C",1.1D
+l10n_mx_wbl_dangerous_material_0084,0084,"EXPLOSIVOS PARA VOLADURAS, TIPO D",1.1D
+l10n_mx_wbl_dangerous_material_0092,0092,BENGALAS DE SUPERFICIE,1.3G
+l10n_mx_wbl_dangerous_material_0093,0093,BENGALAS AEREAS,1.3G
+l10n_mx_wbl_dangerous_material_0094,0094,POLVORA DE DESTELLOS,1.1G
+l10n_mx_wbl_dangerous_material_0099,0099,"CARTUCHOS DE AGRIETAMIENTO, EXPLOSIVOS, sin detonador, para pozos de petróleo",1.1D
+l10n_mx_wbl_dangerous_material_0101,0101,MECHA NO DETONANTE,1.3G
+l10n_mx_wbl_dangerous_material_0102,0102,MECHA DETONANTE con recubrimiento metálico,1.2D
+l10n_mx_wbl_dangerous_material_0103,0103,"MECHA DE IGNICION o INFLAMACION, tubular, con recubrimiento metálico",1.4G
+l10n_mx_wbl_dangerous_material_0104,0104,"MECHA DETONANTE DE EFECTO REDUCIDO, con recubrimiento metálico",1.4D
+l10n_mx_wbl_dangerous_material_0105,0105,MECHA DE SEGURIDAD  (MECHA LENTA O MECHA BICKFORD),1.4S
+l10n_mx_wbl_dangerous_material_0106,0106,ESPOLETA DETONANTE,1.1B
+l10n_mx_wbl_dangerous_material_0107,0107,ESPOLETA DETONANTE,1.2B
+l10n_mx_wbl_dangerous_material_0110,0110,"GRANADAS, PARA PRACTICAS de mano o de fusil",1.4S
+l10n_mx_wbl_dangerous_material_0113,0113,"GUANILNITROSAMINO-GUANILIDENHIDRACINA HUMEDECIDA con no menos de 30%, en masa, de agua",1.1 A
+l10n_mx_wbl_dangerous_material_0114,0114,"GUANILNITROSAMINOGUANILTETRACENO (TETRACENO) HUMEDECIDO con no menos de 30%, en masa, de agua o de una mezcla de alcohol y agua",1.1 A
+l10n_mx_wbl_dangerous_material_0118,0118,"HEXOLITA (HEXOTOL) seca o humedecida con menos de 15%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0121,0121,INICIADORES,1.1G
+l10n_mx_wbl_dangerous_material_0124,0124,"DISPOSITIVOS PORTADORES DE CARGAS HUECAS, CARGADOS, para perforación de pozos de petróleo, sin detonador ",1.1D
+l10n_mx_wbl_dangerous_material_0129,0129,"AZIDA DE PLOMO HUMEDECIDA con no menos de 20%, en masa, de agua o de una mezcla de alcohol y agua",1.1 A
+l10n_mx_wbl_dangerous_material_0130,0130,"ESTIFNATO DE PLOMO (TRINITRORRESORCINATO DE PLOMO) HUMEDECIDO con no menos de 20%, en masa, de agua o de una mezcla de alcohol y agua",1.1 A
+l10n_mx_wbl_dangerous_material_0131,0131,ENCENDEDORES PARA MECHA DE SEGURIDAD,1.4S
+l10n_mx_wbl_dangerous_material_0132,0132,"SALES METALICAS DEFLAGRANTES DE NITRO-DERIVADOS AROMATICOS, N.E.P",1.3C
+l10n_mx_wbl_dangerous_material_0133,0133,"HEXANITRATO DE MANITOL (NITROMANITA) HUMEDECIDO con no menos de 40%, en masa, de agua o de una mezcla de alcohol y agua",1.1D
+l10n_mx_wbl_dangerous_material_0135,0135,"FULMINATO DE MERCURIO HUMEDECIDO con no menos de 20%, en masa, de agua o de una mezcla de alcohol y agua",1.1 A
+l10n_mx_wbl_dangerous_material_0136,0136,MINAS con carga explosiva,1.1F
+l10n_mx_wbl_dangerous_material_0137,0137,MINAS con carga explosiva,1.1D
+l10n_mx_wbl_dangerous_material_0138,0138,MINAS con carga explosiva,1.2D
+l10n_mx_wbl_dangerous_material_0143,0143,"NITROGLICERINA DESENSIBILIZADA con un mínimo del 40%, en masa, de inhibidor no volátil insoluble en agua",1.1D
+l10n_mx_wbl_dangerous_material_0144,0144,NITROGLICERINA EN SOLUCION ALCOHOLICA con más de 1% pero no más de 10% de nitroglicerina,1.1D
+l10n_mx_wbl_dangerous_material_0146,0146,"NITROALMIDON seco o humedecido con menos de 20%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0147,0147,NITROUREA,1.1D
+l10n_mx_wbl_dangerous_material_0150,0150,"TETRANITRATO DE PENTAERITRITA (TETRANITRATO DE PENTAERITRITOL; PENTRITA TNPE) HUMEDECIDO con no menos de 25%, en masa, de agua, o TETRANITRATO DE PENTAERITRITO (TETRANITRATO DE PENTAERITRITOL; TNPE) DESENSIBILIZADO con no menos de 15%, en masa, de flemador",1.1D
+l10n_mx_wbl_dangerous_material_0151,0151,"PENTOLITA seca o humedecida con menos de 15%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0153,0153,TRINITROANILINA (PICRAMIDA),1.1D
+l10n_mx_wbl_dangerous_material_0154,0154,"TRINITROFENOL (ACIDO PICRICO) seco o humedecido con menos de 30%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0155,0155,TRINITROCLOROBENCENO (CLORURO DE PICRILO),1.1D
+l10n_mx_wbl_dangerous_material_0159,0159,"PASTA DE POLVORA HUMEDECIDA con no menos de 25%, en masa, de agua",1.3C
+l10n_mx_wbl_dangerous_material_0160,0160,POLVORA SIN HUMO,1.1C
+l10n_mx_wbl_dangerous_material_0161,0161,POLVORA SIN HUMO,1.3C
+l10n_mx_wbl_dangerous_material_0167,0167,PROYECTILES con carga explosiva,1.1F
+l10n_mx_wbl_dangerous_material_0168,0168,PROYECTILES con carga explosiva,1.1D
+l10n_mx_wbl_dangerous_material_0169,0169,PROYECTILES con carga explosiva,1.2D
+l10n_mx_wbl_dangerous_material_0171,0171,"MUNICIONES DE ILUMINACION con o sin carga detonante, carga expulsora o carga propulsora",1.2G
+l10n_mx_wbl_dangerous_material_0173,0173,DISPOSITIVOS EXPLOSIVOS DE LIBERACION,1.4S
+l10n_mx_wbl_dangerous_material_0174,0174,REMACHES EXPLOSIVOS,1.4S
+l10n_mx_wbl_dangerous_material_0180,0180,COHETES con carga explosiva,1.1F
+l10n_mx_wbl_dangerous_material_0181,0181,COHETES con carga explosiva,1.1E
+l10n_mx_wbl_dangerous_material_0182,0182,COHETES con carga explosiva,1.2E
+l10n_mx_wbl_dangerous_material_0183,0183,COHETES con cabeza inerte,1.3C
+l10n_mx_wbl_dangerous_material_0186,0186,MOTORES DE COHETE,1.3C
+l10n_mx_wbl_dangerous_material_0190,0190,"MUESTRAS DE EXPLOSIVOS, excepto los explosivos iniciadores",
+l10n_mx_wbl_dangerous_material_0191,0191,ARTIFICIOS MANUALES DE PIROTECNIA PARA SEÑALES,1.4G
+l10n_mx_wbl_dangerous_material_0192,0192,PETARDOS DE SEÑALES EXPLOSIVAS PARA FERROCARRIL ,1.1G
+l10n_mx_wbl_dangerous_material_0193,0193,PETARDOS DE SEÑALES EXPLOSIVAS PARA FERROCARRIL,1.4S
+l10n_mx_wbl_dangerous_material_0194,0194,SEÑALES DE SOCORRO para barcos,1.1G
+l10n_mx_wbl_dangerous_material_0195,0195,SEÑALES DE SOCORRO para barcos,1.3G
+l10n_mx_wbl_dangerous_material_0196,0196,SEÑALES FUMIGENAS,1.1G
+l10n_mx_wbl_dangerous_material_0197,0197,SEÑALES FUMIGENAS,1.4G
+l10n_mx_wbl_dangerous_material_0204,0204,CARGAS EXPLOSIVAS PARA SONDEOS,1.2F
+l10n_mx_wbl_dangerous_material_0207,0207,TETRANITROANILINA,1.1D
+l10n_mx_wbl_dangerous_material_0208,0208,TRINITROFENILMETILNITRAMINA (TETRILO),1.1D
+l10n_mx_wbl_dangerous_material_0209,0209,"TRINITROTOLUENO (TNT) seco o humedecido con menos de 30%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0212,0212,TRAZADORES PARA MUNICIONES,1.3G
+l10n_mx_wbl_dangerous_material_0213,0213,TRINITROANISOL,1.1D
+l10n_mx_wbl_dangerous_material_0214,0214,"TRINITROBENCENO seco o humedecido con menos de 30%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0215,0215,"ACIDO TRINITROBENZOICO seco o humedecido con menos de 30%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0216,0216,TRINITRO-m-CRESOL,1.1D
+l10n_mx_wbl_dangerous_material_0217,0217,TRINITRONAFTALENO,1.1D
+l10n_mx_wbl_dangerous_material_0218,0218,TRINITROFENETOL,1.1D
+l10n_mx_wbl_dangerous_material_0219,0219,"TRINITRORRESORCINOL  (TRINITRORRESORCINA, ACIDO ESTIFNICO) seco o humedecido con menos de 20%, en masa, de agua o de una mezcla de alcohol y agua",1.1D
+l10n_mx_wbl_dangerous_material_0220,0220,"NITRATO DE UREA seco o humedecido con menos de 20%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0221,0221,"CABEZAS DE COMBATE PARA TORPEDOS, con carga explosiva",1.1D
+l10n_mx_wbl_dangerous_material_0222,0222,"NITRATO DE AMONIO con más de 0,2% de materias combustibles, incluyendo cualquier substancia orgánica calculada como carbono, con la exclusión de cualquier otra substancia añadida",1.1D
+l10n_mx_wbl_dangerous_material_0224,0224,"AZIDA DE BARIO seca o humedecida con menos de 50%, en masa, de agua",1.1ª
+l10n_mx_wbl_dangerous_material_0225,0225,PETARDOS MULTIPLICADORES CON DETONADOR,1.1B
+l10n_mx_wbl_dangerous_material_0226,0226,"CICLOTETRAMETILENTETRANITRA-MINA (OCTOGENO; HMX) HUMEDECIDA con no menos de 15%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0234,0234,"DINITRO-o-CRESOLATO SODICO seco o humedecido con menos de 15%, en masa, de agua",1.3C
+l10n_mx_wbl_dangerous_material_0235,0235,"PICRAMATO DE SODIO seco o humedecido con menos de 20%, en masa, de agua",1.3C
+l10n_mx_wbl_dangerous_material_0236,0236,"PICRAMATO DE CIRCONIO seco o humedecido con menos de 20%, en masa, de agua",1.3C
+l10n_mx_wbl_dangerous_material_0237,0237,CARGAS PERFILADAS DE DISEÑO FLEXIBLE ALINEADAS (MECHA DETONANTE PERFILADA FLEXIBLE) ,1.4D
+l10n_mx_wbl_dangerous_material_0238,0238,COHETES LANZACABOS,1.2G
+l10n_mx_wbl_dangerous_material_0240,0240,COHETES LANZACABOS,1.3G
+l10n_mx_wbl_dangerous_material_0241,0241,"EXPLOSIVOS PARA VOLADURAS, TIPO E",1.1D
+l10n_mx_wbl_dangerous_material_0242,0242,CARGAS PROPULSORAS DE ARTILLERIA,1.3C
+l10n_mx_wbl_dangerous_material_0243,0243,"MUNICIONES INCENDIARIAS DE FOSFORO BLANCO, con carga detonante, carga expulsora o carga propulsora",1.2H
+l10n_mx_wbl_dangerous_material_0244,0244,"MUNICIONES INCENDIARIAS DE FOSFORO BLANCO, con carga detonante, carga expulsora o carga propulsora",1.3H
+l10n_mx_wbl_dangerous_material_0245,0245,"MUNICIONES FUMIGENAS CON FOSFORO BLANCO, con carga dispersora, carga expulsora o carga propulsora",1.2H
+l10n_mx_wbl_dangerous_material_0246,0246,"MUNICIONES FUMIGENAS CON FOSFORO BLANCO, con carga detonante, carga expulsora o carga propulsora",1.3H
+l10n_mx_wbl_dangerous_material_0247,0247,"MUNICIONES INCENDIARIAS en forma de líquido o de gel, con carga detonante, carga expulsora o carga propulsora",1.3J
+l10n_mx_wbl_dangerous_material_0248,0248,"DISPOSITIVOS ACTIVADOS POR AGUA, con carga detonante carga expulsora o carga propulsora",1.2L
+l10n_mx_wbl_dangerous_material_0249,0249,"DISPOSITIVOS ACTIVADOS POR AGUA, con carga detonante carga expulsora o carga propulsora",1.3L
+l10n_mx_wbl_dangerous_material_0250,0250,"MOTORES DE COHETE CON LIQUIDOS HIPERGOLICOS, con o sin carga expulsora",1.3L
+l10n_mx_wbl_dangerous_material_0254,0254,"MUNICIONES DE LUMINACIÓN con o sin carga detonante, carga expulsora o carga propulsora",1.3G
+l10n_mx_wbl_dangerous_material_0255,0255,DETONADORES ELECTRICOS para voladuras,1.4B
+l10n_mx_wbl_dangerous_material_0257,0257,ESPOLETAS DETONANTES,1.4B
+l10n_mx_wbl_dangerous_material_0266,0266,"OCTOLITA (OCTOL) seca o humidificada con menos de 15%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0267,0267,DETONADORES NO ELECTRICOS para voladuras,1.4B
+l10n_mx_wbl_dangerous_material_0268,0268,PETARDOS MULTIPLICADORES CON DETONADOR,1.2B
+l10n_mx_wbl_dangerous_material_0271,0271,CARGAS PROPULSORAS,1.1C
+l10n_mx_wbl_dangerous_material_0272,0272,CARGAS PROPULSORAS,1.3C
+l10n_mx_wbl_dangerous_material_0275,0275,CARTUCHOS DE ACCIONAMIENTO,1.3C
+l10n_mx_wbl_dangerous_material_0276,0276,CARTUCHOS DE ACCIONAMIENTO,1.4C
+l10n_mx_wbl_dangerous_material_0277,0277,CARTUCHOS PARA PERFORACIÓN DE  POZOS PETROLÍFEROS,1.3C
+l10n_mx_wbl_dangerous_material_0278,0278,CARTUCHOS PARA PERFORACIÓN DE  POZOS PETROLÍFEROS,1.4C
+l10n_mx_wbl_dangerous_material_0279,0279,CARGAS PROPULSORAS DE ARTILLERIA,1.1C
+l10n_mx_wbl_dangerous_material_0280,0280,MOTORES DE COHETE,1.1C
+l10n_mx_wbl_dangerous_material_0281,0281,MOTORES DE COHETE,1.2C
+l10n_mx_wbl_dangerous_material_0282,0282,"NITROGUANIDINA (PICRITA) seca o humedecida con menos de 20%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0283,0283,PETARDOS MULTIPLICADORES (CARTUCHOS) sin detonador,1.2D
+l10n_mx_wbl_dangerous_material_0284,0284,"GRANADAS de mano o de fusil, con carga explosiva",1.1D
+l10n_mx_wbl_dangerous_material_0285,0285,"GRANADAS de mano o de fusil, con carga explosiva",1.2D
+l10n_mx_wbl_dangerous_material_0286,0286,"CABEZAS DE COMBATE PARA COHETES, con carga explosiva",1.1D
+l10n_mx_wbl_dangerous_material_0287,0287,"CABEZAS DE COMBATE PARA COHETES, con carga explosiva",1.2D
+l10n_mx_wbl_dangerous_material_0288,0288,MECHA DETONANTE PERFILADA  FLEXIBLE,1.1D
+l10n_mx_wbl_dangerous_material_0289,0289,MECHA DETONANTE flexible,1.4D
+l10n_mx_wbl_dangerous_material_0290,0290,CORDON (MECHA) DETONANTE con recubrimiento metálico,1.1D
+l10n_mx_wbl_dangerous_material_0291,0291,BOMBAS con carga explosiva,1.2F
+l10n_mx_wbl_dangerous_material_0292,0292,"GRANADAS de mano o de fusil, con carga explosiva",1.1F
+l10n_mx_wbl_dangerous_material_0293,0293,"GRANADAS de mano o de fusil, con carga explosiva",1.2F
+l10n_mx_wbl_dangerous_material_0294,0294,MINAS con carga explosiva,1.2F
+l10n_mx_wbl_dangerous_material_0295,0295,COHETES con carga explosiva,1.2F
+l10n_mx_wbl_dangerous_material_0296,0296,CARGAS EXPLOSIVAS PARA SONDEOS ,1.1F
+l10n_mx_wbl_dangerous_material_0297,0297,"MUNICIONES DE LUMINACIÓN con o sin carga detonante, carga expulsora o carga propulsora",1.4G
+l10n_mx_wbl_dangerous_material_0299,0299,BOMBAS DE LUMINACIÓN PARA FOTOGRAFIA,1.3G
+l10n_mx_wbl_dangerous_material_0300,0300,"MUNICIONES INCENDIARIAS con o sin carga detonante, carga expulsora o carga propulsora",1.4G
+l10n_mx_wbl_dangerous_material_0301,0301,"MUNICIONES LACRIMOGENAS con carga detonante, carga expulsora o carga propulsora",1.4G
+l10n_mx_wbl_dangerous_material_0303,0303,"MUNICIONES FUMIGENAS con o sin carga detonante, carga expulsora o carga propulsora",1.4G
+l10n_mx_wbl_dangerous_material_0305,0305,POLVORA DE DESTELLOS,1.3G
+l10n_mx_wbl_dangerous_material_0306,0306,TRAZADORES PARA MUNICIONES,1.4G
+l10n_mx_wbl_dangerous_material_0312,0312,CARTUCHOS DE SEÑALES,1.4G
+l10n_mx_wbl_dangerous_material_0313,0313,SEÑALES FUMIGENAS,1.2G
+l10n_mx_wbl_dangerous_material_0314,0314,ENCENDEDORES,1.2G
+l10n_mx_wbl_dangerous_material_0315,0315,ENCENDEDORES,1.3G
+l10n_mx_wbl_dangerous_material_0316,0316,ESPOLETAS DE IGNICION,1.3G
+l10n_mx_wbl_dangerous_material_0317,0317,ESPOLETAS DE IGNICION,1.4G
+l10n_mx_wbl_dangerous_material_0318,0318,"GRANADAS DE EJERCICIOS, de mano o de fusil",1.3G
+l10n_mx_wbl_dangerous_material_0319,0319,CEBOS TUBULARES,1.3G
+l10n_mx_wbl_dangerous_material_0320,0320,CEBOS TUBULARES,1.4G
+l10n_mx_wbl_dangerous_material_0321,0321,"CARTUCHOS PARA ARMAS, con carga explosiva",1.2E
+l10n_mx_wbl_dangerous_material_0322,0322,"MOTORES DE COHETE CON LIQUIDOS HIPERGOLICOS, con o sin carga expulsora",1.2L
+l10n_mx_wbl_dangerous_material_0323,0323,CARTUCHOS DE ACCIONAMIENTO,1.4S
+l10n_mx_wbl_dangerous_material_0324,0324,PROYECTILES con carga explosiva,1.2F
+l10n_mx_wbl_dangerous_material_0325,0325,ENCENDEDORES,1.4G
+l10n_mx_wbl_dangerous_material_0326,0326,"CARTUCHOS PARA ARMAS, SIN BALA",1.1C
+l10n_mx_wbl_dangerous_material_0327,0327,"CARTUCHOS PARA ARMAS, SIN BALA, o (CARTUCHOS PARA ARMAS DE PEQUEÑO CALIBRE, SIN BALA)",1.3C
+l10n_mx_wbl_dangerous_material_0328,0328,"CARTUCHOS PARA ARMAS, CON PROYECTIL INERTE",1.2C
+l10n_mx_wbl_dangerous_material_0329,0329,TORPEDOS con carga explosiva,1.1E
+l10n_mx_wbl_dangerous_material_0330,0330,TORPEDOS con carga explosiva,1.1F
+l10n_mx_wbl_dangerous_material_0331,0331,"EXPLOSIVOS PARA VOLADURAS, TIPO B",1.5D
+l10n_mx_wbl_dangerous_material_0332,0332,"EXPLOSIVOS PARA VOLADURAS, TIPO E",1.5D
+l10n_mx_wbl_dangerous_material_0333,0333,ARTIFICIOS DE PIROTECNIA,1.1G
+l10n_mx_wbl_dangerous_material_0334,0334,ARTIFICIOS DE PIROTECNIA,1.2G
+l10n_mx_wbl_dangerous_material_0335,0335,ARTIFICIOS DE PIROTECNIA,1.3G
+l10n_mx_wbl_dangerous_material_0336,0336,ARTIFICIOS DE PIROTECNIA,1.4G
+l10n_mx_wbl_dangerous_material_0337,0337,ARTIFICIOS DE PIROTECNIA,1.4S
+l10n_mx_wbl_dangerous_material_0338,0338,"CARTUCHOS PARA ARMAS, SIN BALA, o (CARTUCHOS PARA ARMAS DE PEQUEÑO CALIBRE, SIN BALA)",1.4C
+l10n_mx_wbl_dangerous_material_0339,0339,"CARTUCHOS PARA ARMAS, CON PROYECTIL INERTE, o CARTUCHOS PARA ARMAS DE PEQUEÑO CALIBRE",1.4C
+l10n_mx_wbl_dangerous_material_0340,0340,"NITROCELULOSA seca o humedecida con menos de 25%, en masa, de agua (o de alcohol)",1.1D
+l10n_mx_wbl_dangerous_material_0341,0341,"NITROCELULOSA sin modificar o plastificada con menos de 18%, en masa, de substancia plastificante",1.1D
+l10n_mx_wbl_dangerous_material_0342,0342,"NITROCELULOSA HUMEDECIDA con un mínimo de 25%, en masa, de alcohol",1.3C
+l10n_mx_wbl_dangerous_material_0343,0343,"NITROCELULOSA PLASTIFICADA con un mínimo de 18%, en masa, de substancia plastificante",1.3C
+l10n_mx_wbl_dangerous_material_0344,0344,PROYECTILES con carga explosiva,1.4D
+l10n_mx_wbl_dangerous_material_0345,0345,PROYECTILES inertes con trazador,1.4S
+l10n_mx_wbl_dangerous_material_0346,0346,PROYECTILES con carga detonante o carga expulsora,1.2D
+l10n_mx_wbl_dangerous_material_0347,0347,PROYECTILES con carga detonante o carga expulsora,1.4D
+l10n_mx_wbl_dangerous_material_0348,0348,"CARTUCHOS PARA ARMAS, con carga explosiva",1.4F
+l10n_mx_wbl_dangerous_material_0349,0349,OBJETOS EXPLOSIVOS. N.E.P.,1.4S
+l10n_mx_wbl_dangerous_material_0350,0350,OBJETOS EXPLOSIVOS. N.E.P.,1.4B
+l10n_mx_wbl_dangerous_material_0351,0351,OBJETOS EXPLOSIVOS. N.E.P.,1.4C
+l10n_mx_wbl_dangerous_material_0352,0352,OBJETOS EXPLOSIVOS. N.E.P.,1.4D
+l10n_mx_wbl_dangerous_material_0353,0353,OBJETOS EXPLOSIVOS. N.E.P.,1.4G
+l10n_mx_wbl_dangerous_material_0354,0354,OBJETOS EXPLOSIVOS. N.E.P.,1.1L
+l10n_mx_wbl_dangerous_material_0355,0355,OBJETOS EXPLOSIVOS. N.E.P.,1.2L
+l10n_mx_wbl_dangerous_material_0356,0356,OBJETOS EXPLOSIVOS. N.E.P.,1.3L
+l10n_mx_wbl_dangerous_material_0357,0357,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.1L
+l10n_mx_wbl_dangerous_material_0358,0358,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.2L
+l10n_mx_wbl_dangerous_material_0359,0359,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.3L
+l10n_mx_wbl_dangerous_material_0360,0360,CONJUNTOS DE DETONADORES NO ELECTRICOS para voladuras,1.1B
+l10n_mx_wbl_dangerous_material_0361,0361,CONJUNTOS DE DETONADORES NO ELECTRICOS para voladuras,1.4B
+l10n_mx_wbl_dangerous_material_0362,0362,MUNICIONES PARA PRACTICAS,1.4G
+l10n_mx_wbl_dangerous_material_0363,0363,MUNICIONES DE PRUEBA,1.4G
+l10n_mx_wbl_dangerous_material_0364,0364,DETONADORES PARA MUNICIONES,1.2B
+l10n_mx_wbl_dangerous_material_0365,0365,DETONADORES PARA MUNICIONES,1.4B
+l10n_mx_wbl_dangerous_material_0366,0366,DETONADORES PARA MUNICIONES,1.4S
+l10n_mx_wbl_dangerous_material_0367,0367,ESPOLETAS DETONANTES,1.4S
+l10n_mx_wbl_dangerous_material_0368,0368,ESPOLETAS DE IGNICION,1.4S
+l10n_mx_wbl_dangerous_material_0369,0369,"CABEZAS DE COMBATE PARA COHETES, con carga explosiva",1.1F
+l10n_mx_wbl_dangerous_material_0370,0370,"CABEZAS DE COMBATE PARA COHETES, con carga detonante o carga expulsora",1.4D
+l10n_mx_wbl_dangerous_material_0371,0371,"CABEZAS DE COMBATE PARA COHETES, con carga detonante o carga expulsora",1.4F
+l10n_mx_wbl_dangerous_material_0372,0372,"GRANADAS DE EJERCICIOS, de mano o de fusil",1.2G
+l10n_mx_wbl_dangerous_material_0373,0373,ARTIFICIOS MANUALES DE PIROTECNIA PARA SEÑALES,1.4S
+l10n_mx_wbl_dangerous_material_0374,0374,CARGAS EXPLOSIVAS PARA SONDEOS,1.1D
+l10n_mx_wbl_dangerous_material_0375,0375,CARGAS EXPLOSIVAS PARA SONDEOS,1.2D
+l10n_mx_wbl_dangerous_material_0376,0376,CEBOS TUBULARES,1.4S
+l10n_mx_wbl_dangerous_material_0377,0377,CEBOS TIPO CAPSULA,1.1B
+l10n_mx_wbl_dangerous_material_0378,0378,CEBOS TIPO CAPSULA,1.4B
+l10n_mx_wbl_dangerous_material_0379,0379,CARTUCHOS VACIOS CON FULMINANTE,1.4C
+l10n_mx_wbl_dangerous_material_0380,0380,OBJETOS PIROFORICOS,1.2L
+l10n_mx_wbl_dangerous_material_0381,0381,CARTUCHOS DE ACCIONAMIENTO,1.2C
+l10n_mx_wbl_dangerous_material_0382,0382,"COMPONENTES PARA CADENAS EXPLOSIVAS, N.E.P.",1.2B
+l10n_mx_wbl_dangerous_material_0383,0383,"COMPONENTES PARA CADENAS EXPLOSIVAS, N.E.P.",1.4B
+l10n_mx_wbl_dangerous_material_0384,0384,"COMPONENTES PARA CADENAS EXPLOSIVAS, N.E.P.",1.4S
+l10n_mx_wbl_dangerous_material_0385,0385,5-NITROBENZOTRIAZOL,1.1D
+l10n_mx_wbl_dangerous_material_0386,0386,ACIDO TRINITROBENCENOSULFONICO,1.1D
+l10n_mx_wbl_dangerous_material_0387,0387,TRINITROFLUORANONA,1.1D
+l10n_mx_wbl_dangerous_material_0388,0388,MEZCLAS DE TRINITROTOLUENO (TNT) Y TRINITROBENCENO o MEZCLAS DE TRINITROTOLUENO (TNT) Y HEXANITROETILBENCENO ,1.1D
+l10n_mx_wbl_dangerous_material_0389,0389,MEZCLAS DE TRINITROTOLUENO (TNT) CON TRINITROBENCENO Y HEXANITROESTILBENO,1.1D
+l10n_mx_wbl_dangerous_material_0390,0390,TRITONAL,1.1D
+l10n_mx_wbl_dangerous_material_0391,0391,"MEZCLAS DE CICLOTRIMETILENTRINITRAMINA (CICLONITA, EXOGENO; RDX) Y CICLOTETRAMETILENTETRANITRAMINA (OCTOGENO, HMX) MEZCLAS HUMEDECIDAS con un mínimo de 15% en masa de agua, o MEZCLAS DE CICLOTETRAMETILENTRINITRAMINA (HMX; OCTOGENO) DESENSIBILIZADAS con no menos de10% en masa de inhibidor",1.1D
+l10n_mx_wbl_dangerous_material_0392,0392,HEXANITROESTILBENO,1.1D
+l10n_mx_wbl_dangerous_material_0393,0393,HEXOTONAL,1.1D
+l10n_mx_wbl_dangerous_material_0394,0394,TRINITRORRESORCINOL (ACIDO ESTIFNICO) HUMEDECIDO con no menos de 20% en masa de agua o de una mezcla de alcohol y agua,1.1D
+l10n_mx_wbl_dangerous_material_0395,0395,"MOTORES DE COHETE, DE COMBUSTIBLE LIQUIDO",1.2J
+l10n_mx_wbl_dangerous_material_0396,0396,"MOTORES DE COHETE, DE COMBUSTIBLE LIQUIDO",1.3J
+l10n_mx_wbl_dangerous_material_0397,0397,"COHETES DE COMBUSTIBLE LIQUIDO, con carga explosiva",1.1J
+l10n_mx_wbl_dangerous_material_0398,0398,"COHETES DE COMBUSTIBLE LIQUIDO, con carga explosiva",1.2J
+l10n_mx_wbl_dangerous_material_0399,0399,"BOMBAS QUE CONTIENEN UN LIQUIDO INFLAMABLE, con carga explosiva",1.1J
+l10n_mx_wbl_dangerous_material_0400,0400,"BOMBAS QUE CONTIENEN UN LIQUIDO INFLAMABLE, con carga explosiva",1.2J
+l10n_mx_wbl_dangerous_material_0401,0401,"SULFURO DE DIPICRILO seco o humedecido con menos de 10%, en masa, de agua",1.1D
+l10n_mx_wbl_dangerous_material_0402,0402,PERCLORATO DE AMONIO,1.1D
+l10n_mx_wbl_dangerous_material_0403,0403,BENGALAS AEREAS,1.4G
+l10n_mx_wbl_dangerous_material_0404,0404,BENGALAS AEREAS,1.4S
+l10n_mx_wbl_dangerous_material_0405,0405,CARTUCHOS DE SEÑALES,1.4S
+l10n_mx_wbl_dangerous_material_0406,0406,DINITROSOBENCENO,1.3C
+l10n_mx_wbl_dangerous_material_0407,0407,ACIDO TETRAZOL-1-ACETICO,1.4C
+l10n_mx_wbl_dangerous_material_0408,0408,ESPOLETAS DETONANTES con dispositivos de protección,1.1D
+l10n_mx_wbl_dangerous_material_0409,0409,ESPOLETAS DETONANTES con dispositivos de protección,1.2D
+l10n_mx_wbl_dangerous_material_0410,0410,ESPOLETAS DETONANTES con dispositivos de protección,1.4D
+l10n_mx_wbl_dangerous_material_0411,0411,"TETRANITRATO DE PENTAERITRITO (TETRANITRATO DE PENTAERITRITOL; TNPE) con un mínimo de 7%, en masa, de cera",1.1D
+l10n_mx_wbl_dangerous_material_0412,0412,"CARTUCHOS PARA ARMAS, con carga explosiva",1.4E
+l10n_mx_wbl_dangerous_material_0413,0413,"CARTUCHOS PARA ARMAS, SIN BALA",1.2C
+l10n_mx_wbl_dangerous_material_0414,0414,CARGAS PROPULSORAS DE ARTILLERIA,1.2C
+l10n_mx_wbl_dangerous_material_0415,0415,CARGAS PROPULSORAS,1.2C
+l10n_mx_wbl_dangerous_material_0417,0417,"CARTUCHOS PARA ARMAS, CON PROYECTIL INERTE, o CARTUCHOS PARA ARMAS DE PEQUEÑO CALIBRE",1.3C
+l10n_mx_wbl_dangerous_material_0418,0418,BENGALAS DE SUPERFICIE,1.1G
+l10n_mx_wbl_dangerous_material_0419,0419,BENGALAS DE SUPERFICIE,1.2G
+l10n_mx_wbl_dangerous_material_0420,0420,BENGALAS AEREAS,1.1G
+l10n_mx_wbl_dangerous_material_0421,0421,BENGALAS AEREAS,1.2G
+l10n_mx_wbl_dangerous_material_0424,0424,PROYECTILES inertes con trazador,1.3G
+l10n_mx_wbl_dangerous_material_0425,0425,PROYECTILES inertes con trazador,1.4G
+l10n_mx_wbl_dangerous_material_0426,0426,PROYECTILES con carga detonante o carga expulsora,1.2F
+l10n_mx_wbl_dangerous_material_0427,0427,PROYECTILES con carga detonante o carga expulsora,1.4F
+l10n_mx_wbl_dangerous_material_0428,0428,OBJETOS PIROTECNICOS para usos técnicos,1.1G
+l10n_mx_wbl_dangerous_material_0429,0429,OBJETOS PIROTECNICOS para usos técnicos,1.2G
+l10n_mx_wbl_dangerous_material_0430,0430,OBJETOS PIROTECNICOS para usos técnicos,1.3G
+l10n_mx_wbl_dangerous_material_0431,0431,OBJETOS PIROTECNICOS para usos técnicos,1.4G
+l10n_mx_wbl_dangerous_material_0432,0432,OBJETOS PIROTECNICOS para usos técnicos,1.4S
+l10n_mx_wbl_dangerous_material_0433,0433,"PASTA DE POLVORA HUMEDECIDA con un mínimo de 17%, en masa, de alcohol",1.1C
+l10n_mx_wbl_dangerous_material_0434,0434,PROYECTILES con carga detonante o carga expulsora,1.2G
+l10n_mx_wbl_dangerous_material_0435,0435,PROYECTILES con carga detonante o carga expulsora,1.4G
+l10n_mx_wbl_dangerous_material_0436,0436,COHETES con carga expulsora,1.2C
+l10n_mx_wbl_dangerous_material_0437,0437,COHETES con carga expulsora,1.3C
+l10n_mx_wbl_dangerous_material_0438,0438,COHETES con carga expulsora,1.4C
+l10n_mx_wbl_dangerous_material_0439,0439,CARGAS HUECAS sin detonador,1.2D
+l10n_mx_wbl_dangerous_material_0440,0440,CARGAS HUECAS sin detonador,1.4D
+l10n_mx_wbl_dangerous_material_0441,0441,CARGAS HUECAS sin detonador,1.4S
+l10n_mx_wbl_dangerous_material_0442,0442,CARGAS EXPLOSIVAS PARA USOS CIVILES sin detonador,1.1D
+l10n_mx_wbl_dangerous_material_0443,0443,CARGAS EXPLOSIVAS PARA USOS CIVILES sin detonador,1.2D
+l10n_mx_wbl_dangerous_material_0444,0444,CARGAS EXPLOSIVAS PARA USOS CIVILES sin detonador,1.4D
+l10n_mx_wbl_dangerous_material_0445,0445,"CARGAS EXPLOSIVAS PARA USOS CIVILES, sin detonador",1.4S
+l10n_mx_wbl_dangerous_material_0446,0446,"VAINAS COMBUSTIBLES VACIAS, SIN CEBO",1.4C
+l10n_mx_wbl_dangerous_material_0447,0447,"VAINAS COMBUSTIBLES VACIAS, SIN CEBO",1.3C
+l10n_mx_wbl_dangerous_material_0448,0448,ACIDO 5-MERCAPTOTETRAZOL-1-ACETICO,1.4C
+l10n_mx_wbl_dangerous_material_0449,0449,"TORPEDOS CON COMBUSTIBLE LIQUIDO, con o sin carga explosiva",1.1J
+l10n_mx_wbl_dangerous_material_0450,0450,"TORPEDOS CON COMBUSTIBLE LIQUIDO, con cabeza inerte",1.3J
+l10n_mx_wbl_dangerous_material_0451,0451,TORPEDOS con carga explosiva,1.1D
+l10n_mx_wbl_dangerous_material_0452,0452,"GRANADAS DE EJERCICIOS, de mano o de fusil",1.4G
+l10n_mx_wbl_dangerous_material_0453,0453,COHETES LANZACABOS,1.4G
+l10n_mx_wbl_dangerous_material_0454,0454,INICIADORES,1.4S
+l10n_mx_wbl_dangerous_material_0455,0455,DETONADORES NO ELECTRICOS para voladuras,1.4S
+l10n_mx_wbl_dangerous_material_0456,0456,DETONADORES ELECTRICOS para voladuras,1.4S
+l10n_mx_wbl_dangerous_material_0457,0457,CARGAS EXPLOSIVAS CON AGLUTINANTE PLASTICO,1.1D
+l10n_mx_wbl_dangerous_material_0458,0458,CARGAS EXPLOSIVAS CON AGLUTINANTE PLASTICO,1.2D
+l10n_mx_wbl_dangerous_material_0459,0459,CARGAS EXPLOSIVAS CON AGLUTINANTE PLASTICO,1.4D
+l10n_mx_wbl_dangerous_material_0460,0460,CARGAS EXPLOSIVAS CON AGLUTINANTE PLASTICO,1.4S
+l10n_mx_wbl_dangerous_material_0461,0461,COMPONENTES DE CADENAS DE EXPLOSIVOS N.E.P.,1.1B
+l10n_mx_wbl_dangerous_material_0462,0462,"OBJETOS EXPLOSIVOS, N.E.P.",1.1C
+l10n_mx_wbl_dangerous_material_0463,0463,"OBJETOS EXPLOSIVOS, N.E.P.",1.1D
+l10n_mx_wbl_dangerous_material_0464,0464,"OBJETOS EXPLOSIVOS, N.E.P.",1.1E
+l10n_mx_wbl_dangerous_material_0465,0465,"OBJETOS EXPLOSIVOS, N.E.P.",1.1F
+l10n_mx_wbl_dangerous_material_0466,0466,"OBJETOS EXPLOSIVOS, N.E.P.",1.2C
+l10n_mx_wbl_dangerous_material_0467,0467,"OBJETOS EXPLOSIVOS, N.E.P.",1.2D
+l10n_mx_wbl_dangerous_material_0468,0468,"OBJETOS EXPLOSIVOS, N.E.P.",1.2E
+l10n_mx_wbl_dangerous_material_0469,0469,"OBJETOS EXPLOSIVOS, N.E.P",1.2F
+l10n_mx_wbl_dangerous_material_0470,0470,"OBJETOS EXPLOSIVOS, N.E.P",1.3C
+l10n_mx_wbl_dangerous_material_0471,0471,"OBJETOS EXPLOSIVOS, N.E.P",1.4E
+l10n_mx_wbl_dangerous_material_0472,0472,"OBJETOS EXPLOSIVOS, N.E.P",1.4F
+l10n_mx_wbl_dangerous_material_0473,0473,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.1A
+l10n_mx_wbl_dangerous_material_0474,0474,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.1C
+l10n_mx_wbl_dangerous_material_0475,0475,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.1D
+l10n_mx_wbl_dangerous_material_0476,0476,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.1G
+l10n_mx_wbl_dangerous_material_0477,0477,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.3C
+l10n_mx_wbl_dangerous_material_0478,0478,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.3G
+l10n_mx_wbl_dangerous_material_0479,0479,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.4C
+l10n_mx_wbl_dangerous_material_0480,0480,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.4D
+l10n_mx_wbl_dangerous_material_0481,0481,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.4S
+l10n_mx_wbl_dangerous_material_0482,0482,"SUBSTANCIAS EXPLOSIVAS MUY INSENSIBLES (SUBSTANCIAS EMI), N.E.P.",1.5D
+l10n_mx_wbl_dangerous_material_0483,0483,CICLOTRIMETILENTRINITRAMINA (CICLONITA; HEXOGENO; RDX) DESENSIBILIZADA,1.1D
+l10n_mx_wbl_dangerous_material_0484,0484,CICLOTETRAMETILENTETRANITRA-MINA (OCTOGENO; HMX) DESENSIBILIZADA,1.1D
+l10n_mx_wbl_dangerous_material_0485,0485,"SUBSTANCIAS EXPLOSIVAS, N.E.P.",1.4G
+l10n_mx_wbl_dangerous_material_0486,0486,OBJETOS EXPLOSIVOS EXTREMADAMENTE INSENSIBLES (ARTICULOS EEI),1.6N
+l10n_mx_wbl_dangerous_material_0487,0487,SEÑALES FUMIGENAS,1.3G
+l10n_mx_wbl_dangerous_material_0488,0488,MUNICIONES PARA PRACTICAS,1.3G
+l10n_mx_wbl_dangerous_material_0489,0489,DINITROGLICOLURILO (DINGU),1.1D
+l10n_mx_wbl_dangerous_material_0490,0490,NITROTRIAZOLONA (NTO),1.1D
+l10n_mx_wbl_dangerous_material_0491,0491,CARGAS PROPULSORAS,1.4C
+l10n_mx_wbl_dangerous_material_0492,0492,PETARDOS DE SEÑALES EXPLOSIVAS PARA FERROCARRIL ,1.3G
+l10n_mx_wbl_dangerous_material_0493,0493,PETARDOS DE SEÑALES EXPLOSIVAS PARA FERROCARRIL ,1.4G
+l10n_mx_wbl_dangerous_material_0494,0494,"DISPOSITIVOS PORTADORES DE CARGAS HUECAS, para perforación de pozos de petróleo",1.4D
+l10n_mx_wbl_dangerous_material_0495,0495,PROPULSANTE LIQUIDO,1.3C
+l10n_mx_wbl_dangerous_material_0496,0496,OCTONAL (ALDEHIDO N OCTILICO),1.1D
+l10n_mx_wbl_dangerous_material_0497,0497,PROPULSANTE LIQUIDO,1.1C
+l10n_mx_wbl_dangerous_material_0498,0498,PROPULSANTE SOLIDO,1.1C
+l10n_mx_wbl_dangerous_material_0499,0499,PROPULSANTE SOLIDO,1.3C
+l10n_mx_wbl_dangerous_material_0500,0500,"GRUPOS DE DETONADORES, NO ELECTRICOS para voladura",1.4S
+l10n_mx_wbl_dangerous_material_0501,0501,PROPULSANTE SOLIDO,1.4C
+l10n_mx_wbl_dangerous_material_0502,0502,COHETES con cabeza inerte,1.2C
+l10n_mx_wbl_dangerous_material_0503,0503,INFLADORES DE BOLSAS DE AIRE o MODULOS DE BOLSAS DE AIRE o PRETENSORES DE CINTURONES DE SEGURIDAD,1.4G
+l10n_mx_wbl_dangerous_material_0504,0504,1H-TETRAZOL,1.1D
+l10n_mx_wbl_dangerous_material_0505,0505,SEÑALES DE SOCORRO para barcos,i.4G
+l10n_mx_wbl_dangerous_material_0506,0506,SEÑALES DE SOCORRO PARA BARCOS,1.4S
+l10n_mx_wbl_dangerous_material_0507,0507,SEÑALES FUMIGENAS,1.4S
+l10n_mx_wbl_dangerous_material_0508,0508,"1-HIDROXIBENZOTRIAZOL, ANHIDRO, seco o humedecido con menos del 20%, en masa, de agua",1.3C
+l10n_mx_wbl_dangerous_material_0509,0509,POLVORA SIN HUMO,1.4C
+l10n_mx_wbl_dangerous_material_1001,1001,ACETILENO DISUELTO,2.1
+l10n_mx_wbl_dangerous_material_1002,1002,AIRE COMPRIMIDO,2.2
+l10n_mx_wbl_dangerous_material_1003,1003,AIRE LIQUIDO REFRIGERADO,2.2
+l10n_mx_wbl_dangerous_material_1005,1005,"AMONIACO, ANHIDRO",2.3
+l10n_mx_wbl_dangerous_material_1006,1006,ARGON COMPRIMIDO,2.2
+l10n_mx_wbl_dangerous_material_1008,1008,TRIFLUORURO DE BORO,2.3
+l10n_mx_wbl_dangerous_material_1009,1009,BROMOTRIFLUOROMETANO (GAS REFRIGERANTE R13B1),2.2
+l10n_mx_wbl_dangerous_material_1010,1010,"BUTADIENOS ESTABILIZADOS o MEZCLA ESTABILIZADA DE BUTADIENOS E HIDROCARBUROS, que contengan más del 40% de butadienos.",2.1
+l10n_mx_wbl_dangerous_material_1011,1011,BUTANO,2.1
+l10n_mx_wbl_dangerous_material_1012,1012,BUTILENO,2.1
+l10n_mx_wbl_dangerous_material_1013,1013,DIOXIDO DE CARBONO,2.2
+l10n_mx_wbl_dangerous_material_1016,1016,MONOXIDO DE CARBONO COMPRIMIDO,2.3
+l10n_mx_wbl_dangerous_material_1017,1017,CLORO,2.3
+l10n_mx_wbl_dangerous_material_1018,1018,CLORODIFLUOROMETANO (GAS REFRIGERANTE R 22),2.2
+l10n_mx_wbl_dangerous_material_1020,1020,CLOROPENTAFLUOROETANO (GAS REFRIGERANTE R 115),2.2
+l10n_mx_wbl_dangerous_material_1021,1021,"1-CLORO-1,2,2,2 TETRAFLUOROETANO (GAS REFRIGERANTE R124)",2.2
+l10n_mx_wbl_dangerous_material_1022,1022,CLOROTRIFLUOROMETANO (GAS REFRIGERANTE R13),2.2
+l10n_mx_wbl_dangerous_material_1023,1023,GAS DE HULLA COMPRIMIDO,2.3
+l10n_mx_wbl_dangerous_material_1026,1026,CIANOGENO,2.3
+l10n_mx_wbl_dangerous_material_1027,1027,CICLOPROPANO,2.1
+l10n_mx_wbl_dangerous_material_1028,1028,DICLORODIFLUOROMETANO (GAS REFRIGERANTE R 12),2.2
+l10n_mx_wbl_dangerous_material_1029,1029,DICLOROFLUOROMETANO (GAS REFRIGERANTE R 21),2.2
+l10n_mx_wbl_dangerous_material_1030,1030,"1,1-DIFLUOROETANO (GAS REFRIGERANTE R 152a)",2.1
+l10n_mx_wbl_dangerous_material_1032,1032,DIMETILAMINA ANHIDRA,2.1
+l10n_mx_wbl_dangerous_material_1033,1033,ETER METILICO,2.1
+l10n_mx_wbl_dangerous_material_1035,1035,ETANO,2.1
+l10n_mx_wbl_dangerous_material_1036,1036,ETILAMINA,2.1
+l10n_mx_wbl_dangerous_material_1037,1037,CLORURO DE ETILO,2.1
+l10n_mx_wbl_dangerous_material_1038,1038,ETILENO LIQUIDO REFRIGERADO,2.1
+l10n_mx_wbl_dangerous_material_1039,1039,ETER ETIL METILICO,2.1
+l10n_mx_wbl_dangerous_material_1040,1040,OXIDO DE ETILENO u OXIDO DE ETILENO CON NITROGENO hasta una presión total de 1 MPa (10 bar) a 50°C,2.3
+l10n_mx_wbl_dangerous_material_1041,1041,MEZCLA DE OXIDO DE ETILENO Y DIOXIDO DE CARBONO que contenga más de 9% pero no más de 87% de óxido de etileno,2.1
+l10n_mx_wbl_dangerous_material_1043,1043,SOLUCIONES AMONIACALES FERTILIZANTES con amoniaco libre,2.2
+l10n_mx_wbl_dangerous_material_1044,1044,EXTINTORES DE INCENDIOS con gas comprimido o licuado,2.2
+l10n_mx_wbl_dangerous_material_1045,1045,FLUOR COMPRIMIDO,2.3
+l10n_mx_wbl_dangerous_material_1046,1046,HELIO COMPRIMIDO,2.2
+l10n_mx_wbl_dangerous_material_1048,1048,BROMURO DE HIDROGENO ANHIDRO (ACIDO BROMHIDRICO),2.3
+l10n_mx_wbl_dangerous_material_1049,1049,HIDROGENO COMPRIMIDO,2.1
+l10n_mx_wbl_dangerous_material_1050,1050,CLORURO DE HIDROGENO ANHIDRO (ACIDO CLORHIDRICO),2.3
+l10n_mx_wbl_dangerous_material_1051,1051,CIANURO DE HIDROGENO ANHIDRO ESTABILIZADO con menos de 3% de agua (ACIDO CIANHIDRICO),6.1
+l10n_mx_wbl_dangerous_material_1052,1052,FLUORURO DE HIDROGENO ANHIDRO (ACIDO FLUORHIDRICO),8
+l10n_mx_wbl_dangerous_material_1053,1053,SULFURO DE HIDROGENO (ACIDO SULFHIDRICO),2.3
+l10n_mx_wbl_dangerous_material_1055,1055,ISOBUTILENO,2.1
+l10n_mx_wbl_dangerous_material_1056,1056,CRIPTON COMPRIMIDO,2.2
+l10n_mx_wbl_dangerous_material_1057,1057,ENCENDEDORES o RECARGAS DE ENCENDEDORES que contienen gas inflamable,2.1
+l10n_mx_wbl_dangerous_material_1058,1058,"MEZCLAS DE GASES LICUADOS no inflamables cargados con nitrógeno, dióxido de carbono o aire",2.2
+l10n_mx_wbl_dangerous_material_1060,1060,MEZCLAS DE METILACETILENO Y PROPADIENO ESTABILIZADAS,2.1
+l10n_mx_wbl_dangerous_material_1061,1061,METILAMINA ANHIDRA,2.1
+l10n_mx_wbl_dangerous_material_1062,1062,BROMURO DE METILO,2.3
+l10n_mx_wbl_dangerous_material_1063,1063,CLORURO DE METILO (GAS REFRIGERANTE R 40),2.1
+l10n_mx_wbl_dangerous_material_1064,1064,METILMERCAPTANO (SULFURO ACIDO DE METILO),2.3
+l10n_mx_wbl_dangerous_material_1065,1065,NEON COMPRIMIDO,2.2
+l10n_mx_wbl_dangerous_material_1066,1066,NITROGENO COMPRIMIDO,2.2
+l10n_mx_wbl_dangerous_material_1067,1067,TETROXIDO DE DINITROGENO (DIOXIDO DE NITROGENO),2.3
+l10n_mx_wbl_dangerous_material_1069,1069,CLORURO DE NITROSILO,2.3
+l10n_mx_wbl_dangerous_material_1070,1070,OXIDO NITROSO,2.2
+l10n_mx_wbl_dangerous_material_1071,1071,GAS DE PETROLEO COMPRIMIDO,2.3
+l10n_mx_wbl_dangerous_material_1072,1072,OXIGENO COMPRIMIDO,2.2
+l10n_mx_wbl_dangerous_material_1073,1073,OXIGENO LIQUIDO REFRIGERADO,2.2
+l10n_mx_wbl_dangerous_material_1075,1075,GASES LICUADOS DEL PETROLEO,2.1
+l10n_mx_wbl_dangerous_material_1076,1076,FOSGENO (CLORURO DE CARBONILO),2.3
+l10n_mx_wbl_dangerous_material_1077,1077,PROPILENO,2.1
+l10n_mx_wbl_dangerous_material_1078,1078,GAS REFRIGERANTE N.E.P.,2.2
+l10n_mx_wbl_dangerous_material_1079,1079,DIOXIDO DE AZUFRE,2.3
+l10n_mx_wbl_dangerous_material_1080,1080,HEXAFLORURO DE AZUFRE,2.2
+l10n_mx_wbl_dangerous_material_1081,1081,TETRAFLUOROETILENO INHIBIDO,2.1
+l10n_mx_wbl_dangerous_material_1082,1082,TRIFLUORUROCLOROETILENO INHIBIDO,2.3
+l10n_mx_wbl_dangerous_material_1083,1083,TRIMETILAMINA ANHIDRA,2.1
+l10n_mx_wbl_dangerous_material_1085,1085,BROMURO DE VINILO ESTABILIZADO,2.1
+l10n_mx_wbl_dangerous_material_1086,1086,CLORURO DE VINILO ESTABILIZADO,2.1
+l10n_mx_wbl_dangerous_material_1087,1087,VINIL METIL ETER ESTABILIZADO,2.1
+l10n_mx_wbl_dangerous_material_1088,1088,ACETAL,3
+l10n_mx_wbl_dangerous_material_1089,1089,ACETALDEHIDO,3
+l10n_mx_wbl_dangerous_material_1090,1090,ACETONA,3
+l10n_mx_wbl_dangerous_material_1091,1091,ACEITES DE ACETONA,3
+l10n_mx_wbl_dangerous_material_1092,1092,ACROLEINA ESTABILIZADA (ALDEHIDO ACRILICO),6.1
+l10n_mx_wbl_dangerous_material_1093,1093,ACRILONITRILO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_1098,1098,ALCOHOL ALÍLICO ,6.1
+l10n_mx_wbl_dangerous_material_1099,1099,BROMURO DE ALILO (3 BROMO PROPENO),3
+l10n_mx_wbl_dangerous_material_1100,1100,CLORURO DE ALILO (3 CLORO PROPENO),3
+l10n_mx_wbl_dangerous_material_1104,1104,ACETATOS DE AMILO ,3
+l10n_mx_wbl_dangerous_material_1105,1105,PENTANOLES (ALCOHOLES PENTILICOS),3
+l10n_mx_wbl_dangerous_material_1106,1106,AMILAMINA (2 AMINO PENTANO),3
+l10n_mx_wbl_dangerous_material_1107,1107,CLORURO DE AMILO ,3
+l10n_mx_wbl_dangerous_material_1108,1108,1 PENTENO (n-AMILENO),3
+l10n_mx_wbl_dangerous_material_1109,1109,FORMIATOS DE AMILO ,3
+l10n_mx_wbl_dangerous_material_1110,1110,n-AMILMETHILCETONA (NpentilimetilCETONA),3
+l10n_mx_wbl_dangerous_material_1111,1111,AMILMERCAPTANO,3
+l10n_mx_wbl_dangerous_material_1112,1112,NITRATO DE  AMILO,3
+l10n_mx_wbl_dangerous_material_1114,1114,BENCENO,3
+l10n_mx_wbl_dangerous_material_1120,1120,BUTANOLES  ,3
+l10n_mx_wbl_dangerous_material_1123,1123,ACETATOS DE BUTILO,3
+l10n_mx_wbl_dangerous_material_1125,1125,n-BUTILAMINA,3
+l10n_mx_wbl_dangerous_material_1126,1126,1-BROMOBUTANO,3
+l10n_mx_wbl_dangerous_material_1127,1127,CLOROBUTANOS,3
+l10n_mx_wbl_dangerous_material_1128,1128,FORMIATO DE n-BUTILO,3
+l10n_mx_wbl_dangerous_material_1129,1129,BUTIRALDEHIDO,3
+l10n_mx_wbl_dangerous_material_1130,1130,ALCANFOR LIQUIDO,3
+l10n_mx_wbl_dangerous_material_1131,1131,DISULFURO DE CARBONO,3
+l10n_mx_wbl_dangerous_material_1133,1133,ADHESIVOS que contengan líquidos inflamables,3
+l10n_mx_wbl_dangerous_material_1134,1134,CLOROBENCENO,3
+l10n_mx_wbl_dangerous_material_1135,1135,ETILENCLORHIDRINA,6.1
+l10n_mx_wbl_dangerous_material_1136,1136,"DESTILADOS DE ALQUITRAN DE HULLA, INFLAMABLE",3
+l10n_mx_wbl_dangerous_material_1139,1139,"SOLUCIONES PARA REVESTIMIENTOS (comprende los tratamientos de superficie o los revestimientos utilizados con fines industriales o de otra índole como revestimiento de bajos de vehículos, de bidones o de toneles)",3
+l10n_mx_wbl_dangerous_material_1143,1143,CROTONALDEHIDO ESTABILIZADO,6.1
+l10n_mx_wbl_dangerous_material_1144,1144,CROTONILENO (DIMETILACETILENO),3
+l10n_mx_wbl_dangerous_material_1145,1145,CICLOHEXANO,3
+l10n_mx_wbl_dangerous_material_1146,1146,CICLOPENTANO,3
+l10n_mx_wbl_dangerous_material_1147,1147,DECAHIDRONAFTALENO,3
+l10n_mx_wbl_dangerous_material_1148,1148,DIACETONA ALCOHOL (4HIDROXI2CETO-METILPENTANO),3
+l10n_mx_wbl_dangerous_material_1149,1149,ETERES DIBUTILICOS (ETERES BUTILICOS),3
+l10n_mx_wbl_dangerous_material_1150,1150,"1,2-DICLOROETILENO",3
+l10n_mx_wbl_dangerous_material_1152,1152,DICLOROPENTANOS,3
+l10n_mx_wbl_dangerous_material_1153,1153,ETER DIETILICO DEL ETILENGLICOL,3
+l10n_mx_wbl_dangerous_material_1154,1154,DIETILAMINA,3
+l10n_mx_wbl_dangerous_material_1155,1155,ETER DIETILICO (ETER ETILICO),3
+l10n_mx_wbl_dangerous_material_1156,1156,DIETILCETONA,3
+l10n_mx_wbl_dangerous_material_1157,1157,DIISOBUTILCETONA,3
+l10n_mx_wbl_dangerous_material_1158,1158,DIISOPROPILAMINA,3
+l10n_mx_wbl_dangerous_material_1159,1159,ETER DIISOPROPILICO,3
+l10n_mx_wbl_dangerous_material_1160,1160,DIMETILAMINA EN SOLUCION ACUOSA,3
+l10n_mx_wbl_dangerous_material_1161,1161,CARBONATO DE METILO,3
+l10n_mx_wbl_dangerous_material_1162,1162,DIMETILDICLOROSILANO,3
+l10n_mx_wbl_dangerous_material_1163,1163,DIMETILHIDRAZINA ASIMETRICA,6.1
+l10n_mx_wbl_dangerous_material_1164,1164,SULFURO DE METILO,3
+l10n_mx_wbl_dangerous_material_1165,1165,DIOXANO (ETER DE DIOXIETILENO),3
+l10n_mx_wbl_dangerous_material_1166,1166,DIOXOLANO (ETER DIOXIETILMETILICO),3
+l10n_mx_wbl_dangerous_material_1167,1167,ETER (DI)VINILICO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_1169,1169,EXTRACTOS AROMATICOS LIQUIDOS,3
+l10n_mx_wbl_dangerous_material_1170,1170,ETANOL (ALCOHOL ETILICO) o ETANOL EN SOLUCION (ALCOHOL ETILICO EN SOLUCION),3
+l10n_mx_wbl_dangerous_material_1171,1171,ETER MONOETILICO DEL ETILENGLICOL,3
+l10n_mx_wbl_dangerous_material_1172,1172,ACETATO DEL ETER MONOETILICO DEL ETILENGLICOL,3
+l10n_mx_wbl_dangerous_material_1173,1173,ACETATO DE ETILO,3
+l10n_mx_wbl_dangerous_material_1175,1175,ETILBENCENO (FENILETANO),3
+l10n_mx_wbl_dangerous_material_1176,1176,BORATO DE ETILO,3
+l10n_mx_wbl_dangerous_material_1177,1177,ACETATO DE ETILBUTILO (ACETATO DE 2-DIETILETILO),3
+l10n_mx_wbl_dangerous_material_1178,1178,2-ETILBUTIRALDEHIDO (DIETILACETALDEHIDO),3
+l10n_mx_wbl_dangerous_material_1179,1179,ETIL BUTIL ETER,3
+l10n_mx_wbl_dangerous_material_1180,1180,BUTIRATO DE ETILO,3
+l10n_mx_wbl_dangerous_material_1181,1181,CLOROACETATO DE ETILO,6.1
+l10n_mx_wbl_dangerous_material_1182,1182,CLOROFORMIATO DE ETILO,6.1
+l10n_mx_wbl_dangerous_material_1183,1183,ETILDICLOROSILANO,4.3
+l10n_mx_wbl_dangerous_material_1184,1184,DICLORURO DE ETILENO,3
+l10n_mx_wbl_dangerous_material_1185,1185,ETILENIMINA (AZIRIDINA) ESTABILIZADA,6.1
+l10n_mx_wbl_dangerous_material_1188,1188,ÉTER MONOMETÍLICO DEL ETILENGLICOL,3
+l10n_mx_wbl_dangerous_material_1189,1189,ACETATO DEL ÉTER MONOMETILICO DEL ETILENGLICOL,3
+l10n_mx_wbl_dangerous_material_1190,1190,FORMIATO DE ETILO,3
+l10n_mx_wbl_dangerous_material_1191,1191,ALDEHIDOS OCTILICOS,3
+l10n_mx_wbl_dangerous_material_1192,1192,LACTATO DE ETILO,3
+l10n_mx_wbl_dangerous_material_1193,1193,ETILMETILCETONA (METILETILCETONA),3
+l10n_mx_wbl_dangerous_material_1194,1194,NITRITO DE ETILO EN SOLUCION,3
+l10n_mx_wbl_dangerous_material_1195,1195,PROPIONATO DE ETILO,3
+l10n_mx_wbl_dangerous_material_1196,1196,ETILTRICLOROSILANO,3
+l10n_mx_wbl_dangerous_material_1197,1197,EXTRACTOS DE SABORIZANTES LIQUIDOS,3
+l10n_mx_wbl_dangerous_material_1198,1198,FORMALDEHIDO EN SOLUCION INFLAMABLE,3
+l10n_mx_wbl_dangerous_material_1199,1199,FURALDEHIDOS,6.1
+l10n_mx_wbl_dangerous_material_1201,1201,ACEITE DE FUSEL,3
+l10n_mx_wbl_dangerous_material_1202,1202,"GASOLEO o COMBUSTIBLE PARA MOTORES DIESEL o ACEITE MINERAL PARA CALDEO, LIGERO",3
+l10n_mx_wbl_dangerous_material_1203,1203,COMBUSTIBLE PARA MOTORES o GASOLINA,3
+l10n_mx_wbl_dangerous_material_1204,1204,NITROGLICERINA EN SOLUCION ALCOHOLICA con no más de 1% de nitroglicerina,3
+l10n_mx_wbl_dangerous_material_1206,1206,HEPTANOS,3
+l10n_mx_wbl_dangerous_material_1207,1207,HEXALDEHIDO (ALDEHIDO CAPROICO),3
+l10n_mx_wbl_dangerous_material_1208,1208,HEXANOS,3
+l10n_mx_wbl_dangerous_material_1210,1210,"TINTA DE IMPRENTA, inflamable o MATERIALES RELACIONADOS CON LA TINTA DE IMPRENTA (incluido diluyente de tinta de imprenta o producto reductor), inflamable",3
+l10n_mx_wbl_dangerous_material_1212,1212,ISOBUTANOL (ALCOHOL ISOBUTILICO),3
+l10n_mx_wbl_dangerous_material_1213,1213,ACETATO DE ISOBUTILO,3
+l10n_mx_wbl_dangerous_material_1214,1214,ISOBUTILAMINA,3
+l10n_mx_wbl_dangerous_material_1216,1216,ISOOCTENO,3
+l10n_mx_wbl_dangerous_material_1218,1218,ISOPRENO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_1219,1219,ISOPROPANOL (ALCOHOL ISOPROPILICO),3
+l10n_mx_wbl_dangerous_material_1220,1220,ACETATO DE ISOPROPILO,3
+l10n_mx_wbl_dangerous_material_1221,1221,ISOPROPILAMINA,3
+l10n_mx_wbl_dangerous_material_1222,1222,NITRATO DE ISOPROPILO,3
+l10n_mx_wbl_dangerous_material_1223,1223,QUEROSENO,3
+l10n_mx_wbl_dangerous_material_1224,1224,"CETONAS LIQUIDAS, N.E.P.",3
+l10n_mx_wbl_dangerous_material_1228,1228,"MERCAPTANOS LIQUIDOS INFLAMABLES, TOXICOS, N.E.P. o MEZCLA DE MERCAPTANOS LIQUIDOS INFLAMABLES, TOXICOS, N.E.P.",3
+l10n_mx_wbl_dangerous_material_1229,1229,OXIDO DE MESITILO,3
+l10n_mx_wbl_dangerous_material_1230,1230,METANOL,3
+l10n_mx_wbl_dangerous_material_1231,1231,ACETATO DE METILO,3
+l10n_mx_wbl_dangerous_material_1233,1233,ACETATO DE METILAMILO,3
+l10n_mx_wbl_dangerous_material_1234,1234,METILAL (DIMETOXIMETANO; FORMAL),3
+l10n_mx_wbl_dangerous_material_1235,1235,METILAMINA EN SOLUCION ACUOSA,3
+l10n_mx_wbl_dangerous_material_1237,1237,BUTIRATO DE METILO,3
+l10n_mx_wbl_dangerous_material_1238,1238,CLOROFORMIATO DE METILO,6.1
+l10n_mx_wbl_dangerous_material_1239,1239,METIL CLOROMETIL ETER,6.1
+l10n_mx_wbl_dangerous_material_1242,1242,METILDICLOROSILANO,4.3
+l10n_mx_wbl_dangerous_material_1243,1243,FORMIATO DE METILO,3
+l10n_mx_wbl_dangerous_material_1244,1244,METILHIDRAZINA,6.1
+l10n_mx_wbl_dangerous_material_1245,1245,METILISOBUTILCETONA,3
+l10n_mx_wbl_dangerous_material_1246,1246,METILISOPROPENILCETONA ESTABILIZADA,3
+l10n_mx_wbl_dangerous_material_1247,1247,METACRILATO DE METILO MONOMERO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_1248,1248,PROPIONATO DE METILO,3
+l10n_mx_wbl_dangerous_material_1249,1249,METILPROPILCETONA,3
+l10n_mx_wbl_dangerous_material_1250,1250,METILTRICLOROSILANO,3
+l10n_mx_wbl_dangerous_material_1251,1251,"METILVINILCETONA, ESTABILIZADA",6.1
+l10n_mx_wbl_dangerous_material_1259,1259,NIQUEL CARBONILO,6.1
+l10n_mx_wbl_dangerous_material_1261,1261,NITROMETANO,3
+l10n_mx_wbl_dangerous_material_1262,1262,OCTANOS,3
+l10n_mx_wbl_dangerous_material_1263,1263,"PINTURA (incluye pintura, laca, esmalte, colorante, goma laca, barniz, betún, encáustico, apresto líquido y base líquida para lacas base solvente) o PRODUCTOS PARA PINTURA (incluye compuestos disolventes o reductores de pintura)",3
+l10n_mx_wbl_dangerous_material_1264,1264,PARALDEHIDO,3
+l10n_mx_wbl_dangerous_material_1265,1265,PENTANOS líquidos,3
+l10n_mx_wbl_dangerous_material_1266,1266,PRODUCTOS DE PERFUMERIA que contengan disolventes inflamables,3
+l10n_mx_wbl_dangerous_material_1267,1267,PETROLEO BRUTO,3
+l10n_mx_wbl_dangerous_material_1268,1268,"DESTILADOS DE PETROLEO, N.E.P., o PRODUCTOS DE PETROLEO, N.E.P.",3
+l10n_mx_wbl_dangerous_material_1272,1272,ACEITE DE PINO,3
+l10n_mx_wbl_dangerous_material_1274,1274,n-PROPANOL (ALCOHOL PROPILICO NORMAL),3
+l10n_mx_wbl_dangerous_material_1275,1275,PROPIONALDEHIDO,3
+l10n_mx_wbl_dangerous_material_1276,1276,ACETATO DE n-PROPILO,3
+l10n_mx_wbl_dangerous_material_1277,1277,PROPILAMINA,3
+l10n_mx_wbl_dangerous_material_1278,1278,1-CLOROPROPANO,3
+l10n_mx_wbl_dangerous_material_1279,1279,"1,2-DICLOROPROPANO",3
+l10n_mx_wbl_dangerous_material_1280,1280,OXIDO DE PROPILENO,3
+l10n_mx_wbl_dangerous_material_1281,1281,FORMIATOS DE PROPILO,3
+l10n_mx_wbl_dangerous_material_1282,1282,PIRIDINA,3
+l10n_mx_wbl_dangerous_material_1286,1286,ACEITE DE COLOFONIA,3
+l10n_mx_wbl_dangerous_material_1287,1287,DISOLUCION DE CAUCHO,3
+l10n_mx_wbl_dangerous_material_1288,1288,ACEITE DE ESQUISTO,3
+l10n_mx_wbl_dangerous_material_1289,1289,METILATO SODICO EN SOLUCION alcohólica,3
+l10n_mx_wbl_dangerous_material_1292,1292,SILICATO DE TETRAETILO,3
+l10n_mx_wbl_dangerous_material_1293,1293,TINTURAS MEDICINALES,3
+l10n_mx_wbl_dangerous_material_1294,1294,TOLUENO,3
+l10n_mx_wbl_dangerous_material_1295,1295,TRICLOROSILANO,4.3
+l10n_mx_wbl_dangerous_material_1296,1296,TRIETILAMINA,3
+l10n_mx_wbl_dangerous_material_1297,1297,"TRIMETILAMINA EN SOLUCION ACUOSA, con un máximo de 50%, en masa, de trimetilamina",3
+l10n_mx_wbl_dangerous_material_1298,1298,TRIMETILCLOROSILANO,3
+l10n_mx_wbl_dangerous_material_1299,1299,TREMENTINA,3
+l10n_mx_wbl_dangerous_material_1300,1300,SUCEDANEO DE TREMENTINA,3
+l10n_mx_wbl_dangerous_material_1301,1301,ACETATO DE VINILO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_1302,1302,VINIL ETIL ETER ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_1303,1303,CLORURO DE VINILIDENO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_1304,1304,VINIL ISOBUTIL ETER ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_1305,1305,VINILTRICLOROSILANO,3
+l10n_mx_wbl_dangerous_material_1306,1306,"PRODUCTOS LÍQUIDOS PARA LA CONSERVACIÓN 
+DE LA MADERA",3
+l10n_mx_wbl_dangerous_material_1307,1307,XILENOS,3
+l10n_mx_wbl_dangerous_material_1308,1308,CIRCONIO EN SUSPENSION EN UN LIQUIDO INFLAMABLE,3
+l10n_mx_wbl_dangerous_material_1309,1309,"ALUMINIO EN POLVO, RECUBIERTO",4.1
+l10n_mx_wbl_dangerous_material_1310,1310,"PICRATO AMONICO HUMEDECIDO con un mínimo de 10%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1312,1312,BORNEOL,4.1
+l10n_mx_wbl_dangerous_material_1313,1313,RESINATO DE CALCIO,4.1
+l10n_mx_wbl_dangerous_material_1314,1314,RESINATO DE CALCIO FUNDIDO,4.1
+l10n_mx_wbl_dangerous_material_1318,1318,"RESINATO DE COBALTO, PRECIPITADO",4.1
+l10n_mx_wbl_dangerous_material_1320,1320,"DINITROFENOL HUMEDECIDO con un mínimo de 15%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1321,1321,"DINITROFENOLATOS HUMEDECIDOS con no menos de 15%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1322,1322,"DINITRORRESORCINOL (DINITRORRESORCINA) HUMEDECIDO con un mínimo de 15%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1323,1323,FERROCERIO,4.1
+l10n_mx_wbl_dangerous_material_1324,1324,"PELICULAS DE SOPORTE NITROCELULOSICO revestido de gelatina, con exclusión de los desechos",4.1
+l10n_mx_wbl_dangerous_material_1325,1325,"SOLIDO INFLAMABLE ORGANICO, N.E.P.",4.1
+l10n_mx_wbl_dangerous_material_1326,1326,"HAFNIO EN POLVO HUMEDECIDO con un mínimo de 25% de agua (debe haber un exceso visible de agua): a) producido mecánicamente, en partículas de menos de 53 micrones; b) producido químicamente, en partículas de menos de 840 micrones",4.1
+l10n_mx_wbl_dangerous_material_1327,1327,"HENO, PAJA o RASTROJO húmeda, mojada o contaminados con aceite.",4.1
+l10n_mx_wbl_dangerous_material_1328,1328,HEXAMETILENOTETRAMINA,4.1
+l10n_mx_wbl_dangerous_material_1330,1330,RESINATO DE MANGANESO,4.1
+l10n_mx_wbl_dangerous_material_1331,1331,FOSFOROS DISTINTOS DE LOS DE SEGURIDAD,4.1
+l10n_mx_wbl_dangerous_material_1332,1332,METALDEHIDO,4.1
+l10n_mx_wbl_dangerous_material_1333,1333,"CERIO, en placas, lingotes o barras",4.1
+l10n_mx_wbl_dangerous_material_1334,1334,NAFTALENO BRUTO o NAFTALENO REFINADO,4.1
+l10n_mx_wbl_dangerous_material_1336,1336,"NITROGUANIDINA (PICRITA) HUMEDECIDA con no menos de 20%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1337,1337,"NITROALMIDON HUMEDECIDO con no menos de 20%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1338,1338,FOSFORO AMORFO,4.1
+l10n_mx_wbl_dangerous_material_1339,1339,"HEPTASULFURO DE FOSFORO, que no contenga fósforo blanco o amarillo",4.1
+l10n_mx_wbl_dangerous_material_1340,1340,"PENTASULFURO DE FOSFORO, que no contenga fósforo blanco o amarillo",4.3
+l10n_mx_wbl_dangerous_material_1341,1341,"SESQUISULFURO DE FOSFORO, que no contenga fósforo blanco o amarillo",4.1
+l10n_mx_wbl_dangerous_material_1343,1343,"TRISULFURO DE FOSFORO, que no contenga fósforo blanco o amarillo",4.1
+l10n_mx_wbl_dangerous_material_1344,1344,"TRINITROFENOL HUMEDECIDO con no menos de 30%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1345,1345,"DESECHOS DE CAUCHO o RECORTES DE CAUCHO, en polvo o en gránulos de 840 micrones como máximo, y que contienen más de 45% de caucho",4.1
+l10n_mx_wbl_dangerous_material_1346,1346,"SILICIO EN POLVO, AMORFO",4.1
+l10n_mx_wbl_dangerous_material_1347,1347,"PICRATO DE PLATA HUMEDECIDO con no menos de 30%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1348,1348,"DINITRO-o-CRESOLATO DE SODIO HUMEDECIDO con no menos de 15%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1349,1349,"PICRAMATO DE SODIO HUMEDECIDO con no menos de 20%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1350,1350,AZUFRE,4.1
+l10n_mx_wbl_dangerous_material_1352,1352,"TITANIO EN POLVO HUMEDECIDO con no menos de 25% de agua (debe haber un exceso visible de agua): a) producido mecánicamente, en partículas de menos de 53 micrones; b) producido químicamente, en partículas de menos de 840 micrones",4.1
+l10n_mx_wbl_dangerous_material_1353,1353,FIBRAS o TEJIDOS IMPREGNADOS DE NITROCELULOSA POCO NITRADA N.E.P.,4.1
+l10n_mx_wbl_dangerous_material_1354,1354,"TRINITROBENCENO HUMEDECIDO con no menos de 30%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1355,1355,"ACIDO TRINITROBENZOICO HUMEDECIDO con no menos de 30%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1356,1356,"TRINITROTOLUENO (TNT) HUMEDECIDO con no menos de 30%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1357,1357,"NITRATO DE UREA HUMEDECIDO con no menos de 20%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1358,1358,"CIRCONIO EN POLVO, HUMEDECIDO con no menos de 25% de agua (debe haber un exceso visible de agua): a) producido mecánicamente, en partículas de menos de 53 micrones; b) producido químicamente, en partículas de menos de 840 micrones",4.1
+l10n_mx_wbl_dangerous_material_1360,1360,FOSFURO DE CALCIO,4.3
+l10n_mx_wbl_dangerous_material_1361,1361,CARBON animal o vegetal,4.2
+l10n_mx_wbl_dangerous_material_1362,1362,CARBON ACTIVADO,4.2
+l10n_mx_wbl_dangerous_material_1363,1363,COPRA,4.2
+l10n_mx_wbl_dangerous_material_1364,1364,DESECHOS DE ACEITE DE ALGODÓN,4.2
+l10n_mx_wbl_dangerous_material_1365,1365,ALGODÓN HUMEDO,4.2
+l10n_mx_wbl_dangerous_material_1369,1369,p-NITROSODIMETILANILINA,4.2
+l10n_mx_wbl_dangerous_material_1372,1372,"FIBRAS DE ORIGEN ANIMAL o FIBRAS DE ORIGEN VEGETAL quemadas, húmedas o mojadas",4.2
+l10n_mx_wbl_dangerous_material_1373,1373,"FIBRAS o TEJIDOS DE ORIGEN ANIMAL o VEGETAL o SINTETICOS, N.E.P., impregnados de aceite",4.2
+l10n_mx_wbl_dangerous_material_1374,1374,HARINA DE PESCADO (DESECHOS DE PESCADO) NO ESTABILIZADA,4.2
+l10n_mx_wbl_dangerous_material_1376,1376,OXIDO DE HIERRO AGOTADO o HIERRO ESPONJOSO AGOTADO procedentes de la purificación de gas de hulla,4.2
+l10n_mx_wbl_dangerous_material_1378,1378,CATALIZADOR DE METAL HUMEDECIDO con un exceso visible de líquido,4.2
+l10n_mx_wbl_dangerous_material_1379,1379,"PAPEL TRATADO CON ACEITES NO SATURADOS, no seco (incluso el papel carbón)",4.2
+l10n_mx_wbl_dangerous_material_1380,1380,PENTABORANO,4.2
+l10n_mx_wbl_dangerous_material_1381,1381,"FOSFORO BLANCO o AMARILLO, SECO o BAJO AGUA o EN SOLUCION",4.2
+l10n_mx_wbl_dangerous_material_1382,1382,SULFURO DE POTASIO ANHIDRO o SULFURO POTASICO con menos de 30% de agua de cristalización,4.2
+l10n_mx_wbl_dangerous_material_1383,1383,"METAL  PIROFÓRICO,   N.E.P..,  o ALEACIÓN PIROFÓRICA, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_1384,1384,DITIONITO DE SODIO (hidrosulfito de sodio),4.2
+l10n_mx_wbl_dangerous_material_1385,1385,SULFURO SÓDICO ANHIDRO o SULFURO SÓDICO con menos del  30% de agua de cristalización.,4.2
+l10n_mx_wbl_dangerous_material_1386,1386,"TORTA OLEAGINOSA con más de 1,5% de aceite y un máximo de 11% de humedad",4.2
+l10n_mx_wbl_dangerous_material_1387,1387,"DESECHOS DE LANA, HUMEDOS",4.2
+l10n_mx_wbl_dangerous_material_1389,1389,"METAL ALCALINO, AMALGAMAS DE",4.3
+l10n_mx_wbl_dangerous_material_1390,1390,AMIDAS DE METALES ALCALINOS,4.3
+l10n_mx_wbl_dangerous_material_1391,1391,"METALES ALCALINOS, DISPERSIÓN DE, o METALES ALCALINOTERREOS, DISPERSIÓN DE",4.3
+l10n_mx_wbl_dangerous_material_1392,1392,"METALES ALCALINOTERREOS, AMALGAMA DE",4.3
+l10n_mx_wbl_dangerous_material_1393,1393,"METALES  ALCALINOTERREOS, ALEACIÓN DE, N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_1394,1394,CARBURO ALUMINICO,4.3
+l10n_mx_wbl_dangerous_material_1395,1395,ALUMINIO FERROSILICIO EN POLVO,4.3
+l10n_mx_wbl_dangerous_material_1396,1396,"ALUMINIO EN POLVO, NO RECUBIERTO",4.3
+l10n_mx_wbl_dangerous_material_1397,1397,FOSFURO DE ALUMINIO,4.3
+l10n_mx_wbl_dangerous_material_1398,1398,"ALUMINIO SILICIO EN POLVO, NO RECUBIERTO",4.3
+l10n_mx_wbl_dangerous_material_1400,1400,BARIO,4.3
+l10n_mx_wbl_dangerous_material_1401,1401,CALCIO,4.3
+l10n_mx_wbl_dangerous_material_1402,1402,CARBURO CALCICO,4.3
+l10n_mx_wbl_dangerous_material_1403,1403,"CIANAMIDA DE CALCIO con más de 0,1% de carburo de calcio",4.3
+l10n_mx_wbl_dangerous_material_1404,1404,HIDRURO DE CALCIO,4.3
+l10n_mx_wbl_dangerous_material_1405,1405,SILICATO DE CALCIO,4.3
+l10n_mx_wbl_dangerous_material_1407,1407,CESIO,4.3
+l10n_mx_wbl_dangerous_material_1408,1408,FERROSILICIO con el 30% o más pero menos de 90% de silicio,4.3
+l10n_mx_wbl_dangerous_material_1409,1409,"HIDRUROS METALICOS QUE REACCIONAN CON EL AGUA, N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_1410,1410,HIDRURO DE LITIO Y ALUMINIO,4.3
+l10n_mx_wbl_dangerous_material_1411,1411,HIDRURO ETEREO DE LITIO Y ALUMINIO,4.3
+l10n_mx_wbl_dangerous_material_1413,1413,BOROHIDRURO DE LITIO,4.3
+l10n_mx_wbl_dangerous_material_1414,1414,HIDRURO DE LITIO,4.3
+l10n_mx_wbl_dangerous_material_1415,1415,LITIO,4.3
+l10n_mx_wbl_dangerous_material_1417,1417,SILICATO DE LITIO (LIITIOSILICIO),4.3
+l10n_mx_wbl_dangerous_material_1418,1418,MAGNESIO EN POLVO o ALEACIONES DE MAGNESIO EN POLVO,4.3
+l10n_mx_wbl_dangerous_material_1419,1419,FOSFURO DE MAGNESIO Y ALUMINIO,4.3
+l10n_mx_wbl_dangerous_material_1420,1420,"POTASIO METALICO, ALEACIONES LIQUIDAS DE",4.3
+l10n_mx_wbl_dangerous_material_1421,1421,"METALES ALCALINOS, ALEACION LIQUIDA DE  N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_1422,1422,"POTASIO Y SODIO, ALEACIONES DE",4.3
+l10n_mx_wbl_dangerous_material_1423,1423,RUBIDIO,4.3
+l10n_mx_wbl_dangerous_material_1426,1426,BOROHIDRURO DE SODIO,4.3
+l10n_mx_wbl_dangerous_material_1427,1427,HIDRURO DE SODIO,4.3
+l10n_mx_wbl_dangerous_material_1428,1428,SODIO,4.3
+l10n_mx_wbl_dangerous_material_1431,1431,METILATO DE SODIO,4.2
+l10n_mx_wbl_dangerous_material_1432,1432,FOSFURO DE SODIO,4.3
+l10n_mx_wbl_dangerous_material_1433,1433,FOSFUROS ESTANICOS,4.3
+l10n_mx_wbl_dangerous_material_1435,1435,"ZINC, CENIZAS DE",4.3
+l10n_mx_wbl_dangerous_material_1436,1436,ZINC EN POLVO,4.3
+l10n_mx_wbl_dangerous_material_1437,1437,HIDRURO DE CIRCONIO,4.1
+l10n_mx_wbl_dangerous_material_1438,1438,NITRATO DE ALUMINIO,5.1
+l10n_mx_wbl_dangerous_material_1439,1439,DICROMATO DE AMONIO,5.1
+l10n_mx_wbl_dangerous_material_1442,1442,PERCLORATO DE AMONIO,5.1
+l10n_mx_wbl_dangerous_material_1444,1444,PERSULFATO DE AMONIO,5.1
+l10n_mx_wbl_dangerous_material_1445,1445,CLORATO DE BARIO,5.1
+l10n_mx_wbl_dangerous_material_1446,1446,NITRATO DE BARIO,5.1
+l10n_mx_wbl_dangerous_material_1447,1447,PERCLORATO DE BARIO,5.1
+l10n_mx_wbl_dangerous_material_1448,1448,PERMANGANATO DE BARIO,5.1
+l10n_mx_wbl_dangerous_material_1449,1449,PEROXIDO DE BARIO,5.1
+l10n_mx_wbl_dangerous_material_1450,1450,"BROMATOS INORGANICOS, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_1451,1451,NITRATO DE CESIO,5.1
+l10n_mx_wbl_dangerous_material_1452,1452,CLORATO DE CALCIO,5.1
+l10n_mx_wbl_dangerous_material_1453,1453,CLORITO DE CALCIO,5.1
+l10n_mx_wbl_dangerous_material_1454,1454,NITRATO DE CALCIO,5.1
+l10n_mx_wbl_dangerous_material_1455,1455,PERCLORATO DE CALCIO,5.1
+l10n_mx_wbl_dangerous_material_1456,1456,PERMANGANATO DE CALCIO,5.1
+l10n_mx_wbl_dangerous_material_1457,1457,PEROXIDO DE CALCIO,5.1
+l10n_mx_wbl_dangerous_material_1458,1458,"CLORATO Y BORATO, MEZCLA DE",5.1
+l10n_mx_wbl_dangerous_material_1459,1459,"CLORATO Y CLORURO DE MAGNESIO, MEZCLA DE",5.1
+l10n_mx_wbl_dangerous_material_1461,1461,"CLORATOS INORGANICOS, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_1462,1462,"CLORITOS INORGANICOS, N.E.O.N.",5.1
+l10n_mx_wbl_dangerous_material_1463,1463,TRIOXIDO DE CROMO ANHIDRO,5.1
+l10n_mx_wbl_dangerous_material_1465,1465,NITRATO DE DIDIMIO,5.1
+l10n_mx_wbl_dangerous_material_1466,1466,NITRATO FERRICO,5.1
+l10n_mx_wbl_dangerous_material_1467,1467,NITRATO DE GUANIDINA,5.1
+l10n_mx_wbl_dangerous_material_1469,1469,NITRATO DE PLOMO II,5.1
+l10n_mx_wbl_dangerous_material_1470,1470,PERCLORATO DE PLOMO,5.1
+l10n_mx_wbl_dangerous_material_1471,1471,"HIPOCLORITO DE LITIO, SECO, o MEZCLA DE HIPOCLORITO DE LITIO",5.1
+l10n_mx_wbl_dangerous_material_1472,1472,PEROXIDO DE LITIO,5.1
+l10n_mx_wbl_dangerous_material_1473,1473,BROMATO DE MAGNESIO,5.1
+l10n_mx_wbl_dangerous_material_1474,1474,NITRATO DE MAGNESIO,5.1
+l10n_mx_wbl_dangerous_material_1475,1475,PERCLORATO DE MAGNESIO,5.1
+l10n_mx_wbl_dangerous_material_1476,1476,PEROXIDO DE MAGNESIO,5.1
+l10n_mx_wbl_dangerous_material_1477,1477,"NITRATOS INORGANICOS, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_1479,1479,"SOLIDO COMBURENTE, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_1481,1481,"PERCLORATOS INORGANICOS, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_1482,1482,"PERMANGANATOS INORGANICOS, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_1483,1483,"PERÓXIDOS INORGÁNICOS, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_1484,1484,BROMATO DE POTASIO,5.1
+l10n_mx_wbl_dangerous_material_1485,1485,CLORATO DE POTASIO,5.1
+l10n_mx_wbl_dangerous_material_1486,1486,NITRATO DE POTASIO,5.1
+l10n_mx_wbl_dangerous_material_1487,1487,MEZCLA DE NITRATO DE POTASIO Y NITRITO DE SODIO,5.1
+l10n_mx_wbl_dangerous_material_1488,1488,NITRITO DE POTASIO,5.1
+l10n_mx_wbl_dangerous_material_1489,1489,PERCLORATO DE POTASIO,5.1
+l10n_mx_wbl_dangerous_material_1490,1490,PERMANGANATO DE POTASIO,5.1
+l10n_mx_wbl_dangerous_material_1491,1491,PEROXIDO DE POTASIO,5.1
+l10n_mx_wbl_dangerous_material_1492,1492,PERSULFATO DE POTASIO,5.1
+l10n_mx_wbl_dangerous_material_1493,1493,NITRATO DE PLATA,5.1
+l10n_mx_wbl_dangerous_material_1494,1494,BROMATO DE SODIO,5.1
+l10n_mx_wbl_dangerous_material_1495,1495,CLORATO DE SODIO,5.1
+l10n_mx_wbl_dangerous_material_1496,1496,CLORITO DE SODIO,5.1
+l10n_mx_wbl_dangerous_material_1498,1498,NITRATO DE SODIO,5.1
+l10n_mx_wbl_dangerous_material_1499,1499,MEZCLA DE NITRATO DE SODIO Y NITRATO DE POTASIO,5.1
+l10n_mx_wbl_dangerous_material_1500,1500,NITRITO DE SODIO,5.1
+l10n_mx_wbl_dangerous_material_1502,1502,PERCLORATO DE SODIO,5.1
+l10n_mx_wbl_dangerous_material_1503,1503,PERMANGANATO DE SODIO,5.1
+l10n_mx_wbl_dangerous_material_1504,1504,PEROXIDO DE SODIO,5.1
+l10n_mx_wbl_dangerous_material_1505,1505,PERSULFATO DE SODIO,5.1
+l10n_mx_wbl_dangerous_material_1506,1506,CLORATO DE ESTRONCIO,5.1
+l10n_mx_wbl_dangerous_material_1507,1507,NITRATO DE ESTRONCIO,5.1
+l10n_mx_wbl_dangerous_material_1508,1508,PERCLORATO DE ESTRONCIO,5.1
+l10n_mx_wbl_dangerous_material_1509,1509,PEROXIDO DE ESTRONCIO,5.1
+l10n_mx_wbl_dangerous_material_1510,1510,TETRANITROMETANO,6.1
+l10n_mx_wbl_dangerous_material_1511,1511,UREA-AGUA OXIGENADA,5.1
+l10n_mx_wbl_dangerous_material_1512,1512,NITRITO DE ZINC Y AMONIO,5.1
+l10n_mx_wbl_dangerous_material_1513,1513,CLORATO DE ZINC,5.1
+l10n_mx_wbl_dangerous_material_1514,1514,NITRATO DE ZINC,5.1
+l10n_mx_wbl_dangerous_material_1515,1515,PERMANGANATO DE ZINC,5.1
+l10n_mx_wbl_dangerous_material_1516,1516,PEROXIDO DE ZINC,5.1
+l10n_mx_wbl_dangerous_material_1517,1517,"PICRAMATO DE CIRCONIO HUMEDECIDO con un mínimo de 20%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1541,1541,"CIANHIDRINA DE ACETONA, ESTABILIZADA",6.1
+l10n_mx_wbl_dangerous_material_1544,1544,"ALCALOIDES SOLIDOS, N.E.P. SALES DE ALCALOIDES SOLIDAS, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1545,1545,ISOTIOCIANATO DE ALILO ESTABILIZADO INHIBIDO,6.1
+l10n_mx_wbl_dangerous_material_1546,1546,ARSENIATO DE AMONIO,6.1
+l10n_mx_wbl_dangerous_material_1547,1547,ANILINA,6.1
+l10n_mx_wbl_dangerous_material_1548,1548,CLORHIDRATO DE ANILINA,6.1
+l10n_mx_wbl_dangerous_material_1549,1549,"ANTIMONIO, COMPUESTO INORGANICO SOLIDO DE, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1550,1550,LACTATO DE ANTIMONIO,6.1
+l10n_mx_wbl_dangerous_material_1551,1551,TARTRATO DE ANTIMONIO Y POTASIO,6.1
+l10n_mx_wbl_dangerous_material_1553,1553,ACIDO ARSENOICO LIQUIDO,6.1
+l10n_mx_wbl_dangerous_material_1554,1554,ACIDO ARSENOICO SOLIDO,6.1
+l10n_mx_wbl_dangerous_material_1555,1555,BROMURO DE ARSENICO,6.1
+l10n_mx_wbl_dangerous_material_1556,1556,"ARSENICO, COMPUESTO LIQUIDO DE, N.E.P., INORGANICO, en particular arseniatos, N.E.P., arsenitos, N.E.P., sulfuros de arsénico, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1557,1557,"ARSENICO, COMPUESTO SOLIDO DE, N.E.P., INORGANICO, en particular arseniatos N.E.P., arsenitos N.E.P., sulfuros de arsénico N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1558,1558,ARSENICO,6.1
+l10n_mx_wbl_dangerous_material_1559,1559,PENTOXIDO DE ARSENICO,6.1
+l10n_mx_wbl_dangerous_material_1560,1560,TRICLORURO DE ARSENICO,6.1
+l10n_mx_wbl_dangerous_material_1561,1561,TRIOXIDO DE ARSENICO,6.1
+l10n_mx_wbl_dangerous_material_1562,1562,POLVO ARSENICAL,6.1
+l10n_mx_wbl_dangerous_material_1564,1564,"BARIO, COMPUESTO DE, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1565,1565,CIANURO DE BARIO,6.1
+l10n_mx_wbl_dangerous_material_1566,1566,"BERILIO, COMPUESTO DE, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1567,1567,BERILIO EN POLVO,6.1
+l10n_mx_wbl_dangerous_material_1569,1569,BROMOACETONA,6.1
+l10n_mx_wbl_dangerous_material_1570,1570,BRUCINA,6.1
+l10n_mx_wbl_dangerous_material_1571,1571,"AZIDA DE BARIO HUMIDIFICADA con un mínimo de 50%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_1572,1572,ACIDO CACODILICO,6.1
+l10n_mx_wbl_dangerous_material_1573,1573,ARSENIATO DE CALCIO,6.1
+l10n_mx_wbl_dangerous_material_1574,1574,"MEZCLAS DE ARSENIATO CALCICO Y ARSENITO CALCICO, SOLIDAS",6.1
+l10n_mx_wbl_dangerous_material_1575,1575,CIANURO DE CALCIO,6.1
+l10n_mx_wbl_dangerous_material_1577,1577,CLORODINITROBENCENOS LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_1578,1578,CLORONITROBENCENOS,6.1
+l10n_mx_wbl_dangerous_material_1579,1579,CLORHIDRATO DE 4-CLORO-o-TOLUIDINA,6.1
+l10n_mx_wbl_dangerous_material_1580,1580,CLOROPICRINA,6.1
+l10n_mx_wbl_dangerous_material_1581,1581,MEZCLA DE CLOROPICRINA Y BROMURO DE METILO,2.3
+l10n_mx_wbl_dangerous_material_1582,1582,MEZCLA DE CLOROPICRINA Y CLORURO DE METILO,2.3
+l10n_mx_wbl_dangerous_material_1583,1583,"MEZCLA DE CLOROPICRINA, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1585,1585,ACETOARSENITO DE COBRE,6.1
+l10n_mx_wbl_dangerous_material_1586,1586,ARSENITO DE COBRE,6.1
+l10n_mx_wbl_dangerous_material_1587,1587,CIANURO DE COBRE,6.1
+l10n_mx_wbl_dangerous_material_1588,1588,"CIANUROS INORGANICOS, SOLIDOS, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1589,1589,CLORURO DE CIANOGENO INHIBIDO,2.3
+l10n_mx_wbl_dangerous_material_1590,1590,DICLOROANILINAS LIQUIDAS,6.1
+l10n_mx_wbl_dangerous_material_1591,1591,o-DICLOROBENCENO,6.1
+l10n_mx_wbl_dangerous_material_1593,1593,DICLOROMETANO,6.1
+l10n_mx_wbl_dangerous_material_1594,1594,SULFATO DE DIETILO,6.1
+l10n_mx_wbl_dangerous_material_1595,1595,SULFATO DE DIMETILO,6.1
+l10n_mx_wbl_dangerous_material_1596,1596,DINITROANILINAS,6.1
+l10n_mx_wbl_dangerous_material_1597,1597,DINITROBENCENOS LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_1598,1598,DINITRO-o-CRESOL,6.1
+l10n_mx_wbl_dangerous_material_1599,1599,DINITROFENOL EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_1600,1600,DINITROTOLUENOS FUNDIDOS,6.1
+l10n_mx_wbl_dangerous_material_1601,1601,"DESINFECTANTE SOLIDO, TOXICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1602,1602,"COLORANTE LIQUIDO, TOXICO, N.E.P., o MATERIA INTERMEDIA LIQUIDA PARA COLORANTE, LIQUIDA, TOXICA, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1603,1603,BROMOACETATO DE ETILO,6.1
+l10n_mx_wbl_dangerous_material_1604,1604,ETILENDIAMINA,8
+l10n_mx_wbl_dangerous_material_1605,1605,DIBROMURO DE ETILENO,6.1
+l10n_mx_wbl_dangerous_material_1606,1606,ARSENIATO FERRICO,6.1
+l10n_mx_wbl_dangerous_material_1607,1607,ARSENITO FERRICO,6.1
+l10n_mx_wbl_dangerous_material_1608,1608,ARSENIATO FERROSO,6.1
+l10n_mx_wbl_dangerous_material_1611,1611,TETRAFOSFATO DE HEXAETILO,6.1
+l10n_mx_wbl_dangerous_material_1612,1612,MEZCLA DE TETRAFOSFATO DE HEXAETILO Y GAS COMPRIMIDO,2.3
+l10n_mx_wbl_dangerous_material_1613,1613,ACIDO CIANHIDRICO EN SOLUCION ACUOSA (CIANURO DE HIDROGENO EN SOLUCION ACUOSA) con no más de 20% ácido cianhídrico,6.1
+l10n_mx_wbl_dangerous_material_1614,1614,CIANURO DE HIDROGENO ESTABILIZADO con menos de 3% de agua y absorbido en una materia porosa inerte,6.1
+l10n_mx_wbl_dangerous_material_1616,1616,ACETATO DE PLOMO,6.1
+l10n_mx_wbl_dangerous_material_1617,1617,ARSENIATOS DE PLOMO,6.1
+l10n_mx_wbl_dangerous_material_1618,1618,ARSENITOS DE PLOMO,6.1
+l10n_mx_wbl_dangerous_material_1620,1620,CIANURO DE PLOMO,6.1
+l10n_mx_wbl_dangerous_material_1621,1621,PURPURA DE LONDRES,6.1
+l10n_mx_wbl_dangerous_material_1622,1622,ARSENIATO DE MAGNESIO,6.1
+l10n_mx_wbl_dangerous_material_1623,1623,ARSENIATO DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1624,1624,CLORURO DE MERCURIO MERCURICO,6.1
+l10n_mx_wbl_dangerous_material_1625,1625,NITRATO MERCURICO,6.1
+l10n_mx_wbl_dangerous_material_1626,1626,CIANURO DE MERCURIO Y POTASIO,6.1
+l10n_mx_wbl_dangerous_material_1627,1627,NITRATO MERCURIOSO,6.1
+l10n_mx_wbl_dangerous_material_1629,1629,ACETATO DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1630,1630,CLORURO DE MERCURIO Y AMONIO,6.1
+l10n_mx_wbl_dangerous_material_1631,1631,BENZOATO DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1634,1634,BROMUROS DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1636,1636,CIANURO DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1637,1637,GLUCONATO DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1638,1638,YODURO DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1639,1639,NUCLEATO DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1640,1640,OLEATO DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1641,1641,OXIDO DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1642,1642,"OXICIANURO DE MERCURIO, DESENSIBILIZADO",6.1
+l10n_mx_wbl_dangerous_material_1643,1643,YODURO DE MERCURIO Y POTASIO,6.1
+l10n_mx_wbl_dangerous_material_1644,1644,SALICILATO DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1645,1645,SULFATO DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1646,1646,TIOCIANATO DE MERCURIO,6.1
+l10n_mx_wbl_dangerous_material_1647,1647,"BROMURO DE METILO y DIBROMURO DE ETILENO, MEZCLAS DE, LIQUIDO",6.1
+l10n_mx_wbl_dangerous_material_1648,1648,ACETONITRILO,3
+l10n_mx_wbl_dangerous_material_1649,1649,MEZCLAS ANTIDETONANTES PARA COMBUSTIBLES DE MOTORES,6.1
+l10n_mx_wbl_dangerous_material_1650,1650,beta-NAFTILAMINA,6.1
+l10n_mx_wbl_dangerous_material_1651,1651,NAFTILTIOUREA,6.1
+l10n_mx_wbl_dangerous_material_1652,1652,NAFTILUREA,6.1
+l10n_mx_wbl_dangerous_material_1653,1653,CIANURO DE NIQUEL,6.1
+l10n_mx_wbl_dangerous_material_1654,1654,NICOTINA,6.1
+l10n_mx_wbl_dangerous_material_1655,1655,"COMPUESTOS DE NICOTINA, SOLIDOS, N.E.P. o PREPARADOS DE NICOTINA SOLIDOS N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1656,1656,CLORHIDRATO DE NICOTINA líquida o CLORHIDRATO DE NICOTINA EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_1657,1657,SALICILATO DE NICOTINA,6.1
+l10n_mx_wbl_dangerous_material_1658,1658,SULFATO DE NICOTINA EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_1659,1659,TARTRATO DE NICOTINA,6.1
+l10n_mx_wbl_dangerous_material_1660,1660,OXIDO NITRICO COMPRIMIDO,2.3
+l10n_mx_wbl_dangerous_material_1661,1661,"NITROANILINAS (o-, m-, p-)",6.1
+l10n_mx_wbl_dangerous_material_1662,1662,NITROBENCENO,6.1
+l10n_mx_wbl_dangerous_material_1663,1663,"NITROFENOLES (o-, m-, p-)",6.1
+l10n_mx_wbl_dangerous_material_1664,1664,NITROTOLUENOS LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_1665,1665,NITROXILENOS LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_1669,1669,PENTACLOROETANO,6.1
+l10n_mx_wbl_dangerous_material_1670,1670,PERCLOROMETILMERCAPTANO,6.1
+l10n_mx_wbl_dangerous_material_1671,1671,FENOL SOLIDO,6.1
+l10n_mx_wbl_dangerous_material_1672,1672,CLORURO DE FENILCARBILAMINA,6.1
+l10n_mx_wbl_dangerous_material_1673,1673,"FENILENDIAMINAS (o-, m-, p-)",6.1
+l10n_mx_wbl_dangerous_material_1674,1674,ACETATO FENILMERCURICO,6.1
+l10n_mx_wbl_dangerous_material_1677,1677,ARSENIATO DE POTASIO,6.1
+l10n_mx_wbl_dangerous_material_1678,1678,ARSENITO DE POTASIO,6.1
+l10n_mx_wbl_dangerous_material_1679,1679,CUPROCIANURO DE POTASIO,6.1
+l10n_mx_wbl_dangerous_material_1680,1680,CIANURO DE POTASIO,6.1
+l10n_mx_wbl_dangerous_material_1683,1683,ARSENITO DE PLATA,6.1
+l10n_mx_wbl_dangerous_material_1684,1684,CIANURO DE PLATA,6.1
+l10n_mx_wbl_dangerous_material_1685,1685,ARSENIATO DE SODIO,6.1
+l10n_mx_wbl_dangerous_material_1686,1686,ARSENITO DE SODIO EN SOLUCION ACUOSA,6.1
+l10n_mx_wbl_dangerous_material_1687,1687,AZIDA DE SODIO,6.1
+l10n_mx_wbl_dangerous_material_1688,1688,CACODILATO DE SODIO,6.1
+l10n_mx_wbl_dangerous_material_1689,1689,CIANURO DE SODIO,6.1
+l10n_mx_wbl_dangerous_material_1690,1690,FLUORURO DE SODIO,6.1
+l10n_mx_wbl_dangerous_material_1691,1691,ARSENITO DE ESTRONCIO,6.1
+l10n_mx_wbl_dangerous_material_1692,1692,ESTRICNINA o SALES DE ESTRICNINA,6.1
+l10n_mx_wbl_dangerous_material_1693,1693,"GASES LACRIMÓGENOS, SUBSTANCIA LÍQUIDA PARA LA FABRICACIÓN DE, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1694,1694,CIANUROS DE BROMOBENCILO LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_1695,1695,CLOROACETONA ESTABILIZADA,6.1
+l10n_mx_wbl_dangerous_material_1697,1697,CLOROACETOFENONA SOLIDA,6.1
+l10n_mx_wbl_dangerous_material_1698,1698,DIFENILAMINOCLOROARSINA,6.1
+l10n_mx_wbl_dangerous_material_1699,1699,DIFENILCLOROARSINA LIQUIDA,6.1
+l10n_mx_wbl_dangerous_material_1700,1700,VELAS LACRIMOGENAS,6.1
+l10n_mx_wbl_dangerous_material_1701,1701,BROMURO DE XILILO,6.1
+l10n_mx_wbl_dangerous_material_1702,1702,"1,1,2,2-TETRACLOROETANO",6.1
+l10n_mx_wbl_dangerous_material_1704,1704,DITIOPIROFOSFATO DE TETRAETILO,6.1
+l10n_mx_wbl_dangerous_material_1707,1707,"TALIO, COMPUESTO DE, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1708,1708,TOLUIDINAS LIQUIDAS,6.1
+l10n_mx_wbl_dangerous_material_1709,1709,"TOLUILEN-2,4-DIAMINA SOLIDA",6.1
+l10n_mx_wbl_dangerous_material_1710,1710,TRICLOROETILENO,6.1
+l10n_mx_wbl_dangerous_material_1711,1711,XILIDINAS LIQUIDAS,6.1
+l10n_mx_wbl_dangerous_material_1712,1712,"ARSENIATO DE ZINC, ARSENITO DE ZINC o MEZCLAS DE ARSENIATO Y ARSENITO DE ZINC",6.1
+l10n_mx_wbl_dangerous_material_1713,1713,CIANURO DE ZINC,6.1
+l10n_mx_wbl_dangerous_material_1714,1714,FOSFURO DE ZINC,4.3
+l10n_mx_wbl_dangerous_material_1715,1715,ANHIDRIDO ACETICO,8
+l10n_mx_wbl_dangerous_material_1716,1716,BROMURO DE ACETILO,8
+l10n_mx_wbl_dangerous_material_1717,1717,CLORURO DE ACETILO,3
+l10n_mx_wbl_dangerous_material_1718,1718,FOSFATO ACIDO DE BUTILO,|
+l10n_mx_wbl_dangerous_material_1719,1719,LIQUIDOS ALCALINO CAUSTICO N.E.P.,8
+l10n_mx_wbl_dangerous_material_1722,1722,CLOROFORMIATO DE ALILO,6.1
+l10n_mx_wbl_dangerous_material_1723,1723,YODURO DE ALILO,3
+l10n_mx_wbl_dangerous_material_1724,1724,ALILTRICLOROSILANO ESTABILIZADO,8
+l10n_mx_wbl_dangerous_material_1725,1725,BROMURO DE ALUMINIO ANHIDRO,8
+l10n_mx_wbl_dangerous_material_1726,1726,CLORURO DE ALUMINIO ANHIDRO,8
+l10n_mx_wbl_dangerous_material_1727,1727,HIDROGENODIFLUORURO DE AMONIO SOLIDO,8
+l10n_mx_wbl_dangerous_material_1728,1728,AMILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1729,1729,CLORURO DE ANISOILO,8
+l10n_mx_wbl_dangerous_material_1730,1730,PENTACLORURO DE ANTIMONIO LIQUIDO,8
+l10n_mx_wbl_dangerous_material_1731,1731,PENTACLORURO DE ANTIMONIO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1732,1732,PENTAFLUORURO DE ANTIMONIO,8
+l10n_mx_wbl_dangerous_material_1733,1733,TRICLORURO DE ANTIMONIO,8
+l10n_mx_wbl_dangerous_material_1736,1736,CLORURO DE BENZOILO,8
+l10n_mx_wbl_dangerous_material_1737,1737,BROMURO DE BENCILO,6.1
+l10n_mx_wbl_dangerous_material_1738,1738,CLORURO DE BENCILO,6.1
+l10n_mx_wbl_dangerous_material_1739,1739,CLOROFORMIATO DE BENCILO,8
+l10n_mx_wbl_dangerous_material_1740,1740,"HIDROGENODIFLUORUROS, N.E.P.",8
+l10n_mx_wbl_dangerous_material_1741,1741,TRICLORURO DE BORO,2.3
+l10n_mx_wbl_dangerous_material_1742,1742,"TRIFLUORURO DE BORO Y ACIDO ACETICO, COMPLEJO LIQUIDO DE",8
+l10n_mx_wbl_dangerous_material_1743,1743,"TRIFLUORURO DE BORO Y ACIDO PROPIONICO, COMPLEJO DE",8
+l10n_mx_wbl_dangerous_material_1744,1744,BROMO o BROMO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1745,1745,PENTAFLUORURO DE BROMO,5.1
+l10n_mx_wbl_dangerous_material_1746,1746,TRIFLUORURO DE BROMO,5.1
+l10n_mx_wbl_dangerous_material_1747,1747,BUTILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1748,1748,"HIPOCLORITO  DE CALCIO SECO o DE HIPOCLORITO CALCICO EN MEZCLA  SECA, con más de 39% de cloro activo (8,8% de oxígeno activo)",5.1
+l10n_mx_wbl_dangerous_material_1749,1749,TRIFLUORURO DE CLORO,2.3
+l10n_mx_wbl_dangerous_material_1750,1750,ACIDO CLOROACETICO EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_1751,1751,ACIDO CLOROACETICO SOLIDO,6.1
+l10n_mx_wbl_dangerous_material_1752,1752,CLORURO DE CLOROACETILO,6.1
+l10n_mx_wbl_dangerous_material_1753,1753,CLOROFENILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1754,1754,ACIDO CLOROSULFONICO (con o sin trióxido de azufre),8
+l10n_mx_wbl_dangerous_material_1755,1755,ACIDO CROMICO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1756,1756,FLUORURO CROMICO SOLIDO,8
+l10n_mx_wbl_dangerous_material_1757,1757,FLUORURO CROMICO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1758,1758,OXICLORURO DE CROMO (CLORURO DE CROMILO),8
+l10n_mx_wbl_dangerous_material_1759,1759,"SOLIDO CORROSIVO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_1760,1760,"LIQUIDO CORROSIVO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_1761,1761,CUPRIETILENDIAMINA EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1762,1762,CICLOHEXENILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1763,1763,CICLOHEXILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1764,1764,ACIDO DICLOROACETICO,8
+l10n_mx_wbl_dangerous_material_1765,1765,CLORURO DE DICLOROACETILO,8
+l10n_mx_wbl_dangerous_material_1766,1766,DICLOROFENILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1767,1767,DIETILDICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1768,1768,ACIDO DIFLUOROFOSFORICO ANHIDRO,8
+l10n_mx_wbl_dangerous_material_1769,1769,DIFENILDICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1770,1770,BROMURO DE DIFENILMETILO,8
+l10n_mx_wbl_dangerous_material_1771,1771,DODECILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1773,1773,CLORURO FERRICO ANHIDRO,8
+l10n_mx_wbl_dangerous_material_1774,1774,"EXTINTORES DE INCENDIOS, CARGAS PARA, líquidos corrosivos",8
+l10n_mx_wbl_dangerous_material_1775,1775,ACIDO FLUOROBORICO,8
+l10n_mx_wbl_dangerous_material_1776,1776,ACIDO FLUOROFOSFORICO ANHIDRO,8
+l10n_mx_wbl_dangerous_material_1777,1777,ACIDO FLUOROSULFONICO,8
+l10n_mx_wbl_dangerous_material_1778,1778,ACIDO FLUOROSILICICO,8
+l10n_mx_wbl_dangerous_material_1779,1779,ACIDO FORMICO,8
+l10n_mx_wbl_dangerous_material_1780,1780,CLORURO DE FUMARILO,8
+l10n_mx_wbl_dangerous_material_1781,1781,HEXADECILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1782,1782,ACIDO HEXAFLUOROFOSFORICO,8
+l10n_mx_wbl_dangerous_material_1783,1783,HEXAMETILENDIAMINA EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1784,1784,HEXILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1786,1786,MEZCLA DE ACIDO FLUORHIDRICO Y ACIDO SULFURICO,8
+l10n_mx_wbl_dangerous_material_1787,1787,ACIDO YODHIDRICO,8
+l10n_mx_wbl_dangerous_material_1788,1788,ACIDO BROMHIDRICO,8
+l10n_mx_wbl_dangerous_material_1789,1789,ACIDO CLORHIDRICO,8
+l10n_mx_wbl_dangerous_material_1790,1790,ACIDO FLUORHIDRICO EN SOLUCION con más de 60% ácido fluorhídrico,8
+l10n_mx_wbl_dangerous_material_1790,1790,ACIDO FLUORHIDRICO EN SOLUCION con no más de 60% ácido fluorhídrico,8
+l10n_mx_wbl_dangerous_material_1791,1791,HIPOCLORITOS EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1792,1792,MONOCLORURO DE YODO,8
+l10n_mx_wbl_dangerous_material_1793,1793,FOSFATO ACIDO DE ISOPROPILO,8
+l10n_mx_wbl_dangerous_material_1794,1794,SULFATO DE PLOMO con más de 3% de ácido libre,8
+l10n_mx_wbl_dangerous_material_1796,1796,"ACIDO NITRANTE (ACIDO MIXTO), MEZCLA DE, con más de 50% ácido nítrico",8
+l10n_mx_wbl_dangerous_material_1796,1796,"ACIDO NITRANTE (ACIDO MIXTO), MEZCLA DE, con no más de 50% ácido nítrico",8
+l10n_mx_wbl_dangerous_material_1798,1798,ACIDO NITROCLORHIDRICO,8
+l10n_mx_wbl_dangerous_material_1799,1799,NONILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1800,1800,OCTADECILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1801,1801,OCTILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1802,1802,"ACIDO PERCLORICO con un máximo de 50%, en masa, de ácido",8
+l10n_mx_wbl_dangerous_material_1803,1803,ACIDO FENOLSULFONICO LIQUIDO,8
+l10n_mx_wbl_dangerous_material_1804,1804,FENILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1805,1805,ÁCIDO FOSFÓRICO EN SOLUCIÓN,8
+l10n_mx_wbl_dangerous_material_1806,1806,PENTACLORURO DE FOSFORO,8
+l10n_mx_wbl_dangerous_material_1807,1807,PENTÓXIDO DE FÓSFORO (ANHIDRIDO FOSFÓRICO),8
+l10n_mx_wbl_dangerous_material_1808,1808,TRIBROMURO DE FOSFORO,8
+l10n_mx_wbl_dangerous_material_1809,1809,TRICLORURO DE FOSFORO,6.1
+l10n_mx_wbl_dangerous_material_1810,1810,OXICLORURO DE FOSFORO,6.1
+l10n_mx_wbl_dangerous_material_1811,1811,HIDROGENODIFLUORURO DE POTASIO,8
+l10n_mx_wbl_dangerous_material_1812,1812,FLUORURO DE POTASIO SOLIDO,6.1
+l10n_mx_wbl_dangerous_material_1813,1813,HIDROXIDO DE POTASICO SOLIDO,8
+l10n_mx_wbl_dangerous_material_1814,1814,HIDROXIDO DE POTASICO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1815,1815,CLORURO DE PROPIONILO,3
+l10n_mx_wbl_dangerous_material_1816,1816,PROPILTRICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_1817,1817,CLORURO DE PIROSULFURILO,8
+l10n_mx_wbl_dangerous_material_1818,1818,TETRACLORURO DE SILICIO,8
+l10n_mx_wbl_dangerous_material_1819,1819,ALUMINATO DE SODIO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1823,1823,HIDROXIDO DE SODIO SOLIDO,8
+l10n_mx_wbl_dangerous_material_1824,1824,HIDROXIDO DE SODIO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1825,1825,MONOXIDO DE SODIO,8
+l10n_mx_wbl_dangerous_material_1826,1826,"ACIDO NITRANTE (ACIDO MIXTO) AGOTADO, MEZCLA DE, con más de 50% ácido nítrico",8
+l10n_mx_wbl_dangerous_material_1826,1826,"ACIDO NITRANTE (ACIDO MIXTO) AGOTADO, MEZCLA DE, con no más de 50% ácido nítrico",8
+l10n_mx_wbl_dangerous_material_1827,1827,CLORURO ESTANICO ANHIDRO,8
+l10n_mx_wbl_dangerous_material_1828,1828,CLORUROS DE AZUFRE,8
+l10n_mx_wbl_dangerous_material_1829,1829,TRIOXIDO DE AZUFRE ESTABILIZADO,8
+l10n_mx_wbl_dangerous_material_1830,1830,ACIDO SULFURICO con más de 51% de ácido,8
+l10n_mx_wbl_dangerous_material_1831,1831,ACIDO SULFURICO FUMANTE,8
+l10n_mx_wbl_dangerous_material_1832,1832,ACIDO SULFURICO AGOTADO,8
+l10n_mx_wbl_dangerous_material_1833,1833,ACIDO SULFUROSO,8
+l10n_mx_wbl_dangerous_material_1834,1834,CLORURO DE SULFURILO,8
+l10n_mx_wbl_dangerous_material_1835,1835,HIDROXIDO DE TETRAMETILAMONIO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1836,1836,CLORURO DE TIONILO,8
+l10n_mx_wbl_dangerous_material_1837,1837,CLORURO DE TIOFOSFORILO,8
+l10n_mx_wbl_dangerous_material_1838,1838,TETRACLORURO DE TITANIO,6.1
+l10n_mx_wbl_dangerous_material_1839,1839,ACIDO TRICLOROACETICO,8
+l10n_mx_wbl_dangerous_material_1840,1840,CLORURO DE ZINC (CINC)  EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1841,1841,ALDEHIDATO AMONICO,9
+l10n_mx_wbl_dangerous_material_1843,1843,"DINITRO-o-CRESOLATO AMONICO, SOLIDO",6.1
+l10n_mx_wbl_dangerous_material_1845,1845,DIOXIDO DE CARBONO SOLIDO (HIELO SECO),9
+l10n_mx_wbl_dangerous_material_1846,1846,TETRACLORURO DE CARBONO,6.1
+l10n_mx_wbl_dangerous_material_1847,1847,SULFURO DE POTASICO HIDRATADO con un mínimo de 30% de agua de cristalización,8
+l10n_mx_wbl_dangerous_material_1848,1848,"ACIDO PROPIONICO, con no menos de 10% o menor de 90% de ácido en masa",8
+l10n_mx_wbl_dangerous_material_1849,1849,SULFURO DE SODIO HIDRATADO con un mínimo de 30% de agua,8
+l10n_mx_wbl_dangerous_material_1851,1851,"MEDICAMENTO LIQUIDO, TOXICO N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1854,1854,"BARIO, ALEACIONES PIROFORICAS DE",4.2
+l10n_mx_wbl_dangerous_material_1855,1855,"CALCIO PIROFORICO o CALCIO, ALEACIONES PIROFORICAS DE",4.2
+l10n_mx_wbl_dangerous_material_1856,1856,TRAPOS GRASIENTOS,4.2
+l10n_mx_wbl_dangerous_material_1857,1857,DESECHOS TEXTILES HUMEDOS,4.2
+l10n_mx_wbl_dangerous_material_1858,1858,HEXAFLUOROPROPILENO  (GAS REFRIGERANTE R 1216),2.2
+l10n_mx_wbl_dangerous_material_1859,1859,TETRAFLUORURO DE SILICIO COMPRIMIDO,2.3
+l10n_mx_wbl_dangerous_material_1860,1860,FLUORURO DE VINILO ESTABILIZADO,2.1
+l10n_mx_wbl_dangerous_material_1862,1862,CROTONATO DE ETILO,3
+l10n_mx_wbl_dangerous_material_1863,1863,COMBUSTIBLE PARA MOTORES DE TURBINA DE AVIACION,3
+l10n_mx_wbl_dangerous_material_1865,1865,NITRATO DE n-PROPILO,3
+l10n_mx_wbl_dangerous_material_1866,1866,"RESINA, SOLUCIONES DE, inflamables",3
+l10n_mx_wbl_dangerous_material_1868,1868,DECABORANO,4.1
+l10n_mx_wbl_dangerous_material_1869,1869,"MAGNESIO o ALEACIONES DE MAGNESIO con más de 50% de magnesio en recortes, gránulos o tiras",4.1
+l10n_mx_wbl_dangerous_material_1870,1870,BOROHIDRURO DE POTASICO,4.3
+l10n_mx_wbl_dangerous_material_1871,1871,HIDRURO DE TITANIO,4.1
+l10n_mx_wbl_dangerous_material_1872,1872,DIOXIDO DE PLOMO,5.1
+l10n_mx_wbl_dangerous_material_1873,1873,"ACIDO PERCLORICO con más de 50% pero no más de 72%, en masa, de ácido",5.1
+l10n_mx_wbl_dangerous_material_1884,1884,OXIDO BARICO,6.1
+l10n_mx_wbl_dangerous_material_1885,1885,BENCIDINA,6.1
+l10n_mx_wbl_dangerous_material_1886,1886,CLORURO DE BENCILIDENO,6.1
+l10n_mx_wbl_dangerous_material_1887,1887,BROMOCLOROMETANO,6.1
+l10n_mx_wbl_dangerous_material_1888,1888,CLOROFORMO,6.1
+l10n_mx_wbl_dangerous_material_1889,1889,BROMURO DE CIANOGENO,6.1
+l10n_mx_wbl_dangerous_material_1891,1891,BROMURO DE ETILO,6.1
+l10n_mx_wbl_dangerous_material_1892,1892,ETILDICLOROARSINA,6.1
+l10n_mx_wbl_dangerous_material_1894,1894,HIDROXIDO FENILMERCURICO,6.1
+l10n_mx_wbl_dangerous_material_1895,1895,NITRATO FENILMERCURICO,6.1
+l10n_mx_wbl_dangerous_material_1897,1897,TETRACLOROETILENO,6.1
+l10n_mx_wbl_dangerous_material_1898,1898,YODURO DE ACETILO,8
+l10n_mx_wbl_dangerous_material_1902,1902,FOSFATO ACIDO DE DIISOOCTILO,8
+l10n_mx_wbl_dangerous_material_1905,1905,ACIDO SELENICO,8
+l10n_mx_wbl_dangerous_material_1906,1906,LODOS ACIDOS,8
+l10n_mx_wbl_dangerous_material_1907,1907,CAL SODADA con más de 4% de hidróxido SODIO,8
+l10n_mx_wbl_dangerous_material_1908,1908,CLORITOS EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_1910,1910,OXIDO DE CALCIO,8
+l10n_mx_wbl_dangerous_material_1911,1911,DIBORANO  COMPRIMIDO,2.3
+l10n_mx_wbl_dangerous_material_1912,1912,MEZCLAS DE CLORURO DE METILO Y CLORURO DE METILENO,2.1
+l10n_mx_wbl_dangerous_material_1913,1913,NEON LIQUIDO REFRIGERADO,2.2
+l10n_mx_wbl_dangerous_material_1914,1914,PROPIONATOS DE BUTILO,3
+l10n_mx_wbl_dangerous_material_1915,1915,CICLOHEXANONA,3
+l10n_mx_wbl_dangerous_material_1916,1916,"ETER 2,2'-DICLORODIETILICO",6.1
+l10n_mx_wbl_dangerous_material_1917,1917,ACRILATO DE ETILO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_1918,1918,ISOPROPILBENCENO,3
+l10n_mx_wbl_dangerous_material_1919,1919,ACRILATO DE METILO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_1920,1920,NONANOS,3
+l10n_mx_wbl_dangerous_material_1921,1921,PROPILENIMINA ESTABILIZADA,3
+l10n_mx_wbl_dangerous_material_1922,1922,PIRROLIDINA,3
+l10n_mx_wbl_dangerous_material_1923,1923,DITIONITO CALCICO (HIDROSULFITO CALCICO),4.2
+l10n_mx_wbl_dangerous_material_1928,1928,BROMURO DE METILMAGNESIO EN ETER ETILICO,4.3
+l10n_mx_wbl_dangerous_material_1929,1929,DITIONITO  POTASICO (HIDROSULFITO POTASICO),4.2
+l10n_mx_wbl_dangerous_material_1931,1931,DITIONITO DE ZINC (CINC) (HIDROSULFITO DE CINC),9
+l10n_mx_wbl_dangerous_material_1932,1932,"CIRCONIO, DESECHOS DE",4.2
+l10n_mx_wbl_dangerous_material_1935,1935,"CIANURO EN SOLUCION, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_1938,1938,ACIDO BROMOACETICO,8
+l10n_mx_wbl_dangerous_material_1939,1939,OXIBROMURO DE FOSFORO,8
+l10n_mx_wbl_dangerous_material_1940,1940,ACIDO TIOGLICOLICO,8
+l10n_mx_wbl_dangerous_material_1941,1941,DIBROMODIFLUOMETANO,9
+l10n_mx_wbl_dangerous_material_1942,1942,"NITRATO DE AMONIO con un máximo de 0,2% del material combustible, incluyendo cualquier substancia orgánica expresada en equivalente de carbono, con exclusión de cualquier otra substancia añadida",5.1
+l10n_mx_wbl_dangerous_material_1944,1944,"FÓSFOROS   DE    SEGURIDAD    (en estuches, cartones o cajas)",4.1
+l10n_mx_wbl_dangerous_material_1945,1945,"FÓSFOROS DE CERA ""VESTA""",4.1
+l10n_mx_wbl_dangerous_material_1950,1950,AEROSOLES,2
+l10n_mx_wbl_dangerous_material_1951,1951,ARGON LIQUIDO REFRIGERADO,2.2
+l10n_mx_wbl_dangerous_material_1952,1952,MEZCLA DE OXIDO DE ETILENO Y DIOXIDO DE CARBONO con un máximo de 9% de óxido de etileno,2.2
+l10n_mx_wbl_dangerous_material_1953,1953,"GAS COMPRIMIDO TOXICO, INFLAMABLE, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_1954,1954,"GAS COMPRIMIDO INFLAMABLE, N.E.P.",2.1
+l10n_mx_wbl_dangerous_material_1955,1955,"GAS COMPRIMIDO TOXICO, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_1956,1956,"GAS COMPRIMIDO, N.E.P.",2.2
+l10n_mx_wbl_dangerous_material_1957,1957,DEUTERIO COMPRIMIDO,2.1
+l10n_mx_wbl_dangerous_material_1958,1958,"1,2-DICLORO-1,1,2,2-TETRAFLUORETANO (GAS REFRIGERANTE R 114)",2.2
+l10n_mx_wbl_dangerous_material_1959,1959,"1,1-DIFLUORETILENO (GAS REFRIGERANTE R 1132ª)",2.1
+l10n_mx_wbl_dangerous_material_1961,1961,ETANO LIQUIDO REFRIGERADO,2.1
+l10n_mx_wbl_dangerous_material_1962,1962,ETILENO,2.1
+l10n_mx_wbl_dangerous_material_1963,1963,HELIO LIQUIDO REFRIGERADO,2.2
+l10n_mx_wbl_dangerous_material_1964,1964,"MEZCLA DE HIDROCARBUROS GASEOSOS COMPRIMIDOS, N.E.P.",2.1
+l10n_mx_wbl_dangerous_material_1965,1965,"MEZCLA DE HIDROCARBUROS GASEOSOS LICUADOS, N.E.P.",2.1
+l10n_mx_wbl_dangerous_material_1966,1966,HIDROGENO LIQUIDO REFRIGERADO,2.1
+l10n_mx_wbl_dangerous_material_1967,1967,"INSECTICIDA GASEOSO TOXICO, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_1968,1968,"INSECTICIDA GASEOSO, N.E.P.",2.2
+l10n_mx_wbl_dangerous_material_1969,1969,ISOBUTANO,2.1
+l10n_mx_wbl_dangerous_material_1970,1970,CRIPTON LIQUIDO REFRIGERADO,2.2
+l10n_mx_wbl_dangerous_material_1971,1971,METANO COMPRIMIDO o GAS NATURAL COMPRIMIDO con alta proporción de metano,2.1
+l10n_mx_wbl_dangerous_material_1972,1972,METANO LIQUIDO REFRIGERADO o GAS NATURAL LIQUIDO REFRIGERADO con alta proporción de metano,2.1
+l10n_mx_wbl_dangerous_material_1973,1973,"MEZCLAS DE CLORODIFLUOMETANO Y CLOROPENTAFLUORETANO de punto de ebullición constante, con alrededor de 49% de clorodifluometano (GAS REFRIGERANTE R 502)",2.2
+l10n_mx_wbl_dangerous_material_1974,1974,CLORODIFLUOBROMOMETANO (GAS REFRIGERANTE R 12B1),2.2
+l10n_mx_wbl_dangerous_material_1975,1975,MEZCLA DE OXIDO NITRICO Y TETROXIDO DE DINITROGENO (MEZCLA DE OXIDO NITRICO Y DIOXIDO DE NITROGENO),2.3
+l10n_mx_wbl_dangerous_material_1976,1976,OCTAFLUOCICLOBUTANO (GAS REFRIGERANTE RC 318),2.2
+l10n_mx_wbl_dangerous_material_1977,1977,NITROGENO LIQUIDO REFRIGERADO,2.2
+l10n_mx_wbl_dangerous_material_1978,1978,PROPANO,2.1
+l10n_mx_wbl_dangerous_material_1982,1982,TETRAFLUOROMETANO COMPRIMIDO (GAS REFRIGERANTE R 14 COMPRIMIDO),2.2
+l10n_mx_wbl_dangerous_material_1983,1983,"1-CLORO-2,2,2-TRIFLUORETANO (GAS REFRIGERANTE R 133ª)",2.2
+l10n_mx_wbl_dangerous_material_1984,1984,TRIFLUOROMETANO (GAS REFRIGERANTE R 23),2.2
+l10n_mx_wbl_dangerous_material_1986,1986,"ALCOHOLES TOXICOS INFLAMABLES, N.E.P.",3
+l10n_mx_wbl_dangerous_material_1987,1987,"ALCOHOLES, N.E.P.",3
+l10n_mx_wbl_dangerous_material_1988,1988,"ALDEHIDOS TOXICOS INFLAMABLES, N.E.P.",3
+l10n_mx_wbl_dangerous_material_1989,1989,"ALDEHIDOS, N.E.P.",3
+l10n_mx_wbl_dangerous_material_1990,1990,BENZALDEHIDO,9
+l10n_mx_wbl_dangerous_material_1991,1991,CLOROPRENO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_1992,1992,"LIQUIDO INFLAMABLE, TOXICO, N.E.P",3
+l10n_mx_wbl_dangerous_material_1993,1993,"LIQUIDO INFLAMABLE, TOXICO, N.E.P",3
+l10n_mx_wbl_dangerous_material_1994,1994,HIERRO PENTACARBONILO,6.1
+l10n_mx_wbl_dangerous_material_1999,1999,"ALQUITRANES LIQUIDOS, incluso los aglomerantes para carreteras y los asfaltos rebajados",3
+l10n_mx_wbl_dangerous_material_2000,2000,"CELULOIDE en bloques, barras, rollos, hojas, tubos, etc., excepto los desechos",4.1
+l10n_mx_wbl_dangerous_material_2001,2001,"NAFTENATOS DE COBALTO, EN POLVO",4.1
+l10n_mx_wbl_dangerous_material_2002,2002,"CELULOIDE, DESECHOS DE",4.2
+l10n_mx_wbl_dangerous_material_2004,2004,DIAMIDA MAGNESICA,4.2
+l10n_mx_wbl_dangerous_material_2006,2006,PLASTICOS A BASE DE NITROCELULOSA QUE EXPERIMENTAN CALENTAMIENTO ESPONTANEO N.E.P.,4.2
+l10n_mx_wbl_dangerous_material_2008,2008,"CIRCONIO EN POLVO, SECO",4.2
+l10n_mx_wbl_dangerous_material_2009,2009,"CIRCONIO SECO, en láminas, tiras o alambre",4.2
+l10n_mx_wbl_dangerous_material_2010,2010,HIDRURO DE MAGNESIO,4.3
+l10n_mx_wbl_dangerous_material_2011,2011,FOSFURO DE MAGNESIO,4.3
+l10n_mx_wbl_dangerous_material_2012,2012,FOSFURO DE POTASIO,4.3
+l10n_mx_wbl_dangerous_material_2013,2013,FOSFURO DE ESTRONCIO,4.3
+l10n_mx_wbl_dangerous_material_2014,2014,PEROXIDO DE HIDROGENO EN SOLUCION ACUOSA con no menos de 20% y un máximo de 60% de peróxido de hidrógeno (estabilizada según sea necesario),5.1
+l10n_mx_wbl_dangerous_material_2015,2015,"PEROXIDO DE HIDROGENO ESTABILIZADO, o PEROXIDO DE HIDROGENO EN SOLUCION ACUOSA ESTABILIZADA con más de 60% de peróxido de hidrógeno",5.1
+l10n_mx_wbl_dangerous_material_2016,2016,"MUNICIONES TOXICAS NO EXPLOSIVAS, sin carga detonante ni carga expulsora, sin cebo",6.1
+l10n_mx_wbl_dangerous_material_2017,2017,"MUNICIONES LACRIMOGENAS NO EXPLOSIVAS, sin carga detonante ni carga expulsora, sin cebo",6.1
+l10n_mx_wbl_dangerous_material_2018,2018,CLOROANILINAS SOLIDAS,6.1
+l10n_mx_wbl_dangerous_material_2019,2019,CLOROANILINAS LIQUIDAS,6.1
+l10n_mx_wbl_dangerous_material_2020,2020,CLOROFENOLES SOLIDOS,6.1
+l10n_mx_wbl_dangerous_material_2021,2021,CLOROFENOLES LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_2022,2022,ACIDO CRESILICO,6.1
+l10n_mx_wbl_dangerous_material_2023,2023,EPICLORHIDRINA,6.1
+l10n_mx_wbl_dangerous_material_2024,2024,"MERCURIO, COMPUESTO LIQUIDO N.E.P",6.1
+l10n_mx_wbl_dangerous_material_2025,2025,"MERCURIO, COMPUESTO SOLIDO N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2026,2026,"FENILMERCURICO, COMPUESTO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2027,2027,ARSENITO DE SODIO SOLIDO,6.1
+l10n_mx_wbl_dangerous_material_2028,2028,"BOMBAS FUMÍGENAS NO EXPLOSIVAS que contienen un líquido corrosivo, sin dispositivo de cebado",8
+l10n_mx_wbl_dangerous_material_2029,2029,HIDRAZINA ANHIDRA,8
+l10n_mx_wbl_dangerous_material_2030,2030,"HIDRAZINA EN SOLUCION ACUOSA con más de 37%, en masa, de hidracina",8
+l10n_mx_wbl_dangerous_material_2031,2031,"ACIDO NITRICO, excepto el ácido nítrico fumante rojo, con más de 70% ácido nítrico",8
+l10n_mx_wbl_dangerous_material_2031,2031,"ACIDO NITRICO, excepto el ácido nítrico fumante rojo, con no más de 70% ácido nítrico",8
+l10n_mx_wbl_dangerous_material_2032,2032,ACIDO NITRICO FUMANTE ROJO,8
+l10n_mx_wbl_dangerous_material_2033,2033,MONOXIDO DE POTASICO,8
+l10n_mx_wbl_dangerous_material_2034,2034,"MEZCLA DE HIDROGENO Y METANO, COMPRIMIDAS",2.1
+l10n_mx_wbl_dangerous_material_2035,2035,"1,1,1‑TRIFLUOROETANO (GAS REFRIGERANTE R 143 a)",2.1
+l10n_mx_wbl_dangerous_material_2036,2036,XENON,2.2
+l10n_mx_wbl_dangerous_material_2037,2037,"RECIPIENTES PEQUEÑOS QUE CONTIENEN GAS, (CARTUCHOS DE GAS) sin dispositivo de descarga, irrellenables",2
+l10n_mx_wbl_dangerous_material_2038,2038,DINITROTOLUENOS LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_2044,2044,"2,2-DIMETILPROPANO diferente del pentano y del isopentano",2.1
+l10n_mx_wbl_dangerous_material_2045,2045,ISOBUTIRALDEHIDO (ALDEHIDO ISOBUTILICO),3
+l10n_mx_wbl_dangerous_material_2046,2046,CIMENOS,3
+l10n_mx_wbl_dangerous_material_2048,2048,DICICLOPENTADIENO,3
+l10n_mx_wbl_dangerous_material_2049,2049,DIETILBENCENO,3
+l10n_mx_wbl_dangerous_material_2050,2050,"DIISOBUTILENO, COMPUESTOS ISOMERICOS DEL",3
+l10n_mx_wbl_dangerous_material_2051,2051,2‑DIMETILAMINOETANOL,8
+l10n_mx_wbl_dangerous_material_2052,2052,DIPENTENO,3
+l10n_mx_wbl_dangerous_material_2053,2053,METILISOBUTILCARBINOL,3
+l10n_mx_wbl_dangerous_material_2054,2054,MORFOLINA,8
+l10n_mx_wbl_dangerous_material_2055,2055,ESTIRENO MONOMERO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_2056,2056,TETRAHIDROFURANO,3
+l10n_mx_wbl_dangerous_material_2057,2057,TRIPROPILENO,3
+l10n_mx_wbl_dangerous_material_2058,2058,VALERILALDEHIDO,3
+l10n_mx_wbl_dangerous_material_2059,2059,"NITROCELULOSA EN SOLUCION INFLAMABLE con no más de 12,6%, en masa, de nitrógeno y no más de 55% de nitrocelulosa",3
+l10n_mx_wbl_dangerous_material_2067,2067,ABONOS A BASE DE NITRATO DE AMONICO,5.1
+l10n_mx_wbl_dangerous_material_2071,2071,ABONOS A BASE DE NITRATO DE AMONICO,9
+l10n_mx_wbl_dangerous_material_2073,2073,"AMONIACO EN SOLUCION acuosa de densidad relativa inferior a 0,880 a 15°C, con más de 35% pero no más de 50% de amoníaco",2.2
+l10n_mx_wbl_dangerous_material_2074,2074,ACRILAMIDA SOLIDA,6.1
+l10n_mx_wbl_dangerous_material_2075,2075,CLORAL ANHIDRO ESTABILIZADO,6.1
+l10n_mx_wbl_dangerous_material_2076,2076,CRESOLES LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_2077,2077,alfa-NAFTILAMINA,6.1
+l10n_mx_wbl_dangerous_material_2078,2078,"DIISOCIANATO DE TOLUENO, véase",6.1
+l10n_mx_wbl_dangerous_material_2079,2079,DIETILENTRIAMINA,8
+l10n_mx_wbl_dangerous_material_2186,2186,CLORURO DE HIDROGENO LIQUIDO REFRIGERADO,2.3
+l10n_mx_wbl_dangerous_material_2187,2187,DIOXIDO DE CARBONO LIQUIDO REFRIGERADO,2.2
+l10n_mx_wbl_dangerous_material_2188,2188,ARSINA,2.3
+l10n_mx_wbl_dangerous_material_2189,2189,DICLOROSILANO,2.3
+l10n_mx_wbl_dangerous_material_2190,2190,"DIFLUORURO DE OXÍGENO, COMPRIMIDO",2.3
+l10n_mx_wbl_dangerous_material_2191,2191,FLUORURO DE SULFURILO,2.3
+l10n_mx_wbl_dangerous_material_2192,2192,GERMANIO,2.3
+l10n_mx_wbl_dangerous_material_2193,2193,HEXAFLUORETANO (GAS REFRIGERANTE R 116),2.2
+l10n_mx_wbl_dangerous_material_2194,2194,HEXAFLUORURO DE SELENIO,2.3
+l10n_mx_wbl_dangerous_material_2195,2195,HEXAFLUORURO DE TELURIO,2.3
+l10n_mx_wbl_dangerous_material_2196,2196,HEXAFLUORURO DE TUNGSTENO,2.3
+l10n_mx_wbl_dangerous_material_2197,2197,YODURO DE HIDROGENO ANHIDRO,2.3
+l10n_mx_wbl_dangerous_material_2198,2198,PENTAFLUORURO DE FOSFORO,2.3
+l10n_mx_wbl_dangerous_material_2199,2199,FOSFAMINA (FOSFINA),2.3
+l10n_mx_wbl_dangerous_material_2200,2200,PROPADIENO ESTABILIZADO,2.1
+l10n_mx_wbl_dangerous_material_2201,2201,OXIDO NITROSO LIQUIDO REFRIGERADO,2.2
+l10n_mx_wbl_dangerous_material_2202,2202,SELENIURO DE HIDROGENO ANHIDRO,2.3
+l10n_mx_wbl_dangerous_material_2203,2203,SILANO,2.1
+l10n_mx_wbl_dangerous_material_2204,2204,SULFURO DE CARBONILO,2.3
+l10n_mx_wbl_dangerous_material_2205,2205,ADIPONITRILO,6.1
+l10n_mx_wbl_dangerous_material_2206,2206,"ISOCIANATOS TOXICOS, N.E.P. o ISOCIANATOS EN SOLUCION, TOXICOS, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2208,2208,HIPOCLORITO DE CALCICO EN MEZCLA SECA con más de 10% pero no más de 39% de cloro activo,5.1
+l10n_mx_wbl_dangerous_material_2209,2209,FORMALDEHIDO EN SOLUCION con un mínimo del 25% de formaldehído,8
+l10n_mx_wbl_dangerous_material_2210,2210,"MANEB o PREPARADOS DE MANEB, con un mínimo de 60% de maneb",4.2
+l10n_mx_wbl_dangerous_material_2211,2211,POLIMERO EN BOLITAS DILATABLES que desprenden vapores inflamables,9
+l10n_mx_wbl_dangerous_material_2212,2212,"ASBESTO AZUL (crocidolita) o ASBESTO MARRÓN
+ (amosita, misorita)",9
+l10n_mx_wbl_dangerous_material_2213,2213,PARAFORMALDEHIDO,4.1
+l10n_mx_wbl_dangerous_material_2214,2214,"ANHIDRIDO FTALICO con más de 0,05% de anhídrido maleico",8
+l10n_mx_wbl_dangerous_material_2215,2215,ANHIDRIDO MALEICO,8
+l10n_mx_wbl_dangerous_material_2216,2216,HARINA DE PESCADO (DESECHOS DE PESCADO) ESTABILIZADA,9
+l10n_mx_wbl_dangerous_material_2217,2217,"TORTA OLEAGINOSA con el 1,5% de aceite y el 11% de humedad como máximo",4.2
+l10n_mx_wbl_dangerous_material_2218,2218,ACIDO ACRILICO ESTABILIZADO,8
+l10n_mx_wbl_dangerous_material_2219,2219,ETER ALILGLICIDILICO (ALIL GLICIDIL ETER),3
+l10n_mx_wbl_dangerous_material_2222,2222,ANISOL,3
+l10n_mx_wbl_dangerous_material_2224,2224,BENZONITRILO,6.1
+l10n_mx_wbl_dangerous_material_2225,2225,CLORURO DE BENCENOSULFONILO,8
+l10n_mx_wbl_dangerous_material_2226,2226,BENZOTRICLORURO,8
+l10n_mx_wbl_dangerous_material_2227,2227,METACRILATO DE n-BUTILO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_2232,2232,2‑CLOROETANAL,6.1
+l10n_mx_wbl_dangerous_material_2233,2233,CLOROANISIDINAS,6.1
+l10n_mx_wbl_dangerous_material_2234,2234,CLOROBENZOTRIFLUORUROS,3
+l10n_mx_wbl_dangerous_material_2235,2235,"CLORUROS DE CLOROBENCILO, LIQUIDOS",6.1
+l10n_mx_wbl_dangerous_material_2236,2236,"ISOCIANATO DE 3-CLORO-4-METILFENILO,LIQUIDO",6.1
+l10n_mx_wbl_dangerous_material_2237,2237,CLORONITROANILINAS,6.1
+l10n_mx_wbl_dangerous_material_2238,2238,CLOROTOLUENOS,3
+l10n_mx_wbl_dangerous_material_2239,2239,CLOROTOLUIDINAS SOLIDAS,6.1
+l10n_mx_wbl_dangerous_material_2240,2240,ACIDO CROMOSULFURICO,8
+l10n_mx_wbl_dangerous_material_2241,2241,CICLOHEPTANO,3
+l10n_mx_wbl_dangerous_material_2242,2242,CICLOHEPTENO,3
+l10n_mx_wbl_dangerous_material_2243,2243,ACETATO DE CICLOHEXILO,3
+l10n_mx_wbl_dangerous_material_2244,2244,CICLOPENTANOL,3
+l10n_mx_wbl_dangerous_material_2245,2245,CICLOPENTANONA,3
+l10n_mx_wbl_dangerous_material_2246,2246,CICLOPENTENO,3
+l10n_mx_wbl_dangerous_material_2247,2247,n-DECANO,3
+l10n_mx_wbl_dangerous_material_2248,2248,DI-n-BUTILAMINA,8
+l10n_mx_wbl_dangerous_material_2249,2249,ETER DICLORODIMETILICO SIMETRICO,6.1
+l10n_mx_wbl_dangerous_material_2250,2250,ISOCIANATOS DE DICLOROFENILO,6.1
+l10n_mx_wbl_dangerous_material_2251,2251,"BICICLO [2.2.1] HEPTA‑2,5‑DIENO ESTABILIZADO (2,5-NORBORNADIENO ESTABILIZADO)",3
+l10n_mx_wbl_dangerous_material_2252,2252,"1,2-DIMETOXIETANO",3
+l10n_mx_wbl_dangerous_material_2253,2253,"N,N-DIMETILANILINA",6.1
+l10n_mx_wbl_dangerous_material_2254,2254,FOSFOROS RESISTENTES AL VIENTO,4.1
+l10n_mx_wbl_dangerous_material_2256,2256,CICLOHEXENO,3
+l10n_mx_wbl_dangerous_material_2257,2257,POTASIO,4.3
+l10n_mx_wbl_dangerous_material_2258,2258,"1,2-PROPILENDIAMINA",8
+l10n_mx_wbl_dangerous_material_2259,2259,TRIETILENTETRAMINA,8
+l10n_mx_wbl_dangerous_material_2260,2260,TRIPROPILAMINA,3
+l10n_mx_wbl_dangerous_material_2261,2261,XILENOLES SOLIDOS,6.1
+l10n_mx_wbl_dangerous_material_2262,2262,CLORURO DE DIMETILCARBAMOILO,8
+l10n_mx_wbl_dangerous_material_2263,2263,DIMETILCICLOHEXANOS,3
+l10n_mx_wbl_dangerous_material_2264,2264,"N,N DIMETIL-CICLOHEXILAMINA",8
+l10n_mx_wbl_dangerous_material_2265,2265,"N,N-DIMETILFORMAMIDA",3
+l10n_mx_wbl_dangerous_material_2266,2266,DIMETIL-N-PROPILAMINA,3
+l10n_mx_wbl_dangerous_material_2267,2267,CLORURO DE DIMETILTIOFOSFORILO,6.1
+l10n_mx_wbl_dangerous_material_2269,2269,"3,3' IMINODIPROPILAMINA",8
+l10n_mx_wbl_dangerous_material_2270,2270,ETILAMINA EN SOLUCION ACUOSA con no menos de 50% pero no más de 70% de etilamina,3
+l10n_mx_wbl_dangerous_material_2271,2271,ETILAMILCETONA,3
+l10n_mx_wbl_dangerous_material_2272,2272,N-ETILANILINA,6.1
+l10n_mx_wbl_dangerous_material_2273,2273,2-ETILANILINA,6.1
+l10n_mx_wbl_dangerous_material_2274,2274,N-ETIL-N-BENCILANILINA,6.1
+l10n_mx_wbl_dangerous_material_2275,2275,2-ETILBUTANOL,3
+l10n_mx_wbl_dangerous_material_2276,2276,2-ETILHEXILAMINA,3
+l10n_mx_wbl_dangerous_material_2277,2277,METACRILATO DE ETILO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_2278,2278,n-HEPTENO,3
+l10n_mx_wbl_dangerous_material_2279,2279,HEXACLOROBUTADIENO,6.1
+l10n_mx_wbl_dangerous_material_2280,2280,HEXAMETILENDIAMINA SOLIDA,8
+l10n_mx_wbl_dangerous_material_2281,2281,DIISOCIANATO DE HEXAMETILENO,6.1
+l10n_mx_wbl_dangerous_material_2282,2282,HEXANOLES,3
+l10n_mx_wbl_dangerous_material_2283,2283,METACRILATO DE ISOBUTILO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_2284,2284,ISOBUTIRONITRILO,3
+l10n_mx_wbl_dangerous_material_2285,2285,ISOCIANATOBENZOTRIFLUORUROS,6.1
+l10n_mx_wbl_dangerous_material_2286,2286,PENTAMETILHEPTANO,3
+l10n_mx_wbl_dangerous_material_2287,2287,ISOHEPTENOS,3
+l10n_mx_wbl_dangerous_material_2288,2288,ISOHEXENOS,3
+l10n_mx_wbl_dangerous_material_2289,2289,ISOFORONDIAMINA,8
+l10n_mx_wbl_dangerous_material_2290,2290,DIISOCIANATO DE ISOFORONA,6.1
+l10n_mx_wbl_dangerous_material_2291,2291,"COMPUESTO DE PLOMO SOLUBLE, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2293,2293,4-METOXI-4-METIL-2-PENTANONA,3
+l10n_mx_wbl_dangerous_material_2294,2294,N-METILANILINA,6.1
+l10n_mx_wbl_dangerous_material_2295,2295,CLOROACETATO DE METILO,6.1
+l10n_mx_wbl_dangerous_material_2296,2296,METILCICLOHEXANO,3
+l10n_mx_wbl_dangerous_material_2297,2297,METILCICLOHEXANONA,3
+l10n_mx_wbl_dangerous_material_2298,2298,METILCICLOPENTANO,3
+l10n_mx_wbl_dangerous_material_2299,2299,DICLOROACETATO DE METILO,6.1
+l10n_mx_wbl_dangerous_material_2300,2300,2-METIL-5-ETILPIRIDINA,6.1
+l10n_mx_wbl_dangerous_material_2301,2301,2-METILFURANO,3
+l10n_mx_wbl_dangerous_material_2302,2302,5-METIL-2-HEXANONA,3
+l10n_mx_wbl_dangerous_material_2303,2303,ISOPROPENILBENCENO,3
+l10n_mx_wbl_dangerous_material_2304,2304,NAFTALENO FUNDIDO,4.1
+l10n_mx_wbl_dangerous_material_2305,2305,ACIDO NITROBENCENOSULFONICO,8
+l10n_mx_wbl_dangerous_material_2306,2306,NITROBENZOTRIFLUORUROS LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_2307,2307,3-NITRO-4-CLOROBENZOTRIFLUORURO,6.1
+l10n_mx_wbl_dangerous_material_2308,2308,ACIDO NITROSILSULFURICO LIQUIDO,8
+l10n_mx_wbl_dangerous_material_2309,2309,OCTADIENO,3
+l10n_mx_wbl_dangerous_material_2310,2310,"PENTANO‑2,4‑DIENO",3
+l10n_mx_wbl_dangerous_material_2311,2311,FENETIDINAS,6.1
+l10n_mx_wbl_dangerous_material_2312,2312,FENOL FUNDIDO,6.1
+l10n_mx_wbl_dangerous_material_2313,2313,PICOLINAS,3
+l10n_mx_wbl_dangerous_material_2315,2315,DIFENILOS POLICLORADOS LIQUIDOS,9
+l10n_mx_wbl_dangerous_material_2316,2316,CUPROCIANURO DE SODIO SOLIDO,6.1
+l10n_mx_wbl_dangerous_material_2317,2317,CUPROCIANURO DE SODIO EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_2318,2318,HIDROSULFURO DE SODIO (SULFHIDRATO SODIO) con menos de 25% de agua de cristalización,4.2
+l10n_mx_wbl_dangerous_material_2319,2319,"HIDROCARBUROS TERPENICOS, N.E.P.",3
+l10n_mx_wbl_dangerous_material_2320,2320,TETRAETILENPENTAMINA,8
+l10n_mx_wbl_dangerous_material_2321,2321,TRICLOROBENCENOS LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_2322,2322,TRICLOROBUTENO,6.1
+l10n_mx_wbl_dangerous_material_2323,2323,FOSFITO TRIETILICO,3
+l10n_mx_wbl_dangerous_material_2324,2324,TRIISOBUTILENO,3
+l10n_mx_wbl_dangerous_material_2325,2325,"1,3,5-TRIMETILBENCENO",3
+l10n_mx_wbl_dangerous_material_2326,2326,TRIMETILCICLOHEXILAMINA,8
+l10n_mx_wbl_dangerous_material_2327,2327,TRIMETILHEXAMETILENDIAMINAS,8
+l10n_mx_wbl_dangerous_material_2328,2328,DIISOCIANATO TRIMETILHEXAMETILENO,6.1
+l10n_mx_wbl_dangerous_material_2329,2329,FOSFITO DE TRIMETILO,3
+l10n_mx_wbl_dangerous_material_2330,2330,UNDECANO,3
+l10n_mx_wbl_dangerous_material_2331,2331,CLORURO DE ZINC ANHIDRO,8
+l10n_mx_wbl_dangerous_material_2332,2332,ACETALDOXIMA,3
+l10n_mx_wbl_dangerous_material_2333,2333,ACETATO DE ALILO,3
+l10n_mx_wbl_dangerous_material_2334,2334,ALILAMINA,6.1
+l10n_mx_wbl_dangerous_material_2335,2335,ALIL ETIL ETER,3
+l10n_mx_wbl_dangerous_material_2336,2336,FORMIATO DE ALILO,3
+l10n_mx_wbl_dangerous_material_2337,2337,FENILMERCAPTANO,6.1
+l10n_mx_wbl_dangerous_material_2338,2338,BENZOTRIFLUORURO,3
+l10n_mx_wbl_dangerous_material_2339,2339,2-BROMOBUTANO,3
+l10n_mx_wbl_dangerous_material_2340,2340,2-BROMOETIL ETIL ETER,3
+l10n_mx_wbl_dangerous_material_2341,2341,1-BROMO-3-METILBUTANO,3
+l10n_mx_wbl_dangerous_material_2342,2342,BROMOMETILPROPANOS,3
+l10n_mx_wbl_dangerous_material_2343,2343,2-BROMOPENTANO,3
+l10n_mx_wbl_dangerous_material_2344,2344,BROMOPROPANOS,3
+l10n_mx_wbl_dangerous_material_2345,2345,3-BROMOPROPINO,3
+l10n_mx_wbl_dangerous_material_2346,2346,BUTANODIONA,3
+l10n_mx_wbl_dangerous_material_2347,2347,BUTILMERCAPTANO,3
+l10n_mx_wbl_dangerous_material_2348,2348,ACRILATOS DE BUTILO ESTABILIZADOS,3
+l10n_mx_wbl_dangerous_material_2350,2350,BUTIL METIL ETER,3
+l10n_mx_wbl_dangerous_material_2351,2351,NITRITOS DE BUTILO,3
+l10n_mx_wbl_dangerous_material_2352,2352,BUTIL VINIL ETER ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_2353,2353,CLORURO DE BUTIRILO,3
+l10n_mx_wbl_dangerous_material_2354,2354,CLOROMETIL ETIL ETER,3
+l10n_mx_wbl_dangerous_material_2356,2356,2-CLOROPROPANO,3
+l10n_mx_wbl_dangerous_material_2357,2357,CICLOHEXILAMINA,8
+l10n_mx_wbl_dangerous_material_2358,2358,CICLOOCTATETRAENO,3
+l10n_mx_wbl_dangerous_material_2359,2359,DIALILAMINA,3
+l10n_mx_wbl_dangerous_material_2360,2360,ETER DIALILICO,3
+l10n_mx_wbl_dangerous_material_2361,2361,DIISOBUTILAMINA,3
+l10n_mx_wbl_dangerous_material_2362,2362,"1,1-DICLOROETANO",3
+l10n_mx_wbl_dangerous_material_2363,2363,ETILMERCAPTANO,3
+l10n_mx_wbl_dangerous_material_2364,2364,n-PROPILBENCENO,3
+l10n_mx_wbl_dangerous_material_2366,2366,CARBONATO DE DIETILO,3
+l10n_mx_wbl_dangerous_material_2367,2367,alfa-METILVALERALDEHIDO,3
+l10n_mx_wbl_dangerous_material_2368,2368,alfa-PINENO,3
+l10n_mx_wbl_dangerous_material_2370,2370,1-HEXENO,3
+l10n_mx_wbl_dangerous_material_2371,2371,ISOPENTENOS,3
+l10n_mx_wbl_dangerous_material_2372,2372,"1,2-DI-(DIMETILAMINO) ETANO",3
+l10n_mx_wbl_dangerous_material_2373,2373,DIETOXIMETANO,3
+l10n_mx_wbl_dangerous_material_2374,2374,"3,3-DIETOXIPROPENO",3
+l10n_mx_wbl_dangerous_material_2375,2375,SULFURO DE DIETILO,3
+l10n_mx_wbl_dangerous_material_2376,2376,"2,3-DIHIDROPIRANO",3
+l10n_mx_wbl_dangerous_material_2377,2377,"1,1-DIMETOXIETANO",3
+l10n_mx_wbl_dangerous_material_2378,2378,2-DIMETILAMINOACETONITRILO,3
+l10n_mx_wbl_dangerous_material_2379,2379,"1,3-DIMETILBUTILAMINA",3
+l10n_mx_wbl_dangerous_material_2380,2380,DIMETILDIETOXISILANO,3
+l10n_mx_wbl_dangerous_material_2381,2381,DISULFURO DE DIMETILO,3
+l10n_mx_wbl_dangerous_material_2382,2382,DIMETILHIDRAZINA SIMETRICA,6.1
+l10n_mx_wbl_dangerous_material_2383,2383,DIPROPILAMINA,3
+l10n_mx_wbl_dangerous_material_2384,2384,ETER DI-n-PROPILICO,3
+l10n_mx_wbl_dangerous_material_2385,2385,ISOBUTIRATO DE ETILO,3
+l10n_mx_wbl_dangerous_material_2386,2386,1-ETILPIPERIDINA,3
+l10n_mx_wbl_dangerous_material_2387,2387,FLUOROBENCENO,3
+l10n_mx_wbl_dangerous_material_2388,2388,FLUOROTOLUENOS,3
+l10n_mx_wbl_dangerous_material_2389,2389,FURANO,3
+l10n_mx_wbl_dangerous_material_2390,2390,2-YODOBUTANO,3
+l10n_mx_wbl_dangerous_material_2391,2391,YODOMETILPROPANOS,3
+l10n_mx_wbl_dangerous_material_2392,2392,YODOPROPANOS,3
+l10n_mx_wbl_dangerous_material_2393,2393,FORMIATO DE ISOBUTILO,3
+l10n_mx_wbl_dangerous_material_2394,2394,PROPIONATO DE ISOBUTILO,3
+l10n_mx_wbl_dangerous_material_2395,2395,CLORURO DE ISOBUTIRILO,3
+l10n_mx_wbl_dangerous_material_2396,2396,METACRILALDEHIDO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_2397,2397,3-METIL-2-BUTANONA,3
+l10n_mx_wbl_dangerous_material_2398,2398,METIL-terc-BUTILETER,3
+l10n_mx_wbl_dangerous_material_2399,2399,1-METILPIPERIDINA,3
+l10n_mx_wbl_dangerous_material_2400,2400,ISOVALERATO DE METILO,3
+l10n_mx_wbl_dangerous_material_2401,2401,PIPERIDINA,8
+l10n_mx_wbl_dangerous_material_2402,2402,PROPANOTIOLES,3
+l10n_mx_wbl_dangerous_material_2403,2403,ACETATO DE ISOPROPENILO,3
+l10n_mx_wbl_dangerous_material_2404,2404,PROPIONITRILO,3
+l10n_mx_wbl_dangerous_material_2405,2405,BUTIRATO DE ISOPROPILO,3
+l10n_mx_wbl_dangerous_material_2406,2406,ISOBUTIRATO DE ISOPROPILO,3
+l10n_mx_wbl_dangerous_material_2407,2407,CLOROFORMIATO DE ISOPROPILO,6.1
+l10n_mx_wbl_dangerous_material_2409,2409,PROPIONATO DE ISOPROPILO,3
+l10n_mx_wbl_dangerous_material_2410,2410,"1,2,3,6-TETRAHIDROPIRIDINA",3
+l10n_mx_wbl_dangerous_material_2411,2411,BUTIRONITRILO,3
+l10n_mx_wbl_dangerous_material_2412,2412,TETRAHIDROTIOFENO,3
+l10n_mx_wbl_dangerous_material_2413,2413,ORTOTITANATO TETRAPROPILICO,3
+l10n_mx_wbl_dangerous_material_2414,2414,TIOFENO,3
+l10n_mx_wbl_dangerous_material_2416,2416,BORATO DE TRIMETILO,3
+l10n_mx_wbl_dangerous_material_2417,2417,FLUORURO DE CARBONILO,2.3
+l10n_mx_wbl_dangerous_material_2418,2418,TETRAFLUORURO DE AZUFRE,2.3
+l10n_mx_wbl_dangerous_material_2419,2419,BROMOTRIFLUORETILENO,2.1
+l10n_mx_wbl_dangerous_material_2420,2420,HEXAFLUOROACETONA,2.3
+l10n_mx_wbl_dangerous_material_2421,2421,TRIOXIDO DE NITROGENO,2.3
+l10n_mx_wbl_dangerous_material_2422,2422,2-OCTAFLUOBUTENO (GAS REFRIGERANTE R 1318),2.2
+l10n_mx_wbl_dangerous_material_2424,2424,OCTAFLUOROPROPANO (GAS REFRIGERANTE R 218),2.2
+l10n_mx_wbl_dangerous_material_2426,2426,NITRATO DE AMONIO LIQUIDO (en solución concentrada caliente),5.1
+l10n_mx_wbl_dangerous_material_2427,2427,CLORATO DE POTASIO EN SOLUCION ACUOSA,5.1
+l10n_mx_wbl_dangerous_material_2428,2428,CLORATO DE SODIO EN SOLUCION ACUOSA,5.1
+l10n_mx_wbl_dangerous_material_2429,2429,CLORATO DE CALCIO EN SOLUCION ACUOSA,5.1
+l10n_mx_wbl_dangerous_material_2430,2430,"ALQUILFENOLES SOLIDOS, N.E.P. (incluidos los homólogos C2-C12)",8
+l10n_mx_wbl_dangerous_material_2431,2431,ANISIDINAS,6.1
+l10n_mx_wbl_dangerous_material_2432,2432,"N,N-DIETILANILINA",6.1
+l10n_mx_wbl_dangerous_material_2433,2433,CLORONITROTOLUENOS LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_2434,2434,DIBENCILDICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_2435,2435,ETILFENILDICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_2436,2436,ACIDO TIOACETICO,3
+l10n_mx_wbl_dangerous_material_2437,2437,METILFENILDICLOROSILANO,8
+l10n_mx_wbl_dangerous_material_2438,2438,CLORURO DE TRIMETILACETILO,6.1
+l10n_mx_wbl_dangerous_material_2439,2439,HIDROGENODIFLUORURO DE SODIO,8
+l10n_mx_wbl_dangerous_material_2440,2440,CLORURO ESTANICO PENTAHIDRATADO,8
+l10n_mx_wbl_dangerous_material_2441,2441,"TRICLORURO DE TITANIO PIROFORICO, o TRICLORURO DE TITANIO PIROFORICO EN MEZCLA",4.2
+l10n_mx_wbl_dangerous_material_2442,2442,CLORURO DE TRICLOROACETILO,8
+l10n_mx_wbl_dangerous_material_2443,2443,OXITRICLORURO DE VANADIO,8
+l10n_mx_wbl_dangerous_material_2444,2444,TETRACLORURO DE VANADIO,8
+l10n_mx_wbl_dangerous_material_2446,2446,NITROCRESOLES SOLIDO,6.1
+l10n_mx_wbl_dangerous_material_2447,2447,FOSFORO BLANCO FUNDIDO,4.2
+l10n_mx_wbl_dangerous_material_2448,2448,AZUFRE FUNDIDO,4.1
+l10n_mx_wbl_dangerous_material_2451,2451,TRIFLUORURO DE NITROGENO,2.2
+l10n_mx_wbl_dangerous_material_2452,2452,ETILACETILENO ESTABILIZADO,2.1
+l10n_mx_wbl_dangerous_material_2453,2453,FLUORURO DE ETILO (GAS REFRIGERANTE R 161),2.1
+l10n_mx_wbl_dangerous_material_2454,2454,FLUORURO DE METILO (GAS REFRIGERANTE R 41),2.1
+l10n_mx_wbl_dangerous_material_2455,2455,NITRITO DE METILO,2.2
+l10n_mx_wbl_dangerous_material_2456,2456,2-CLOROPROPENO,3
+l10n_mx_wbl_dangerous_material_2457,2457,"2,3-DIMETILBUTANO",3
+l10n_mx_wbl_dangerous_material_2458,2458,HEXADIENO,3
+l10n_mx_wbl_dangerous_material_2459,2459,2-METIL-1-BUTENO,3
+l10n_mx_wbl_dangerous_material_2460,2460,2-METIL-2-BUTENO,3
+l10n_mx_wbl_dangerous_material_2461,2461,METILPENTADIENO,3
+l10n_mx_wbl_dangerous_material_2463,2463,HIDRURO DE ALUMINICO,4.3
+l10n_mx_wbl_dangerous_material_2464,2464,NITRATO DE BERILIO,5.1
+l10n_mx_wbl_dangerous_material_2465,2465,"ACIDO DICLOROISOCIANURICO SECO, o ACIDO DICLOROISOCIANURICO, SALES DEL",5.1
+l10n_mx_wbl_dangerous_material_2466,2466,SUPEROXIDO DE POTASIO,5.1
+l10n_mx_wbl_dangerous_material_2468,2468,ACIDO TRICLOROISOCIANURICO SECO,5.1
+l10n_mx_wbl_dangerous_material_2469,2469,BROMATO DE ZINC,5.1
+l10n_mx_wbl_dangerous_material_2470,2470,FENILACETONITRILO LIQUIDO,6.1
+l10n_mx_wbl_dangerous_material_2471,2471,TETROXIDO DE OSMIO,6.1
+l10n_mx_wbl_dangerous_material_2473,2473,ARSANILATO DE SODIO,6.1
+l10n_mx_wbl_dangerous_material_2474,2474,TIOFOSGENO,6.1
+l10n_mx_wbl_dangerous_material_2475,2475,TRICLORURO DE VANADIO,8
+l10n_mx_wbl_dangerous_material_2477,2477,ISOTIOCIANATO DE METILO,6.1
+l10n_mx_wbl_dangerous_material_2478,2478,"ISOCIANATOS INFLAMABLES, TOXICOS, N.E.P., o ISOCIANATOS EN SOLUCION, INFLAMABLES, TOXICOS, N.E.P.",3
+l10n_mx_wbl_dangerous_material_2480,2480,ISOCIANATO DE METILO,6.1
+l10n_mx_wbl_dangerous_material_2481,2481,ISOCIANATO DE ETILO,6.1
+l10n_mx_wbl_dangerous_material_2482,2482,ISOCIANATO DE n-PROPILO,6.1
+l10n_mx_wbl_dangerous_material_2483,2483,ISOCIANATO DE ISOPROPILO,6.1
+l10n_mx_wbl_dangerous_material_2484,2484,ISOCIANATO DE terc-BUTILO,6.1
+l10n_mx_wbl_dangerous_material_2485,2485,ISOCIANATO DE n-BUTILO,6.1
+l10n_mx_wbl_dangerous_material_2486,2486,ISOCIANATO DE ISOBUTILO,6.1
+l10n_mx_wbl_dangerous_material_2487,2487,ISOCIANATO DE FENILO,6.1
+l10n_mx_wbl_dangerous_material_2488,2488,ISOCIANATO DE CICLOHEXILO,6.1
+l10n_mx_wbl_dangerous_material_2490,2490,ETER DICLOROISOPROPíLICO,6.1
+l10n_mx_wbl_dangerous_material_2491,2491,ETANOLAMINA o ETANOLAMINA EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_2493,2493,HEXAMETILENIMINA,3
+l10n_mx_wbl_dangerous_material_2495,2495,PENTAFLUORURO DE YODO,5.1
+l10n_mx_wbl_dangerous_material_2496,2496,ANHIDRIDO PROPIONICO,8
+l10n_mx_wbl_dangerous_material_2498,2498,"1,2,3,6-TETRAHIDROBENZALDEHIDO",3
+l10n_mx_wbl_dangerous_material_2501,2501,OXIDO DE TRI-(1-AZIRIDINIL) FOSFINA EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_2502,2502,CLORURO DE VALERILO,8
+l10n_mx_wbl_dangerous_material_2503,2503,TETRACLORURO DE CIRCONIO,8
+l10n_mx_wbl_dangerous_material_2504,2504,TETRABROMOETANO,6.1
+l10n_mx_wbl_dangerous_material_2505,2505,FLUORURO DE AMONIO,6.1
+l10n_mx_wbl_dangerous_material_2506,2506,SULFATO ACIDO DE AMONIO,8
+l10n_mx_wbl_dangerous_material_2507,2507,ACIDO CLOROPLATINICO SOLIDO,8
+l10n_mx_wbl_dangerous_material_2508,2508,PENTACLORURO DE MOLIBDENO,8
+l10n_mx_wbl_dangerous_material_2509,2509,SULFATO ACIDO DE POTASIO,8
+l10n_mx_wbl_dangerous_material_2511,2511,ACIDO 2‑CLOROPROPIONICO,8
+l10n_mx_wbl_dangerous_material_2512,2512,"AMINOFENOLES (o-, m-, p-)",6.1
+l10n_mx_wbl_dangerous_material_2513,2513,BROMURO DE BROMOACETILO,8
+l10n_mx_wbl_dangerous_material_2514,2514,BROMOBENCENO,3
+l10n_mx_wbl_dangerous_material_2515,2515,BROMOFORMO,6.1
+l10n_mx_wbl_dangerous_material_2516,2516,TETRABROMURO DE CARBONO,6.1
+l10n_mx_wbl_dangerous_material_2517,2517,"1‑CLORO‑1,1‑DIFLUOROETANO (GAS REFRIGERANTE R 142 b)",2.1
+l10n_mx_wbl_dangerous_material_2518,2518,"1,5,9-CICLODODECATRIENO",6.1
+l10n_mx_wbl_dangerous_material_2520,2520,CICLOOCTADIENOS,3
+l10n_mx_wbl_dangerous_material_2521,2521,DICETENO ESTABILIZADO,6.1
+l10n_mx_wbl_dangerous_material_2522,2522,METACRILATO DE 2-DIMETILAMINOETILICO,6.1
+l10n_mx_wbl_dangerous_material_2524,2524,ORTOFORMIATO DE ETILO,3
+l10n_mx_wbl_dangerous_material_2525,2525,OXALATO DE ETILO,6.1
+l10n_mx_wbl_dangerous_material_2526,2526,FURFURILAMINA,3
+l10n_mx_wbl_dangerous_material_2527,2527,ACRILATO DE ISOBUTILO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_2528,2528,ISOBUTIRATO DE ISOBUTILO,3
+l10n_mx_wbl_dangerous_material_2529,2529,ACIDO ISOBUTIRICO,3
+l10n_mx_wbl_dangerous_material_2531,2531,ACIDO METACRILICO ESTABILIZADO,8
+l10n_mx_wbl_dangerous_material_2533,2533,TRICLOROACETATO DE METILO,6.1
+l10n_mx_wbl_dangerous_material_2534,2534,METILCLOROSILANO,2.3
+l10n_mx_wbl_dangerous_material_2535,2535,4-METILMORFOLINA (N‑METILMORFOLINA),3
+l10n_mx_wbl_dangerous_material_2536,2536,METILTETRAHIDROFURANO,3
+l10n_mx_wbl_dangerous_material_2538,2538,NITRONAFTALENO,4.1
+l10n_mx_wbl_dangerous_material_2541,2541,TERPINOLENO,3
+l10n_mx_wbl_dangerous_material_2542,2542,TRIBUTILAMINA,6.1
+l10n_mx_wbl_dangerous_material_2545,2545,"HAFNIO EN POLVO, SECO",4.2
+l10n_mx_wbl_dangerous_material_2546,2546,TITANIO EN POLVO SECO,4.2
+l10n_mx_wbl_dangerous_material_2547,2547,SUPEROXIDO DE  SODIO,5.1
+l10n_mx_wbl_dangerous_material_2548,2548,PENTAFLUORURO DE CLORO,2.3
+l10n_mx_wbl_dangerous_material_2552,2552,"HIDRATO DE HEXAFLUORACETONA, LIQUIDO",6.1
+l10n_mx_wbl_dangerous_material_2554,2554,CLORURO DE METILALILO,3
+l10n_mx_wbl_dangerous_material_2555,2555,"NITROCELULOSA  CON no menos de 25%, en masa, de AGUA.",4.1
+l10n_mx_wbl_dangerous_material_2556,2556,"NITROCELULOSA CON no menos de 25%, en masa, de ALCOHOL y un máximo de 12,6%, en masa seca, de nitrógeno",4.1
+l10n_mx_wbl_dangerous_material_2557,2557,"NITROCELULOSA, con no menos de 12,6%, en masa seca, de nitrógeno, MEZCLA CON o SIN PLASTIFICANTE, CON o SIN PIGMENTO",4.1
+l10n_mx_wbl_dangerous_material_2558,2558,EPIBROMHIDRINA,6.1
+l10n_mx_wbl_dangerous_material_2560,2560,2-METIL-2-PENTANOL,3
+l10n_mx_wbl_dangerous_material_2561,2561,3-METIL-1-BUTENO,3
+l10n_mx_wbl_dangerous_material_2564,2564,ACIDO TRICLOROACETICO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_2565,2565,DICICLOHEXILAMINA,8
+l10n_mx_wbl_dangerous_material_2567,2567,PENTACLOROFENATO DE SODIO,6.1
+l10n_mx_wbl_dangerous_material_2570,2570,"CADMIO, COMPUESTO DE",6.1
+l10n_mx_wbl_dangerous_material_2571,2571,ACIDOS ALQUILSULFURICOS,8
+l10n_mx_wbl_dangerous_material_2572,2572,FENILHIDRAZINA,6.1
+l10n_mx_wbl_dangerous_material_2573,2573,CLORATO DE TALIO,5.1
+l10n_mx_wbl_dangerous_material_2574,2574,FOSFATO DE TRICRESILO con más de 3% de isómero orto,6.1
+l10n_mx_wbl_dangerous_material_2576,2576,"OXIBROMURO DE FOSFORO, FUNDIDO",8
+l10n_mx_wbl_dangerous_material_2577,2577,CLORURO DE FENILACETILO,8
+l10n_mx_wbl_dangerous_material_2578,2578,TRIOXIDO DE FOSFORO,8
+l10n_mx_wbl_dangerous_material_2579,2579,PIPERAZINA,8
+l10n_mx_wbl_dangerous_material_2580,2580,BROMURO DE ALUMINIO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_2581,2581,CLORURO DE ALUMINIO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_2582,2582,CLORURO FERRICO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_2583,2583,"ACIDOS ALQUILSULFONICOS SOLIDOS o ACIDOS ARILSULFONICOS SOLIDOS, con más de 5% de ácido sulfúrico libre",8
+l10n_mx_wbl_dangerous_material_2584,2584,"ACIDOS ALQUILSULFONICOS LIQUIDOS o ACIDOS ARILSULFONICOS LIQUIDOS, con más de 5% de ácido sulfúrico libre",8
+l10n_mx_wbl_dangerous_material_2585,2585,"ACIDOS ALQUILSULFONICOS SOLIDOS o ACIDOS ARILSULFONICOS SOLIDOS, con un máximo de 5% de ácido sulfúrico libre",8
+l10n_mx_wbl_dangerous_material_2586,2586,"ACIDOS ALQUILSULFONICOS LIQUIDOS o ACIDOS ARILSULFONICOS LIQUIDOS, con un máximo de 5% de ácido sulfúrico libre",8
+l10n_mx_wbl_dangerous_material_2587,2587,BENZOQUINONA,6.1
+l10n_mx_wbl_dangerous_material_2588,2588,"PLAGUICIDA  SOLIDO,TOXICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2589,2589,CLOROACETATO DE VINILO,6.1
+l10n_mx_wbl_dangerous_material_2590,2590,"ASBESTO BLANCO (crisotilo, actinolita, antofilita, tremolita)",9
+l10n_mx_wbl_dangerous_material_2591,2591,XENON LIQUIDO REFRIGERADO,2.2
+l10n_mx_wbl_dangerous_material_2599,2599,CLOROTRIFLUOROMETANO Y TRIFLUOROMETANO EN MEZCLA AZEOTROPICA con aproximadamente el 60% de clorotrifluorometano (GAS REFRIGERANTE R 503),2.2
+l10n_mx_wbl_dangerous_material_2601,2601,CICLOBUTANO,2.1
+l10n_mx_wbl_dangerous_material_2602,2602,DICLORODIFLUOMETANO Y DIFLUORETANO EN MEZCLA AZEOTROPICA con aproximadamente el 74% de diclorodifluometano (GAS REFRIGERANTE R 500),2.2
+l10n_mx_wbl_dangerous_material_2603,2603,CICLOHEPTATRIENO,3
+l10n_mx_wbl_dangerous_material_2604,2604,DIETILETERATO DE TRIFLUORURO DE BORO,8
+l10n_mx_wbl_dangerous_material_2605,2605,ISOCIANATO DE METOXIMETILO,6.1
+l10n_mx_wbl_dangerous_material_2606,2606,ORTOSILICATO DE METILO,6.1
+l10n_mx_wbl_dangerous_material_2607,2607,DIMERO DE LA ACROLEINA ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_2608,2608,NITROPROPANOS,3
+l10n_mx_wbl_dangerous_material_2609,2609,BORATO DE TRIALILO,6.1
+l10n_mx_wbl_dangerous_material_2610,2610,TRIALILAMINA,3
+l10n_mx_wbl_dangerous_material_2611,2611,CLORHIDRINA  PROPILENICA,6.1
+l10n_mx_wbl_dangerous_material_2612,2612,METIL PROPIL ETER,3
+l10n_mx_wbl_dangerous_material_2614,2614,ALCOHOL METALILICO,3
+l10n_mx_wbl_dangerous_material_2615,2615,ETIL PROPIL ETER,3
+l10n_mx_wbl_dangerous_material_2616,2616,BORATO DE TRIISOPROPILO,3
+l10n_mx_wbl_dangerous_material_2617,2617,METILCICLOHEXANOLES inflamables,3
+l10n_mx_wbl_dangerous_material_2618,2618,VINILTOLUENOS ESTABILIZADOS,3
+l10n_mx_wbl_dangerous_material_2619,2619,BENCILDIMETILAMINA,8
+l10n_mx_wbl_dangerous_material_2620,2620,BUTIRATOS DE AMILO,3
+l10n_mx_wbl_dangerous_material_2621,2621,ACETILMETILCARBINOL,3
+l10n_mx_wbl_dangerous_material_2622,2622,GLICIDALDEHIDO,3
+l10n_mx_wbl_dangerous_material_2623,2623,YESCAS SOLIDAS con un líquido inflamable,4.1
+l10n_mx_wbl_dangerous_material_2624,2624,SILICIURO DE MAGNESIO,4.3
+l10n_mx_wbl_dangerous_material_2626,2626,ACIDO CLÓRICO EN SOLUCIÓN ACUOSA con un máximo del 10% de ácido clórico,5.1
+l10n_mx_wbl_dangerous_material_2627,2627,"NITRITOS INORGANICOS, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_2628,2628,FLUOROACETATO DE POTASIO,6.1
+l10n_mx_wbl_dangerous_material_2629,2629,FLUOROACETATO DE SODIO,6.1
+l10n_mx_wbl_dangerous_material_2630,2630,SELENIATOS o SELENITOS,6.1
+l10n_mx_wbl_dangerous_material_2642,2642,ACIDO FLUOROACETICO,6.1
+l10n_mx_wbl_dangerous_material_2643,2643,BROMOACETATO DE METILO,6.1
+l10n_mx_wbl_dangerous_material_2644,2644,YODURO DE METILO,6.1
+l10n_mx_wbl_dangerous_material_2645,2645,BROMURO DE FENACILO,6.1
+l10n_mx_wbl_dangerous_material_2646,2646,HEXACLOROCICLOPENTADIENO,6.1
+l10n_mx_wbl_dangerous_material_2647,2647,MALONONITRILO,6.1
+l10n_mx_wbl_dangerous_material_2648,2648,"1,2-DIBROMO-3-BUTANONA",6.1
+l10n_mx_wbl_dangerous_material_2649,2649,"1,3-DICLOROACETONA",6.1
+l10n_mx_wbl_dangerous_material_2650,2650,"1,1-DICLORO-1-NITROETANO",6.1
+l10n_mx_wbl_dangerous_material_2651,2651,"4,4'-DIAMINODIFENILMETANO",6.1
+l10n_mx_wbl_dangerous_material_2653,2653,YODURO DE BENCILO,6.1
+l10n_mx_wbl_dangerous_material_2655,2655,FLUOROSILICATO DE POTASIO,6.1
+l10n_mx_wbl_dangerous_material_2656,2656,QUINOLEINA,6.1
+l10n_mx_wbl_dangerous_material_2657,2657,DISULFURO DE SELENIO,6.1
+l10n_mx_wbl_dangerous_material_2659,2659,CLOROACETATO DE SODIO,6.1
+l10n_mx_wbl_dangerous_material_2660,2660,NITROTOLUIDINAS (MONO),6.1
+l10n_mx_wbl_dangerous_material_2661,2661,HEXACLOROACETONA,6.1
+l10n_mx_wbl_dangerous_material_2664,2664,DIBROMOMETANO,6.1
+l10n_mx_wbl_dangerous_material_2667,2667,BUTILTOLUENOS,6.1
+l10n_mx_wbl_dangerous_material_2668,2668,CLOROACETONITRILO,6.1
+l10n_mx_wbl_dangerous_material_2669,2669,CLOROCRESOLES EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_2670,2670,CLORURO  CIANÚRICO,8
+l10n_mx_wbl_dangerous_material_2671,2671,"AMINOPIRIDINAS (o-, m-, p-)",6.1
+l10n_mx_wbl_dangerous_material_2672,2672,"AMONIACO EN SOLUCION acuosa de densidad relativa comprendida entre 0,880 y 0,957 a 15°C, con más de 10% pero no más de 35% de amoníaco",8
+l10n_mx_wbl_dangerous_material_2673,2673,2-AMINO-4-CLOROFENOL,6.1
+l10n_mx_wbl_dangerous_material_2674,2674,FLUOROSILICATO DE SODIO,6.1
+l10n_mx_wbl_dangerous_material_2676,2676,ESTIBINA,2.3
+l10n_mx_wbl_dangerous_material_2677,2677,HIDROXIDO DE RUBIDIO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_2678,2678,HIDROXIDO DE RUBIDIO,8
+l10n_mx_wbl_dangerous_material_2679,2679,HIDROXIDO DE LITIO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_2680,2680,HIDROXIDO DE LITIO,8
+l10n_mx_wbl_dangerous_material_2681,2681,HIDROXIDO DE CESIO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_2682,2682,HIDROXIDO DE CESIO,8
+l10n_mx_wbl_dangerous_material_2683,2683,SULFURO AMONICO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_2684,2684,3-DIETILAMINOPROPILAMINA,3
+l10n_mx_wbl_dangerous_material_2685,2685,"N,N-DIETILETILENDIAMINA",8
+l10n_mx_wbl_dangerous_material_2686,2686,2-DIETILAMINOETANOL,8
+l10n_mx_wbl_dangerous_material_2687,2687,NITRITO DE DICICLOHEXILAMONIO,4.1
+l10n_mx_wbl_dangerous_material_2688,2688,1-BROMO-3-CLOROPROPANO,6.1
+l10n_mx_wbl_dangerous_material_2689,2689,alfa-MONOCLORHIDRINA DEL GLICEROL,6.1
+l10n_mx_wbl_dangerous_material_2690,2690,"N,n-BUTIL IMIDAZOL",6.1
+l10n_mx_wbl_dangerous_material_2691,2691,PENTABROMURO DE FOSFORO,8
+l10n_mx_wbl_dangerous_material_2692,2692,TRIBROMURO DE BORO,8
+l10n_mx_wbl_dangerous_material_2693,2693,"BISULFITOS EN SOLUCION ACUOSA, N.E.P.",8
+l10n_mx_wbl_dangerous_material_2698,2698,"ANHIDRIDOS TETRAHIDROFTALICOS con más de 0,05% de anhídrido maleico",8
+l10n_mx_wbl_dangerous_material_2699,2699,ACIDO TRIFLUOROACETICO,8
+l10n_mx_wbl_dangerous_material_2705,2705,1-PENTOL,8
+l10n_mx_wbl_dangerous_material_2707,2707,DIMETILDIOXANOS,3
+l10n_mx_wbl_dangerous_material_2709,2709,BUTILBENCENOS,3
+l10n_mx_wbl_dangerous_material_2710,2710,DIPROPILCETONA,3
+l10n_mx_wbl_dangerous_material_2713,2713,ACRIDINA,6.1
+l10n_mx_wbl_dangerous_material_2714,2714,RESINATO DE ZINC,4.1
+l10n_mx_wbl_dangerous_material_2715,2715,RESINATO DE ALUMINIO,4.1
+l10n_mx_wbl_dangerous_material_2716,2716,"1,4-BUTINODIOL",6.1
+l10n_mx_wbl_dangerous_material_2717,2717,ALCANFOR sintético,4.1
+l10n_mx_wbl_dangerous_material_2719,2719,BROMATO DE BARIO,5.1
+l10n_mx_wbl_dangerous_material_2720,2720,NITRATO DE CROMO,5.1
+l10n_mx_wbl_dangerous_material_2721,2721,CLORATO DE COBRE,5.1
+l10n_mx_wbl_dangerous_material_2722,2722,NITRATO DE LITIO,5.1
+l10n_mx_wbl_dangerous_material_2723,2723,CLORATO MAGNESICO,5.1
+l10n_mx_wbl_dangerous_material_2724,2724,NITRATO DE MANGANESO,5.1
+l10n_mx_wbl_dangerous_material_2725,2725,NITRATO DE NIQUEL,5.1
+l10n_mx_wbl_dangerous_material_2726,2726,NITRITO DE NIQUEL,5.1
+l10n_mx_wbl_dangerous_material_2727,2727,NITRATO DE TALIO,6.1
+l10n_mx_wbl_dangerous_material_2728,2728,NITRATO DE CIRCONIO,5.1
+l10n_mx_wbl_dangerous_material_2729,2729,HEXACLOROBENCENO,6.1
+l10n_mx_wbl_dangerous_material_2730,2730,NITROANISOL LIQUIDO,6.1
+l10n_mx_wbl_dangerous_material_2732,2732,NITROBROMOBENCENOS LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_2733,2733,"AMINAS INFLAMABLES, CORROSIVAS, N.E.P. o POLIAMINAS INFLAMABLES, CORROSIVAS, N.E.P.",3
+l10n_mx_wbl_dangerous_material_2734,2734,"AMINAS LIQUIDAS, CORROSIVAS, INFLAMABLES, N.E.P. o POLIAMINAS LIQUIDAS, CORROSIVAS, INFLAMABLES, N.E.P.",8
+l10n_mx_wbl_dangerous_material_2735,2735,"AMINAS LIQUIDAS, CORROSIVAS, N.E.P. o POLIAMINAS LIQUIDAS, CORROSIVAS, N.E.P.",8
+l10n_mx_wbl_dangerous_material_2738,2738,N-BUTILANILINA,6.1
+l10n_mx_wbl_dangerous_material_2739,2739,ANHIDRIDO BUTIRICO,8
+l10n_mx_wbl_dangerous_material_2740,2740,CLOROFORMIATO DE n-PROPILO,6.1
+l10n_mx_wbl_dangerous_material_2741,2741,HIPOCLORITO DE BARIO con más de 22% de cloro activo,5.1
+l10n_mx_wbl_dangerous_material_2742,2742,"CLOROFORMIATOS TOXICOS, CORROSIVOS, INFLAMABLES, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2743,2743,CLOROFORMIATO DE n-BUTILO,6.1
+l10n_mx_wbl_dangerous_material_2744,2744,CLOROFORMIATO DE CICLOBUTILO,6.1
+l10n_mx_wbl_dangerous_material_2745,2745,CLOROFORMIATO DE CLOROMETILO,6.1
+l10n_mx_wbl_dangerous_material_2746,2746,CLOROFORMIATO DE FENILO,6.1
+l10n_mx_wbl_dangerous_material_2747,2747,CLOROFORMIATO DE terc-BUTILCICLOHEXILO,6.1
+l10n_mx_wbl_dangerous_material_2748,2748,CLOROFORMIATO DE 2-ETILHEXILO,6.1
+l10n_mx_wbl_dangerous_material_2749,2749,TETRAMETILSILANO,3
+l10n_mx_wbl_dangerous_material_2750,2750,"1,3-DICLORO-2-PROPANOL",6.1
+l10n_mx_wbl_dangerous_material_2751,2751,CLORURO DE DIETILTIOFOSFORILO,8
+l10n_mx_wbl_dangerous_material_2752,2752,"1,2-EPOXI-3-ETOXIPROPANO",3
+l10n_mx_wbl_dangerous_material_2753,2753,N-ETILBENCILTOLUIDINAS LIQUIDAS,6.1
+l10n_mx_wbl_dangerous_material_2754,2754,N-ETILTOLUIDINAS,6.1
+l10n_mx_wbl_dangerous_material_2757,2757,"PLAGUICIDA A BASE DE CARBAMATO, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2758,2758,"PLAGUICIDA A BASE DE CARBAMATO, LIQUIDO, INFLAMABLE, TOXICO, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_2759,2759,"PLAGUICIDA ARSENICAL SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2760,2760,"PLAGUICIDA ARSENICAL LIQUIDO, INFLAMABLE, TOXICO, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_2761,2761,"PLAGUICIDA ORGANOCLORADO, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2762,2762,"PLAGUICIDA ORGANOCLORADO, LIQUIDO, INFLAMABLE, TOXICO, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_2763,2763,"PLAGUICIDA A BASE DE TRIAZINA, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2764,2764,"PLAGUICIDA A BASE DE TRIAZINA, LIQUIDO, INFLAMABLE, TOXICO, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_2771,2771,"PLAGUICIDA A BASE DE TIOCARBAMATO, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2772,2772,"PLAGUICIDA A BASE DE TIOCARBAMATO, LIQUIDO, INFLAMABLE, TOXICO, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_2775,2775,"PLAGUICIDA A BASE DE COBRE, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2776,2776,"PLAGUICIDA A BASE DE COBRE, LIQUIDO, INFLAMABLE, TOXICO, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_2777,2777,"PLAGUICIDA A BASE DE MERCURIO, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2778,2778,"PLAGUICIDA A BASE DE MERCURIO, LIQUIDO, INFLAMABLE, TOXICO, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_2779,2779,"PLAGUICIDA A BASE DE NITROFENOLES SUSTITUIDOS, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2780,2780,"PLAGUICIDA A BASE DE NITROFENOLES SUSTITUIDOS, LIQUIDO, INFLAMABLE, TOXICO, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_2781,2781,"PLAGUICIDA A BASE DE DIPIRIDILO, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2782,2782,"PLAGUICIDA A BASE DE DIPIRIDILO, LIQUIDO, INFLAMABLE, TOXICO, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_2783,2783,"PLAGUICIDA A BASE DE ORGANOFOSFORO, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2784,2784,"PLAGUICIDA A BASE DE ORGANOFOSFORO, LIQUIDO, INFLAMABLE, TOXICO, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_2785,2785,4-TIAPENTANAL,6.1
+l10n_mx_wbl_dangerous_material_2786,2786,"PLAGUICIDA A BASE DE ORGANOESTAÑO, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2787,2787,"PLAGUICIDA A BASE DE ORGANOESTAÑO, LIQUIDO, INFLAMABLE, TOXICO, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_2788,2788,"COMPUESTO DE ORGANOESTAÑO, LIQUIDO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2789,2789,"ACIDO ACETICO GLACIAL o ACIDO ACETICO EN SOLUCION con más de 80%, en masa, de ácido",8
+l10n_mx_wbl_dangerous_material_2790,2790,"ACIDO ACETICO EN SOLUCION con no menos de 50% y un máximo de 80%, en masa, de ácido",8
+l10n_mx_wbl_dangerous_material_2790,2790,"ACIDO ACETICO EN SOLUCION con más de 10% y menos de 50%, en masa, de ácido",8
+l10n_mx_wbl_dangerous_material_2793,2793,"VIRUTAS, TORNEADURAS o RASPADURAS DE METALES FERROSOS en una forma susceptible de calentamiento espontáneo",4.2
+l10n_mx_wbl_dangerous_material_2794,2794,ACUMULADORES ELECTRICOS DE ELECTROLITO LIQUIDO ACIDO,8
+l10n_mx_wbl_dangerous_material_2795,2795,ACUMULADORES ELECTRICOS DE ELECTROLITO LIQUIDO ALCALINO,8
+l10n_mx_wbl_dangerous_material_2796,2796,ACIDO SULFURICO con no más de 51% de ácido o ELECTROLITO ACIDO PARA BATERIAS,8
+l10n_mx_wbl_dangerous_material_2797,2797,ELECTROLITO ALCALINO PARA ACUMULADORES,8
+l10n_mx_wbl_dangerous_material_2798,2798,DICLOROFENILFOSFINA,8
+l10n_mx_wbl_dangerous_material_2799,2799,TIODICLOROFENILFOSFINA,8
+l10n_mx_wbl_dangerous_material_2800,2800,ACUMULADORES ELECTRICOS NO DERRAMABLES DE ELECTROLITO LIQUIDO,8
+l10n_mx_wbl_dangerous_material_2801,2801,"COLORANTE LIQUIDO CORROSIVO, N.E.P., MATERIA INTERMEDIA PARA COLORANTES, LIQUIDA, CORROSIVA, N.E.P.",8
+l10n_mx_wbl_dangerous_material_2802,2802,CLORURO DE COBRE,8
+l10n_mx_wbl_dangerous_material_2803,2803,GALIO,8
+l10n_mx_wbl_dangerous_material_2805,2805,"HIDRURO DE LITIO, FUNDIDO, SOLIDO",4.3
+l10n_mx_wbl_dangerous_material_2806,2806,NITRURO DE LITIO,4.3
+l10n_mx_wbl_dangerous_material_2807,2807,MATERIAL MAGNETIZADO,9
+l10n_mx_wbl_dangerous_material_2809,2809,MERCURIO,8
+l10n_mx_wbl_dangerous_material_2810,2810,"LIQUIDO TOXICO, ORGANICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2811,2811,"SOLIDO TOXICO, ORGANICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2812,2812,ALUMINATO DE SODIO SOLIDO,8
+l10n_mx_wbl_dangerous_material_2813,2813,"SOLIDO QUE REACCIONA CON EL AGUA, N E.P.",4.3
+l10n_mx_wbl_dangerous_material_2814,2814,SUBSTANCIA INFECCIOSA PARA EL HOMBRE,6.2
+l10n_mx_wbl_dangerous_material_2815,2815,N-AMINOETILPIPERAZINA,8
+l10n_mx_wbl_dangerous_material_2817,2817,DIHIDROFLORURO AMONICO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_2818,2818,POLISULFURO DE AMONIO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_2819,2819,FOSFATO ACIDO DE AMILO,8
+l10n_mx_wbl_dangerous_material_2820,2820,ACIDO BUTIRICO,8
+l10n_mx_wbl_dangerous_material_2821,2821,FENOL EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_2822,2822,2-CLOROPIRIDINA,6.1
+l10n_mx_wbl_dangerous_material_2823,2823,ACIDO CROTONICO SOLIDO,8
+l10n_mx_wbl_dangerous_material_2826,2826,CLOROTIOFORMIATO DE ETILO,8
+l10n_mx_wbl_dangerous_material_2829,2829,ACIDO CAPROICO,8
+l10n_mx_wbl_dangerous_material_2830,2830,LITIOFERROSILICIO,4.3
+l10n_mx_wbl_dangerous_material_2831,2831,"1,1,1-TRICLOROETANO",6.1
+l10n_mx_wbl_dangerous_material_2834,2834,ACIDO FOSFOROSO,8
+l10n_mx_wbl_dangerous_material_2835,2835,HIDRURO DE SODIO ALUMINICO,4.3
+l10n_mx_wbl_dangerous_material_2837,2837,BISULFATOS EN SOLUCION ACUOSA,8
+l10n_mx_wbl_dangerous_material_2838,2838,BUTIRATO DE VINILO ESTABILIZADO,3
+l10n_mx_wbl_dangerous_material_2839,2839,ALDOL,6.1
+l10n_mx_wbl_dangerous_material_2840,2840,BUTIRALDOXIMA,3
+l10n_mx_wbl_dangerous_material_2841,2841,DI-n-AMILAMINA,3
+l10n_mx_wbl_dangerous_material_2842,2842,NITROETANO,3
+l10n_mx_wbl_dangerous_material_2844,2844,CALCIOMANGANESOSILICIO,4.3
+l10n_mx_wbl_dangerous_material_2845,2845,"LIQUIDO PIROFORICO ORGANICO, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_2846,2846,SOLIDO PIROFORICO ORGANICO N.E.P.,4.2
+l10n_mx_wbl_dangerous_material_2849,2849,3-CLORO-1-PROPANOL,6.1
+l10n_mx_wbl_dangerous_material_2850,2850,TETRAMERO DEL PROPILENO,3
+l10n_mx_wbl_dangerous_material_2851,2851,TRIFLUORURO DE BORO DIHIDRATADO,8
+l10n_mx_wbl_dangerous_material_2852,2852,"SULFURO DE DIPICRILO HUMEDECIDO con no menos de 10%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_2853,2853,FLUOROSILICATO  MAGNESICO,6.1
+l10n_mx_wbl_dangerous_material_2854,2854,FLUOROSILICATO AMONICO,6.1
+l10n_mx_wbl_dangerous_material_2855,2855,FLUOROSILICATO DE CINC,6.1
+l10n_mx_wbl_dangerous_material_2856,2856,"FLUOROSILICATOS, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2857,2857,"MAQUINAS REFRIGERADORAS que contengan gases licuados no inflamables ni tóxicos, o amoníaco en solución (NU 2672)",2.2
+l10n_mx_wbl_dangerous_material_2858,2858,"CIRCONIO SECO, en forma de alambre enrollado, de láminas metálicas acabadas o de tiras (de un grosor inferior a 254 micrones pero no a 18 micrones)",4.1
+l10n_mx_wbl_dangerous_material_2859,2859,METAVANADATO AMONICO,6.1
+l10n_mx_wbl_dangerous_material_2861,2861,POLIVANADATO AMONICO,6.1
+l10n_mx_wbl_dangerous_material_2862,2862,PENTOXIDO DE VANADIO no fundido,6.1
+l10n_mx_wbl_dangerous_material_2863,2863,VANADATO DE SODIO Y AMONIO,6.1
+l10n_mx_wbl_dangerous_material_2864,2864,METAVANADATO DE POTASIO,6.1
+l10n_mx_wbl_dangerous_material_2865,2865,SULFATO DE HIDROXILAMINA,8
+l10n_mx_wbl_dangerous_material_2869,2869,MEZCLAS DE TRICLORURO DE TITANIO,8
+l10n_mx_wbl_dangerous_material_2870,2870,BOROHIDRURO DE ALUMINIO,4.2
+l10n_mx_wbl_dangerous_material_2870,2870,"BOROHIDRURO DE ALUMINIO, BOROHIDRURO DE ALUMINIO EN DISPOSITIVOS ",4.2
+l10n_mx_wbl_dangerous_material_2872,2872,DIBROMOCLOROPROPANOS,6.1
+l10n_mx_wbl_dangerous_material_2873,2873,DIBUTILAMINOETANOL,6.1
+l10n_mx_wbl_dangerous_material_2874,2874,ALCOHOL FURFURILICO,6.1
+l10n_mx_wbl_dangerous_material_2875,2875,HEXACLOROFENO,6.1
+l10n_mx_wbl_dangerous_material_2876,2876,RESORCINOL,6.1
+l10n_mx_wbl_dangerous_material_2878,2878,"TITANIO, ESPONJA DE, EN GRANULOS o EN POLVO",4.1
+l10n_mx_wbl_dangerous_material_2879,2879,OXICLORURO DE SELENIO,8
+l10n_mx_wbl_dangerous_material_2880,2880,"HIPOCLORITO DE  CALCIO HIDRATADO o HIPOCLORITO DE CALCIO HIDRATADO EN MEZCLA, con un mínimo de 5,5% y un máximo de 16% de agua",5.1
+l10n_mx_wbl_dangerous_material_2881,2881,CATALIZADOR DE METAL SECO,4.2
+l10n_mx_wbl_dangerous_material_2900,2900,SUBSTANCIA INFECCIOSA únicamente PARA LOS ANIMALES,6.2
+l10n_mx_wbl_dangerous_material_2901,2901,CLORURO DE BROMO,2.3
+l10n_mx_wbl_dangerous_material_2902,2902,"PLAGUICIDA LIQUIDO, TOXICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2903,2903,"PLAGUICIDA LIQUIDO, TOXICO, INFLAMABLE, N.E.P., de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_2904,2904,CLOROFENOLATOS LIQUIDOS o FENOLATOS LIQUIDOS,8
+l10n_mx_wbl_dangerous_material_2905,2905,CLOROFENOLATOS SOLIDOS o FENOLATOS SOLIDOS,8
+l10n_mx_wbl_dangerous_material_2907,2907,"MEZCLAS DE DINITRATO DE ISOSORBIDA con un mínimo de 60% de lactosa, manosa, almidón o fosfato ácido de calcio",4.1
+l10n_mx_wbl_dangerous_material_2908,2908,"MATERIALES RADIACTIVOS, BULTOS EXCEPTUADOS-EMBALAJES/ENVASES VACIOS",7
+l10n_mx_wbl_dangerous_material_2909,2909,"MATERIALES RADIACTIVOS, BULTOS EXCEPTUADOS-ARTICULOS MANUFACTURADOS DE URANIO NATURAL o URANIO EMPOBRECIDO  o TORIO NATURAL",7
+l10n_mx_wbl_dangerous_material_2910,2910,"MATERIALES RADIACTIVOS, BULTOS EXCEPTUADOS-CANTIDADES PEQUEÑAS DE MATERIALES",7
+l10n_mx_wbl_dangerous_material_2911,2911,"MATERIALES RADIACTIVOS, BULTOS EXCEPTUADOS-INSTRUMENTOS o ARTICULOS",7
+l10n_mx_wbl_dangerous_material_2912,2912,MATERIALES RADIACTIVOS BAJA ACTIVIDAD ESPECIFICA (BAE-I) no fisionables o fisionables exceptuados,7
+l10n_mx_wbl_dangerous_material_2913,2913,"MATERIALES RADIACTIVOS, OBJETOS CONTAMINADOS EN LA SUPERFICIE (OCS-I u OCS-II), no fisionables o fisionables exceptuados",7
+l10n_mx_wbl_dangerous_material_ 2915, 2915," MATERIALES RADIACTIVOS, BULTOS DE TIPO A, no en forma especial, no fisionables o fisionables exceptuados", 7
+l10n_mx_wbl_dangerous_material_2916,2916,"MATERIALES RADIACTIVOS, BULTOS DE TIPO B(U), no fisionables o fisionables exceptuados",7
+l10n_mx_wbl_dangerous_material_2917,2917,"MATERIALES RADIACTIVOS, BULTOS DE TIPO B(M), no fisionables o fisionables exceptuados",7
+l10n_mx_wbl_dangerous_material_2919,2919,"MATERIALES RADIACTIVOS TRANSPORTADOS CON DISPOSICIONES ESPECIALES, no fisionables o fisionables exceptuados",7
+l10n_mx_wbl_dangerous_material_2920,2920,"LIQUIDO CORROSIVO INFLAMABLE, N.E.P.",8
+l10n_mx_wbl_dangerous_material_2921,2921,SOLIDO CORROSIVO INFLAMABLE N.E.P.,8
+l10n_mx_wbl_dangerous_material_2922,2922,"LIQUIDO CORROSIVO, TOXICO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_2923,2923,"SOLIDO CORROSIVO, TOXICO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_2924,2924,"LIQUIDO INFLAMABLE, CORROSIVO, N.E.P.",3
+l10n_mx_wbl_dangerous_material_2925,2925,"SOLIDO INFLAMABLE, CORROSIVO, ORGANICO, N.E.P.",4.1
+l10n_mx_wbl_dangerous_material_2926,2926,"SOLIDO INFLAMABLE, TOXICO, ORGANICO, N.E.P.",4.1
+l10n_mx_wbl_dangerous_material_2927,2927,"LIQUIDO TOXICO, CORROSIVO, ORGANICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2928,2928,"SOLIDO TOXICO, CORROSIVO, ORGANICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2929,2929,"LIQUIDO TOXICO, INFLAMABLE, ORGANICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2930,2930,"SOLIDO TOXICO, INFLAMABLE, ORGANICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_2931,2931,SULFATO DE VANADILO,6.1
+l10n_mx_wbl_dangerous_material_2933,2933,2-CLOROPROPIONATO DE METILO,3
+l10n_mx_wbl_dangerous_material_2934,2934,2-CLOROPROPIONATO DE ISOPROPILO,3
+l10n_mx_wbl_dangerous_material_2935,2935,2-CLOROPROPIONATO DE ETILO,3
+l10n_mx_wbl_dangerous_material_2936,2936,ACIDO TIOLACTICO,6.1
+l10n_mx_wbl_dangerous_material_2937,2937,ALCOHOL alfa-METILBENCILICO,6.1
+l10n_mx_wbl_dangerous_material_2940,2940,9-FOSFABICICLONONANOS (FOSFINAS DE CICLOOCTADIENO),4.2
+l10n_mx_wbl_dangerous_material_2941,2941,FLUORANILINAS,6.1
+l10n_mx_wbl_dangerous_material_2942,2942,2-TRIFLUOROMETILANILINA,6.1
+l10n_mx_wbl_dangerous_material_2943,2943,TETRAHIDROFURFURILAMINA,3
+l10n_mx_wbl_dangerous_material_2945,2945,N-METILBUTILAMINA,3
+l10n_mx_wbl_dangerous_material_2946,2946,2-AMINO-5-DIETILAMINOPENTANO,6.1
+l10n_mx_wbl_dangerous_material_2947,2947,CLOROACETATO DE ISOPROPILO,3
+l10n_mx_wbl_dangerous_material_2948,2948,3-TRIFLUOROMETILANILINA,6.1
+l10n_mx_wbl_dangerous_material_2949,2949,HIDROSULFURO DE SODIO (SULFHIDRATO SODICO) con un mínimo de 25% de agua de cristalización,8
+l10n_mx_wbl_dangerous_material_2950,2950,GRANULOS DE MAGNESIO RECUBIERTOS en partículas de un mínimo de 149 micrones,4.3
+l10n_mx_wbl_dangerous_material_2956,2956,"5-terc-BUTIL-2,4,6-TRINITRO-m-XILENO (ALMIZCLE XILENO)",4.1
+l10n_mx_wbl_dangerous_material_2965,2965,DIMETILETEARATO DE TRIFLUORURO DE BORO,4.3
+l10n_mx_wbl_dangerous_material_2966,2966,TIOGLICOL,6.1
+l10n_mx_wbl_dangerous_material_2967,2967,ACIDO SULFAMICO,8
+l10n_mx_wbl_dangerous_material_2968,2968,MANEB ESTABILIZADO o PREPARADOS DE MANEB ESTABILIZADOS contra el calentamiento espontáneo,4.3
+l10n_mx_wbl_dangerous_material_2969,2969,SEMILLAS DE RICINO o HARINA DE RICINO o TORTA DE RICINO o RICINO EN COPOS,9
+l10n_mx_wbl_dangerous_material_2977,2977,"MATERIALES  RADIACTIVOS, HEXAFLUORURO DE URANIO, FISIONABLE",7
+l10n_mx_wbl_dangerous_material_2978,2978,"MATERIALES  RADIACTIVOS, HEXAFLUORURO DE URANIO, no fisioble o fisioble exceptuado",7
+l10n_mx_wbl_dangerous_material_2983,2983,OXIDO DE ETILENO Y OXIDO DE PROPILENO EN MEZCLA con un máximo de 30% de óxido de etileno,3
+l10n_mx_wbl_dangerous_material_2984,2984,PEROXIDO DE HIDROGENO EN SOLUCION ACUOSA con un mínimo de 8% pero menos de 20% de peróxido de hidrógeno (estabilizada según sea necesario),5.1
+l10n_mx_wbl_dangerous_material_2985,2985,"CLOROSILANOS, INFLAMABLES, CORROSIVOS, N.E.P.",3
+l10n_mx_wbl_dangerous_material_2986,2986,"CLOROSILANOS, CORROSIVOS, INFLAMABLES, N.E.P.",8
+l10n_mx_wbl_dangerous_material_2987,2987,"CLOROSILANOS, CORROSIVOS, N.E.P.",8
+l10n_mx_wbl_dangerous_material_2988,2988,"CLOROSILANOS QUE REACCIONAN CON EL AGUA, INFLAMABLES, CORROSIVOS, N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_2989,2989,FOSFITO DIBASICO DE PLOMO,4.1
+l10n_mx_wbl_dangerous_material_2990,2990,APARATOS DE SALVAMENTO AUTOINFLABLES,9
+l10n_mx_wbl_dangerous_material_2991,2991,"PLAGUICIDA A BASE DE CARBAMATO, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_2992,2992,"PLAGUICIDA A BASE DE CARBAMATOS, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2993,2993,"PLAGUICIDA ARSENICAL, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_2994,2994,"PLAGUICIDA ARSENICAL, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2995,2995,"PLAGUICIDA ORGANOCLORADO, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_2996,2996,"PLAGUICIDA ORGANOCLORADO, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_2997,2997,"PLAGUICIDA A BASE DE TRIAZINA, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_2998,2998,"PLAGUICIDA A BASE DE TRIAZINA, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3005,3005,"PLAGUICIDA A BASE DE TIOCARBAMATO, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_3006,3006,"PLAGUICIDA A BASE DE TIOCARBAMATO, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3009,3009,"PLAGUICIDA A BASE DE COBRE, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_3010,3010,"PLAGUICIDA A BASE DE COBRE, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3011,3011,"PLAGUICIDA A BASE DE MERCURIO, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_3012,3012,"PLAGUICIDA A BASE DE MERCURIO, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3013,3013,"PLAGUICIDA A BASE DE NITROFENOLES SUSTITUIDOS, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_3014,3014,"PLAGUICIDA A BASE DE NITROFENOLES SUSTITUIDOS, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3015,3015,"PLAGUICIDA A BASE DE DIPIRIDILO, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_3016,3016,"PLAGUICIDA A BASE DE DIPIRIDILO, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3017,3017,"PLAGUICIDA A BASE DE ORGANOFOSFORO, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_3018,3018,"PLAGUICIDA A BASE DE ORGANOFOSFORO, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3019,3019,"PLAGUICIDA A BASE DE ORGANOESTAÑO, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_3020,3020,"PLAGUICIDA A BASE DE ORGANOESTAÑO, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3021,3021,"PLAGUICIDA LIQUIDO, INFLAMABLE, TOXICO, N.E.P., de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_3022,3022,"OXIDO DE 1,2-BUTILENO ESTABILIZADO",3
+l10n_mx_wbl_dangerous_material_3023,3023,2-METIL-2-HEPTANOTIOL,6.1
+l10n_mx_wbl_dangerous_material_3024,3024,"PLAGUICIDA A BASE DE DERIVADOS DE LA CUMARINA, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_3025,3025,"PLAGUICIDA A BASE DE DERIVADOS DE LA CUMARINA, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_3026,3026,"PLAGUICIDA A BASE DE DERIVADOS DE LA CUMARINA, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3027,3027,"PLAGUICIDA A BASE DE DERIVADOS DE LA CUMARINA, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3028,3028,ACUMULADORES ELECTRICOS SECOS QUE CONTIENEN HIDROXIDO DE POTASIO SOLIDO,8
+l10n_mx_wbl_dangerous_material_3048,3048,PLAGUICIDA A BASE DE FOSFURO DE ALUMINIO,6.1
+l10n_mx_wbl_dangerous_material_3054,3054,CICLOHEXILMERCAPTANO,3
+l10n_mx_wbl_dangerous_material_3055,3055,2-(2-AMINOETOXI)ETANOL,8
+l10n_mx_wbl_dangerous_material_3056,3056,n-HEPTALDEHIDO,3
+l10n_mx_wbl_dangerous_material_3057,3057,CLORURO DE TRIFLUORACETILO,2.3
+l10n_mx_wbl_dangerous_material_3064,3064,NITROGLICERINA EN SOLUCION ALCOHOLICA con más de 1% pero no más de 5% de nitroglicerina,3
+l10n_mx_wbl_dangerous_material_3065,3065,"BEBIDAS ALCOHOLICAS, con más de 70% de alcohol en volumen",3
+l10n_mx_wbl_dangerous_material_3065,3065,"BEBIDAS ALCOHOLICAS, con más de 24% pero no más de 70% de alcohol en volumen",3
+l10n_mx_wbl_dangerous_material_3066,3066,"PINTURA (incluye pintura, laca, esmalte, colorante, goma laca, barniz, betún, encáustico, apresto líquido y base líquida para lacas) o PRODUCTOS PARA PINTURA (incluye compuestos disolventes o reductores de pintura)",8
+l10n_mx_wbl_dangerous_material_3070,3070,"MEZCLA DE OXIDO DE ETILENO Y DICLORODIFLUOMETANO, con un máximo de 12,5% de óxido de etileno",2.2
+l10n_mx_wbl_dangerous_material_3071,3071,"MERCAPTANOS LIQUIDOS, TOXICOS, INFLAMABLES, N.E.P., o MEZCLA DE MERCAPTANOS LIQUIDOS, TOXICOS, INFLAMABLES, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3072,3072,APARATOS DE SALVAMENTO NO AUTOINFLABLES que contengan mercancías peligrosas como material accesorio,9
+l10n_mx_wbl_dangerous_material_3073,3073,VINILPIRIDINAS ESTABILIZADAS,6.1
+l10n_mx_wbl_dangerous_material_3077,3077,"SUBSTANCIA SOLIDA POTENCIALMENTE PELIGROSA PARA EL MEDIO AMBIENTE, N.E.P.",9
+l10n_mx_wbl_dangerous_material_3078,3078,"CERIO, torneaduras o polvo granulado",4.3
+l10n_mx_wbl_dangerous_material_3079,3079,METACRILONITRILO ESTABILIZADO,6.1
+l10n_mx_wbl_dangerous_material_3080,3080,"ISOCIANATOS TOXICOS, INFLAMABLES, N.E.P., o ISOCIANATOS EN SOLUCION, TOXICOS, INFLAMABLES, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3082,3082,"SUBSTANCIA LIQUIDA POTENCIALMENTE PELIGROSAS PARA EL MEDIO AMBIENTE, N.E.P.",9
+l10n_mx_wbl_dangerous_material_3083,3083,FLUORURO DE PERCLORILO,2.3
+l10n_mx_wbl_dangerous_material_3084,3084,"SOLIDO CORROSIVO COMBURENTE, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3085,3085,"SOLIDO COMBURENTE, CORROSIVO, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3086,3086,"SOLIDO TOXICO, COMBURENTE, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3087,3087,"SOLIDO COMBURENTE, TOXICO, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3088,3088,"SOLIDO ORGANICO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3089,3089,"POLVOS METALICOS INFLAMABLES, N.E.P.",4.1
+l10n_mx_wbl_dangerous_material_3090,3090,BATERIAS DE METAL LITIO (Incluidas las baterías de aleación de litio),9
+l10n_mx_wbl_dangerous_material_3091,3091,BATERIAS DE METAL LITIO INSTALADAS EN UN EQUIPO O BATERIAS DE  METAL LITIO EMBALADAS CON UN EQUIPO (Incluidas las baterías de aleación de litio),9
+l10n_mx_wbl_dangerous_material_3092,3092,1-METOXI-2-PROPANOL,3
+l10n_mx_wbl_dangerous_material_3093,3093,LIQUIDO CORROSIVO COMBURENTE N.E.P.,8
+l10n_mx_wbl_dangerous_material_3094,3094,"LIQUIDO CORROSIVO QUE REACCIONA CON EL AGUA, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3095,3095,"SOLIDO CORROSIVO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3096,3096,SOLIDO CORROSIVO QUE REACCIONA CON EL AGUA N.E.P.,8
+l10n_mx_wbl_dangerous_material_3097,3097,"SOLIDO INFLAMABLE, COMBURENTE, N.E.P.",4.1
+l10n_mx_wbl_dangerous_material_3098,3098,"LIQUIDO COMBURENTE, CORROSIVO, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3099,3099,"LIQUIDO COMBURENTE, TOXICO, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3100,3100,"SOLIDO COMBURENTE QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3101,3101,PEROXIDO ORGANICO LIQUIDO TIPO B,5.2
+l10n_mx_wbl_dangerous_material_3102,3102,PEROXIDO ORGANICO SOLIDO TIPO B,5.2
+l10n_mx_wbl_dangerous_material_3103,3103,PEROXIDO ORGANICO LIQUIDO TIPO C,5.2
+l10n_mx_wbl_dangerous_material_3104,3104,PEROXIDO ORGANICO SOLIDO TIPO C,5.2
+l10n_mx_wbl_dangerous_material_3105,3105,PEROXIDO ORGANICO LIQUIDO TIPO D,5.2
+l10n_mx_wbl_dangerous_material_3106,3106,PEROXIDO ORGANICO SOLIDO TIPO D,5.2
+l10n_mx_wbl_dangerous_material_3107,3107,PEROXIDO ORGANICO LIQUIDO TIPO E,5.2
+l10n_mx_wbl_dangerous_material_3108,3108,PEROXIDO ORGANICO SOLIDO TIPO E,5.2
+l10n_mx_wbl_dangerous_material_3109,3109,PEROXIDO ORGANICO LIQUIDO TIPO F,5.2
+l10n_mx_wbl_dangerous_material_3110,3110,PEROXIDO ORGANICO SOLIDO TIPO F,5.2
+l10n_mx_wbl_dangerous_material_3111,3111,"PEROXIDO ORGANICO LIQUIDO TIPO B LIQUIDO, CON TEMPERATURA REGULADA",5.2
+l10n_mx_wbl_dangerous_material_3112,3112,"PEROXIDO ORGANICO LIQUIDO TIPO B SOLIDO, CON TEMPERATURA REGULADA",5.2
+l10n_mx_wbl_dangerous_material_3113,3113,"PEROXIDO ORGANICO LIQUIDO TIPO C, CON TEMPERATURA REGULADA",5.2
+l10n_mx_wbl_dangerous_material_3114,3114,"PEROXIDO ORGANICO SOLIDO TIPO C, CON TEMPERATURA REGULADA",5.2
+l10n_mx_wbl_dangerous_material_3115,3115,"PEROXIDO ORGANICO LIQUIDO TIPO D, CON TEMPERATURA REGULADA",5.2
+l10n_mx_wbl_dangerous_material_3116,3116,"PEROXIDO ORGANICO SOLIDO TIPO D, CON TEMPERATURA REGULADA",5.2
+l10n_mx_wbl_dangerous_material_3117,3117,"PEROXIDO ORGANICO LIQUIDO TIPO E, CON TEMPERATURA REGULADA",5.2
+l10n_mx_wbl_dangerous_material_3118,3118,"PEROXIDO ORGANICO SOLIDO TIPO E, CON TEMPERATURA REGULADA",5.2
+l10n_mx_wbl_dangerous_material_3119,3119,"PEROXIDO ORGANICO LIQUIDO TIPO F, CON TEMPERATURA REGULADA",5.2
+l10n_mx_wbl_dangerous_material_3120,3120,"PEROXIDO ORGANICO SOLIDO TIPO F, CON TEMPERATURA REGULADA",5.2
+l10n_mx_wbl_dangerous_material_3121,3121,"SOLIDO COMBURENTE QUE REACCIONA CON EL AGUA, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3122,3122,"LIQUIDO TOXICO, OXIDANTE, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3123,3123,"LIQUIDO TOXICO QUE REACCIONA CON EL AGUA, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3124,3124,"SOLIDO TOXICO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3125,3125,"SOLIDO TOXICO QUE REACCIONA CON EL AGUA, N.E.P",6.1
+l10n_mx_wbl_dangerous_material_3126,3126,"SOLIDO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, CORROSIVO, ORGANICO, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3127,3127,"SOLIDO QUE EXPERIMENTA CALENTAMIENTO, COMBURENTE, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3128,3128,"SOLIDO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, TOXICO, ORGANICO, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3129,3129,"LIQUIDO QUE REACCIONA CON EL AGUA, CORROSIVO, N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_3130,3130,"LIQUIDO QUE REACCIONA CON EL AGUA, TOXICO, N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_3131,3131,"SOLIDO QUE REACCIONA CON EL AGUA, CORROSIVO, N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_3132,3132,"SOLIDO QUE REACCIONA CON EL AGUA, INFLAMABLE, N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_3133,3133,"SOLIDO QUE REACCIONA CON EL AGUA, N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_3134,3134,"SOLIDO QUE REACCIONA CON EL AGUA, TOXICO, N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_3135,3135,"SOLIDO QUE REACCIONA CON EL AGUA Y QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, N.E.P",4.3
+l10n_mx_wbl_dangerous_material_3136,3136,TRIFLUOROMETANO LIQUIDO REFRIGERADO,2.2
+l10n_mx_wbl_dangerous_material_3137,3137,"SOLIDO COMBURENTE, INFLAMABLE, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3138,3138,"MEZCLA LIQUIDA, REFRIGERADA, con no menos de 71,5% de etilen,  un máximo de 22.5% de acetileno y un máximo de 6% de propileno",2.1
+l10n_mx_wbl_dangerous_material_3139,3139,"LIQUIDO OXIDANTE, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3140,3140,ALCALOIDES LIQUIDOS N.E.P. o SALES DE ALCALOIDES LIQUIDAS N.E.P.,6.1
+l10n_mx_wbl_dangerous_material_3141,3141,"ANTIMONIO, COMPUESTO INORGANICO LIQUIDO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3142,3142,"DESINFECTANTE LIQUIDO, TOXICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3143,3143,"COLORANTE SOLIDO TOXICO, N.E.P. o MATERIA INTERMEDIA PARA COLORANTES, SOLIDA, TOXICOS, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3144,3144,"NICOTINA, COMPUESTO LIQUIDO N.E.P., o PREPARADO LIQUIDO A BASE  DE NICOTINA, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3145,3145,"ALQUILFENOLES LIQUIDOS, N.E.P. (incluidos los homólogos C2 a C12)",8
+l10n_mx_wbl_dangerous_material_3146,3146,"COMPUESTO DE ORGANOESTAÑO SOLIDO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3147,3147,"COLORANTE SOLIDO, CORROSIVO, N.E.P. o MATERIA INTERMEDIA PARA COLORANTE, SOLIDA, CORROSIVAS, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3148,3148,"LÍQUIDO QUE REACCIONA CON EL AGUA, N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_3149,3149,"PEROXIDO DE HIDROGENO Y ACIDO PEROXIACETICO, EN MEZCLA, con ácido(s), agua y un máximo de 5% de ácido peroxiacético, ESTABILIZADA",5.1
+l10n_mx_wbl_dangerous_material_3150,3150,"DISPOSITIVOS PEQUEÑOS ACCIONADOS POR HIDROCARBUROS GASEOSOS o RECARGAS DE HIDROCARBUROS GASEOSOS PARA DISPOSITIVOS PEQUEÑOS, con dispositivo de descarga",2.1
+l10n_mx_wbl_dangerous_material_3151,3151,DIFENILOS POLIHALOGENADOS LIQUIDOS o TERFENILOS POLIHALOGENADOS LIQUIDOS,9
+l10n_mx_wbl_dangerous_material_3152,3152,DIFENILOS POLIHALOGENADOS SOLIDOS o TERFENILOS POLIHALOGENADOS SOLIDOS,9
+l10n_mx_wbl_dangerous_material_3153,3153,PERFLUORO (ETER METILVINIILICO),2.1
+l10n_mx_wbl_dangerous_material_3154,3154,PERFLUORO (ETER ETILVINILICO),2.1
+l10n_mx_wbl_dangerous_material_3155,3155,PENTACLOROFENOL,6.1
+l10n_mx_wbl_dangerous_material_3156,3156,"GAS COMPRIMIDO, COMBURENTE, N.E.P.",2.2
+l10n_mx_wbl_dangerous_material_3157,3157,"GAS LICUADO, COMBURENTE, N.E.P.",2.2
+l10n_mx_wbl_dangerous_material_3158,3158,"GAS LICUADO, REFRIGERADO, N.E.P.",2.2
+l10n_mx_wbl_dangerous_material_3159,3159,"1,1,1,2-TETRAFLUOROETANO (GAS REFRIGERANTE R 134ª)",2.2
+l10n_mx_wbl_dangerous_material_3160,3160,"GAS LICUADO TOXICO, INFLAMABLE, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_3161,3161,"GAS LICUADO INFLAMABLE, N.E.P.",2.1
+l10n_mx_wbl_dangerous_material_3162,3162,GAS LICUADO TOXICO N.E.P.,2.3
+l10n_mx_wbl_dangerous_material_3163,3163,"GAS LICUADO, N.E.P.",2.2
+l10n_mx_wbl_dangerous_material_3164,3164,OBJETOS CON PRESION INTERIOR NEUMATICOS O HIDRAULICOS (que contienen gas ininflamable),2.2
+l10n_mx_wbl_dangerous_material_3165,3165,DEPOSITO DE COMBUSTIBLE DE GRUPO MOTOR DE CIRCUITO HIDRAULICO DE AERONAVE (que contiene una mezcla de hidracina anhidra y metilhidrazina) (combustible M86),3
+l10n_mx_wbl_dangerous_material_3166,3166,MOTOR DE COMBUSTION INTERNA O VEHICULO  PROPULSADO POR GAS INFLAMABLE o VEHICULO PROPULSADO POR LIQUIDO INFLAMABLE o MOTOR CON PILA DE COMBUSTIBLE PROPULSADO POR GAS INFLAMABLE o VEHICULO CON PILA DE COMBUSTIBLE PROPULSADO POR LIQUIDO INFLAMABLE,9
+l10n_mx_wbl_dangerous_material_3167,3167,"MUESTRAS DE GAS INFLAMABLE,  A PRESION NORMAL, N.E.P.,  que no sea  líquido refrigerado",2.1
+l10n_mx_wbl_dangerous_material_3168,3168,"MUESTRAS DE GAS TOXICO INFLAMABLE,  A PRESION NORMAL, N.E.P.,  que no sea  líquido refrigerado",2.3
+l10n_mx_wbl_dangerous_material_3169,3169,"MUESTRAS DE GAS TOXICO, A PRESION NORMAL, N.E.P.,  que no sea  líquido refrigerado",2.3
+l10n_mx_wbl_dangerous_material_3170,3170,SUBPRODUCTOS DE LA FUNDICION DEL  ALUMINIO O SUBPRODUCTOS DE LA REFUNDICION DEL ALUMINIO,4.3
+l10n_mx_wbl_dangerous_material_3171,3171,VEHICULO ACCIONADO POR BATERIA  O APARATO ACCIONADO POR BATERIA,9
+l10n_mx_wbl_dangerous_material_3172,3172,"TOXINAS EXTRAIDAS DE UN MEDIO VIVO, LIQUIDAS, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3174,3174,DISULFURO DE TITANIO,4.2
+l10n_mx_wbl_dangerous_material_3175,3175,"SOLIDO QUE CONTIENE LIQUIDO INFLAMABLE, N.E.P.",4.1
+l10n_mx_wbl_dangerous_material_3176,3176,SOLIDO INFLAMABLE ORGANICO FUNDIDO N.E.P.,4.1
+l10n_mx_wbl_dangerous_material_3178,3178,"SOLIDO INFLAMABLE INORGANICO, N.E.P.",4.1
+l10n_mx_wbl_dangerous_material_3179,3179,"SOLIDO INFLAMABLE, INORGANICO TOXICO, N.E.P.",4.1
+l10n_mx_wbl_dangerous_material_3180,3180,"SOLIDO INFLAMABLE, INORGANICO CORROSIVO, N.E.P.",4.1
+l10n_mx_wbl_dangerous_material_3181,3181,"SALES METALICAS DE COMPUESTOS ORGANICOS, INFLAMABLES, N.E.P.",4.1
+l10n_mx_wbl_dangerous_material_3182,3182,"HIDRUROS METALICOS INFLAMABLES, N.E.P.",4.1
+l10n_mx_wbl_dangerous_material_3183,3183,"LIQUIDO ORGANICO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3184,3184,"LIQUIDO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, TOXICO, ORGANICO N.E.P",4.2
+l10n_mx_wbl_dangerous_material_3185,3185,"LIQUIDO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, CORROSIVO, ORGANICO N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3186,3186,"LIQUIDO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, INORGANICO, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3187,3187,"LIQUIDO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, TOXICO, INORGANICO N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3188,3188,"LIQUIDO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, CORROSIVO, INORGANICO N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3189,3189,"POLVO METALICO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3190,3190,"SOLIDO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, INORGANICO, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3191,3191,"SOLIDO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, TOXICO, INORGANICO, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3192,3192,"SOLIDO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, CORROSIVO, INORGANICO, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3194,3194,LIQUIDO PIROFORICO INORGANICO N.E.P.,4.2
+l10n_mx_wbl_dangerous_material_3200,3200,SOLIDO PIROFORICO INORGANICO N.E.P.,4.2
+l10n_mx_wbl_dangerous_material_3205,3205,"ALCOHOLATOS DE METALES ALCALINOTERREOS, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3206,3206,"ALCOHOLATOS DE METALES ALCALINOS QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, CORROSIVOS, N.E.P.",4.2
+l10n_mx_wbl_dangerous_material_3208,3208,"SUBSTANCIA METALICA QUE REACCIONA CON EL AGUA, N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_3209,3209,"SUBSTANCIA METALICA QUE REACCIONA CON EL AGUA Y QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, N.E.P.",4.3
+l10n_mx_wbl_dangerous_material_3210,3210,"CLORATOS INORGANICOS EN SOLUCION ACUOSA, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3211,3211,"PERCLORATOS INORGANICOS EN SOLUCION ACUOSA, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3212,3212,"HIPOCLORITOS INORGANICOS, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3213,3213,"BROMATOS INORGANICOS EN SOLUCION ACUOSA, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3214,3214,"PERMANGANATOS INORGANICOS EN SOLUCION ACUOSA, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3215,3215,"PERSULFATOS INORGANICOS, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3216,3216,"PERSULFATOS INORGANICOS EN SOLUCION ACUOSA, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3218,3218,"NITRATOS INORGANICOS EN SOLUCION ACUOSA, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3219,3219,"NITRITOS INORGANICOS EN SOLUCION ACUOSA, N.E.P.",5.1
+l10n_mx_wbl_dangerous_material_3220,3220,PENTAFLUOROETANO (GAS REFRIGERANTE R125),2.2
+l10n_mx_wbl_dangerous_material_3221,3221,LIQUIDO DE REACCION ESPONTANEA TIPO B,4.1
+l10n_mx_wbl_dangerous_material_3222,3222,SOLIDO DE REACCION ESPONTANEA TIPO B,4.1
+l10n_mx_wbl_dangerous_material_3223,3223,LIQUIDO DE REACCION ESPONTANEA TIPO C,4.1
+l10n_mx_wbl_dangerous_material_3224,3224,SOLIDO DE REACCION ESPONTANEA TIPO C,4.1
+l10n_mx_wbl_dangerous_material_3225,3225,LIQUIDO DE REACCION ESPONTANEA TIPO D,4.1
+l10n_mx_wbl_dangerous_material_3226,3226,SOLIDO DE REACCION ESPONTANEA TIPO D,4.1
+l10n_mx_wbl_dangerous_material_3227,3227,LIQUIDO DE REACCION ESPONTANEA TIPO E,4.1
+l10n_mx_wbl_dangerous_material_3228,3228,SOLIDO DE REACCION ESPONTANEA TIPO E,4.1
+l10n_mx_wbl_dangerous_material_3229,3229,LIQUIDO DE REACCION ESPONTANEA TIPO F,4.1
+l10n_mx_wbl_dangerous_material_3230,3230,SOLIDO DE REACCION ESPONTANEA TIPO F,4.1
+l10n_mx_wbl_dangerous_material_3231,3231,"LIQUIDO DE REACCION ESPONTANEA TIPO B, CON TEMPERATURA REGULADA",4.1
+l10n_mx_wbl_dangerous_material_3232,3232,"SOLIDO DE REACCION ESPONTANEA TIPO B, CON TEMPERATURA REGULADA",4.1
+l10n_mx_wbl_dangerous_material_3233,3233,"LIQUIDO DE REACCION ESPONTANEA TIPO C, CON TEMPERATURA REGULADA",4.1
+l10n_mx_wbl_dangerous_material_3234,3234,"SOLIDO DE REACCION ESPONTANEA TIPO C, CON TEMPERATURA REGULADA",4.1
+l10n_mx_wbl_dangerous_material_3235,3235,"LIQUIDO DE REACCION ESPONTANEA TIPO D, CON TEMPERATURA REGULADA",4.1
+l10n_mx_wbl_dangerous_material_3236,3236,"SOLIDO DE REACCION ESPONTANEA TIPO D, CON TEMPERATURA REGULADA",4.1
+l10n_mx_wbl_dangerous_material_3237,3237,"LIQUIDO DE REACCION ESPONTANEA TIPO E, CON TEMPERATURA REGULADA",4.1
+l10n_mx_wbl_dangerous_material_3238,3238,"SOLIDO DE REACCION ESPONTANEA TIPO E, CON TEMPERATURA REGULADA",4.1
+l10n_mx_wbl_dangerous_material_3239,3239,"LIQUIDO DE REACCION ESPONTANEA TIPO F, CON TEMPERATURA REGULADA",4.1
+l10n_mx_wbl_dangerous_material_3240,3240,"SOLIDO DE REACCION ESPONTANEA TIPO F, CON TEMPERATURA REGULADA",4.1
+l10n_mx_wbl_dangerous_material_3241,3241,"2-BROMO-2-NITROPROPANO-1,3-DIOL",4.1
+l10n_mx_wbl_dangerous_material_3242,3242,AZODICARBONAMIDA,4.1
+l10n_mx_wbl_dangerous_material_3243,3243,"SOLIDOS QUE CONTIENEN LIQUIDO TOXICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3244,3244,"SOLIDOS QUE CONTIENEN LIQUIDO CORROSIVO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3245,3245,MICROORGANISMOS MODIFICADOS GENETICAMENTE u ORGANISMOS MODIFICADOS GENETICAMENTE,9
+l10n_mx_wbl_dangerous_material_3246,3246,CLORURO DE METANOSULFONILO,6.1
+l10n_mx_wbl_dangerous_material_3247,3247,PEROXOBORATO DE SODIO ANHIDRO,5.1
+l10n_mx_wbl_dangerous_material_3248,3248,"MEDICAMENTO LIQUIDO, INFLAMABLE, TOXICO, N.E.P.",3
+l10n_mx_wbl_dangerous_material_3249,3249,"MEDICAMENTO SOLIDO, TOXICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3250,3250,ACIDO CLOROACETICO FUNDIDO,6.1
+l10n_mx_wbl_dangerous_material_3251,3251,MONONITRATO-5-DE ISOSORBIDA,4.1
+l10n_mx_wbl_dangerous_material_3252,3252,DIFLUOROMETANO (GAS REFRIGERANTE R32),2.1
+l10n_mx_wbl_dangerous_material_3253,3253,TRIOXOSILICATO DE DISODIO,8
+l10n_mx_wbl_dangerous_material_3254,3254,TRIBUTILFOSFANO,4.2
+l10n_mx_wbl_dangerous_material_3255,3255,HIPOCLORITO DE terc-BUTIL,4.2
+l10n_mx_wbl_dangerous_material_3256,3256,"LIQUIDO A TEMPERTURA ELEVADA, INFLAMABLE, N.E.P., de punto de inflamación superior a 60°C a una temperatura igual o superior al punto de inflamación",3
+l10n_mx_wbl_dangerous_material_3257,3257,"LIQUIDO A TEMPERATURA ELEVADA, N.E.P., a una temperatura igual o superior a 100°C e inferior a su punto de inflamación (incluidos los metales fundidos, las sales fundidas, etc.)",9
+l10n_mx_wbl_dangerous_material_3258,3258,"SOLIDO A TEMPERATURA ELEVADA, N.E.P., a una temperatura igual o superior a 240°C",9
+l10n_mx_wbl_dangerous_material_3259,3259,"AMINAS SOLIDAS, CORROSIVAS, N.E.P., o POLIAMINAS SOLIDAS, CORROSIVAS, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3260,3260,"SOLIDO CORROSIVO, ACIDO, INORGANICO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3261,3261,"SOLIDO CORROSIVO, ACIDO, ORGANICO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3262,3262,"SOLIDO CORROSIVO, BASICO, INORGANICO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3263,3263,"SOLIDO CORROSIVO, BASICO, ORGANICO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3264,3264,"LIQUIDO CORROSIVO, ACIDO, INORGANICO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3265,3265,"LIQUIDO CORROSIVO, ACIDO, ORGANICO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3266,3266,"LIQUIDO CORROSIVO, BASICO, INORGANICO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3267,3267,"LIQUIDO CORROSIVO, BASICO, ORGANICO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3268,3268,INFLADORES DE BOLSAS NEUMÁTICAS O MÓDULOS DE BOLSAS NEUMÁTICAS O PRETENSORES DE CINTURONES DE SEGURIDAD,9
+l10n_mx_wbl_dangerous_material_3269,3269,BOLSA  PARA RESINA POLIESTERICA,3
+l10n_mx_wbl_dangerous_material_3270,3270,"FILTROS DE MEMBRANAS NITROCELULOSICAS, con un máximo de 12.6% de nitrógeno, por masa seca",4.1
+l10n_mx_wbl_dangerous_material_3271,3271,"ETERES, N.E.P.",3
+l10n_mx_wbl_dangerous_material_3273,3273,"NITRILOS INFLAMABLES, TOXICOS, N.E.P.",3
+l10n_mx_wbl_dangerous_material_3274,3274,"ALCOHOLATOS EN SOLUCION, N.E.P. en alcohol",3
+l10n_mx_wbl_dangerous_material_3275,3275,"NITRILOS TOXICOS, INFLAMABLES, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3276,3276,"NITRILOS TOXICOS, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3277,3277,"CLOROFORMIATOS TOXICOS, CORROSIVOS, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3278,3278,"COMPUESTO ORGANOFOSFORADO TÓXICO, LÍQUIDO N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3279,3279,"COMPUESTOS ORGANOFOSFORADOS TOXICOS, INFLAMABLES, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3280,3280,"COMPUESTO ORGANOARSENICAL LIQUIDO N.E.P.,",6.1
+l10n_mx_wbl_dangerous_material_3281,3281,"CARBONILOS METALICOS, LIQUIDO N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3282,3282,"COMPUESTOS ORGANOMETALICOS TOXICOS,  LIQUIDO N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3283,3283,"COMPUESTO DE SELENIO, SOLIDO N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3284,3284,"COMPUESTO DE TELURIO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3285,3285,COMPUESTO DE VANADIO N.E.P.,6.1
+l10n_mx_wbl_dangerous_material_3286,3286,"LIQUIDO INFLAMABLE, TOXICO, CORROSIVO, N.E.P.",3
+l10n_mx_wbl_dangerous_material_3287,3287,"LIQUIDO TOXICO, INORGANICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3288,3288,"SOLIDO TOXICO, INORGANICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3289,3289,"LIQUIDO TOXICO, CORROSIVO, INORGANICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3290,3290,"SOLIDO TOXICO, CORROSIVO, INORGANICO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3291,3291,"DESECHOS CLIINICOS, N.E.P., o DESECHOS (BIO)MEDICOS, N.E.P., o DESECHOS MEDICOS REGULADOS, N.E.P.",6.2
+l10n_mx_wbl_dangerous_material_3292,3292,BATERIAS QUE CONTIENEN SODIO o ELEMENTOS DE BATERIA QUE CONTIENEN SODIO,4.3
+l10n_mx_wbl_dangerous_material_3293,3293,"HIDRAZINA EN SOLUCION ACUOSA con un máximo de 37%, en masa, de hidracina",6.1
+l10n_mx_wbl_dangerous_material_3294,3294,"CIANURO DE HIDROGENO EN SOLUCION ALCOHOLICA, con no más de 45% de cianuro de hidrógeno",6.1
+l10n_mx_wbl_dangerous_material_3295,3295,"HIDROCARBUROS LIQUIDOS, N.E.P.",3
+l10n_mx_wbl_dangerous_material_3296,3296,HEPTAFLUOROPROPANO (GAS REFRIGERANTE R 227),2.2
+l10n_mx_wbl_dangerous_material_3297,3297,"MEZCLAS DE OXIDO DE ETILENO Y CLOROTETRAFLUOROETANO con no más de 8,8% de óxido de etileno",2.2
+l10n_mx_wbl_dangerous_material_3298,3298,"MEZCLAS DE OXIDO DE ETILENO Y PENTAFLUOROETANO con no más de 7,9% de óxido de etileno",2.2
+l10n_mx_wbl_dangerous_material_3299,3299,"MEZCLAS DE OXIDO DE ETILENO Y TETRAFLUOROETANO con no más de 5,6% de óxido de etileno",2.2
+l10n_mx_wbl_dangerous_material_3300,3300,"MEZCLAS DE OXIDO DE ETILENO Y DIOXIDO DE CARBONO, con no más de 87% de óxido de etileno",2.3
+l10n_mx_wbl_dangerous_material_3301,3301,"LIQUIDO CORROSIVO QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3302,3302,ACRILATO 2-DIMETILAMINOETILICO,6.1
+l10n_mx_wbl_dangerous_material_3303,3303,"GAS COMPRIMIDO, TOXICO, OXIDANTE, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_3304,3304,"GAS COMPRIMIDO, TOXICO, CORROSIVO, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_3305,3305,"GAS COMPRIMIDO, TOXICO, INFLAMABLE, CORROSIVO, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_3306,3306,"GAS COMPRIMIDO, TOXICO, OXIDANTE, CORROSIVO, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_3307,3307,"GAS LICUADO, TOXICO, OXIDANTE, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_3308,3308,"GAS LICUADO, TOXICO, CORROSIVO, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_3309,3309,"GAS LICUADO, TOXICO, INFLAMABLE, CORROSIVO, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_3310,3310,"GAS LICUADO, TOXICO, OXIDANTE, CORROSIVO, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_3311,3311,"GAS, LIQUIDO REFRIGERADO, OXIDANTE, N.E.P.",2.2
+l10n_mx_wbl_dangerous_material_3312,3312,"GAS, LIQUIDO REFRIGERADO, INFLAMABLE, N.E.P.",2.1
+l10n_mx_wbl_dangerous_material_3313,3313,PIGMENTOS ORGANICOS QUE EXPERIMENTAN UN CALENTAMIENTO ESPONTANEO,4.2
+l10n_mx_wbl_dangerous_material_3314,3314,"COMPUESTO PARA EL MOLDEADO DE PLASTICOS en forma de pasta, hoja o cuerda estirada que desprende vapores inflamables",9
+l10n_mx_wbl_dangerous_material_3315,3315,"MUESTRA QUIMICA TOXICA, líquida o sólida",6.1
+l10n_mx_wbl_dangerous_material_3316,3316,EQUIPO QUÍMICO o BOTIQUÍN DE URGENCIA,9
+l10n_mx_wbl_dangerous_material_3317,3317,"2-AMINO-4,6-DINITROFENOL, HUMIDIFICADO con una proporción de agua, en masa, no inferior al 20%",4.1
+l10n_mx_wbl_dangerous_material_3318,3318,"SOLUCION ACUOSA DE AMONIACO, con una densidad relativa menor de 0,880 a 15°C, con más de 50% de amoniaco",2.3
+l10n_mx_wbl_dangerous_material_3319,3319,"MEZCLA DE NITROGLICERINA, DESENSIBILIZADA, SOLIDA, N.E.P. con más de 2% pero no más de 10%, en masa, de nitroglicerina",4.1
+l10n_mx_wbl_dangerous_material_3320,3320,"BOROHIDRURO SODIO Y SOLUCION DE HIDROXIDO SODIO con no más de 12% de borohidruro SODIO y no más de 40%, en masa, de hidróxido SODIO",8
+l10n_mx_wbl_dangerous_material_3321,3321,"MATERIALES RADIACTIVOS, BAJA ACTIVIDAD ESPECIFICA (BAE-II), no fisionables o fisionables exceptuados",7
+l10n_mx_wbl_dangerous_material_ 3322, 3322," MATERIALES RADIACTIVOS, BAJA ACTIVIDAD ESPECIFICA (BAE-III), no fisionables o fisionables exceptuados", 7
+l10n_mx_wbl_dangerous_material_ 3323, 3323," MATERIALES RADIACTIVOS, BULTOS DE TIPO C, no fisionables o fisionables exceptuados", 7
+l10n_mx_wbl_dangerous_material_ 3324, 3324," MATERIALES RADIACTIVOS, BAJA ACTIVIDAD ESPECIFICA (BAE-II), FISIONABLES", 7
+l10n_mx_wbl_dangerous_material_3325,3325,"MATERIALES RADIACTIVOS, BAJA ACTIVIDAD ESPECIFICA (BAE-III), FISIONABLES",7
+l10n_mx_wbl_dangerous_material_3326,3326,"MATERIALES RADIACTIVOS, OBJETOS CONTAMINADOS EN LA SUPERFICIE (OCS-I u OCS-II), FISIONABLES",7
+l10n_mx_wbl_dangerous_material_3327,3327,"MATERIALES RADIACTIVOS, BULTOS DE TIPO A, FISIONABLES, no en forma especial",7
+l10n_mx_wbl_dangerous_material_3328,3328,"MATERIALES RADIACTIVOS, BULTOS DE TIPO B(U), FISIONABLES",7
+l10n_mx_wbl_dangerous_material_3329,3329,"MATERIALES RADIACTIVOS, BULTOS DE TIPO B(M), FISIONABLES",7
+l10n_mx_wbl_dangerous_material_3330,3330,"MATERIALES RADIACTIVOS, BULTOS DE TIPO C, FISIONABLES",7
+l10n_mx_wbl_dangerous_material_3331,3331,"MATERIALES RADIACTIVOS TRANSPORTADOS EN VIRTUD DE ARREGLOS ESPECIALES, FISIONABLES",7
+l10n_mx_wbl_dangerous_material_3332,3332,"MATERIALES RADIACTIVOS, BULTO DE TIPO A, FORMA ESPECIAL, no fisionables o fisionables exceptuados",7
+l10n_mx_wbl_dangerous_material_3333,3333,"MATERIALES RADIACTIVOS, BULTO DE TIPO A, FORMA ESPECIAL, FISIONABLES",7
+l10n_mx_wbl_dangerous_material_3334,3334,"LIQUIDO REGULADO PARA AVIACIÓN, N.E.P.",9
+l10n_mx_wbl_dangerous_material_3335,3335,"SOLIDO REGULADO PARA AVIACIÓN, N.E.P.",9
+l10n_mx_wbl_dangerous_material_3336,3336,"MERCAPTANOS, LIQUIDOS, INFLAMABLES, N.E.P., o MEZCLA DE MERCAPTANOS, LIQUIDOS, INFLAMABLES, N.E.P.",3
+l10n_mx_wbl_dangerous_material_3337,3337,GAS REFRIGERANTE R 404ª,2.2
+l10n_mx_wbl_dangerous_material_3338,3338,GAS REFRIGERANTE R 407ª MEZCLA AZEOTROPICA,2.2
+l10n_mx_wbl_dangerous_material_3339,3339,GAS REFRIGERANTE R 407B MEZCLA AZEOTROPICA,2.2
+l10n_mx_wbl_dangerous_material_3340,3340,GAS REFRIGERANTE R 407C,2.2
+l10n_mx_wbl_dangerous_material_3341,3341,DIOXIDO DE TIOUREA,4.2
+l10n_mx_wbl_dangerous_material_3342,3342,XANTATOS,4.2
+l10n_mx_wbl_dangerous_material_3343,3343,"MEZCLA DE NITROGLICERINA, DESENSIBILIZADA, LIQUIDA, INFLAMABLE, N.E.P., con no más de 30% de nitroglicerina, en masa",3
+l10n_mx_wbl_dangerous_material_3344,3344,"TETRANITRATO DE PENTAERITRITA, (TETRANITRATO DE PENTAERITRITROL; TNPE) EN MEZCLA DE DESENSIBILIZADO, SOLIDO, N.E.P., con más de 10% pero no más de 20% en masa, de TNPE",4.1
+l10n_mx_wbl_dangerous_material_3345,3345,"PLAGUICIDA DERIVADO DEL ACIDO FENOXIACETICO, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3346,3346,"PLAGUICIDA DERIVADO DEL ACIDO FENOXIACETICO, LIQUIDO, INFLAMABLE, TOXICO de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_3347,3347,"PLAGUICIDA DERIVADO DEL ACIDO FENOXIACETICO, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación igual o superior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_3348,3348,"PLAGUICIDA DERIVADO DEL ACIDO FENOXIACETICO, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3349,3349,"PLAGUICIDA PIRETROIDEO, SOLIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3350,3350,"PLAGUICIDA PIRETROIDEO, LIQUIDO, INFLAMABLE, TOXICO, de punto de inflamación inferior a 23°C",3
+l10n_mx_wbl_dangerous_material_3351,3351,"PLAGUICIDA PIRETROIDEO, LIQUIDO, TOXICO, INFLAMABLE, de punto de inflamación no inferior a 23°C",6.1
+l10n_mx_wbl_dangerous_material_3352,3352,"PLAGUICIDA PIRETROIDEO, LIQUIDO, TOXICO",6.1
+l10n_mx_wbl_dangerous_material_3354,3354,"GAS INSECTICIDA, INFLAMABLE, N.E.P.",2.1
+l10n_mx_wbl_dangerous_material_3355,3355,"GAS INSECTICIDA, TOXICO, INFLAMABLE, N.E.P.",2.3
+l10n_mx_wbl_dangerous_material_3356,3356,GENERADOR QUIMICO DE OXIGENO,5.1
+l10n_mx_wbl_dangerous_material_3357,3357,"MEZCLA DE NITROGLICERINA, DESENSIBILIZADA, LIQUIDA, N.E.P. con un máximo de 30% de nitroglicerina, por masa",3
+l10n_mx_wbl_dangerous_material_3358,3358,"MAQUINAS REFRIGERADORAS que contengan gas líquido inflamable, no tóxico",2.1
+l10n_mx_wbl_dangerous_material_3359,3359,UNIDAD DE TRANSPORTE DE MATERIALES SOMETIDA A FUMIGACION,9
+l10n_mx_wbl_dangerous_material_3360,3360,"FIBRAS DE ORIGEN VEGETAL, SECAS",4.1
+l10n_mx_wbl_dangerous_material_3361,3361,"CLOROSILANOS TOXICOS CORROSIVOS, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3362,3362,"CLOROSILANOS TOXICOS CORROSIVOS INFLAMABLES, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3363,3363,MERCANCIAS PELIGROSAS EN MAQUINARIA o MERCANCIAS PELIGROSAS EN APARATOS,9
+l10n_mx_wbl_dangerous_material_3364,3364,"TRINITROFENOL (ACIDO PICRICO) HUMIDIFICADO con un mínimo de 10%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_3365,3365,"TRINITROCLOROBENCENO (CLORURO DE PICRILO) HUMIDIFICADO con un mínimo de 10%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_3366,3366,"TRINITROTOLUENO (TNT) HUMIDIFICADO con un mínimo de 10%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_3367,3367,"TRINITROBENCENO HUMIDIFICADO con un mínimo de 10%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_3368,3368,"ACIDO TRINITROBENZOICO HUIMIDIFICADO con un mínimo de 10%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_3369,3369,"DINITRO-o-CRESOLATO SODIO HUMIDIFICADO con un mínimo de 10%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_3370,3370,"NITRATO DE UREA HUMIDIFICADO con un mínimo de 10%, en masa, del agua",4.1
+l10n_mx_wbl_dangerous_material_3371,3371,2-METILBUTANAL,3
+l10n_mx_wbl_dangerous_material_3373,3373,SUBSTANCIA BIOLOGICA CATEGORIA B,6.2
+l10n_mx_wbl_dangerous_material_3374,3374,ACETILENO EXENTO DE SOLVENTE,2.1
+l10n_mx_wbl_dangerous_material_3375,3375,"EMULSIÓN DE NITRATO DE AMONIO o SUSPENSIÓN o GEL, explosivos intermediarios para voladuras",5.1
+l10n_mx_wbl_dangerous_material_3376,3376,"4-NITROFENILHIDRAZINA con un máximo de 30%, en masa, de agua",4.1
+l10n_mx_wbl_dangerous_material_3377,3377,PERBORATO DE SODIO MONOHIDRATADO,5.1
+l10n_mx_wbl_dangerous_material_3378,3378,CARBONATO DE SODIO PEROXIHIDRATADO,5.1
+l10n_mx_wbl_dangerous_material_3379,3379,"EXPLOSIVO DESENSIBILIZADO, LIQUIDO, N.E.P.",3
+l10n_mx_wbl_dangerous_material_3380,3380,"EXPLOSIVO DESENSIBILIZADO, SOLIDO, N.E.P",4.1
+l10n_mx_wbl_dangerous_material_3381,3381,"LÍQUIDO TÓXICO POR INHALACIÓN,N.E.P.,con toxicidad por  inhalación inferior o igual a 200 ml/m3 y con concentración saturada de vapor superior o igual a 500 CL50 ",6.1
+l10n_mx_wbl_dangerous_material_3382,3382,"LÍQUIDO  TÓXICO POR INHALACIÓN, N.E.P., con toxicidad por inhalación inferior o igual a 1000 ml/m3 y con concentración saturada de vapor superior o igual a 10 CL50",6.1
+l10n_mx_wbl_dangerous_material_3383,3383,"LÍQUIDO TÓXICO POR INHALACION, INFLAMABLE,      N.E.P.,    CON TOXICIDAD POR INHALACION INFERIOR O IGUAL A 200 ml/m3 y con concentración     saturada     de     vapor superior o igual a 500 CL50",6.1
+l10n_mx_wbl_dangerous_material_3384,3384,"LÍQUIDO TÓXICO POR INHALACIÓN, INFLAMABLE, N.E.P., con toxicidad por inhalación Inferior o igual a 1000 ml/m3 y concentración saturada de vapor Superior o igual a 10 CL50",6.1
+l10n_mx_wbl_dangerous_material_3385,3385,"LÍQUIDO TÓXICO POR INHALACIÓN, HIDRORREACTIVO, N.E.P., con toxicidad por inhalación Inferior o igual a 200 ml/m3 y con Concentración saturada de vapor superior o igual a 500 CL50",6.1
+l10n_mx_wbl_dangerous_material_3386,3386,"LÍQUIDO TÓXICO POR INHALACIÓN, HIDRORREACTIVO, N.E.P., con toxicidad por inhalación Inferior o igual a 1000 ml/m3 y con concentración saturada de vapor Superior o igual a 10 CL50",6.1
+l10n_mx_wbl_dangerous_material_3387,3387,"LÍQUIDO TÓXICO POR INHALACIÓN, COMBURENTE, N.E.P., con toxicidad por inhalación inferior o igual a 200 ml/m3 y con Concentración saturada de vapor superior o igual a 500 CL50",6.1
+l10n_mx_wbl_dangerous_material_3388,3388,"LÍQUIDO TÓXICO POR INHALACIÓN, COMBURENTE, N.E.P., con toxicidad por inhalación Inferior o igual a 1000 ml/m3 y con concentración saturada de vapor superior o igual a 10 CL50",6.1
+l10n_mx_wbl_dangerous_material_3389,3389,"LÍQUIDO TÓXICO POR INHALACIÓN, CORROSIVO,N.E.P., Con toxicidad por inhalación inferior o igual a 200 ml/m3 y con concentración Saturada de vapor superior o igual a 500 CL50",6.1
+l10n_mx_wbl_dangerous_material_3390,3390,"LÍQUIDO  TÓXICO  POR INHALACIÓN, CORROSIVO, N.E.P., Con toxicidad por inhalación inferior o igual a 1000 ml/m3 y con concentración saturada de vapor superior o igual a  10 CL50",6.1
+l10n_mx_wbl_dangerous_material_3391,3391,"SUBSTANCIA  ORGANOMETALICA, SOLIDA, PIROFORICA",4.2
+l10n_mx_wbl_dangerous_material_3392,3392,"SUBSTANCIA ORGANOMETALICA, LIQUIDA,PIROFORICA",4.2
+l10n_mx_wbl_dangerous_material_3393,3393,"SUBSTANCIA ORGANOMETÁLICA, SÓLIDA, PIROFÓRICA HIDRORREACTIVA",4.2
+l10n_mx_wbl_dangerous_material_3394,3394,"SUBSTANCIA ORGANOMETALICA, LIQUIDA, PIROFORICA, HIDRORREACTIVA",4.2
+l10n_mx_wbl_dangerous_material_3395,3395,"SUBSTANCIA ORGANOMETALICA, SOLIDA, HIDRORREACTIVA",4.3
+l10n_mx_wbl_dangerous_material_3396,3396,"SUBSTANCIA ORGANOMETALICA, SOLIDA, HIDRORREACTIVA, INFLAMABLE",4.3
+l10n_mx_wbl_dangerous_material_3397,3397,"SUBSTANCIA ORGANOMETALICA SOLIDA, HIDRORREACTIVA, QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO",4.3
+l10n_mx_wbl_dangerous_material_3398,3398,"SUBSTANCIA ORGANOMETALICA, LIQUIDA, HIDRORREACTIVA",4.3
+l10n_mx_wbl_dangerous_material_3399,3399,"SUBSTANCIA ORGANOMETALICA, LIQUIDA, HIDRORREACTIVA, INFLAMABLE",4.3
+l10n_mx_wbl_dangerous_material_3400,3400,"SUBSTANCIA ORGANOMETALICA, SOLIDA, QUE EXPERIMENTA CALENTAMIENTO ESPONTANEO",4.2
+l10n_mx_wbl_dangerous_material_3401,3401,"METALES ALCALINOS, AMALGAMA SOLIDA DE",4.3
+l10n_mx_wbl_dangerous_material_3402,3402,METALES ALCALINOTERREOS AMALGAMA SOLIDA DE,4.3
+l10n_mx_wbl_dangerous_material_3403,3403,"POTASIO METALICO, ALEACIONES SOLIDAS DE",4.3
+l10n_mx_wbl_dangerous_material_3404,3404,"POTASIO Y SODIO, ALEACIONES SOLIDAS DE",4.3
+l10n_mx_wbl_dangerous_material_3405,3405,CLORATO DE BARIO EN SOLUCION,5.1
+l10n_mx_wbl_dangerous_material_3406,3406,PERCLORATO DE BARIO EN SOLUCION,5.1
+l10n_mx_wbl_dangerous_material_3407,3407,"CLORATO Y CLORURO DE MAGNESIO EN SOLUCION, MEZCLA DE",5.1
+l10n_mx_wbl_dangerous_material_3408,3408,PERCLORATO DE PLOMO EN SOLUCION,5.1
+l10n_mx_wbl_dangerous_material_3409,3409,CLORONITROBENCENOS LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_3410,3410,CLORHIDRATO DE 4-CLORO-0-TOLUIDINA EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_3411,3411,beta-NAFTILAMINA EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_3412,3412,"ACIDO FORMICO con mínimo de 10% y un máximo de 85%, en masa de ácido",8
+l10n_mx_wbl_dangerous_material_3412,3412,"ACIDO FORMICO con un mínimo de 5% y un máximo de 10%, en masa de  ácido",8
+l10n_mx_wbl_dangerous_material_3413,3413,CIANURO POTASICO EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_3414,3414,CIANURO DE SODIO EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_3415,3415,FLORURO DE SODIO EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_3416,3416,CLOROACETOFENONA LIQUIDA,6.1
+l10n_mx_wbl_dangerous_material_3417,3417,"BROMURO DE XILILO, SOLIDO",6.1
+l10n_mx_wbl_dangerous_material_3418,3418,"TOLUILEN-2,4-DIAMINA EN SOLUCION",6.1
+l10n_mx_wbl_dangerous_material_3419,3419,"TRIFLUORURO DE BORO Y ACIDO ACETICO, COMPLEJO SOLIDO DE",8
+l10n_mx_wbl_dangerous_material_3420,3420,"TRIFLUORURO DE BORO Y ÁCIDO PROPIÓNICO, COMPLEJO SÓLIDO DE",8
+l10n_mx_wbl_dangerous_material_3421,3421,HIDROGENODIFLURURO DE POTASIO EN SOLUCION,8
+l10n_mx_wbl_dangerous_material_3422,3422,FLUORURO POTASICO EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_3423,3423,HIDROXIDO DE TETRAMETILAMONIO SOLIDO,8
+l10n_mx_wbl_dangerous_material_3424,3424,DINITRO-0-CRESOLATO AMONICO EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_3425,3425,ACIDO BROMOACETICO SOLIDO,8
+l10n_mx_wbl_dangerous_material_3426,3426,ACRILAMIDA EN SOLUCION,6.1
+l10n_mx_wbl_dangerous_material_3427,3427,"CLORUROS DE CLOROBENCILO, SOLIDOS",6.1
+l10n_mx_wbl_dangerous_material_3428,3428,"ISOCIANATO DE 3-CLORO-4- METILFENILO, SOLIDO",6.1
+l10n_mx_wbl_dangerous_material_3429,3429,CLOROTOLUIDINAS LIQUIDAS,6.1
+l10n_mx_wbl_dangerous_material_3430,3430,XILENOLES LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_3431,3431,NITROBENZOTRIFLUORUROS SOLIDOS,6.1
+l10n_mx_wbl_dangerous_material_3432,3432,DIFELINOS POLICLORADOS SOLIDOS,9
+l10n_mx_wbl_dangerous_material_3434,3434,NITROCRESOLES LIQUIDOS,6.1
+l10n_mx_wbl_dangerous_material_3436,3436,"HIDRATO DE HEXAFLUORACETONA, SOLIDO",6.1
+l10n_mx_wbl_dangerous_material_3437,3437,CLOROCRESOLES SOLIDOS,6.1
+l10n_mx_wbl_dangerous_material_3438,3438,ALCOHOL alfa-METILBENCILICO SOLIDO,6.1
+l10n_mx_wbl_dangerous_material_3439,3439,"NITRILOS TOXICOS SOLIDOS, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3440,3440,"COMPUESTO DE SELENIO LIQUIDO, N,E.P.",6.1
+l10n_mx_wbl_dangerous_material_3441,3441,CLORODINITROBECENOS SOLIDOS,6.1
+l10n_mx_wbl_dangerous_material_3442,3442,DICLOROANILINAS SOLIDAS,6.1
+l10n_mx_wbl_dangerous_material_3443,3443,DINITROBECENOS SOLIDOS,6.1
+l10n_mx_wbl_dangerous_material_3444,3444,CLORHIDRATO DE NICOTINA SOLIDO,6.1
+l10n_mx_wbl_dangerous_material_3445,3445,SULFATO DE NICOTINA SOLIDO,6.1
+l10n_mx_wbl_dangerous_material_3446,3446,NITROTOLUENOS SOLIDOS,6.1
+l10n_mx_wbl_dangerous_material_3447,3447,NITROXILEENOS SOLIDOS,6.1
+l10n_mx_wbl_dangerous_material_3448,3448,"GASES LACRIMÓGENOS, SUBSTANCIA SÓLIDA PARA LA FABRICACIÓN, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3449,3449,CIANUROS DE BROMOBENCILO SOLIDOS,61
+l10n_mx_wbl_dangerous_material_3450,3450,DIFENICLOROARSINA SOLIDA,6.1
+l10n_mx_wbl_dangerous_material_3451,3451,TOLUIDINAS SOLIDAS,6.1
+l10n_mx_wbl_dangerous_material_3452,3452,XILIDINAS SOLIDAS,6.1
+l10n_mx_wbl_dangerous_material_3453,3453,ÁCIDO FOSFÓRICO SÓLIDO,8
+l10n_mx_wbl_dangerous_material_3454,3454,DINITROTOLUENOS SOLIDOS,6.1
+l10n_mx_wbl_dangerous_material_3455,3455,CRESOLES SOLIDOS,6.1
+l10n_mx_wbl_dangerous_material_3456,3456,ACIDO NITROSILSULFURICO SOLIDO,8
+l10n_mx_wbl_dangerous_material_3457,3457,CLORONITROTOLUENOS SOLIDOS,6.1
+l10n_mx_wbl_dangerous_material_3458,3458,NITROANISOL SOLIDO,6.1
+l10n_mx_wbl_dangerous_material_3459,3459,NITROBROMOBENCENOS SOLIDOS,6.1
+l10n_mx_wbl_dangerous_material_3460,3460,N-ETILBENCILTOLUIDINAS SOLIDAS,6.1
+l10n_mx_wbl_dangerous_material_3462,3462,"TOXINAS EXTRAIDAS DE UN MEDIO VIVO, SOLIDAS,N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3463,3463,"ACIDO PEOPIONICO con mínimo de 90%, en masa, de ácido",8
+l10n_mx_wbl_dangerous_material_3464,3464,"COMPUESTO ORGANOFOSFORADO TOXICO, SOLIDO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3465,3465,"COMPUESTO ORGANOARSENICAL, SOLIDO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3466,3466,"CARBONILOS METALICOS, SOLIDOS, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3467,3467,"COMPUESTO ORGANOMETALICO TOXICO, SOLIDO, N.E.P.",6.1
+l10n_mx_wbl_dangerous_material_3468,3468,HIDROGENO EN DISPOSITIVO DE ALMACENAMIENTO CON HIDRURO METALICO O HIDROGENO CON UN DISPOSITIVO DE ALMACENAMIENTO CON HIDRURO METALICO INSTALADO EN UN EQUIPO o HIGROGENO EN UN DISPOSITIVO DE ALMACENAMIENTO CON HIDRURO METALICO EMBALADO CON EQUIPO,2.1
+l10n_mx_wbl_dangerous_material_3469,3469,"PINTURAS INFLAMABLES, CORROSIVAS (incluidos pinturas, lacas, esmaltes, colores, goma laca, barnices, bruñidores, encáusticos, bases líquidas para lacas) o MATERIAL INFLAMABLE, CORROSIVO RELACIONADO CON PINTURAS (incluidos disolventes y diluyentes para pinturas)",3
+l10n_mx_wbl_dangerous_material_3470,3470,"PINTURAS CORROSIVAS INFLAMABLES (incluidos pinturas, lacas, esmaltes, colores, goma laca barnices, bruñidores, encáusticos, bases liquidas para lacas) o MATERIAL CORROSIVO, INFLAMABLE RELACIONADO CON PINTURAS (incluidos disolventes y diluyentes para pinturas)",8
+l10n_mx_wbl_dangerous_material_3471,3471,"HIDROGENODIFLUORUROS EN SOLUCION, N.E.P.",8
+l10n_mx_wbl_dangerous_material_3472,3472,ACIDO CROTONICO LIQUIDO,8
+l10n_mx_wbl_dangerous_material_3473,3473,"CARTUCHOS PARA PILAS DE COMBUSTIBLE  o CARTUCHOS PARA PILAS DE COMBUSTIBLE INSTALADOS EN UN EQUIPO o CARTUCHOS PARA PILAS DE COMBUSTIBLE EMBALADOS CON UN EQUIPO,  que contienen líquidos inflamables)",3
+l10n_mx_wbl_dangerous_material_3474,3474,"1HIDROXIBENZOTRIAZOL, MONOHIDRATADO",4.1
+l10n_mx_wbl_dangerous_material_3475,3475,MEZCLA DE ETANOL Y GASOLINA 0 MEZLA DE ETANOL Y COMBUSTIBLE PARA MOTORES Con más del 10% de etanol,3
+l10n_mx_wbl_dangerous_material_3476,3476,"CARTUCHOS PARA PILAS DE COMBUSTIBLE 0 CARTUCHOS PARA PILAS DE COMBUSTIBLE INSTALADOS EN UN EQUIPO o CARTUCHOS PARA PILAS DE COMBUSTIBLE CONTENIDOS EN UN EQUIPO, que contienen substancias que reaccionan con el agua",4.3
+l10n_mx_wbl_dangerous_material_3477,3477,"CARTUCHOS PARA PILAS DE  COMBUSTIBLE o CARTUCHOS PARA PILAS DE COMBUSTIBLE INSTALADOS EN UN EQUIPO o CARTUCHOS PARA PILAS DE COMBUSTIBLE EMBALADOS CON UN EQUIPO, que contienen SUBSTANCIAS corrosivas",8
+l10n_mx_wbl_dangerous_material_3478,3478,"CARTUCHOS PARA PILAS DE COMBUSTIBLE o CARTUCHOS PARA PILAS DE COMBUSTIBLE INSTALADOS EN UN EQUIPO o CARTUCHOS PARA PILAS D COMBUSTIBLES EMBALADOS CON UN EQUIPO, que contienen gas licuado inflamable",2.1
+l10n_mx_wbl_dangerous_material_3479,3479,"CARTUCHOS PARA PILAS DE COMBUSTIBLE o CARTUCHOS PARA PILAS DE COMBUSTIBLE INSTALADOS EN UN EQUIPO o CARTUCHOS PARA PILAS DE COMBUSTIBLE CONTENIDOS EN UN EQUIPO, que contienen hidrógeno en un hidruro metálico",2.1
+l10n_mx_wbl_dangerous_material_3480,3480,BATERIAS DE ION LITIO (incluidas Las baterías polimétricas de ión litio),9
+l10n_mx_wbl_dangerous_material_3481,3481,BATERIAS DE ION LITIO INSTALADAS EN UN EQUIPO o BATERIAS DE ION LITIO EMBALADAS CON EQUIPO (incluidas las baterías poliméricas de ión litio),9
+l10n_mx_wbl_dangerous_material_3482,3482,"DISPERSION DE METALES ALCALINOS, INFLAMABLE o DISPERSION DE METALES ALCALINOTERREOS, INFLAMABLE",4.3
+l10n_mx_wbl_dangerous_material_3483,3483,"MEZCLA ANTIDETONANTE PARA COMBUSTIBLES DE MOTORES, INFLAMABLE",6.1
+l10n_mx_wbl_dangerous_material_3484,3484,"HIDRAZINA EN SOLUCION ACUOSA, INFLAMABLE, con más del 37%, en masa, de hidrazina",8
+l10n_mx_wbl_dangerous_material_3485,3485,"HIPOCLORITO DE CALCIO SECO, CORROSIVO o HIPOCLORITO DE CALCICO EN MEZCLA SECA, CORROSIVO con más del 39% de cloro activo (8,8% de oxígeno activo)",5.1
+l10n_mx_wbl_dangerous_material_3486,3486,"HIPOCLORITO DE CALCICO EN MEZCLA SECA, CORROSIVO con más del 10% pero no más del 39% de cloro activo",5.1
+l10n_mx_wbl_dangerous_material_3487,3487,"HIPOCLORITO DE CALCICO HIDRATADO, CORROSIVO o HIPOCLORITO DE CALCIO HIDRATADO EN MEZCLA, CORROSIVO, con no menos del 5,5% pero no más del 16% de agua",5.1
+l10n_mx_wbl_dangerous_material_3488,3488,"LIQUIDO TOXICO POR INHALACION, INFLAMABLE, CORROSIVO, N.E.P., con toxicidad por inhalación inferior o igual a 200 ml/m3 y con concentración saturada de vapor superior o igual a 500 CL50",6.1
+l10n_mx_wbl_dangerous_material_3489,3489,"LIQUIDO TOXICO POR INHALACION, INFLAMABLE, CORROSIVO, N.E.P., con toxicidad por inhalación inferior o igual a 1.000 ml/m3 y con concentración saturada de vapor superior o igual a 10 CL50",6.1
+l10n_mx_wbl_dangerous_material_3490,3490,"LIQUIDO TOXICO POR INHALACION, HIDRORREACTIVO, INFLAMABLE, N.E.P., con toxicidad por inhalación inferior o igual a 200 ml/m3 y con concentración saturada de vapor superior o igual a 500 CL50",6.1
+l10n_mx_wbl_dangerous_material_3491,3491,"LIQUIDO TOXICO POR INHALACION, HIDRORREACTIVO, INFLAMABLE, N.E.P., con toxicidad por inhalación inferior o igual a 1.000 ml/m3 y con concentración saturada de vapor superior o igual a 10 CL50",6.1
+l10n_mx_wbl_dangerous_material_3492,3492,"LIQUIDO TOXICO POR INHALACION, CORROSIVO, N.E.P., con toxicidad por inhalación inferior o igual a 200 ml/m3 y con concentración saturada de vapor superior o igual a 500 CL50",6.1
+l10n_mx_wbl_dangerous_material_3493,3493,"LIQUIDO TOXICO POR INHALACION, CORROSIVO, INFLAMABLE, N.E.P., con toxicidad por inhalación inferior o igual a 1.000 ml/m3 y con concentración saturada de vapor superior o igual a 10 CL50",6.1
+l10n_mx_wbl_dangerous_material_3494,3494,"PETROLEO CRUDO ACIDO, INFLAMABLE, TOXICO",3
+l10n_mx_wbl_dangerous_material_3495,3495,YODO,8

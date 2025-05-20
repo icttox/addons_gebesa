@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='bom_massive_import_tree'>
+            <field name='name'>bom.massive.import.tree</field>
+            <field name='model'>bom.massive.import</field>
+            <field name='arch' type='xml'>
+                <tree string='BoM Massive Import' delete="false" edit="false">
+                    <field name="name"/>
+                    <field name='date'/>
+                    <field name='action'/>
+                    <field name="location_id"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="bom_massive_import_view">
+            <field name="name">bom.massive.import.view</field>
+            <field name="model">bom.massive.import</field>
+            <field name="arch" type="xml">
+                <form string='BoM Massive' create="false" delete="false">
+                    <header>
+                        <button name="get_state_massive" states="draft" string="Confirm" type="object" class="oe_highligth"/>
+                        <field name="state" widget="statusbar" statusbar_colors='{"done":"blue"}'/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name"/>
+                            </div>
+                            <h1>
+                                <field name='name' default_focus="1" required="1" readonly="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name='date' required="1" readonly="True"/>
+                                <field name="location_id" readonly="True"/>
+                            </group>
+                            <group>
+                                <field name='action' required="1" readonly="True"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page>
+                                <field name='lines_ids' widget="one2many_list" attrs="{'readonly':True}"  options="{'no_edit': True,'no_create': True}" create="false" edit="false">
+                                    <tree string="lines" editable="bottom">
+                                        <field name='code_master' required="1"/>
+                                        <field name='code_current'/>
+                                        <field name='code_update' required="1"/>
+                                        <field name='cantidad_import' required="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>   
+
+        <record id='action_mrp_bom_massive_import' model='ir.actions.act_window'>
+            <field name='name'>Selective Replacement</field>
+            <field name='res_model'>bom.massive.import</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="mrp_bom_massive_import" name="Selective Replacement (MP)" parent="mrp.menu_mrp_bom" action="action_mrp_bom_massive_import"/>
+    </data>
+</odoo>

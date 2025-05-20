@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report
+        id="report_multicurrency"
+        model="account.move.multicurrency"
+        string="Account Move Multicurrency Report"
+        name="account_move_multicurrency.report_multicurrency_view"
+        file="account_move_multicurrency.report_multicurrency"
+        report_type="qweb-pdf" />
+
+    <template id="report_multicurrency_view">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <span t-field="doc.date"/>
+                        <p t-field="doc.consecutive"/>
+                        <p t-field="doc.journal_id"/>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr><th colspan="3">Account Move Multicurrency</th></tr>
+                                        <tr>
+                                            <th>Account Analytic</th>
+                                            <th>Account account</th>
+                                            <th>Currency</th>
+                                            <th>Debit</th>
+                                            <th>Credit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.account_move_multicurrency_line_ids" t-as="line">
+                                            <td><span t-field="line.account_analytic_id"/></td>
+                                            <td><span t-field="line.account_account_id"/></td>
+                                            <td><span t-field="line.currency_id"/></td>
+                                            <td><span t-field="line.debit"/></td>
+                                            <td><span t-field="line.credit"/></td>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

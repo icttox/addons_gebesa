@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<odoo noupdate="1">
+
+    <record id="demo_l10n_mx_facturae_cer_0" model="res.certificate">
+        <field name="company_id" ref="base.main_company"/>
+        <field name="date_start">2014/11/25</field>
+        <field name="date_end">2018/11/25</field>
+        <field name="file_cer" type="base64" file="l10n_mx_base/demo/res_certificate.cer"/>
+        <field name="file_key" type="base64" file="l10n_mx_base/demo/res_certificate.key"/>
+        <field name="password">12345678a</field>
+        <field name="active" eval="True"/>
+        <field name="serial_number">20001000000300005692</field>
+        <field name="file_pem" type="base64" file="l10n_mx_base/demo/res_certificatepem"/>
+        <field name="file_key_pem" type="base64" file="l10n_mx_base/demo/res_certificatepemkey"/>
+    </record>
+
+</odoo>

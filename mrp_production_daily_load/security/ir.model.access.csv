@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_user_mrp_production_daily_load,user.mrp.production.daily.load,model_mrp_production_daily_load,,1,0,0,0
+access_manager_mrp_production_daily_load,manager.mrp.production.daily.load,model_mrp_production_daily_load,mrp_production_daily_load.group_production_load_manager,1,1,1,1

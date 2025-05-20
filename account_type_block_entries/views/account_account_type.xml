@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_account_type_tree'>
+            <field name='name'>view_account_blocks_entries_type_tree</field>
+            <field name='model'>account.account.type</field>
+            <field name='inherit_id' ref='account.view_account_type_tree'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="block_entries"/>
+                </xpath>               
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='view_account_type_form'>
+            <field name='name'>view_account_blocks_entries_type_form</field>
+            <field name='model'>account.account.type</field>
+            <field name='inherit_id' ref='account.view_account_type_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//group/group/field[@name='type']" position="after">
+                    <field name="block_entries"/>
+                </xpath>               
+            </field>
+        </record>
+    </data>
+</odoo>

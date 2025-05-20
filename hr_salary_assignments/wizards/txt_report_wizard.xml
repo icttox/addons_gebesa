@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="txt_report_wizard_view" model="ir.ui.view">
+            <field name="name">txt.report.wizard.form</field>
+            <field name="model">txt.report.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Salary Assigns Report">
+                    <group>
+                        <field name="name" string="Nombre del archivo"/>
+                        <field name="extra_time" string="Tiempo extra"/>
+                    </group>
+                    <footer>
+                        <button string="Reporte" type="object" name="generate_report" class="btn-primary"/>
+                        o
+                        <button string="Cancelar" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_txt_report_wizard"
+            multi="True"
+            key2="client_action_multi" name="Report TXT"
+            res_model="txt.report.wizard" src_model="hr.salary.assingments"
+            view_mode="form" target="new" view_type="form"/>
+    </data>
+</odoo>

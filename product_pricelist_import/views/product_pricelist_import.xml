@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_pricelist_import_tree'>
+            <field name='name'>product.pricelist.import.tree</field>
+            <field name='model'>product.pricelist.import</field>
+            <field name='arch' type='xml'>
+                <tree string='Product Pricelist Import' create="true" edit="false" delete="false">
+                    <field name="name"/>
+                    <field name='date'/>
+                    <field name='min_qty'/>
+                    <field name='state'/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="product_pricelist_import_view">
+            <field name="name">product.pricelist.import.view</field>
+            <field name="model">product.pricelist.import</field>
+            <field name="arch" type="xml">
+                <form string='Product Pricelist' create="false" edit="false" delete="false">
+                    <header>
+                        <button name="product_import" states="draft" string="Confirm" type="object" class="oe_highligth"/>
+                        <button name="import_cancel" states="draft" string="Cancel" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_colors='{"done":"blue"}'/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name"/>
+                            </div>
+                            <h1>
+                                <field name='name' default_focus="1" required="1" readonly="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name='date' required="1" readonly="True"/>
+                                <field name='min_qty' required="1" readonly="True"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page>
+                                   <field name='lines_ids' widget="one2many_list" attrs="{'readonly':True}"  options="{'no_edit': True,'no_create': True}" create="false" edit="false">
+                                    <tree string="lines" editable="bottom">
+                                        <field name='code_product'/>
+                                        <field name='price_mex'/>
+                                        <field name='price_d00'/>
+                                        <field name='price_d00_01'/>
+                                        <field name='price_d01'/>
+                                        <field name='price_d02'/>
+                                        <field name='price_d03'/>
+                                        <field name='price_d04'/>
+                                        <field name='price_d05'/>
+                                        <field name='price_d06'/>
+                                        <field name='price_d07'/>
+                                        <field name='price_d08'/>
+                                        <field name='price_d09'/>
+                                        <field name='price_dm03'/>
+                                        <field name='price_m00'/>
+                                        <field name='price_m01'/>
+                                        <field name='price_m02'/>
+                                        <field name='price_m03'/>
+                                        <field name='price_m04'/>
+                                        <field name='price_m05'/>
+                                        <field name='price_m06'/>
+                                        <field name='price_m07'/>
+                                        <field name='precio_us'/>
+                                        <field name='dol_01'/>
+                                        <field name='dol_02'/>
+                                        <field name='state'/>
+                                        <field name='datedone'/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>   
+
+        <record id='action_product_pricelist_import' model='ir.actions.act_window'>
+            <field name='name'>Selective Product Pricelist</field>
+            <field name='res_model'>product.pricelist.import</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="product_pricelist_import" name="Selective Product Pricelist" parent="mrp.menu_mrp_bom" action="action_product_pricelist_import"/>
+    </data>
+</odoo>

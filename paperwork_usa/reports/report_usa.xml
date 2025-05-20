@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/paperwork_usa/static/src/css/estilo_bill_lading.css"/>
+            </xpath>
+        </template>
+
+        <report
+            id="paperwork_usa"
+            model="sale.order"
+            string="Acknowledgement"
+            report_type="qweb-pdf"
+            name="paperwork_usa.report_usa"
+            file="paperwork_usa.report_usa"
+        />
+
+        <template id="paperwork_usa_layout_footer">
+            <div class="footer">
+                <div class="text-center" style="border-top: 1px solid black;">
+                    <ul class="list-inline">
+                        <li t-if="company.phone">Phone: <span t-field="company.phone"/></li>
+
+                        <li t-if="company.email and company.phone">&amp;bull;</li>
+                        <li t-if="company.email">Email: <span t-field="company.email"/></li>
+
+                        <li t-if="company.website and company.email or company.website and company.phone">&amp;bull;</li>
+                        <li t-if="company.website">Website: <span t-field="company.website"/></li>
+                    </ul>
+
+                    <ul class="list-inline" name="financial_infos">
+                        <li t-if="company.vat">TIN: <span t-field="company.vat"/></li>
+                    </ul>
+
+                    <ul class="list-inline">
+                        <li>Page:</li>
+                        <li><span class="page"/></li>
+                        <li>/</li>
+                        <li><span class="topage"/></li>
+                    </ul>
+                </div>
+            </div>      
+        </template>
+
+        <template id="report_usa_document">
+            <t t-set="i" t-value="0"/>
+            <t t-set="amount_untaxed" t-value="0"/>
+            <t t-set="amount_tax" t-value="0"/>
+            <t t-set="amount_total" t-value="0"/>
+            <t t-set="o" t-value="docs[doc][0]"/>
+            <t t-call="web.html_container">
+                <t t-set="partner" t-value="docs[doc][0].partner_id.with_context({'lang':docs[doc][0].partner_id.lang})"/>
+                <t t-set="sale_order" t-value="docs[doc][0].with_context({'lang':docs[doc][0].partner_id.lang})"/>
+                <t t-set="partner_company" t-value="docs[doc][0].company_id.partner_id.with_context({'lang':docs[doc][0].partner_id.lang})"/>
+                <!--###### HEADER ######-->
+                <t t-if="not partner.header_html or not len(partner.header_html) &gt; 20">
+                    <div class="header">
+                        <div id="logo">
+                            <img src='/paperwork_usa/static/img/gebesa2.jpg' style="max-height: 40px;margin: 60px 0px 0px 10px; float: left; pading: 20px 0px 0px 10px;"/>
+                        </div>
+                        <div style="background-color:black; border: 0.5pt solid black; height:10px; padding:0px 0px 0px 0px;">
+                        </div>
+                        <div width="20%">
+                            <div align="center" style="float: center; margin-left:-50px;left:-120px !importante; text-align:center;font-weight: bold;font-size: 17pt;margin: 0px 170px 0px 20px;">
+                                Acknowledgment
+                            </div>
+                        </div>
+                        <div width="80%">
+                            <div align="right"  id="titulo" style="text-align:right;">
+                                <div t-esc="partner_company" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+                <t t-if="partner.header_html"> 
+                    <t t-if="len(partner.header_html) &gt; 20">
+                        <div class="header"> 
+                            <span t-field="partner.header_html"/>
+                        </div>
+                    </t>
+                </t>
+                <!--###### HEADER ######-->
+                <!--###### PAGE ######-->
+                <!--t t-call="web.external_layout"-->
+                <div class="article o_report_layout_standard">
+                    <div class="page" style=" top:10px; margin: 0px; padding: 0px;">
+                        <br/>
+                        <div class="row" style="margin: 0px; padding: 0px;">
+                            <div class="col-6" style="margin: 0px; padding: 0px;">
+                                <strong>CUSTOMER PO # 
+                                    <span t-if="sale_order.client_order_ref" class='medium-2' t-field="sale_order.client_order_ref"/>
+                                </strong>
+                                <br/><br/><br/>
+                                <strong>
+                                    <u>Ship To </u>
+                                </strong>
+                                <br/>
+                                <strong class='medium-2' t-field="sale_order.partner_shipping_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true, "complete_name": false}'/>
+                                <br/>
+                                <strong >Tag: 
+                                    <span t-if="sale_order.general_tag_num" class='medium-2' t-field="sale_order.general_tag_num"/>
+                                </strong>
+                                <br/>
+                                <strong>Phone and Name: 
+                                    <span t-if="sale_order.partner_shipping_id.phone and sale_order.partner_shipping_id.function" class='medium-2' t-esc="sale_order.partner_shipping_id.phone +' '+ sale_order.partner_shipping_id.function"/>
+                                    <span t-if="sale_order.partner_shipping_id.phone and not sale_order.partner_shipping_id.function" class='medium-2' t-esc="sale_order.partner_shipping_id.phone"/>
+                                </strong>
+                                <br/><br/><br/>
+                                <strong>Freight Terms: 
+                                    <span t-if="sale_order.incoterm" class='medium-2' t-field="sale_order.incoterm"/>
+                                </strong>
+                                <br/>
+                                <strong>Sales Division: 
+                                    <span t-if="sale_order.country_id.name" class='medium-2' t-field="sale_order.country_id.name"/>
+                                </strong>
+                                <br/>
+                                <strong t-if="sale_order.pricelist_id.id == 1">Sales Division: 
+                                    <strong class='medium-2'>
+                                        MX
+                                    </strong>
+                                </strong>
+                                <strong t-if="sale_order.pricelist_id.id == 2">
+                                    Sales Division: 
+                                    <strong class='medium-2'>
+                                        US
+                                    </strong>
+                                </strong>
+                                <br/><br/><br/>
+                            </div>
+                            <div class="col-6" style="margin: 0px; padding: 0px 0px 0px 10px;">
+                                <strong>FO # 
+                                    <span class='medium-2'>
+                                        <t t-if="sale_order.company_id.country_id.code != 'MX' and sale_order.supplier_ref">
+                                            <t t-esc="sale_order.supplier_ref"/>
+                                        </t>
+                                        <t t-if="not(sale_order.company_id.country_id.code != 'MX' and sale_order.supplier_ref)">
+                                            <t t-esc="sale_order.name"/>
+                                        </t>
+                                    </span>
+                                </strong>
+                                <p>
+                                    <t t-if="shipment_date">
+                                        <strong>Ship Date:
+                                            <span class='medium-2'><t t-esc="shipment_date.strftime('%b-%d-%Y')"/></span>
+                                        </strong>
+                                    </t>
+                                    <t t-if="not shipment_date">
+                                        <t t-if="sale_order.shipment_date">
+                                            <strong>Ship Date:
+                                                <span class='medium-2' t-esc="sale_order.shipment_date.strftime('%b-%d-%Y')"/>
+                                            </strong>
+                                        </t>
+                                         <t t-if="not sale_order.shipment_date">
+                                            <strong>Ship Date:
+                                                <strong>TBD after production Scheduling.</strong>
+                                            </strong>
+                                        </t>       
+                                    </t>
+                                </p>
+                                <strong>
+                                    <u>Sold To </u>
+                                </strong>
+                                <strong class='medium-2' t-field="sale_order.partner_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                                <br/>
+                                <strong>Date:
+                                    <span t-esc="datetime.datetime.now().strftime('%m-%d-%Y')" class='medium-2'/>
+                                </strong>
+                                <br/>
+                                <strong>Customer Service Contact:
+                                    <br/>
+                                    <span t-if="sale_order.user_id" class='medium-2' t-field="sale_order.user_id.name"/>
+                                </strong>
+                                <br/>
+                                <strong>Financial Terms:
+                                    <br/>
+                                    <span t-if="sale_order.payment_term_id" class='medium-2' t-field="sale_order.payment_term_id"/>
+                                </strong>
+                            </div>
+                        </div>
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th id="primer_tabla">Cust<br/>Line</th>
+                                    <th id="primer_tabla">MFR<br/>Line</th>
+                                    <th id="primer_tabla">Qty Order<br/></th>
+                                    <th id="primer_tabla">Product Number<br/></th>
+                                    <th id="primer_tabla">Product Ref<br/></th>
+                                    <th id="primer_tabla">Product Description<br/></th>
+                                    <th id="primer_tabla">Unit Price<br/></th>
+                                    <th id="primer_tabla">Extended Price<br/></th>
+                                </tr>
+                            </thead>
+                            <tbody class="sale_tbody">
+                                <t t-foreach="docs[doc]" t-as="so">
+                                    <t t-set="amount_untaxed" t-value="amount_untaxed + so.amount_untaxed"/>
+                                    <t t-set="amount_tax" t-value="amount_tax + so.amount_tax"/>
+                                    <t t-set="amount_total" t-value="amount_total + so.amount_total"/>
+                                    <t t-foreach="so.order_line" t-as="sol">
+                                        <tr>
+                                            <td id="celdas">
+                                                <span t-if="sol.dealer_order_line" t-esc="str(sol.dealer_order_line).zfill(4)"/>
+                                            </td>
+                                            <td id="celdas">
+                                                <t t-set="i" t-value="i + 1"/>
+                                                <t t-esc="str(i).zfill(4)"/>
+                                            </td>
+                                            <td id="celdas">
+                                                <span t-if="sol.product_uom_qty" t-esc="sol.product_uom_qty"/>
+                                            </td>
+                                            <td id="celdas">
+                                                <span t-if="sol.product_id.default_code" t-esc="sol.product_id.default_code"/>
+                                            </td>
+                                            <td id="celdas">
+                                                <span t-if="sol.reference_code" t-esc="sol.reference_code"/>
+                                            </td>
+                                            <td id="celdas">
+                                                <span t-field="sol.name"/>
+                                                <br/>
+                                                <span>Tag:
+                                                    <span t-if="sol.line_tag_number" t-field="sol.line_tag_number"/>
+                                                </span>
+                                                <br/>
+                                            </td>
+                                            <td id="celdas">
+                                                $<span t-esc="'{0:,.2f}'.format(round(sol.price_unit,2))"/><br/>
+                                                <!--span t-esc="'{0:,.2f}'.format(round(sol.discount,2))"/><br/-->
+                                            </td>
+
+                                            <td id="celdas">
+                                                $<span t-esc="'{0:,.2f}'.format(round(sol.price_subtotal,2))"/>
+                                            </td>
+                                        </tr>
+                                        <t t-if="sol.product_id.id in bom_lines.keys()">
+                                            <t t-foreach="bom_lines[sol.product_id.id]" t-as="bom_line">
+                                                <tr style="font-size: 10px;">
+                                                    <td id="celdas">
+                                                    </td>
+                                                    <td id="celdas">
+                                                    </td>
+                                                    <td id="celdas">
+                                                        <span t-esc="'{0:,.2f}'.format(bom_line.product_qty * sol.product_uom_qty)"/>
+                                                    </td>
+                                                    <td id="celdas">
+                                                        <span t-esc="bom_line.product_id.default_code"/>
+                                                    </td>
+                                                    <td id="celdas">
+                                                    </td>
+                                                    <td id="celdas">
+                                                        [<span t-esc="bom_line.product_id.default_code"/>]
+                                                        <t t-if="bom_line.product_id.individual_name">
+                                                            <t t-set="trans" t-value="bom_line.product_id.with_context({'lang':so.partner_id.lang})"/>
+                                                            <span t-esc="trans.individual_name"/>
+                                                        </t>
+                                                        <t t-if="not bom_line.product_id.individual_name">
+                                                            <t t-set="trans" t-value="bom_line.product_id.product_tmpl_id.with_context({'lang':so.partner_id.lang})"/>
+                                                            <span t-esc="trans.name"/>
+                                                        </t>
+                                                    </td>
+                                                    <td id="celdas">
+                                                    </td>
+                                                    <td id="celdas">
+                                                    </td>
+                                                </tr>
+                                            </t>
+                                        </t>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+
+                        <br/>
+                        <div class="row" name="total">
+                            <div class="col-4 pull-right">
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>
+                                            <strong>Total Without Taxes</strong>
+                                        </td>
+                                        <td class="text-right">
+                                            $<span t-esc="'{0:,.2f}'.format(round(amount_untaxed,2))"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Taxes</strong>
+                                        </td>
+                                        <td class="text-right">
+                                            $<span t-esc="'{0:,.2f}'.format(round(amount_tax,2))" />
+                                        </td>
+                                    </tr>
+                                    <tr class="border-black">
+                                        <td>
+                                            <strong>Total</strong>
+                                        </td>
+                                        <td class="text-right">
+                                            $<span t-esc="'{0:,.2f}'.format(round(amount_total,2))"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <t t-if="sale_order.partner_id.extra_body_html">
+                            <t t-if="len(sale_order.partner_id.extra_body_html) &gt; 20">
+                                <div style="page-break-after: always;">&#160;</div>
+                                <div class="col-12" style="font-size:10pt;">
+                                    <span t-field="sale_order.partner_id.extra_body_html"/>
+                                </div>
+                            </t>
+                        </t>
+                        <!-- Si el cliente no tiene un extrabody_thml lo toma del partner de la compañia del pedido -->
+                        <t t-if="not sale_order.partner_id.extra_body_html or not len(sale_order.partner_id.extra_body_html) &gt; 20">
+                            <t t-if="sale_order.company_id.partner_id.extra_body_html">
+                                <t t-if="len(sale_order.company_id.partner_id.extra_body_html) &gt; 20">
+                                    <div style="page-break-after: always;">&#160;</div>
+                                    <div class="col-12" style="font-size:10pt;">
+                                        <span t-field="sale_order.company_id.partner_id.extra_body_html"/>
+                                    </div>
+                                </t>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+                <!--/t-->
+                <!--###### PAGE ######-->
+                <!--###### FOOTER ######-->
+                <t t-if="not partner.header_html or not len(partner.header_html) &gt; 20">
+                    <div class="footer o_background_footer">
+                        <t t-set="company" t-value="docs[doc][0].company_id.with_context({'lang':docs[doc][0].partner_id.lang})"/>
+                        <div class="text-center">
+                            <ul class="list-inline">
+                                <li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span t-field="company.phone"/></li>
+                                <li t-if="company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="company.email"/></li>
+                                <li t-if="company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="company.website"/></li>
+                                <li t-if="company.vat" class="list-inline-item"><i class="fa fa-building-o" role="img" aria-label="Fiscal number"/><t t-esc="(company.country_id.vat_label or 'Tax ID').replace(' ','\N{NO-BREAK SPACE}')"/>: <span t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')"/></li>
+                            </ul>
+                            <div t-field="company.report_footer"/>
+                            <div t-if="report_type == 'pdf'" class="text-muted">
+                                Page:
+                                <span class="page"/>
+                                of
+                                <span class="topage"/>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+                <t t-if="partner.footer_html">
+                    <t t-if="len(partner.footer_html) &gt; 20">
+                        <div class="footer">
+                            <div class="text-center" style="border-top: 1px solid black;">
+                                <span t-field="partner.footer_html"/>
+                                <ul class="list-inline">
+                                    <li>Page:</li>
+                                    <li><span class="page"/></li>
+                                    <li>/</li>
+                                    <li><span class="topage"/></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <template id="report_usa">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="paperwork_usa.report_usa_document"/>
+            </t>
+        </template>
+    </data>
+</odoo>

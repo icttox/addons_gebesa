@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_kanban_view_complete_cost'>
+            <field name='name'>product.kanban.view.complete.cost</field>
+            <field name='model'>product.product</field>
+            <field name='inherit_id' ref="product.product_kanban_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//kanban/templates/t/div/div/strong/field[@name='name']" position="before">
+                    <strong>
+                        <span t-if="record.default_code.value">[<field name="default_code"/>]</span>
+                    </strong>
+                </xpath>
+                <ul position="inside">
+                    <li>Costo: <span t-if="record.standard_price.value"><field name="standard_price"/></span></li>
+                </ul> 
+            </field>
+        </record>
+    </data>
+</odoo>

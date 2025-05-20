@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd"
+    version="3.2"
+    LugarExpedicion="10000"
+    NumCtaPago="6789"
+    certificado="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"
+    noCertificado="20001000000300005692"
+    sello="" fecha="" folio=""
+    formaDePago="Pago en una sola exhibici&#243;n" metodoDePago="01"
+    serie="MX-INV" tipoDeComprobante="ingreso" Moneda="MXN"
+    TipoCambio="1" descuento="100.00" subTotal="900.0" total="947.97">
+    <cfdi:Emisor nombre="YourCompany" rfc="ACO560518KW7">
+        <cfdi:RegimenFiscal Regimen="601"/>
+        <cfdi:DomicilioFiscal calle="Tu Calle" codigoPostal="10000" colonia="Tu Colonia"
+            estado="Sonora" localidad="Tu localidad" municipio="Ciudad Obreg&#243;n"
+            noExterior="Tu num exterior" noInterior="Tu num interior" pais="Mexico"/>
+        <cfdi:ExpedidoEn calle="Tu Calle" codigoPostal="10000" colonia="Tu Colonia"
+            estado="Sonora" localidad="Tu localidad" municipio="Ciudad Obreg&#243;n"
+            noExterior="Tu num exterior" noInterior="Tu num interior" pais="Mexico"/>
+    </cfdi:Emisor>
+    <cfdi:Conceptos>
+        <cfdi:Concepto cantidad="1.0" unidad="Unit s"
+            descripcion="Product that cost 1000" noIdentificacion="PCSC234"
+            importe="1000.00" valorUnitario="1000.00"/>
+    </cfdi:Conceptos>
+    <cfdi:Receptor nombre="VAUXOO S A  de C V  &amp;" rfc="VCO120608KR7">
+        <cfdi:Domicilio calle="Campobasso Norte" codigoPostal="85134"
+            colonia="Fraccionamiento Montecarlo" estado="Sonora"
+            localidad="Ciudad Obreg&#243;n" municipio="Ciudad Obreg&#243;n"
+            noExterior="3206" noInterior="9000" pais="MEX"/>
+    </cfdi:Receptor>
+    <cfdi:Impuestos totalImpuestosRetenidos="96.03" totalImpuestosTrasladados="144.00">
+        <cfdi:Retenciones>
+            <cfdi:Retencion importe="96.03" impuesto="IVA"/>
+        </cfdi:Retenciones>
+        <cfdi:Traslados>
+            <cfdi:Traslado importe="144.00" impuesto="IVA" tasa="16.0"/>
+        </cfdi:Traslados>
+    </cfdi:Impuestos>
+    <cfdi:Complemento>
+        <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+            xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd"
+            FechaTimbrado="2016-01-01T00:00:00" UUID="00000000-0000-0000-0000-000000000000"
+            selloCFD="gLqw7lBHGHnGXTm1XeT2WTWRpR0n1bFYaAhyvlEhlIwN1fot6YfCK3dy6Ay2jQrmiwhKcH2rErN0mWs9z2qC3UCnJkf2fSqOol9l/cdYoOnUjJdyN3ZpAobKXp+dYl6HoEiVVHdCK0ZbViwVfZK1iVONPuO4halPSjspJZQjw+g="
+            selloSAT="zozpPs6DsDCU9bffFtJ1qsUm2acr1ElMvAyXxOPRPu+lD/JPX/uQiX8Iirp4urXImTGz+T7SE9MLhXGeljEWHEX1XlNPYl42xXr0pn44Ur7Y8LHxoDa40AcrfZe7jfofeqJyeTbgFPfdIf143PN+x0MCJ5UAPTLk110j4jSEuUY="
+            noCertificadoSAT="20001000000100005761" version="1.0"/>
+    </cfdi:Complemento>
+    <cfdi:Addenda/>
+</cfdi:Comprobante>
+

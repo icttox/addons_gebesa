@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='account_invoice_evidence_form'>
+            <field name='name'>account_invoice_evidence</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_supplier_form'/>
+            <field name='arch' type='xml'>
+            <xpath expr="//button[5]" position="after">
+                <button name= "button_invoice_evidence" string="Evidencias Galbo" type="object" class="oe_highlight" groups="evidence_payment_validate.group_invoice_evidence_button_gebesa"
+                attrs="{'invisible': ['|',('evidence_status', '=', 'received'), ('state', '!=', 'open')]}" style="background-color:blue"/>
+            </xpath>  
+            <xpath expr="//notebook/page/group/group/field[@name='journal_id']" position="before"> 
+                <field name='evidence_status' readonly="True"/>               
+             </xpath> 
+            </field>
+        </record> 
+         <record model='ir.ui.view' id='account_invoice_evidence_tree_view'>
+            <field name='name'>account_invoice_evidence_tree</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_supplier_tree'/>
+            <field name='arch' type='xml'>
+            <xpath expr="//field[@name='commercial_partner_id']" position="after">
+            <field name="itinerary" required="1"/>
+            </xpath>   
+            </field>
+        </record> 
+    </data>
+</odoo>

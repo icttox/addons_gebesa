@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_payment_invoices" model="ir.ui.view">
+            <field name="name">account.payment.voucher.form.inherit</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account_register_payments_line.view_payment_invoices"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//notebook/page" position="after">
+					<page string="Vouchers">
+						<field name="voucher_ids" readonly="1">
+                            <tree string="Vouchers payed">
+                                <!--field name="move_line_id" readonly="1"/-->
+                                <field name="number" readonly="1"/>
+                                <!--field name="origin" readonly="1"/-->
+                                <field name="reference" readonly="1"/>
+                                <field name="date" readonly="1"/>
+                                <field name="date_due" readonly="1"/>
+                                <!--field name="amount_original" readonly="1"/>
+                                <field name="amount_unreconciled" readonly="1"/-->
+                                <field name="paid" readonly="1"/>
+                                <field name="amount" readonly="1" sum="Total to pay"/>
+                            </tree>
+                        </field>
+					</page>
+				</xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

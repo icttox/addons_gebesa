@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--openerp>
+    <data>
+        <record id="tms_wizard_vehicle_log_fuel" model="ir.ui.view">
+            <field name="name">Fuel vouchers (Tank)</field>
+            <field name="model">tms.wizard.vehicle.log.fuel</field>
+            <field name="arch" type="xml">
+                <form string="Fuel vouchers (Tank)">
+                    <group>
+                        <group>
+                            <field name="vehicle_id" required="1"/>
+                            <field name="full_tank"/>
+                            <field name="liters" attrs="{'readonly': [('full_tank', '!=', False)]}"/>
+                        </group>
+                        <group>
+                            <field name="route_id"/>
+                            <field name="observations"/>
+                        </group>
+                        <field name="travel_ids" domain="[('unit_id','=', vehicle_id), ('state', 'in',('progress','done'))]"/>
+                    </group>
+                    <footer>
+                        <button name="create_fleet_vehicle_log_fuel" string="Confirm" type="object"/>or
+                        <button class="oe_link" special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_tms_wizard_vehicle_log_fuel" model="ir.actions.act_window">
+            <field name="name">Fuel vouchers (Tank)</field>
+            <field name="res_model">tms.wizard.vehicle.log.fuel</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="tms_wizard_vehicle_log_fuel"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+        <menuitem action="action_tms_wizard_vehicle_log_fuel" id="menu_tms_wizard_vehicle_log_fuel" name="Fuel vouchers (Tank)" parent="tms.menu_tms_travels"/>
+    </data>
+</openerp-->

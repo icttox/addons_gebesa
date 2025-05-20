@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="procurement_form_view">
+        	<field name="name">procurement.form.po.pendingview</field>
+        	<field name="model">procurement.order</field>
+        	<field name='inherit_id' ref="procurement.procurement_form_view"/>
+        	<field name="arch" type="xml">
+                <xpath expr="//group/group/field[@name='priority']" position="after">
+                    <field name="po_pending" readonly="1"/>
+                </xpath>
+        	</field>
+        </record>
+     </data>
+</odoo>

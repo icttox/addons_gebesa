@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="product_uom_factor_form">
+			<field name="name">product_uom_factor_form</field>
+			<field name="model">product.uom.factor</field>
+			<field name="arch" type="xml">
+				<form string="Unit of Measurement">
+					<sheet>
+						<group>
+							<field class="oe_inline" name="unmed_origin_id"/>
+							<field class="oe_inline" name="unmed_dest_id"/>
+						</group>
+						<notebook>
+							<page string="Details">
+								<field name="details_ids">
+									<tree string="Details Tree" editable="bottom">
+										<field name="product_id"/>
+										<field name="partida_type_id"/>
+										<field name="factor"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model='ir.ui.view' id='product_uom_factor_tree'>
+			<field name='name'>product_uom_factor.tree</field>
+			<field name='model'>product.uom.factor</field>
+			<field name='arch' type='xml'>
+				<tree string='Unit of Measurement'>
+					<field name="unmed_origin_id"/>
+					<field name="unmed_dest_id"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="action_product_uom_factor" model="ir.actions.act_window">
+            <field name="name">Product UOM Factor</field>
+            <field name="res_model">product.uom.factor</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="product_uom_factor_tree"/>
+        </record>
+        <menuitem action="action_product_uom_factor" groups="immex_gebesa.group_immex_manager" name="Product UOM Factor" id="menu_product_uom_factor" parent="immex_gebesa.configuration_menu" sequence="50"/>
+	</data>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='invoice_supplier_form'>
+            <field name='name'>invoice.supplier.landed_cost_gebesa_form</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_supplier_form'/>
+            <field name='arch' type='xml'>
+            	<xpath expr="//group/group/field[@name='reference']" position="after">
+                    <field name='is_additional' readonly="True"/>
+                </xpath>
+                <xpath expr="//notebook/page[2]/group/group/field[@name='date']" position="after">
+                    <field name='integration_id' readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

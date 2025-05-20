@@ -1,0 +1,83 @@
+# -*- coding: utf-8 -*-
+# © <YEAR(S)> <AUTHOR(S)>
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
+from odoo import fields, models
+
+
+class AccountAccount(models.Model):
+    _inherit = 'account.account'
+
+    income_statement = fields.Selection(
+        [(1, 'Ventas Nacionales'),
+         (2, 'Ventas Exportacion'),
+         (3, 'Devoluciones sobre ventas nacionales'),
+         (4, 'Devoluciones sobre ventas exportacion'),
+         (5, 'Descuento sobre ventas nacionales'),
+         (6, 'Descuento sobre ventas exportacion'),
+         (7, 'Costo de ventas estandar'),
+         (8, 'Desviacion en consumo de materia'),
+         (9, 'Desviacion en precio compra de materia'),
+         (10, 'Flete nacional'),
+         (11, 'Flete exportacion'),
+         (12, 'Instalacion'),
+         (13, 'Mano de obra'),
+         (14, 'Gastos de fabricacion'),
+         (15, 'Gastos de ventas'),
+         (16, 'Gastos de administracion'),
+         (17, 'Depreciacion'),
+         (18, 'Intereses Bancarios'),
+         (19, 'Gastos financieros'),
+         (20, 'Producto financiero'),
+         (21, 'Perdida tipo de cambio'),
+         (22, 'Utilidad cambiaria'),
+         (23, 'Otros ingresos'),
+         (24, 'ISR y PTU'),
+         (25, 'Otras Ventas')],
+        string="Estado de resultados",
+    )
+
+    trial_balance = fields.Selection(
+        [(1, 'Caja y Banco'),
+         (2, 'Inversiones'),
+         (3, 'Clientes'),
+         (4, 'Deudores Diversos'),
+         (5, 'Impuestos a Favor'),
+         (6, 'Otras Cuentas por Cobrar'),
+         (7, 'Inventarios'),
+         (8, 'IVA Acreditar'),
+         (9, 'Anticipo a Proveedores y Acreedores'),
+         (10, 'Depositos por Itentificar'),
+         (11, 'Acciones'),
+         (12, 'Terrenos'),
+         (13, 'Edificios'),
+         (14, 'Maquinaria y Equipo'),
+         (15, 'Herramientas'),
+         (16, 'Equipo de Transporte'),
+         (17, 'Muebles y Enseres'),
+         (18, 'Equipo de Computo'),
+         (19, 'Construcciones'),
+         (20, 'Equipo de Comunicacion'),
+         (21, 'Equipo de Seguriad'),
+         (41, 'Supertavit por Actualizacion Activo'),
+         (22, 'Depreciacion'),
+         (23, 'Deposito de Garantia'),
+         (24, 'Gastos Diferidos'),
+         (25, 'Prestamos Bancarios a Corto Plazo'),
+         (26, 'Proveedores'),
+         (27, 'Acreedores'),
+         (28, 'Acreedores de Nomina'),
+         (29, 'Impuestos a Pagar'),
+         (30, 'Anticipos de Clientes'),
+         (31, 'Otros Anticipos de Clientes'),
+         (32, 'IVA Repercutido'),
+         (33, 'Pasivo a Largo Plazo'),
+         (34, 'Prestamos Bancarios a Largo Plazo'),
+         (35, 'Capital Social'),
+         (36, 'Reserva Legal'),
+         (37, 'Resultado de Ejercicios Anteriores'),
+         (38, 'Supertavit por Actualizacion Capital'),
+         (39, 'Otras Aportaciones'),
+         (40, 'Reexpresion de capital por reev. de activos')],
+        string="Balance General",
+    )

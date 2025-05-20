@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="movimiento_personal"
+            model="hr.employee"
+            string="Imprimir Orden De Movimiento De Personal"
+            report_type="qweb-pdf"
+            name="rh_gebesa.report_movimiento_personal"
+            file="rh_gebesa.report_movimiento_personal"
+        />
+
+        <template id="movimiento_personal_layout">
+            <div class="header">
+                <div class="row">
+                    <div class="col-2 text-center table-bordered">
+                        <img t-if="doc.company_id.logo" t-att-src="image_data_uri(doc.company_id.logo)" style="max-height: 45px;max-width: 100px;margin-top: 25px;margin-left: 3px;" alt="Logo"/>
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-7 text-center table-bordered">
+                                <strong>Titulo del Documento: Movimiento de personal</strong>
+                            </div>
+                            <div class="col-5 text-center table-bordered">
+                                <strong>Revisión:</strong> 0
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 text-center table-bordered">
+                                <strong>Código:</strong><br/>F-RH-09
+                            </div>
+                            <div class="col-4 text-center table-bordered">
+                                <strong>Deriva de:</strong><br/>P-RH-01
+                            </div>
+                            <div class="col-5 text-center table-bordered">
+                                <strong>Fecha de Revisión:</strong><br/>02/03/2021
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer">
+                <div class="row" style="border-top: 3px solid #000000;">
+                    <div class="col-6">
+                    www.gebesa.com
+                    </div>
+                    <div class="col-6" align="right">
+                        Página 1 de 1
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_movimiento_personal_document">
+            <t t-call="rh_gebesa.movimiento_personal_layout">
+                <t t-set="doc" t-value="doc.with_context({'lang':doc.user_id.lang})"/>
+                <div class="page" style="font-size: 11px">
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <th width="70%" style="border: none;"></th>
+                                <strong><th class="text-light text-center" style="background-color: #616360 !important;" width="15%">FECHA DE ELABORACION</th></strong>
+                                <strong><th class="text-light text-center" width="15%"></th></strong>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-left" style="background-color: #616360 !important;" width="100%">INFORMACION DE LA EMPRESA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <th width="20%">Nombre de la empresa:</th>
+                                <td width="80%"><span t-field="doc.company_id.name"/></td>
+                            </tr>
+                            <tr>
+                                <th width="20%">Departamento:</th>
+                                <td width="80%"><span t-field="doc.department_id.name"/></td>
+                            </tr>
+                            <tr>
+                                <th width="20%">Centro de costos:</th>
+                                <td width="80%"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br/>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-left" style="background-color: #616360 !important;" width="100%">INFORMACION DEL EMPLEADO</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-center" width="15%"><b>No.Emp</b></td>
+                                <td class="text-center" width="35%"><b>Nombre</b></td>
+                                <td class="text-center" width="15%"><b>Sexo</b></td>
+                                <td class="text-center" width="20%"><b>Numero de IMSS</b></td>
+                                <td class="text-center" width="15%"><b>Fecha Ingreso</b></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" width="15%"><span t-field="doc.consecutive_id"/></td>
+                                <td class="text-center" width="35%"><span t-field="doc.name"/></td>
+                                <td class="text-center" width="15%">
+                                    <t t-if="doc.gender == 'male'">
+                                        M
+                                    </t>
+                                    <t t-elif="doc.gender == 'female'">
+                                        F
+                                    </t>
+                                </td>
+                                <td class="text-center" width="20%"><span t-field="doc.imss"/></td>
+                                <td class="text-center" width="15%"><span t-field="doc.entry_date_vacation"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br/>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-left" style="background-color: #616360 !important;" width="100%">CAMBIO DE AREA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-center" width="20%"><b>Area actual</b></td>
+                                <td class="text-center" width="20%"><b>Salario actual</b></td>
+                                <td class="text-center" width="20%"><b>Bruto mensual</b></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" width="20%"><br/></td>
+                                <td class="text-center" width="20%"><br/></td>
+                                <td class="text-center" width="20%"><br/></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" width="20%"><b>Area nueva</b></td>
+                                <td class="text-center" width="20%"><b>Salario nuevo</b></td>
+                                <td class="text-center" width="20%"><b>Bruto mensual</b></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" width="20%"><br/></td>
+                                <td class="text-center" width="20%"><br/></td>
+                                <td class="text-center" width="20%"><br/></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br/>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #616360 !important;" width="20%">CAMBIO DE CATEGORIA:</td>
+                                <td width="20%"></td>
+                                <td class="text-light text-center" style="background-color: #616360 !important;" width="15%">ACTUAL:</td>
+                                <td width="15%"></td>
+                                <td class="text-light text-center" style="background-color: #616360 !important;" width="15%">NUEVA:</td>
+                                <td width="15%"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br/>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-left" style="background-color: #616360 !important;" width="100%">VACACIONES</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <th width="25%">Inicio disfrute vacaciones</th>
+                                <th width="75%"></th>
+                            </tr>
+                            <tr>
+                                <th width="25%">Termino disfrute vacaciones</th>
+                                <th width="75%"></th>
+                            </tr>
+                            <tr>
+                                <th width="25%">Vacaciones pagadas</th>
+                                <th width="75%"/>
+                            </tr>
+                        </table>
+                    </div>
+                    <br/>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #616360 !important;" width="25%">FECHA DE BAJA:</td>
+                                <td width="75%"><span t-field="doc.contract_id.date_end"/></td>
+                            </tr>
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #616360 !important;" width="25%">MOTIVO DE BAJA:</td>
+                                <td width="75%"><span t-field="doc.contract_id.notes"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br/>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-left" style="background-color: #616360 !important;" width="100%">FIRMAS DE AUTORIZACION</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters pt-5">
+                        <div class="col-4 text-center">
+                            _______________________________
+                            <br/>
+                            Jefe Inmediato
+                        </div>
+                        <div class="col-4 text-center">
+                            _______________________________
+                            <br/>
+                            Capital Humano
+                        </div>
+                        <div class="col-4 text-center">
+                            _______________________________
+                            <br/>
+                            Nominas
+                        </div>
+                    </div>
+                    <div class="row no-gutters pt-5">
+                        <div class="col-12 text-center">
+                            _______________________________
+                            <br/>
+                            Trabajador
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_movimiento_personal">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="rh_gebesa.report_movimiento_personal_document" t-lang="doc.user_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="spiff_sale_percent" model="ir.config_parameter">
+            <field name="key">spiff.sale.percent</field>
+            <field name="value">3.0</field>
+        </record>
+    </data>
+</odoo>

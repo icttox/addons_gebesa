@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+        <record id="hr_employee_form" model="ir.ui.view">
+            <field name="name">hr.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name='user_id' position='after'>
+                    <field name='id_microsip'/> 
+                </field>
+                <xpath expr="//form/header/button[@name='send_id']" position="after">
+                    <button name="send_employee_microsip" string="Compartir a microsip" type="object" groups="gebesa_integracion_microsip.send_employee_to_microsip_button"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_employee_filter_microsip" model="ir.ui.view">
+            <field name="name">hr.employee.search</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='activities_upcoming_all']" position="after">
+                    <filter string="Employee" name="employee_rfc" domain="[('rfc', '!=', 'XAXX010101000')]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr.open_view_employee_list_my" model="ir.actions.act_window">
+            <field name="context">{'search_default_employee_rfc': 1}</field>
+        </record>
+    </data>
+</odoo>

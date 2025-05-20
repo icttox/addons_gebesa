@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.actions.server" id="aprs_act_serv_invoice">
+        <field name="name">Show me the APRs for invoices</field>
+        <field name="model_id" ref="account.model_account_invoice"/>
+        <field name="binding_model_id" ref="account.model_account_invoice"/>
+        <field name="sequence">1</field>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code"># This server action will show the account.partial.reconciliation records related to an invoice
+apr_ids = apr_obj = env['account.partial.reconcile']
+am_obj = env['account.move']
+act = {
+  'name': 'Account Partial Reconcile',
+  'type': 'ir.actions.act_window',
+  'res_model': 'account.partial.reconcile',
+  'target': 'current',
+  'view_mode': 'tree,form'}
+
+accounts = []
+accounts.append(record.partner_id.property_account_receivable_id)
+accounts.append(record.partner_id.property_account_customer_advance_id)
+accounts.append(record.partner_id.property_account_payable_id)
+accounts.append(record.partner_id.property_account_supplier_advance_id)
+
+for aml in record.move_id.line_ids.filtered(lambda l: l.account_id in accounts):
+ if aml.account_id.reconcile:
+   apr_ids |= aml.matched_debit_ids | aml.matched_credit_ids
+
+act['domain'] = [('id', 'in', apr_ids.ids)]
+action = act</field>
+    </record>
+
+
+    <record model="ir.actions.server" id="amls_act_serv_invoice">
+        <field name="name">Show me the reconciled AMLs for Invoices</field>
+        <field name="model_id" ref="account.model_account_invoice"/>
+        <field name="binding_model_id" ref="account.model_account_invoice"/>
+        <field name="sequence">1</field>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code"># This server action will show the account.move.line records reconciled in an invoice
+apr_ids = apr_obj = env['account.partial.reconcile']
+am_obj = env['account.move']
+aml_ids = env['account.move.line']
+act = {
+  'name': 'Reconciled Lines',
+  'type': 'ir.actions.act_window',
+  'res_model': 'account.move.line',
+  'target': 'current',
+  'view_mode': 'tree,form'
+}
+
+accounts = []
+accounts.append(record.partner_id.property_account_receivable_id)
+accounts.append(record.partner_id.property_account_customer_advance_id)
+accounts.append(record.partner_id.property_account_payable_id)
+accounts.append(record.partner_id.property_account_supplier_advance_id)
+
+for aml in record.move_id.line_ids.filtered(lambda l: l.account_id in accounts):
+ if aml.account_id.reconcile:
+   aml_ids |= aml
+   apr_ids |= aml.matched_debit_ids | aml.matched_credit_ids
+
+aml_ids |= (apr_ids.mapped('credit_move_id') | apr_ids.mapped('debit_move_id'))
+
+act['domain'] = [('id', 'in', aml_ids.ids)]
+action = act
+</field>
+    </record>
+</odoo>

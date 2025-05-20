@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_send_travel_mg_alert" model="ir.cron">
+            <field name="name">Send Email Travel Margen Bajo</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="model_id" ref="model_tms_travel"/>
+           <!--  <field eval="'send_email_travel_mg_m'" name="function"/>
+            <field eval="" name="args"/> -->
+            <field name="state">code</field>
+            <field name="code">model.send_email_travel_mg_m()</field>
+            <field name="active" eval="True" />
+        </record>
+    </data>
+</odoo>

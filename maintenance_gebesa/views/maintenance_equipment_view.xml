@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='maintenance_equipment_view'>
+            <field name='name'>maintenance.equipment.view</field>
+            <field name='model'>maintenance.equipment</field>
+            <field name='inherit_id' ref='maintenance.hr_equipment_view_form'/>
+            <field name='arch' type='xml'>
+                <data>
+                    <xpath expr="//div[hasclass('oe_title')]" position="before">
+                        <field name="image_medium" widget='image' class="oe_avatar" options='{"preview_image": "image_medium"}'/>
+                    </xpath>
+                    <xpath expr="//field[@name='note']" position="before">
+                        <div>
+                            <label for="mark"/>
+                            <field name='mark'/>
+                        </div>
+                        <div>
+                            <label for="capacity"/>
+                            <field name='capacity'/>
+                        </div>
+                        <div>
+                            <label for="dimensions"/>
+                            <field name='dimensions'/>
+                        </div>
+                        <div>
+                            <label for="int_number"/>
+                            <field name='int_number'/>
+                        </div>
+                        <div>
+                            <label for="security_device"/>
+                            <field name='security_device'/>
+                        </div>
+                        <div>
+                            <label for="last_ip"/>
+                            <field name='last_ip'/>
+                        </div>
+                    </xpath>
+
+                    <xpath expr="//notebook/page[last()]" position="after">
+                        <page string="Maintenance history">
+                            <field name="maintenance_ids" readonly="True">
+                                <tree>
+                                    <field name='name'/>
+                                    <field name='description'/>
+                                    <field name='maintenance_type'/>
+                                    <field name='request_date'/>
+                                    <field name='stage_id'/>
+                                    <field name='schedule_date'/>
+                                    <field name='close_date'/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Components">
+                            <field name="component_ids" readonly="True">
+                                <tree>
+                                    <field name='name'/>
+                                    <field name='consecutive_id'/>
+                                    <field name='employee_id'/>
+                                    <field name='department_id'/>
+                                    <field name='location_physical'/>
+                                    <field name='assign_date'/>
+                                    <field name='serial_no'/>
+                                    <field name='technician_user_id'/>
+                                    <field name='category_id'/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="IT Software">
+                            <field name="it_software_equipment_rel_ids" widget="one2many_list">
+                                <tree editable="bottom" string="IT Software Equipment Rel">
+                                    <field name='it_software_id'/>
+                                    <field name='valid'/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Ficha tecnia">
+                            <group>
+                                <field name="image_render" widget="image" class="oe_avatar"/>
+                                <field name="image_plano" widget="image" class="oe_avatar"/>
+                            </group>
+                            <div>
+                              <field name="ficha_tecnica" widget="html"/>
+                            </div>
+                        </page>
+                    </xpath>
+
+                    <xpath expr="//field[@name='company_id']" position="before">
+                        <field name='parent_id'/>
+                    </xpath>
+
+                    <xpath expr="//field[@name='location']" position="before">
+                            <field name="status_validation"/>
+                    </xpath>
+
+                     <xpath expr="//form/sheet/notebook/page/group/group/field[@name='partner_id']" position="after">
+                        <field name="invoice_id" string="Factura relacionada" domain="[('type','=','in_invoice'),('partner_id','=', partner_id),('state', 'not in', ('cancel', 'draft'))]"/>
+                    </xpath>
+                    <xpath expr="//form/sheet/notebook/page/group/group/field[@name='serial_no']" position="after">
+                        <field name="replacement" string="Reposición"/>
+                    </xpath>
+                    <xpath expr="//form/sheet/notebook/page/group/group/div[field[@name='maintenance_duration']]" position="after">
+                        <field name="maintenance_activities"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='maintenance_equipment_image_view_kanban'>
+            <field name='name'>maintenance.equipment.image.view.kanban</field>
+            <field name='model'>maintenance.equipment</field>
+            <field name='inherit_id' ref='maintenance.hr_equipment_view_kanban'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="id"/>
+                </xpath>
+                <xpath expr="//div[hasclass('o_kanban_record_top')]" position="before">
+                    <div class="o_kanban_image">
+                        <img t-att-src="kanban_image('maintenance.equipment', 'image_small', record.id.raw_value)" alt="Product"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model='ir.ui.view' id='get_pedimento_ws_form'>
+            <field name='name'>get.pedimento.ws.form</field>
+            <field name='model'>ws.get.pedimento</field>
+            <field name='arch' type='xml'>
+                <form string='Descargar datos del pedimento'>
+                    <group>
+                        <field name='aduana'/>
+                        <field name='patente'/>
+                        <field name='pedimento'/>
+                    </group>
+                    <footer>
+                        <button string="Descargar" name="get_pedimento" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_get_pedimento_ws" model="ir.actions.act_window">
+            <field name="name">Descargar datos del pedimento</field>
+            <field name="res_model">ws.get.pedimento</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="get_pedimento_ws_form"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+    
+        <menuitem id="menu_get_pediment_ws" name="Descargar datos de pedimento" action="action_get_pedimento_ws" parent="wizard_menu"/>
+    </data>
+</openerp>

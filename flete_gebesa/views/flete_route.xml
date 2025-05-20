@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='freight_route_form'>
+        	<field name='name'>freight.route.form</field>
+        	<field name='model'>tms.route</field>
+        	<field name='inherit_id' ref="tms.view_tms_route_form"/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//group/field[@name='departure_id']" position="replace">
+                    <field name="departure_id" string='Origen' options="{'limit': 10, 'create': true, 'create_edit': true}"/>
+                </xpath>
+                <xpath expr="//group/field[@name='arrival_id']" position="replace">
+                    <field name="arrival_id" string='Destino' options="{'limit': 10, 'create': true, 'create_edit': true}"/>
+                </xpath>
+                <xpath expr="//group/field[@name='active']" position="after">
+                    <field name="three_tons" readonly="0"/>
+                    <field name="normal_box" readonly="0"/>
+                    <field name="pupies" readonly="0"/>
+                    <field name="combo" readonly="0"/>
+                </xpath>
+        	</field>
+        </record>
+        <!--
+        <record model='ir.ui.view' id='view_order_tree'>
+            <field name='name'>view_order_segment_status_tree</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref='sale.view_order_tree'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='invoice_status']" position="before">
+                    <field name='segment_status' readonly="True"/>
+                </xpath>
+            </field>
+        </record> -->
+    </data>
+</odoo>

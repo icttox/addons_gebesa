@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_bom_detail_history_tree'>
+            <field name='name'>mrp.bom.detail.history.tree</field>
+            <field name='model'>mrp.bom.detail.history</field>
+            <field name='arch' type='xml'>
+                <tree string='Bom Detail History' create="false" edit="false" delete="false">
+                    <field name='product_master_id'/>
+                    <field name='prev_product_detail_id'/>
+                    <field name='upd_product_detail_id'/>
+                    <field name='user_id'/>
+                    <field name='action'/>
+                    <field name='action_date'/>
+                    <field name='bom_id'/>
+                    <field name='bom_line_id'/>
+                    <field name='prev_qty'/>
+                    <field name='upd_qty'/>
+                    <field name='prev_cost'/>
+                    <field name='upd_cost'/>
+                    <field name='deference'/>
+                </tree>
+            </field>
+        </record>
+
+        <record id='mrp_bom_detail_history_action' model='ir.actions.act_window'>
+            <field name='name'>Bom Detail History</field>
+            <field name='res_model'>mrp.bom.detail.history</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree</field>
+        </record>
+
+        <menuitem id="mrp_bom_detail_history_menu" name="Bom Detail History" parent="mrp.menu_mrp_bom" action="mrp_bom_detail_history_action"/>
+    </data>
+</odoo>

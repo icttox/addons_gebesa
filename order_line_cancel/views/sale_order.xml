@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <data>
+        <record id="view_order_form" model="ir.ui.view">
+            <field name="name">view_order_cancel_line_form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/notebook/page/field[@name='order_line']/form/group/group/field[@name='invoice_status']" position="after">
+                    <field name="closed" invisible="1"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page/field[@name='order_line']/tree/field[@name='customer_lead']" position="after">
+                    <field name="closed" invisible="1"/>
+                    <button icon="fa-print" name="action_print_generated_move" string="Print generated movements" type="object" groups="system_administrator.group_system_administrator_gebesa"/>
+                    <button icon="fa-ban" name="action_cancel_generated_moves" string="Cancel generated movements" type="object" groups="system_administrator.group_system_administrator_gebesa" attrs="{'invisible': ['|', ('state', '!=', 'done'), ('closed', '=', True)]}"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page/field[@name='order_line']/tree" position="attributes">
+                    <attribute name="decoration-muted">closed==True</attribute>
+                 </xpath>
+            </field>
+        </record>
+
+        <record id="order_line_backorder_pedido_tree" model="ir.ui.view">
+            <field name="name">order_line_backorder_pedido_tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="backorder_pedido_ventas_simple.backorder_pedido_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='total_rate_mex']" position="replace">    
+                    <field name="o_amount_untaxed_rate_mex"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='freight_rate_mex']" position="replace">
+                    <field name="o_freight_rate_mex"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='installation_rate_mex']" position="replace">
+                    <field name="o_installation_rate_mex"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='net_sale_rate_mex']" position="replace">
+                    <field name="o_net_sale_rate_mex"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='profit_margin']" position="replace">
+                    <field name="o_profit_margen" string='Margen de Utilidad'/>
+                </xpath>
+                <xpath expr="//tree/field[@name='standard_cost_pending']" position="replace">
+                    <field name="o_standard_cost_pending" string='Cost X Sur'/>
+                </xpath>
+                <xpath expr="//tree/field[@name='amount_pending_mex']" position="replace">
+                    <field name="o_amount_pending_rate_mex" string='Imp X Sur'/>
+                </xpath>
+                <xpath expr="//tree/field[@name='amount_untaxed']" position="replace">
+                    <field name="o_amount_untaxed" string='Total'/>
+                 </xpath>
+                <xpath expr="//tree/field[@name='total_freight']" position="replace">
+                    <field name="o_total_freight"  string='Total Flete'/>
+                </xpath>
+                <xpath expr="//tree/field[@name='total_installation']" position="replace">
+                    <field name="o_total_installation"  string='Total Instalación'/>
+                </xpath>
+                <xpath expr="//tree/field[@name='total_net_sale']" position="replace">
+                    <field name="o_total_net_sale" string='Vta Neta Total'/>
+                </xpath>
+            </field>
+        </record>
+
+         <record id="order_line_backorder_tree" model="ir.ui.view">
+            <field name="name">order_line_backorder_tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="backorder.backorder_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='total_net_sale']" position="replace">
+                    <field name="o_total_net_sale"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='total_freight']" position="replace">
+                    <field name="o_total_freight"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='total_installation']" position="replace">
+                    <field name="o_total_installation"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='profit_margin']" position="replace">
+                    <field name="o_profit_margen"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='weight']" position="replace">
+                    <field name="o_weight"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='volume']" position="replace">
+                    <field name="o_volume"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="order_line_pivot_channel" model="ir.ui.view">
+            <field name="name">order_line_pivot_channel</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="pivot_sale_channel.sale_order_pivot_channel"/>
+            <field name="arch" type="xml">
+                <xpath expr="//pivot/field[@name='net_sale_rate_mex']" position="replace">
+                    <field name="o_net_sale_rate_mex" type="measure" ref="pivot_channel_tree"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

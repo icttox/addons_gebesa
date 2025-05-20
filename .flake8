@@ -1,0 +1,6 @@
+[flake8]
+# E501,F401 are ignored by default by pep8 and flake8
+ignore = E123,E133,E226,E241,E242,F811,E501,F401
+max-line-length = 79
+exclude = __unported__,__init__.py,__pycache__,__manifest__.py
+max-complexity = 10

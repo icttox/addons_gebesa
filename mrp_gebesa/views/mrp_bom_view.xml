@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_bom_line_tree_geb2'>
+            <field name='name'>mrp.bom.line.tree.geb2</field>
+            <field name='model'>mrp.bom.line</field>
+            <field name="inherit_id" ref="mrp_cut_detail.mrp_bom_line_tree_geb"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='bom_id']" position="after">
+                    <field name="location_id" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="gebesa_mrp_bom_view" model="ir.ui.view">
+            <field name="name">gebesa_mrp_bom_view</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_id']" position="after">
+                    <field name="warehouse_id"/>
+                </xpath>
+                <xpath expr="//field[@name='routing_id']" position="attributes">
+                    <attribute name="attrs">{'required':[('type', '=', 'normal')]}</attribute>
+
+                </xpath>
+                <xpath expr="//tree/field[@name='product_id']" position="before">
+                    <field name="location_id" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="gebesa_mrp_bom_line_view" model="ir.ui.view">
+            <field name="name">gebesa_mrp_bom_line_view</field>
+            <field name="model">mrp.bom.line</field>
+            <field name="inherit_id" ref="mrp_cut_detail.mrp_bom_line_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_id']" position="before">
+                    <field name="location_id" domain="[('stock_warehouse_id', '=', parent.warehouse_id), ('usage', 'in', ['internal','production']), ('name', 'not ilike', 'operaciones')]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="gebesa_mrp_bom_tree_view" model="ir.ui.view">
+            <field name="name">gebesa.mrp.bom.tree</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_tmpl_id']" position="before">
+                    <field name="warehouse_id"/>
+                    <field name="routing_id" readonly="0" domain="[{'type', '=', 'normal'}]"/>
+                </xpath>
+               
+            </field>
+        </record>
+
+        <record id="view_mrp_production_filter" model="ir.ui.view">
+            <field name="name">gebesa.mrp.production.filter</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.view_mrp_production_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='todo']" position="after">
+                    <filter string="To confirmed " name="to_confirmed"
+                        domain="[('state', '=', 'draft')]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="gebesa_mrp_production_form_view" model="ir.ui.view">
+            <field name="name">gebesa.mrp.production.form</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <!--xpath expr="//header/button[@name='open_produce_product'][2]" position="replace">
+                </xpath-->
+                <xpath expr="//form/header/button[@name='button_mark_done']" position="before">
+                    <button type="object" name="action_confirm" class="oe_highlight"  string="Confirm" groups="mrp_gebesa.group_confirm_production" states="draft">
+                    </button>
+                </xpath>
+
+                <xpath expr="//form/sheet/div[@name='button_box']/button[@name='%(stock.action_stock_report)d']" position="after">
+                    <button type="object"
+                        name="action_view_procures"
+                        class="oe_stat_button"
+                        icon="fa-plus-square"
+                        string="Abastecer parcial"
+                        groups="base.group_user">
+                    </button>
+                    <button type="object"
+                        name="action_view_transfers"
+                        class="oe_stat_button"
+                        icon="fa-minus-square"
+                        string="Traspasar parcial"
+                        groups="base.group_user">
+                    </button>
+                </xpath>
+
+                <xpath expr="//form/sheet/div[@name='button_box']/button[@name='%(stock.action_stock_report)d']" position="attributes">
+                  <attribute name="attrs">{'invisible': [('state', 'not in', ('done', 'transfer'))]}</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/div[@name='button_box']/button[@name='%(mrp.action_mrp_production_moves)d']" position="attributes">
+                  <attribute name="attrs">{'invisible': [('state', 'not in', ('progress', 'done', 'transfer'))]}</attribute>
+                </xpath>
+                
+                <xpath expr="//form/sheet/notebook/page/field[@name='move_raw_ids']/tree/field[@name='product_id']" position="before">
+                    <field name="location_id"/>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='routing_id']" position="after">
+                    <field name="rule_id" readonly='1'/>
+                </xpath>
+                <xpath expr="//group/group/field[@name='origin']" position="after">
+                    <field name='transfer_status' readonly='1'/>
+                </xpath>
+                <xpath expr="//group/group/field[@name='date_planned_start']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', 'not in', ('draft','confirmed','ready'))]}</attribute>
+                </xpath>
+                <!--xpath expr="//field[@name='move_lines']/tree/field[@name='product_id']" position="before">
+                    <field name="location_id"/>
+                </xpath-->
+                <xpath expr="//field[@name='location_src_id']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//notebook/page/field[@name='move_raw_ids']" position="after">
+                    <group string="Movimientos que abastecen">
+                        <field name='picking_raw_material_ids' nolabel="1"  widget='one2many'>
+                            <tree string="Movimientos que abastecen" decoration-info="state == 'draft'" decoration-muted="state == 'cancel'" decoration-danger="state not in ('cancel', 'done') and scheduled_date &lt; current_date" create ="false" delete ="false" editable="bottom" edit="True" >
+                                <field name="name"/>
+                                <field name="location_id"/>
+                                <field name="location_dest_id"/>
+                                <field name="scheduled_date"/>
+                                <field name="origin"/>
+                                <field name="total_cost"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </group>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Transfer">
+                        <group string=" Moves">
+                            <field name="move_dest_ids"/>
+                        </group>
+                        <group string=" Pickings">
+                            <field name='picking_move_prod_id' readonly='1'/>
+                            <field name='picking_move_prod_ids' nolabel="1" readonly='1'/>
+                        </group>
+                    </page>
+                    
+                </xpath>
+                <xpath expr="//notebook/page/group/group/field[@name='availability']" position="after">
+                    <field name='cancellation_reason'/>
+                </xpath>
+                <!--LINEAS PARA EL STATUS -->
+                <xpath expr="//field[@name='state']" position="replace">
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,progress,done,transfer"/>
+                </xpath>
+            </field>
+        </record>
+
+	<record id="gebesa_mrp_production_account_form_view" model="ir.ui.view">
+            <field name="name">gebesa.mrp.production.account.form</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp_account.mrp_production_form_inherit_view6"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='%(mrp_account.action_cost_struct_mrp_production)d']" position="attributes">
+                  <attribute name="attrs">{'invisible': [('state', 'not in', ('done', 'transfer'))]}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="geb_production_tree_view" model="ir.ui.view">
+            <field name="name">geb.production.tree</field>
+            <field name="model">mrp.production</field>
+            <field name="priority">10</field>
+            <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="replace">
+                    <tree decoration-bf="message_needaction==True" decoration-info="state in ('draft','confirmed')" decoration-danger="date_planned_start&lt;current_date and state not in ('done','cancel','transfer')" decoration-muted="state in ('done','cancel')" decoration-success="state in ('transfer')" string="Manufacturing Orders">
+                         <field name="message_needaction" invisible="1"/>
+                         <field name="name"/>
+                         <field name="date_planned_start"/>
+                         <field name="location_dest_id"/>
+                         <field name="product_id"/>
+                         <field name="product_qty" sum="Total Qty"/>
+                         <field name="product_uom_id" options="{'no_open':True,'no_create':True}" groups="product.group_uom"/>
+                         <field name="routing_id" groups="mrp.group_mrp_routings"/>
+                         <!--field name="hour_total" sum="Total Hours"/-->
+                         <!--field name="cycle_total" sum="Total Cycles"/-->
+                         <field name="origin"/>
+                         <field name="availability"/>
+                         <field name="state"/>
+                         </tree>
+                </xpath>
+            </field>
+        </record>
+
+        <!--record id="production_cancel_action_server" model="ir.actions.server">
+            <field name="name">Production Cancel</field>
+            <field name="type">ir.actions.server</field>
+            <field name="state">code</field>
+            <field name="model_id" ref="model_mrp_production" />
+            <field name="code">self.action_cancel(cr, uid, context.get('active_ids', []), context)</field>
+        </record>
+
+        <record id="production_cancel_action" model="ir.values">
+            <field name="name">Production Cancel</field>
+            <field name="key">action</field>
+            <field name="key2">client_action_multi</field>
+            <field name="model">mrp.production</field>
+            <field name="value" eval="'ir.actions.server,%d' % ref('mrp_gebesa.production_cancel_action_server')" />
+        </record-->
+        
+    </data>
+</odoo>

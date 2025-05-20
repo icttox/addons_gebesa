@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="product_normal_form_view_website" model="ir.ui.view">
+    		<field name="name">product.normal.form.view.website</field>
+    		<field name="model">product.product</field>
+    		<field name="inherit_id" ref="global_product_view.global_product_product_view_form"/>
+    		<field name="arch" type="xml">
+                <xpath expr="//field[@name='is_line']" position="before">
+                    <field name="show_web_portal" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

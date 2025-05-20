@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='account_invoice_view_form'>
+        	<field name='name'>account_invoice_view_form</field>
+        	<field name='model'>account.invoice</field>
+        	<field name='inherit_id' ref='account.invoice_form'/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//group/group/field[@name='payment_term_id']" position="after">
+                    <field name='itinerary' required="1"/>
+                </xpath>
+        		<xpath expr="//notebook/page[2]" position="after">
+        			<page string="Sale Data">
+        				<group>
+        					<group>
+        						<field name='total_net_sale' widget="monetary" readonly="True"/>
+        						<field name='perc_freight' attrs="{'readonly':[('state','!=','draft')]}"/>
+        						<field name='total_freight' widget="monetary" readonly="True"/>
+        						<field name='perc_installation' attrs="{'readonly':[('state','!=','draft')]}"/>
+        						<field name='total_installation' widget="monetary" readonly="True"/>
+                                <field name='total_cost' widget="monetary" readonly="True"/>
+        					</group>
+        					<group>
+        						<field name='profit_margin' readonly="True"/>
+        						<field name='not_be_billed'/>
+                                <field name='portfolio_type'/>
+        						<field name='manufacture'/>
+        						<!-- <field name='executive'/> -->        						
+        					</group>
+        				</group>
+        			</page>
+        		</xpath>
+        		<xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_subtotal']" position="after">
+                    <field name="standard_cost" widget="monetary" readonly="True"/>
+                    <field name="total_cost" widget="monetary" readonly="True"/>
+                    <field name="net_sale" widget="monetary" readonly="True"/>
+                    <field name="freight_amount" widget="monetary" readonly="True"/>
+                    <field name="installation_amount" widget="monetary" readonly="True"/>                    
+                    <field name="profit_margin" widget="monetary" readonly="True"/>
+                    <field name="margin_justification" />
+                </xpath>          		   		
+        	</field>
+        </record>
+    </data>
+</odoo>

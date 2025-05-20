@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="tires_position_hist_form">
+            <field name="name">tires_position_hist.form</field>
+            <field name="model">tms.tire.position.hist</field>
+            <field name="arch" type="xml">
+                <form string="Tire Position History">
+                    <sheet>
+                        <group>
+                            <field name='unit_old_id'/>
+                            <field name="unit_new_id"/>
+                            <field name="position_old"/>
+                            <field name="position_new"/>
+                            <field name="odometer_old"/>
+                            <field name="odometer_new"/>
+                            <field name="tire_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='tires_position_hist_tree'>
+            <field name='name'>tires_position_hist.tree</field>
+            <field name='model'>tms.tire.position.hist</field>
+            <field name='arch' type='xml'>
+                <tree string='Tire Position History'>
+                    <field name='unit_old_id'/>
+                    <field name="unit_new_id"/>
+                    <field name="position_old"/>
+                    <field name="position_new"/>
+                    <field name="odometer_old"/>
+                    <field name="odometer_new"/>
+                    <field name="tire_id"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

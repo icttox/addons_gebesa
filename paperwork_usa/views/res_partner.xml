@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="res_partner_type_html" model="ir.ui.view">
+            <field name="name">res.partner.type.html</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="report_tags.res_partner_type"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='Type Barcode']/group" position="after">
+                    <field name="header_html" widget="html"/>
+                    <field name="extra_body_html" widget="html"/>
+                    <field name="footer_html" widget="html"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

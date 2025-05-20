@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_manager_account_invoice_rel_advance,manager.account.invoice.rel.advance,model_account_invoice_rel_advance,account.group_account_invoice,1,1,1,1
+access_user_account_invoice_rel_advance,user.account.invoice.rel.advance,model_account_invoice_rel_advance,base.group_user,1,0,0,0

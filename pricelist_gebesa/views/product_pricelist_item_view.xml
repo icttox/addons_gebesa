@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='pricelist_gebesa_tree'>
+            <field name='name'>pricelist.gebesa.tree</field>
+            <field name='model'>product.pricelist.item</field>
+            <field name='arch' type='xml'>
+                <tree string='Price List Gebesa'>
+                    <field name='product_tmpl_id'/>
+                    <field name='product_id'/>
+                    <field name='pricelist_id'/>
+                    <field name='fixed_price'/>
+                    <field name='price_discount'/>
+                    <field name='price_max_margin'/>
+                    <field name='price_min_margin'/>
+                    <field name='min_quantity'/>
+                    <field name='percent_price'/>
+                    <field name='price_surcharge'/>
+                </tree>
+            </field>
+        </record>
+
+        <record id='action_pricelist_gebesa' model='ir.actions.act_window'>
+            <field name='name'>Price List Gebesa</field>
+            <field name='res_model'>product.pricelist.item</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree</field>
+            <field name="view_id" ref="pricelist_gebesa_tree"/>
+            <field name="domain">['|',('product_tmpl_id', '!=', False),('product_id', '!=', False)]</field>
+        </record>
+
+        <menuitem id="pricelist_gebesa_menu" name="Price List Gebesa" parent="sale.product_menu_catalog" action="action_pricelist_gebesa"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_order_form_procurement_everywhere'>
+            <field name='name'>view.order.form.procurement.everywhere</field>
+            <field name='model'>procurement.order</field>
+            <field name='inherit_id' ref='procurement.procurement_form_view'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//group/field[@name='location_id']" position="replace">
+                    <field name='location_id'/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

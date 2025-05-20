@@ -1,0 +1,257 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* report_inventory analysis
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-25 17:23+0000\n"
+"PO-Revision-Date: 2018-09-25 12:28-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: report_inventory analysis
+#: selection:report.inventory.analysis,month:0
+msgid "April"
+msgstr "Abril"
+
+#. module: report_inventory analysis
+#: selection:report.inventory.analysis,month:0
+msgid "August"
+msgstr "Agosto"
+
+#. module: report_inventory analysis
+#: model:ir.ui.view,arch_db:report_inventory
+#: analysis.report_consumption_by_date
+#: analysis.report_inventory_analysis_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: report_inventory analysis
+#: model:ir.actions.act_window,name:report_inventory
+#: analysis.action_report_consumption_by_date
+#: model:ir.ui.menu,name:report_inventory
+#: analysis.menu_report_consumption_by_date
+#: model:ir.ui.view,arch_db:report_inventory
+#: analysis.report_consumption_by_date
+msgid "Consumption by date"
+msgstr "Consumo por fecha"
+
+#. module: report_inventory analysis
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: report_inventory analysis
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: report_inventory analysis
+#: selection:report.inventory.analysis,month:0
+msgid "December"
+msgstr "Diciembre"
+
+#. module: report_inventory analysis
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: report_inventory analysis
+#: model:ir.ui.view,arch_db:report_inventory
+#: analysis.report_consumption_by_date
+#: analysis.report_inventory_analysis_wizard
+msgid "Export"
+msgstr "Esportar"
+
+#. module: report_inventory analysis
+#: selection:report.inventory.analysis,month:0
+msgid "February"
+msgstr "Febrero"
+
+#. module: report_inventory analysis
+#: code:addons/report_inventory
+#: analysis/wizards/report_inventory_analysis.py:43
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_product_end_id
+#, python-format
+msgid "Final Product"
+msgstr "Producto final"
+
+#. module: report_inventory analysis
+#: code:addons/report_inventory
+#: analysis/wizards/report_inventory_analysis.py:62
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_date_fin
+#, python-format
+msgid "Final date"
+msgstr "Fecha final"
+
+#. module: report_inventory analysis
+#: code:addons/report_inventory
+#: analysis/wizards/report_inventory_analysis.py:31
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_group_id
+#, python-format
+msgid "Group"
+msgstr "Grupo"
+
+#. module: report_inventory analysis
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_id
+msgid "ID"
+msgstr "ID"
+
+#. module: report_inventory analysis
+#: code:addons/report_inventory
+#: analysis/wizards/report_inventory_analysis.py:39
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_product_ini_id
+#, python-format
+msgid "Initial Product"
+msgstr "Producto inicial"
+
+#. module: report_inventory analysis
+#: code:addons/report_inventory
+#: analysis/wizards/report_inventory_analysis.py:59
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_date_ini
+#, python-format
+msgid "Initial date"
+msgstr "Fecha inicial"
+
+#. module: report_inventory analysis
+#: model:ir.actions.act_window,name:report_inventory
+#: analysis.action_report_inventory_analysis
+#: model:ir.ui.menu,name:report_inventory
+#: analysis.menu_report_inventory_analysis
+#: model:ir.ui.view,arch_db:report_inventory
+#: analysis.report_inventory_analysis_wizard
+msgid "Inventory analysis"
+msgstr "Análisis de inventario"
+
+#. module: report_inventory analysis
+#: selection:report.inventory.analysis,month:0
+msgid "January"
+msgstr "Enero"
+
+#. module: report_inventory analysis
+#: selection:report.inventory.analysis,month:0
+msgid "July"
+msgstr "Julio"
+
+#. module: report_inventory analysis
+#: selection:report.inventory.analysis,month:0
+msgid "June"
+msgstr "Junio"
+
+#. module: report_inventory analysis
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis___last_update
+msgid "Last Modified on"
+msgstr "Ultima modificación realizada"
+
+#. module: report_inventory analysis
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualización por"
+
+#. module: report_inventory analysis
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: report_inventory analysis
+#: code:addons/report_inventory
+#: analysis/wizards/report_inventory_analysis.py:35
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_line_id
+#, python-format
+msgid "Line"
+msgstr "Linea"
+
+#. module: report_inventory analysis
+#: code:addons/report_inventory
+#: analysis/wizards/report_inventory_analysis.py:27
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_location_id
+#, python-format
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: report_inventory analysis
+#: selection:report.inventory.analysis,month:0
+msgid "March"
+msgstr "Marzo"
+
+#. module: report_inventory analysis
+#: selection:report.inventory.analysis,month:0
+msgid "May"
+msgstr "Mayo"
+
+#. module: report_inventory analysis
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_month
+msgid "Month"
+msgstr "Mes"
+
+#. module: report_inventory analysis
+#: selection:report.inventory.analysis,month:0
+msgid "November"
+msgstr "Noviembre"
+
+#. module: report_inventory analysis
+#: selection:report.inventory.analysis,month:0
+msgid "October"
+msgstr "Octubre"
+
+#. module: report_inventory analysis
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_product_inactive
+msgid "Product Inactives"
+msgstr "Producto inactivo"
+
+#. module: report_inventory analysis
+#: selection:report.inventory.analysis,month:0
+msgid "September"
+msgstr "Septiembre"
+
+#. module: report_inventory analysis
+#: code:addons/report_inventory
+#: analysis/wizards/report_inventory_analysis.py:23
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_warehouse_id
+#, python-format
+msgid "Warehouse"
+msgstr "Almacen"
+
+#. module: report_inventory analysis
+#: model:ir.model.fields,field_description:report_inventory
+#: analysis.field_report_inventory_analysis_year
+msgid "Year"
+msgstr "Año"
+
+#. module: report_inventory analysis
+#: model:ir.ui.view,arch_db:report_inventory
+#: analysis.report_consumption_by_date
+#: analysis.report_inventory_analysis_wizard
+msgid "or"
+msgstr "o"
+
+#. module: report_inventory analysis
+#: model:ir.model,name:report_inventory
+#: analysis.model_report_inventory_analysis
+msgid "report.inventory.analysis"
+msgstr "report.inventory.analysis"

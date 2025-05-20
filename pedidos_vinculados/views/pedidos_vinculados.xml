@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='pedidos_vinculados_tree'>
+            <field name='name'>pedidos.vinculados.tree</field>
+            <field name='model'>pedidos.vinculados</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <field name="folio"/>
+                    <field name="fecha"/>
+                    <field name="partner_id"/>
+                    <field name="activo"/>
+                </tree>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='pedidos_vinculados_form'>
+            <field name='name'>pedidos.vinculados.form</field>
+            <field name='model'>pedidos.vinculados</field>
+            <field name='arch' type='xml'>
+                <form string='Linked Orders'>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="folio" required="1"/>
+                            </group>
+                            <group>
+                                <field name="fecha" readonly="1"/>
+                                <field name="partner_id" required="1" domain="[('customer','=', True),('type','=','invoice'), ('parent_id','=', False)]"/>
+                            </group>
+                            <group>
+                                <field name="activo"/>
+                            </group>
+                            <field name="description"/>
+                        </group>
+                        <notebook>
+                            <page string="Orders">
+                                <field name="order_ids" required="1" context="{'include_padre': True, 'partner_id': partner_id}" domain="[('partner_id','=',partner_id), ('state','=','done')]"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id='action_pedidos_vinculados' model='ir.actions.act_window'>
+            <field name='name'>Linked Orders</field>
+            <field name='res_model'>pedidos.vinculados</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+            <field name="view_id" ref="pedidos_vinculados_tree"/>
+        </record>
+        <menuitem id="menu_pedidos_vinculados" parent="sale.sale_order_menu" name="Linked Orders" action="action_pedidos_vinculados"/>
+    </data>
+</odoo>

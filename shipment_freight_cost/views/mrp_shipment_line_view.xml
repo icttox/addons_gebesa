@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="shipment_line_inherit_form" model="ir.ui.view">
+            <field name="name">shipment_line_inherit_form</field>
+            <field name="model">mrp.shipment</field>
+            <field name="inherit_id" ref="mrp_shipment.mrp_shipment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='total_price']" position="after">
+                    <field name="gasto_pro_flete"/>
+                    <field name="gasto_pro_flete_mxn"/>
+                    <field name="total_mxn"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

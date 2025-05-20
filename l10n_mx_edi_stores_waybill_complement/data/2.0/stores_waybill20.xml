@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="waybill_stores_complement20" inherit_id="l10n_mx_edi_extended.cfdiv40">
+        <!-- <xpath expr="//*[name()='cfdi:Comprobante']" position="attributes" t-if="record.l10n_mx_edi_origin and complement_waybill_version == '2.0'">
+            <attribute name="xmlns__cartaporte20">http://www.sat.gob.mx/CartaPorte20</attribute>
+        </xpath> -->
+        <xpath expr="(//*[local-name()='Concepto'])" position="attributes">
+            <attribute name="t-att-ClaveProdServ">line.product_id.l10n_mx_edi_code_sat_id.code if document_type[0].upper() != 'T' else line.product_id.products_services_id.code</attribute>
+            <attribute name="t-att-Importe">'%.*f' % (decimal_precision, subtotal_wo_discount(line)) if document_type[0].upper() != 'T' else '0.00'</attribute>
+            <attribute name="t-att-ValorUnitario">'%.*f' % (decimal_precision, subtotal_wo_discount(line)/line.quantity) if line.quantity and document_type[0].upper() != 'T' else '0.0'</attribute>
+        </xpath>
+        <xpath expr="*" position="inside">
+            <t t-if="record.unit_id and record.driver_id">
+                <cfdi:Complemento
+                    xmlns:cfdi="http://www.sat.gob.mx/cfd/4">
+                    <!--t t-set="distancias" t-value="record._l10n_mx_edi_waybill_distance()"/-->
+                    <cartaporte20:CartaPorte
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://www.sat.gob.mx/CartaPorte20 http://www.sat.gob.mx/sitio_internet/cfd/CartaPorte/CartaPorte20.xsd"
+                        xmlns:cartaporte20="http://www.sat.gob.mx/CartaPorte20"
+                        Version="2.0"
+                        t-att-TranspInternac="transp_internac"
+                        t-att-EntradaSalidaMerc="entrada_salida_merc"
+                        t-att-ViaEntradaSalida="via_entrada_salida"
+                        t-att-PaisOrigenDestino="pais_origen_destino"
+                        t-att-TotalDistRec="distancias['total']">
+                        <cartaporte20:Ubicaciones>
+                            <t t-set="id_orig" t-value="False"/>
+                            <t t-if="cant_trans">
+                                <t t-set="id_orig" t-value="'OR000001'"/>
+                            </t>
+                            <cartaporte20:Ubicacion TipoUbicacion="Origen" t-att-IDUbicacion="id_orig" t-att-RFCRemitenteDestinatario="record.departure_address_id.vat" t-att-NombreRemitenteDestinatario="record.departure_address_id.name" t-att-FechaHoraSalidaLlegada="record.date_departure.strftime('%Y-%m-%dT%H:%M:%S')">
+                                <cartaporte20:Domicilio 
+                                    t-att-Estado="record.departure_address_id.state_id.code" 
+                                    t-att-Pais="record.departure_address_id.country_id.l10n_mx_edi_code" 
+                                    t-att-CodigoPostal="record.departure_address_id.zip"/>
+                            </cartaporte20:Ubicacion>
+                            <t t-set="num_delivery" t-value="0"/>
+                            <!--t t-foreach="record.travel_ids" t-as="travel">
+                                <t t-foreach="travel.delivery_ids" t-as="delyvery"-->
+                            <t t-set="id_dest" t-value="False"/>
+                            <t t-if="cant_trans">
+                                <t t-set="id_dest" t-value="'DE000001'"/>
+                            </t>
+                            <cartaporte20:Ubicacion TipoUbicacion="Destino" t-att-DistanciaRecorrida="distancias[str(num_delivery)]" t-att-IDUbicacion="id_dest" t-att-RFCRemitenteDestinatario="record.partner_shipping_id.vat" t-att-FechaHoraSalidaLlegada="record.date_deliver.strftime('%Y-%m-%dT%H:%M:%S')">
+                                <cartaporte20:Domicilio 
+                                    t-att-Estado="record.partner_shipping_id.state_id.code" 
+                                    t-att-Pais="record.partner_shipping_id.country_id.l10n_mx_edi_code" 
+                                    t-att-CodigoPostal="record.partner_shipping_id.zip"/>
+                            </cartaporte20:Ubicacion>
+                            <!--t t-set="num_delivery" t-value="num_delivery + 1"/-->
+                                <!--/t>
+                            </t-->
+                        </cartaporte20:Ubicaciones>
+                        <t t-set="weight_total" t-value="record.income_invoice_id._get_invline_weights('weight', False)"/>
+                        <!-- Calcular peso bruto -->
+                        <t t-set="gross_weight" t-value="record.income_invoice_id._get_invline_weights('weight', False)"/>
+                        <t t-set="qty_total" t-value="len(record.income_invoice_id.mapped('invoice_line_ids').mapped('product_id'))"/>
+                        <cartaporte20:Mercancias 
+                            UnidadPeso="KGM"
+                            t-att-PesoBrutoTotal="gross_weight"
+                            t-att-PesoNetoTotal="weight_total" 
+                            t-att-NumTotalMercancias="qty_total">
+                            <t t-foreach="record.income_invoice_id.mapped('invoice_line_ids').mapped('product_id')" t-as="producto">
+                                <t t-set="weight" t-value="record.income_invoice_id._get_invline_weights('weight', producto.id)"/>
+                                <t t-set="qty" t-value="sum(record.income_invoice_id.mapped('invoice_line_ids').filtered(lambda x: x.product_id.id == producto.id).mapped('quantity'))"/>
+                                <cartaporte20:Mercancia 
+                                    t-att-BienesTransp="producto.products_services_id.code" 
+                                    t-att-Descripcion="producto.name"
+                                    t-att-Cantidad="qty" 
+                                    t-att-ClaveUnidad="producto.uom_id.l10n_mx_edi_code_sat_id.code" 
+                                    t-att-MaterialPeligroso="False" 
+                                    t-att-Embalaje="False"
+                                    t-att-DescripEmbalaje="False"
+                                    t-att-CveMaterialPeligroso="False"
+                                    t-att-PesoEnKg="weight"
+                                    t-att-FraccionArancelaria="producto.l10n_mx_edi_tariff_fraction_id.code if transp_internac != 'No' else False">
+                                    <!-- Pedimentos -->
+                                    <!-- Toda vez que se entiende que los traslados de las tiendas son locales este nodo no se habilita -->
+                                    <!-- t-foreach="record.mapped('travel_ids').mapped('producto_line_ids').filtered(lambda x: x.producto_id.id == producto.id).mapped('pedimento_ids')" t-as="pedimento">
+                                        <cartaporte20:Pedimentos
+                                            t-att-Pedimento="pedimento.name"/>
+                                    </t-->
+                                    <!-- ValorMercancia=""-->
+                                    <t t-if="cant_trans">
+                                        <t t-foreach="record.income_invoice_id.mapped('invoice_line_ids').filtered(lambda x: x.product_id.id == producto.id)" t-as="cant_tran">
+                                            <t t-set="id_dest" t-value="'DE000001'"/>
+                                            <cartaporte20:CantidadTransporta 
+                                                t-att-Cantidad="cant_tran.quantity" 
+                                                IDOrigen="OR000001" 
+                                                t-att-IDDestino="id_dest"/>
+                                        </t>
+                                    </t>
+                                    <!--t t-set="net_weight" t-value="record._get_invline_weights('net_weight', producto.id)"/-->
+                                    <!--t t-set="tara_weight" t-value="record._get_invline_weights('tara_weight', producto.id)"/-->
+                                    <!--cartaporte20:DetalleMercancia 
+                                        t-att-UnidadPeso="producto.unit_weight_id.code"
+                                        t-att-PesoBruto="weight"
+                                        t-att-PesoNeto="net_weight"
+                                        t-att-PesoTara="tara_weight"/-->
+                                </cartaporte20:Mercancia>
+                            </t>
+                            <cartaporte20:Autotransporte 
+                                t-att-PermSCT="record.company_id.stc_type_permit.code"
+                                t-att-NumPermisoSCT="record.company_id.sct_reg">
+                                <cartaporte20:IdentificacionVehicular 
+                                    t-att-ConfigVehicular="record.unit_id.conf_vehicle.code"
+                                    t-att-PlacaVM="record.unit_id.license_plate"
+                                    t-att-AnioModeloVM="record.unit_id.year_model"/>
+                                <cartaporte20:Seguros 
+                                t-att-AseguraRespCivil="record.insurance_supplier_id.name"
+                                t-att-PolizaRespCivil="record.insurance_policy"
+                                t-att-AseguraMedAmbiente="record.environmental_insurance_supplier_id.name"
+                                t-att-PolizaMedAmbiente="record.environmental_insurance_policy"/>
+                                <t t-if="record.unit_id.trailer">
+                                    <cartaporte20:Remolques>
+                                        <cartaporte20:Remolque 
+                                            t-att-SubTipoRem="record.trailer1_id.sub_type_rem.code"
+                                            t-att-Placa="record.trailer1_id.license_plate"/>
+                                        <t t-if="record.trailer2_id">
+                                            <cartaporte20:Remolque 
+                                            t-att-SubTipoRem="record.trailer2_id.sub_type_rem.code"
+                                            t-att-Placa="record.trailer2_id.license_plate"/>
+                                        </t>
+                                    </cartaporte20:Remolques>
+                                </t>
+                            </cartaporte20:Autotransporte>
+                        </cartaporte20:Mercancias>
+                        <cartaporte20:FiguraTransporte>
+                            <cartaporte20:TiposFigura 
+                                TipoFigura="01" 
+                                t-att-RFCFigura="record.driver_id.rfc"
+                                t-att-NumLicencia="record.driver_id.driver_license"
+                                t-att-NombreFigura="record.driver_id.name">
+                                <!--cartaporte20:Domicilio 
+                                    t-att-Calle="record.driver_id.address_home_id.street_name"
+                                    t-att-Localidad="record.driver_id.address_home_id.l10n_mx_edi_locality_id.code" 
+                                    t-att-Municipio="record.driver_id.address_home_id.city_id.l10n_mx_edi_code"
+                                    t-att-Estado="record.driver_id.address_home_id.state_id.code"
+                                    t-att-Pais="record.driver_id.address_home_id.country_id.l10n_mx_edi_code"
+                                    t-att-CodigoPostal="record.driver_id.address_home_id.zip" /-->
+                            </cartaporte20:TiposFigura>
+                            <t t-if="record.driver_two_id">
+                                <cartaporte20:TiposFigura 
+                                    TipoFigura="01"
+                                    t-att-RFCFigura="record.driver_two_id.rfc"
+                                    t-att-NumLicencia="record.driver_two_id.driver_license"
+                                    t-att-NombreFigura="record.driver_two_id.name">
+                                    <!--cartaporte20:Domicilio 
+                                        t-att-Calle="record.driver_two_id.address_home_id.street_name"
+                                        t-att-Localidad="record.driver_two_id.address_home_id.l10n_mx_edi_locality_id.code" 
+                                        t-att-Municipio="record.driver_two_id.address_home_id.city_id.l10n_mx_edi_code"
+                                        t-att-Estado="record.driver_two_id.address_home_id.state_id.code"
+                                        t-att-Pais="record.driver_two_id.address_home_id.country_id.l10n_mx_edi_code"
+                                        t-att-CodigoPostal="record.driver_two_id.address_home_id.zip" /-->
+                               </cartaporte20:TiposFigura>
+                            </t>
+                        </cartaporte20:FiguraTransporte>
+                     </cartaporte20:CartaPorte>
+                </cfdi:Complemento>
+            </t>
+        </xpath>
+    </template>
+</odoo>

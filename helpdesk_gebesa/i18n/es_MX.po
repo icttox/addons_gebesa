@@ -1,0 +1,187 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* helpdesk_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20181126\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-13 20:21+0000\n"
+"PO-Revision-Date: 2021-04-13 15:31-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_create_task_ticket__acceptance_criterias
+msgid "Acceptance Criterias"
+msgstr "Criterios de aceptación"
+
+#. module: helpdesk_gebesa
+#: selection:make.maintenance.req,tipo:0
+msgid "Corrective"
+msgstr "Correctivo"
+
+#. module: helpdesk_gebesa
+#: code:addons/helpdesk_gebesa/models/helpdesk_ticket.py:26
+#, python-format
+msgid "Create Maintenance Req"
+msgstr "Crear requerimiento de mantenimiento"
+
+#. module: helpdesk_gebesa
+#: code:addons/helpdesk_gebesa/models/helpdesk_ticket.py:40
+#: model_terms:ir.ui.view,arch_db:helpdesk_gebesa.create_task_wizard
+#: model_terms:ir.ui.view,arch_db:helpdesk_gebesa.helpdesk_ticket_view
+#, python-format
+msgid "Create Task"
+msgstr "Crear Tarea"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_create_task_ticket__create_uid
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_make_maintenance_req__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_create_task_ticket__create_date
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_make_maintenance_req__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_create_task_ticket__display_name
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_make_maintenance_req__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: helpdesk_gebesa
+#: code:addons/helpdesk_gebesa/wizards/create_task.py:35
+#, python-format
+msgid "Doesnt have a project assigned."
+msgstr "No tiene asignado un proyecto."
+
+#. module: helpdesk_gebesa
+#: code:addons/helpdesk_gebesa/wizards/create_task.py:37
+#, python-format
+msgid "Doesnt have an assigned user."
+msgstr "No tiene un usuario asignado."
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_make_maintenance_req__employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_make_maintenance_req__equipment_id
+msgid "Equipo/Maquina"
+msgstr ""
+
+#. module: helpdesk_gebesa
+#: model:ir.model,name:helpdesk_gebesa.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Ticket del Servicio de Asistencia"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_create_task_ticket__id
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_make_maintenance_req__id
+msgid "ID"
+msgstr ""
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_create_task_ticket____last_update
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_make_maintenance_req____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_create_task_ticket__write_uid
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_make_maintenance_req__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_create_task_ticket__write_date
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_make_maintenance_req__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_helpdesk_ticket__maintenance_id
+msgid "Maintenance Request"
+msgstr "Petición de Mantenimiento"
+
+#. module: helpdesk_gebesa
+#: selection:make.maintenance.req,tipo:0
+msgid "Predictive"
+msgstr "Predictivo"
+
+#. module: helpdesk_gebesa
+#: selection:make.maintenance.req,tipo:0
+msgid "Preventive"
+msgstr "Preventivo"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_create_task_ticket__priority_id
+msgid "Priority"
+msgstr "Prioridad"
+
+#. module: helpdesk_gebesa
+#: model_terms:ir.ui.view,arch_db:helpdesk_gebesa.helpdesk_ticket_view
+#: model_terms:ir.ui.view,arch_db:helpdesk_gebesa.make_maintenance_req_wizard
+msgid "Request Maintenance"
+msgstr "Petición de Mantenimiento"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_make_maintenance_req__user_id
+msgid "Responsable"
+msgstr "Responsable"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_helpdesk_ticket__task_id
+msgid "Task"
+msgstr "Tarea"
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,help:helpdesk_gebesa.field_helpdesk_ticket__task_id
+msgid "The task must have the same customer as this ticket."
+msgstr "La tarea debe tener el mismo cliente que este ticket."
+
+#. module: helpdesk_gebesa
+#: code:addons/helpdesk_gebesa/models/helpdesk_ticket.py:24
+#, python-format
+msgid "This maintenance request has already been assigned."
+msgstr "Esta solicitud de mantenimiento ya se ha asignado."
+
+#. module: helpdesk_gebesa
+#: code:addons/helpdesk_gebesa/models/helpdesk_ticket.py:38
+#, python-format
+msgid "This task has already been assigned."
+msgstr "Esta tarea ya se ha asignado."
+
+#. module: helpdesk_gebesa
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_create_task_ticket__type_id
+#: model:ir.model.fields,field_description:helpdesk_gebesa.field_make_maintenance_req__tipo
+msgid "Type"
+msgstr "Tipo"
+
+#. module: helpdesk_gebesa
+#: code:addons/helpdesk_gebesa/wizards/create_task.py:31
+#: code:addons/helpdesk_gebesa/wizards/make_maintenance_req.py:39
+#, python-format
+msgid "Wrong model."
+msgstr "Modelo equivocado."
+
+#. module: helpdesk_gebesa
+#: model:ir.model,name:helpdesk_gebesa.model_create_task_ticket
+msgid "create.task.ticket"
+msgstr ""
+
+#. module: helpdesk_gebesa
+#: model:ir.model,name:helpdesk_gebesa.model_make_maintenance_req
+msgid "make.maintenance.req"
+msgstr ""

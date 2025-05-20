@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="l10n_mx_edi_retentions_type_form">
+            <field name="name">l10n_mx_edi.retentions.type.form</field>
+            <field name="model">l10n_mx_edi.retentions.type</field>
+            <field name="arch" type="xml">
+                <form string="Retention type">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>    
+
+        <record model="ir.ui.view" id="l10n_mx_edi_retentions_type_tree">
+            <field name="name">l10n_mx_edi.retentions.type.tree</field>
+            <field name="model">l10n_mx_edi.retentions.type</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Retention types" editable="bottom">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="l10n_mx_edi_retentions_type_action">
+                <field name="name">Retention types</field>
+                <field name="res_model">l10n_mx_edi.retentions.type</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <field name="help" type="html">
+                    <p class="o_view_nocontent_smiling_face">Create the first retention types</p>
+                </field>
+        </record>
+
+        <menuitem id="l10n_mx_edi_retentions_conf" name="Retentions" parent="account.menu_finance_configuration" sequence="20"/>
+        <menuitem id="l10n_mx_edi_retentions_type_menu" name="Retention types" parent="l10n_mx_edi_retentions_conf" action="l10n_mx_edi_retentions_type_action"/>
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='report_quality_alert_form_wizard'>
+            <field name='name'>report.quality.alert.form.wizard</field>
+            <field name='model'>report.quality.alert.wizard</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <group>
+                    </group>
+                    <footer>
+                        <button name="update_id_microsip" string="Import" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_report_quality_alert_wizard" model="ir.actions.act_window">
+            <field name="name">Reporte Interno de Producto No Conforme</field>
+            <field name="res_model">report.quality.alert.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="report_quality_alert_wizard_menu" name="Reporte Interno de Producto No Conforme" parent="quality_control.menu_quality_reporting" action="action_report_quality_alert_wizard"/>
+    </data>
+</odoo>

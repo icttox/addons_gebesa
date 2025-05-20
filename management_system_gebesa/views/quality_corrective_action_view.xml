@@ -1,0 +1,167 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="quality_corrective_action_tree">
+      <field name="name">quality.corrective.action.tree</field>
+      <field name="model">quality.corrective.action</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="date"/>
+          <field name="folio"/>
+          <field name="motive"/>
+          <field name="other"/>
+          <field name="departament_id"/>
+          <field name="responsible_id"/>
+          <field name="company_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="quality_corrective_action_form">
+      <field name="name">quality.corrective.action.form</field>
+      <field name="model">quality.corrective.action</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <button string="Email Notification" name="send_acction_corrective_email" type="object" class="oe_highlight"/>
+            <button name="action_process" type="object" string="Process" class="oe_highlight"/>
+            <button name="action_closed" type="object" string="Closed" class="oe_highlight"/>
+            <field name="status" widget="statusbar"/>
+          </header>
+          <sheet>
+            <group>
+              <group>              
+                <field name="date"/>
+                <field name="motive"/>
+                <field name="departament_id"/>
+              </group>
+              <group>              
+                <field name="folio" readonly="1"/>
+                <field name="other"/>
+                <field name="responsible_id"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Description">
+                <field name="description" string="Description of the nonconformity"/>
+              </page>
+              <page string="Action contingent">
+                <field name="action_line_ids">
+                  <tree editable="bottom" string="Contingent Actions">
+                    <field name="description"/>
+                    <field name="responsible_id"/>
+                    <field name="date_commitment"/>
+                    <field name="date_close"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="Root cause analysis">
+                <group>
+                <field name="why"/>
+                <field name="why_1"/>
+                <field name="why_2"/>
+                <field name="why_3"/>
+                <field name="why_4"/>
+                <field name="cause_root"/>
+              </group>
+              </page>
+              <page string="Actions corrective">
+                <field name="corrective_actions_ids">
+                  <tree editable="bottom" string="Corrective Action">
+                    <field name="description"/>
+                    <field name="responsible_id"/>
+                    <field name="date_commitment"/>
+                    <field name="date_close"/>
+                  </tree>
+                </field> 
+              </page>
+              <page string="Information SGC">
+                <group>
+                  <group>
+                    <field name="exist"/>
+                    <field name="requer"/>
+                    <field name="change"/>
+                  </group>
+                  <group>
+                    <field name ="indicate" attrs="{'invisible':[('exist', '!=', True)]}"/>
+                    <field name ="indicate_1" attrs="{'invisible':[('requer', '!=', True)]}"/>
+                    <field name ="indicate_2" attrs="{'invisible':[('change', '!=', True)]}"/>
+                  </group>
+                </group>
+              </page>
+              <page string="Close actions">
+                <group>
+                  <group>
+                    <field name="check_id"/>
+                  </group>
+                  <group>
+                    <field name ="revised_id"/>
+                  </group>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+          <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+        </form>
+      </field>
+    </record>
+
+    <record id="quality_corrective_action_view_kanban" model="ir.ui.view">
+      <field name="name">quality.corrective.action.kanban</field>
+      <field name="model">quality.corrective.action</field>
+      <field name="priority">10</field>
+      <field name="arch" type="xml">
+        <kanban default_group_by="status">
+          <field name="folio"/>
+          <field name="date"/>
+          <field name="motive"/>
+          <templates>
+            <t t-name="kanban-box">
+              <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                <div class="row">
+                  <div class="col-12">
+                    <strong><span><li>Folio: <field name="folio"/></li></span></strong>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <li>Motivo: <field name="motive"/></li>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <field name="departament_id"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <field name="responsible_id"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <field name="date"/>
+                  </div>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+    
+    <record model="ir.actions.act_window" id="quality_corrective_action_action">
+      <field name="name">Corrective action</field>
+      <field name="res_model">quality.corrective.action</field>
+      <field name="view_mode">kanban,tree,form</field>
+    </record>
+    
+    <menuitem id="iso_actions" name="ISO" parent="quality_control.menu_quality_root"/>
+
+    <menuitem name="Actions corrective" id="quality_corrective_action_menu" parent="management_system_gebesa.iso_actions"
+              action="management_system_gebesa.quality_corrective_action_action"/>
+    
+  </data>
+</odoo>

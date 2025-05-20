@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_normal_form_view'>
+            <field name='name'>product.normal.individual.name.form.view</field>
+            <field name='model'>product.product</field>
+            <field name='inherit_id' ref="product.product_normal_form_view"/>
+            <field name='arch' type='xml'>
+                <header>
+                    <button name="propagar_peso_volumen_variantes" string="Propagar peso y volumen a variantes" type="object"/> 
+                </header>
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//div[@class='oe_title']" position="inside">
+                    <div name="indiv_name">
+                        <label class="oe_edit_only" for="individual_name"/>
+                        <field name='individual_name' readonly="1"/>
+                    </div>
+                </xpath>
+                <field name="type" position="before">
+                    <field name="quotation_product" string="Quotation Product" groups="product_structure_gebesa.group_quotation_product"/>
+                </field>
+                <!--
+                <xpath expr="//notebook/page/group/field[@name='type']" position="before">
+                    <field name="quotation_product" string="Quotation Product" groups="product_structure_gebesa.group_quotation_product"/>
+                </xpath> -->
+                <field name="item_ids" position="replace">
+                    <field name="item_ids" widget="many2many">
+                        <tree string="Pricelist Items">
+                            <field name="pricelist_id" string="Pricelist"/>
+                            <field name="min_quantity"/>
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                            <field name="price" string="Price"/>
+                            <!--field name="base" invisible="1"/>
+                            <field name="sequence" invisible="1"/>
+                            <field name="price_discount" invisible="1"/-->
+                            <field name="applied_on"/>
+                            <field name="compute_price"/>
+                        </tree>
+                    </field>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

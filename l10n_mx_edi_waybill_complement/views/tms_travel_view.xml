@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='freight_travel_form_inherit'>
+            <field name='name'>freight.travel.form.inherit</field>
+            <field name='model'>tms.travel</field>
+            <field name='inherit_id' ref="flete_gebesa.freight_travel_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='transportable_line_ids']/tree/field[@name='transportable_uom_id']" position="after">
+                    <field name="travel_id" invisible="1"/>
+                    <field name="delivery_id" domain="[('travel_id', '=', travel_id)]"/>
+                    <field name="gross_weight"/>
+                    <field name="weight"/>
+                </xpath>
+                <xpath expr="//field[@name='transportable_line_ids']/form/group/group/field[@name='quantity']" position="after">
+                    <field name="gross_weight"/>
+                    <field name="travel_id" invisible="1"/>
+                    <field name="delivery_id" domain="[('travel_id', '=', travel_id)]"/>
+                </xpath>
+                <xpath expr="//field[@name='transportable_line_ids']/form/group/group/field[@name='transportable_uom_id']" position="after">
+                    <field name="weight"/>
+                </xpath>
+                <xpath expr="//field[@name='transportable_line_ids']/form/group/field[@name='notes']" position="after">
+                    <field name="pedimento_ids">
+                        <tree editable="bottom">
+                            <field name="document_type" required="1"/>
+                            <field name="name"/>
+                            <field name="folio"/>
+                            <field name="importer_rfc"/>
+                        </tree>
+                    </field>
+                </xpath>
+            </field>
+        </record>        
+        <record model='ir.ui.view' id='freight_travel_form'>
+            <field name='name'>freight.travel.form</field>
+            <field name='model'>tms.travel</field>
+            <field name='inherit_id' ref="tms.view_tms_travel_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='trailer2_id']" position="after">
+                    <field name="conf_vehicle_id" required="1"/>
+                </xpath>
+                <xpath expr="//sheet/group/group/field[@name='paid']" position="after">
+                    <field name="l10n_mx_edi_reverse_logistics"/>
+                    <field name="insurance_supplier_id"/>
+                    <field name="insurance_policy"/>
+                    <field name="dangerous_material" invisible="1"/>
+                    <field name="environmental_insurance_supplier_id" attrs="{'required':[ ('dangerous_material', '=', True)]}"/>
+                    <field name="environmental_insurance_policy" attrs="{'required':[ ('dangerous_material', '=', True)]}"/>
+                </xpath>
+                <xpath expr="//notebook/page[last()]" position="after">
+                    <page string="Deliveries">
+                        <group>
+                            <group>
+                                <field name="via_in_out_id" attrs="{'required':[ ('international','=',True)]}"/>
+                                <field name="in_out" attrs="{'required':[ ('international','=',True)]}"/>
+                            </group>
+                            <group>
+                                <field name="international"/>
+                            </group>
+                            <field name="delivery_ids"  nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="partner_id" domain="[('type', '=', 'delivery'), ('place_id', '!=', False)]"/>
+                                    <field name="distance_previous_point"/>
+                                    <field name="date_time_delivery"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

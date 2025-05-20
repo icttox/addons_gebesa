@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_partner_waybill_complement" model="ir.ui.view">
+            <field name="name">view.partner.waybill.complement</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/group/field[@name='transporter']" position="after">
+                    <field name="l10n_mx_edi_skip_waybill"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

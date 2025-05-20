@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='stock_picking_view_form'>
+            <field name='name'>stock.picking.related.segment.form</field>
+            <field name='model'>stock.picking</field>
+            <field name='inherit_id' ref="stock.view_picking_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/sheet/group/group/field[@name='scheduled_date']" position="before">
+                    <field name="country_fiscal_code" attrs="{'invisible':True}"/>
+                    <field name="code_move_type" attrs="{'invisible':True}"/>
+                    <field name='pediment_number' attrs="{'invisible':True}"/>
+                   	<field name='patente_aduanal' attrs="{'invisible':True}"/>
+                    <field name='entry_date' attrs="{'invisible':True}"/>
+                    <field name='clave_aduanal' attrs="{'invisible':True}"/>
+                    <field name='cove' attrs="{'invisible':True}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

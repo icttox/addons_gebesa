@@ -1,0 +1,66 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_route_family
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-02 18:24+0000\n"
+"PO-Revision-Date: 2018-11-02 18:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_route_family
+#: code:addons/product_route_family/models/sale_order_line.py:39
+#, python-format
+msgid "Family %s has more than one production route assigned"
+msgstr ""
+
+#. module: product_route_family
+#: code:addons/product_route_family/models/sale_order_line.py:32
+#, python-format
+msgid "Family %s has not assigned a production route"
+msgstr ""
+
+#. module: product_route_family
+#: model:ir.model,name:product_route_family.model_stock_location_route
+msgid "Inventory Routes"
+msgstr ""
+
+#. module: product_route_family
+#: code:addons/product_route_family/models/sale_order_line.py:22
+#: code:addons/product_route_family/models/sale_order_line.py:31
+#: code:addons/product_route_family/models/sale_order_line.py:38
+#, python-format
+msgid "Odoo Warning!"
+msgstr ""
+
+#. module: product_route_family
+#: code:addons/product_route_family/models/product_route_family.py:13
+#: code:addons/product_route_family/models/stock_location_route.py:13
+#: model:ir.model.fields,field_description:product_route_family.field_stock_location_route_family_ids
+#, python-format
+msgid "Preferred for family"
+msgstr ""
+
+#. module: product_route_family
+#: code:addons/product_route_family/models/sale_order_line.py:23
+#, python-format
+msgid "Product %s has no family assigned"
+msgstr ""
+
+#. module: product_route_family
+#: model:ir.model,name:product_route_family.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: product_route_family
+#: model:ir.model,name:product_route_family.model_product_family
+msgid "product.family"
+msgstr ""
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_hubspot_odoo_order_form">
+            <field name="name">view.hubspot.odoo.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/notebook/page/group/group/field[@name='company_id']" position="after">
+                    <field name="folio_hubspot" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

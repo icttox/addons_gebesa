@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_git_user" model="ir.ui.view">
+        <field name="name">project.git.user.form</field>
+        <field name="model">project.git.user</field>
+        <field name="inherit_id" ref="project_git.view_git_user_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='email']" position="after">
+                    <field name="odoo_user"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>

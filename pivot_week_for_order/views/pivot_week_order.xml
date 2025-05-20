@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--
+        Work Order Report
+        -->
+        <record id="sale_order_pivot" model="ir.ui.view">
+            <field name="name">sale.order.pivot</field>
+            <field name="model">sale.order</field>
+            <field name='inherit_id' ref="sale.view_sale_order_pivot"/>
+            <field name="arch" type="xml">
+                <xpath expr="/pivot/field[@name='date_order']" position="replace">
+                    <field name="analytic_account_id" type="row"/>
+                    <field name='date_order' type="col" interval="week"/>
+                </xpath>
+                <xpath expr="/pivot/field[@name='amount_total']" position="replace">
+                    <field name='net_sale_rate_mex' type="measure"/>
+                </xpath>
+            </field>
+        </record>
+        <!--record id="view_order_tree_gebesa" model="ir.ui.view">
+            <field name="name">view.order.tree.gebesa</field>
+            <field name="model">sale.order</field>
+            <field name='inherit_id' ref="sale.view_order_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='amount_total']" position="replace"-->
+                    <!--<field name='amount_pending_total' sum="Total Amount Mex" widget="monetary"/>
+                    <field name='amount_tax' sum="Taxes" widget="monetary"/> -->
+                    <!--field name='net_sale_rate_mex' sum="Vta Neta MXN" widget="monetary"/>
+                    <field name='amount_pending_mex' sum="Imp X Sur MXN" widget="monetary"/>
+                </xpath-->
+                <!--
+                <xpath expr="/tree/field[@name='invoice_status']" position="after">
+                    <field name='amount_total' type="measure" sum="Total Tax Included" widget="monetary"/>
+                </xpath> -->
+            <!--/field>
+        </record--> 
+    </data>
+</odoo>

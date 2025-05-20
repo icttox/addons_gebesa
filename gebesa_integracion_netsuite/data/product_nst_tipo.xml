@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="nst_tipo_009" model="product.nst.tipo">
+            <field name="name">ccSEMI ESPECIALES</field> 
+        	<field name="nstid">9</field>
+        	<field name="product_nstline_id" ref="nst_line_05"/>
+        </record>
+        <record id="nst_tipo_017" model="product.nst.tipo">
+            <field name="name">ccSEMI ESPECIALES</field> 
+        	<field name="nstid">17</field>
+        	<field name="product_nstline_id" ref="nst_line_06"/> 
+        </record>
+        <record id="nst_tipo_027" model="product.nst.tipo">
+            <field name="name">leSEMI ESPECIALES</field> 
+        	<field name="nstid">27</field>
+        	<field name="product_nstline_id" ref="nst_line_08"/> 
+        </record>
+        <record id="nst_tipo_037" model="product.nst.tipo">
+            <field name="name">lgSEMI ESPECIALES</field> 
+        	<field name="nstid">37</field>
+        	<field name="product_nstline_id" ref="nst_line_09"/> 
+        </record>
+        <record id="nst_tipo_043" model="product.nst.tipo">
+            <field name="name">lmSEMI ESPECIALES</field> 
+        	<field name="nstid">43</field>
+        	<field name="product_nstline_id" ref="nst_line_10"/> 
+        </record>
+        <record id="nst_tipo_052" model="product.nst.tipo">
+            <field name="name">lrSEMI ESPECIALES</field> 
+        	<field name="nstid">52</field>
+        	<field name="product_nstline_id" ref="nst_line_11"/> 
+        </record>
+        <record id="nst_tipo_061" model="product.nst.tipo">
+            <field name="name">lsSEMI ESPECIALES</field> 
+        	<field name="nstid">61</field>
+        	<field name="product_nstline_id" ref="nst_line_12"/> 
+        </record>
+        <record id="nst_tipo_069" model="product.nst.tipo">
+            <field name="name">ltSEMI ESPECIALES</field> 
+        	<field name="nstid">69</field>
+        	<field name="product_nstline_id" ref="nst_line_13"/> 
+        </record>
+        <record id="nst_tipo_075" model="product.nst.tipo">
+            <field name="name">luSEMI ESPECIALES</field> 
+        	<field name="nstid">75</field>
+        	<field name="product_nstline_id" ref="nst_line_14"/> 
+        </record>
+        <record id="nst_tipo_080" model="product.nst.tipo">
+            <field name="name">lvSEMI ESPECIALES</field> 
+        	<field name="nstid">80</field>
+        	<field name="product_nstline_id" ref="nst_line_15"/> 
+        </record>
+        <record id="nst_tipo_088" model="product.nst.tipo">
+            <field name="name">peSEMI ESPECIALES</field> 
+        	<field name="nstid">88</field>
+        	<field name="product_nstline_id" ref="nst_line_16"/> 
+        </record>
+        <record id="nst_tipo_096" model="product.nst.tipo">
+            <field name="name">poSEMI ESPECIALES</field> 
+        	<field name="nstid">96</field>
+        	<field name="product_nstline_id" ref="nst_line_17"/> 
+        </record>
+        <record id="nst_tipo_105" model="product.nst.tipo">
+            <field name="name">psSEMI ESPECIALES</field> 
+        	<field name="nstid">105</field>
+        	<field name="product_nstline_id" ref="nst_line_18"/> 
+        </record>
+        <record id="nst_tipo_112" model="product.nst.tipo">
+            <field name="name">mcSEMI ESPECIALES</field> 
+        	<field name="nstid">112</field>
+        	<field name="product_nstline_id" ref="nst_line_03"/> 
+        </record>
+        <record id="nst_tipo_119" model="product.nst.tipo">
+            <field name="name">mySEMI ESPECIALES</field> 
+        	<field name="nstid">119</field>
+        	<field name="product_nstline_id" ref="nst_line_19"/> 
+        </record>
+        <record id="nst_tipo_126" model="product.nst.tipo">
+            <field name="name">mgSEMI ESPECIALES</field> 
+        	<field name="nstid">126</field>
+        	<field name="product_nstline_id" ref="nst_line_20"/> 
+        </record>
+        <record id="nst_tipo_134" model="product.nst.tipo">
+            <field name="name">mnSEMI ESPECIALES</field> 
+        	<field name="nstid">134</field>
+        	<field name="product_nstline_id" ref="nst_line_22"/> 
+        </record>
+        <record id="nst_tipo_161" model="product.nst.tipo">
+            <field name="name">meESPECIAL</field> 
+        	<field name="nstid">161</field>
+        	<field name="product_nstline_id" ref="nst_line_35"/> 
+        </record>
+        <record id="nst_tipo_166" model="product.nst.tipo">
+            <field name="name">leESPECIAL</field> 
+        	<field name="nstid">166</field>
+        	<field name="product_nstline_id" ref="nst_line_36"/> 
+        </record>
+        <record id="nst_tipo_168" model="product.nst.tipo">
+            <field name="name">ccESPECIAL</field> 
+        	<field name="nstid">168</field>
+        	<field name="product_nstline_id" ref="nst_line_37"/> 
+        </record>
+        <record id="nst_tipo_173" model="product.nst.tipo">
+            <field name="name">SeESPECIAL</field> 
+        	<field name="nstid">173</field>
+        	<field name="product_nstline_id" ref="nst_line_40"/> 
+        </record>
+        <record id="nst_tipo_174" model="product.nst.tipo">
+            <field name="name">meESPECIAL</field> 
+        	<field name="nstid">174</field>
+        	<field name="product_nstline_id" ref="nst_line_41"/> 
+        </record>
+        <record id="nst_tipo_175" model="product.nst.tipo">
+            <field name="name">maSEMI ESPECIALES</field> 
+        	<field name="nstid">175</field>
+        	<field name="product_nstline_id" ref="nst_line_01"/> 
+        </record>
+        <record id="nst_tipo_176" model="product.nst.tipo">
+            <field name="name">mlSEMI ESPECIALES</field> 
+        	<field name="nstid">176</field>
+        	<field name="product_nstline_id" ref="nst_line_02"/> 
+        </record>
+        <record id="nst_tipo_177" model="product.nst.tipo">
+            <field name="name">lbSEMI ESPECIALES</field> 
+        	<field name="nstid">177</field>
+        	<field name="product_nstline_id" ref="nst_line_07"/> 
+        </record>
+        <record id="nst_tipo_178" model="product.nst.tipo">
+            <field name="name">muSEMI ESPECIALES</field> 
+        	<field name="nstid">178</field>
+        	<field name="product_nstline_id" ref="nst_line_21"/> 
+        </record>
+        <record id="nst_tipo_197" model="product.nst.tipo">
+            <field name="name">bkSEMI ESPECIALES</field> 
+        	<field name="nstid">197</field>
+        	<field name="product_nstline_id" ref="nst_line_43"/> 
+        </record>
+        <record id="nst_tipo_212" model="product.nst.tipo">
+            <field name="name">cbSEMI ESPECIALES</field> 
+        	<field name="nstid">212</field>
+        	<field name="product_nstline_id" ref="nst_line_49"/> 
+        </record>
+        <record id="nst_tipo_223" model="product.nst.tipo">
+            <field name="name">cfSEMI ESPECIALES</field> 
+        	<field name="nstid">223</field>
+        	<field name="product_nstline_id" ref="nst_line_53"/> 
+        </record>
+    </data>
+</odoo>

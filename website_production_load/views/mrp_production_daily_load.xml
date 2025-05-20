@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_production_daily_load_employee_form'>
+            <field name='name'>mrp.production.daily.load.employee.form</field>
+            <field name='model'>mrp.production.daily.load</field>
+            <field name='inherit_id' ref="mrp_production_daily_load.mrp_production_daily_load__form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='create_uid']" position="after">
+                    <field name='employee_id' readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

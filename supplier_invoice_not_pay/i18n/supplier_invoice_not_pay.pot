@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* supplier_invoice_not_pay
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-31 23:48+0000\n"
+"PO-Revision-Date: 2017-07-31 23:48+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: supplier_invoice_not_pay
+#: model:ir.model,name:supplier_invoice_not_pay.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: supplier_invoice_not_pay
+#: code:addons/supplier_invoice_not_pay/models/account_invoice.py:12
+#: model:ir.model.fields,field_description:supplier_invoice_not_pay.field_account_invoice_not_pay
+#, python-format
+msgid "Not Pay Invoice"
+msgstr ""
+
+#. module: supplier_invoice_not_pay
+#: model:res.groups,name:supplier_invoice_not_pay.group_notpay_invoice_supplier
+msgid "Not Pay Supplier / Manager"
+msgstr ""
+
+#. module: supplier_invoice_not_pay
+#: code:addons/supplier_invoice_not_pay/models/account_invoice.py:27
+#, python-format
+msgid "Not Pay the Bill"
+msgstr ""
+
+#. module: supplier_invoice_not_pay
+#: code:addons/supplier_invoice_not_pay/models/account_invoice.py:19
+#: model:ir.model.fields,field_description:supplier_invoice_not_pay.field_account_invoice_notpay_text
+#, python-format
+msgid "Pay Invoice"
+msgstr ""
+
+#. module: supplier_invoice_not_pay
+#: code:addons/supplier_invoice_not_pay/models/account_invoice.py:26
+#, python-format
+msgid "Pay the Bill"
+msgstr ""
+
+#. module: supplier_invoice_not_pay
+#: model:ir.model,name:supplier_invoice_not_pay.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: supplier_invoice_not_pay
+#: code:addons/supplier_invoice_not_pay/models/account_payment.py:16
+#, python-format
+msgid "The payment cannot be processed because an Invoice(s) has the option of Not Pay! Check with the Purchasing Team this Information."
+msgstr ""
+

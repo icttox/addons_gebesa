@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_bom_group_caliber'>
+        	<field name='name'>mrp.bom.group.caliber</field>
+        	<field name='model'>mrp.bom</field>
+        	<field name='inherit_id' ref="mrp.mrp_bom_form_view"/>
+        	<field name='arch' type='xml'>
+                <xpath expr="/form/sheet/notebook/page/field[@name='bom_line_ids']" position="after">
+                    <group>
+                        <group>
+                            <div class="oe_inline">
+                                <field name="scrap_ids" widget="one2many_list">
+                                    <tree string="Scrap">
+                                        <field name="caliber_id"/>
+                                        <field name="kilos"/>
+                                        <field name="metros"/>
+                                        <field name="scrap"/>
+                                    </tree>
+                                </field>
+                            </div>
+                        </group> 
+                    </group>
+                </xpath>
+        	</field>
+        </record>
+    </data>
+</odoo>

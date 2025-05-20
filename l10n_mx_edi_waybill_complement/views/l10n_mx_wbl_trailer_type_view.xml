@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="wbl_trailer_type_form_view">
+            <field name="name">l10n.mx.wbl.trailer.type.form</field>
+            <field name="model">l10n.mx.wbl.trailer.type</field>
+            <field name="arch" type="xml">
+                <form string="Form Waybill Trailer Type">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wbl_trailer_type_tree_view">
+            <field name="name">l10n.mx.wbl.trailer.type.tree</field>
+            <field name="model">l10n.mx.wbl.trailer.type</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Waybill Trailer Type">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="active"/>        
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="wbl_trailer_type_action">
+            <field name="name">Waybill Trailer Type</field>
+            <field name="res_model">l10n.mx.wbl.trailer.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the waybill trailer type
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="wbl_trailer_type_action" id="menu_wbl_trailer_type" name="Trailer Type" parent="menu_wbl_complement" sequence="90"/>
+    </data>
+</odoo>
+    

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='production_matrix_report_tree'>
+            <field name='name'>production.matrix.report.tree</field>
+            <field name='model'>production.matrix.report</field>
+            <field name='arch' type='xml'>
+                <tree string='Production matrix'>
+                    <field name='product_id'/>
+                    <field name='pending_qty'/>
+                    <field name='existence_qty'/>
+                    <field name='different_qty'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="production_matrix_report_form">
+            <field name="name">production.matrix.report.form</field>
+            <field name="model">production.matrix.report</field>
+            <field name="arch" type="xml">
+                <form string="Production matrix">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="product_id"/>
+                            <group>
+                                <field name='pending_qty'/>
+                                <field name='existence_qty'/>
+                                <field name='different_qty'/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="production_matrix_report_action" model="ir.actions.act_window">
+            <field name="name">Production matrix</field>
+            <field name="res_model">production.matrix.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="production_matrix_report_menu" name="Production matrix" parent="sale.menu_sale_report" action="production_matrix_report_action"/>
+    </data>
+</odoo>

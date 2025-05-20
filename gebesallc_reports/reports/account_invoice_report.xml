@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="ac1"
+            model="account.invoice"
+            string="Account Invoice Gebesa LLC Report"
+            name="gebesallc_reports.report_account1"
+            file="gebesallc_reports.report_account1"
+            report_type="qweb-pdf" />
+
+         <template id="account_invoice_layout">
+            <t t-call="gebesallc_reports.account_invoice_header" />
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <t t-call="gebesallc_reports.account_invoice_footer" />
+        </template>
+
+        <template id="account_invoice_header">
+            <div class="header">
+                        <div class="row">
+                            <div class="col-8">
+                                <img src="/gebesallc_reports/static/img/duraboxx.png" style="width: 260px; height: 105px; margin-top: 20px;margin-right: 5px;"/>
+                            </div>
+                            <div class="col-4">
+                                <h2 t-if="doc.type == 'out_invoice'" style="font-weight: bold;">INVOICE</h2>
+                                <h2 t-if="doc.type == 'out_refund'" style="font-weight: bold;">CREDIT NOTE</h2>
+                                <h2 t-if="doc.type == 'in_refund'" style="font-weight: bold;">VENDOR CREDIT NOTE</h2>
+                                <h2 t-if="doc.type == 'in_invoice'" style="font-weight: bold;">VENDOR BILL</h2>
+                                <table width="100%" class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th t-if="doc.type == 'out_invoice' or doc.type == 'in_invoice'">Invoice</th>
+                                            <th t-if="doc.type == 'out_refund' or doc.type == 'in_refund'">Credit Note</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span t-field="doc.date_invoice"/></td>
+                                            <td><span t-field="doc.number"/></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+        </template>
+
+        <template id="account_invoice_footer">
+            <div class="row">
+                <div class="col-6">
+                    <p style="font-weight: bold;">For checks:</p>
+                    <br/>
+                    <p style="font-weight: bold;">1101 Ladora Drive</p>
+                    <p style="font-weight: bold;">Wentzville, MO 63385</p>
+                    <p style="font-weight: bold;">Checks must be Pay in order to GEBESA LLC</p>
+                </div>
+                <div class="col-6">
+                    <p style="font-weight: bold;">For wire/ACH Transfers:</p>
+                    <p style="font-weight: bold;">Account Name: GEBESA, LLC</p>
+                    <p style="font-weight: bold;">Bank Name: BANK OF AMERICA</p>
+                    <p style="font-weight: bold;">Account Type: CHECKING</p>
+                    <p style="font-weight: bold;">Account Number: 457052005509</p>
+                    <p style="font-weight: bold;">ACH Routing Number: 122101706</p>
+                    <p style="font-weight: bold;">Wire Routing Number: 026009593</p>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_account1_invoice">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="lang" t-value="doc.user_id.sudo().lang if doc.type in ('in_invoice', 'in_refund') else doc.partner_id.lang"/>
+                    <t t-set="doc" t-value="doc.with_context(lang=lang)" />
+                    <t t-call="gebesallc_reports.account_invoice_layout">
+                        <div class="page">
+                            <span t-field="doc.address"/>
+                            <br/><br/>
+
+                            <!--div id="columnas"-->
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong>BILL TO</strong>
+                                        <div t-field="doc.partner_id"
+                                            t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                                </div>
+                                <div class="col-6">
+                                    <strong>SHIP TO</strong>
+                                        <div t-field="doc.partner_shipping_id"
+                                            t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                            <br/>
+                            <!-- <div id="purchase"> -->
+                            <strong>PURCHASE ORDER:</strong><span t-field="doc.name"/>
+                            <br/>
+                            <strong>TERMS:</strong> <span t-field="doc.terms"/>
+                            <br/>
+                            <strong>FREIGHT:</strong> <span t-field="doc.freight"/>
+                            <!-- </div> -->
+
+                            <!-- <div id="productos"> -->
+                            <table width="100%" class="table table-bordered" style="border: 1px solid #000000;margin-top: 12px;">
+                                <thead>
+                                    <tr>
+                                        <th>Quantity</th>
+                                        <th>Units</th>
+                                        <th>Code</th>
+                                        <th>Description</th>
+                                        <th>Unit Price</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="doc.invoice_line_ids" t-as="line">
+                                        <tr>
+                                            <td><span t-field="line.quantity"/></td>
+                                            <td><span t-field="line.uom_id"/></td>
+                                            <td><span t-field="line.product_id.default_code"/></td>
+                                            <td><span t-field="line.name"/></td>
+                                            <td><span t-field="line.price_unit"/></td>
+                                            <td><span t-field="line.price_subtotal"/></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                            <div class="row">
+                                <div class="col-8">
+                                
+                                </div>
+                                <div class="col-4">
+                                    <table width="100%" class="table table table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <th>   Subtotal   </th>
+                                                <td><span t-field="doc.amount_untaxed"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th>   Balance   </th>
+                                                <td><span t-field="doc.amount_total"/></td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                            <br/><br/> <br/><br/> <br/><br/>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p style="line-height: 1 !important;">For checks:<br/><br/>
+                                    1101 Ladora Drive<br/>
+                                    Wentzville, MO  63385<br/>
+                                    Checks must be Pay in order to GEBESA LLC</p>
+                                </div>
+                                <div class="text-right col-6">
+                                        <p style="line-height: 1 !important;">For wire/ACH Transfers:<br/><br/>
+                                        Account Name: GEBESA, LLC<br/>
+                                        Bank Name: BANK OF AMERICA<br/>
+                                        Account Type: CHECKING<br/>
+                                        Account Number: 457052005509<br/>
+                                        ACH Routing Number: 122101706<br/>
+                                        Wire Routing Number: 026009593</p>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <template id="report_account1">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="gebesallc_reports.report_account1_invoice"/>
+            </t>
+        </template>
+    </data>
+</odoo>

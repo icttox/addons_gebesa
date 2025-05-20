@@ -1,0 +1,1047 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* paperwork_usa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-14 18:24+0000\n"
+"PO-Revision-Date: 2019-08-14 13:33-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: paperwork_usa
+#: model:mail.template,body_html:paperwork_usa.email_template_edi_usa
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"    <p>Hello ${object.partner_id.name},</p>\n"
+"    \n"
+"    <p>Here is your ${object.state in ('draft', 'sent') and 'quotation' or 'order confirmation'} from ${object.company_id.name}: </p>\n"
+"\n"
+"    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong>REFERENCES</strong><br />\n"
+"       &nbsp;&nbsp;Order number: <strong>${object.name}</strong><br />\n"
+"       &nbsp;&nbsp;Order total: <strong>${object.amount_total} ${object.pricelist_id.currency_id.name}</strong><br />\n"
+"       &nbsp;&nbsp;Order date:  ${format_tz(object.date_order, tz=user.tz, context={'lang':object.partner_id.lang})} <br />\n"
+"       % if object.origin:\n"
+"       &nbsp;&nbsp;Order reference: ${object.origin}<br />\n"
+"       % endif\n"
+"       % if object.client_order_ref:\n"
+"       &nbsp;&nbsp;Your reference: ${object.client_order_ref}<br />\n"
+"       % endif\n"
+"       % if object.user_id:\n"
+"       &nbsp;&nbsp;Your contact: <a href=\"mailto:${object.user_id.email or ''}?subject=Order%20${object.name}\">${object.user_id.name}</a>\n"
+"       % endif\n"
+"    </p>\n"
+"\n"
+"    % if object.paypal_url:\n"
+"    <br/>\n"
+"    <p>It is also possible to directly pay with Paypal:</p>\n"
+"        <a style=\"margin-left: 120px;\" href=\"${object.paypal_url}\">\n"
+"            <img class=\"oe_edi_paypal_button\" src=\"/sale/static/img/btn_paynowcc_lg.gif\"/>\n"
+"        </a>\n"
+"    % endif\n"
+"\n"
+"    <br/>\n"
+"    <p>If you have any question, do not hesitate to contact us.</p>\n"
+"    <p>Thank you for choosing ${object.company_id.name or 'us'}!</p>\n"
+"    <br/>\n"
+"    <br/>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"            <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"            ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}\n"
+"        </span>\n"
+"        % if object.company_id.phone:\n"
+"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                Phone:&nbsp; ${object.company_id.phone}\n"
+"            </div>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            <div>\n"
+"                Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"            </div>\n"
+"        %endif\n"
+"        <p></p>\n"
+"    </div>\n"
+"</div>\n"
+"            "
+msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"    <p style=\"margin:0px 0px 9px 0px;\">Hola ${object.partner_id.name},</p>\n"
+"    \n"
+"    <p style=\"margin:0px 0px 9px 0px;\">Aquí está tu ${object.state in ('draft', 'sent') and 'presupuesto' or 'confirmación de pedido'} de ${object.company_id.name}: </p>\n"
+"\n"
+"    <p style=\"margin:0px 0px 9px 0px;border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong style=\"font-weight:bold;\">REFERENCIAS</strong><br>\n"
+"       &nbsp;&nbsp;Nº de pedido: <strong style=\"font-weight:bold;\">${object.name}</strong><br>\n"
+"       &nbsp;&nbsp;Total del pedido: <strong style=\"font-weight:bold;\">${object.amount_total} ${object.pricelist_id.currency_id.name}</strong><br>\n"
+"       &nbsp;&nbsp;Fecha del pedido: ${object.date_order}<br>\n"
+"       % if object.origin:\n"
+"       &nbsp;&nbsp;Referencia del pedido: ${object.origin}<br>\n"
+"       % endif\n"
+"       % if object.client_order_ref:\n"
+"       &nbsp;&nbsp;Su referencia: ${object.client_order_ref}<br>\n"
+"       % endif\n"
+"       % if object.user_id:\n"
+"       &nbsp;&nbsp;Su contacto: <a href=\"mailto:${object.user_id.email or ''}?subject=Pedido%20${object.name}\" style=\"text-decoration-color:initial;text-decoration-style:initial;text-decoration-line:none;color:rgb(33, 183, 153);background-color:transparent;\">${object.user_id.name}</a>\n"
+"       % endif\n"
+"    </p>\n"
+"    <p style=\"margin:0px 0px 9px 0px;\">\n"
+"        Puede ver su pedido en línea:\n"
+"    </p>\n"
+"    <a style=\"text-decoration-color:initial;text-decoration-style:initial;text-decoration-line:none;color:rgb(33, 183, 153);background-color:transparent;display:block; width: 150px; height:20px; margin-left: 120px; color: #DDD; font-family: 'Lucida Grande', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; text-align: center; text-decoration: none !important; line-height: 1; padding: 5px 0px 0px 0px; background-color: #8E0000; border-radius: 5px 5px; background-repeat: repeat no-repeat;\" href=\"/quote/${object.id}/${object.access_token}\">Ver ${object.state in ('draft', 'sent') and 'Presupuesto' or 'Pedido'}</a>\n"
+"\n"
+"    % if object.paypal_url:\n"
+"    <br>\n"
+"    <p style=\"margin:0px 0px 9px 0px;\">También es posible pagar directamente con Paypal:</p>\n"
+"        <a style=\"text-decoration-color:initial;text-decoration-style:initial;text-decoration-line:none;color:rgb(33, 183, 153);background-color:transparent;margin-left: 120px;\" href=\"${object.paypal_url}\">\n"
+"            <img class=\"oe_edi_paypal_button\" src=\"/sale/static/img/btn_paynowcc_lg.gif\" style=\"vertical-align:middle;border-image-repeat:initial;border-image-outset:initial;border-image-width:initial;border-image-slice:initial;border-image-source:initial;border-left-color:initial;border-bottom-color:initial;border-right-color:initial;border-top-color:initial;border-left-style:initial;border-bottom-style:initial;border-right-style:initial;border-top-style:initial;border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-top-width:0px;\">\n"
+"        </a>\n"
+"    % endif\n"
+"\n"
+"    <br>\n"
+"    <p style=\"margin:0px 0px 9px 0px;\">Si tiene alguna pregunta, no dude en contactar con nosotros</p>\n"
+"    <p style=\"margin:0px 0px 9px 0px;\">Gracias por escoger a ${object.company_id.name or 'us'}!</p>\n"
+"    <br>\n"
+"    <br>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"font-size:16px;color:inherit;line-height:1.1;font-weight:400;font-family:inherit;margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"            <strong style=\"font-weight:bold;text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"            ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}\n"
+"        </span>\n"
+"        % if object.company_id.phone:\n"
+"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                Teléfono:&nbsp; ${object.company_id.phone}\n"
+"            </div>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            <div>\n"
+"                Web :&nbsp;<a href=\"${object.company_id.website}\" style=\"text-decoration-color:initial;text-decoration-style:initial;text-decoration-line:none;color:rgb(33, 183, 153);background-color:transparent;\">${object.company_id.website}</a>\n"
+"            </div>\n"
+"        %endif\n"
+"        <p style=\"margin:0px 0px 9px 0px;\"></p>\n"
+"    </div>\n"
+"</div>\n"
+"            "
+
+#. module: paperwork_usa
+#: model:mail.template,report_name:paperwork_usa.email_template_edi_usa
+msgid "${(object.name or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}"
+msgstr "${(object.name or '').replace('/','_')}_${object.state == 'draft' and 'borrador' or ''}"
+
+#. module: paperwork_usa
+#: model:mail.template,subject:paperwork_usa.email_template_edi_usa
+msgid "${object.company_id.name} ${object.state in ('draft', 'sent') and 'Quotation' or 'Order'} (Ref ${object.name or 'n/a' })"
+msgstr "${object.company_id.name} ${object.state in ('draft', 'sent') and 'Presupuesto' or 'Pedido'} (Ref ${object.name or 'n/a' })"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "3rd Party"
+msgstr "3rd Party"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid ""
+"<br/>\n"
+"                      <strong>TSCA TITLE VI COMPLIANT</strong>"
+msgstr ""
+"<br/>\n"
+"                      <strong>TSCA TITLE VI COMPLIANT</strong>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid ""
+"<br/>\n"
+"                      Where the rate is dependent on value, shippers are required to state specifically in writing the agreed or declared value of the property as follows: “The agreed or declared value of the property is specifically stated by the shipper to benot exceeding _________________________per______________"
+msgstr ""
+"<br/>\n"
+"                      Where the rate is dependent on value, shippers are required to state specifically in writing the agreed or declared value of the property as follows: “The agreed or declared value of the property is specifically stated by the shipper to benot exceeding _________________________per______________"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid ""
+"<br/>\n"
+"                    Disc:"
+msgstr ""
+"<br/>\n"
+"                    Disc:"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid ""
+"<br/>\n"
+"                    Received, subject to individually determined rates or contracts that have been agreed upon in writing between the carrier and shipper, if applicable, otherwise to the rates, classifications, and rules that have been established by the carrier and are available to the shipper, on request, and to all applicable state and federal regulations.\n"
+"                    <br/>"
+msgstr ""
+"<br/>\n"
+"                    Received, subject to individually determined rates or contracts that have been agreed upon in writing between the carrier and shipper, if applicable, otherwise to the rates, classifications, and rules that have been established by the carrier and are available to the shipper, on request, and to all applicable state and federal regulations.\n"
+"                    <br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid ""
+"<br/>\n"
+"              <strong>TSCA TITLE VI COMPLIANT</strong>"
+msgstr ""
+"<br/>\n"
+"              <strong>TSCA TITLE VI COMPLIANT</strong>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid ""
+"<br/>\n"
+"              Where the rate is dependent on value, shippers are required to state specifically in writing the agreed or declared value of the property as follows: “The agreed or declared value of the property is specifically stated by the shipper to benot exceeding _________________________per______________"
+msgstr ""
+"<br/>\n"
+"              Where the rate is dependent on value, shippers are required to state specifically in writing the agreed or declared value of the property as follows: “The agreed or declared value of the property is specifically stated by the shipper to benot exceeding _________________________per______________"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid ""
+"<br/>                \n"
+"                    The carrier shall not make delivery of this shipment without payment of charges and all other lawful fees.\n"
+"                    <br/>"
+msgstr ""
+"<br/>                \n"
+"                    The carrier shall not make delivery of this shipment without payment of charges and all other lawful fees.\n"
+"                    <br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid ""
+"<strong>\n"
+"                <u>Ship To </u>\n"
+"              </strong>\n"
+"              <br/>"
+msgstr ""
+"<strong>\n"
+"                <u>Ship To </u>\n"
+"              </strong>\n"
+"              <br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid ""
+"<strong>\n"
+"                <u>Sold To </u>\n"
+"              </strong>"
+msgstr ""
+"<strong>\n"
+"                <u>Sold To </u>\n"
+"              </strong>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_2_header
+msgid "<strong> Bill of Lading Number</strong>"
+msgstr "<strong> Bill of Lading Number</strong>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid "<strong> Bill of Lading number</strong>"
+msgstr "<strong> Bill of Lading number</strong>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.packing_list_header
+msgid "<strong>Date: </strong>"
+msgstr "<strong>Fecha: </strong>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.packing_list_header
+msgid "<strong>Packing List Number</strong>"
+msgstr "<strong>Packing List Number</strong>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "<strong>Total Without Taxes</strong>"
+msgstr "<strong>Total base</strong>"
+
+#. module: paperwork_usa
+#: model:ir.actions.report.xml,name:paperwork_usa.paperwork_usa
+msgid "Acknowledgement"
+msgstr "Acknowledgement"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Acknowledgment"
+msgstr "Acknowledgment"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Attention"
+msgstr "Attention"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_packing_list_document
+msgid "Backorder"
+msgstr "Backorder"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_packing_list_document
+msgid "Bigo Number"
+msgstr "Bigo Number"
+
+#. module: paperwork_usa
+#: model:ir.actions.report.xml,name:paperwork_usa.bill_lading
+msgid "Bill Lading Del Embarque"
+msgstr "Bill Lading Del Embarque"
+
+#. module: paperwork_usa
+#: model:ir.actions.report.xml,name:paperwork_usa.bill_lading_2
+msgid "Bill Lading Por Entrega"
+msgstr "Bill Lading Por Entrega"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_2_header
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid "Bill Of Lading"
+msgstr "Bill Of Lading"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "By driver/pallets said to contain<br/>"
+msgstr "By driver/pallets said to contain<br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "By driver/pieces"
+msgstr "By driver/pieces"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "By driver<br/>"
+msgstr "By driver<br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "By shipper<br/>"
+msgstr "By shipper<br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid ""
+"COD Amount:___________________________________<br/><br/>\n"
+"\n"
+"                      Fee terms:"
+msgstr ""
+"COD Amount:___________________________________<br/><br/>\n"
+"\n"
+"                      Fee terms:"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid ""
+"COD Amount:___________________________________<br/><br/>\n"
+"\n"
+"              Fee terms:"
+msgstr ""
+"COD Amount:___________________________________<br/><br/>\n"
+"\n"
+"              Fee terms:"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.packing_list_header
+msgid ""
+"Carrier Name\n"
+"                  <br/>"
+msgstr ""
+"Carrier Name\n"
+"                  <br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Carrier Signature/Pickup Date"
+msgstr "Carrier Signature/Pickup Date"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Carrier acknowledges receipt of packages and required placards. Carrier certifies emergency response information was made available and/or carrier has the DOT emergency response guidebook or equivalent documentation in the vehicle. Property described above is received in good order, except as noted."
+msgstr "Carrier acknowledges receipt of packages and required placards. Carrier certifies emergency response information was made available and/or carrier has the DOT emergency response guidebook or equivalent documentation in the vehicle. Property described above is received in good order, except as noted."
+
+#. module: paperwork_usa
+#: code:addons/paperwork_usa/models/mrp_shipment.py:12
+#: model:ir.model.fields,field_description:paperwork_usa.field_mrp_shipment_carrier_name
+#, python-format
+msgid "Carrier name"
+msgstr "Carrier name"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid ""
+"Carrier name\n"
+"      \t\t\t\t\t\t\t<br/>"
+msgstr ""
+"Carrier name\n"
+"      \t\t\t\t\t\t\t<br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid ""
+"Carrier name\n"
+"                                    <br/>"
+msgstr ""
+"Carrier name\n"
+"                                    <br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_packing_list_document
+msgid "Cartons Count"
+msgstr "Cartons Count"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Collect"
+msgstr "Collect"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Consignee Signature/Date/Time"
+msgstr "Consignee Signature/Date/Time"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Consignee Signature/Date/Time<br/>"
+msgstr "Consignee Signature/Date/Time<br/>"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_sale_order_contract_num
+#: model:ir.model.fields,help:paperwork_usa.field_sale_order_contract_num
+msgid "Contract number"
+msgstr "Contract number"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Contract:"
+msgstr "Contract:"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Cust<br/>Line"
+msgstr "Cust<br/>Line"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Customer check acceptable"
+msgstr "Customer check acceptable"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_sale_order_line_dealer_order_line
+msgid "Daler order line"
+msgstr "Daler order line"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_2_header
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid "Date:"
+msgstr "Date:"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid ""
+"Date:___________Time:_________<br/>\n"
+"                            Goods or Materials received in good order except as noted."
+msgstr ""
+"Date:___________Time:_________<br/>\n"
+"                            Goods or Materials received in good order except as noted."
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid ""
+"Date:___________Time:_________<br/>\n"
+"                    Goods or Materials received in good order except as noted."
+msgstr ""
+"Date:___________Time:_________<br/>\n"
+"                    Goods or Materials received in good order except as noted."
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_packing_list_document
+msgid "Default<br/>Code"
+msgstr "Default<br/>Code"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_sale_order_delivery_instruction
+msgid "Delivery Instruction"
+msgstr "Delivery Instruction"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Delivery Instructions:"
+msgstr "Delivery Instructions:"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,help:paperwork_usa.field_sale_order_general_tag_num
+msgid "Description number for the entire order"
+msgstr "Description number for the entire order"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_report_paperwork_usa_bill_ladind_report_display_name
+#: model:ir.model.fields,field_description:paperwork_usa.field_report_paperwork_usa_report_bill_lading_2_display_name
+#: model:ir.model.fields,field_description:paperwork_usa.field_report_paperwork_usa_report_packing_list_display_name
+#: model:ir.model.fields,field_description:paperwork_usa.field_report_paperwork_usa_report_usa_display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Extended Price<br/>"
+msgstr "Extended Price<br/>"
+
+#. module: paperwork_usa
+#: code:addons/paperwork_usa/models/res_partner.py:20
+#: model:ir.model.fields,field_description:paperwork_usa.field_res_partner_extra_body_html
+#, python-format
+msgid "Extra Body HTML"
+msgstr "Extra Body HTML"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "F.O#"
+msgstr "F.O#"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "FO #"
+msgstr "FO #"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Financial Terms:"
+msgstr "Financial Terms:"
+
+#. module: paperwork_usa
+#: code:addons/paperwork_usa/models/res_partner.py:16
+#: model:ir.model.fields,field_description:paperwork_usa.field_res_partner_footer_html
+#, python-format
+msgid "Footer HTML"
+msgstr "Footer HTML"
+
+#. module: paperwork_usa
+#: code:addons/paperwork_usa/models/mrp_shipment.py:26
+#: model:ir.model.fields,field_description:paperwork_usa.field_mrp_shipment_partner_id
+#, python-format
+msgid "For"
+msgstr "Para"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Freight Charge Terms (Freight charges are prepaid unless marked otherwise):"
+msgstr "Freight Charge Terms (Freight charges are prepaid unless marked otherwise):"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Freight Counted:<br/>"
+msgstr "Freight Counted:<br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Freight Terms:"
+msgstr "Freight Terms:"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_sale_order_general_tag_num
+msgid "General tag number"
+msgstr "General tag number"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Hazardous Material"
+msgstr "Hazardous Material"
+
+#. module: paperwork_usa
+#: code:addons/paperwork_usa/models/res_partner.py:12
+#: model:ir.model.fields,field_description:paperwork_usa.field_res_partner_header_html
+#, python-format
+msgid "Header HTML"
+msgstr "Header HTML"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_report_paperwork_usa_bill_ladind_report_id
+#: model:ir.model.fields,field_description:paperwork_usa.field_report_paperwork_usa_report_bill_lading_2_id
+#: model:ir.model.fields,field_description:paperwork_usa.field_report_paperwork_usa_report_packing_list_id
+#: model:ir.model.fields,field_description:paperwork_usa.field_report_paperwork_usa_report_usa_id
+msgid "ID"
+msgstr "ID"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Kind of package, description of articles, special marks, and exceptions"
+msgstr "Kind of package, description of articles, special marks, and exceptions"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_report_paperwork_usa_bill_ladind_report___last_update
+#: model:ir.model.fields,field_description:paperwork_usa.field_report_paperwork_usa_report_bill_lading_2___last_update
+#: model:ir.model.fields,field_description:paperwork_usa.field_report_paperwork_usa_report_packing_list___last_update
+#: model:ir.model.fields,field_description:paperwork_usa.field_report_paperwork_usa_report_usa___last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_packing_list_document
+msgid "Line Item"
+msgstr "Line Item"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_sale_order_line_line_tag_number
+msgid "Line item tag number"
+msgstr "Line item tag number"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid ""
+"List: <br/>\n"
+"                    Buy:"
+msgstr ""
+"List: <br/>\n"
+"                    Buy:"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "MGF<br/>Line"
+msgstr "MGF<br/>Line"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_mrp_shipment_maniobras
+msgid "Maniobras:"
+msgstr "Maniobras:"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Master bill of lading with attached underlying bills of lading."
+msgstr "Master bill of lading with attached underlying bills of lading."
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_mrp_shipment_mercancia
+msgid "Mercancia:"
+msgstr "Mercancia:"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "NONE"
+msgstr "NONE"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "No inf."
+msgstr "No inf."
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Note: Liability limitation for loss or damage in this shipment may be applicable. See 49 USC § 14706(c) (1) (A) and (B)."
+msgstr "Note: Liability limitation for loss or damage in this shipment may be applicable. See 49 USC § 14706(c) (1) (A) and (B)."
+
+#. module: paperwork_usa
+#: model:ir.model.fields,help:paperwork_usa.field_sale_order_line_dealer_order_line
+msgid "Number of  dealer order line"
+msgstr "Number of  dealer order line"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Number of <br/>packages"
+msgstr "Number of <br/>packages"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Order Received"
+msgstr "Order Received"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "P.O#"
+msgstr "P.O#"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_packing_list_document
+msgid "PO"
+msgstr "PO"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "PO #"
+msgstr "PO #"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_mrp_shipment_line_packages_number
+msgid "Packages number"
+msgstr "Packages number"
+
+#. module: paperwork_usa
+#: model:ir.actions.report.xml,name:paperwork_usa.packing_list
+#: model:ir.ui.view,arch_db:paperwork_usa.packing_list_header
+msgid "Packing List"
+msgstr "Packing List"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Page:"
+msgstr "Página:"
+
+#. module: paperwork_usa
+#: model:ir.model,name:paperwork_usa.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Phone and Name:"
+msgstr "Phone and Name:"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_sale_config_settings_planned_delivery_date
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Planned Delivery Date"
+msgstr "Planned Delivery Date"
+
+#. module: paperwork_usa
+#: code:addons/paperwork_usa/models/mrp_shipment.py:30
+#: model:ir.model.fields,field_description:paperwork_usa.field_mrp_shipment_date_positioning
+#, python-format
+msgid "Positioning(date)"
+msgstr "Posicionamiento(Fecha)"
+
+#. module: paperwork_usa
+#: code:addons/paperwork_usa/models/mrp_shipment.py:34
+#: model:ir.model.fields,field_description:paperwork_usa.field_mrp_shipment_time_positioning
+#, python-format
+msgid "Positioning(time)"
+msgstr "Posicionamiento(Hora)"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Prepaid"
+msgstr "Prepaid"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Product Description<br/>"
+msgstr "Product Description<br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Product Number<br/>"
+msgstr "Product Number<br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_packing_list_document
+msgid "Product<br/>Name"
+msgstr "Product<br/>Name"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Qty Order<br/>"
+msgstr "Qty Order<br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_packing_list_document
+msgid "Qty<br/>Order"
+msgstr "Qty<br/>Order"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_packing_list_document
+msgid "Qty<br/>Ship"
+msgstr "Qty<br/>Ship"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_packing_list_document
+msgid "SO"
+msgstr "SO"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Sales Division:"
+msgstr "Sales Division:"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid ""
+"Sales Division: \n"
+"                <strong class=\"medium-2\">\n"
+"                  MX\n"
+"                </strong>"
+msgstr ""
+"Sales Division: \n"
+"                <strong class=\"medium-2\">\n"
+"                  MX\n"
+"                </strong>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid ""
+"Sales Division: \n"
+"                <strong class=\"medium-2\">US\n"
+"                </strong>"
+msgstr ""
+"Sales Division: \n"
+"                <strong class=\"medium-2\">US\n"
+"                </strong>"
+
+#. module: paperwork_usa
+#: model:ir.model,name:paperwork_usa.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: paperwork_usa
+#: model:ir.model,name:paperwork_usa.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea pedido de venta"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Sales Responsible:"
+msgstr "Sales Responsible:"
+
+#. module: paperwork_usa
+#: code:addons/paperwork_usa/models/mrp_shipment.py:21
+#: model:ir.model.fields,field_description:paperwork_usa.field_mrp_shipment_seal
+#, python-format
+msgid "Seal"
+msgstr "Seal"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid ""
+"Seal\n"
+"                                <br/>"
+msgstr ""
+"Seal\n"
+"                                <br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid ""
+"Seal\n"
+"                    <br/>"
+msgstr ""
+"Seal\n"
+"                    <br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_2_header
+msgid "Ship To:"
+msgstr "Enviar a:"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.packing_list_header
+msgid "Ship to"
+msgstr "Ship to"
+
+#. module: paperwork_usa
+#: model:ir.model,name:paperwork_usa.model_mrp_shipment
+msgid "Shipment"
+msgstr "Embarque"
+
+#. module: paperwork_usa
+#: model:ir.model.fields,field_description:paperwork_usa.field_mrp_shipment_partner_ids
+msgid "Shipment Partner"
+msgstr "Shipment Partner"
+
+#. module: paperwork_usa
+#: model:ir.model,name:paperwork_usa.model_mrp_shipment_line
+msgid "Shipment line"
+msgstr "Lineas embarcadas"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.shipper_information
+msgid "Shipper Information"
+msgstr "información Remitente"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid "Shipper Signature"
+msgstr "Shipper Signature"
+
+#. module: paperwork_usa
+#: code:addons/paperwork_usa/models/mrp_shipment.py:17
+#: model:ir.model.fields,field_description:paperwork_usa.field_mrp_shipment_special_delivery_instructions
+#, python-format
+msgid "Special Delivery Instructions"
+msgstr "Special Delivery Instructions"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.packing_list_header
+msgid ""
+"Special Delivery Instructions\n"
+"                  <br/>"
+msgstr ""
+"Special Delivery Instructions\n"
+"                  <br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_packing_list_document
+msgid "Tag"
+msgstr "Etiqueta"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Tag:"
+msgstr "Tag:"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_packing_list_document
+msgid "Tag<br/>Line"
+msgstr "Tag<br/>Line"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: paperwork_usa
+#: code:addons/paperwork_usa/models/mrp_shipment.py:38
+#: model:ir.model.fields,field_description:paperwork_usa.field_mrp_shipment_team
+#, python-format
+msgid "Team:"
+msgstr "Equipo:"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Total"
+msgstr "Total"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Total packages"
+msgstr "Total packages"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Total weight"
+msgstr "Total weight"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.packing_list_header
+msgid ""
+"Trailer Number\n"
+"                  <br/>"
+msgstr ""
+"Trailer Number\n"
+"                  <br/>"
+
+#. module: paperwork_usa
+#: code:addons/paperwork_usa/models/mrp_shipment.py:14
+#: model:ir.model.fields,field_description:paperwork_usa.field_mrp_shipment_trailer_number
+#, python-format
+msgid "Trailer number"
+msgstr "Trailer number"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid ""
+"Trailer number\n"
+"                                <br/>"
+msgstr ""
+"Trailer number\n"
+"                                <br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+msgid ""
+"Trailer number\n"
+"                    <br/>"
+msgstr ""
+"Trailer number\n"
+"                    <br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.report_usa_document
+msgid "Unit price<br/>"
+msgstr "Unit price<br/>"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "Weight(subject<br/>to corrections)"
+msgstr "Weight(subject<br/>to corrections)"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "account number(s)"
+msgstr "account number(s)"
+
+#. module: paperwork_usa
+#: model:ir.model,name:paperwork_usa.model_report_paperwork_usa_bill_ladind_report
+msgid "report.paperwork_usa.bill_ladind_report"
+msgstr "report.paperwork_usa.bill_ladind_report"
+
+#. module: paperwork_usa
+#: model:ir.model,name:paperwork_usa.model_report_paperwork_usa_bill_lading_usa
+msgid "report.paperwork_usa.bill_lading_usa"
+msgstr "report.paperwork_usa.bill_lading_usa"
+
+#. module: paperwork_usa
+#: model:ir.model,name:paperwork_usa.model_report_paperwork_usa_report_bill_lading_2
+msgid "report.paperwork_usa.report_bill_lading_2"
+msgstr "report.paperwork_usa.report_bill_lading_2"
+
+#. module: paperwork_usa
+#: model:ir.model,name:paperwork_usa.model_report_paperwork_usa_report_packing_list
+msgid "report.paperwork_usa.report_packing_list"
+msgstr "report.paperwork_usa.report_packing_list"
+
+#. module: paperwork_usa
+#: model:ir.model,name:paperwork_usa.model_report_paperwork_usa_report_usa
+msgid "report.paperwork_usa.report_usa"
+msgstr "report.paperwork_usa.report_usa"
+
+#. module: paperwork_usa
+#: model:ir.model,name:paperwork_usa.model_sale_config_settings
+msgid "sale.config.settings"
+msgstr "Configuración de venta"
+
+#. module: paperwork_usa
+#: model:ir.ui.view,arch_db:paperwork_usa.bill_lading_document
+#: model:ir.ui.view,arch_db:paperwork_usa.report_bill_lading_2_document
+msgid "special delivery instructions"
+msgstr "special delivery instructions"

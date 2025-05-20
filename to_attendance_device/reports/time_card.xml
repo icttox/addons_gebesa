@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="time_card"
+            model="attendance.reports.wizard"
+            string="Time card"
+            report_type="qweb-pdf"
+            name="to_attendance_device.report_time_card"
+            file="to_attendance_device.report_time_card"
+        />
+
+        <template id="to_attendance_device_layout">
+            <div class="header text-center" style="font-size: 16pt;">
+                <strong style="font-size: 25pt;"><span t-esc="title_report"/></strong>
+                <br/>
+                <span t-esc="doc.start_date"/> - <span t-esc="doc.end_date"/>
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer">
+            </div>
+        </template>
+
+        <template id="report_time_card_employees">
+            <t t-foreach="sorted(attendances[dep_id])" t-as="emp">
+                <t t-set="employee" t-value="attendances[dep_id][emp]['emp']"/>
+                <t t-set="days_work" t-value="employee.resource_calendar_id.attendance_ids.mapped('dayofweek')"/>
+                <t t-set="hours_average" t-value="datetime.timedelta(hours=employee.resource_calendar_id.hours_per_day)"/>
+                <t t-set="check_in_time" t-value="datetime.timedelta(minutes=round(employee.resource_calendar_id.start_hour * 60))"/>
+                <t t-set="tolerance" t-value="datetime.timedelta(minutes=round(employee.resource_calendar_id.tolerance_time * 60))"/>
+                <t t-set="check_in_max" t-value="check_in_time + tolerance"/>
+                <div class="row" style="font-size: 14pt;">
+                    <div class="col-2">
+                        <strong>Number: </strong>
+                    </div>
+                    <div class="col-3">
+                        <span t-esc="employee.consecutive_id or 'N/A'"/>
+                    </div>
+                    <div class="col-2">
+                        <strong>Employee: </strong>
+                    </div>
+                    <div class="col-5">
+                        <span t-field="employee.name"/>
+                    </div>
+                </div>
+                <div class="row" style="font-size: 14pt;">
+                    <div class="col-12">
+                        <strong>Period Dates: </strong><span t-esc="doc.start_date.strftime('%a %d/%m/%Y')"/> - <span t-esc="doc.end_date.strftime('%a %d/%m/%Y')"/>
+                    </div>
+                </div>
+                <t t-set="total_time_work" t-value="datetime.timedelta()"/>
+                <table class="table table-sm text-center" style="font-size: 10pt;">
+                    <thead>
+                        <tr>
+                            <th style="width:13%">Date</th>
+                            <th style="width:3%"></th>
+                            <th style="width:9%">In</th>
+                            <th style="width:9%">Out to lunch</th>
+                            <th style="width:9%">In from lunch</th>
+                            <th style="width:9%">Out</th>
+                            <th style="width:9%">Total hours</th>
+                            <th style="width:9%">Lunch time</th>
+                            <th style="width:9%">Worked hours</th>
+                            <th style="width:9%">Overtime</th>
+                            <th style="width:12%">Incidents</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="dates" t-as="dat">
+                            <t t-set="check_in" t-value="datetime.timedelta(seconds=0)"/>
+                            <t t-set="attendance" t-value="attendances[dep_id][emp]['att'][dat]"/>
+                            <t t-if="attendance">
+                                <t t-set="check_in" t-value="context_timestamp(attendance.check_in)"/>
+                                <t t-set="check_in" t-value="datetime.timedelta(hours=check_in.hour, minutes=check_in.minute)"/>
+                            </t>
+                            <t t-set="in_code" t-value="''"/>
+                            <t t-set="style_row" t-value="''"/>
+                            <t t-if="check_in > check_in_max">
+                                <t t-set="in_code" t-value="' RT'"/>
+                                <t t-set="style_row" t-value="'background-color: #fb6b5b;'"/>
+                            </t>
+                            <t t-set="time_total" t-value="datetime.timedelta(seconds=0)"/>
+                            <t t-set="time_lunch" t-value="datetime.timedelta(seconds=0)"/>
+                            <t t-set="time_work" t-value="datetime.timedelta(seconds=0)"/>
+                            <t t-set="overtime" t-value="datetime.timedelta(seconds=0)"/>
+                            <tr t-att-style="style_row">
+                                <td>
+                                    <span t-esc="dat.strftime('%a %d/%m/%Y')"/>
+                                </td>
+                                <td>
+                                    <span t-esc="in_code"/>
+                                </td>
+                                <t t-if="attendance">
+                                    <td>
+                                        <span t-if="attendance.check_in" t-esc="context_timestamp(attendance.check_in).strftime('%H:%M')"/>
+                                    </td>
+                                    <td>
+                                        <span t-if="attendance.break_out" t-esc="context_timestamp(attendance.break_out).strftime('%H:%M')"/>
+                                    </td>
+                                    <td>
+                                        <span t-if="attendance.break_in" t-esc="context_timestamp(attendance.break_in).strftime('%H:%M')"/>
+                                    </td>
+                                    <td>
+                                        <span t-if="attendance.check_out" t-esc="context_timestamp(attendance.check_out).strftime('%H:%M')"/>
+                                    </td>
+                                    <td>
+                                        <t t-if="attendance.check_in and attendance.check_out">
+                                            <t t-set="time_total" t-value="attendance.check_out.replace(second=0) - attendance.check_in.replace(second=0)"/>
+                                        </t>
+                                        <span t-esc="str(time_total.seconds//3600).zfill(2)"/>:<span t-esc="str((time_total.seconds//60)%60).zfill(2)"/>
+                                    </td>
+                                    <td>
+                                        <t t-if="attendance.break_out and attendance.break_in">
+                                            <t t-set="time_lunch" t-value="attendance.break_in.replace(second=0) - attendance.break_out.replace(second=0)"/>
+                                        </t>
+                                        <span t-esc="str(time_lunch.seconds//3600).zfill(2)"/>:<span t-esc="str((time_lunch.seconds//60)%60).zfill(2)"/>
+                                    </td>
+                                    <td>
+                                        <t t-if="time_total and time_lunch">
+                                            <t t-set="time_work" t-value="time_total - time_lunch"/>
+                                        </t>
+                                        <t t-if="hours_average &lt; time_work">
+                                            <t t-set="overtime" t-value="time_work - hours_average"/>
+                                            <t t-set="time_work" t-value="hours_average"/>
+                                        </t>
+                                        <span t-esc="str(time_work.seconds//3600).zfill(2)"/>:<span t-esc="str((time_work.seconds//60)%60).zfill(2)"/>
+                                        <t t-set="total_time_work" t-value="total_time_work + (time_work - datetime.timedelta(seconds=(time_work.seconds%60)))"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="str(overtime.seconds//3600).zfill(2)"/>:<span t-esc="str((overtime.seconds//60)%60).zfill(2)"/>
+                                    </td>
+                                </t>
+                                <t t-set="days_week" t-value="int(dat.strftime('%w')) - 1"/>
+                                <t t-if="days_week &lt; 0">
+                                    <t t-set="days_week" t-value="6"/>
+                                </t>
+                                <td t-if="not attendance and str(days_week) in days_work" class="text-center" colspan="8">
+                                    Not scheduled
+                                </td>
+                                <td t-if="not attendance and str(days_week) not in days_work" class="text-center" colspan="8">
+                                    rest day
+                                </td>
+                                <td class="text-center">
+                                    <t t-set="lea_code" t-value="''"/>
+                                    <t t-foreach="attendances[dep_id][emp]['lea'][dat]" t-as="lea">
+                                        <t t-if="lea_code != ''">
+                                            <t t-set="lea_code" t-value="lea_code + ' - '"/>
+                                        </t>
+                                        <t t-set="lea_code" t-value="lea_code + lea.holiday_status_id.code"/>
+                                    </t>
+                                    <span t-esc="lea_code"/>
+                                </td>
+                            </tr>
+                        </t>
+                        <tr>
+                            <td class="text-center" colspan="8"></td>
+                            <td class="text-center">
+                                <span t-esc="str((total_time_work.seconds//3600) + (total_time_work.days * 24)).zfill(2)"/>:<span t-esc="str((total_time_work.seconds//60)%60).zfill(2)"/>
+                            </td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="border-bottom: 1px solid #000000;">
+                    <br/><br/>
+                </div>
+                <br/>
+                <t t-if="page_break">                              
+                    <div style="page-break-after: always;">&#160;</div>   
+                </t>
+                <t t-set="page_break" t-value="not page_break"/>
+            </t>
+        </template>
+
+        <template id="report_time_card_document">
+            <t t-set="title_report" t-value="'Time Card'"/>
+            <t t-call="to_attendance_device.to_attendance_device_layout">
+                <div class="page">
+                    <t t-foreach="departments" t-as="dep">
+                        <t t-if="dep.id in attendances">
+                            <t t-set="page_break" t-value="False"/>
+                            <div style="font-size: 18pt;">
+                                <strong>Departament: </strong><span t-field="dep.name"/>
+                            </div>
+                            <br/>
+                            <t t-set="dep_id" t-value="dep.id"/>
+                            <t t-call="to_attendance_device.report_time_card_employees"/>
+                            <t t-if="not page_break">
+                                <div style="page-break-after: always;">&#160;</div>   
+                            </t>
+                        </t>
+                    </t>
+                    <t t-if="0 in attendances">
+                        <t t-if="not page_break">                              
+                            <div style="page-break-after: always;">&#160;</div>   
+                        </t>
+                        <t t-set="page_break" t-value="False"/>
+                        <div style="font-size: 18pt;">
+                            <strong>Departament: </strong>N/A
+                        </div>
+                        <br/>
+                        <t t-set="dep_id" t-value="0"/>
+                        <t t-call="to_attendance_device.report_time_card_employees"/>
+                    </t>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_time_card">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="to_attendance_device.report_time_card_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

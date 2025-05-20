@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sale_order_everywhere
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-19 16:41+0000\n"
+"PO-Revision-Date: 2017-01-19 16:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_everywhere
+#: model:ir.model.fields,field_description:sale_order_everywhere.field_mrp_production_partner_id
+#: model:ir.model.fields,field_description:sale_order_everywhere.field_procurement_order_partner_id
+#: model:ir.model.fields,field_description:sale_order_everywhere.field_stock_move_cust_ven_id
+msgid "Customer"
+msgstr ""
+
+#. module: sale_order_everywhere
+#: model:ir.model.fields,field_description:sale_order_everywhere.field_mrp_production_client_order_ref
+#: model:ir.model.fields,field_description:sale_order_everywhere.field_procurement_order_client_order_ref
+#: model:ir.model.fields,field_description:sale_order_everywhere.field_stock_move_client_order_ref
+msgid "Customer ref"
+msgstr ""
+
+#. module: sale_order_everywhere
+#: model:ir.model,name:sale_order_everywhere.model_mrp_production
+msgid "Manufacturing Order"
+msgstr ""
+
+#. module: sale_order_everywhere
+#: model:ir.model,name:sale_order_everywhere.model_procurement_order
+msgid "Procurement"
+msgstr ""
+
+#. module: sale_order_everywhere
+#: model:ir.ui.view,arch_db:sale_order_everywhere.view_move_form
+msgid "Sale Order"
+msgstr ""
+
+#. module: sale_order_everywhere
+#: model:ir.model.fields,field_description:sale_order_everywhere.field_mrp_production_sale_id
+#: model:ir.model.fields,field_description:sale_order_everywhere.field_procurement_order_sale_id
+#: model:ir.model.fields,field_description:sale_order_everywhere.field_stock_move_sale_id
+msgid "Sale order"
+msgstr ""
+
+#. module: sale_order_everywhere
+#: model:ir.model,name:sale_order_everywhere.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: sale_order_everywhere
+#: model:ir.model,name:sale_order_everywhere.model_stock_move
+msgid "Stock Move"
+msgstr ""
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="tms_place_form" model="ir.ui.view">
+            <field name="name">tms.place.form</field>
+            <field name="model">tms.place</field>
+            <field name="inherit_id" ref="tms.view_tms_place_form"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/field[@name='latitude']" position="after">
+                    <field name="company_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="tms_place_tree" model="ir.ui.view">
+            <field name="name">tms.place.tree</field>
+            <field name="model">tms.place</field>
+            <field name="inherit_id" ref="tms.view_tms_place_tree"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='latitude']" position="after">
+                    <field name="company_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id='tms_place_action' model='ir.actions.act_window'>
+          <field name='name'>Lugar</field>
+          <field name='res_model'>tms.place</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="carta_porte_menu" name="Carta porte" parent="account.menu_finance_configuration" sequence="70"/>
+        <menuitem id="tms_place_menu" name="Lugar" parent="carta_porte_menu" action="tms_place_action"/>
+    </data>
+</openerp>

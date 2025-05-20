@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <record model="ir.ui.view" id="project_task_user_hist_form">
+            <field name="name">project_task_user_hist.form</field>
+            <field name="model">project.task.user.hist</field>
+            <field name="arch" type="xml">
+                <form string="Project Task User History">
+                    <sheet>
+                        <group>
+                            <field name="date"/>
+                            <field name="user_old"/>
+                            <field name="user_new"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='project_task_user_hist_tree'>
+            <field name='name'>project_task_user_hist.tree</field>
+            <field name='model'>project.task.user.hist</field>
+            <field name='arch' type='xml'>
+                <tree default_order='create_date' string='Project Task User History'>
+                    <field name='date'/>
+                    <field name="user_old"/>
+                    <field name="user_new"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

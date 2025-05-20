@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="project_task_view_product" model="ir.ui.view">
+            <field name="name">project.task.view.product</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/group/field[@name='project_id']" position="after">
+                    <field name="product_id"/>
+                    <field name="is_special"/>
+                </xpath>
+                <xpath expr="//form/sheet/group" position="after">
+                    <!-- <field name="validation_time" readonly="True"/>    -->
+                    <br/>
+                    <group>
+                        <group>         
+                            <field name="validation_ip" readonly="True"/>
+                            <field name="validation_time_ip" readonly="True"/>           
+                            <field name="user_val_id" readonly="True"/>
+                            <!-- <field name="archive"/> -->
+                        </group>
+                        <group>
+                            <field name="validation_diseno" readonly="True"/>
+                            <field name="validation_time_diseno" readonly="True"/>
+                            <field name="user_val_diseno_id" readonly="True"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>         
+                            <field name="validation_aip" readonly="True"/>
+                            <field name="validation_time_aip" readonly="True"/>
+                            <field name="user_val_aip_id" readonly="True"/>
+                        </group>
+                        <group>         
+                            <field name="validation_sc" readonly="True"/>
+                            <field name="validation_time_sc" readonly="True"/>
+                            <field name="user_val_sc_id" readonly="True"/>
+                         </group>
+                    </group>
+                </xpath>
+                
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='date_last_stage_update']" position="after">      
+                    <field name="date_finished" readonly="True"/>
+                </xpath>
+
+                <xpath expr="//form/sheet/notebook/page[2]" position="after">
+                    <page string="Order">
+                        <group col="4">
+                            <group>
+                                <field name="order_id"/>
+                                <field name="warehouse_id"/>
+                                <field name="muestra"/>
+                                <field name="clave"/>
+                                <field name="costo"/>
+                                <field name="planted"/>
+                                <field name="render"/>
+                                <!-- <field name="planos"/> -->
+                            </group>
+                        </group>
+                    </page>
+                    <page string="Checklist AIP">
+                        <br/>
+                        <font color="purple"><u><separator string="ESPECIALES"/></u></font>
+                        <group col="10">
+                            <field name="special_a" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="special_a" colspan="9"/>
+                            <field name="special_b" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="special_b" colspan="9"/>
+                            <field name="special_c" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="special_c" colspan="9"/>
+                            <field name="special_d" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="special_d" colspan="9"/>
+                            <field name="special_e" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="special_e" colspan="9"/>
+                            <field name="special_f" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="special_f" colspan="9"/>
+                            <field name="special_g" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="special_g" colspan="9"/>
+                        </group>
+                        <br/>
+                        <br/>                   
+                        <font color="purple"><u><separator string="GENERAL"/></u></font>  
+                        <group col="10">
+                            <field name="general_a" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="general_a" colspan="9"/>
+                            <field name="general_b" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="general_b" colspan="9"/>
+                            <field name="general_c" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="general_c" colspan="9"/>
+                            <field name="general_d" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="general_d" colspan="9"/>
+                            <field name="general_e" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="general_e" colspan="9"/>
+                            <field name="general_f" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="general_f" colspan="9"/>
+                            <field name="general_g" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="general_g" colspan="9"/>
+                            <field name="general_h" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="general_h" colspan="9"/>
+                            <field name="general_i" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="general_i" colspan="9"/>
+                            <field name="general_k" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="general_k" colspan="9"/>
+                            <field name="general_j" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="general_j" colspan="9"/>
+                            <br/>
+                                <div style="font-size:11pt;" colspan="9">
+                                    <strong>Opciones 8Trac</strong>
+                                    <br/>
+                                        -Para Synergy y Optimus utilice BE08065-3-A1C (2" panels)
+                                        <br/>
+                                        -Para Elite y G-Bench utilice BE08065-3-F1C (3.25" panels)
+                                    <br/>
+                                    <br/>
+                                    <strong>Opciones Phase 3</strong>
+                                    <br/>
+                                        -Para Synergy y Optimus utilice BE52426-3-C-1-C (2" panels)
+                                        <br/>
+                                        -Para Elite y G-Bench utilice BE52426-3-G-1-C (3.25" panels)
+                                </div>                            
+                        </group>
+                        <br/>
+                        <br/>
+                        <font color="purple"><u><separator string="ESTACIONES CON MAMPARAS"/></u></font>
+                        <group col="10">
+                            <field name="station_a" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="station_a" colspan="9"/>
+                            <field name="station_b" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="station_b" colspan="9"/>
+                            <field name="station_c" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="station_c" colspan="9"/>
+                            <field name="station_d" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="station_d" colspan="9"/>
+                            <field name="station_e" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="station_e" colspan="9"/>
+                            <field name="station_f" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="station_f" colspan="9"/>
+                            <field name="station_g" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="station_g" colspan="9"/>
+                            <field name="station_h" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="station_h" colspan="9"/>
+                            <field name="station_i" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="station_i" colspan="9"/>
+                            <field name="station_j" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="station_j" colspan="9"/>
+                        </group>
+                        <br/>
+                        <br/>
+                        <font color="purple"><u><separator string="FREE-STANDING"/></u></font>
+                        <group col="10">
+                            <field name="free_a" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="free_a" colspan="9"/>
+                            <field name="free_b" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="free_b" colspan="9"/>
+                            <field name="free_c" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="free_c" colspan="9"/>
+                            <field name="free_d" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="free_d" colspan="9"/>
+                            <field name="free_e" nolabel="1" colspan="1" attrs="{'readonly':[('validation_aip', '=', 'approved')]}"/>
+                            <label for="free_e" colspan="9"/>
+                        </group>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <font color="purple"><u><separator string="Revisión"/></u></font>
+                        <group>
+                            <field name="review_aip"/>
+                            <field name="note_aip" attrs="{'required':[('review_aip','!=',False)]}"/>
+                        </group>
+                    </page>
+                    <page string="Checklist IP">
+                        <group col="10">
+                            <field name="cost_a" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_a" colspan="9" />
+                            <field name="cost_b" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_b" colspan="9"/>
+                            <field name="cost_c" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_c" colspan="9"/>
+                            <field name="cost_d" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_d" colspan="9"/>
+                            <field name="cost_e" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_e" colspan="9"/>
+                            <field name="cost_f" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_f" colspan="9"/>
+                            <field name="cost_g" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_g" colspan="9"/>
+                            <field name="cost_h" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_h" colspan="9"/>
+                            <field name="cost_i" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_i" colspan="9"/>
+                            <field name="cost_j" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_j" colspan="9"/>
+                            <field name="cost_k" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_k" colspan="9"/>
+                            <field name="cost_l" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_l" colspan="9"/>
+                            <field name="cost_m" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_m" colspan="9"/>
+                            <field name="cost_n" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_n" colspan="9"/>
+                            <field name="cost_o" nolabel="1" colspan="1" attrs="{'readonly':[('validation_ip', '=', 'approved')]}"/>
+                            <label for="cost_o" colspan="9"/>
+                        </group>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <font color="purple"><u><separator string="Revisión"/></u></font>
+                        <group>
+                            <field name="review_ip"/>
+                            <field name="note_ip" attrs="{'required':[('review_ip','!=',False)]}"/>
+                        </group>
+                    </page>
+                    <page string="Checklist DISEÑO">
+                        <br/>
+                        <font color="purple"><u><separator string="SOLICITUD DE CLAVE"/></u></font>
+                        <group col="10">
+                            <field name="key_a" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="key_a" colspan="9"/>
+                            <field name="key_b" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="key_b" colspan="9"/>
+                            <field name="key_c" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="key_c" colspan="9"/>
+                            <field name="key_d" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="key_d" colspan="9"/>
+                        </group>
+                        <br/>
+                        <br/>
+                        <font color="purple"><u><separator string="PLANOS METAL"/></u></font>
+                        <group col="10">
+                            <field name="flat_a" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="flat_a" colspan="9"/>
+                            <field name="flat_b" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="flat_b" colspan="9"/>
+                            <field name="flat_c" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="flat_c" colspan="9"/>
+                            <field name="flat_d" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="flat_d" colspan="9"/>
+                            <field name="flat_e" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="flat_e" colspan="9"/>
+                            <field name="flat_f" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="flat_f" colspan="9"/>
+                            <field name="flat_g" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="flat_g" colspan="9"/>
+                            <field name="flat_h" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="flat_h" colspan="9"/>
+                            <field name="flat_i" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="flat_i" colspan="9"/>
+                            <field name="flat_j" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="flat_j" colspan="9"/>
+                            <field name="flat_k" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="flat_k" colspan="9"/>
+                        </group>
+                        <br/>
+                        <br/>
+                        <font color="purple"><u><separator string="PLANOS MADERA"/></u></font>
+                        <group col="10">
+                            <field name="wood_a" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="wood_a" colspan="9"/>
+                            <field name="wood_b" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="wood_b" colspan="9"/>
+                            <field name="wood_c" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="wood_c" colspan="9"/>
+                            <field name="wood_d" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="wood_d" colspan="9"/>
+                            <field name="wood_e" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="wood_e" colspan="9"/>
+                        </group>
+                        <br/>
+                        <br/>
+                        <font color="purple"><u><separator string="DESPIECE"/></u></font>
+                        <group col="10">
+                            <field name="show_a" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="show_a" colspan="9"/>
+                            <field name="show_b" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="show_b" colspan="9"/>
+                            <field name="show_c" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="show_c" colspan="9"/>
+                            <field name="show_d" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="show_d" colspan="9"/>
+                            <field name="show_e" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="show_e" colspan="9"/>
+                            <field name="show_f" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="show_f" colspan="9"/>
+                            <field name="show_g" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="show_g" colspan="9"/>
+                            <field name="show_h" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="show_h" colspan="9"/>
+                            <field name="show_i" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="show_i" colspan="9"/>
+                            <field name="show_j" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="show_j" colspan="9"/>
+                            <field name="show_k" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="show_k" colspan="9"/>
+                            <field name="show_l" nolabel="1" colspan="1" attrs="{'readonly':[('validation_diseno', '=', 'approved')]}"/>
+                            <label for="show_l" colspan="9"/>
+                        </group>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <font color="purple"><u><separator string="Revisión"/></u></font>
+                        <group>
+                            <field name="review_diseno"/>
+                            <field name="note_diseno" attrs="{'required':[('review_diseno','!=',False)]}"/>
+                        </group>
+                    </page>
+                    <page id="stage_history" string="User History / Stage History">
+                        <field name="task_state_hist_ids" readonly="1"/>
+                    </page>
+                    <page id="history" string="User History">
+                        <field name="task_user_hist_ids" readonly="1"/>
+                    </page>
+                </xpath>
+                <!--xpath expr="//field[@name='description_pad']" position="before">
+                    <field name="description"/>
+                </xpath-->
+                <xpath expr="//form/header" postition='after'>
+                    <button string="Email Finish Task" type="object" name="send_finish_task_email" class="oe_highlight" groups="mrp_plm_gebesa.group_mrp_plm_cotizacion"/>
+                    <button string="Validar Tarea IP" type="object" name="validation_task_ip" class="oe_highlight" groups="mrp_plm_gebesa.group_manager_validation_task_ip" attrs="{'invisible':[('validation_ip','!=', 'not_approved')]}" style="background-color:purple"/>
+                    <button string="Validar Tarea AIP" type="object" name="validation_task_aip" class="oe_highlight" groups="mrp_plm_gebesa.group_manager_validation_task_aip" attrs="{'invisible':[('validation_aip','!=', 'not_approved')]}" style="background-color:purple"/>
+                    <button string="Validar Tarea Diseño" type="object" name="validation_task_diseno" class="oe_highlight" groups="mrp_plm_gebesa.group_manager_validation_task_diseno" attrs="{'invisible':[('validation_diseno','!=', 'not_approved')]}" style="background-color:purple"/>
+                    <button string="Validar Tarea Servicio al Cliente" type="object" name="validation_task_sc" class="oe_highlight" groups="mrp_plm_gebesa.group_manager_validation_task_sc" attrs="{'invisible':[('validation_sc','!=', 'not_approved')]}" style="background-color:green"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='project_task_kanban_geb_view'>
+            <field name='name'>project.task.kanban.geb.view</field>
+            <field name='model'>project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='name']" position="after">
+                   <br/><strong><field name="product_id"/></strong><br/>
+                </xpath>
+                <xpath expr="//field[@name='project_id']" position="after">
+                    <br/><field name="partner_id"/>
+                    <br/><field name="order_id"/><br/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_project_task_tree">
+            <field name="name">view.project.task.tree</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_tree2" />
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='project_id']" position="after">
+                    <field name="partner_id"/>
+                    <field name="order_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

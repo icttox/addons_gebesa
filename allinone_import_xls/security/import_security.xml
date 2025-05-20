@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="group_allinone_import" model="res.groups">
+        <field name="name">AllInOne Import XLS</field>
+    </record>
+
+    <record id="allinone_import_access" model="ir.model.access">
+        <field name="name">Easy Import</field>
+        <field name="model_id" ref="allinone_import_xls.model_allinone_import" />
+        <field name="group_id" ref="group_allinone_import" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+
+    <record id="allinone_import_access_lines" model="ir.model.access">
+        <field name="name">Easy Import Lines</field>
+        <field name="model_id"
+            ref="allinone_import_xls.model_allinone_import_lines" />
+        <field name="group_id" ref="group_allinone_import" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+
+    <record id="allinone_import_location_save" model="ir.model.access">
+        <field name="name">Easy Import Lines</field>
+        <field name="model_id"
+            ref="allinone_import_xls.model_image_location_save" />
+        <field name="group_id" ref="group_allinone_import" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+
+    <record id="allinone_import_allinone_message" model="ir.model.access">
+        <field name="name">allinone Message</field>
+        <field name="model_id" ref="allinone_import_xls.model_allinone_message" />
+        <field name="group_id" ref="group_allinone_import" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+
+</odoo>

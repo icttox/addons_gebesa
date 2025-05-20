@@ -1,0 +1,222 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_report_value_by_location_mpf
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20211011\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-04 15:02+0000\n"
+"PO-Revision-Date: 2023-05-04 09:07-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: stock_report_value_by_location_mpf
+#: model_terms:ir.ui.view,arch_db:stock_report_value_by_location_mpf.stock_report_quantity_by_location_prepare_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__create_uid
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location_prepare__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__create_date
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location_prepare__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__display_name
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location_prepare__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: stock_report_value_by_location_mpf
+#: model_terms:ir.ui.view,arch_db:stock_report_value_by_location_mpf.stock_report_quantity_by_location_search_view
+msgid "Group By"
+msgstr "Agrupado por"
+
+#. module: stock_report_value_by_location_mpf
+#: model_terms:ir.ui.view,arch_db:stock_report_value_by_location_mpf.stock_report_quantity_by_location_search_view
+msgid "Group by Location"
+msgstr "Agrupar por ubicación"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__id
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location_prepare__id
+msgid "ID"
+msgstr ""
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__default_code
+msgid "Internal Reference"
+msgstr "Referencia Interna"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.actions.act_window,name:stock_report_value_by_location_mpf.action_stock_report_quantity_by_location_prepare
+msgid "Inventory By Location"
+msgstr "Inventario por ubicación"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.ui.menu,name:stock_report_value_by_location_mpf.menu_quantity_by_location
+msgid "Inventory by Location"
+msgstr "Inventario por ubicación"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location____last_update
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location_prepare____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__write_uid
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location_prepare__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__write_date
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location_prepare__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__location_id
+#: model_terms:ir.ui.view,arch_db:stock_report_value_by_location_mpf.stock_report_quantity_by_location_search_view
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location_prepare__location_ids
+msgid "Locations"
+msgstr "Ubicaciones"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__monthly_qty_consume
+msgid "Monthly Qty Consume"
+msgstr "Cant. Consumo Mensual"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__months_inventory
+msgid "Months Inventory"
+msgstr "Meses de inventario"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__product_origin
+msgid "Origin"
+msgstr "Origen"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__product_category_id
+msgid "Product Category"
+msgstr "Categoría de Producto"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__product_family_id
+msgid "Product Family"
+msgstr "Familia del producto"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__product_categ_geb_id
+msgid "Product Gebesa Category"
+msgstr "Categoría Geb"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__product_group_id
+msgid "Product Group"
+msgstr "Grupo del producto"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__product_line_id
+msgid "Product Line"
+msgstr "Línea de producto"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__product_type_id
+msgid "Product Type"
+msgstr "Tipo de producto"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__uom_id
+msgid "Product UoM"
+msgstr "Unidad"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: stock_report_value_by_location_mpf
+#: model_terms:ir.ui.view,arch_db:stock_report_value_by_location_mpf.stock_report_quantity_by_location_prepare_form_view
+msgid "Retrieve the Inventory Quantities"
+msgstr "Recuperar las cantidades de inventario"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__rawmat_rotation
+msgid "Rotation"
+msgstr "Rotación"
+
+#. module: stock_report_value_by_location_mpf
+#: model_terms:ir.ui.view,arch_db:stock_report_value_by_location_mpf.stock_report_quantity_by_location_search_view
+msgid "Search Stock Report Quantity by Location"
+msgstr "Buscar Reporte de Stock Cantidad por ubicación"
+
+#. module: stock_report_value_by_location_mpf
+#: model_terms:ir.ui.view,arch_db:stock_report_value_by_location_mpf.stock_report_quantity_by_location_search_view
+msgid "Sin Internos ni maquilas"
+msgstr ""
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__std_cost
+msgid "Std Cost"
+msgstr "Costo estandar"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model,name:stock_report_value_by_location_mpf.model_stock_report_quantity_by_location
+msgid "Stock Report By Location"
+msgstr ""
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model,name:stock_report_value_by_location_mpf.model_stock_report_quantity_by_location_prepare
+msgid "Stock Report Quantity By Location Prepare"
+msgstr ""
+
+#. module: stock_report_value_by_location_mpf
+#: code:addons/stock_report_value_by_location_mpf/wizards/stock_report_quantity_by_location.py:21
+#, python-format
+msgid "Stock Report by Location"
+msgstr ""
+
+#. module: stock_report_value_by_location_mpf
+#: model_terms:ir.ui.view,arch_db:stock_report_value_by_location_mpf.stock_report_quantity_by_location_pivot_view
+msgid "Stock by Location"
+msgstr "Inventario por ubicación"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__total_consume_cost
+msgid "Total Consume Cost"
+msgstr "Costo total de consumo"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__total_cost
+msgid "Total Cost"
+msgstr "Costo total"
+
+#. module: stock_report_value_by_location_mpf
+#: model:ir.model.fields,field_description:stock_report_value_by_location_mpf.field_stock_report_quantity_by_location__wiz_id
+msgid "Wiz"
+msgstr ""

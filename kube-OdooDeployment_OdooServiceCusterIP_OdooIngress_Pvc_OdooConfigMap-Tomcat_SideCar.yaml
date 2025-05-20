@@ -1,0 +1,327 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: data-db
+  namespace: grupo-salmon
+type: Opaque
+data:
+  # db-postgresql-sfo3-47568-do-user-3043795-0.b.db.ondigitalocean.com
+  #dbhost: ZGItcG9zdGdyZXNxbC1zZm8zLTQ3NTY4LWRvLXVzZXItMzA0Mzc5NS0wLmIuZGIub25kaWdpdGFsb2NlYW4uY29t
+  # postgresql-f44983f6-o40ee8bd6.database.cloud.ovh.net
+  dbhost: cG9zdGdyZXNxbC1hMDhjYWRmMC1vNDBlZThiZDYuZGF0YWJhc2UuY2xvdWQub3ZoLm5ldA==
+  # 20184
+  dbport: MjAxODQ=
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: git-creds
+  namespace: grupo-salmon
+type: Opaque
+data:
+  gituname: cm9vdA==
+  gitpass: d29yY2VodHRveD8zMg==
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: odoo-conf
+  namespace: grupo-salmon
+data:
+  odoo.conf: |
+    [options]
+    admin_passwd = @dmin?35078
+    addons_path = /opt/odoo/enterprise,/mnt/extra-addons/addons-grupo-salmon,/opt/odoo/gebesa/geospatial,/opt/odoo/gebesa/operating-unit,/opt/odoo/gebesa/reporting-engine,/opt/odoo/gebesa/cfdi32,/opt/odoo/gebesa/pentahoodoo,/opt/odoo/gebesa/server-ux,/opt/odoo/gebesa/multi-company,/opt/odoo/gebesa/e-commerce,/opt/odoo/gebesa/web,/opt/odoo/gebesa/stock-logistics-workflow,/opt/odoo/gebesa/stock-logistics-warehouse,/opt/odoo/gebesa/server-tools,/opt/odoo/gebesa/account-invoicing,/opt/odoo/gebesa/scrummergebesa,/opt/odoo/gebesa/knowledge,/opt/odoo/gebesa/management-system,/opt/odoo/gebesa/maintenance,/opt/odoo/gebesa/server-backend,/opt/odoo/gebesa/forkterceros
+    ;data_dir = /opt/odoo/datadir
+    data_dir = /mnt/extra-addons/datadir
+    ; montar el data_dir en /mnt/datadir 
+    ; hace que deje de funcionar, probablemente alguna
+    ; configuracion en el pvc
+    workers = 9
+    max_cron_threads = 2
+    ; admin_passwd = admin
+    ; csv_internal_sep = ,
+    ; db_maxconn = 64
+    ; db_name = False
+    ; db_template = template1
+    ; dbfilter = .*
+    ; debug_mode = False
+    ; email_from = False
+    db_user = odoo
+    db_password = gZNymwqksmmr8xTG
+    limit_memory_hard = 2684354560
+    limit_memory_soft = 2147483648
+    ; limit_request = 8192
+    limit_time_cpu = 86400
+    limit_time_real = 86400
+    ; list_db = True
+    ; log_db = False
+    ; log_handler = [':INFO']
+    ; log_level = info
+    logfile = /opt/odoo/log/odoo-server.log
+    ;longpolling_port = 8092
+    ; max_cron_threads = 2
+    ; osv_memory_age_limit = 1.0
+    ; osv_memory_count_limit = False
+    ; smtp_password = False
+    ; smtp_port = 25
+    ; smtp_server = localhost
+    ; smtp_ssl = False
+    ; smtp_user = False
+    ; workers = 0
+    ; xmlrpc = True
+    ; xmlrpc_interface =
+    ;xmlrpc_port = 8099
+    ; xmlrpcs = True
+    ; xmlrpcs_interface =
+    ; xmlrpcs_port = 8071
+
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: odoo-data
+  namespace: grupo-salmon
+  labels:
+    app: odoo
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      #storage: 5Gi
+      storage: 10Gi
+  #storageClassName: do-block-storage
+  storageClassName: csi-cinder-high-speed
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: odoo
+  namespace: grupo-salmon
+spec:
+  selector:
+    matchLabels:
+      app: odoo
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: odoo
+    spec:
+      initContainers:
+      - name: volume-mount-hack
+        image: busybox
+        command: ["sh", "-c", "chmod -R 777 /mnt"]
+        volumeMounts:
+        - name: odoo-data
+          mountPath: "/mnt/extra-addons/datadir"
+      - name: git-sync
+        image: k8s.gcr.io/git-sync:v3.0.1
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: git-source
+          mountPath: /mnt/extra-addons
+        # - name: git-secret
+        #   mountPath: /etc/git-secret
+        env:
+        - name: GIT_SYNC_REPO
+          value: "http://192.99.14.85:81/gebesa/addons-grupo-salmon.git"
+        - name: GIT_SYNC_BRANCH
+          value: "12.0"
+        - name: GIT_SYNC_ROOT
+          value: "/mnt/extra-addons"
+        - name: GIT_SYNC_DEST
+          value: "addons-grupo-salmon"
+        - name: GIT_SYNC_PERMISSIONS
+          value: "0777"
+        - name: GIT_SYNC_ONE_TIME
+          value: "true"
+        - name: GIT_SYNC_SSH
+          value: "false"
+        - name: GIT_SYNC_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: git-creds
+              key: gituname
+        - name: GIT_SYNC_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: git-creds
+              key: gitpass
+        # - name: GIT_SYNC_SSH
+        #   value: "true"
+        securityContext:
+          runAsUser: 0
+      containers:
+      # ODOO
+      - name: odoo
+        image: zettox/gsalmon:12.0
+        resources:
+          requests:
+            memory: "12Gi"
+            cpu: "1000m"
+          limits:
+            memory: "50Gi"
+            cpu: "30000m"
+        env:
+        - name: HOST
+          valueFrom:
+            secretKeyRef:
+              name: data-db
+              key: dbhost
+        - name: PORT
+          valueFrom:
+            secretKeyRef:
+              name: data-db
+              key: dbport
+        - name: ODOO_RC
+          value: "/etc/odoo/odoo.conf"
+        volumeMounts:
+        - mountPath: "/mnt/extra-addons/datadir"
+          name: odoo-data
+        - name: git-source
+          mountPath: "/mnt/extra-addons"
+        - mountPath: /etc/odoo # mount odoo-conf volumn to /mnt/extra-addons
+          name: odoo-conf
+        ports:
+          - name: http
+            containerPort: 8069
+          - name: longpooling
+            containerPort: 8072
+        securityContext:
+          privileged: true
+        livenessProbe:
+          httpGet:
+            path: /web
+            port: http
+          initialDelaySeconds: 600
+          periodSeconds: 30
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 6
+        readinessProbe:
+          httpGet:
+            path: /web
+            port: http
+          initialDelaySeconds: 50
+          periodSeconds: 50
+          timeoutSeconds: 30
+          successThreshold: 1
+          failureThreshold: 6
+      # Tomcat Sidecar
+      - name: tomcat
+        image: zettox/tomcat9:03102020
+        # resources:
+        #   requests:
+        #     memory: "16Mi"
+        #     cpu: "1000m"
+        #   limits:
+        #     memory: "16Mi"
+        #     cpu: "1000m"
+        # readinessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: 8080
+        #   initialDelaySeconds: 5
+        #   periodSeconds: 10
+        # livenessProbe:
+        #   tcpSocket:
+        #     port: 8080
+        #   initialDelaySeconds: 15
+        #   periodSeconds: 20
+        ports:
+        - containerPort: 8080
+      volumes:
+        - name: odoo-conf
+          configMap:
+            name: odoo-conf # place ConfigMap `odoo-conf` on /opt/odoo
+            items:
+              - key: odoo.conf
+                path: odoo.conf
+        - name: odoo-data
+          persistentVolumeClaim:
+            claimName: odoo-data
+        - name: git-source
+          emptyDir: {}
+        # - name: git-secret
+        #   secret:
+        #     defaultMode: 256
+        #     secretName: git-creds # your-ssh-key
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: odoo
+  namespace: grupo-salmon
+spec:
+  selector:
+    app: odoo
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 8069
+      targetPort: 8069
+      name: http
+    - protocol: TCP
+      port: 8072
+      targetPort: 8072
+      name: longpooling
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: odoo-ingress
+  namespace: grupo-salmon
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.org/websocket-services: "odoo"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "172800"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "172800"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "172800"
+    nginx.ingress.kubernetes.io/proxy-next-upstream: "error timeout invalid_header http_500 http_502 http_503"
+    nginx.ingress.kubernetes.io/proxy-body-size: 500m
+    nginx.ingress.kubernetes.io/proxy-buffers-number: "32 1024k"
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "2048k"
+    nginx.ingress.kubernetes.io/proxy-buffering: "off"
+    nginx.org/server-snippets: |
+      proxy_set_header X-Forwarded-Host $host;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_redirect off;
+    nginx.org/server-snippets: |
+      location /web/static/ {
+        proxy_cache_valid 200 60m;
+        proxy_buffering on;
+        expires 864000;
+        proxy_pass http://odoo;
+      }
+    nginx.org/server-snippets: |
+      gzip_types text/css text/scss text/plain text/xml application/xml application/json application/javascript;
+      gzip on;
+spec:
+  rules:
+  #- host: ercules.mx
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: odoo
+            port:
+              number: 8069
+      - path: /longpolling
+        pathType: Prefix
+        backend:
+          service:
+            name: odoo
+            port:
+              number: 8072

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="hr_report_attendance_menu" parent="hr.menu_hr_root" sequence="40" name="Reportes"/>
+
+        <record model="ir.actions.act_window" id="read_attendance_action">
+            <field name="name">Asistencias</field>
+            <field name="res_model">hr.attendance</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'create':False, 'edit':False, 'delete':False}</field>
+        </record>
+        <menuitem id="read_attendance_menu" parent="to_attendance_device.hr_report_attendance_menu" sequence="30" name="Asistencias" action="read_attendance_action"/>
+
+        <record model="ir.ui.view" id="report_time_card_wizard_form">
+            <field name="name">Time card</field>
+            <field name="model">attendance.reports.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Time card">
+                    <group>
+                        <field name="start_date" required="1"/>
+                        <field name="end_date" required="1"/>
+                        <field name="department_ids" widget="many2many_tags" attrs="{'invisible': [('employee_ids', '!=', [])]}"/>
+                        <field name="employee_ids" widget="many2many_tags" attrs="{'invisible': [('department_ids', '!=', [])]}"/>
+                    </group>
+                    <footer>
+                        <button name="print_time_card" type="object" string="Print" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_report_time_card_wizard" name="Time card" res_model="attendance.reports.wizard" view_mode="form" target="new" view_id="report_time_card_wizard_form"/>
+
+        <menuitem id="report_time_card_wizard_menu" parent="to_attendance_device.hr_report_attendance_menu" sequence="40" name="Time card" action="action_report_time_card_wizard"/>
+
+        <record model="ir.ui.view" id="absence_report_wizard_form">
+            <field name="name">Reporte de ausencias</field>
+            <field name="model">attendance.reports.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Reporte de ausencias">
+                    <group>
+                        <field name="start_date" required="1"/>
+                        <field name="end_date" required="1"/>
+                        <field name="department_ids" widget="many2many_tags" attrs="{'invisible': [('employee_ids', '!=', [])]}"/>
+                        <field name="employee_ids" widget="many2many_tags" attrs="{'invisible': [('department_ids', '!=', [])]}"/>
+                    </group>
+                    <footer>
+                        <button name="print_absence_report" type="object" string="Print" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_absence_report_wizard" name="Reporte de ausencias" res_model="attendance.reports.wizard" view_mode="form" target="new" view_id="absence_report_wizard_form"/>
+
+        <menuitem id="absence_report_wizard_menu" parent="to_attendance_device.hr_report_attendance_menu" sequence="40" name="Reporte de ausencias" action="action_absence_report_wizard"/>
+
+        <record model="ir.ui.view" id="attendance_summary_report_wizard_form">
+            <field name="name">Resumen de asistencia</field>
+            <field name="model">attendance.reports.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Resumen de asistencia">
+                    <group>
+                        <field name="start_date" required="1"/>
+                        <field name="end_date" required="1"/>
+                        <field name="department_ids" widget="many2many_tags" attrs="{'invisible': [('employee_ids', '!=', [])]}"/>
+                        <field name="employee_ids" widget="many2many_tags" attrs="{'invisible': [('department_ids', '!=', [])]}"/>
+                    </group>
+                    <footer>
+                        <button name="print_attendance_summary_report" type="object" string="Print" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_attendance_summary_report_wizard" name="Resumen de asistencia" res_model="attendance.reports.wizard" view_mode="form" target="new" view_id="attendance_summary_report_wizard_form"/>
+
+        <menuitem id="attendance_summary_report_wizard_menu" parent="to_attendance_device.hr_report_attendance_menu" sequence="40" name="Resumen de asistencia" action="action_attendance_summary_report_wizard"/>
+    </data>
+</odoo>

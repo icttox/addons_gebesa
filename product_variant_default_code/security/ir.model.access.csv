@@ -1,0 +1,2 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+prod_variant_manager,product_variant_manager,model_product_template_attribute_line,product.group_product_variant,1,1,1,1

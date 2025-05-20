@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_product_template_widget_route'>
+            <field name='name'>view.product.template.widget.route</field>
+            <field name='model'>product.template</field>
+            <field name="inherit_id" ref="stock.view_template_property_form"/>
+            <field name="groups_id" eval="[(4, ref('mrp_gebesa.group_change_widget_route'))]"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='route_ids']" position="replace">
+                    <field name="route_ids" widget="many2many_tags" attrs="{'invisible': [('type', 'in', ['service', 'digital'])]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

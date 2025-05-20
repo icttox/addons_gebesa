@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="res_country_route_action">
+            <field name="name">Modulo de Rutas</field>
+            <field name="res_model">res.country.route</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Crear ruta
+                </p>
+            </field>
+        </record>
+
+         <menuitem id="res_country_route_menu" name="Rutas" parent="contacts.menu_localisation"
+                  action="res_country_route_action"/>
+
+        <record model="ir.ui.view" id="res_country_route_view_form">
+            <field name="name">ruta.form</field>
+            <field name="model">res.country.route</field>
+            <field name="arch" type="xml">
+                <form string="Ruta">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="res_country_route_view_tree">
+            <field name="name">ruta.tree</field>
+            <field name="model">res.country.route</field>
+            <field name="arch" type="xml">
+                <tree string="Rutas">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_nts_plant,ProductNstPlant,model_product_nst_plant,,1,1,0,0
+access_nts_line,ProductNstLine,model_product_nst_line,,1,1,0,0
+access_nts_group,ProductNstGroup,model_product_nst_tipo,,1,1,0,0

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_template_form_ns_inherit_view'>
+            <field name='name'>product.tem.form.ns.inherit.view</field>
+            <field name='model'>product.template</field>
+            <field eval="4" name="priority"/>
+            <field name='inherit_id' ref="integration_progress_fields.product_template_form_inherit_view"/>
+            <field name='arch' type='xml'>
+                <field name="numctrl_progress" position="after">
+                    <field name="id_ns" string="Internal ID in Netsuite" readonly="1" />
+                </field>
+        	</field>
+        </record>
+
+        <record model='ir.ui.view' id='product_product_form_ns_inherit_view'>
+            <field name='name'>product.product.form.ns.inherit.view</field>
+            <field name='model'>product.product</field>
+           <!-- <field name='4' name="priority"/> -->
+            <field name='inherit_id' ref="product.product_normal_form_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook" position="before">
+                    <group>
+                        <field name="id_ns" readonly="True"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

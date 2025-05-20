@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mrp_production_state_hist_manager,mrp_production_state_hist,model_mrp_production_state_hist,,1,1,1,1

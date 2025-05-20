@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="revaluation_mrp_bom_view" model="ir.ui.view">
+            <field name="name">revaluation_mrp_bom_view</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="product_cost" readonly="1"/>
+                    <button name="action_reval" string="⇒ Revaluate costs" type="object" class="oe_link oe_right" groups="stock.group_stock_user"/>
+                </xpath>
+
+                <xpath expr="//tree/field[@name='attribute_value_ids']" position="after">
+                    <field name="product_cost" readonly="1"/>
+                    <field name="amount" readonly="1"   sum="Total Cost"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

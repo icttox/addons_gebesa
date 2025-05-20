@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="operating_unit_form" model="ir.ui.view">
+            <field name="name">Operating Unit</field>
+            <field name="model">operating.unit</field>
+            <field name="inherit_id" ref="operating_unit.view_operating_unit_form"/>
+            <field name="arch" type="xml">
+                <xpath expr='//group[@name="main_group"]' position='replace'>
+                    <group name="main_group">
+                        <label for="name"/>
+                        <field name="name"/>
+                        <label for="code"/>
+                        <field name="code"/>
+                        <label for="active"/>
+                        <field name="active"/>
+                        <label for="partner_id"/>
+                        <field name="partner_id"/>
+                        <label for="company_id"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                </xpath>
+                <field name="partner_id" position="after">
+                    <label for="credit_limit"/>
+                    <field name="credit_limit"/>
+                </field>
+                
+                <group name="main_group" position="after">
+                    <group>
+                        <group string="Sequences for TMS">
+                            <field name="travel_sequence_id"/>
+                            <field name="expense_sequence_id"/>
+                            <field name="waybill_sequence_id"/>
+                            <field name="advance_sequence_id"/>
+                            <field name="fuel_log_sequence_id"/>
+                            <field name="loan_sequence_id"/>
+                        </group>
+                        <group string="Journals for TMS">
+                            <field name="advance_journal_id"/>
+                            <field name="expense_journal_id"/>
+                            <field name="sale_journal_id"/>
+                            <field name="purchase_journal_id"/>
+                            <field name="loan_journal_id"/>
+                        </group>
+                        <group string="Products for TMS">
+                            <field name="ieps_product_id"/>
+                        </group>
+                    </group>
+                </group>
+            </field>
+        </record>
+    </data>
+</odoo>

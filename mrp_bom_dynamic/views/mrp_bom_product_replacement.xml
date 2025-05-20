@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_bom_product_value_tree'>
+            <field name='name'>mrp.bom.product.replacement.tree</field>
+            <field name='model'>mrp.bom.product.replacement</field>
+            <field name='arch' type='xml'>
+                <tree string='BoM Line Product Replacement'>
+                    <field name="bom_product_id" readonly="1"/>
+                    <field name='product_id'/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="mrp_bom_product_value_view">
+            <field name="name">mrp.bom.product.replacement.view</field>
+            <field name="model">mrp.bom.product.replacement</field>
+            <field name="arch" type="xml">
+                <form string='BoM Line Product Replacement'>
+                    <sheet>
+                        <h4>
+                            <separator string='BoM Line Product Replacement'/>
+                        </h4>
+                        <group>
+                            <group>
+                                <field name="bom_line_value_id" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="bom_product_id" required="1" readonly="1"/>
+                                <field name="product_id" required="1"/>   
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>   
+
+        <record id='action_mrp_bom_product_value' model='ir.actions.act_window'>
+            <field name='name'>BoM Line Product Replacement</field>
+            <field name='res_model'>mrp.bom.product.replacement</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="menu_mrp_bom_product_value" name="BoM Line Product Replacement (Dynamic BoM)" parent="mrp.menu_mrp_bom" action="action_mrp_bom_product_value"/>
+    </data>
+</odoo>

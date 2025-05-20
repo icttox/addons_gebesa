@@ -1,0 +1,11 @@
+<odoo>
+	<data>
+        <record model="res.groups" id="admin_quality_corrective_action">
+            <field name="name">Admin quality corrective action</field>
+        </record>
+
+        <record id="group_sale_order_incidents" model="res.groups">
+            <field name="name">Sale order incidents</field>
+        </record>
+    </data>
+</odoo>

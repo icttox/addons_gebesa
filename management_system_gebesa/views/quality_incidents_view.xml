@@ -1,0 +1,165 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="quality_incidents_tree">
+      <field name="name">quality.incidents.tree</field>
+      <field name="model">quality.incidents</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="date_incident"/>
+          <field name="date_invoice"/>
+          <field name="sale_order_id"/>
+          <field name="order_id" readonly="1"/>
+          <field name="warehouse_id"/>
+          <field name="company_id"/>
+          <field name="product_id" readonly="1"/>
+          <field name="amount"/>
+          <field name="net_sale_dollars"/>
+          <field name="net_sale_mx"/>
+          <field name="departament_id"/>
+          <field name="replacement_id" domain="[('workcenter_ids','=', False)]"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="quality_incidents_form">
+      <field name="name">quality.incidents.form</field>
+      <field name="model">quality.incidents</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <field name="status" widget="statusbar" clickable="True"/>
+          </header>
+          <sheet>
+            <group>
+              <group>              
+                <field name="date_incident"/>
+                <field name="date_invoice"/>
+                <field name="sale_order_id"/>
+                <field name="order_id" readonly="1"/>
+                <field name="warehouse_id"/>
+                <field name="company_id" invisible="1"/>
+              </group>
+              <group>              
+                <field name="product_id" readonly="1"/>
+                <field name="amount"/>
+                <field name="net_sale_dollars" widget="monetary"/>
+                <field name="net_sale_mx" widget="monetary"/>
+                <field name="departament_id" domain="[('show_incidents','=',True)]"/>
+                <field name="replacement_id" domain="[('workcenter_ids','=', False)]"/>
+              </group>
+            </group>
+            <notebook> 
+              <page string="Description">
+                <field name="description"/>
+              </page>
+              <page string="Action contingent">
+                <field name="contingent_ids">
+                  <tree editable="bottom" string="Action contingent">
+                    <field name="description"/>
+                    <field name="responsible_id"/>
+                    <field name="date_commitment"/>
+                    <field name="date_close"/>
+                  </tree>
+                </field> 
+              </page>
+              <page string="Analysis cause">
+              <group>
+                <field name="why"/>
+                <field name="why_1"/>
+                <field name="why_2"/>
+                <field name="why_3"/>
+                <field name="why_4"/>
+                <field name="cause"/>
+              </group>
+              </page>
+              <page string="Action corrective">
+                <field name="corrective_ids">
+                  <tree editable="bottom" string="Action corrective">
+                    <field name="description"/>
+                    <field name="responsible_id"/>
+                    <field name="date_commitment"/>
+                    <field name="date_close"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="Verification effectiveness">
+                <group>
+                  <group>
+                    <field name="check"/>
+                    <field name="date_close"/>
+                  </group>
+                  <group>
+                    <field name ="revised_id"/>
+                  </group>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+           <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div>  
+        </form>
+      </field>
+    </record>
+
+    <record id="quality_incidents_view_kanban" model="ir.ui.view">
+      <field name="name">quality.incidents.kanban</field>
+      <field name="model">quality.incidents</field>
+      <field name="priority">10</field>
+      <field name="arch" type="xml">
+        <kanban default_group_by="status">
+          <field name="date_incident"/>
+          <field name="product_id"/>
+          <field name="net_sale_mx"/>
+          <templates>
+            <t t-name="kanban-box">
+              <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                <div class="row">
+                  <div class="col-12">
+                    <strong><span><li>Producto: <field name="product_id"/></li></span></strong>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <li>Motivo de reposicion: <field name="replacement_id"/></li>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <field name="date_incident"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <string>Pedido de origen: <field name="sale_order_id"/></string>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <string>Pedido actual: <field name="order_id"/></string>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <string>Almacen: <field name="warehouse_id"/></string>
+                  </div>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+    
+    <record model="ir.actions.act_window" id="quality_incidents_action">
+      <field name="name">Incidents</field>
+      <field name="res_model">quality.incidents</field>
+      <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <menuitem name="Incidents" id="quality_incidents_action_menu" parent="management_system_gebesa.iso_actions"
+              action="management_system_gebesa.quality_incidents_action"/>
+
+  </data>
+</odoo>

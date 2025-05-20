@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="real_amount_wizard">
+			<field name="name">tms.wizard.real.amount</field>
+			<field name="model">tms.wizard.real.amount</field>
+			<field name="arch" type="xml">
+				<form string="description">
+					<group>
+						<field name="real_amount"/>
+					</group>
+					<footer>
+                        <button name="print_real_amount" string="Imprimir" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>

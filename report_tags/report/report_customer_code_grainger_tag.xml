@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="customer_code_grainger_tag"
+            model="sale.order"
+            string="Etiqueta grainger"
+            report_type="qweb-pdf"
+            name="report_tags.report_customer_code_grainger_tag"
+            file="report_tags.report_customer_code_grainger_tag"
+        />
+        <record id="report_tags.customer_code_grainger_tag" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag" />
+        </record>
+
+        <template id="report_customer_code_grainger_tag_document">
+            <div class="page" style="font-size: 7pt;">
+                <t t-foreach="doc.order_line" t-as="line">
+                    <t t-if="line.product_id.id in bom_lines[doc.id]">
+                        <t t-if="bom_lines[doc.id][line.product_id.id]">
+                            <t t-set="total_qty" t-value="int(sum(bom_line.product_qty for bom_line in bom_lines[doc.id][line.product_id.id]))"/>
+                            <t t-foreach="range(int(line.product_uom_qty))" t-as="order_index">
+                                <t t-foreach="range(total_qty)" t-as="index">
+                                    <t t-set="bom_index" t-value="index % len(bom_lines[doc.id][line.product_id.id])"/>
+                                    <t t-set="bom_line" t-value="bom_lines[doc.id][line.product_id.id][bom_index]"/>
+                                    <div style="border: 2px solid #000000; border-radius:16px; height: 350px">
+                                        <div style="font-size: 40pt; text-align: center;">
+                                            <strong><span t-esc="cust_code[doc.id][line.product_id.id].customer_code"/></strong>
+                                        </div>
+                                        <br/>
+                                        <div style="font-size: 20pt; text-align: center;">
+                                            <t t-if="line.product_id.individual_name">
+                                                <strong><span t-esc="line.product_id.individual_name"/></strong>
+                                            </t>
+                                            <t t-else="">
+                                                <strong><span t-esc="line.product_id.name"/></strong>
+                                            </t>
+                                        </div>
+                                        <br/>
+                                        <div style="font-size: 16pt; margin-top: 5px; text-align:center;">
+                                            (<span t-esc="index + 1"/> de <span t-esc="total_qty"/>)
+                                            <t t-if="bom_line.product_id.individual_name">
+                                                <span t-esc="bom_line.product_id.individual_name"/>
+                                            </t>
+                                            <t t-else="">
+                                                <span t-esc="bom_line.product_id.name"/>
+                                            </t>
+                                        </div>
+                                        <br/><br/>
+                                        <div align="center" style="font-size: 25pt;">
+                                            <t t-set="code" t-value="'*'+cust_code[doc.id][line.product_id.id].customer_code+'*'"/>
+                                            <div style="font-family: CCode39;">
+                                                <span t-esc="code"/>
+                                                <br/><br/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="page-break-after: always;"/>
+                                </t>
+                            </t>
+                        </t>
+                    </t>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_customer_code_grainger_tag">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-call="report_tags.report_customer_code_grainger_tag_document"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

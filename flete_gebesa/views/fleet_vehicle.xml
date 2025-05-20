@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="fleet_vehicle_form" model="ir.ui.view">
+            <field name="name">fleet.vehicle.flete.gebesa.form</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+            <field name="priority">111</field>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/div/button[@name='return_action_to_open']" position="before">
+                    <button name="gps_wsa_scanner" string="Posicion Global" class="oe_stat_button" icon="fa-globe" type="object"/>
+                    <button name="open_in_google" string="View in Google Maps" class="oe_stat_button" icon="fa-compass" type="object"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="fleet_vehicle_form_gebesa" model="ir.ui.view">
+            <field name="name">fleet.vehicle.form.gebesa</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="tms.fleet_vehicle_form_inherit_tms"/>
+            <field name="priority">110</field> <!--Priority greater than 100-->
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[3]/group/field[@name='unit_extradata']" position="before">
+                    <group>
+                        <field name="performance"/>
+                        <field name="axis"/>
+                        <field name="tank"/>
+                        <field name="cubic_mtr"/>
+                        <field name="feet"/>
+                    </group>
+                    <group>
+                        <field name="load_capacity"/>
+                        <field name="suspension"/>
+                        <field name="type_box"/>
+                    </group>
+                </xpath>
+                <xpath expr="//notebook/page[3]" position="after">
+                    <page string="History">
+                        <field name="vehicle_event_id"/>
+                        <!--<field name="vehicle_event_id" widget="one2many_list" nolabel="True">
+                            <tree string="Tires">
+                                <field name="name"/>
+                                <field name="type"/>
+                            </tree>
+                        </field>-->
+                        <group>
+                            <separator colspan="4" string="Notes"/>
+                            <field name="notes" nolabel="1"/>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook/page[3]" position="after">
+                    <page string="Global Positioning">
+                            <group>
+                                <field name="latitude"/>
+                                <field name="longitude"/>
+                                <field name="point" widget="geo_edit_map"/>
+                            </group>
+                    </page>
+                    <page string="Tires">
+                        <field name="tires_id" widget="many2many" nolabel="True" domain="[('active', '=', True), ('fleet_vehicle_id', '=', False)]" >
+                            <tree string="Tires" default_order="sequence" delete="false">
+                                <field name="sequence" widget="handle" />
+                                <field name="sequence" string="Position"/>
+                                <field name="code_tires"/>
+                                <field name="mark"/>
+                                <field name="series_tires"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <!--xpath expr="//field[@name='fleet_type']" position="after">
+                    <field name="status" readonly="1"/>
+                </xpath-->
+
+                <field name='year_model' position="after">
+                    <field name="account_analytic_id" required="1"/>
+                    <field name="imei"/>
+                    <field name="metas"/>
+                    <field name="meta_diaria"/>
+                    <field name="meta_mensual"/>
+                    <field name="incentivo"/>
+                    <field name="categories_trucks"/>
+                </field>
+            </field>
+        </record>
+
+        <!--record id="fleet_vehicle_edit_status_form" model="ir.ui.view">
+            <field name="name">fleet.vehicle.edit.status</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="flete_gebesa.fleet_vehicle_form" />
+            <field name="groups_id" eval="[(6,0, [ref('flete_gebesa.group_change_status_vehicle')])]" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='status']" position="attributes">
+                   <attribute name="readonly">0</attribute>
+                </xpath>
+            </field>
+        </record-->
+
+        <record model="ir.ui.view" id="fleet_vehicle_tree_gebesa">
+            <field name="name">fleet.vehicle.tree.gebesa</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="tms.fleet_vehicle_tree"/>
+            <field name="arch" type="xml">
+                <!--xpath expr="//tree" position="attributes">
+                    <attribute name="colors">green:status=='active';red:status=='lack_sales';orange:status=='lack_driver';brown:status=='stopped_workshop';teal:status=='to_leave';purple:status=='to_arrive';</attribute>
+                </xpath>
+                <field name="idname" position="after">
+                    <field name="status"/>
+                </field-->
+                <field name="license_plate" position="after">
+                    <field name="fleet_type"/>
+                    <field name="account_analytic_id"/>
+                    <field name="imei"/>
+                    <field name="tollstation_tag"/>
+                </field>
+            </field>
+        </record>
+
+        <!--record model="ir.ui.view" id="geo_vehicle_view_form">
+            <field name="name">geo_vehicle_form</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="flete_gebesa.fleet_vehicle_form_gebesa"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[3]" position="after">
+                    
+                </xpath>
+            </field>
+        </record-->
+
+        <record id="geoengine_vehicle_view" model="ir.actions.act_window">
+            <field name="name">Vehicle GPS view</field>
+            <field name="res_model">fleet.vehicle</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">geoengine</field>
+        </record>
+        <menuitem action="geoengine_vehicle_view" id="menu_tms_settings_vehicle_gps_form" name="GPS Vehicles" parent="tms.menu_tms_settings_unit" sequence="1"/>
+
+        <record id="tms_vehicle_geoengine_view" model="ir.ui.view">
+            <field name="name">Vehicle Geospatial View</field>
+            <field eval="16" name="priority"/>
+            <field name="model">fleet.vehicle</field>
+            <field name="arch" type="xml">
+                <geoengine>
+                    <field name="name" select="1"/>
+                </geoengine>
+            </field>
+        </record>
+        <record id="geoengine_vector_layer_vehicle" model="geoengine.vector.layer">
+            <field name="geo_field_id" ref="flete_gebesa.field_fleet_vehicle__point"/>
+            <field name="name">Vehicle Basic point</field>
+            <field eval="6" name="sequence"/>
+            <field name="view_id" ref="tms_vehicle_geoengine_view"/>
+            <field name="geo_repr">basic</field>
+            <field eval="1" name="nb_class"/>
+            <field name="begin_color">#FF680A</field>
+        </record>
+        <record id="geoengine_raster_layer_tmsvehiclemaposm" model="geoengine.raster.layer">
+            <field name="raster_type">osm</field>
+            <field name="name">Vehicle Open Street Map</field>
+            <field name="view_id" ref="tms_vehicle_geoengine_view"/>
+            <field eval="0" name="overlay"/>
+        </record>
+        <record id="geoengine_raster_layer_basic0" model="geoengine.raster.layer">
+            <field name="raster_type">d_wms</field>
+            <field name="name">basic</field>
+            <field name="url">vmap0.tiles.osgeo.org/wms/vmap0</field>
+            <field name="view_id" ref="tms_vehicle_geoengine_view"/>
+            <field eval="1" name="overlay"/>
+        </record>
+    </data>
+</odoo>

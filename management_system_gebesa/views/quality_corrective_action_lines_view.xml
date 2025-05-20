@@ -1,0 +1,33 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="quality_corrective_action_lines_tree">
+      <field name="name">quality.corrective.action.lines.tree</field>
+      <field name="model">quality.corrective.action.lines</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="description"/>
+          <field name="responsible_id"/>
+          <field name="date_commitment"/>
+          <field name="date_close"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="quality_corrective_action_lines_form">
+      <field name="name">quality.corrective.action.lines.form</field>
+      <field name="model">quality.corrective.action.lines</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="description"/>
+              <field name="responsible_id"/>
+              <field name="date_commitment"/>
+              <field name="date_close"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>

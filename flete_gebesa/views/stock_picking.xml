@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <record id="view_picking_tms_form" model="ir.ui.view">
+            <field name="name">view.picking.tms.form</field>
+            <field name="model">stock.picking</field>
+            <field name="groups_id" eval="[(6,0,[ref('tms.group_expenses'),ref('tms.group_monitoring'),ref('tms.group_supervisor_traffic'),ref('tms.group_traffic')])]"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/header/button[@name='action_confirm']" position="before">
+                    <button name="generate_qr" string="Generar Autorizacion" type="object" groups="flete_gebesa.group_manager_diesel"/>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='scheduled_date']" position="after">
+                    <field name="fecha_despacho"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook" position="inside">
+                    <page string="TMS">
+                        <group>
+                            <group>
+                                <field name="vehicle_id"/>
+                                <field name="full_tank"/>
+                            </group>
+                            <group>
+                                <field name="route_id"/>
+                                <field name="driver_id"/>
+                                <field name="kilometer"/>
+                            </group>
+                            <field name="travel_ids" domain="[('unit_id','=', vehicle_id), ('state', 'in',('progress','done'))]" />
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='view_picking_tms_tree'>
+            <field name='name'>stock.picking.tms.tree</field>
+            <field name='model'>stock.picking</field>
+            <field name="groups_id" eval="[(6,0,[ref('tms.group_expenses'),ref('tms.group_monitoring'),ref('tms.group_supervisor_traffic'),ref('tms.group_traffic')])]"/>
+            <field name="inherit_id" ref="stock.vpicktree"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="vehicle_id"/>
+                    <field name="driver_id"/>
+                </xpath>
+                <xpath expr="//field[@name='scheduled_date']" position="after">
+                    <field name="fecha_despacho"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

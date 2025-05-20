@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="cove_to_pdf"
+            model="l10n.mx.immex.pedimento"
+            string="Cove"
+            report_type="qweb-pdf"
+            menu="False"
+            name="immex_gebesa.report_cove_to_pdf" 
+            file="immex_gebesa.report_cove_to_pdf"
+        />
+
+        <template id="cove_to_pdf_layout">
+            <div class="header">
+                <div class="row">
+                    <div class="col-12" style="background-color: #404447; height: 55px">
+                        <img src="/immex_gebesa/static/src/img/cove_header.png" style="max-height: 30px;margin-top: 10px;margin-left: 10px;"/>
+                    </div>
+                </div>
+                <div class="row" style="border: 1px solid #000000;">
+                    <div class="col-12 text-center" style="color: #5A5A5A; font-size: 14pt; font-family: Helvetica; background-color: #DDD;">
+                        <strong>Información de Valor y de Comercialización</strong><br/>
+                        <strong>Ventanilla digital mexicana de comercio exterior</strong><br/>
+                        <strong>Promoción o solicitud en materia de comercio exterior</strong><br/>
+                    </div>
+                </div>
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer">
+                <div class="row">
+                    <div class="col-12" style="background-color: #E1E1DF; height: 70px">
+                        <img src="/immex_gebesa/static/src/img/cove_footer.png" style="max-height: 50px;margin-top: 10px;margin-left: 10px;"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+        
+
+        <template id="report_cove_to_pdf_document">
+            <t t-call="immex_gebesa.cove_to_pdf_layout">
+                <div class="page" style="font-size: 12pt; font-family: Arial;">
+                    <div class="row">
+                        <div class="col-12" style="font-size: 14pt;">
+                            <strong>Datos del Acuse de Valor</strong>
+                            <t t-if="cove.getElementsByTagName('eDocument')">
+                                <span t-esc="cove.getElementsByTagName('eDocument')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Tipo de operación</strong>
+                        </div>
+                        <div class="col-6 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Relación de facturas</strong>
+                        </div>
+                        <div class="col-3 border-top border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>No. de factura</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="cove.getElementsByTagName('tipoOperacion') and cove.getElementsByTagName('tipoOperacion')[0].firstChild">
+                                <span t-esc="DATOS_COVE['tipoOperacion'][cove.getElementsByTagName('tipoOperacion')[0].firstChild.nodeValue]"/>
+                            </t>
+                        </div>
+                        <div class="col-6 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="cove.getElementsByTagName('relacionFacturas') and cove.getElementsByTagName('relacionFacturas')[0].firstChild">
+                                <span t-esc="DATOS_COVE['relacionFacturas'][cove.getElementsByTagName('relacionFacturas')[0].firstChild.nodeValue]"/>
+                            </t>
+                        </div>
+                        <div class="col-3 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="cove.getElementsByTagName('numeroFacturaRelacionFacturas') and cove.getElementsByTagName('numeroFacturaRelacionFacturas')[0].firstChild">
+                                <span t-esc="cove.getElementsByTagName('numeroFacturaRelacionFacturas')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7 border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Tipo de figura</strong>
+                        </div>
+                        <div class="col-5 border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Fecha Exp.</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="cove.getElementsByTagName('tipoFigura') and cove.getElementsByTagName('tipoFigura')[0].firstChild">
+                                <span t-esc="DATOS_COVE['tipoFigura'][cove.getElementsByTagName('tipoFigura')[0].firstChild.nodeValue]"/>
+                            </t>
+                        </div>
+                        <div class="col-5 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="cove.getElementsByTagName('fechaExpedicion') and cove.getElementsByTagName('fechaExpedicion')[0].firstChild">
+                                <span t-esc="cove.getElementsByTagName('fechaExpedicion')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Observaciones</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="cove.getElementsByTagName('observaciones') and cove.getElementsByTagName('observaciones')[0].firstChild">
+                                <span t-esc="cove.getElementsByTagName('observaciones')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+
+                    <t t-set="rfcs_consulta" t-value="cove.getElementsByTagName('rfcsConsulta')[0]"/>
+                    <div class="row">
+                        <div class="col-12 mt-2" style="font-size: 12pt;">
+                            <strong>RFC con permisos de consulta</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>RFC de consulta</strong>
+                        </div>
+                        <div class="col-8 border-top border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Nombre o Razón social</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="rfcs_consulta and rfcs_consulta.getElementsByTagName('rfcConsulta') and rfcs_consulta.getElementsByTagName('rfcConsulta')[0].firstChild">
+                                <span t-esc="rfcs_consulta.getElementsByTagName('rfcConsulta')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-8 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="rfcs_consulta and rfcs_consulta.getElementsByTagName('rfcConsulta') and rfcs_consulta.getElementsByTagName('rfcConsulta')[0].firstChild">
+                                <t t-set="company" t-value="search_rfc(rfcs_consulta.getElementsByTagName('rfcConsulta')[0].firstChild.nodeValue)"/>
+                                <span t-esc="company"/>
+                            </t>
+                        </div>
+                    </div>
+
+                    <t t-set="patentes_aduanales" t-value="cove.getElementsByTagName('patentesAduanales')[0]"/>
+                    <div class="row">
+                        <div class="col-12 mt-2" style="font-size: 12pt;">
+                            <strong>Número de patente aduanal</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 border-top border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Número autorización aduanal</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="patentes_aduanales and patentes_aduanales.getElementsByTagName('patenteAduanal') and patentes_aduanales.getElementsByTagName('patenteAduanal')[0].firstChild">
+                                <span t-esc="patentes_aduanales.getElementsByTagName('patenteAduanal')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+
+                    <t t-set="facturas" t-value="cove.getElementsByTagName('facturas')[0]"/>
+                    <t t-set="factura" t-value="facturas.getElementsByTagName('factura')[0]"/>
+                    <div class="row">
+                        <div class="col-12 mt-2" style="font-size: 12pt;">
+                            <strong>Datos de la factura</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Subdivisión</strong>
+                        </div>
+                        <div class="col-4 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Certificado de origen</strong>
+                        </div>
+                        <div class="col-4 border-top border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>No. de exportador autorizado</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="factura and factura.getElementsByTagName('subdivision') and factura.getElementsByTagName('subdivision')[0].firstChild">
+                                <span t-esc="DATOS_COVE['subdivision'][factura.getElementsByTagName('subdivision')[0].firstChild.nodeValue]"/>
+                            </t>
+                        </div>
+                        <div class="col-4 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="factura and factura.getElementsByTagName('certificadoOrigen') and factura.getElementsByTagName('certificadoOrigen')[0].firstChild">
+                                <span t-esc="DATOS_COVE['certificadoOrigen'][factura.getElementsByTagName('certificadoOrigen')[0].firstChild.nodeValue]"/>
+                            </t>
+                        </div>
+                        <div class="col-4 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="factura and factura.getElementsByTagName('numeroExportadorConfiable') and factura.getElementsByTagName('numeroExportadorConfiable')[0].firstChild">
+                                <span t-esc="factura.getElementsByTagName('numeroExportadorConfiable')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+
+                    <t t-set="emisor" t-value="cove.getElementsByTagName('emisor')[0]"/>
+                    <div class="row">
+                        <div class="col-12 mt-2" style="font-size: 12pt;">
+                            <strong>Datos generales del proveedor</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Tipo de identificador</strong>
+                        </div>
+                        <div class="col-5 border-top border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Tax ID/Sin Tax ID/RFC/CURP</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="emisor and emisor.getElementsByTagName('tipoIdentificador') and emisor.getElementsByTagName('tipoIdentificador')[0].firstChild">
+                                <span t-esc="DATOS_COVE['tipoIdentificador'][emisor.getElementsByTagName('tipoIdentificador')[0].firstChild.nodeValue]"/>
+                            </t>
+                        </div>
+                        <div class="col-5 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="emisor and emisor.getElementsByTagName('identificacion') and emisor.getElementsByTagName('identificacion')[0].firstChild">
+                                <span t-esc="emisor.getElementsByTagName('identificacion')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Nombre(s) o Razón Social</strong>
+                        </div>
+                        <div class="col-4 border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Apellido paterno</strong>
+                        </div>
+                        <div class="col-4 border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Apellido materno</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="emisor and emisor.getElementsByTagName('nombre') and emisor.getElementsByTagName('nombre')[0].firstChild">
+                                <span t-esc="emisor.getElementsByTagName('nombre')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-4 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="emisor and emisor.getElementsByTagName('apellidoPaterno') and emisor.getElementsByTagName('apellidoPaterno')[0].firstChild">
+                                <span t-esc="emisor.getElementsByTagName('apellidoPaterno')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-4 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="emisor and emisor.getElementsByTagName('apellidoMaterno') and emisor.getElementsByTagName('apellidoMaterno')[0].firstChild">
+                                <span t-esc="emisor.getElementsByTagName('apellidoMaterno')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+
+                    <t t-set="dom_emisor" t-value="emisor.getElementsByTagName('domicilio')[0]"/>
+                    <div class="row">
+                        <div class="col-12 mt-2" style="font-size: 12pt;">
+                            <strong>Domicilio del proveedor</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Calle</strong>
+                        </div>
+                        <div class="col-2 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>No. exterior</strong>
+                        </div>
+                        <div class="col-2 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>No. interior</strong>
+                        </div>
+                        <div class="col-2 border-top border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Código postal</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="dom_emisor and dom_emisor.getElementsByTagName('calle') and dom_emisor.getElementsByTagName('calle')[0].firstChild">
+                                <span t-esc="dom_emisor.getElementsByTagName('calle')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-2 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="dom_emisor and dom_emisor.getElementsByTagName('numeroExterior') and dom_emisor.getElementsByTagName('numeroExterior')[0].firstChild">
+                                <span t-esc="dom_emisor.getElementsByTagName('numeroExterior')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-2 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="dom_emisor and dom_emisor.getElementsByTagName('numeroInterior') and dom_emisor.getElementsByTagName('numeroInterior')[0].firstChild">
+                                <span t-esc="dom_emisor.getElementsByTagName('numeroInterior')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-2 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="dom_emisor and dom_emisor.getElementsByTagName('codigoPostal') and dom_emisor.getElementsByTagName('codigoPostal')[0].firstChild">
+                                <span t-esc="dom_emisor.getElementsByTagName('codigoPostal')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Colonia</strong>
+                        </div>
+                        <div class="col-6 border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Localidad</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="dom_emisor and dom_emisor.getElementsByTagName('colonia') and dom_emisor.getElementsByTagName('colonia')[0].firstChild">
+                                <span t-esc="dom_emisor.getElementsByTagName('colonia')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-6 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="dom_emisor and dom_emisor.getElementsByTagName('localidad') and dom_emisor.getElementsByTagName('localidad')[0].firstChild">
+                                <span t-esc="dom_emisor.getElementsByTagName('localidad')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Entidad federativa</strong>
+                        </div>
+                        <div class="col-6 border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Municipio</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="dom_emisor and dom_emisor.getElementsByTagName('entidadFederativa') and dom_emisor.getElementsByTagName('entidadFederativa')[0].firstChild">
+                                <span t-esc="dom_emisor.getElementsByTagName('entidadFederativa')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-6 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="dom_emisor and dom_emisor.getElementsByTagName('municipio') and dom_emisor.getElementsByTagName('municipio')[0].firstChild">
+                                <span t-esc="dom_emisor.getElementsByTagName('municipio')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>País</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="dom_emisor and dom_emisor.getElementsByTagName('pais') and dom_emisor.getElementsByTagName('pais')[0].firstChild">
+                                <t t-set="country" t-value="search_country(dom_emisor.getElementsByTagName('pais')[0].firstChild.nodeValue)"/>
+                                <span t-esc="country"/>
+                            </t>
+                        </div>
+                    </div>
+
+                    <t t-set="destinatario" t-value="cove.getElementsByTagName('destinatario')[0]"/>
+                    <div class="row">
+                        <div class="col-12 mt-2" style="font-size: 12pt;">
+                            <strong>Datos generales del destinatario</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Tipo de identificador</strong>
+                        </div>
+                        <div class="col-5 border-top border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Tax ID/Sin Tax ID/RFC/CURP</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="destinatario and destinatario.getElementsByTagName('tipoIdentificador') and destinatario.getElementsByTagName('tipoIdentificador')[0].firstChild">
+                                <span t-esc="DATOS_COVE['tipoIdentificador'][destinatario.getElementsByTagName('tipoIdentificador')[0].firstChild.nodeValue]"/>
+                            </t>
+                        </div>
+                        <div class="col-5 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="destinatario and destinatario.getElementsByTagName('identificacion') and destinatario.getElementsByTagName('identificacion')[0].firstChild">
+                                <span t-esc="destinatario.getElementsByTagName('identificacion')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Nombre(s) o Razón Social</strong>
+                        </div>
+                        <div class="col-4 border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Apellido paterno</strong>
+                        </div>
+                        <div class="col-4 border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Apellido materno</strong>
+                        </div>
+                    </div>
+                    <div class="row" style="page-break-after:always;">
+                        <div class="col-4 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="destinatario and destinatario.getElementsByTagName('nombre') and destinatario.getElementsByTagName('nombre')[0].firstChild">
+                                <span t-esc="destinatario.getElementsByTagName('nombre')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-4 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="destinatario and destinatario.getElementsByTagName('apellidoPaterno') and destinatario.getElementsByTagName('apellidoPaterno')[0].firstChild">
+                                <span t-esc="destinatario.getElementsByTagName('apellidoPaterno')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-4 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="destinatario and destinatario.getElementsByTagName('apellidoMaterno') and destinatario.getElementsByTagName('apellidoMaterno')[0].firstChild">
+                                <span t-esc="destinatario.getElementsByTagName('apellidoMaterno')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+
+                    <t t-set="dom_destinatario" t-value="destinatario.getElementsByTagName('domicilio')[0]"/>
+                    <div class="row">
+                        <div class="col-12" style="font-size: 12pt;">
+                            <strong>Domicilio del destinatario</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Calle</strong>
+                        </div>
+                        <div class="col-2 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>No. exterior</strong>
+                        </div>
+                        <div class="col-2 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>No. interior</strong>
+                        </div>
+                        <div class="col-2 border-top border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Código postal</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="dom_destinatario and dom_destinatario.getElementsByTagName('calle') and dom_destinatario.getElementsByTagName('calle')[0].firstChild">
+                                <span t-esc="dom_destinatario.getElementsByTagName('calle')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-2 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="dom_destinatario and dom_destinatario.getElementsByTagName('numeroExterior') and dom_destinatario.getElementsByTagName('numeroExterior')[0].firstChild">
+                                <span t-esc="dom_destinatario.getElementsByTagName('numeroExterior')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-2 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="dom_destinatario and dom_destinatario.getElementsByTagName('numeroInterior') and dom_destinatario.getElementsByTagName('numeroInterior')[0].firstChild">
+                                <span t-esc="dom_destinatario.getElementsByTagName('numeroInterior')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-2 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="dom_destinatario and dom_destinatario.getElementsByTagName('codigoPostal') and dom_destinatario.getElementsByTagName('codigoPostal')[0].firstChild">
+                                <span t-esc="dom_destinatario.getElementsByTagName('codigoPostal')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Colonia</strong>
+                        </div>
+                        <div class="col-6 border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Localidad</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="dom_destinatario and dom_destinatario.getElementsByTagName('colonia') and dom_destinatario.getElementsByTagName('colonia')[0].firstChild">
+                                <span t-esc="dom_destinatario.getElementsByTagName('colonia')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-6 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="dom_destinatario and dom_destinatario.getElementsByTagName('localidad') and dom_destinatario.getElementsByTagName('localidad')[0].firstChild">
+                                <span t-esc="dom_destinatario.getElementsByTagName('localidad')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border-left" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Entidad federativa</strong>
+                        </div>
+                        <div class="col-6 border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>Municipio</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 border-bottom border-left" style="border-color: #000 !important;">
+                            <t t-if="dom_destinatario and dom_destinatario.getElementsByTagName('entidadFederativa') and dom_destinatario.getElementsByTagName('entidadFederativa')[0].firstChild">
+                                <span t-esc="dom_destinatario.getElementsByTagName('entidadFederativa')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                        <div class="col-6 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="dom_destinatario and dom_destinatario.getElementsByTagName('municipio') and dom_destinatario.getElementsByTagName('municipio')[0].firstChild">
+                                <span t-esc="dom_destinatario.getElementsByTagName('municipio')[0].firstChild.nodeValue"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                            <strong>País</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 border-bottom border-left border-right" style="border-color: #000 !important;">
+                            <t t-if="dom_destinatario and dom_destinatario.getElementsByTagName('pais') and dom_destinatario.getElementsByTagName('pais')[0].firstChild">
+                                <t t-set="country" t-value="search_country(dom_destinatario.getElementsByTagName('pais')[0].firstChild.nodeValue)"/>
+                                <span t-esc="country"/>
+                            </t>
+                        </div>
+                    </div>
+
+                    <t t-set="mercancias" t-value="factura.getElementsByTagName('mercancias')[0]"/>
+                    <div class="row">
+                        <div class="col-12 mt-2" style="font-size: 12pt;">
+                            <strong>Datos de la mercancía</strong>
+                        </div>
+                    </div>
+                    <t t-foreach="mercancias.getElementsByTagName('mercancia')" t-as="mercancia">
+                        <div class="row">
+                            <div class="col-6 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                                <strong>Descripción genérica de la mercancía</strong>
+                            </div>
+                            <div class="col-3 border-top border-left" style="background-color: #DDD; border-color: #000 !important;">
+                                <strong>Clave UMC</strong>
+                            </div>
+                            <div class="col-3 border-top border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                                <strong>Cantidad UMC</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 border-bottom border-left" style="border-color: #000 !important;">
+                                <t t-if="mercancia and mercancia.getElementsByTagName('descripcionGenerica') and mercancia.getElementsByTagName('descripcionGenerica')[0].firstChild">
+                                    <span t-esc="mercancia.getElementsByTagName('descripcionGenerica')[0].firstChild.nodeValue"/>
+                                </t>
+                            </div>
+                            <div class="col-3 border-bottom border-left" style="border-color: #000 !important;">
+                                <t t-if="mercancia and mercancia.getElementsByTagName('claveUnidadMedida') and mercancia.getElementsByTagName('claveUnidadMedida')[0].firstChild">
+                                    <span t-esc="mercancia.getElementsByTagName('claveUnidadMedida')[0].firstChild.nodeValue"/>
+                                </t>
+                            </div>
+                            <div class="col-3 border-bottom border-left border-right" style="border-color: #000 !important;">
+                                <t t-if="mercancia and mercancia.getElementsByTagName('cantidad') and mercancia.getElementsByTagName('cantidad')[0].firstChild">
+                                    <span t-esc="'{0:,.3f}'.format(float(mercancia.getElementsByTagName('cantidad')[0].firstChild.nodeValue))"/>
+                                </t>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 border-left" style="background-color: #DDD; border-color: #000 !important;">
+                                <strong>Tipo moneda</strong>
+                            </div>
+                            <div class="col-3 border-left" style="background-color: #DDD; border-color: #000 !important;">
+                                <strong>Valor unitario</strong>
+                            </div>
+                            <div class="col-3 border-left" style="background-color: #DDD; border-color: #000 !important;">
+                                <strong>Valor total</strong>
+                            </div>
+                            <div class="col-3 border-left border-right" style="background-color: #DDD; border-color: #000 !important;">
+                                <strong>Valor total en dólares</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 border-bottom border-left" style="border-color: #000 !important;">
+                                <t t-if="mercancia and mercancia.getElementsByTagName('tipoMoneda') and mercancia.getElementsByTagName('tipoMoneda')[0].firstChild">
+                                    <span t-esc="mercancia.getElementsByTagName('tipoMoneda')[0].firstChild.nodeValue"/>
+                                </t>
+                            </div>
+                            <div class="col-3 border-bottom border-left" style="border-color: #000 !important;">
+                                <t t-if="mercancia and mercancia.getElementsByTagName('valorUnitario') and mercancia.getElementsByTagName('valorUnitario')[0].firstChild">
+                                    $ <span t-esc="'{0:,.6f}'.format(float(mercancia.getElementsByTagName('valorUnitario')[0].firstChild.nodeValue))"/>
+                                </t>
+                            </div>
+                            <div class="col-3 border-bottom border-left" style="border-color: #000 !important;">
+                                <t t-if="mercancia and mercancia.getElementsByTagName('valorTotal') and mercancia.getElementsByTagName('valorTotal')[0].firstChild">
+                                    $ <span t-esc="'{0:,.6f}'.format(float(mercancia.getElementsByTagName('valorTotal')[0].firstChild.nodeValue))"/>
+                                </t>
+                            </div>
+                            <div class="col-3 border-bottom border-left border-right" style="border-color: #000 !important;">
+                                <t t-if="mercancia and mercancia.getElementsByTagName('valorDolares') and mercancia.getElementsByTagName('valorDolares')[0].firstChild">
+                                    $ <span t-esc="'{0:,.6f}'.format(float(mercancia.getElementsByTagName('valorDolares')[0].firstChild.nodeValue))"/>
+                                </t>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_cove_to_pdf">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="immex_gebesa.report_cove_to_pdf_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

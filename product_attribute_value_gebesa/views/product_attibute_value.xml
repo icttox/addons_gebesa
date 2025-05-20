@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_attribute_value_gebesa'>
+            <field name='name'>product.attribute.value.gebesa</field>
+            <field name='model'>product.attribute.value</field>
+            <field name='inherit_id' ref="product.variants_tree_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//tree/field[@name='name']" position="before">
+                   <field name="active"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='name']" position="after">
+                   <field name="factor"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='product_attribute_gebesa'>
+            <field name='name'>product.attribute.gebesa</field>
+            <field name='model'>product.attribute</field>
+            <field name='inherit_id' ref="product.attribute_tree_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//tree/field[@name='name']" position="before">
+                   <field name="active"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

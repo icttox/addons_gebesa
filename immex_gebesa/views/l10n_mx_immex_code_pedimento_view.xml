@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="l10n_mx_immex_code_pedimento_form_view">
+            <field name="name">l10n.mx.immex.code.pedimento.form</field>
+            <field name="model">l10n.mx.immex.code.pedimento</field>
+            <field name="arch" type="xml">
+                <form string="Form IMMEX Code Pedimento">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="l10n_mx_immex_code_pedimento_tree_view">
+            <field name="name">l10n.mx.immex.code.pedimento.tree</field>
+            <field name="model">l10n.mx.immex.code.pedimento</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree IMMEX Code Pedimento">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="l10n_mx_immex_code_pedimento_action">
+            <field name="name">IMMEX Code Pedimento</field>
+            <field name="res_model">l10n.mx.immex.code.pedimento</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the code pedimento
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="l10n_mx_immex_code_pedimento_action" id="menu_l10n_mx_immex_code_pedimento" name="IMMEX Code Pedimento" parent="menu_l10n_mx_cat" sequence="80"/>
+    </data>
+</odoo>
+    

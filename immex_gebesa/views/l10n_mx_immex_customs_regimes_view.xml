@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="l10n_mx_immex_customs_regimes_form_view">
+            <field name="name">l10n.mx.immex.customs.regimes.form</field>
+            <field name="model">l10n.mx.immex.customs.regimes</field>
+            <field name="arch" type="xml">
+                <form string="Form IMMEX Customs Regimes">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="l10n_mx_immex_customs_regimes_tree_view">
+            <field name="name">l10n.mx.immex.customs.regimes.tree</field>
+            <field name="model">l10n.mx.immex.customs.regimes</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree IMMEX Customs Regimes">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="l10n_mx_immex_customs_regimes_action">
+            <field name="name">IMMEX Customs Regimes</field>
+            <field name="res_model">l10n.mx.immex.customs.regimes</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the immex customs regimes
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="l10n_mx_immex_customs_regimes_action" id="menu_l10n_mx_immex_customs_regimes" name="IMMEX Customs Regimes" parent="menu_l10n_mx_cat" sequence="70"/>
+    </data>
+</odoo>
+    

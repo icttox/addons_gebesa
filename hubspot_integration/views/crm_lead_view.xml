@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="crm_lead_form_view">
+            <field name="name">crm.lead.form</field>
+            <field name="model">crm.lead</field>
+            <field name='inherit_id' ref="crm.crm_case_form_view_leads"/>
+            <field name="arch" type="xml">
+                    <header>
+                        <button name="call_hubspot_api" string="HubSpot" type="object"/>
+                    </header>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pivot_sale_order_family_user,pivot_sale_order_family.user,model_sale_order_family,,1,0,0,0
+access_pivot_sale_order_family_manager,pivot_sale_order_family.manager,model_sale_order_family,,1,1,1,1

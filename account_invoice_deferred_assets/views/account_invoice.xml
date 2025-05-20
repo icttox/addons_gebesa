@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_payment_invoices" model="ir.ui.view">
+            <field name="name">account.invoice.supplier.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//notebook/page[2]" position="after">
+					<page string="Deferred assets">
+                        <group>
+                            <field name="term_defer" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="months_deferred" attrs="{'readonly':[('state','!=','draft')], 'invisible': [('state','==','draft')]}"/>
+                            <field name="account_defer_id" attrs="{'required':[('term_defer','!=', 0)], 'readonly':[('state','!=','draft')]}"/>
+                             <field name="journal_defer_id" attrs="{'required':[('term_defer','!=', 0)], 'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                    </page>
+				</xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

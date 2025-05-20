@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="fact_cust_sequence" model="ir.sequence">
+            <field name="name">Factoring Customer</field>
+            <field name="code">factoring.customer</field>
+            <field name="prefix">GFC</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>           
+        </record>
+        <record id="fact_supl_sequence" model="ir.sequence">
+            <field name="name">Factoring Supplier</field>
+            <field name="code">factoring.supplier</field>
+            <field name="prefix">GFS</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>           
+        </record>
+    </data>
+</odoo>

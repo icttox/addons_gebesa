@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='backorder_tree'>
+            <field name='name'>backorder.tree</field>
+            <field name='model'>sale.order</field>
+            <field name='arch' type='xml'>
+                <tree string='Backorder' decoration-warning="priority == 'express'" decoration-primary="priority == 'replenishment'" decoration-success="priority == 'sample'">
+                    <field name='shiptment_status' string="Estatus"/>
+                    <field name='manufacture' string="Tipo"/>
+                    <field name='state' string="Situac"/>
+                    <field name='name' string="Pedido"/>
+                    <field name='date_order' string="Fecha"/>
+                    <field name='familys' string="Fam."/>
+                    <field name='groups' string="Gpo."/>
+                    <field name='lines' string="Linea"/>
+                    <field name='partner_id' string="Cliente"/>
+                    <!--field name='city_id' string="Ciudades"/-->
+                    <field name='pricelist_id' string="List. Precios"/>
+                    <field name='user_id' string="Vendedor"/>
+                    <field name='warehouse_id' string="Embarcador"/>
+                    <field name='analytic_account_id' string="Facturador"/>
+                    <field name='total_net_sale' string="Importe"/>
+                    <field name='total_freight' string="Flete"/>
+                    <field name='perc_freight' string="% Flete"/>
+                    <field name='total_installation' string="Insta"/>
+                    <field name='perc_installation' string="% Insta"/>
+                    <field name='team_id' string="T. Cli"/>
+                    <field name='date_reception' string="Fecha O.C"/>
+                    <field name='client_order_ref' string="Orden"/>
+                    <field name='volume' string="Volumen"/>
+                    <field name='weight' string="Peso"/>
+                    <field name='profit_margin' string="Mar Uti"/>
+                    <field name='date_delivery' string="Fecha Entre."/>
+                    <field name='priority' string="Prioridad"/>
+                    <field name='delay' string="Atraso"/>
+                    <field name='segment_status' string="Estatus Segmento "/>
+                    <field name='shiptment_status' string="Estatus Envío "/>
+                </tree>
+            </field>
+        </record>
+        <record id='action_backorder' model='ir.actions.act_window'>
+            <field name='name'>Backorder</field>
+            <field name='res_model'>sale.order</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree</field>
+            <field name="view_id" ref="backorder_tree"/>
+            <field name="domain">[('geb_invoice_status', 'in', ['no_invoice','partial_invoice']),('state', 'in', ['done', 'sale'])]</field>
+        </record>
+        <menuitem id="backorder_menu" name="Backorder" parent="sale.menu_sale_report" action="action_backorder"/>
+    </data>
+</odoo>

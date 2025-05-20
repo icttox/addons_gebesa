@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='sensible_products_form'>
+        	<field name='name'>sensible.products.form</field>
+        	<field name='model'>sensible.products</field>
+        	<field name='arch' type='xml'>
+        		<form string='Sensible products'>
+        			<header>
+        			</header>
+        			<sheet>        				
+        				<group>
+                            <field name='location_id'/>
+        					<field name='product_id'/>        					
+        				</group>
+        			</sheet>
+        		</form>
+        	</field>
+        </record>
+
+        <record model='ir.ui.view' id='sensible_products_tree'>
+        	<field name='name'>sensible.prodructs.tree</field>
+        	<field name='model'>sensible.products</field>
+        	<field name='arch' type='xml'>
+        		<tree string='Sensible products'>
+                    <field name='location_id'/>
+        			<field name='product_id'/>
+        		</tree>
+        	</field>
+        </record>
+
+        <record id='sensible_products_action' model='ir.actions.act_window'>
+        	<field name='name'>Sensible Products</field>
+        	<field name='res_model'>sensible.products</field>
+        	<field name='view_type'>form</field>
+        	<field name='view_mode'>tree,form</field>	
+        </record>
+
+        <menuitem id="sensible_products_menu" name="Sensible Products" parent="stock.menu_stock_config_settings" action="sensible_products_action" sequence="10"/>        
+    </data>
+</odoo>

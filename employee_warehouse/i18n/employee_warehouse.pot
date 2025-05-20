@@ -1,0 +1,83 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* employee_warehouse
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-06 16:06+0000\n"
+"PO-Revision-Date: 2017-01-06 16:06+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: employee_warehouse
+#: code:addons/employee_warehouse/models/hr_employee.py:20
+#: model:ir.model.fields,field_description:employee_warehouse.field_hr_employee_default_warehouse_id
+#, python-format
+msgid "Default warehouse"
+msgstr ""
+
+#. module: employee_warehouse
+#: model:ir.model,name:employee_warehouse.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: employee_warehouse
+#: code:addons/employee_warehouse/models/hr_employee.py:30
+#, python-format
+msgid "Invalid defaul warehouse"
+msgstr ""
+
+#. module: employee_warehouse
+#: model:ir.model,name:employee_warehouse.model_stock_inventory
+msgid "Inventory"
+msgstr ""
+
+#. module: employee_warehouse
+#: model:ir.model,name:employee_warehouse.model_mrp_production
+msgid "Manufacturing Order"
+msgstr ""
+
+#. module: employee_warehouse
+#: model:ir.ui.view,arch_db:employee_warehouse.view_employee_form
+msgid "Settings warehouses"
+msgstr ""
+
+#. module: employee_warehouse
+#: code:addons/employee_warehouse/models/hr_employee.py:31
+#, python-format
+msgid "The default warehouse must be selected in                                  the warehouse of employee"
+msgstr ""
+
+#. module: employee_warehouse
+#: code:addons/employee_warehouse/models/hr_employee.py:43
+#, python-format
+msgid "The default warehouse must be selected in the                       warehouse of employee"
+msgstr ""
+
+#. module: employee_warehouse
+#: model:ir.model,name:employee_warehouse.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: employee_warehouse
+#: code:addons/employee_warehouse/models/hr_employee.py:14
+#: model:ir.model.fields,field_description:employee_warehouse.field_hr_employee_warehouse_ids
+#, python-format
+msgid "Warehouses"
+msgstr ""
+
+#. module: employee_warehouse
+#: code:addons/employee_warehouse/models/mrp_production.py:20
+#: code:addons/employee_warehouse/models/stock_inventory.py:19
+#: code:addons/employee_warehouse/models/stock_inventory.py:30
+#: code:addons/employee_warehouse/models/stock_picking.py:20
+#, python-format
+msgid "You do not have privileges to validate                                       in this warehouse."
+msgstr ""
+

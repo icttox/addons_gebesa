@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <record id="hr_leave_inhability_form" model="ir.ui.view">
+            <field name="name">hr.leave.inhability.form</field>
+            <field name="model">hr.leave</field>
+            <field name="inherit_id" ref="hr_holidays.hr_leave_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group" position="after">
+                    <group string="Informacion de incapacidad" attrs="{'invisible': [('time_type', '!=', 'inhability')]}">
+                        <group>
+                            <field name="time_type" invisible="1"/>
+                            <field name="ramo_seguro" attrs="{'required': [('time_type', '=', 'inhability')]}"/>
+                            <field name="tipo_riesgo" attrs="{'readonly': [('ramo_seguro', '!=', 'R')]}"/>
+                            <field name="secuela" attrs="{'readonly': [('ramo_seguro', '!=', 'R')]}"/>
+                        </group>
+                        <group>
+                            <field name="incapacidad_folio"/>
+                            <field name="control"/>
+                            <field name="porcentaje" attrs="{'readonly': [('ramo_seguro', '!=', 'R')]}"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

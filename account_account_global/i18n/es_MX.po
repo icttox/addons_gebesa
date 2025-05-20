@@ -1,0 +1,96 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_account_global
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-08 22:04+0000\n"
+"PO-Revision-Date: 2016-11-08 16:09-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: account_account_global
+#: code:addons/account_account_global/models/account_account_global.py:23
+#: model:ir.model.fields,field_description:account_account_global.field_account_account_global_account_id
+#, python-format
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: account_account_global
+#: model:ir.actions.act_window,name:account_account_global.action_account_account_global
+#: model:ir.model,name:account_account_global.model_account_account_global
+#: model:ir.ui.menu,name:account_account_global.account_account_global_menu
+#: model:ir.ui.view,arch_db:account_account_global.account_account_global_form
+#: model:ir.ui.view,arch_db:account_account_global.account_account_global_tree
+msgid "Account account global"
+msgstr "Cuenta contable global"
+
+#. module: account_account_global
+#: code:addons/account_account_global/models/account_account_global.py:16
+#: model:ir.model.fields,field_description:account_account_global.field_account_account_global_code
+#, python-format
+msgid "Code"
+msgstr "Clave"
+
+#. module: account_account_global
+#: model:ir.model.fields,field_description:account_account_global.field_account_account_global_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: account_account_global
+#: model:ir.model.fields,field_description:account_account_global.field_account_account_global_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: account_account_global
+#: model:ir.model.fields,field_description:account_account_global.field_account_account_global_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: account_account_global
+#: model:ir.model.fields,field_description:account_account_global.field_account_account_global_id
+msgid "ID"
+msgstr "Id"
+
+#. module: account_account_global
+#: model:ir.model.fields,field_description:account_account_global.field_account_account_global___last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion en"
+
+#. module: account_account_global
+#: model:ir.model.fields,field_description:account_account_global.field_account_account_global_write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: account_account_global
+#: model:ir.model.fields,field_description:account_account_global.field_account_account_global_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualizacion en"
+
+#. module: account_account_global
+#: code:addons/account_account_global/models/account_account_global.py:13
+#: model:ir.model.fields,field_description:account_account_global.field_account_account_global_module
+#, python-format
+msgid "Module"
+msgstr "Modulo"
+
+#. module: account_account_global
+#: code:addons/account_account_global/models/account_account_global.py:19
+#: model:ir.model.fields,field_description:account_account_global.field_account_account_global_name
+#, python-format
+msgid "Name"
+msgstr "Name"
+
+#. module: account_account_global
+#: sql_constraint:account.account.global:0
+#: code:addons/account_account_global/models/account_account_global.py:28
+#, python-format
+msgid "The code combination and name must be unique."
+msgstr "La combinacion de clave y nombre debo ser unico."

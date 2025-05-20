@@ -1,0 +1,272 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_move_batch_validator
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20210330\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-25 17:36+0000\n"
+"PO-Revision-Date: 2021-11-25 17:36+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.mrp_production_all_processes_form
+msgid "* Supplies, produces and transfers the selected production orders"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.view_segment_form
+msgid "<span class=\"o_stat_text\">Schedule<br/>all processes</span>"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.actions.act_window,name:stock_move_batch_validator.action_mrp_production_all_processes
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.mrp_production_all_processes_form
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.view_segment_form
+msgid "All processes"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.actions.act_window,name:stock_move_batch_validator.action_batch_mrp_production_ppt
+msgid "Batch mrp production by names"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_moves_ids_view
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_mrp_production_ppt_view
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_production_names_transfer_view
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_production_names_view
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.mrp_production_all_processes_form
+msgid "Cancel"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names__create_uid
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names_transfer__create_uid
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_ppt__create_uid
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_stock_moves_ids__create_uid
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_mrp_production_all_processes__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names__create_date
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names_transfer__create_date
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_ppt__create_date
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_stock_moves_ids__create_date
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_mrp_production_all_processes__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names__display_name
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names_transfer__display_name
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_ppt__display_name
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_stock_moves_ids__display_name
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_mrp_production_all_processes__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_moves_ids_view
+msgid "Enter the ids of the stock moves you want to validate."
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_mrp_production_ppt_view
+msgid "Enter the names of the mrp productions you want to procure, produce and transfer."
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_production_names_transfer_view
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_production_names_view
+msgid "Enter the names of the mrp productions you want to procure."
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names__id
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names_transfer__id
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_ppt__id
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_stock_moves_ids__id
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_mrp_production_all_processes__id
+msgid "ID"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_stock_moves_ids__sm_ids
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_moves_ids_view
+msgid "Ids for validate"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names____last_update
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names_transfer____last_update
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_ppt____last_update
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_stock_moves_ids____last_update
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_mrp_production_all_processes____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names__write_uid
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names_transfer__write_uid
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_ppt__write_uid
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_stock_moves_ids__write_uid
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_mrp_production_all_processes__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names__write_date
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names_transfer__write_date
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_ppt__write_date
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_stock_moves_ids__write_date
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_mrp_production_all_processes__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_mrp_production_ppt_view
+msgid "MOs"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_production_names_view
+msgid "MOs for procure"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_production_names_transfer_view
+msgid "MOs for transfer"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names__mo_names
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_names_transfer__mo_names
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_batch_mrp_production_ppt__mo_names
+msgid "MOs for validate"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_production_names_view
+msgid "Procure"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_production_names_view
+msgid "Procure MOs"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.actions.act_window,name:stock_move_batch_validator.action_batch_mo_names_view
+#: model:ir.ui.menu,name:stock_move_batch_validator.menu_procure_mrp_production_batch
+msgid "Procure batch mrp production by names"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:res.groups,name:stock_move_batch_validator.group_mrp_production_all_processes
+msgid "Production All Processes"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.mrp_production_all_processes_form
+msgid "Production Transfer"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model.fields,field_description:stock_move_batch_validator.field_mrp_segment__schedule_all_processes
+msgid "Schedule all processes"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.ui.menu,name:stock_move_batch_validator.inventory_special_process
+msgid "Special process"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.ui.menu,name:stock_move_batch_validator.menu_procure_mrp_production_transfer_batch
+msgid "Tranfer batch mrp production by names"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_mrp_production_ppt_view
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_production_names_transfer_view
+msgid "Transfer"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_production_names_transfer_view
+msgid "Transfer MOs"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.actions.act_window,name:stock_move_batch_validator.action_batch_mo_names_transfer_view
+msgid "Transfer batch mrp production by names"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_moves_ids_view
+msgid "Validate"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.actions.act_window,name:stock_move_batch_validator.action_batch_moves_ids_view
+msgid "Validate Stock Moves by Ids"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.batch_moves_ids_view
+msgid "Validate moves"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.ui.menu,name:stock_move_batch_validator.menu_validate_stock_moves_batch
+msgid "Validate stock moves by ids"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.ui.menu,name:stock_move_batch_validator.menu_batch_mrp_production_ppt
+msgid "batch mrp production by names"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model,name:stock_move_batch_validator.model_mrp_segment
+msgid "cancel express"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model,name:stock_move_batch_validator.model_batch_mrp_production_names
+msgid "group of mrp production for procure"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model,name:stock_move_batch_validator.model_batch_mrp_production_names_transfer
+msgid "group of mrp production for transfer"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model,name:stock_move_batch_validator.model_batch_mrp_production_ppt
+msgid "group of production for procurement, produce and tranfer"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model,name:stock_move_batch_validator.model_batch_stock_moves_ids
+msgid "group of stock moves ids for validate"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model:ir.model,name:stock_move_batch_validator.model_mrp_production_all_processes
+msgid "mrp production for procurement, produce and tranfer"
+msgstr ""
+
+#. module: stock_move_batch_validator
+#: model_terms:ir.ui.view,arch_db:stock_move_batch_validator.mrp_production_all_processes_form
+msgid "or"
+msgstr ""
+

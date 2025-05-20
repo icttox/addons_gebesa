@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <report
+            id="order_servicio"
+            model="maintenance.request"
+            string="Imprimir Orden De Servicio"
+            report_type="qweb-pdf"
+            name="informatica_gebesa.report_order_servicio"
+            file="informatica_gebesa.report_order_servicio"
+        />
+        <template id="orden_servicio_layout">
+            <div class="header">
+                <div class="row">
+                    <div class="col-2 text-center table-bordered">
+                        <img t-if="doc.company_id.logo" t-att-src="image_data_uri(doc.company_id.logo)" style="max-height: 45px;max-width: 100px;margin-top: 25px;margin-left: 3px;" alt="Logo"/>
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-8 text-center table-bordered">
+                                Título del Documento: Orden de Servicio
+                            </div>
+                            <div class="col-4 text-center table-bordered">
+                                Revisión: 1
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 text-center table-bordered">
+                                Código del documento:<br/>F-SIS-01
+                            </div>
+                            <div class="col-4 text-center table-bordered">
+                                Deriva de: P-SIS-01
+                            </div>
+                            <div class="col-4 text-center table-bordered">
+                                Fecha de Revisión:<br/>23/03/2021
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 text-center h6">
+                        <div class="h5 font-weight-bold">
+                            <span t-esc="doc.maintenance_team_id.name"/><br/>
+                            <span t-esc="doc.employee_id.company_id.name"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+
+            <div class="footer">
+                <div class="row" style="border-top: 3px solid #000000;">
+                    <div class="col-6">
+                    www.gebesa.com
+                    </div>
+                    <div class="col-6" align="right">
+                        Página 1 de 1
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_order_servicio_document">
+            <t t-call="informatica_gebesa.orden_servicio_layout">
+                <t t-set="doc" t-value="doc.with_context({'lang':doc.user_id.lang})"/>
+                <div class="page" style="font-size: small">
+                    <div class="row no-gutters">
+                        <div class="col-3 table-bordered">
+                            No. de Folio:
+                        </div>
+                        <div class="col-9 table-bordered">
+                            <span t-esc="doc.name"/>
+                        </div>
+                    </div>
+                    <div class="row no-gutters mt-3">
+                        <div class="col-12 text-light text-center h5" style="background-color: #616360 !important;font-weight: bold;">
+                            DATOS DEL USUARIO
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="20%">Usuario:</td>
+                                <td width="80%">
+                                    <t t-if="doc.employee_id.name">
+                                        <span t-esc="doc.employee_id.name"/>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="20%">Departamento:</td>
+                                <td width="80%">
+                                    <t t-if="doc.employee_id.department_id.name">
+                                        <span t-esc="doc.employee_id.department_id.name"/>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="20%">Extensión:</td>
+                                <td width="80%">
+                                    <t t-if="doc.employee_id.work_phone">
+                                        <span t-esc="doc.employee_id.work_phone"/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="row no-gutters mt-3">
+                        <div class="col-12 text-light text-center h5" style="background-color: #616360 !important;font-weight: bold;">
+                            DATOS DEL EQUIPO
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Fecha Servicio:</td>
+                                <td width="16%">
+                                    <t t-if="doc.request_date">
+                                        <span t-esc="doc.request_date" t-options='{"widget": "date"}'/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">N/S Gebesa:</td>
+                                <td width="16%">
+                                    <t t-if="doc.equipment_id.consecutive_id">
+                                        <span t-esc="doc.equipment_id.consecutive_id"/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">N/S Equipo:</td>
+                                <td width="16%">
+                                    <t t-if="doc.equipment_id.serial_no">
+                                        <span t-esc="doc.equipment_id.serial_no"/>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Tipo Mantenimiento:</td>
+                                <td width="16%">
+                                    <t t-if="doc.tipo_mante">
+                                        <span t-field="doc.tipo_mante"/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Componente:</td>
+                                <td width="16%">
+                                    <t t-if="doc.equipment_id.category_id.name">
+                                        <span t-esc="doc.equipment_id.category_id.name"/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Fecha cierre:</td>
+                                <td width="16%">
+                                    <t t-if="doc.close_date">
+                                        <span t-esc="doc.close_date" t-options="{&quot;widget&quot;: &quot;date&quot;}"/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="row no-gutters mt-3">
+                        <div class="col-12 text-light text-center h5" style="background-color: #616360 !important;font-weight: bold;">
+                            CARACTERISTICAS DEL EQUIPO
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="15%">Nombre:</td>
+                                <td width="50%">
+                                    <t t-if="doc.equipment_id.name">
+                                        <span t-esc="doc.equipment_id.name"/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="15%">Fecha Adq:</td>
+                                <td width="20%">
+                                    <t t-if="doc.equipment_id.assign_date">
+                                        <span t-esc="doc.equipment_id.assign_date" t-options='{"widget": "date"}'/>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="15%">Asignado:</td>
+                                <td width="50%">
+                                    <t t-if="doc.employee_id.name">
+                                        <span t-esc="doc.employee_id.name"/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="15%">Activo:</td>
+                                <td width="20%">
+                                    <t t-if="doc.equipment_id.active">
+                                        <span t-esc="doc.equipment_id.active"/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="row no-gutters mt-3">
+                        <div class="col-12 text-light text-center h5" style="background-color: #616360 !important;font-weight: bold;">
+                            OBSERVACION DEL USUARIO
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td>
+                                    <t t-if="doc.description">
+                                        <span t-esc="doc.description"/>
+                                    </t>
+                                    <t t-if="not doc.description">
+                                        &#160;
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="row no-gutters mt-3">
+                        <div class="col-12 text-light text-center h5" style="background-color: #616360 !important;font-weight: bold;">
+                            DEFECTOS ENCONTRADOS Y DESCRIPCION DEL TRABAJO REALIZADO
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td>
+                                    <t t-if="doc.technical_description">
+                                        <span t-esc="doc.technical_description"/>
+                                    </t>
+                                    <t t-if="not doc.technical_description">
+                                        &#160;
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="row no-gutters mt-4">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="25%">Garantia:</td>
+                                <td width="75%">
+                                    <t t-if="doc.garantia">
+                                        <span t-esc="doc.garantia" widget="boolean"/>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="25%">Fecha de Entrega:</td>
+                                <td width="75%">
+                                    <t t-if="doc.request_date">
+                                        <span t-esc="doc.request_date" t-options='{"widget": "date"}'/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="row no-gutters mt-3">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="25%">Responsable Mantenimiento:</td>
+                                <td width="75%">
+                                    <t t-if="doc.user_id.name">
+                                        <span t-esc="doc.user_id.name"/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="row no-gutters mt-3">
+                        <div class="col-12 text-light text-center h5" style="background-color: #616360 !important;font-weight: bold;">
+                            ACTIVIDADES REALIZADAS
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Fecha:</td>
+                                <td width="16%">
+                                    <t t-if="doc.request_date">
+                                        <span t-esc="doc.request_date" t-options='{"widget": "date"}'/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Actividad:</td>
+                                <td width="16%">
+                                    <t t-if="doc.tipo_mante">
+                                        <span t-field="doc.tipo_mante"/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Realizo:</td>
+                                <td width="16%" t-if="doc.attended_ids">
+                                    <span t-esc="', '.join([attended.name for attended in doc.attended_ids])"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="row no-gutters mt-5">
+                        <div class="col-12">
+                            Firma del Usuario: ___________________________________
+                        </div>
+                    </div>
+
+                </div>
+            </t>
+        </template>
+        <template id="report_order_servicio">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="informatica_gebesa.report_order_servicio_document" t-lang="doc.user_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,299 @@
+stages:
+  - build
+  - lint
+  - test
+  - staging
+  - production
+
+docker-build-image:
+  tags:
+    - ci
+  stage: build
+
+  services:
+    - docker:dind
+
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+    # Setup SSH deploy keys
+    # Setup SSH deploy keys
+    # - 'which ssh-agent || ( apt-get install -qq openssh-client )'
+    # - eval $(ssh-agent -s)
+    # - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    # - mkdir -p ~/.ssh
+    # - chmod 700 ~/.ssh
+
+    ## Install ssh-agent if not already installed, it is required by Docker.
+    ## (change apt-get to yum if you use an RPM-based image)
+    ##
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+
+    ##
+    ## Run ssh-agent (inside the build environment)
+    ##
+    - eval $(ssh-agent -s)
+
+    ##
+    ## Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+    ## We're using tr to fix line endings which makes ed25519 keys work
+    ## without extra base64 encoding.
+    ## https://gitlab.com/gitlab-examples/ssh-private-key/issues/1#note_48526556
+    ##
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+
+    ##
+    ## Create the SSH directory and give it the right permissions
+    ##
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+
+    ##
+    ## Use ssh-keyscan to scan the keys of your private server. Replace gitlab.com
+    ## with your own domain name. You can copy and repeat that command if you have
+    ## more than one server to connect to.
+    ##
+    - ssh-keyscan gitlab.e-fector.com >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+
+    ##
+    ## Optionally, if you will be using any Git commands, set the user name and
+    ## email.
+    ##
+    - git config --global user.email "cesar.barron@gmail.com"
+    - git config --global user.name "Cesar Barron"
+
+  script:
+    - REFERENCE=$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA;
+    - echo REFERENCE=${REFERENCE};
+    
+    - echo $(docker images -q -f reference=$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA);
+    - if [ ! "$(docker images -q -f reference=$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA)" ]; then
+        DOCKER_BUILDKIT=1 docker build --ssh default=$SSH_AUTH_SOCK --build-arg CI_COMMIT_REF_NAME=$CI_COMMIT_REF_NAME -t ${REFERENCE} .; fi
+  # except:
+  #  - "12.0"
+  after_script:
+    - docker logout
+  only:
+    - merge_requests
+  allow_failure: false
+  
+flake8:
+  tags: 
+    - ci
+  stage: lint
+  image: python:3.7-slim
+  before_script:
+    - pip3 install flake8==4.0.1 mccabe pycodestyle==2.8.0 pyflakes
+  script:
+    # Determine wich files changed
+    - echo CI_COMMIT_SHA=${CI_COMMIT_SHA}
+    - echo CI_MERGE_REQUEST_TARGET_BRANCH_NAME=${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}
+    - git fetch origin ${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}
+    - if [ ! $(git diff --name-only ${CI_COMMIT_SHA} origin/${CI_MERGE_REQUEST_TARGET_BRANCH_NAME} | grep '\.py'$) ]; then 
+        echo "No Changed files"; 
+        exit 0; fi
+
+    # - pip3 list
+    - FILES=$(git diff --name-only ${CI_COMMIT_SHA} origin/${CI_MERGE_REQUEST_TARGET_BRANCH_NAME} | grep '\.py'$)
+    - echo "Changed files are $FILES"
+    #
+    # - python3 -m flake8 --ignore=E501 --tee --output-file="flake8-report.txt" --statistics --count .
+    - python3 -m flake8 --ignore=E501,F401 --tee --output-file="flake8-report.txt" --statistics --count $FILES
+  after_script:
+    - pip3 install flake8-junit-report
+    - if [ -f "flake8-report.txt" ]; then 
+        python3 -m junit_conversor "flake8-report.txt" "junit.xml"; fi
+  # except:
+  #  - "12.0"
+  only:
+    - merge_requests
+  artifacts:
+    reports:
+      junit: junit.xml
+    when: always
+  allow_failure: true
+
+pylint:
+  tags: 
+    - ci 
+  stage: lint
+  image: python:3.7-slim
+  before_script:
+    - mkdir -p public/badges public/lint
+    - echo undefined > public/badges/$CI_JOB_NAME.score
+    - pip3 install pylint-gitlab
+  script:
+    # Determine wich files changed
+    - echo CI_COMMIT_SHA=${CI_COMMIT_SHA}
+    - echo CI_MERGE_REQUEST_TARGET_BRANCH_NAME=${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}
+    - git fetch origin ${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}
+
+    - if [ ! $(git diff --name-only ${CI_COMMIT_SHA} origin/${CI_MERGE_REQUEST_TARGET_BRANCH_NAME} | grep '\.py'$) ]; then 
+        echo "No Changed files"; 
+        exit 0; fi
+
+    - FILES=$(git diff --name-only ${CI_COMMIT_SHA} origin/${CI_MERGE_REQUEST_TARGET_BRANCH_NAME} | grep '\.py'$)
+    - echo "Changed files are $FILES"
+    # 
+    # - pylint -d C0114,C0115,C0116,C0301,R0801,W0104,E0611,E0401,R0903 --exit-zero --output-format=text $(find -type f -name "*.py" ! -path "**/.venv/**") | tee /tmp/pylint.txt
+    - pylint -d C0114,C0115,C0116,C0209,C0301,R0201,R0801,W0104,E0611,E0401,R0903,W0703,W0707,I1101,E1101,W0212,W1601 --exit-zero --output-format=text $FILES | tee /tmp/pylint.txt
+    - sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p' /tmp/pylint.txt > public/badges/$CI_JOB_NAME.score
+    # - pylint -d C0114,C0115,C0116,C0301,R0801,W0104,E0611,E0401,R0903 --exit-zero --output-format=pylint_gitlab.GitlabCodeClimateReporter $(find -type f -name "*.py" ! -path "**/.venv/**") > codeclimate.json
+    # - pylint -d C0114,C0115,C0116,C0301,R0801,W0104,E0611,E0401,R0903 --output-format=pylint_gitlab.GitlabPagesHtmlReporter $(find -type f -name "*.py" ! -path "**/.venv/**") > public/lint/index.html
+    - pylint -d C0114,C0115,C0116,C0209,C0301,R0201,R0801,W0104,E0611,E0401,R0903,W0703,W0707,I1101,E1101,W0212,W1601 --exit-zero --output-format=pylint_gitlab.GitlabCodeClimateReporter $FILES > codeclimate.json
+    - pylint -d C0114,C0115,C0116,C0209,C0301,R0201,R0801,W0104,E0611,E0401,R0903,W0703,W0707,I1101,E1101,W0212,W1601 --output-format=pylint_gitlab.GitlabPagesHtmlReporter $FILES > public/lint/index.html
+  after_script:
+    - anybadge --overwrite --label $CI_JOB_NAME --value=$(cat public/badges/$CI_JOB_NAME.score) --file=public/badges/$CI_JOB_NAME.svg 4=red 6=orange 8=yellow 10=green
+    - |
+      echo "Your score is: $(cat public/badges/$CI_JOB_NAME.score)"
+  # except:
+  #  - "12.0"
+  only:
+    - merge_requests
+  artifacts:
+    paths:
+      - public
+    reports:
+      codequality: codeclimate.json
+    when: always
+  allow_failure: true
+
+docker-odoo-coverage:
+  tags:
+    - ci
+  stage: test
+
+  services:
+    - docker:dind
+
+  before_script:
+    - modules="SinRegistros"
+    - |
+      for fol in $(git diff-tree --name-only ${CI_COMMIT_SHA} origin/${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}); 
+        do 
+          if [ -d "$fol" ]; 
+            then 
+                if [ $modules != "SinRegistros" ];
+                then modules=$modules","$fol;
+                else modules=$fol; fi;
+          fi; 
+        done;
+
+    - if [ "$modules" == "SinRegistros" ]; then 
+        echo "No Changed module"; 
+        exit 0; fi
+
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+    - echo CI_COMMIT_SHA=${CI_COMMIT_SHA}
+    - if [ "$(docker ps -a -q -f name=$CI_COMMIT_SHA)" ]; then docker stop $CI_COMMIT_SHA && docker rm $CI_COMMIT_SHA; fi
+    - docker run --name $CI_COMMIT_SHA --link db:db -d $CI_REGISTRY_IMAGE:$CI_MERGE_REQUEST_TARGET_BRANCH_NAME
+    - echo CI_MERGE_REQUEST_SOURCE_BRANCH_NAME=${CI_MERGE_REQUEST_SOURCE_BRANCH_NAME}
+    - echo "Changed folders are $modules"
+  script:
+    - docker exec -i -u root $CI_COMMIT_SHA bash -c "pip3 uninstall cryptography -y"
+    - docker exec -i -u root $CI_COMMIT_SHA bash -c "pip3 install cryptography==1.7.1"
+    - docker exec -i -u root $CI_COMMIT_SHA bash -c "pip3 install coverage"
+    - docker exec -i $CI_COMMIT_SHA bash -c "pip3 show coverage"
+    - docker exec -i -u root $CI_COMMIT_SHA bash -c "cd /opt/odoo/gebesa/addons-grupo-salmon ; git pull origin ${CI_MERGE_REQUEST_SOURCE_BRANCH_NAME}"
+    - docker exec -i -u root $CI_COMMIT_SHA bash -c "cd /opt/odoo/gebesa/cfdi32 ; git pull origin ${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}"
+    - docker exec -i $CI_COMMIT_SHA bash -c "cd /opt/odoo/ ; coverage run --omit=/usr/*,/opt/odoo/enterprise/* /usr/bin/odoo --xmlrpc-port=6666 --longpolling-port=5555 --log-level=test --db_host=db --db_port=5432 --db_user=odoo -c /opt/odoo/odoo.conf -u $modules -d demo --test-enable --stop-after-init"
+    - docker exec -i $CI_COMMIT_SHA bash -c "cd /opt/odoo/ ; coverage report -m"
+    - docker exec -i $CI_COMMIT_SHA bash -c "cd /opt/odoo/ ; coverage html"
+    - docker cp $CI_COMMIT_SHA:/opt/odoo/htmlcov public/
+    - retVal=$?
+    - echo $retVal
+    - if [ $retVal != 0 ] ; then exit 1; fi
+  after_script:
+    - if [ "$(docker ps -a -q -f name=$CI_COMMIT_SHA)" ]; then docker rm -f $CI_COMMIT_SHA; fi
+    - docker logout
+  only:
+    - merge_requests
+  artifacts:
+    paths:
+      - public
+  allow_failure: True
+
+docker-odoo-test:
+  tags:
+    - ci
+  stage: test
+
+  services:
+    - docker:dind
+
+  before_script:
+    - modules="SinRegistros"
+    - |
+      for fol in $(git diff-tree --name-only ${CI_COMMIT_SHA} origin/${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}); 
+        do 
+          if [ -d "$fol" ]; 
+            then 
+                if [ $modules != "SinRegistros" ];
+                then modules=$modules","$fol;
+                else modules=$fol; fi;
+          fi; 
+        done;
+
+    - if [ "$modules" == "SinRegistros" ]; then 
+        echo "No Changed module"; 
+        exit 0; fi
+
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+    - echo CI_COMMIT_SHA=${CI_COMMIT_SHA}
+    - if [ "$(docker ps -a -q -f name=$CI_COMMIT_SHA)" ]; then docker stop $CI_COMMIT_SHA && docker rm $CI_COMMIT_SHA; fi
+    - docker run --name $CI_COMMIT_SHA --link db:db -d $CI_REGISTRY_IMAGE:$CI_MERGE_REQUEST_TARGET_BRANCH_NAME
+    - echo CI_MERGE_REQUEST_SOURCE_BRANCH_NAME=${CI_MERGE_REQUEST_SOURCE_BRANCH_NAME}
+    - echo "Changed folders are $modules"
+
+  script:
+    - docker exec -i -u root $CI_COMMIT_SHA bash -c "cd /opt/odoo/gebesa/addons-grupo-salmon ; git pull origin ${CI_MERGE_REQUEST_SOURCE_BRANCH_NAME}"
+    - docker exec -i -u root $CI_COMMIT_SHA bash -c "cd /opt/odoo/gebesa/cfdi32 ; git pull origin ${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}"
+    - docker exec -i $CI_COMMIT_SHA bash -c "/usr/bin/odoo --xmlrpc-port=6666 --longpolling-port=5555 --log-level=debug --db_host=db --db_port=5432 --db_user=odoo -c /opt/odoo/odoo.conf -i $modules -d demo --test-enable --stop-after-init"
+    - retVal=$?;
+    - echo $retVal;
+    - if [ $retVal != 0 ] ; then exit 1; fi;
+
+  after_script:
+    - if [ "$(docker ps -a -q -f name=$CI_COMMIT_SHA)" ]; then docker rm -f $CI_COMMIT_SHA; fi
+    - docker logout
+  only:
+    - merge_requests
+  allow_failure: True
+
+deploy-to-stage:
+  tags:
+    - ci
+  stage: staging
+
+  services:
+    - docker:dind
+
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+    - if [ "$(docker ps -q -f name=$CI_COMMIT_REF_NAME)" ]; then docker stop $CI_COMMIT_REF_NAME && docker rm $CI_COMMIT_REF_NAME; fi
+
+  script:
+    - if [ ! "$(docker ps -a | grep $CI_COMMIT_REF_NAME)" ]; then docker run -P --restart=always --name $CI_COMMIT_REF_NAME --link db:db -d $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA; fi
+  # except:
+  #  - "12.0"
+  after_script:
+    - docker logout
+  only:
+    - merge_requests
+  when: manual
+  allow_failure: false
+
+# TagAndPush:
+#   tags:
+#     - ci
+#   stage: production
+#   services:
+#     - docker:dind
+#   variables:
+#     IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+#   script:
+#     - echo $CI_REGISTRY
+#     - echo $IMAGE_TAG
+#     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+#     - docker build -t $IMAGE_TAG .
+#     - docker push $IMAGE_TAG

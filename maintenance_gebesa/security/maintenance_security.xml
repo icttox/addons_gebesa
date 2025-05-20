@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="maintenance_equipment_team_rule" model="ir.rule">
+            <field name="name">Maquinaria del equipo</field>
+            <field name="model_id" ref="model_maintenance_equipment"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[('maintenance_team_id', 'in', user.env['maintenance.team'].sudo().search([('member_ids', 'in', user.ids)]).ids)]</field>
+        </record>
+
+        <record id="maintenance_request_team_rule" model="ir.rule">
+            <field name="name">Peticiones de mantenimiento del equipo</field>
+            <field name="model_id" ref="model_maintenance_request"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('maintenance_team_id','=',False),('maintenance_team_id', 'in', user.env['maintenance.team'].sudo().search([('member_ids', 'in', user.ids)]).ids)]</field>
+        </record>
+    </data>
+</odoo>

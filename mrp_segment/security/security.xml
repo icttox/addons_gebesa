@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="res.groups" id="group_express_mrp_segment">
+            <field name='name'>Express Mrp Segment</field>
+        </record>
+        <record model="res.groups" id="group_admin_segment">
+            <field name="name">Administrator Segment</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+       <record model='ir.ui.view' id='product_attribute_line_gebesa_view'>
+            <field name='name'>product.attribute.line.gebesa.view</field>
+            <field name='model'>product.template</field>
+            <field eval="16" name="priority"/>
+            <field name='inherit_id' ref="product.product_template_only_form_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook/page[@name='variants']/field/tree/field[@name='attribute_id']" position="after">
+                    <field name="codebuilder_order"/>
+                    <field name="name_web"/>
+                </xpath>
+        	</field>
+        </record>
+	</data>
+</odoo>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="travel_expense"
+            model="tms.travel"
+            string="Travel Expeense"
+            report_type="qweb-pdf"
+            name="flete_gebesa.report_travel_expense"
+            file="flete_gebesa.report_travel_expense"
+        />
+
+        <template id="report_travel_expense_document">
+            <t t-call="web.internal_layout">
+                <div class="page" style="font-size: 9pt;">
+                    <div class="row no-gutters text-center">
+                      <div class="col-12 text-center">
+                        <H1><span t-field="o.name"/></H1>
+                      </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-2">
+                            <strong>Fecha: </strong><span t-field="o.date" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
+                        </div>
+                        <div class="col-5">
+                            <strong>Destino: </strong><span t-field="o.arrival_id.name"/>
+                        </div>
+                        <div class="col-3">
+                            <strong>Camion: </strong><span t-field="o.unit_id.idname"/>
+                        </div>
+                        <div class="col-2">
+                            <strong>Caja: </strong><span t-field="o.trailer1_id.idname"/>,<span t-field="o.trailer2_id.idname"/>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row no-gutters">
+                        <div class="col-2">
+                            <strong>Salió: </strong><span t-field="o.date_start_real" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
+                        </div>
+                        <div class="col-2">
+                            <strong>Llegó: </strong><span t-field="o.date_end_real" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
+                        </div>
+                        <div class="col-4">
+                            <strong>Dias Totales:</strong>
+                        </div>
+                        <!--div class="col-4">
+                            <strong>Gasto Registrado:</strong>
+                        </div-->
+                        <div class="col-4">
+                            <strong>Margen Utilidad: </strong><span t-esc="'%.2f'%o.margen_utilidad"/>%
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row no-gutters">
+                        <div class="col-2">
+                            <strong>Kms: </strong><span t-esc="'%.2f'%o.distance_route"/>
+                        </div>
+                        <div class="col-2">
+                            <strong>Kms X Litro: </strong><span t-esc="'%.2f'%o.unit_id.performance"/>
+                        </div>
+                        <div class="col-4">
+                            <t t-if="o.estimated_liters &gt; 0">
+                                <t t-set="price_liter" t-value="o.estimated_cost/o.estimated_liters"/>
+                                <strong>Precio Por Litro: </strong>$ <span t-esc="'%.2f'%price_liter"/>
+                            </t>
+                            <t t-if="o.estimated_liters == 0">
+                                <strong>Precio Por Litro: </strong>$ 0.00
+                            </t>
+                        </div>
+                        <div class="col-4">
+                            <strong>Total Lts: </strong><span t-esc="'%.2f'%o.estimated_liters"/>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <t t-set="amont_total" t-value="0"/>
+                    <table width="100%" class="table table-sm">
+                        <tr>
+                            <th colspan="2" width="20%">Gastos Programados</th>
+                            <th colspan="2" width="20%">Gastos Extras</th>
+                            <th width="9%">C.P.</th>
+                            <th width="12%">Importe</th>
+                            <th width="12%">Fecha</th>
+                            <th width="27%">Cliente</th>
+                        </tr>
+                        <tr>
+                            <td width="10%">Diesel: </td>
+                            <td class="text-right">
+                                <t t-set="amont_total" t-value="amont_total+o.estimated_cost"/>
+                                $ <span t-esc="'%.2f'%o.estimated_cost"/><br/>
+                            </td>
+                            <td>Diesel:</td>
+                            <td width="10%">$</td>
+                            <td><span t-esc="o.waybill_ids.name"/></td>
+                            <td>
+                                <t t-if="o.waybill_ids.name">
+                                    $ <span t-esc="'%.2f'%o.waybill_ids.amount_total"/>
+                                </t>
+                            </td>
+                            <td><span t-field="o.waybill_ids.date_order" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/></td>
+                            <td><span t-esc="o.waybill_ids.partner_id.name"/></td>
+                        </tr>
+                        <t t-foreach="sum_products[o.id]" t-as="product">
+                            <tr>
+                                <td><span t-esc="sum_products[o.id][product]['product_id'].name"/>:</td>
+                                <td class="text-right">
+                                    <t t-set="amont_total" t-value="amont_total+sum_products[o.id][product]['amount']"/>
+                                    $ <span t-esc="'%.2f'%sum_products[o.id][product]['amount']"/><br/>
+                                </td>
+                                <td><span t-esc="sum_products[o.id][product]['product_id'].name"/>:</td>
+                                <td>$</td>
+                                <td/>
+                                <td/>
+                                <td/>
+                                <td/>
+                            </tr>
+                        </t> 
+                        <tr>
+                            <td>Total:</td>
+                            <td class="text-right">
+                                $ <span t-esc="'%.2f'%amont_total"/>
+                            </td>
+                            <td>Total Ext:</td>
+                            <td>$</td>
+                            <td/>
+                            <td/>
+                            <td/>
+                            <td/>
+                        </tr>
+                        <tr>
+                            <th colspan="4"/>
+                            <th colspan="2">Total Flete:</th>
+                            <th colspan="2">$ <span t-esc="'%.2f'%o.waybill_ids.amount_total"/></th>
+                        </tr>
+                    </table>
+                    <br/>
+                    <div class="row no-gutters">
+                        <div class="col-5">
+                            <strong><span>Casetas: </span></strong>$ <span t-esc="'%.2f'%caseta"/>
+                            <br/>
+                            <br/>
+                            <strong><span>Gastos Del Viaje:  </span></strong>$ <span t-esc="'%.2f'%amont_total"/>
+                            <br/><br/>
+                            <strong><span>Gastos Extras:</span></strong>
+                            <br/><br/>
+                            <strong><span>G. Indirectos:</span></strong>
+                            <br/><br/>
+                            <strong><span>Total:</span></strong>
+                        </div>
+                        <div class="col-7" style="text-align: center;">
+                            <span>Depositos Durante El Viaje</span>
+                            <table width="100%" class="table table-sm">
+                                <tr>
+                                    <th width="25%">Importe</th>
+                                    <th width="25%">Dia</th>
+                                    <th width="25%">Banco</th>
+                                    <th>Concepto</th>
+                                </tr>
+                                <t t-foreach="8" t-as="l">
+                                    <tr style="font-size: 7pt;">
+                                        <td> </td>
+                                        <td/>
+                                        <td/>
+                                        <td/>
+                                    </tr>
+                                </t>
+                            </table>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <div class="row no-gutters" style="border-style: solid;border-width: 1px;">
+                      <div class="col-12">
+                        <div class="row no-gutters">
+                          <div class="col-8">
+                                <strong><span>Observaciones</span></strong>
+                            </div>
+                            <div class="col-4">
+                                <strong><span>Tabulador: $</span></strong>
+                          </div>
+                        </div>
+                        <div class="row no-gutters">
+                          <div class="col-12 mt-4">
+                                <strong><span>Margen De Utilidad: %</span></strong><br/><br/>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br/><br/>
+                    <div class="row no-gutters">
+                        <span>Recibi de </span>
+                        <span t-field="o.user_id.company_id.name"/>
+                        <span> la cantidad de: $ </span>
+                        <span t-esc="'%.2f'%o.waybill_ids.amount_total"/>
+                        <span> (pesos </span>
+                        <span t-esc="str('%.2f'%o.waybill_ids.amount_total)[-2:]"/>
+                        <span>/100 M.N.), por concepto de gastos indirectos, segunitinerario arriba mencionado, no adeudándome cantidad alguno por este concepto.</span>
+                    </div>
+                    <br/><br/><br/><br/><br/><br/>
+                    <div class="row" style="font-size: 11pt;">
+                        <div class="col-5" style="border-bottom: 2px solid;text-align: center;">
+                            <span> </span>
+                        </div>
+                        <div class="col-2">
+                        </div>
+                        <div class="col-5" style="border-bottom: 2px solid;text-align: center;">
+                            <span t-field="o.employee_id.name"/>
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 10pt;">
+                        <div class="col-5" style="text-align: center;">
+                            <span>Fletera</span>
+                        </div>
+                        <div class="col-2">
+                        </div>
+                        <div class="col-5" style="text-align: center;">
+                            <span>Chofer</span>
+                        </div>
+                    </div>
+                    <div style="page-break-after: always;"> </div>
+                <div id="primero">
+                    <div id="cobranza">
+                        CARTA DE INSTRUCCIONES EN RUTA
+                    </div>
+                    <br/>
+                    <div style="font-size:13pt;">
+                        1. Al momento de salir con su remolque a ruta deberá revisar que lleve los candados y/o sellos y asegurarse que la mercancía vaya bien sujetada.
+                        <br/>
+                        <br/>
+                        2. Están prohibidas en esta ruta todas las paradas, si fuese necesario realizar alguna para cumplir con bitácora de horas de servicio debe dar aviso al departamento de monitoreo, así mismo deberán realizarse en lugares que sean seguros (casetas, gasolineras, OXXO, 7 ELEVEN), evitando paradas en huachicoleras, cachimbas, restaurancitos y domicilios personales (solicitar autorización), etc.
+                        <br/>
+                        <br/>
+                        3. Si existe algún problema mecánico o bloqueo de alguna ruta, deberá llamar a los teléfonos de monitoreo, mantenimiento, tráfico, según corresponda.
+                        <br/>
+                        <br/>
+                        4. Queda estrictamente <strong>PROHIBIDO</strong> el acceso a las unidades a personas ajenas a la empresa.
+                        <br/>
+                        <br/>
+                        5. Para solicitar anticipo en viaje, es necesario pasar gastos antes de las 5:00 pm de lunes a viernes, de lo contrario ya no se hará transferencia, hasta el día hábil siguiente.
+                        <br/>
+                        <br/>
+                        6. <strong style="font-size:18pt;">NO SE HARÁN DEPOSITOS EN FIN DE SEMANA</strong>
+                        <br/>
+                        <br/>
+                        <strong>Contactos Galbo Transportes:</strong> 
+                        <br/>
+                        <br/>
+                        <strong>Monitoreo 24 hrs Cel.- 8712515192 - 871 736 2062 </strong>
+                        <br/>
+                        <strong>Tráfico Admon: 8717830780</strong>
+                        <br/>
+                        <strong>Tráfico Operativo: 8711052794 – 8718869357</strong>
+                        <br/>
+                        <strong>Atención a fallas mecánicas:</strong>
+                        <br/>
+                        <strong>Coordinador Taller: 8717362061</strong> 
+                        <br/>
+                        <br/> 
+                        <strong>EL DETENERSE EN LUGARES PROHIBIDOS AFECTARÁ SU LIQUIDACIÓN (Amerita sanción)</strong> 
+                        <br/>
+                        <br/>
+                        <strong>RENDIMIENTOS AUTORIZADOS DE COMBUSTIBLE PARA ESA RUTA, PESO DE CARGA, TRACTO Y REMOLQUE ES:</strong> <span t-field="o.rendimiento"/>
+                    </div>
+                </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_travel_expense">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="flete_gebesa.report_travel_expense_document" t-lang="o.user_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

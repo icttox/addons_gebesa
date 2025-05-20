@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='res_partner_2'>
+        	<field name='name'>res_partner_collection_manager_2</field>
+        	<field name='model'>res.partner</field>
+        	<field name='inherit_id' ref='base.view_partner_form'/>
+        	<field name='arch' type='xml'>
+        		<xpath expr="//group/group/field[@name='user_ids']" position="after">
+                    <field name='collection_manager_id'/>
+        		</xpath>          		   		
+        	</field>
+        </record>
+    </data>
+</odoo>

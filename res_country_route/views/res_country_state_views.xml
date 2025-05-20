@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_country_state_form_view">
+            <field name="name">res_county_state.route</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="mx_locations.res_country_state_c1_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/field[@name='fiscal_code']" position="after">       
+                    <field name="route_id"/>
+                </xpath>        
+            </field>
+        </record>
+    </data>
+</odoo>

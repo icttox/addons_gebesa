@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pedidos_vinculados_user,pedidos_vinculados.user,model_pedidos_vinculados,,0,0,0,0
+access_pedidos_vinculados_manager,pedidos_vinculados.manager,model_pedidos_vinculados,group_pedidos_vinculados,1,1,1,1

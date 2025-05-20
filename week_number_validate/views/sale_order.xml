@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='week_number_validate_form'>
+        	<field name='name'>week.number.validate.form</field>
+        	<field name='model'>sale.order</field>
+        	<field name='inherit_id' ref="sale.view_order_form"/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//group/group/field[@name='payment_term_id']" position="after">
+                    <field name="date_validator" readonly="1"/>
+                </xpath>
+                <!-- 
+        		<xpath expr="//group/group/field[@name='project_id']" position="after">
+        			<field name="notify_approval" widget="email" />
+        		</xpath> -->
+        	</field>
+        </record>
+        <record model='ir.ui.view' id='week_number_validate_tree'>
+            <field name='name'>week.number.validate.tree</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref="sale.view_order_tree"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='confirmation_date']" position="after">
+                    <field name="date_validator"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_order_tree_gebesa_amount" model="ir.ui.view">
+            <field name="name">view.order.tree.gebesa.amount</field>
+            <field name="model">sale.order</field>
+            <field name='inherit_id' ref="sale.view_order_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='amount_total']" position="replace">
+                     
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

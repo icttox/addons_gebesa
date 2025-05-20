@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="cont_supl_sequence" model="ir.sequence">
+            <field name="name">Medical Expense</field>
+            <field name="code">hr.employee.medical.expense</field>
+            <field name="prefix">MED</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>            
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

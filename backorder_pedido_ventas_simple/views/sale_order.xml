@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Nodo requerido-->
+<odoo>
+    <data>
+    <!--id es el identificador de la accion-->
+        <record model='ir.ui.view' id='backorder_pedido_tree'>
+            <!--es un nombre cualquiera para identificarlo-->
+        	<field name='name'>backorder_pedido.tree</field>
+            <!--model es el nombre de la clase que se definio en el archivo-->
+            <!--sale_order.py en la variable "_name"-->
+        	<field name='model'>sale.order</field>
+            <!--Define que esto es un archivo xml-->
+        	<field name='arch' type='xml'>
+            <!--Esto es una vista de arbol es decir solo mostrara registros
+            La variable string es la Etiqueta que aparecera en la parte 
+            superior del Reporte.-->
+        		<tree string='Sale'>
+              <!--Field es un campo en la base de datos 
+              name es nombre del atributo o columna de la base de 
+              datos que se desea mostrar--> 
+                    <field name='segment_status' string="Estatus Segmento"/>
+                    <field name='shiptment_status' string="Estatus Embarque"/>     
+        			<field name='week_number' string='Número de la Semana'/>
+                    <field name='name' string='Pedido de Venta'/>
+        			<field name='date_order' string='Fecha de Pedido'/>
+                    <field name='partner_id'/>
+                    <field name='date_reception' string='Fecha Recepción O.C.'/>
+                    <field name='warehouse_id'/>
+                    <field name='analytic_account_id' string='Cuenta Analítica'/>
+                    <!--field name='city_id' string='Ciudad'/-->
+                    <field name='state_id' string='Estado'/>
+                    
+                    <field name="total_rate_mex"/>
+                    <field name="freight_rate_mex"/>
+                    <field name="installation_rate_mex"/>
+                    <field name="net_sale_rate_mex"/>
+                    <field name="profit_margin" string='Margen de Utilidad'/>
+                    <field name="standard_cost_pending" string='Cost X Sur'/>
+                    <field name="amount_pending_mex" string='Imp X Sur'/>
+                    <field name="folio_shipped" string='Fólio Embarque'/>
+                    <field name="shipped_departure_date" string='Fecha Salida Embarque'/>
+                    <field name="currency_id"/>
+                    <field name='amount_untaxed' string='Total'/>
+                    <field name='total_freight' string='Total Flete'/>
+                    <field name='total_installation' string='Total Instalación'/>
+                    <field name='total_net_sale' string='Vta Neta Total'/>
+
+
+                    <field name='state'/>
+                                      
+        		</tree>
+        	</field>
+            <!--Cierre de Registro-->
+        </record>
+
+        <record id='action_week_count' model='ir.actions.act_window'>
+            <field name='name'>Backorder Pedidos Ventas</field>
+            <field name='res_model'>sale.order</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+            <field name="view_id" ref="backorder_pedido_tree"/>
+            <field name="domain">[('geb_invoice_status', 'in', ['no_invoice','partial_invoice', False]),('state', 'in', ['done', 'sale'])]</field>
+        </record>
+
+<!--ID: es el identificador del nuevo Submenu.
+    Parent: es el ID del menu donde sera almacenado el nuevo submenu donde se mostrara: este reporte en xml
+    action: es ID de la vista del Reporte en XML
+    name: Es el nombre con el que se mestrara en nuevo Submenu-->
+        <menuitem id="week_number_menu" parent="sale.menu_sale_report" name="Backorder Pedidos Ventas" action="action_week_count"/>
+    </data>
+</odoo>

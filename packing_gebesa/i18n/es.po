@@ -1,0 +1,468 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* packing_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-17 17:30+0000\n"
+"PO-Revision-Date: 2020-01-17 11:49-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipment_document
+msgid "0 - 0"
+msgstr "0 - 0"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid ""
+"<br/>\n"
+"                                <strong>Code:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Code:</strong>"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid ""
+"<br/>\n"
+"                                <strong>Product:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Product:</strong>"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid ""
+"<br/>\n"
+"                                <strong>Tag Line:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Tag Line:</strong>"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid ""
+"<br/>\n"
+"                                <strong>Tag:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Tag:</strong>"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid "<strong>PO#:</strong>"
+msgstr "<strong>PO#:</strong>"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid ""
+"<strong>Sold To:</strong>\n"
+"                                                    <br/>"
+msgstr ""
+"<strong>Sold To:</strong>\n"
+"                                                    <br/>"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid "<sub>HANDLE WITH CARE</sub>"
+msgstr "<sub>MANEJESE CON CUIDADO / HANDLE WITH CARE</sub>"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:63
+#, python-format
+msgid "A Kit Product cannot have a Standard Packing, Its                         Standard Packing are the components"
+msgstr "Un producto tipo Kit no puede tener un empaquetado estándar, sus componentes son el empaquetado estándar"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:32
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_active
+#, python-format
+msgid "Active"
+msgstr "Activo"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipment_document
+msgid "Articulo"
+msgstr "Articulo"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipment_document
+msgid "Bingo"
+msgstr "Bingo"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid "Bingo:"
+msgstr "Bingo:"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipment_document
+msgid "Cantidad"
+msgstr "Cantidad"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipment_document
+msgid "Clave"
+msgstr "Clave"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipment_document
+msgid "Codigo de Barras"
+msgstr "Codigo de Barras"
+
+#. module: packing_gebesa
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type_create_uid
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: packing_gebesa
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type_create_date
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/logistic_unit_type.py:16
+#: code:addons/packing_gebesa/models/product_packing_list.py:19
+#: code:addons/packing_gebesa/models/product_packing_list_line.py:23
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type_description
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_description
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_line_description
+#, python-format
+msgid "Description"
+msgstr "Descripción"
+
+#. module: packing_gebesa
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type_display_name
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_display_name
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_line_display_name
+#: model:ir.model.fields,field_description:packing_gebesa.field_report_packing_gebesa_report_shipping_label_display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipment_document
+msgid "Embarca"
+msgstr "Embarca"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/logistic_unit_type.py:22
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type_empty_weight
+#, python-format
+msgid "Empty Weight"
+msgstr "Peso Vacio"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:27
+#: selection:product.packing.list,type:0
+#, python-format
+msgid "Exeption"
+msgstr "Exepción"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/logistic_unit_type.py:25
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type_height
+#, python-format
+msgid "Height"
+msgstr "Altura"
+
+#. module: packing_gebesa
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type_id
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_id
+#: model:ir.model.fields,field_description:packing_gebesa.field_report_packing_gebesa_report_shipping_label_id
+msgid "ID"
+msgstr "ID"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:81
+#, python-format
+msgid "If the max quantity is zero, you have to specify the                     packing detail"
+msgstr "Si la cantidad máxima es cero, debes especificar el detalle del empaquetado"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:68
+#, python-format
+msgid "In order to create a Exception Packing, you must to                         create a Standard Packing first."
+msgstr "Antes de crear un empaquetado tipo excepción, debes haber creado un empaquetado estándard."
+
+#. module: packing_gebesa
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type___last_update
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list___last_update
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_line___last_update
+#: model:ir.model.fields,field_description:packing_gebesa.field_report_packing_gebesa_report_shipping_label___last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: packing_gebesa
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type_write_uid
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: packing_gebesa
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type_write_date
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/logistic_unit_type.py:28
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type_lenght
+#, python-format
+msgid "Lenght"
+msgstr "Longitud"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid "Line:"
+msgstr "Linea / Line:"
+
+#. module: packing_gebesa
+#: model:ir.actions.act_window,name:packing_gebesa.action_logistic_unit_type_form
+#: model:ir.ui.menu,name:packing_gebesa.menu_logistic_unit_type_form
+#: model:ir.ui.view,arch_db:packing_gebesa.logistic_unit_type_form
+#: model:ir.ui.view,arch_db:packing_gebesa.logistic_unit_type_tree
+msgid "Logistic Unit Type"
+msgstr "Tipo de Unidad Logística"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/logistic_unit_type.py:13
+#: code:addons/packing_gebesa/models/product_packing_list.py:14
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type_name
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_name
+#, python-format
+msgid "Name"
+msgstr "Nombre"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:60
+#, python-format
+msgid "Only one standard packing must exist by Product"
+msgstr "Solo puede existir un empaquetado estándard por producto"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid "Order:"
+msgstr "Orden / Order:"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list_line.py:15
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_line_packing_id
+#: model:ir.ui.menu,name:packing_gebesa.menu_mrp_packing
+#, python-format
+msgid "Packing"
+msgstr "Empaquetado"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:41
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_packing_line_ids
+#, python-format
+msgid "Packing Details"
+msgstr "Detalles de empaque"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/mrp_shipment.py:18
+#: model:ir.model.fields,field_description:packing_gebesa.field_mrp_shipment_line_packing_id
+#: model:ir.ui.view,arch_db:packing_gebesa.product_packing_form
+#, python-format
+msgid "Packing List"
+msgstr "Lista de empaque"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.product_packing_form
+msgid "Packing List Lines"
+msgstr "Líneas de la lista de empaque"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid "Page:"
+msgstr "Página / Page:"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipment_document
+msgid "Pedido"
+msgstr "Pedido"
+
+#. module: packing_gebesa
+#: model:ir.actions.act_window,name:packing_gebesa.action_product_packing_gebesa_form
+#: model:ir.ui.menu,name:packing_gebesa.menu_product_packing_gebesa_form
+#: model:ir.ui.view,arch_db:packing_gebesa.product_packing_tree
+msgid "Product Packing List"
+msgstr "Lista de Empaquetado del Producto"
+
+#. module: packing_gebesa
+#: model:ir.actions.act_window,name:packing_gebesa.action_product_packing_line_gebesa_form
+#: model:ir.ui.menu,name:packing_gebesa.menu_product_packing_line_gebesa_form
+#: model:ir.ui.view,arch_db:packing_gebesa.product_packing_line_form
+#: model:ir.ui.view,arch_db:packing_gebesa.product_packing_line_tree
+msgid "Product Packing List Line"
+msgstr "Línea de lista de empaque del producto"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:23
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_product_tmpl_id
+#, python-format
+msgid "Product Template"
+msgstr "Producto"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list_line.py:20
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_line_quantity
+#, python-format
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:36
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_qty
+#, python-format
+msgid "Quantity Packing"
+msgstr "Cantidad Empacada"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list_line.py:34
+#, python-format
+msgid "Quantity must be greater than Zero"
+msgstr "La cantidad debe ser mayor que cero"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid "Quantity:"
+msgstr "Cantidad / Qty:"
+
+#. module: packing_gebesa
+#: model:ir.model,name:packing_gebesa.model_mrp_shipment_line
+msgid "Shipment line"
+msgstr "Lineas embarcadas"
+
+#. module: packing_gebesa
+#: model:ir.actions.report.xml,name:packing_gebesa.shipping_label
+msgid "Shipping Label"
+msgstr "Etiqueta de Envío"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:26
+#: selection:product.packing.list,type:0
+#, python-format
+msgid "Standard"
+msgstr "Estandard"
+
+#. module: packing_gebesa
+#: model:res.groups,name:packing_gebesa.group_packing_gebesa_manager
+msgid "Superuser Packing Gebesa"
+msgstr "Superuser Packing Gebesa"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipment_document
+msgid "Tag Line"
+msgstr "Tag Line"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/mrp_shipment.py:13
+#: model:ir.model.fields,field_description:packing_gebesa.field_mrp_shipment_line_product_tmpl_id
+#, python-format
+msgid "Template"
+msgstr "Plantilla"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/reports/packing.py:185
+#, python-format
+msgid "The %s packaging has no quantity or lines                                         of detail."
+msgstr "El embalaje %s no tiene cantidad ni líneas de detalle."
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/reports/packing.py:74
+#, python-format
+msgid "The %s packaging has no quantity or lines                             of detail."
+msgstr "El embalaje %s no tiene cantidad ni líneas de detalle."
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:87
+#, python-format
+msgid "The detail quantity must be greater than zero"
+msgstr "La cantidad de detalle debe ser mayor que cero"
+
+#. module: packing_gebesa
+#: sql_constraint:logistic.unit.type:0
+msgid "The name must be unique! "
+msgstr "¡El nombre debe ser único! "
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:77
+#, python-format
+msgid "The packing detail is only allowed when tha max                         quantity is 0"
+msgstr "El detalle de paquetes solo es permitido cuando la cantidad máxima está establecida a cero"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/reports/packing.py:136
+#: code:addons/packing_gebesa/reports/packing.py:191
+#, python-format
+msgid "The product %s must have captured a packaging."
+msgstr "El producto%s debe tenes capturado un embalaje."
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list.py:28
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_type
+#, python-format
+msgid "Type"
+msgstr "Tipo"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/product_packing_list_line.py:27
+#: model:ir.model.fields,field_description:packing_gebesa.field_product_packing_list_line_unit_type_id
+#, python-format
+msgid "Unit Type"
+msgstr "Tipo de unidad"
+
+#. module: packing_gebesa
+#: model:res.groups,name:packing_gebesa.group_packing_gebesa_user
+msgid "User Packing Gebesa"
+msgstr "User Packing Gebesa"
+
+#. module: packing_gebesa
+#: code:addons/packing_gebesa/models/logistic_unit_type.py:19
+#: model:ir.model.fields,field_description:packing_gebesa.field_logistic_unit_type_width
+#, python-format
+msgid "Width"
+msgstr "Ancho"
+
+#. module: packing_gebesa
+#: model:ir.model,name:packing_gebesa.model_logistic_unit_type
+msgid "logistic.unit.type"
+msgstr "logistic.unit.type"
+
+#. module: packing_gebesa
+#: model:ir.ui.view,arch_db:packing_gebesa.report_shipping_label_document
+msgid "of"
+msgstr "de"
+
+#. module: packing_gebesa
+#: model:ir.model,name:packing_gebesa.model_product_packing_list
+msgid "product.packing.list"
+msgstr "product.packing.list"
+
+#. module: packing_gebesa
+#: model:ir.model,name:packing_gebesa.model_product_packing_list_line
+msgid "product.packing.list.line"
+msgstr "product.packing.list.line"
+
+#. module: packing_gebesa
+#: model:ir.model,name:packing_gebesa.model_report_mrp_shipment_report_shipment
+msgid "report.mrp_shipment.report_shipment"
+msgstr "report.mrp_shipment.report_shipment"
+
+#. module: packing_gebesa
+#: model:ir.model,name:packing_gebesa.model_report_packing_gebesa_report_shipping_label
+msgid "report.packing_gebesa.report_shipping_label"
+msgstr "report.packing_gebesa.report_shipping_label"

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+    <t t-extend="accountReports.buttons">
+        <t t-jquery="button.o_account-widget-xml" t-operation="after">
+            <button type="button" class='hide btn btn-primary btn-sm o_account-widget-txt'>EXPORT (TXT)</button>
+        </t>
+    </t>
+</templates>

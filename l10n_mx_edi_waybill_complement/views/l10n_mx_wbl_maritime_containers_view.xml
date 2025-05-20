@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="wbl_maritime_containers_form_view">
+            <field name="name">l10n.mx.wbl.maritime.containers.form</field>
+            <field name="model">l10n.mx.wbl.maritime.containers</field>
+            <field name="arch" type="xml">
+                <form string="Form Waybill Maritime Containers">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wbl_maritime_containers_tree_view">
+            <field name="name">l10n.mx.wbl.maritime.containers.tree</field>
+            <field name="model">l10n.mx.wbl.maritime.containers</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Waybill Maritime Containers">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="wbl_maritime_containers_action">
+            <field name="name">Waybill Maritime Containers</field>
+            <field name="res_model">l10n.mx.wbl.maritime.containers</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the waybill maritime containers
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="wbl_maritime_containers_action" id="menu_wbl_maritime_containers" name="Maritime Containers" parent="menu_wbl_complement" sequence="140"/>
+    </data>
+</odoo>
+    

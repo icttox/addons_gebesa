@@ -1,0 +1,7 @@
+<odoo>
+	<data>
+        <record model="res.groups" id="admin_l10n_mx_payroll">
+            <field name="name">Admin l10n mx payroll </field>
+        </record>
+	</data>
+</odoo>

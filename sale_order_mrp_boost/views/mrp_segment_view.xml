@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mrp_boost_segment_form_view" model="ir.ui.view">
+            <field name="name">mrp.boost.segment.form.view</field>
+            <field name="model">mrp.segment</field>
+            <field name="inherit_id" ref="mrp_segment.view_segment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Pickings">
+                        <field name="picking_ids" readonly="True"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='quality_alert_flaw_tree'>
+            <field name='name'>quality.alert.flaw.tree</field>
+            <field name='model'>quality.alert.flaw</field>
+            <field name='arch' type='xml'>
+                <tree string='Defects' editable="bottom">
+                    <field name='code'/>
+                    <field name='name'/>
+                    <field name='workcenter_ids' widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="quality_alert_flaw_action" model="ir.actions.act_window">
+            <field name="name">Quality flaws</field>
+            <field name="res_model">quality.alert.flaw</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="domain"></field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem
+        id="menu_quality_alert_flaw"
+        name="Quality flaws"
+        action="quality_alert_flaw_action"
+        parent="quality_control.menu_quality_configuration"
+        sequence="5"/>
+    </data>
+</odoo>

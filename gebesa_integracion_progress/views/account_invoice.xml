@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='invoice_supplier_form'>
+            <field name='name'>invoice_supplier_button_integeration_progress_form</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_supplier_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//button[5]" position="after">
+                    <button name="button_gasto_flete" string="Progress Update" type="object" icon="fa-angle-up"
+                        attrs="{'invisible': ['|','|', ('state','not in',('open', 'paid')), ('type','!=','in_invoice'),('gasto_flete_id','!=', 0)]}"/>
+                </xpath>
+                <xpath expr="//notebook/page/group/group/field[@name='company_id']" position="before">
+                	<field name='gasto_flete_id' readonly='1'/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

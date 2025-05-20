@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_cfdi_fiel_form" model="ir.ui.view">
+            <field name="name">view.cfdi.fiel.form</field>
+            <field name="model">cfdi.fiel</field>
+            <field name="arch" type="xml">
+                <form string="Fiel">
+                    <sheet>
+                        <group>
+                            <separator colspan="4" string="Fiel DER FORMAT (Original)"/>
+                            <field colspan="4" name="fiel_file" required="True"/>
+                            <field colspan="4" name="fiel_key_file" required="True"/>
+                            <newline/>
+                            <field invisible="False" name="fiel_password" password="True" required="True"/>
+                            <separator colspan="4" string="Fiel PEM FORMAT (Transformed)"/>
+                            <field colspan="4" name="fiel_file_pem"/>
+                            <field colspan="4" name="fiel_key_file_pem"/>
+                            <separator colspan="4" string="General Information of Fiel"/>
+                            <field name="serial_number" required="True"/>
+                            <newline/>
+                            <field name="date_start"/>
+                            <newline/>
+                            <field name="date_end" required="True"/>
+                            <separator colspan="4" string="Extra Information"/>
+                            <field name="fname_xslt"/>
+                            <newline/>
+                            <field groups="base.group_multi_company" invisible="False" name="company_id" required="True" widget="selection"/>
+                            <newline/>
+                            <field name="active"/>
+                            <newline/>
+                            <button name="get_fiel_info" string="Get Fiel Info" type="object"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_cfdi_fiel_tree" model="ir.ui.view">
+            <field name="name">view.cfdi.fiel.tree</field>
+            <field name="model">cfdi.fiel</field>
+            <field name="arch" type="xml">
+                <tree string="Fiel">
+                    <field name="serial_number"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="active"/>
+                    <field groups="base.group_multi_company" name="company_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_cfdi_fiel_tree" model="ir.actions.act_window">
+            <field name="name">CFDi Fiel</field>
+            <field name="res_model">cfdi.fiel</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_cfdi_fiel_tree"/>
+        </record>
+        <menuitem action="action_cfdi_fiel_tree" groups="immex_gebesa.group_immex_manager" id="menu_cfdi_fiel" parent="immex_gebesa.configuration_menu" sequence="50"/>
+        <record id="view_cfdi_fiel_search" model="ir.ui.view">
+            <field name="name">view.cfdi.fiel.search</field>
+            <field name="model">cfdi.fiel</field>
+            <field name="arch" type="xml">
+                <search string="Fiel">
+                    <filter domain="[('active','=',False)]" icon="terp-personal+" name="inactive" string="Inactive"/>
+                    <field name="serial_number"/>
+                    <field groups="base.group_multi_company" name="company_id"/>
+                    <field name="active"/>
+                    <newline/>
+                    <group expand="0" string="Group By...">
+                        <filter context="{'group_by':'company_id'}" domain="[]" groups="base.group_multi_company" icon="terp-partner" name="company" string="Company"/>
+                        <separator orientation="vertical"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

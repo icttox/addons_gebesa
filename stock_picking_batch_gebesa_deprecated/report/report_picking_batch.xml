@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="picking_batch"
+            model="stock.batch.picking"
+            string="Picking"
+            report_type="qweb-pdf"
+            name="stock_picking_batch.report_picking_batch"
+            file="stock_picking_batch.report_picking_batch"
+        />
+
+        <template id="report_picking_batch">
+            <t t-call="web.html_container">
+                <t t-call="report.internal_layout">
+                    <div class="page">
+                        <div class="row mt0 mb16">
+                            <div class="col-xs-3">
+                                <strong>Date:</strong>
+                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                            </div>
+                            <div class="col-xs-6">
+                                <strong>Printed by:</strong>
+                                <span t-field="user.name"/>
+                            </div>
+                        </div>
+                        <t t-foreach="docs" t-as="doc">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Pickings Order</th>
+                                        <th></th>
+                                        <th>Picked By</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span t-esc="doc.name"/>
+                                        </td>
+                                        <td>Visa:_________________</td>
+                                        <td>
+                                            <span t-esc="doc.picker_id.name"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <p t-esc="doc.notes"/>
+                            <br/>
+                            <t t-foreach="bat_pick[doc.id]" t-as="loc">
+                                <t t-foreach="bat_pick[doc.id][loc]" t-as="loc_des">
+                                    <table class="table table-condensed" width="100%">
+                                        <caption><b><u>
+                                            <span t-esc="loc"/>&#x21E8;<span t-esc="loc_des"/>
+                                        </u></b></caption>
+                                        <thead>
+                                            <th width="14%">Product Code</th>
+                                            <th width="25%">Product</th>
+                                            <th width="14%">Carrier</th>
+                                            <th class="text-right" width="7%">QTY</th>
+                                            <th width="14%">Pickings</th>
+                                            <th width="14%">Sale Order</th>
+                                            <th width="12%">Segment</th>
+                                        </thead>
+                                        <tbody>
+                                            <t t-foreach="bat_pick[doc.id][loc][loc_des]" t-as="prod">
+                                                <t t-set="product" t-value="bat_pick[doc.id][loc][loc_des][prod]['product']"/>
+                                                <t t-set="qty" t-value="bat_pick[doc.id][loc][loc_des][prod]['qty']"/>
+                                                <tr>
+                                                    <td>
+                                                        <span t-field="product.default_code"/>
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="product.name"/>
+                                                    </td>
+                                                    <td>
+                                                        <t t-foreach="bat_pick[doc.id][loc][loc_des][prod]['carrier']" t-as="carrier">
+                                                            <t t-if="carrier">
+                                                                <span t-field="carrier.name"/>,
+                                                            </t>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span t-esc="qty"/>
+                                                    </td>
+                                                    <td>
+                                                        <t t-foreach="bat_pick[doc.id][loc][loc_des][prod]['pick']" t-as="pick">
+                                                            <span t-field="pick.name"/>,
+                                                        </t>
+                                                    </td>
+                                                    <td>
+                                                        <t t-foreach="bat_pick[doc.id][loc][loc_des][prod]['so']" t-as="sale">
+                                                            <span t-field="sale.name"/>,
+                                                        </t>
+                                                    </td>
+                                                    <td>
+                                                        <t t-foreach="bat_pick[doc.id][loc][loc_des][prod]['re']" t-as="re">
+                                                            <span t-esc="re"/>
+                                                        </t>
+                                                    </td>
+                                                    <tr align="left">
+                                                        <td colspan="5">
+                                                            <pre class="description ">
+                                                                <span t-esc="product.description_warehouse and product.description_warehouse or ''"></span>
+                                                            </pre>
+                                                        </td>
+                                                        <td colspan="2" align="center" style="font-size: 9pt;font-family: CCode39;">
+                                                            <!--<img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', product.barcode, 180, 70)"/>-->
+                                                            <span t-esc="product.default_code"/>
+                                                        </td>
+                                                    </tr>
+                                                </tr>
+                                            </t>
+                                        </tbody>
+                                    </table>
+                                </t>
+                            </t>
+                            <div style="page-break-after: always;">&#160;</div>
+                            <div class="col-xs-12  mb32" style="font-size: 25pt;text-align:center">
+                                Pikings
+                            </div>
+                            <t t-foreach="picking[doc.id]" t-as="pickings">
+                                <div class="col-xs-3 mb16" style="font-size: 15pt;">
+                                    <span t-field="pickings.name"/>
+                                </div>
+                                <div class="col-xs-3 mb16">
+                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', pickings.name, 200, 50)"/>
+                                </div>
+                            </t>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

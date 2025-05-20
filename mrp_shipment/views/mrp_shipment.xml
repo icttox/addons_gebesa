@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <menuitem id="logistics_menu" name="Logistics" web_icon="mrp_shipment,static/description/web_icon.png" icon="fa-usd" groups="mrp_shipment.group_logistic_user"/>
+        <menuitem id="menu_mrp_shipment"
+            name="Shipments"
+            parent="logistics_menu"
+            sequence="3"/>
+
+        <record id="view_shipment_filter" model="ir.ui.view">
+            <field name="name">mrp.shipment.filter</field>
+            <field name="model">mrp.shipment</field>
+            <field name="arch" type="xml">
+                <search string="Search Shipment">
+                    <field name="folio" string="Shipment"/>
+                    <field name="reference" string="Shipment Reference"/>
+                    <field name="date"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Status" name="status" domain="[]" context="{'group_by':'state'}"/>
+                        <filter string="Shipment Month" name="month" domain="[]" context="{'group_by':'date'}" help="Shipment by Month"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='mrp_shipment_tree'>
+            <field name='name'>mrp.shipment.tree</field>
+            <field name='model'>mrp.shipment</field>
+            <field name='arch' type='xml'>
+                <tree string='Shipment'>
+                    <field name='folio'/>
+                    <field name='reference'/>
+                    <field name='meters'/>
+                    <field name='freight'/>
+                    <field name='amount'/>
+                    <field name='date'/>
+                    <field name='departure_date'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='mrp_shipment_form'>
+            <field name='name'>mrp.shipment.form</field>
+            <field name='model'>mrp.shipment</field>
+            <field name='arch' type='xml'>
+                <form string='Shipment'>
+                    <header>
+                        <button name="prepare_shipment" states="draft" string="Proceed" type="object" class="oe_highlight"/>
+                        <button name="done" states="confirm" string="Done" type="object" class="oe_highlight"/>
+                        <button name="finished" states="done" string="Finished" type="object" class="oe_highlight"/>
+                        <button name ="reverse_in_progress" states="done" string="Reverse in Progress" type="object" class="oe_highlight"/>
+                        <button name="cancel" string="Cancel" type="object" attrs="{'invisible':[('state','in', ['cancel', 'draft', 'done', 'finished'])]}"/>
+                        <button name="add" states="confirm" string="Add Sale Order" type="object"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="folio" class="oe_edit_only"/>
+                            <h1>
+                                <field name='folio' readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name='reference' attrs="{'readonly':[('state','not in', ['draft', 'confirm'])]}"/>
+                                <field name='meters' readonly="1"/>
+                                <field name='freight' readonly="1"/>
+                                <field name='amount' readonly="1"/>
+                                <field name="weight" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name='date' readonly="0"/>
+                                <field name='departure_date' attrs="{'readonly':[('state','not in', ['draft', 'confirm'])]}"/>
+                            </group>
+                        </group>
+                        <notebook attrs="{'invisible':[('state','=','draft')]}">
+                            <page string="Shipment" >
+                                 <field name="sale_ids" string="Shipment" attrs="{'readonly':[('state','!=','confirm')]}" >
+                                    <tree string="Shipment" editable="bottom" create="false">           
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="shipment_id" readonly="1" invisible="1"/>
+                                        <field name="sale_id" readonly="1"/>
+                                        <field name='partner_id' readonly="1"/>
+                                        <field name='country_id' readonly="1"/>
+                                        <field name='state_id' readonly="1"/>
+                                        <field name='city' readonly="1"/>
+                                        <field name="weight" readonly="1"/>
+                                        <field name="volume" readonly="1"/>
+                                    </tree>
+                                 </field>
+                            </page>
+                            <page string="Shipment Details" >
+                                <field name="line_ids" string="Shipment Details" attrs="{'readonly':[('state','!=','confirm')]}" >
+                                    <tree string="Shipment Details" editable="bottom" create="false">
+                                        <field name="shipment_id" readonly="1" invisible="1"/>
+                                        <field name="partner_id" readonly="1"/>
+                                        <field name='country_id' readonly="1"/>
+                                        <field name='state_id' readonly="1"/>
+                                        <field name='city' readonly="1"/>
+                                        <field name='street' readonly="1"/>
+                                        <field name='street2' readonly="1"/>
+                                        <field name="sale_order_id" readonly="1"/>
+                                        <field name="product_code" readonly="1"/>
+                                        <field name="product_name" readonly="1"/>
+                                        <field name="quantity" readonly="1"/>
+                                        <field name='quantity_shipped'/>
+                                        <field name="standard_cost" readonly="1"/>
+                                        <field name="price_unit" readonly="1"/>
+                                        <field name="total_cost" readonly="1"/>
+                                        <field name="total_price" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Shipment Destination">
+                                <field name="partner_ids" string="Shipment Destination">
+                                    <tree string="Shipment Destination"  editable="bottom">                                     
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="partner_id" readonly="1"/>
+                                        <field name="date_arrival"/>
+                                        <field name="maniobras"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mrp_shipment_calendar">
+            <field name="name">mrp.shipment.calendar</field>
+            <field name="model">mrp.shipment</field>
+            <field name="arch" type="xml">
+                <calendar string="Shipment" date_start="date" color="state">
+                    <field name="folio"/>
+                    <field name="reference"/>
+                    <field name="amount"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id='action_shipment_form' model='ir.actions.act_window'>
+            <field name='name'>Shipment</field>
+            <field name='res_model'>mrp.shipment</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form,calendar</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a shipment.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="action_shipment_form" id="menu_action_shipment_form" parent="menu_mrp_shipment" sequence="30"/>
+
+        <!--record model='ir.ui.view' id='mrp_shipment_sale_tree'>
+            <field name='name'>mrp.shipment.sale.tree</field>
+            <field name='model'>mrp.shipment.sale</field>
+            <field name='arch' type='xml'>
+                <tree string='Pedidos del embarque'>
+                    <field name='shipment_id'/>
+                    <field name='sale_id'/>
+                    <field name='partner_shipping_id'/>
+                    <field name='volume'/>
+                    <field name='weight'/>
+                    <field name='sequence'/>
+                </tree>
+            </field>
+        </record>
+
+        <record id='action_shipment_sale_form' model='ir.actions.act_window'>
+            <field name='name'>Pedidos del embarque</field>
+            <field name='res_model'>mrp.shipment.sale</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form,calendar</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a shipment sale.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="action_shipment_sale_form" id="menu_action_shipment_sale_form" parent="menu_mrp_shipment" sequence="30"/>
+
+        <record model='ir.ui.view' id='mrp_shipment_line_tree'>
+            <field name='name'>mrp.shipment.line.tree</field>
+            <field name='model'>mrp.shipment.line</field>
+            <field name='arch' type='xml'>
+                <tree string='Productos del embarque'>
+                    <field name='shipment_id'/>
+                    <field name='sale_order_id'/>
+                    <field name='partner_shipping_id'/>
+                    <field name='product_id'/>
+                    <field name='quantity'/>
+                    <field name='quantity_shipped'/>
+                    <field name='price_unit'/>
+                    <field name='sequence'/>
+                </tree>
+            </field>
+        </record>
+
+        <record id='action_shipment_line_form' model='ir.actions.act_window'>
+            <field name='name'>Productos del embarque</field>
+            <field name='res_model'>mrp.shipment.line</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form,calendar</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a shipment line.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="action_shipment_line_form" id="menu_action_shipment_line_form" parent="menu_mrp_shipment" sequence="30"/-->
+    </data>
+</odoo>

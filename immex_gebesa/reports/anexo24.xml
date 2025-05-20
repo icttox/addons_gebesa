@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="salida_mercancia_anexo24"
+        model="report.anexo24.salida.merc.ws"
+        string="Salida de Mercancias Anexo 24"
+        report_type="xlsx"
+        name="immex_gebesa.report_salida_mercancia_anexo24"
+        file="report_salida_mercancia_anexo24"
+        attachment_use="False"
+    />
+</odoo>

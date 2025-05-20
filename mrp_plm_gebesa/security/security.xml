@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="group_mrp_plm_cotizacion" model="res.groups">
+            <field name="name">Mrp Plm Cotizacion</field>
+        </record>
+        <record id="group_manager_validation_task_ip" model="res.groups">
+            <field name="name">Admin Validar Tarea IP</field>
+        </record>
+        <record id="group_manager_validation_task_aip" model="res.groups">
+            <field name="name">Admin Validar Tarea AIP</field>
+        </record>
+        <record id="group_manager_validation_task_diseno" model="res.groups">
+            <field name="name">Admin Validar Tarea Diseño</field>
+        </record>
+        <record id="group_manager_validation_task_sc" model="res.groups">
+            <field name="name">Admin Validar Tarea Servicio al Cliente</field>
+        </record>
+    </data>
+</odoo>

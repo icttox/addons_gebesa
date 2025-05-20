@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="report_incidents_layout">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+            <div class="header" style="font-size: 10pt;">
+                <div class="row">
+                    <div class="col-3 border" align="center">
+                        <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" class="ml-3" style="z-index: 50; max-width: 100px; max-height: 60px;margin-top: 0px;" />
+                    </div>
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-9 border" style="text-align:center;">
+                                <strong>Titulo del Documento: Incidencias</strong>
+                                
+                            </div>
+                            <div class="col-3 border" style="text-align:center;">
+                                <strong>Revision: 1</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="row">
+                                    <div class="col-6 border" style="text-align:center;">
+                                        <strong>Codigo: </strong>
+                                        <br/>F-SGC-
+                                    </div>
+                                    <div class="col-6 border" style="text-align:center;">
+                                        <strong>Deriva de: </strong>
+                                        <br/>P-SGC-
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 border" style="text-align:center;">
+                                <strong>Fecha de Revision</strong><br/> <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer o_standard_footer" style="font-size: 10pt;">
+                <div class="text-right mt-4">
+                    <div t-if="report_type == 'pdf'" class="text-muted">
+                        <span class="page"/> / <span class="topage"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <report
+            id="incidents_report"
+            model="quality.incidents"
+            string="Reporte Incidencias"
+            report_type="qweb-pdf"
+            name="management_system_gebesa.report_incidents"
+            file="management_system_gebesa.report_incidents"
+        />
+       <template id="report_incidents">
+            <t t-call="web.html_container">
+                <t t-call="management_system_gebesa.report_incidents_layout">
+   
+                    <div class="page">
+                        <t t-foreach="docs" t-as="doc">
+        
+                            <table width="100%" style="font-size:10pt;">
+                                <tr>
+                                    <td width="17%">
+                                        <strong>Fecha Incidencia:</strong>
+                                    </td>
+                                    <td width="33%">
+                                        <span t-field="doc.date_incident"/>
+                                    </td>
+                                    <td width="17%">
+                                        <strong>Fecha Factura:</strong>
+                                    </td>
+                                    <td width="33%">
+                                        <span t-field="doc.date_invoice"/>
+                                    </td>
+                                </tr>
+                                <tr height="8px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        <strong>Pedido Origen:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.sale_order_id"/>
+                                    </td>
+                                    <td>
+                                        <strong>Pedido Actual:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.order_id"/>
+                                    </td>
+                                </tr>
+                                <tr height="8px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        <strong>Planta:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.warehouse_id"/>
+                                    </td>
+                                    <td>
+                                        <strong>Empresa:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.company_id"/>
+                                    </td>
+                                </tr>
+                                <tr height="8px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        <strong>Nombre del producto:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.product_id"/>
+                                    </td>
+                                    <td>
+                                        <strong>Cantidad:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.amount"/>
+                                    </td>
+                                </tr>
+                                <tr height="8px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        <strong>Venta neta:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.net_sale_mx"/>
+                                    </td>
+                                    <td>
+                                        <strong>Deparamento:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.departament_id"/>
+                                    </td>
+                                </tr>
+                                <tr height="8px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        <strong>Motivo Reposicion:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.replacement_id"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14px">
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        <strong>Descripcion de la incidencia</strong>
+                                    </div>
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <span t-esc="doc.description"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <table class="table table-striped" width="100%" style="font-size:10pt;border: 1">
+                                <tr style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                    <th>Describa las acciones contingentes</th>
+                                    <th>Responsable</th>
+                                    <th>Fecha compromiso</th>
+                                    <th>Fecha cierre</th>
+                                </tr>
+                                <t t-foreach="doc.contingent_ids" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-field="line.description"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.responsible_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.date_commitment"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.date_close"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+                            <br/>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14px">
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        <strong>Analisis de la causa raiz</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14pt">
+                                     <td>
+                                        <strong>¿Porque?</strong>
+                                    </td>
+                                    <span t-field="doc.why"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14pt">
+                                     <td>
+                                        <strong>¿Porque?</strong>
+                                    </td>
+                                    <span t-field="doc.why_1"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14pt">
+                                     <td>
+                                        <strong>¿Porque?</strong>
+                                    </td>
+                                    <span t-field="doc.why_2"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14pt">
+                                     <td>
+                                        <strong>¿Porque?</strong>
+                                    </td>
+                                    <span t-field="doc.why_3"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14pt">
+                                     <td>
+                                        <strong>¿Porque?</strong>
+                                    </td>
+                                    <span t-field="doc.why_4"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14pt">
+                                     <td>
+                                        <strong>CAUSA RAIZ:</strong>
+                                    </td>
+                                    <span t-field="doc.cause"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <table class="table table-striped" width="100%" style="font-size:10pt;border: 1">
+                                <tr style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                    <th>Describa las acciones correctivas</th>
+                                    <th>Responsable</th>
+                                    <th>Fecha compromiso</th>
+                                    <th>Fecha cierre</th>
+                                </tr>
+                                <t t-foreach="doc.corrective_ids" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-field="line.description"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.responsible_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.date_commitment"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.date_close"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+                            <br/>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14px">
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        <strong>Estado accion</strong>
+                                    </div>
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <span t-esc="doc.status"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="read_payroll_microsip_xlsx"
+        model="read.payroll.microsip"
+        string="Read payroll"
+        report_type="xlsx"
+        name="gebesa_integracion_microsip.read_payroll_microsip_xlsx"
+        file="read_payroll_microsip_xlsx"
+        attachment_use="False"
+    />
+</odoo>

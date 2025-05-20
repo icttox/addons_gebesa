@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <record id="mail_template_alert_quality" model="mail.template">
+            <field name="name">Quality Alert: Reception Acknowledgment</field>
+            <field name="model_id" ref="quality.model_quality_alert"/>
+            <field name="subject">Quality Alert of ${object.product_id.default_code}</field>
+            <field name="email_to">${(object.user_id.email)}</field>
+            <field name="body_html"><![CDATA[
+                <div>
+                    Dear ${object.user_id.name},<br/><br/>
+                    Thank you for getting in touch with us.<br/>
+                    We have received your quality alert of ${object.product_id.default_code}<br/>
+                    Thank you,<br/><br/>
+                    ${object.company_id.name}
+                </div>]]>
+            </field>
+        </record>
+    </data>
+</odoo>

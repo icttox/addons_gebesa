@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="geo_position_gps_history_form">
+            <field name="name">position.gps.history.form</field>
+            <field name="model">position.gps.history</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="GPS position">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="datetime"/>
+                                <field name="latitude"/>
+                            </group>
+                            <group>
+                                <field name="vehicle_id"/>
+                                <field name="longitude"/>
+                            </group>
+                            <field name="point" widget="geo_edit_map"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='position_gps_history_tree'>
+            <field name='name'>position.gps.history.tree</field>
+            <field name='model'>position.gps.history</field>
+            <field name='arch' type='xml'>
+                <tree string='GPS positions'>
+                    <field name="datetime"/>
+                    <field name="latitude"/>
+                    <field name="longitude"/>
+                </tree>
+            </field>
+        </record>
+        <record id="position_gps_history_view" model="ir.ui.view">
+            <field name="name">Position GPD History View</field>
+            <field eval="16" name="priority"/>
+            <field name="model">position.gps.history</field>
+            <field name="arch" type="xml">
+                <geoengine>
+                    <field name="datetime" select="1"/>
+                </geoengine>
+            </field>
+        </record>
+        <record id="geoengine_vector_layer_position_gps_history" model="geoengine.vector.layer">
+            <field name="geo_field_id" ref="position_gps_history.field_position_gps_history__point"/>
+            <field name="name">Position GPD History Basic point</field>
+            <field eval="6" name="sequence"/>
+            <field name="view_id" ref="position_gps_history_view"/>
+            <field name="geo_repr">basic</field>
+            <field eval="1" name="nb_class"/>
+            <field name="begin_color">#FF680A</field>
+        </record>
+        <record id="geoengine_raster_layer_position_gps_historymaposm" model="geoengine.raster.layer">
+            <field name="raster_type">osm</field>
+            <field name="name">Position GPD History Open Street Map</field>
+            <field name="view_id" ref="position_gps_history_view"/>
+            <field eval="0" name="overlay"/>
+        </record>
+        <record id="geoengine_raster_layer_position_gps_history_basic0" model="geoengine.raster.layer">
+            <field name="raster_type">d_wms</field>
+            <field name="name">basic</field>
+            <field name="url">vmap0.tiles.osgeo.org/wms/vmap0</field>
+            <field name="view_id" ref="position_gps_history_view"/>
+            <field eval="1" name="overlay"/>
+        </record>
+    </data>
+</odoo>

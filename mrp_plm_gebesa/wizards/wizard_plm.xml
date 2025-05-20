@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_plm_gebesa_wizard'>
+        	<field name='name'>mrp.plm.gebesa.wizard</field>
+        	<field name='model'>mrp.plm.gebesa.wizard</field>
+        	<field name='arch' type='xml'>
+        		<form>
+        			<group>
+        				<field name='user_id'/>
+                        <field name='partner_id' domain="[('customer','=', True),('type','=','invoice'), ('parent_id','=', False)]"/>
+                        <field name='order_id' domain="[('partner_id', '=', partner_id), ('state', 'in',['draft','send','done'])]"/>
+        			</group>
+                    <group>
+                        <field name='warehouse_id'/>
+                        <field name='project_id' string="Proyecto"/>
+                        <field name='date_deadline'/>
+                    </group>
+                    <group>
+                        <field name="is_special"/>
+                        <field name="muestra"/>
+                        <field name="clave"/>
+                        <field name="costo"/>
+                        <field name="planted"/>
+                        <field name="render"/>
+                        <!-- <field name="planos"/> -->
+                    </group>
+                    <group>
+                        <field name="description"/>
+                    </group>
+        			<footer>
+                        <button name="transformation_user" string="Accept" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+    </data>
+</odoo>

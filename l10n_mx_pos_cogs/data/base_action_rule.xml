@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+
+
+    <!-- Server Action -->
+    <record id="server_action_create_cogs_from_pos" model="ir.actions.server">
+        <field name="name">Create Cost Journal Entry From POS</field>
+        <field name="model_id" model="ir.model" search="[('model', '=', 'pos.order')]"/>
+        <field name="state">code</field>
+        <field name="code">
+pos = env['pos.order']
+pos_brw = pos.browse(context.get('active_ids'))
+pos_brw.generate_cogs_moves()
+        </field>
+    </record>
+
+    <!-- Base Action Rule -->
+    <record id="automated_action_create_cogs_from_pos" model="base.action.rule">
+        <field name="name">Create Cost Journal Entry From POS</field>
+        <field name="model_id" model="ir.model" search="[('model', '=', 'pos.order')]"/>
+        <field name="active">1</field>
+        <field name="sequence">5</field>
+        <field name="kind">on_create</field>
+        <field name="server_action_ids" eval="[(6, 0, [ref('l10n_mx_pos_cogs.server_action_create_cogs_from_pos')])]"/>
+    </record>
+
+</odoo>

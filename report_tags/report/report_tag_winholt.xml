@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="tag_winholt"
+            model="sale.order"
+            string="Etiqueta winholt"
+            report_type="qweb-pdf"
+            name="report_tags.report_tag_winholt"
+            file="report_tags.report_tag_winholt"
+        />
+        <record id="report_tags.tag_winholt" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag_1x2" />
+        </record>
+
+        <template id="report_tag_winholt_document">
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})"/>
+            <div class="page">
+                <t t-foreach="doc.order_line" t-as="line">
+                    <t t-foreach="range(int(line.product_uom_qty))" t-as="qty">
+                        <div class="row">
+                            <div class="col-2" style="margin-top: .4rem;">
+                            </div>
+                            <div class="col-10 text-center" style="margin-top: .4rem;margin-left: 20px;font-size: 9px;">
+                                <t t-if="doc.partner_id.type_barcode == 'CCode39'">
+                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('Standard39', line.product_id.default_code, 2100, 700, 0)" width="100%" style="margin-left: 20px;"/>
+                                    <br/>
+                                    <span t-esc="line.product_id.default_code" style="margin-left: 40px;"/>
+                                </t>
+                                <t t-if="doc.partner_id.type_barcode == 'Code128bWin'">
+                                    <!--t t-set="code" t-value="line.product_id.default_code"/>
+                                    <t t-set="code_img" t-value="code128_image(code)"/>
+                                    <img t-att-src="'data:image/png;base64,%s' % code_img" style="max-width: 355px;margin-top: 18px;"/>
+                                    <br/>
+                                    <span t-esc="line.product_id.default_code"/-->
+                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('Code128', line.product_id.default_code, 2100, 700, 0)" width="100%" style="margin-left: 20px;"/>
+                                    <br/>
+                                    <span t-esc="line.product_id.default_code" style="margin-left: 40px;"/>
+                                </t>
+                            </div>
+                        </div>
+                        <div class="row" style="font-size: 7px;">
+                            <div class="col-8" style="margin-top: 0.1rem;">
+                            </div>
+                            <div class="col-4 text-right" style="margin-top: 0.1rem;">
+                                <span>123431</span>
+                            </div>
+                        </div>
+                        <div class="row" style="font-size: 7px;">
+                            <div class="col-8">
+                            </div>
+                            <div class="col-4 text-right">
+                                <span t-esc="datetime.datetime.now().strftime('%-m/%-d/%y')"/>
+                            </div>
+                        </div>
+                        <div class="row" style="font-size: 7px;page-break-after: always;">
+                            <div class="col-8">
+                            </div>
+                            <div class="col-4 text-right">
+                                <span t-esc="line.product_id.default_code"/>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_winholt">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-call="report_tags.report_tag_winholt_document" t-lang="doc.partner_id.lang"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <report
+            id="tag_winholt_all"
+            model="sale.order"
+            string="Etiqueta winholt (completo)"
+            report_type="qweb-pdf"
+            name="report_tags.report_tag_winholt_all"
+            file="report_tags.report_tag_winholt_all"
+            groups="system_administrator.group_system_administrator_gebesa"
+        />
+        <record id="report_tags.tag_winholt_all" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag_1x2" />
+        </record>
+
+        <template id="report_tag_winholt_all_document">
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})"/>
+            <div class="page" style="font-size: 6px;">
+                <t t-foreach="doc.order_line" t-as="line">
+                    <t t-foreach="range(int(line.product_uom_qty))" t-as="qty">
+                        <div class="row" style="border: 1px solid black;border-radius: 10px;page-break-after: always;">
+                            <div class="col-12">
+                                <div class="row" >
+                                    <div class="col-2" style="margin-top: .5rem;">
+                                    </div>
+                                    <div class="col-10 text-center" style="margin-top: .5rem;font-size: 5px;">
+                                        <t t-if="doc.partner_id.type_barcode == 'CCode39'">
+                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('Standard39', line.product_id.default_code, 2100, 800, 0)" width="95%" style="margin-left: 20px;"/>
+                                            <br/>
+                                            <span t-esc="line.product_id.default_code" style="margin-left: 40px;"/>
+                                        </t>
+                                        <t t-if="doc.partner_id.type_barcode == 'Code128bWin'">
+                                            <!--t t-set="code" t-value="line.product_id.default_code"/>
+                                            <t t-set="code_img" t-value="code128_image(code)"/>
+                                            <img t-att-src="'data:image/png;base64,%s' % code_img" style="max-width: 355px;margin-top: 18px;"/>
+                                            <br/>
+                                            <span t-esc="line.product_id.default_code"/-->
+                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('Code128', line.product_id.default_code, 2100, 800, 0)" width="95%" style="margin-left: 20px;"/>
+                                            <br/>
+                                            <span t-esc="line.product_id.default_code" style="margin-left: 40px;"/>
+                                        </t>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7" style="margin-top: -10px;">
+                                        <img src="/report_tags/static/src/img/WINHOLT.png" style="margin-left: -10px;margin-right: -15px;" width="100%"/>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="row">
+                                            <div class="col-12 text-right">
+                                                <span style="margin-left: -15px;margin-right: -10px;">123431</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <span style="margin-left: -10px;margin-right: -15px;">Designed in the USA</span>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <span style="margin-left: -15px;margin-right: -15px;">800-444-3595</span>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <span t-esc="datetime.datetime.now().strftime('%-m/%-d/%y')" style="margin-left: -15px;margin-right: -10px;"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <span style="margin-left: -10px;margin-right: -15px;">www.winholt.com</span>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <span style="margin-left: -15px;margin-right: -15px;">Made in Mexico</span>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <span t-esc="line.product_id.default_code" style="margin-left: -15px;margin-right: -10px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_winholt_all">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-call="report_tags.report_tag_winholt_all_document" t-lang="doc.partner_id.lang"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <report
+            id="tag_winholt_tabloide"
+            model="sale.order"
+            string="Etiqueta winholt (tabloide)"
+            report_type="qweb-pdf"
+            name="report_tags.report_tag_winholt_tabloide"
+            file="report_tags.report_tag_winholt_tabloide"
+            groups="system_administrator.group_system_administrator_gebesa"
+        />
+        <record id="report_tags.tag_winholt_tabloide" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tabloide"/>
+        </record>
+
+        <template id="report_tag_winholt_tabloide_document">
+            <div class="page" style="font-size: 6px;">
+                <t t-foreach="renglones" t-as="renglon">
+                    <div class="row">
+                        <t t-foreach="renglon" t-as="tag">
+                            <div style="height: 63px;width: 12.69%;border: 1px solid black;border-radius: 10px;">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <t t-if="partner_id.type_barcode == 'CCode39'">
+                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('Standard39', tag.default_code, 1800, 300, 0)" style="margin-left: 100px;margin-top: 2px;" width="60%"/>
+                                        </t>
+                                        <t t-if="partner_id.type_barcode == 'Code128bWin'">
+                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('Code128', tag.default_code, 1800, 300, 0)" style="margin-left: 100px;margin-top: 2px;" width="60%"/>
+                                        </t>
+                                        <br/>
+                                        <span t-esc="tag.default_code" style="margin-left: 170px;"/>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: -5px;">
+                                    <div class="col-6">
+                                        <img src="/report_tags/static/src/img/WINHOLT.png" width="100%" style="margin-top: -20px;margin-left: 10px;"/>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <span style="margin-right: 7px;">123431</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5" style="margin-left: 10px;">
+                                        <span>Designed in the USA</span>
+                                    </div>
+                                    <div class="col-4 text-center" style="margin-left: -10px;">
+                                        <span>800-444-3595</span>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <span t-esc="datetime.datetime.now().strftime('%-m/%-d/%y')" style="margin-right: 7px;"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5" style="margin-left: 10px;">
+                                        <span>www.winholt.com</span>
+                                    </div>
+                                    <div class="col-4 text-center" style="margin-left: -10px;">
+                                        <span>Made in Mexico</span>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <span t-esc="tag.default_code" style="margin-right: 7px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="height: 63px;width: 1.58%;border: 1px solid red;"/>
+                        </t>
+                    </div>
+                    <div class="row">
+                        <div style="height: 15px;width: 100%;border: 1px solid blue;"/>
+                    </div>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_winholt_tabloide">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <t t-call="report_tags.report_tag_winholt_tabloide_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

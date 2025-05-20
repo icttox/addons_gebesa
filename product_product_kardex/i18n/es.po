@@ -1,0 +1,113 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_product_kardex
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-31 21:03+0000\n"
+"PO-Revision-Date: 2017-03-31 15:10-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: product_product_kardex
+#: model:ir.ui.view,arch_db:product_product_kardex.product_product_kardex_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: product_product_kardex
+#: model:ir.model.fields,field_description:product_product_kardex.field_product_product_kardex_wizard_create_uid
+msgid "Created by"
+msgstr "Creado por:"
+
+#. module: product_product_kardex
+#: model:ir.model.fields,field_description:product_product_kardex.field_product_product_kardex_wizard_create_date
+msgid "Created on"
+msgstr "Creado el:"
+
+#. module: product_product_kardex
+#: code:addons/product_product_kardex/wizards/product_product_kardex.py:23
+#: model:ir.model.fields,field_description:product_product_kardex.field_product_product_kardex_wizard_fecha_final
+#, python-format
+msgid "Date End"
+msgstr "Fecha Final"
+
+#. module: product_product_kardex
+#: code:addons/product_product_kardex/wizards/product_product_kardex.py:20
+#: model:ir.model.fields,field_description:product_product_kardex.field_product_product_kardex_wizard_fecha_inicial
+#, python-format
+msgid "Date Init"
+msgstr "Fecha Inicial"
+
+#. module: product_product_kardex
+#: model:ir.model.fields,field_description:product_product_kardex.field_product_product_kardex_wizard_display_name
+msgid "Display Name"
+msgstr "Nombre:"
+
+#. module: product_product_kardex
+#: model:ir.ui.view,arch_db:product_product_kardex.product_product_kardex_wizard
+msgid "Export"
+msgstr "Exportar"
+
+#. module: product_product_kardex
+#: model:ir.model.fields,field_description:product_product_kardex.field_product_product_kardex_wizard_id
+msgid "ID"
+msgstr ""
+
+#. module: product_product_kardex
+#: model:ir.model.fields,field_description:product_product_kardex.field_product_product_kardex_wizard___last_update
+msgid "Last Modified on"
+msgstr "Ultima modificación el:"
+
+#. module: product_product_kardex
+#: model:ir.model.fields,field_description:product_product_kardex.field_product_product_kardex_wizard_write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualización por:"
+
+#. module: product_product_kardex
+#: model:ir.model.fields,field_description:product_product_kardex.field_product_product_kardex_wizard_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualizació el:"
+
+#. module: product_product_kardex
+#: code:addons/product_product_kardex/wizards/product_product_kardex.py:17
+#: model:ir.model.fields,field_description:product_product_kardex.field_product_product_kardex_wizard_location_id
+#, python-format
+msgid "Location"
+msgstr "Locación"
+
+#. module: product_product_kardex
+#: model:ir.ui.view,arch_db:product_product_kardex.product_kardex_form_view
+msgid "Print Kardex"
+msgstr "Imprimir Kadex"
+
+#. module: product_product_kardex
+#: code:addons/product_product_kardex/wizards/product_product_kardex.py:13
+#: model:ir.model,name:product_product_kardex.model_product_product
+#: model:ir.model.fields,field_description:product_product_kardex.field_product_product_kardex_wizard_product_id
+#, python-format
+msgid "Product"
+msgstr "Producto"
+
+#. module: product_product_kardex
+#: code:addons/product_product_kardex/models/product_product.py:16
+#, python-format
+msgid "Product Kardex Report"
+msgstr "Reporte Kardex del Producto"
+
+#. module: product_product_kardex
+#: model:ir.ui.view,arch_db:product_product_kardex.product_product_kardex_wizard
+msgid "or"
+msgstr "o"
+
+#. module: product_product_kardex
+#: model:ir.model,name:product_product_kardex.model_product_product_kardex_wizard
+msgid "product.product.kardex.wizard"
+msgstr ""

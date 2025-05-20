@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='show_web_portal_form'>
+            <field name='name'>show.web.portal.form</field>
+            <field name='model'>res.partner</field>
+            <field name='inherit_id' ref="base.view_partner_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='child_ids']/form/sheet/group/group[2]/field[@name='name']" position="before">
+                    <field name="show_web_portal" attrs='{"invisible":[("type","!=", "delivery")]}'/>
+                </xpath>
+                <xpath expr="//field[@name='category_id']" position="before">
+                    <field name="hubspot_user"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

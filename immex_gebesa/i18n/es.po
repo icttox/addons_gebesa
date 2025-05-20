@@ -1,0 +1,4344 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* immex_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-08 17:06+0000\n"
+"PO-Revision-Date: 2021-12-08 11:10-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.action_informe_descargos_wizard
+#: model:ir.ui.menu,name:immex_gebesa.menu_informe_descargos_wizard
+msgid " Informe de descargos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__porcentaje_desperdicio
+msgid "% Desperdicio"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Apellido materno</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Apellido paterno</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Calle</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Cantidad UMC</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Certificado de origen</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Clave UMC</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Colonia</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Código postal</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Datos de la factura</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Datos de la mercancía</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Datos del Acuse de Valor</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Datos generales del destinatario</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Datos generales del proveedor</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Descripción genérica de la mercancía</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Domicilio del destinatario</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Domicilio del proveedor</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Entidad federativa</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Fecha Exp.</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.cove_to_pdf_layout
+msgid ""
+"<strong>Información de Valor y de Comercialización</strong><br/>\n"
+"                        <strong>Ventanilla digital mexicana de comercio exterior</strong><br/>\n"
+"                        <strong>Promoción o solicitud en materia de comercio exterior</strong><br/>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Localidad</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Municipio</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>No. de exportador autorizado</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>No. de factura</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>No. exterior</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>No. interior</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Nombre o Razón social</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Nombre(s) o Razón Social</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Número autorización aduanal</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Número de patente aduanal</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Observaciones</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>País</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>RFC con permisos de consulta</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>RFC de consulta</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Relación de facturas</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Subdivisión</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Tax ID/Sin Tax ID/RFC/CURP</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Tipo de figura</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Tipo de identificador</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Tipo de operación</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Tipo moneda</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Valor total en dólares</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Valor total</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_cove_to_pdf_document
+msgid "<strong>Valor unitario</strong>"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "A1"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.immex_menu
+msgid "A24-IMMEX"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "A3-A"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "A3-B"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:account.invoice,clave_pedimento:0
+#: selection:sale.order,clave_pedimento:0
+msgid "AF"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "AJ"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,periodo:0
+msgid "Abril"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_needaction
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_needaction
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_needaction
+msgid "Action Needed"
+msgstr "Accion necesaria"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__active
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table_type__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_activo_fijo
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_activo_fijo
+#: model:ir.ui.menu,name:immex_gebesa.immex_activo_fijo
+msgid "Activo Fijo"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_product_template
+msgid "Add Multiple Image in Product"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_ws_get_pedimento__aduana
+msgid "Aduana"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_ws_get_pedimento__aduana
+msgid "Aduana E/S"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_res_partner__custom_broker
+#: model:ir.model.fields,field_description:immex_gebesa.field_res_users__custom_broker
+msgid "Agente Aduanal"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.menu_custom_broker
+msgid "Agentes Aduanales"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,periodo:0
+msgid "Agosto"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.immex_report_anexo24
+msgid "Anexo 24"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.action_report_anexo24_salida_merc_ws
+#: model:ir.ui.menu,name:immex_gebesa.action_report_anexo24_salida_merc_ws_menu
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_anexo24_salida_merc_ws_form
+msgid "Anexo 24 Salida de Mercancias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.immex_report_anexo31
+msgid "Anexo 31"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_product__apply_download_immex
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_template__apply_download_immex
+msgid "Apply download immex"
+msgstr "Aplica descargue immex"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_attachment_count
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_attachment_count
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_attachment_count
+msgid "Attachment Count"
+msgstr "Archivos adjuntos"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_informe_descargos_wizard__year
+msgid "Año"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "BA"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "BB"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "BE"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "BP"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "BR"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Lista de material"
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.materials_action
+msgid "Bill of Materials"
+msgstr "Lista de materiales (LdM)"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.import_data_stage_form
+msgid "Buscar"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "CFDI"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.action_cfdi_fiel_tree
+#: model:ir.ui.menu,name:immex_gebesa.menu_cfdi_fiel
+msgid "CFDi Fiel"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_account_invoice__cove
+#: model:ir.model.fields,field_description:immex_gebesa.field_stock_picking__cove
+msgid "COVE"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "CTM"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__curp_contribuyente
+msgid "CURP del Importador / Exportador"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__curp_agente
+msgid "CURP del agente o apoderado"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__curp_transportista
+msgid "CURP del transportista"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__calle_contribuyente
+msgid "Calle del contribuyente"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__calle_destinatario
+msgid "Calle del domicilio del destinatario"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__calle_proveedor
+msgid "Calle del domicilio del proveedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__regime_changed
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__regime_changed
+msgid "Cambio de Régimen"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.corrections_init_inventory_wz_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.get_pedimento_ws_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.import_data_stage_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.informe_descargos_wizard_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.input_product_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_anexo24_salida_merc_ws_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__cantidad
+msgid "Cantidad"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__cantidad_udm_tarifa
+msgid "Cantidad correspondiente a udm TIGIE"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__cantidad
+msgid "Cantidad de mercancía descargada"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__cantidad_tigie
+msgid "Cantidad de mercancía en unidades de tarifa"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__cantidad_udm_estimado
+msgid "Cantidad en UdM del precio estimado"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__cantidad_udm_comercial
+msgid "Cantidad en udm comercial"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__cantidad
+msgid "Cantidad en unidades de medida del precio estimado"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__casos_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__casos_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Casos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_casos_form
+msgid "Casos Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_casos_view_tree
+msgid "Casos Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.menu_l10n_mx_cat
+msgid "Catálogos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Check Vucem"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__ciudad_proveedor
+msgid "Ciudad del Proveedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__ciudad_destinatario
+msgid "Ciudad del destinatario"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type__clave
+msgid "Clave"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__tipo_contenedor
+msgid "Clave Tipo de contenedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__clave_aduana
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__clave_aduana
+msgid "Clave aduana"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_account_invoice__clave_aduanal
+#: model:ir.model.fields,field_description:immex_gebesa.field_sale_order__clave_aduanal
+#: model:ir.model.fields,field_description:immex_gebesa.field_stock_picking__clave_aduanal
+msgid "Clave aduanal"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__clave_caso
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__clave_caso
+msgid "Clave de caso"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__clave_contribucion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__clave_contribucion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__clave_contribucion
+msgid "Clave de contribución"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__clave_destino
+msgid "Clave de destino de la mercancía"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__clave_documento
+msgid "Clave de documento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__clave_documento_anterior
+msgid "Clave de documento anterior"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__estado_destino
+msgid "Clave de entidad federativa de destino"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__estado_origen
+msgid "Clave de entidad federativa de origen"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__estado_comprador
+msgid "Clave de entidad federativa del comprador"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__estado
+msgid "Clave de entidad federativa del contribuyente"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__estado_vendedor
+msgid "Clave de entidad federativa del vendedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__clave_garantia
+msgid "Clave de garantía"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__clave_emisora
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__clave_institucion
+msgid "Clave de institución emisora"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__clave_contribucion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__clave_contribucion
+msgid "Clave de la contribución"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__estado
+msgid "Clave de la entidad federativa"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__clave_garantia
+msgid "Clave de la garantía"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__moneda_factura
+msgid "Clave de la moneda de la factura"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__materials_code
+msgid "Clave de materiales"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__forma_pago
+msgid "Clave de pago"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__pais_extranjero
+msgid "Clave de país Comprador/Vendedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__pais
+msgid "Clave de país Origen/Destino"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__clave_documento_original
+msgid "Clave de pedimento de que se trate"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__clave_permiso
+msgid "Clave de permiso"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__clave_aduanal_anterior
+msgid "Clave de sección aduanera anterior"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__clave_seccion_original
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__clave_aduanal_original
+msgid "Clave de sección aduanera original"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__termino_facturacion
+msgid "Clave de termino de la factura"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__tipo_fecha
+msgid "Clave de tipo de fecha"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__tipo_tasa
+msgid "Clave de tipo de la tasa"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__tipo_operacion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__tipo_operacion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__tipo_operacion
+msgid "Clave de tipo de operación"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__importe_pago
+msgid "Clave de tipo de pago"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__tipo_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__tipo_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__tipo_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__tipo_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__tipo_pedimento
+msgid "Clave de tipo de pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__tipo_tasa
+msgid "Clave de tipo de tasa"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__udm_comercial
+msgid "Clave de unidad de medida comercial"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__udm_tarifa
+msgid "Clave de unidad de medida de la tarifa"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__udm_original
+msgid "Clave de unidad de medida original"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__clave_vinculacion
+msgid "Clave de vinculación"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__clave_documento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__clave_documento
+msgid "Clave del documento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__input_medio_transporte
+msgid "Clave del medio de transporte de arrivo"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__medio_transporte
+msgid "Clave del medio de transporte de entrada o salida"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__output_medio_transporte
+msgid "Clave del medio de transporte de salida"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__metodo_valorizacion
+msgid "Clave del método de valorización"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__pais_facturacion
+msgid "Clave del pais de facturación"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__pais
+msgid "Clave del pais del contribuyente"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__pais_transportista
+msgid "Clave del país del transportista"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__tipo_cuenta
+msgid "Clave del tipo de cuenta"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__tipo_pedimento
+msgid "Clave del tipo de pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__forma_pago
+msgid "Clave forma de pago"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__forma_pago
+msgid "Clave forma pago"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_account_invoice__clave_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_sale_order__clave_pedimento
+msgid "Clave pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__clave_seccion_aduanera
+msgid "Clave seccion aduana"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__tipo_pedimento
+msgid "Clave tipo pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_code_pedimento__code
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs__code
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs_regimes__code
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table_type__code
+#: model:ir.model.fields,help:immex_gebesa.field_stock_picking__code_move_type
+msgid "Code"
+msgstr "Código"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_account_invoice__company_country_code
+msgid "Codigo del pais de la compañia"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_account_invoice__country_fiscal_code
+#: model:ir.model.fields,field_description:immex_gebesa.field_stock_picking__country_fiscal_code
+msgid "Codigo fiscal"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_stock_picking__code_move_type
+msgid "Codigo tipo de movimiento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__company_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type__company_id
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_cfdi_fiel_search
+msgid "Company"
+msgstr "Compañia"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_cfdi_fiel__company_id
+msgid "Company where you add this fiel"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.company_action
+#: model:ir.ui.menu,name:immex_gebesa.menu_company
+msgid "Compañias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__complemento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__complemento
+msgid "Complemento del caso"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.configuration_menu
+msgid "Configuracion"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__consecutivo_remesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__consecutivo
+msgid "Consecutivo de la remesa"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_contenedor_Action
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__contenedor_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Contenedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_contenedor_form
+msgid "Contenedor Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_contenedor_view_tree
+msgid "Contenedor Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__contribuciones_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__contribuciones_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Contribuciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_contribuciones_form
+msgid "Contribuciones Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_contribuciones_view_tree
+msgid "Contribuciones Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.report,name:immex_gebesa.immex_corrections_initial_inventory
+#: model:ir.ui.menu,name:immex_gebesa.menu_corrections_init_inventory_wz
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.corrections_init_inventory_wz_form
+msgid "Correcciones al inventario inicial"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.report,name:immex_gebesa.cove_to_pdf
+msgid "Cove"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.l10n_mx_immex_code_pedimento_action
+msgid "Create the code pedimento"
+msgstr "Crear la clave del pedimento"
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.l10n_mx_immex_customs_action
+msgid "Create the immex customs"
+msgstr "Crear aduana IMMEX"
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.l10n_mx_immex_customs_regimes_action
+msgid "Create the immex customs regimes"
+msgstr "Crear los regímenes aduaneros de IMMEX"
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.l10n_mx_immex_partida_descargue_action
+msgid "Create the immex partida descargue"
+msgstr "Crea el IMMEX partida descargue"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_corrections_initial_inventory_wizard__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_import_data_stage__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_informe_descargos_wizard__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_input_product_wz__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_code_pedimento__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs_regimes__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_documentos_digitalizados__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table_type__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_details__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_factor__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_anexo24_salida_merc_ws__create_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_ws_get_pedimento__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_corrections_initial_inventory_wizard__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_import_data_stage__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_informe_descargos_wizard__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_input_product_wz__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_code_pedimento__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs_regimes__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_documentos_digitalizados__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table_type__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_details__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_factor__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_anexo24_salida_merc_ws__create_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_ws_get_pedimento__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__cuentas_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Cuentas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_cuentas_form
+msgid "Cuentas Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_cuentas_view_tree
+msgid "Cuentas Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.broker_action
+msgid "Custom Broker"
+msgstr "Agente Aduanal"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__cp_proveedor
+msgid "Código Postal del Proveedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__codigo_mercancia
+msgid "Código de la mercancía o producto"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__cp
+msgid "Código postal del contribuyente"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__cp_destinatario
+msgid "Código postal del domicilio del destinatario"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "DES"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "DON"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__date_end
+msgid "Date End"
+msgstr "Fecha de finalización"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__date_start
+msgid "Date Start"
+msgstr "Fecha de inicio"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_cfdi_fiel__date_end
+msgid "Date end of validity of the fiel"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_cfdi_fiel__date_start
+msgid "Date start the fiel before the SAT"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.table_date_menu
+msgid "Datos immex"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_sale_order__double_export_invoice
+msgid "Debo facturar el resto de los productos que no son de exportacion de retorno"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.get_pedimento_ws_form
+msgid "Descargar"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.server,name:immex_gebesa.ir_cron_descargar_expediente_digital_ir_actions_server
+#: model:ir.cron,cron_name:immex_gebesa.ir_cron_descargar_expediente_digital
+#: model:ir.cron,name:immex_gebesa.ir_cron_descargar_expediente_digital
+msgid "Descargar Expediente Digital Pedimentos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.menu_get_pediment_ws
+msgid "Descargar datos de pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.action_get_pedimento_ws
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.get_pedimento_ws_form
+msgid "Descargar datos del pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__descargos_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Descargos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_descargos_form
+msgid "Descargos Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_descargos_view_tree
+msgid "Descargos Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_account_invoice__descargue_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line__descargue_id
+msgid "Descargue"
+msgstr "Descargar"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__descargue_line_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_form
+msgid "Descargue Linea"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__descripcion
+msgid "Descripcion"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10n_mx_immex_partida_search
+msgid "Descripcion de la mercancia"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__descripcion
+msgid "Descripción de la mercancía"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_code_pedimento__description
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs_regimes__name
+msgid "Description"
+msgstr "Descripción"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__destinatarios_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Destinatarios"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_details__uom_factor_id
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.product_uom_factor_form
+msgid "Details"
+msgstr "Detalles"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.product_uom_factor_form
+msgid "Details Tree"
+msgstr "Detalles"
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,periodo:0
+msgid "Diciembre"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__diferencias_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Diferencias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_corrections_initial_inventory_wizard__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_import_data_stage__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_informe_descargos_wizard__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_input_product_wz__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_code_pedimento__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs_regimes__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_documentos_digitalizados__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table_type__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_details__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_factor__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_anexo24_salida_merc_ws__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_export_siimex_bom_invoice_xlsx__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_export_siimex_invoice_xlsx__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_export_siimex_mat_utilizados_xlsx__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_export_siimex_xlsx__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_corrections_initial_inventory__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_cove_to_pdf__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_informe_descargos__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_salida_mercancia_anexo24__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_tag1__display_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_ws_get_pedimento__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__documentos_digitalizados_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Documentos digitalizados"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type__download_exceptions_apply
+msgid "Download exceptions apply"
+msgstr "Se aplican excepciones de descarga"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.input_product_form
+msgid "Ejecutar"
+msgstr ""
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/account_invoice.py:232
+#, python-format
+msgid "El factor del detalle de                             conversion para el producto %s de %s a %s debe ser                             mayor a 0"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,periodo:0
+msgid "Enero"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.action_report_input_product
+#: model:ir.actions.report,name:immex_gebesa.tsca
+msgid "Entrada Producto"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.input_product_form
+msgid "Entrada/Producto"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Expediente digital"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.report,name:immex_gebesa.export_siimex_xlsx
+msgid "Export BOM Siimmex"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.report,name:immex_gebesa.export_siimex_bom_invoice_xlsx
+msgid "Export BOM Siimmex for invoice"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.report,name:immex_gebesa.export_siimex_invoice_xlsx
+msgid "Export Siimmex for invoice"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_cfdi_fiel_form
+msgid "Extra Information"
+msgstr "Información extra"
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "F3"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "F4"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "F5"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_details__factor
+msgid "Factor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__factura_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Factura"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_factura_form
+msgid "Factura Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_factura_view_tree
+msgid "Factura Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,periodo:0
+msgid "Febrero"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_input_product_wz__fecha_final
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_anexo24_salida_merc_ws__fecha_final
+msgid "Fecha Final"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_input_product_wz__fecha_inicio
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_anexo24_salida_merc_ws__fecha_inicio
+msgid "Fecha Inicio"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__fechaexe
+msgid "Fecha de ejecucion"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_account_invoice__entry_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_sale_order__entry_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_stock_picking__entry_date
+msgid "Fecha de entrada"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__fecha_facturacion
+msgid "Fecha de facturación"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__fecha_fin
+msgid "Fecha de fin del reconocimiento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__fecha_ini
+msgid "Fecha de inicio del reconocimiento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__fecha_constancia
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__fecha_constancia
+msgid "Fecha de la constancia"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__fecha
+msgid "Fecha de la selección automatizada"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__fecha_operacion
+msgid "Fecha de operación"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__fecha_operacion_anterior
+msgid "Fecha de operación anterior"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__fecha_pago
+msgid "Fecha de pago"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__fecha_pago_real
+msgid "Fecha de pago de las contribuciones y cuotas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__fecha_pago_real
+msgid "Fecha de pago de las contribuciones y cuotas compensatorias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__fecha_pago_real
+msgid "Fecha de pago real"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__fecha_pago_contenedor
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__fecha_real_pago
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__fecha_pago_guia
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__fecha_pago_transport
+msgid "Fecha de pago real de las contribuciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__fecha_pedimento
+msgid "Fecha de recepción del pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__fecha_sel_autom
+msgid "Fecha de selección automatizada"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__fecha_validacion_pago
+msgid "Fecha de validacion"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__fecha_validacion_pago
+msgid "Fecha de validación o pago real"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__fechafin
+msgid "Fecha final"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__fechaini
+msgid "Fecha inicio"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__fecha_operacion_original
+msgid "Fecha operacion original"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__fecha_pago_real
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__fecha_pago_real
+msgid "Fecha pago real"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__fechas_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Fechas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_cfdi_fiel_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_cfdi_fiel_search
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_cfdi_fiel_tree
+msgid "Fiel"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_cfdi_fiel_form
+msgid "Fiel DER FORMAT (Original)"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__fiel_file_pem
+msgid "Fiel File PEM"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_cfdi_fiel_form
+msgid "Fiel PEM FORMAT (Transformed)"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__fname_xslt
+msgid "File XML Parser (.xslt)"
+msgstr "Fichero del analizador XML (.xslt)"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_import_data_stage__zip_file
+msgid "File Zip"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__firma_descargo
+msgid "Firma de descargo"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_cfdi_fiel__fname_xslt
+msgid "Folder in server with XSLT file"
+msgstr "Carpeta en el servidor con el archivo XSLT"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__folio
+msgid "Folio"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__folio_constancia
+msgid "Folio de la constancia"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__folio_constancia
+msgid "Folio de la constancia de deposito"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_follower_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_follower_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_channel_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_channel_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_partner_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_partner_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Partners)"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.l10n_mx_immex_code_pedimento_form_view
+msgid "Form IMMEX Code Pedimento"
+msgstr "Código IMMEX Pedimento"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.l10n_mx_immex_customs_form_view
+msgid "Form IMMEX Customs"
+msgstr "IMMEX Aduana"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.l10n_mx_immex_customs_regimes_form_view
+msgid "Form IMMEX Customs Regimes"
+msgstr "Regímenes Aduaneros IMMEX"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.l10n_mx_immex_partida_descargue_form_view
+msgid "Form IMMEX Partida Descargue"
+msgstr "IMMEX Partida Descargue"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__fraccion_arancelaria
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__fraccion_arancelaria
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__fraccion_arancelaria
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__fraccion_arancelaria
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__fraccion_arancelaria
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__fraccion_arancelaria
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__fraccion_arancelaria
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__fraccion_arancelaria
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__fraccion_arancelaria
+msgid "Fracción arancelaria"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__fraccion_areancelaria_original
+msgid "Fracción arancelaria original"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "G9"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__garantias_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_form
+msgid "Garantias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_cfdi_fiel_form
+msgid "General Information of Fiel"
+msgstr "Información general del Fiel"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_anexo24_salida_merc_ws_form
+msgid "Generar"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_cfdi_fiel_form
+msgid "Get Fiel Info"
+msgstr "Obtener información del Fiel"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__grado_incidencia
+msgid "Grado de la incidencia"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_cfdi_fiel_search
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_fecha_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_transporte_form
+msgid "Guia Form"
+msgstr "Guia"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_fecha_view_tree
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_transporte_view_tree
+msgid "Guia Tree"
+msgstr "Guia"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__guias_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Guias"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "H1"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "H8"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__hora_fin
+msgid "Hora de fin del reconocimiento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__hora_ini
+msgid "Hora de inicio del reconocimiento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__hora
+msgid "Hora de la selección automatizada"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "I1"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_corrections_initial_inventory_wizard__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_import_data_stage__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_informe_descargos_wizard__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_input_product_wz__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_code_pedimento__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs_regimes__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_documentos_digitalizados__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table_type__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_details__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_factor__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_anexo24_salida_merc_ws__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_export_siimex_bom_invoice_xlsx__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_export_siimex_invoice_xlsx__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_export_siimex_mat_utilizados_xlsx__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_export_siimex_xlsx__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_corrections_initial_inventory__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_cove_to_pdf__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_informe_descargos__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_salida_mercancia_anexo24__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_tag1__id
+#: model:ir.model.fields,field_description:immex_gebesa.field_ws_get_pedimento__id
+msgid "ID"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_product__int_buyer
+msgid "ID Buyer"
+msgstr "ID Comprador"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.pediment_code_invoice_form
+msgid "IMMEX"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.l10n_mx_immex_code_pedimento_action
+#: model:ir.ui.menu,name:immex_gebesa.menu_l10n_mx_immex_code_pedimento
+msgid "IMMEX Code Pedimento"
+msgstr "Código IMMEX Pedimento"
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.l10n_mx_immex_customs_action
+#: model:ir.ui.menu,name:immex_gebesa.menu_l10n_mx_immex_customs
+msgid "IMMEX Customs"
+msgstr "Aduana IMMEX"
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.l10n_mx_immex_customs_regimes_action
+#: model:ir.ui.menu,name:immex_gebesa.menu_l10n_mx_immex_customs_regimes
+msgid "IMMEX Customs Regimes"
+msgstr "Regímenes aduaneros IMMEX"
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.l10n_mx_immex_partida_descargue_action
+#: model:ir.ui.menu,name:immex_gebesa.menu_l10n_mx_immex_partida_descargue
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.l10n_mx_immex_partida_descargue_tree_view
+msgid "IMMEX Partida Descargue"
+msgstr "Descargar IMMEX Partida"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.l10n_mx_immex_partida_descargue_form_view
+msgid "IMMEX Partida Descargue Line"
+msgstr "Línea de descarga IMMEX Partida"
+
+#. module: immex_gebesa
+#: selection:account.invoice,clave_pedimento:0
+#: selection:sale.order,clave_pedimento:0
+msgid "IN"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__id_caso
+msgid "Id del caso"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__id_transporte
+msgid "Identificación del transporte que introduce las mercancías"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__id_fiscal_destinatario
+msgid "Identificación fiscal del destinatario"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__id_fiscal_proveedor
+msgid "Identificación fiscal del proveedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__id_caso
+msgid "Identificador del caso"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_partida__message_unread
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_pedimento__message_unread
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_resumen__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si se marca, los nuevos mensajes requieren su atención."
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_partida__message_needaction
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_pedimento__message_needaction
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_resumen__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_partida__message_has_error
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_pedimento__message_has_error
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_resumen__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__immex_type_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__partida_type_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_product__immex_type_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_template__immex_type_id
+msgid "Immex Clasificación"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.pediment_code_invoice_form
+msgid "Immex Descargue"
+msgstr "Descargue IMMEX"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_res_company__immex_num
+msgid "Immex Gebesa"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_incidencias_reconocimiento_Action
+msgid "Immex Incidencia Reconocimiento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_mercancias_Action
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_mercancias_Action
+#: model:ir.ui.menu,name:immex_gebesa.immex_mercancias_menu
+msgid "Immex Mercancias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_partida_Action
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_partida_action_admin
+#: model:ir.ui.menu,name:immex_gebesa.immex_partida_menu
+msgid "Immex Partida"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.immex_partida_menu_admin
+msgid "Immex Partida (Admin)"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_partida_casos_Action
+#: model:ir.ui.menu,name:immex_gebesa.immex_partida_casos_menu
+msgid "Immex Partida Casos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_partida_contribuciones_Action
+#: model:ir.ui.menu,name:immex_gebesa.immex_partida_contribuciones_menu
+msgid "Immex Partida Contribuciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_partida_garantias_Action
+#: model:ir.ui.menu,name:immex_gebesa.immex_partida_garantias_menu
+msgid "Immex Partida Garantias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.immex_partida_incidencias_reconocimiento_menu
+msgid "Immex Partida Incidencias Reconocimiento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_partida_observaciones_Action
+#: model:ir.ui.menu,name:immex_gebesa.immex_partida_observaciones_menu
+msgid "Immex Partida Observaciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_partida_permisos_Action
+#: model:ir.ui.menu,name:immex_gebesa.immex_partida_permisos_menu
+msgid "Immex Partida Permisos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_partida_tasas_Action
+#: model:ir.ui.menu,name:immex_gebesa.immex_partida_tasas_menu
+msgid "Immex Partida Tasas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.action_partida_type_tree
+#: model:ir.ui.menu,name:immex_gebesa.menu_immex_partida_type
+msgid "Immex Partida Type"
+msgstr "Immex Partida Tipo"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.pediment_code_invoice_form
+msgid "Immex Remove Descargue"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_resumen_Action
+#: model:ir.ui.menu,name:immex_gebesa.immex_resumen_menu
+msgid "Immex Resumen"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_res_company__immex_certification_date
+msgid "Immex certification date"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:res.groups,name:immex_gebesa.group_immex_manager
+msgid "Immex manager"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_mercancias_form
+msgid "Immex mercancias Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_partida_Action
+msgid "Immex partida"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_form
+msgid "Immex partida Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_partida_casos_Action
+msgid "Immex partida casos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_casos_form
+msgid "Immex partida casos Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_partida_contribuciones_Action
+msgid "Immex partida contribuciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_contribuciones_form
+msgid "Immex partida contribuciones Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_partida_garantias_Action
+msgid "Immex partida garantia"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_garantias_form
+msgid "Immex partida garantias Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_incidencias_reconocimiento_Action
+msgid "Immex partida incidencias reconocimiento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_incidencias_reconocimiento_form
+msgid "Immex partida incidencias reconocimiento Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_partida_observaciones_Action
+msgid "Immex partida observaciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_observaciones_form
+msgid "Immex partida observaciones Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_partida_permisos_Action
+msgid "Immex partida permisos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_permisos_form
+msgid "Immex partida permisos Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_partida_tasas_Action
+msgid "Immex partida tasas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_tasas_form
+msgid "Immex partida tasas Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_partida_action_admin
+msgid "Immex partida(Admin)"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_resumen_Action
+msgid "Immex resumen"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_resumen_form
+msgid "Immex resumen Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.action_import_data_stage
+msgid "Importar Datastage"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.menu_account_config
+msgid "Importar datastage"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.import_data_stage_form
+msgid "Importar desde datastage"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__importe
+msgid "Importe"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__importe
+msgid "Importe del pago"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.corrections_init_inventory_wz_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.informe_descargos_wizard_form
+msgid "Imprimir"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_cfdi_fiel_search
+msgid "Inactive"
+msgstr "Inactivo"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__incidencias_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_form
+msgid "Incidencias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_cfdi_fiel__active
+msgid "Indicate if this fiel is active"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_aduanera_entradas
+#: model:ir.ui.menu,name:immex_gebesa.immex_aduanas_entrada
+msgid "Información Aduanera de Entradas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_aduanera_entradas
+msgid "Información Aduanera de Entradas (Importaciones Temporales)"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_immex_aduanera_salidas
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_immex_aduanera_salidas
+#: model:ir.ui.menu,name:immex_gebesa.immex_aduanas_salida
+msgid "Información Aduanera de Salidas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_corrections_initial_inventory_wizard__report_replace
+msgid "Informe a sustituir"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.report,name:immex_gebesa.immex_informe_descargos
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.informe_descargos_wizard_form
+msgid "Informe de descargos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table__type_id
+msgid "Internal type"
+msgstr "Tipo interno"
+
+#. module: immex_gebesa
+#: model:ir.actions.report,name:immex_gebesa.immex_initial_inventory
+#: model:ir.actions.server,name:immex_gebesa.action_immex_initial_inventory
+#: model:ir.ui.menu,name:immex_gebesa.menu_immex_initial_inventory
+msgid "Inventario inicial"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_account_invoice
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__invoice_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line__invoice_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__invoice_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line__invoice_line_id
+msgid "Invoice Line"
+msgstr "Línea factura"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__invoice_line_id
+msgid "Invoice line"
+msgstr "Línea de factura"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_is_follower
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_is_follower
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "J3"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "J4"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,periodo:0
+msgid "Julio"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,periodo:0
+msgid "Junio"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "K1"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__kms
+msgid "Kilometraje del vehiculo"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_corrections_initial_inventory_wizard____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_import_data_stage____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_informe_descargos_wizard____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_input_product_wz____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_code_pedimento____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs_regimes____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_documentos_digitalizados____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table_type____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_details____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_factor____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_anexo24_salida_merc_ws____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_export_siimex_bom_invoice_xlsx____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_export_siimex_invoice_xlsx____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_export_siimex_mat_utilizados_xlsx____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_export_siimex_xlsx____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_corrections_initial_inventory____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_cove_to_pdf____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_informe_descargos____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_salida_mercancia_anexo24____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_immex_gebesa_report_tag1____last_update
+#: model:ir.model.fields,field_description:immex_gebesa.field_ws_get_pedimento____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_corrections_initial_inventory_wizard__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_import_data_stage__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_informe_descargos_wizard__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_input_product_wz__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_code_pedimento__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs_regimes__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_documentos_digitalizados__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table_type__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_details__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_factor__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_anexo24_salida_merc_ws__write_uid
+#: model:ir.model.fields,field_description:immex_gebesa.field_ws_get_pedimento__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_corrections_initial_inventory_wizard__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_import_data_stage__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_informe_descargos_wizard__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_input_product_wz__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_code_pedimento__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs_regimes__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_documentos_digitalizados__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table_type__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_details__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_factor__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_report_anexo24_salida_merc_ws__write_date
+#: model:ir.model.fields,field_description:immex_gebesa.field_ws_get_pedimento__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table_type__level
+msgid "Level"
+msgstr "Nivel"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__line_ids
+msgid "Line"
+msgstr "Linea"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__invoice_line_id
+msgid "Linea de la Factura"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.menu_bill_materials
+msgid "Listas de Materiales"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_cuentas_Action
+msgid "Llenar Pedimento Cuentas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_main_attachment_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_main_attachment_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__marca_mercancia
+msgid "Marca de la mercancía o producto"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,periodo:0
+msgid "Marzo"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.menu_product_material
+msgid "Materiales"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.report,name:immex_gebesa.export_siimex_mat_utilizados_xlsx
+msgid "Materiales utilizados Siimmex"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.material_action
+msgid "Materials"
+msgstr "Materiales"
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,periodo:0
+msgid "Mayo"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__mercancias_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_factura_form
+msgid "Mercancias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_has_error
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_has_error
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_ids
+msgid "Messages"
+msgstr "Mensages"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__modelo_mercancia
+msgid "Modelo de la mercancía o producto"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__moneda
+msgid "Moneda"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__ciudad
+msgid "Municipio o ciudad del contribuyente"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.menu_aduanas
+msgid "Módulo de Aduanas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_code_pedimento__name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs__name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type__name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table__field_name
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table_type__name
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_factor__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/account_invoice.py:226
+#, python-format
+msgid "No se encontro un detalle de                             conversion para el producto %s de %s a %s"
+msgstr ""
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/account_invoice.py:217
+#, python-format
+msgid "No se encontro un factor de                             conversion para el producto %s de %s a %s"
+msgstr ""
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/sale_order.py:151
+#, python-format
+msgid "No se necontro un factor de                                         conversion para el producto %s de %s a %s"
+msgstr ""
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/wizard/sale_make_invoice_advance.py:74
+#, python-format
+msgid "No se necontro un factor de                                     conversion para el producto %s de %s a %s"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_documentos_digitalizados__name
+msgid "Nombre"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__nombre_destinatario
+msgid "Nombre del destinatario de la mercancía"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,periodo:0
+msgid "Noviembre"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__patente_aduanal_anterior
+msgid "Num de patente aduanal anterior"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_needaction_counter
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_needaction_counter
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero de Acciones"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_has_error_counter
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_has_error_counter
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_has_error_counter
+msgid "Number of error"
+msgstr "Número de error"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_partida__message_needaction_counter
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_pedimento__message_needaction_counter
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_resumen__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_partida__message_has_error_counter
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_pedimento__message_has_error_counter
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_resumen__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_cfdi_fiel__serial_number
+msgid "Number of serie of the fiel"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_partida__message_unread_counter
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_pedimento__message_unread_counter
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_resumen__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes sin leer"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__num_factura
+msgid "Numero de la Factura"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_ws_get_pedimento__patente
+msgid "Numero de patente adduanal"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_sale_order__pediment_number
+#: model:ir.model.fields,field_description:immex_gebesa.field_stock_picking__pediment_number
+msgid "Numero de pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_ws_get_pedimento__pedimento
+msgid "Numero de pedimento a 7 digitios"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__num_pedimento_anterior
+msgid "Numero de pedimento anterior"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__num_pedimento_original
+msgid "Numero de pedimento original"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__numero
+msgid "Numero de selección automatizada"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__num_exterior_contribuyente
+msgid "Numero exterior del contribuyente"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__num_exterior_proveedor
+msgid "Numero exterior del docimicilio del proveedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__num_exterior_destinatario
+msgid "Numero exterior del domicilio del destinatario"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__num_interior_contribuyente
+msgid "Numero interior contribuyente"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__num_interior_proveedor
+msgid "Numero interior del docimicilio del proveedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__num_interior_destinatario
+msgid "Numero interior del domicilio del destinatario"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__num_pedimento
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__num_pedimento
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10n_mx_immex_partida_search
+msgid "Numero pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__num_contenedor
+msgid "Numeros de contenedor "
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__numero_guia
+msgid "Numeros de guia o manifiesto"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__num_cuenta
+msgid "Número de cuenta"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__numero_cuenta
+msgid "Número de cuenta de garantía"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__numero_original
+msgid "Número de pedimento original"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__num_permiso
+msgid "Número de permiso"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__numero_seleccion
+msgid "Número de selección automatizada"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__observaciones_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__observaciones
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Observaciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,periodo:0
+msgid "Octubre"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_res_partner__omitir_rt
+#: model:ir.model.fields,field_description:immex_gebesa.field_res_users__omitir_rt
+msgid "Omitir Facturas de RT"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__partida_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__partida_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__partida_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__partida_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line__partida_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__partida_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__partida_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__partida_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__partida_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__partida_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__partida_id
+#: model:ir.ui.menu,name:immex_gebesa.partida_menu
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+#: selection:l10n.mx.immex.table.type,level:0
+msgid "Partida"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_details__partida_type_id
+msgid "Partida Type Product"
+msgstr "Producto de Tipo Partida"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type__partida_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_partida_type_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10n_mx_immex_partida_search
+msgid "Partidas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_res_company__pass_vucem
+msgid "Password Vucem"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_ws_get_pedimento__patente
+msgid "Patente"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__patente_original
+msgid "Patente aduana original"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_account_invoice__patente_aduanal
+#: model:ir.model.fields,field_description:immex_gebesa.field_sale_order__patente_aduanal
+#: model:ir.model.fields,field_description:immex_gebesa.field_stock_picking__patente_aduanal
+msgid "Patente aduanal"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__patente_aduanal_original
+msgid "Patente aduanal original"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_Action
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_action_admin
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_Action
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_documentos_digitalizados__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__pedimento_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__pedimento_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_ws_get_pedimento__pedimento
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_menu
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_submenu
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_resumen_form
+#: selection:l10n.mx.immex.table.type,level:0
+msgid "Pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_casos_Action
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_tasas_Action
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_casos_menu
+msgid "Pedimento Casos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_contenedor_menu
+msgid "Pedimento Contenedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_contribuciones_Action
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_contribuciones_menu
+msgid "Pedimento Contribuciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_cuentas_menu
+msgid "Pedimento Cuentas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_descargos_Action
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_descargos_menu
+msgid "Pedimento Descargos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_destinatarios_Action
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_destinatarios_menu
+msgid "Pedimento Destinatarios"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_diferencias_Action
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_diferencias_menu
+msgid "Pedimento Diferencias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.action_l10_mx_pedimento_factura_admin
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_factura_Action
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__immex_invoice_id
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_factura_menu
+msgid "Pedimento Factura"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.action_l10_mx_pedimento_factura_admin
+#: model:ir.ui.menu,name:immex_gebesa.menu_l10_mx_pedimento_factura_admin
+msgid "Pedimento Factura (admin)"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__factura_mercancia_ids
+msgid "Pedimento Factura Mercancia"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_fechas_Action
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_fecha_menu
+msgid "Pedimento Fecha"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Pedimento Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_guia_Action
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_guia_menu
+msgid "Pedimento Guia"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__pedimento_num
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__pedimento_num
+msgid "Pedimento Numero"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_observaciones_Action
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_observaciones_Action
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_observaciones_menu
+msgid "Pedimento Observaciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_rectificaciones_Action
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_rectificaciones_menu
+msgid "Pedimento Rectificaciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_seleccion_Action
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_seleccion_menu
+msgid "Pedimento Seleccion"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_tasas_menu
+msgid "Pedimento Tasas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_pedimento_transporte_Action
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_transporte_menu
+msgid "Pedimento Transporte"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_view_tree
+msgid "Pedimento Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_casos_Action
+msgid "Pedimento casos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_contenedor_Action
+msgid "Pedimento contenedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_contribuciones_Action
+msgid "Pedimento contribuciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_cuentas_Action
+msgid "Pedimento cuentas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_descargos_Action
+msgid "Pedimento descargos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_destinatarios_Action
+msgid "Pedimento destinatarios"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_diferencias_Action
+msgid "Pedimento diferencias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_factura_Action
+msgid "Pedimento factura"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_fechas_Action
+msgid "Pedimento fechas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_guia_Action
+msgid "Pedimento guia"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_rectificaciones_Action
+msgid "Pedimento rectificaciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_seleccion_Action
+msgid "Pedimento seleccion"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_tasas_Action
+msgid "Pedimento tasas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_transporte_Action
+msgid "Pedimento transporte"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_pedimento_action_admin
+msgid "Pedimento(Admin)"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.pedimento_submenu_admin
+msgid "Pedimento(admin)"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_account_invoice__factura_ids
+msgid "Pedimentos Expo"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_informe_descargos_wizard__periodo
+msgid "Periodo"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__permisos_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_form
+msgid "Permisos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__peso
+msgid "Peso bruto de la mercancía"
+msgstr ""
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/account_invoice.py:90
+#: code:addons/immex_gebesa/models/sale_order.py:58
+#: code:addons/immex_gebesa/models/stock_picking.py:60
+#, python-format
+msgid "Please enter valid Customs Patent."
+msgstr ""
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/account_invoice.py:103
+#: code:addons/immex_gebesa/models/sale_order.py:70
+#: code:addons/immex_gebesa/models/stock_picking.py:72
+#, python-format
+msgid "Please enter valid Customs code."
+msgstr ""
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/account_invoice.py:77
+#: code:addons/immex_gebesa/models/sale_order.py:46
+#: code:addons/immex_gebesa/models/stock_picking.py:48
+#, python-format
+msgid "Please enter valid Petiment number."
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__precio_unitario
+msgid "Precio Unitario"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.wizard_menu
+msgid "Procesos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_product_product
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__product_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line__product_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_details__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.action_product_uom_factor
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_factor__details_ids
+#: model:ir.ui.menu,name:immex_gebesa.menu_product_uom_factor
+msgid "Product UOM Factor"
+msgstr "Producto UOM Factor"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_type__product_ids
+#: model:ir.ui.menu,name:immex_gebesa.menu_product_product
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_partida_type_form
+msgid "Productos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.product_action
+msgid "Products"
+msgstr "Productos"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__quantity
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue_line__quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_descargue__qty_pending
+msgid "Quantity pending"
+msgstr "Cantidad Pendiente"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__rfc
+msgid "RFC"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__rfc_contribuyente
+msgid "RFC del Importador / Exportador"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__rfc_transportirsta
+msgid "RFC del transportista"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:account.invoice,clave_pedimento:0
+#: selection:informe.descargos.wizard,tipo_descargo:0
+#: selection:sale.order,clave_pedimento:0
+msgid "RT"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__nombre_contribuyente
+msgid "Razon Social del contribuyente"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__nombre_proveedor
+msgid "Razón social del proveedor de las mercancías"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__nombre_transportista
+msgid "Razón social del transportista"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__rectificaciones_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Rectificaciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_Action
+#: model_terms:ir.actions.act_window,help:immex_gebesa.view_l10_mx_table_type_Action
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_Action
+msgid "Registrar datos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.ui.menu,name:immex_gebesa.immex_report
+msgid "Reportes"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__requests
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_factura_form
+msgid "Requests"
+msgstr "Peticiones"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__response
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_factura_form
+msgid "Response"
+msgstr "Respuesta"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__resumen_id
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__resumen_id
+msgid "Resumen id"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table__rownum
+msgid "Row number"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_table_type_form
+msgid "Ruta Form"
+msgstr "Ruta"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_table_type_view_tree
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_view_tree
+msgid "Ruta Tree"
+msgstr "Ruta"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__amount
+msgid "Saldo"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__saldo_mxn_pendiente
+msgid "Saldo en pesos pendiente"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Ventas. Anticipo pago factura"
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea pedido de venta"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_mrp_bom__salida_a24
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_product__salida_a24
+msgid "Salida A24"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.report,name:immex_gebesa.salida_mercancia_anexo24
+msgid "Salida de Mercancias Anexo 24"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_customs__section
+msgid "Section"
+msgstr "Sección"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__secuencia_fraccion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__secuencia_fraccion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__secuencia_fraccion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__secuencia_fraccion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__secuencia_fraccion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__secuencia_fraccion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__secuencia_fraccion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__secuencia_fraccion
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__secuencia_fraccion
+msgid "Secuencia de la fracción arancelaria"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__secuencia
+msgid "Secuencia de observacion"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__secuencia_observacion
+msgid "Secuencia de observaciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__seleccion_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Selección"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__semaforo
+msgid "Semáforo fiscal"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.server,name:immex_gebesa.ir_cron_send_invoice_rt_alert_ir_actions_server
+#: model:ir.cron,cron_name:immex_gebesa.ir_cron_send_invoice_rt_alert
+#: model:ir.cron,name:immex_gebesa.ir_cron_send_invoice_rt_alert
+msgid "Send Email Invoice RT"
+msgstr "Enviar factura por correo electrónico RT"
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,periodo:0
+msgid "Septiembre"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__serial_number
+msgid "Serial Number"
+msgstr "Nº de serie"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__subdivision_fraccion
+msgid "Subdivisión de la fracción arancelaria"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.view_l10_mx_table_type_Action
+#: model:ir.ui.menu,name:immex_gebesa.immex_Table_type_menu
+msgid "Tabla"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__tasa
+msgid "Tasa de contribución"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__tasa_contribucion
+msgid "Tasa de la contribución"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__tasas_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__tasas_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Tasas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_tasas_form
+msgid "Tasas Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_tasas_view_tree
+msgid "Tasas Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.res_partner_search_view
+msgid "Temporal Custom Broker"
+msgstr "Agente de Aduanas Temporal"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.immex_mrp_bom_search_view
+msgid "Temporal Import Bill of Materials"
+msgstr "Lista de materiales de importación temporal"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.immex_product_template_search_view
+msgid "Temporal Import Materials"
+msgstr "Materiales de importación temporal"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.immex_product_product_search_view
+msgid "Temporal Import Products"
+msgstr "Productos de importación temporal"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.res_partner_search_filter_view
+msgid "Temporal Transporter"
+msgstr "Transportista Temporal"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_account_invoice__company_country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+"EL código ISO del país en dos caracteres.\n"
+"Puede utilizar este campo para la búsqueda rápida."
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/l10n_mx_immex_partida.py:197
+#, python-format
+msgid "The percentage must be strictly positive but less than 100."
+msgstr ""
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/wizard/import_data_stage.py:75
+#, python-format
+msgid "The summary file was not found"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_cfdi_fiel__fiel_file
+msgid "This file .cer is proportionate by the SAT"
+msgstr "Este archivo .cer es proporcionada por el SAT"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_cfdi_fiel__fiel_key_file
+msgid "This file .key is proportionate by the SAT"
+msgstr "Este archivo .key es proporcionada por el SAT"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_cfdi_fiel__fiel_file_pem
+msgid "This file is generated with the file.cer"
+msgstr "Este archivo se genera con el archivo .cer"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_cfdi_fiel__fiel_key_file_pem
+msgid "This file is generated with the file.key"
+msgstr "Este archivo se genera con el archivo .key"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_cfdi_fiel__fiel_password
+msgid "This password is proportionate by the SAT"
+msgstr "Esta contraseña es proporcionada por el SAT"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__tipo_guia
+msgid "Tipo de Guía"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__tipo_cambio
+msgid "Tipo de cambio"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_informe_descargos_wizard__tipo_descargo
+msgid "Tipo de informe de descargo"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__tipo_operacion
+msgid "Tipo de operación"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__titulos_asignados
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__titulos
+msgid "Titulos asignados"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__total_embalages
+msgid "Total de embalajes"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__total_flete
+msgid "Total de fletes"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__total_garantia
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__total_garantia
+msgid "Total de la garantía"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__total_otros_ded
+msgid "Total de otros deducibles"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__total_otros_inc
+msgid "Total de otros incrementables"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__total_seguros
+msgid "Total de seguros"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__transporte_ids
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_form
+msgid "Transporte"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_pedimento_transporte_form
+msgid "Transporte Form"
+msgstr "Transportista"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_pedimento_transporte_view_tree
+msgid "Transporte Tree"
+msgstr "Transportista"
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.transporter_action
+msgid "Transporter"
+msgstr "Transportista"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_res_partner__transporter
+#: model:ir.model.fields,field_description:immex_gebesa.field_res_users__transporter
+#: model:ir.ui.menu,name:immex_gebesa.menu_transporter
+msgid "Trasportista"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.l10n_mx_immex_code_pedimento_tree_view
+msgid "Tree IMMEX Code Pedimento"
+msgstr "Código IMMEX Pedimento"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.l10n_mx_immex_customs_tree_view
+msgid "Tree IMMEX Customs"
+msgstr "IMMEX Aduana"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.l10n_mx_immex_customs_regimes_tree_view
+msgid "Tree IMMEX Customs Regimes"
+msgstr "Aduanero de Tree IMMEX"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table__typestr
+msgid "Type"
+msgstr "Tipo"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_factor__unmed_origin_id
+msgid "UM Producto"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_uom_factor__unmed_dest_id
+msgid "UMT Comercial del Pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__uuid
+msgid "UUID / Folio"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_product_product__product_uom
+msgid "Unidad Tigie"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__clave_uom
+msgid "Unidad de medida"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.product_uom_factor_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.product_uom_factor_tree
+msgid "Unit of Measurement"
+msgstr "Unidad de Medida"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_unread
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_unread
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_unread
+msgid "Unread Messages"
+msgstr "Los mensajes no leídos"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__message_unread_counter
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__message_unread_counter
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Los mensajes no leídos Contador"
+
+#. module: immex_gebesa
+#: selection:account.invoice,clave_pedimento:0
+#: selection:informe.descargos.wizard,tipo_descargo:0
+#: selection:sale.order,clave_pedimento:0
+msgid "V1"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "V2"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "V3"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "V4"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "V5"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "V6"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "V7"
+msgstr ""
+
+#. module: immex_gebesa
+#: selection:informe.descargos.wizard,tipo_descargo:0
+msgid "V9"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__num_serie
+msgid "VIN o numero de serie"
+msgstr ""
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/account_invoice.py:76
+#: code:addons/immex_gebesa/models/account_invoice.py:89
+#: code:addons/immex_gebesa/models/account_invoice.py:102
+#: code:addons/immex_gebesa/models/sale_order.py:45
+#: code:addons/immex_gebesa/models/sale_order.py:57
+#: code:addons/immex_gebesa/models/sale_order.py:69
+#: code:addons/immex_gebesa/models/stock_picking.py:47
+#: code:addons/immex_gebesa/models/stock_picking.py:59
+#: code:addons/immex_gebesa/models/stock_picking.py:71
+#, python-format
+msgid "Validation Error"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__valor_agregado
+msgid "Valor agregado"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__valor_comercial
+msgid "Valor comercial"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__valor_comercial_usd
+msgid "Valor comercial en dólares"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__valor_dolares
+msgid "Valor dolares"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__valor_aduana
+msgid "Valor en aduana"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__valor_usd
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__monto_usd
+msgid "Valor en dólares"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__monto_extranjera
+msgid "Valor en moneda extranjera"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__valor_total
+msgid "Valor total"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura_mercancia__valor_unitario
+msgid "Valor unitario"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__valor_unitario_titulo
+msgid "Valor unitario del titulo"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__valor_unitario_titulo
+msgid "Valor unitario del título"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table__field_value
+msgid "Value"
+msgstr "Valor"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_factura_form
+msgid "Vucem"
+msgstr ""
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/cfdi_fiel.py:167
+#, python-format
+msgid "Warning!"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__website_message_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__website_message_ids
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_resumen__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes de sitios web"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_partida__website_message_ids
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_pedimento__website_message_ids
+#: model:ir.model.fields,help:immex_gebesa.field_l10n_mx_immex_resumen__website_message_ids
+msgid "Website communication history"
+msgstr "Sitio Web historial de comunicación"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_table__wizard_id
+msgid "Wizard"
+msgstr "Asistente"
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/cfdi_fiel.py:168
+#, python-format
+msgid ""
+"You fiel file, key file or password is incorrect.\n"
+"Verify uppercase and lowercase"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_cfdi_fiel
+msgid "cfdi.fiel"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__pais_destinatario
+msgid "clave del pais del destinatario"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_corrections_initial_inventory_wizard
+msgid "corrections.initial.inventory.wizard"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_destinatarios_form
+msgid "destinatarios Form"
+msgstr "Destinatarios"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_destinatarios_view_tree
+msgid "destinatarios Tree"
+msgstr "Destinatarios"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_diferencias_form
+msgid "diferencias Form"
+msgstr "Diferencias"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_diferencias_view_tree
+msgid "diferencias Tree"
+msgstr "Diferencias"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__fiel_file
+msgid "fiel File"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__fiel_key_file
+msgid "fiel Key File"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__fiel_key_file_pem
+msgid "fiel Key File PEM"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_cfdi_fiel__fiel_password
+msgid "fiel Password"
+msgstr ""
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/l10n_mx_immex_pedimento.py:535
+#: code:addons/immex_gebesa/models/l10n_mx_immex_pedimento.py:599
+#, python-format
+msgid "filebase64: %s"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_tsca_document
+msgid "fsejedddeddawdwdawdaw"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_mercancias_view_tree
+msgid "immex mercancias Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_view_tree
+msgid "immex partida Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_casos_view_tree
+msgid "immex partida casos Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_contribuciones_view_tree
+msgid "immex partida contribuciones Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_garantias_view_tree
+msgid "immex partida garantias Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_incidencias_reconocimiento_view_tree
+msgid "immex partida incidencias reconocimiento Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_observaciones_view_tree
+msgid "immex partida observaciones Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_permisos_view_tree
+msgid "immex partida permisos Tree"
+msgstr "Permisos de IMMEX Partida"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_partida_tasas_view_tree
+msgid "immex partida tasas Tree"
+msgstr "IMMEX Partida Tasas"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_partida_type_form
+msgid "immex partida type Form"
+msgstr "IMMEX Partida Tipo"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_partida_type_tree
+msgid "immex partida type Tree"
+msgstr "IMMEX Partida Tipo"
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_immex_resumen_view_tree
+msgid "immex resumen Tree"
+msgstr "IMMEX resumen"
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_import_data_stage
+msgid "import.data.stage"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_informe_descargos_wizard
+msgid "informe.descargos.wizard"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_input_product_wz
+msgid "input.product.wz"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_code_pedimento
+msgid "l10n.mx.immex.code.pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_customs
+msgid "l10n.mx.immex.customs"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_customs_regimes
+msgid "l10n.mx.immex.customs.regimes"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_incidencias_reconocimiento
+msgid "l10n.mx.immex.incidencias.reconocimiento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_mercancias
+msgid "l10n.mx.immex.mercancias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_partida
+msgid "l10n.mx.immex.partida"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_partida_casos
+msgid "l10n.mx.immex.partida.casos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_partida_contribuciones
+msgid "l10n.mx.immex.partida.contribuciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_partida_descargue
+msgid "l10n.mx.immex.partida.descargue"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_partida_descargue_line
+msgid "l10n.mx.immex.partida.descargue.line"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_partida_garantias
+msgid "l10n.mx.immex.partida.garantias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_partida_observaciones
+msgid "l10n.mx.immex.partida.observaciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_partida_permisos
+msgid "l10n.mx.immex.partida.permisos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_partida_tasas
+msgid "l10n.mx.immex.partida.tasas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_partida_type
+msgid "l10n.mx.immex.partida.type"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento
+msgid "l10n.mx.immex.pedimento"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_casos
+msgid "l10n.mx.immex.pedimento.casos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_contenedor
+msgid "l10n.mx.immex.pedimento.contenedor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_contribuciones
+msgid "l10n.mx.immex.pedimento.contribuciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_cuentas
+msgid "l10n.mx.immex.pedimento.cuentas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_descargos
+msgid "l10n.mx.immex.pedimento.descargos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_destinatarios
+msgid "l10n.mx.immex.pedimento.destinatarios"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_diferencias
+msgid "l10n.mx.immex.pedimento.diferencias"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_documentos_digitalizados
+msgid "l10n.mx.immex.pedimento.documentos.digitalizados"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_factura
+msgid "l10n.mx.immex.pedimento.factura"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_factura_mercancia
+msgid "l10n.mx.immex.pedimento.factura.mercancia"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_fechas
+msgid "l10n.mx.immex.pedimento.fechas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_guia
+msgid "l10n.mx.immex.pedimento.guia"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_observaciones
+msgid "l10n.mx.immex.pedimento.observaciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_rectificaciones
+msgid "l10n.mx.immex.pedimento.rectificaciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_seleccion
+msgid "l10n.mx.immex.pedimento.seleccion"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_tasas
+msgid "l10n.mx.immex.pedimento.tasas"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_pedimento_transporte
+msgid "l10n.mx.immex.pedimento.transporte"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_resumen
+msgid "l10n.mx.immex.resumen"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_table
+msgid "l10n.mx.immex.table"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_l10n_mx_immex_table_type
+msgid "l10n.mx.immex.table.type"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.actions.act_window,name:immex_gebesa.action_corrections_init_inventory_wz
+msgid "name"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__observaciones
+msgid "observaciones"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_observaciones_form
+msgid "observaciones Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_observaciones_view_tree
+msgid "observaciones Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.corrections_init_inventory_wz_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.get_pedimento_ws_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.import_data_stage_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.informe_descargos_wizard_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.input_product_form
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.report_anexo24_salida_merc_ws_form
+msgid "or"
+msgstr "ó"
+
+#. module: immex_gebesa
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_incidencias_reconocimiento__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_mercancias__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_casos__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_contribuciones__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_garantias__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_observaciones__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_permisos__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_partida_tasas__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_casos__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contenedor__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_contribuciones__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_cuentas__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_descargos__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_destinatarios__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_diferencias__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_factura__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_fechas__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_guia__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_observaciones__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_rectificaciones__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_seleccion__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_tasas__patente
+#: model:ir.model.fields,field_description:immex_gebesa.field_l10n_mx_immex_pedimento_transporte__patente
+msgid "patente"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_product_uom_details
+msgid "product.uom.details"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_product_uom_factor
+msgid "product.uom.factor"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_rectificaciones_form
+msgid "rectificaciones Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_rectificaciones_view_tree
+msgid "rectificaciones Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_report_anexo24_salida_merc_ws
+msgid "report.anexo24.salida.merc.ws"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_report_immex_gebesa_export_siimex_bom_invoice_xlsx
+msgid "report.immex_gebesa.export_siimex_bom_invoice_xlsx"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_report_immex_gebesa_export_siimex_invoice_xlsx
+msgid "report.immex_gebesa.export_siimex_invoice_xlsx"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_report_immex_gebesa_export_siimex_mat_utilizados_xlsx
+msgid "report.immex_gebesa.export_siimex_mat_utilizados_xlsx"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_report_immex_gebesa_export_siimex_xlsx
+msgid "report.immex_gebesa.export_siimex_xlsx"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_report_immex_gebesa_report_corrections_initial_inventory
+msgid "report.immex_gebesa.report_corrections_initial_inventory"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_report_immex_gebesa_report_cove_to_pdf
+msgid "report.immex_gebesa.report_cove_to_pdf"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_report_immex_gebesa_report_informe_descargos
+msgid "report.immex_gebesa.report_informe_descargos"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_report_immex_gebesa_report_salida_mercancia_anexo24
+msgid "report.immex_gebesa.report_salida_mercancia_anexo24"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_report_immex_gebesa_report_tag1
+msgid "report.immex_gebesa.report_tag1"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_reporte_entrada_mercancia_importacion_temporal_ws
+msgid "reporte.entrada.mercancia.importacion.temporal.ws"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_reporte_importaciones_vigentes_ws
+msgid "reporte.importaciones.vigentes.ws"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_reporte_materiales_utilizados_ws
+msgid "reporte.materiales.utilizados.ws"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_reporte_salida_mercancia_importacion_temporal_ws
+msgid "reporte.salida.mercancia.importacion.temporal.ws"
+msgstr ""
+
+#. module: immex_gebesa
+#: code:addons/immex_gebesa/models/l10n_mx_immex_pedimento.py:601
+#, python-format
+msgid "result: %s"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_sale_order
+msgid "sale.order"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_seleccion_form
+msgid "seleccion Form"
+msgstr ""
+
+#. module: immex_gebesa
+#: model_terms:ir.ui.view,arch_db:immex_gebesa.view_l10_mx_Action_pedimento_seleccion_view_tree
+msgid "seleccion Tree"
+msgstr ""
+
+#. module: immex_gebesa
+#: model:ir.model,name:immex_gebesa.model_ws_get_pedimento
+msgid "ws.get.pedimento"
+msgstr ""

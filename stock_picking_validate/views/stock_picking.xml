@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='stock_picking_validate'>
+            <field name='name'>stock.picking.validate</field>
+            <field name='model'>stock.picking</field>
+            <field name='inherit_id' ref='stock.view_picking_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//button[4]" position="after">
+                    <button name="button_stock_picking" string="Solicitar Validacion" type="object" class="oe_highlight" groups="stock_picking_validate.group_button_stock_picking" attrs="{'invisible': [('authorized', '=', True)]}"/>
+                </xpath>
+
+                <xpath expr="//form/sheet/group/group/field[@name='scheduled_date']" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </xpath>
+
+                <xpath expr="//notebook/page/group/group/field[@name='move_type']" position="before">
+                    <field name='authorized' readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='stock_picking_validate_admn'>
+            <field name='name'>stock.picking.validate.adm</field>
+            <field name='model'>stock.picking</field>
+            <field name='inherit_id' ref='stock_picking_validate.stock_picking_validate'/>
+            <field name="priority" eval="11"/>
+            <field name="groups_id" eval="[(4, ref('stock_picking_validate.group_button_validate_accounting_date'))]"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//button[@name='button_validate'][1]" position="replace">
+                    <button name="button_validate" context="{'force_period_date': scheduled_date}" attrs="{'invisible': ['|', ('state', 'in', ('waiting','confirmed')), ('show_validate', '=', False)]}" string="Validate F" type="object" class="oe_highlight" groups="stock_picking_validate.group_button_validate_accounting_date"/>
+                </xpath>
+
+                <xpath expr="//field[@name='scheduled_date']" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

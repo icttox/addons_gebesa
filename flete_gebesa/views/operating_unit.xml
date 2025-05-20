@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="operating_unit_form" model="ir.ui.view">
+            <field name="name">Operating Unit analytic</field>
+            <field name="model">operating.unit</field>
+            <field name="inherit_id" ref="operating_unit.view_operating_unit_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <label for="analytic_account_id"/>
+                	<field name="analytic_account_id"/>
+                </field>
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': False}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>			
+		<menuitem name="Settings" parent="hr_attendance.menu_hr_attendance_settings"
+			id="hr_attendance_settings" sequence="1"
+			groups="hr_attendance.group_hr_attendance_manager" action="hr_attendance.action_hr_attendance_settings" />
+
+		<menuitem id="hr_attendance.menu_hr_attendance_report" parent="hr_attendance.menu_hr_attendance_root" sequence="30" groups="hr_attendance.group_hr_attendance_user" action=""/>
+
+		<menuitem name="Attendance Analysis" parent="hr_attendance.menu_hr_attendance_report" id="menu_hr_attendance_analysis_report" sequence="1" action="hr_attendance.hr_attendance_action_graph" />
+	</data>
+</odoo>

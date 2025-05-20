@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record model='ir.ui.view' id='invoice_form'>
+    		<field name='name'>account_invoice_sales_channel_form_view</field>
+    		<field name='model'>account.invoice</field>
+    		<field name='inherit_id' ref='account.invoice_form'/>
+    		<field name='arch' type='xml'>
+    			<xpath expr="//field[@name='team_id']" position="before">
+    				<field name="sales_channel_id" required='1'/>
+    			</xpath>
+                 <xpath expr="//field[@name='team_id']" position="attributes">
+                    <attribute name="string">Equipo de Ventas</attribute>
+                </xpath>
+    		</field>
+        </record>
+    </data>
+</odoo>

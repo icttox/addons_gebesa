@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_attribute_company_gebesa'>
+            <field name='name'>product.attribute.company.gebesa</field>
+            <field name='model'>product.attribute</field>
+            <field name='inherit_id' ref="sale.attribute_tree_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//tree/field[@name='type']" position="after">
+                   <field name="company_id" readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

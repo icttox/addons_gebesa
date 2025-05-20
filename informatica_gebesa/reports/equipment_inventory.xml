@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="equipment_inventory"
+            model="hr.employee"
+            string="Imprimir Responsiva"
+            report_type="qweb-pdf"
+            name="informatica_gebesa.report_equipment_inventory"
+            file="informatica_gebesa.report_equipment_inventory"
+        />
+
+        <template id="report_equipment_inventory_layout">
+            <div class="header">
+                <div style="background-color: black;border-radius: 20pt;height: 20pt;"/>
+                <img t-if="doc.company_id" t-att-src="image_data_uri(doc.company_id.logo)" style="max-height: 20px;max-width: 100px;margin-top: 10px;margin-left: 3px;" alt="Logo"/>
+                <img t-if="not doc.company_id" t-att-src="image_data_uri(user.company_id.logo)" style="max-height: 20px;max-width: 100px;margin-top: 10px;margin-left: 3px;" alt="Logo"/>
+                <div class="row no-gutters">
+                    <table class="table table-bordered mb32" style="font-size:13px">
+                        <tr>
+                            <th><img src='/rh_gebesa/static/img/gebesa.jpg' style="max-height: 35px; "/></th>
+                            <th class="py-1 text-center">Título del Documento: INVENTARIO DE EQUIPO</th>
+                            <th class="py-1">Revisión: 0</th>
+                        </tr>
+                        <tr>
+                            <th class="py-1">Código del documento: F-SIS-14</th>
+                            <th class="py-1">Deriva de: N/A</th>
+                            <th class="py-1">Fecha de revisión: 22/09/2021</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+
+            <div class="footer">
+                <div class="row" style="border-top: 3px solid #000000;">
+                    <div class="col-6">
+                    www.gebesa.com
+                    </div>
+                    <div class="col-6" align="right">
+                        Página 1 de 1
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_equipment_inventory_document">
+            <t t-call="informatica_gebesa.report_equipment_inventory_layout">
+                <div class="page" style="font-size: small">
+                    <div class="row">
+                        <div class="col-12 text-center h6">
+                            <br/>
+                            <div class="h5 font-weight-bold">
+                                DEPARTAMENTO DE INFORMATICA GEBESA<br/>
+                                <span t-esc="doc.company_id.name"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters mt-3">
+                        <div class="col-12 text-light text-center h5" style="background-color: #616360 !important;font-weight: bold;">
+                            DATOS DEL USUARO
+                        </div>
+                    </div>
+
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="10%">Empresa:</td>
+                                <td width="30%">
+                                     <span t-esc="doc.company_id.name"/>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="10%">Tipo:</td>
+                                <td> 0 Todos</td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="10%">Fecha:</td>
+                                <td width="15%">
+                                     <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;">Empleado:</td>
+                                <td>
+                                     <span t-esc="doc.name"/>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;">Equipo:</td>
+                                <td> 00000 TODOS</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!--SECCION TABLA -->
+                    <div class="row no-gutters mt-3"> 
+                        <div class="col-12 text-light text-center h5" style="background-color: #616360 !important;font-weight: bold;">
+                            DATOS DEL EQUIPO
+                        </div>
+                    </div>
+
+                    <div class="row no-gutters"> 
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="8%">Clave</td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="10%">Equipo</td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="8%">Num Serie</td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="8%">Categoria</td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="9%">Fecha</td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="20%">Observaciones</td>
+                            </tr>
+
+                            <t t-if="doc.equipment_ids">
+                                <t t-foreach="doc.equipment_ids" t-as="equ">
+                                    <tr>
+                                        <td>
+                                            <span t-esc="equ.consecutive_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="equ.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="equ.serial_no"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="equ.category_id.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="equ.assign_date"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="equ.note"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </t>
+                        </table>
+                    </div>
+
+                    <div class="row no-gutters my-5"> 
+                      <div class="col-12 text-justify">
+                          Por medio de la presente informamos que se le entrega su maquina con los programas necesarios y las características necesarias para que el usuario realice su trabajo adecuadamente y haciéndose reśponsable de su equipo. Por consiguiente el no podrá instalar por ningún motivo ningún programa sin exepción y se estará monitoreando su máquina desde el área de Sistemas y físicamente. En caso de que se encuentre un software innecesario o maliceoso se reporta a gerencia.
+                          <br/>
+                          <br/>
+                      </div>
+                    </div>
+
+                    <div class="row no-gutters my-3"> 
+                      <div class="col-12 text-center">
+                            ___________________________________
+                            <br/>
+                            <b><span t-esc="doc.name"/></b>
+                            <br/>
+                            USUARIO RESPONSABLE DEL EQUIPO
+                      </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_equipment_inventory">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="informatica_gebesa.report_equipment_inventory_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

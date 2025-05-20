@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<odoo>
+    <!-- Mail template are declared in a NOUPDATE block
+         so users can freely customize/delete them -->
+    <data noupdate="0">
+        <!--Email template -->
+        <record id="email_template_sale_order_product_validator" model="mail.template">
+            <field name="name">Sale Order - Product validator Email</field>
+            <field name="email_from">excepciones@gebesa.com</field>
+            <field name="subject">Falta informacion en productos al intentar validar el pedido ${ctx['pedido']}</field>
+            <field name="email_to">servicioalcliente@gebesa.com,costos@gebesa.com,programacion@gebesa.com,equipocompras@gebesa.com,sistemas@gebesa.com,brenda.hernandez@gebesa.com,jesus.ontiveros@gebesa.com</field>
+            <field name="reply_to"></field>
+            <field name="partner_to"></field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="body_html"><![CDATA[
+<div style="font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
+    <p style="font-size: 18px">Falta informacion en productos al intentar validar el pedido ${ctx['pedido']} del Cliente ${ctx['cliente']} , orden de compra: ${ctx['oc']}.</p>
+    <br/>
+    <table width="100%" style="border-collapse: collapse;">
+        <tr>
+            <th style="border: 1px solid #A24689;background-color: #A24689;Color: #FFFFFF">Error</th>
+            <th style="border: 1px solid #A24689;background-color: #A24689;Color: #FFFFFF">Artículo</th>
+        </tr>
+        % for error in ctx['table_body']:
+            <tr>
+                <td style=" border: 1px solid #A24689;">${error['error']}</td>
+                <td style=" border: 1px solid #A24689;"><a href="http://erp.portalgebesa.com/web?#id=${error['id']}&view_type=form&model=product.product&action=188&menu_id=63">[${error['code']}]  ${error['product']}</a></td>
+            </tr>
+        % endfor
+    </table>
+</div>
+            ]]></field>
+        </record>
+    </data>
+</odoo>

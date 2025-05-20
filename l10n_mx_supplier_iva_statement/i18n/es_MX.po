@@ -1,0 +1,290 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_mx_supplier_iva_statement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-13 18:14+0000\n"
+"PO-Revision-Date: 2020-05-13 13:22-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+msgid "<strong>Sum Credit</strong>"
+msgstr "<strong>Sumatoria Habe</strong>"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+msgid "<strong>Sum Debit</strong>"
+msgstr "<strong>Sumatoria Debe</strong>"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "<strong>Taxes</strong>"
+msgstr "<strong>Impuestos</strong>"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "<strong>Total</strong>"
+msgstr "Total"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,field_description:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_account_id
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Account:"
+msgstr "Cuenta:"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Amount"
+msgstr "Importe"
+
+#. module: l10n_mx_supplier_iva_statement
+#: code:addons/l10n_mx_supplier_iva_statement/wizards/l10n_mx_supplier_taxes_master.py:176
+#: code:addons/l10n_mx_supplier_iva_statement/wizards/l10n_mx_supplier_taxes_master.py:230
+#: code:addons/l10n_mx_supplier_iva_statement/wizards/l10n_mx_supplier_taxes_master.py:276
+#: code:addons/l10n_mx_supplier_iva_statement/wizards/l10n_mx_supplier_taxes_master.py:337
+#: code:addons/l10n_mx_supplier_iva_statement/wizards/l10n_mx_supplier_taxes_master.py:399
+#, python-format
+msgid "An error has occurred while accessing report template"
+msgstr "Ocurrió un error al accesar la plantilla de reporte"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Analytic"
+msgstr "Analítica"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.l10n_mx_supplier_taxes_statement_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Company:"
+msgstr "Compañía:"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Concept"
+msgstr "Concepto"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,field_description:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,field_description:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+msgid "Credit"
+msgstr "Haber"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,field_description:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_date_from
+msgid "Date from"
+msgstr "Fecha desde"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,field_description:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_date_to
+msgid "Date to"
+msgstr "Fecha hasta"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Date:"
+msgstr "Fecha:"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+msgid "Debit"
+msgstr "Debe"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,field_description:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.l10n_mx_supplier_taxes_statement_form
+msgid "Download"
+msgstr "Descargar"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.actions.act_window,name:l10n_mx_supplier_iva_statement.action_l10n_mx_supplier_taxes_statement
+#: model:ir.ui.menu,name:l10n_mx_supplier_iva_statement.menu_l10n_mx_supplier_taxes_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.l10n_mx_supplier_taxes_statement_form
+msgid "Download taxes data"
+msgstr "Descargar archivos de IVA Acreditable"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,field_description:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_final_attach
+msgid "File zip"
+msgstr "Archivo zip"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,help:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_date_to
+msgid "Final date"
+msgstr "Fecha final"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,field_description:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,help:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_date_from
+msgid "Initial date"
+msgstr "Fecha inicial"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.actions.report.xml,name:l10n_mx_supplier_iva_statement.account_invoices_no_attach
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.actions.report.xml,name:l10n_mx_supplier_iva_statement.account_move_report
+msgid "Journal item"
+msgstr "Movimiento contable"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Journal:"
+msgstr "Diario:"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,field_description:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement___last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,field_description:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,field_description:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+msgid "Move lines"
+msgstr "Líneas de movimiento"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+msgid "Movement related for exchange rate:"
+msgstr "Movimiento que generó el tipo de cambio:"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+msgid "Movement related for taxes:"
+msgstr "Movimiento que generó el impuesto:"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+msgid "Partner"
+msgstr "Proveedor / Cliente"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Partner:"
+msgstr "Proveedor / Cliente:"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+msgid "Payment"
+msgstr "Pago"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Payment type:"
+msgstr "Tipo de pago:"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Product"
+msgstr "Producto"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Reference:"
+msgstr "Referencia:"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Unit price"
+msgstr "Precio unitario"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_move_report_qweb
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "User:"
+msgstr "Usuario:"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.actions.report.xml,name:l10n_mx_supplier_iva_statement.account_voucher_report
+msgid "Voucher"
+msgstr "Recibo"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.account_voucher_report_qweb
+msgid "Voucher lines"
+msgstr "Líneas de recibo"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model.fields,field_description:l10n_mx_supplier_iva_statement.field_l10n_mx_supplier_taxes_statement_company_id
+msgid "company"
+msgstr "company"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.model,name:l10n_mx_supplier_iva_statement.model_l10n_mx_supplier_taxes_statement
+msgid "l10n.mx.supplier.taxes.statement"
+msgstr "l10n.mx.supplier.taxes.statement"
+
+#. module: l10n_mx_supplier_iva_statement
+#: model:ir.ui.view,arch_db:l10n_mx_supplier_iva_statement.l10n_mx_supplier_taxes_statement_form
+msgid "or"
+msgstr "ó"

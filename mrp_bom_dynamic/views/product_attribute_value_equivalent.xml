@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_attribute_value_equivalent_tree'>
+            <field name='name'>product.attribute.value.equivalent.tree</field>
+            <field name='model'>product.attribute.value.equivalent</field>
+            <field name='arch' type='xml'>
+                <tree string='Product Attribute value equivalent'>
+                    <field name="value_origin_id"/>
+                    <field name="value_id"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="product_attribute_value_equivalent_view">
+            <field name="name">product.attribute.value.equivalent.form</field>
+            <field name="model">product.attribute.value.equivalent</field>
+            <field name="arch" type="xml">
+                <form string='Product Attribute value equivalent'>
+                    <sheet>
+                        <group>
+                            <field name="name" invisible="1"/>
+                            <group>
+                                <field name="attribute_origin_id"/>
+                                <field name="attribute_id"/>
+                            </group>
+                            <group>
+                                <field name="value_origin_id" domain="[('attribute_id', '=', attribute_origin_id)]"/>
+                                <field name="value_id" domain="[('attribute_id', '=', attribute_id)]"/>   
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>   
+
+        <record id='action_product_attribute_value_equivalent' model='ir.actions.act_window'>
+            <field name='name'>Product Attribute value equivalent</field>
+            <field name='res_model'>product.attribute.value.equivalent</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="menu_product_attribute_value_equivalent" name="Product Attribute value equivalent (Dynamic BoM)" parent="mrp.menu_mrp_bom" action="action_product_attribute_value_equivalent"/>
+    </data>
+</odoo>

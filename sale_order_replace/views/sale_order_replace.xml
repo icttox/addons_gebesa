@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='sale_order_replace_view_form'>
+            <field name='name'>sale_order_replace</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref='sale_order_gebesa.view_order_form'/>
+            <field name='arch' type='xml'>
+            <xpath expr="//field[@name='respo_reple']" position="after">
+                <field name="order_replaced" domain="[('state','=','done')]"/> 
+                <field name="date_cancelled" readonly= "True" />
+            </xpath> 
+            </field>
+        </record>
+    </data>
+</odoo>

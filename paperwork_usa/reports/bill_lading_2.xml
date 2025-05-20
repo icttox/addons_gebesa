@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="bill_lading_2_layout">
+            <!-- Multicompany -->
+            <t t-if="not o and doc">
+                <t t-set="o" t-value="doc"/>
+            </t> 
+            
+            <t t-if="o.sale_ids[0].sale_id and 'company_id' in o.sale_ids[0].sale_id">
+                <t t-set="company" t-value="o.sale_ids[0].sale_id.company_id"></t>
+            </t>
+            
+            <t t-if="not o.sale_ids[0].sale_id or not 'company_id' in o.sale_ids[0].sale_id">
+                <t t-set="company" t-value="res_company"></t>
+            </t>
+            <t t-call="paperwork_usa.bill_lading_2_header" />
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <t t-call="paperwork_usa.paperwork_usa_layout_footer" />
+        </template>
+
+        <template id="bill_lading_2_header">
+            <div class="header">
+                <div style="background-color:black; border: 0.5pt solid black; height:10px; padding:0px 0px 0px 0px;">
+                </div>
+                <table width="100%">
+                    <tr>
+                        <th width="15%">
+                            <img src='/paperwork_usa/static/img/gebesa2.jpg' style="max-height: 40px;"/>
+                        </th>
+                        <th width="65%" align="center" style="font-size: 19pt;text-align:center;margin: 10px 170px 0px 20px;left:-50px !important;margin-left:-50px !important;">
+                            Bill Of Lading
+                        </th>
+                        <th width="20%">
+                        </th>
+                    </tr>
+                </table>
+                <table width="100%">
+                    <tr>
+                        <th width="5%">
+                            <h6 class="small-1">Ship To:</h6>
+                        </th>
+                        <th width="75%">
+                            <t t-if="data[o.id][partner]['ship_line'][0].partner_shipping_id.parent_id">
+                                <span t-field="data[o.id][partner]['ship_line'][0].partner_shipping_id.parent_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                            </t>
+                            <t t-if="not data[o.id][partner]['ship_line'][0].partner_shipping_id.parent_id">
+                                <span t-field="data[o.id][partner]['ship_line'][0].partner_shipping_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                            </t>
+                        </th>
+                        <th width="20%">
+                            <strong> Bill of Lading Number</strong>
+                            <h6 t-field="o.folio"/>
+                            <strong>Date: 
+                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                            </strong>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_cancel_segment_express" model="ir.cron">
+            <field name="name">Cancela MO de Inv. Express</field>
+            <field name="interval_number">5</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="model_id" ref="model_mrp_segment"/>
+            <field name="state">code</field>
+            <field name="code">model.cancel_express()</field>
+            <field name="active" eval="True" />
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="export_siimex_xlsx"
+        model="mrp.bom"
+        string="Export BOM Siimmex"
+        report_type="xlsx"
+        name="immex_gebesa.export_siimex_xlsx"
+        file="export_siimex_xlsx"
+        attachment_use="False"
+    />
+
+    <report
+        id="export_siimex_mat_utilizados_xlsx"
+        model="mrp.bom"
+        string="Materiales utilizados Siimmex"
+        report_type="xlsx"
+        name="immex_gebesa.export_siimex_mat_utilizados_xlsx"
+        file="export_siimex_mat_utilizados_xlsx"
+        attachment_use="False"
+    />
+
+    <report
+        id="export_siimex_bom_invoice_xlsx"
+        model="account.invoice"
+        string="Export BOM Siimmex for invoice"
+        report_type="xlsx"
+        name="immex_gebesa.export_siimex_bom_invoice_xlsx"
+        file="export_siimex_bom_invoice_xlsx"
+        attachment_use="False"
+    />
+    <report
+        id="export_siimex_bom_xlsx"
+        model="product.product"
+        string="Export BOM Siimmex"
+        report_type="xlsx"
+        name="immex_gebesa.export_siimex_bom_xlsx"
+        file="export_siimex_bom_xlsx"
+        attachment_use="False"
+    />
+
+    <report
+        id="export_siimex_invoice_xlsx"
+        model="account.invoice"
+        string="Export Siimmex for invoice"
+        report_type="xlsx"
+        name="immex_gebesa.export_siimex_invoice_xlsx"
+        file="export_siimex_invoice_xlsx"
+        attachment_use="False"
+    />
+</odoo>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_frontend" inherit_id="website.assets_frontend">
+            <xpath expr="script[last()]" position="after">
+                <script type="text/javascript" src="/website_workorders/static/src/js/website_workorders.js"></script>
+            </xpath>
+        </template>
+
+        <template id="start_workorders_form">
+            <t t-call="web.basic_layout">
+                <div class="container">
+                    <t t-call-assets="web.assets_frontend" t-js="false"/>
+                    <t t-call-assets="web.assets_frontend" t-css="false"/>
+                    <title>Production Load</title>
+                    <form t-attf-action="/start_workorders-submit" method="post" data-success_page="/start_workorders-thanks" enctype="multipart/form-data" style="font-size: 18pt">
+                        <div class="form-group form-field o_website_form_required_custom col-md-offset-2 col-sm-offset-3">
+                            <br/>
+                            <p style="font-size: 30pt">
+                                <b>Production Load </b>
+                            </p>
+                        </div>
+                        <div class="form-group form-field o_website_form_required_custom">
+                            <div id="div_web_wor_ord_workcenter_id">
+                                <label class="col-md-5 col-sm-6 control-label" style="font-size: 18pt" for="web_wor_ord_workcenter_id">Centro de producción</label>
+                            
+                                <div class="col-lg-9 col-md-10">
+                                    <select class="form-control form-control-lg o_website_form_input" id="web_wor_ord_workcenter_id" name="workcenter" required="1">
+                                        <option value="">Seleccionar centro de trabajo</option>
+                                        <t t-foreach="workcenter_selection" t-as="workcenter">
+                                            <option t-att-value="workcenter['id']">
+                                                <t t-esc="workcenter['name']"/>
+                                            </option>
+                                        </t>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div id="div_web_wor_ord_product_id" ><!-- style="display:none" -->
+                                <label class="col-md-5 col-sm-6 control-label" style="font-size: 18pt" for="web_wor_ord_product_id">Producto</label>
+                            
+                                <div class="col-lg-9 col-md-10">
+                                    <select class="form-control form-control-lg o_website_form_input" id="web_wor_ord_product_id" name="product" required="1">
+                                        <option value="">Seleccionar Producto</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row"  style="height: 5rem;">
+                                <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5" id="div_web_wor_ord_submit">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 h-100 o_website_form_send">Submit</button>
+                                    <span id="o_website_form_result">
+                                    </span>
+                                </div>
+                                <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5">
+                                    <a href="/start_workorders">
+                                        <button type="button" class="btn btn-danger btn-lg w-100 h-100 o_website_form_send">Cancel</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </t>
+        </template>
+
+        <template id="start_workorders_detail_form">
+            <t t-call="web.basic_layout">
+                <div class="container">
+                    <t t-call-assets="web.assets_frontend" t-js="false"/>
+                    <t t-call-assets="web.assets_frontend" t-css="false"/>
+                    <title>Production Load</title>
+                    <form t-attf-action="/start_workorders_detail-submit" method="post" data-success_page="/start_workorders-thanks" enctype="multipart/form-data" style="font-size: 12pt">
+                        <div class="form-group form-field o_website_form_required_custom col-md-offset-2 col-sm-offset-3">
+                            <br/>
+                            <p style="font-size: 30pt">
+                                <b>Production Load </b>
+                            </p>
+                        </div>
+                        <div class="form-group form-field o_website_form_required_custom">
+                            <table class="table rounded mb-0 bg-white o_portal_my_doc_table">
+                                <thead>
+                                    <tr>
+                                        <th>Segmento</th>
+                                        <th>Producto</th>
+                                        <th>Trabajo</th>
+                                        <th>Cantidad</th>
+                                        <th>Fecha Inicio</th>
+                                        <th>Fecha Final</th>
+                                        <th>Can. Hecha</th>
+                                        <th>Comentarios</th>
+                                    </tr>
+                                </thead>
+                                <t t-set="count_datepicker" t-value="1"/>
+                                <t t-foreach="sorted(workorder_dic.keys())" t-as="workorder">
+                                    <tr>
+                                        <td><span t-esc="workorder_dic[workorder]['segment']"/></td>
+                                        <td><span t-esc="workorder_dic[workorder]['product']"/></td>
+                                        <td><span t-esc="workorder_dic[workorder]['operation']"/></td>
+                                        <td><span t-esc="workorder_dic[workorder]['qty']"/></td>
+                                        <td>
+                                            <t t-set="datepickerID" t-value="'date_s_' + workorder_dic[workorder]['workorder']"/>
+                                            <div class="input-group date" t-att-id="'date_start_container' + str(count_datepicker)" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" t-att-data-target="'#date_start_container' + str(count_datepicker)" t-att-id="datepickerID" t-att-name="datepickerID"/>
+                                                <div class="input-group-append" t-att-data-target="'#date_start_container' + str(count_datepicker)" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <t t-set="datepickerID" t-value="'date_e_' + workorder_dic[workorder]['workorder']"/>
+                                            <div class="input-group date" t-att-id="'date_end_container' + str(count_datepicker)" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" t-att-data-target="'#date_end_container' + str(count_datepicker)" t-att-id="datepickerID" t-att-name="datepickerID"/>
+                                                <div class="input-group-append" t-att-data-target="'#date_end_container' + str(count_datepicker)" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="number" step="any" min="0" t-att-max="workorder_dic[workorder]['qty']" class="form-control form-control-lg o_website_form_input" t-att-id="workorder_dic[workorder]['workorder']" t-att-name="workorder_dic[workorder]['workorder']" t-att-value="0" onwheel="return false" style="-moz-appearance: textfield;" oninput="this.value = Math.round(this.value);"/>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-lg o_website_form_input" t-att-id="'comments_' + workorder_dic[workorder]['workorder']" t-att-name="'comments_' + workorder_dic[workorder]['workorder']" style="-moz-appearance: textfield;" autocomplete="off"/>
+                                        </td>
+                                    </tr>
+                                    <t t-set="count_datepicker" t-value="count_datepicker + 1"/>
+                                </t>
+                            </table>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row"  style="height: 5rem;">
+                                <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5" id="div_web_wor_ord_det_submit">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 h-100 o_website_form_send">Submit</button>
+                                    <span id="o_website_form_result">
+                                    </span>
+                                </div>
+                                <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5">
+                                    <a href="/start_workorders">
+                                        <button type="button" class="btn btn-danger btn-lg w-100 h-100 o_website_form_send">Cancel</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

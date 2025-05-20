@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_company_business_partner_form'>
+            <field name='name'>view.company.business.partner.form</field>
+            <field name='model'>res.company</field>
+            <field name='inherit_id' ref="inter_company_rules.view_company_inter_change_inherit_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//page/group/group/field[@name='intercompany_user_id']" position="after">
+                    <field name="partner_ids" widget="many2many_tags"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='view_company_negative_existence_form'>
+            <field name='name'>view.company.negative.existence.form</field>
+            <field name='model'>res.company</field>
+            <field name='inherit_id' ref="base.view_company_form"/>
+            <field name='priority'>17</field>
+            <field name='arch' type='xml'>
+                <xpath expr="//div[@class='oe_title']" position="after">
+                    <group>
+                        <field name="negative_existence"/>
+                        <field name="sincronize_invoices_too"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

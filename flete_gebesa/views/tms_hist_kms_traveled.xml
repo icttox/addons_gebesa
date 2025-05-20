@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="tms_hist_kms_traveled_form">
+            <field name="name">tms_hist_kms_traveled.form</field>
+            <field name="model">tms.hist.kms.traveled</field>
+            <field name="arch" type="xml">
+                <form string="KMS Traveled">
+                    <sheet>
+                        <group>
+                            <field name='tms_expense_id'/>
+                            <field name="kms_traveled"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='tms_hist_kms_traveled_tree'>
+            <field name='name'>tms_hist_kms_traveled.tree</field>
+            <field name='model'>tms.hist.kms.traveled</field>
+            <field name='arch' type='xml'>
+                <tree string="KMS Traveled">
+                	<field name="date"/>
+                    <field name='tms_expense_id'/>
+                    <field name="kms_traveled" sum="Total"/>                    
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

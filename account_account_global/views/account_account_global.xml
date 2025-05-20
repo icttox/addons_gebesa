@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='account_account_global_tree'>
+            <field name='name'>account.account.global.tree</field>
+            <field name='model'>account.account.global</field>
+            <field name='arch' type='xml'>
+                <tree string='Account account global'>
+                    <field name='code'/>
+                    <field name='name'/>
+                    <field name='account_id'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='account_account_global_form'>
+            <field name='name'>account.account.global.form</field>
+            <field name='model'>account.account.global</field>
+            <field name='arch' type='xml'>
+                <form string='Account account global'>
+                    <sheet>
+                        <group>
+                            <field name='module'/>
+                            <field name='code'/>
+                            <field name='name'/>
+                            <field name='account_id'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id='action_account_account_global' model='ir.actions.act_window'>
+            <field name='name'>Account account global</field>
+            <field name='res_model'>account.account.global</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="account_account_global_menu" name="Account account global" parent="account.account_account_menu" action="action_account_account_global"/>
+    </data>
+</odoo>

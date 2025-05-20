@@ -1,0 +1,36 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* invoice_cancel_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-06 23:58+0000\n"
+"PO-Revision-Date: 2017-11-06 23:58+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: invoice_cancel_gebesa
+#: model:ir.model,name:invoice_cancel_gebesa.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: invoice_cancel_gebesa
+#: code:addons/invoice_cancel_gebesa/models/account_invoice.py:17
+#: model:ir.model.fields,field_description:invoice_cancel_gebesa.field_account_invoice_reason_cancellation
+#, python-format
+msgid "Reason for Cancellation"
+msgstr "Razón de Cancelación"
+
+#. module: invoice_cancel_gebesa
+#: code:addons/invoice_cancel_gebesa/models/account_invoice.py:13
+#: model:ir.model.fields,field_description:invoice_cancel_gebesa.field_account_invoice_invoice_refacture_id
+#, python-format
+msgid "Rebilling Number"
+msgstr "Número de Refacturación"
+

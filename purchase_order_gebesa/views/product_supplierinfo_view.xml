@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="product_supplierinfo_gebesa_form">
+            <field name="name">product.supplierinfo.gebesa.form</field>
+            <field name="model">product.supplierinfo</field>
+            <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="preferred_supplier"/>                         
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

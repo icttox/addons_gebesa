@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+prod_prod_cust_manage,product_product_customer_manager,model_product_product_customer,sales_team.group_sale_manager,1,1,1,1
+prod_prod_cust_user,product_product_customer_user,model_product_product_customer,,1,0,0,0
+prod_tmpl_communication_manage,product_tmpl_communication_manager,model_product_template_partner_communication,sales_team.group_sale_manager,1,1,1,1
+prod_tmpl_communication_user,product_tmpl_communication_user,model_product_template_partner_communication,,1,0,0,0

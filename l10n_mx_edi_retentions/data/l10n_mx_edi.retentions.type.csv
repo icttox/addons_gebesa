@@ -1,0 +1,26 @@
+id,code,name
+l10n_mx_edi_retentions_type_01,01,Servicios profesionales
+l10n_mx_edi_retentions_type_02,02,Regalías por derechos de autor
+l10n_mx_edi_retentions_type_03,03,Autotransporte terrestre de carga
+l10n_mx_edi_retentions_type_04,04,Servicios prestados por comisionistas
+l10n_mx_edi_retentions_type_05,05,Arrendamiento
+l10n_mx_edi_retentions_type_06,06,Enajenación de acciones
+l10n_mx_edi_retentions_type_07,07,"Enajenación de bienes objeto de la LIEPS, a través de mediadores, agentes, representantes, corredores, consignatarios o distribuidores"
+l10n_mx_edi_retentions_type_08,08,Enajenación de bienes inmuebles consignada en escritura pública
+l10n_mx_edi_retentions_type_09,09,"Enajenación de otros bienes, no consignada en escritura pública"
+l10n_mx_edi_retentions_type_10,10,Adquisición de desperdicios industriales
+l10n_mx_edi_retentions_type_11,11,Adquisición de bienes consignada en escritura pública
+l10n_mx_edi_retentions_type_12,12,"Adquisición de otros bienes, no consignada en escritura pública"
+l10n_mx_edi_retentions_type_13,13,Otros retiros de AFORE
+l10n_mx_edi_retentions_type_14,14,Dividendos o utilidades distribuidas
+l10n_mx_edi_retentions_type_15,15,Remanente distribuible
+l10n_mx_edi_retentions_type_16,16,Intereses
+l10n_mx_edi_retentions_type_17,17,Arrendamiento en fideicomiso
+l10n_mx_edi_retentions_type_18,18,Pagos realizados a favor de residentes en el extranjero
+l10n_mx_edi_retentions_type_19,19,Enajenación de acciones u operaciones en bolsa de valores
+l10n_mx_edi_retentions_type_20,20,Obtención de premios
+l10n_mx_edi_retentions_type_21,21,Fideicomisos que no realizan actividades empresariales
+l10n_mx_edi_retentions_type_22,22,Planes personales de retiro
+l10n_mx_edi_retentions_type_23,23,Intereses reales deducibles por créditos hipotecarios
+l10n_mx_edi_retentions_type_24,24,Operaciones Financieras Derivadas de Capital
+l10n_mx_edi_retentions_type_25,25,Otro tipo de retenciones

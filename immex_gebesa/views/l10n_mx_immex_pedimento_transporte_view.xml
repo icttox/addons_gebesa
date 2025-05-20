@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="view_l10_mx_pedimento_transporte_Action">
+            <field name="name">Pedimento transporte</field>
+            <field name="res_model">l10n.mx.immex.pedimento.transporte</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('clave_documento', 'in', ['IN', 'V1', 'AF', 'RT'])]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Pedimento Transporte
+                </p>
+            </field>
+        </record>
+
+
+         <menuitem id="pedimento_transporte_menu" name="Pedimento Transporte" parent="pedimento_menu" action="view_l10_mx_pedimento_transporte_Action"/>
+
+        <record model="ir.ui.view" id="view_l10_mx_pedimento_transporte_form">
+            <field name="name">pedimento.transporte.form</field>
+            <field name="model">l10n.mx.immex.pedimento.transporte</field>
+            <field name="arch" type="xml">
+                <form string="Transporte Form" create ="false" edit="false" delete ="false">
+                    <sheet>
+                        <group col="6" colspan="2">
+                            <field name='patente'/>
+                            <field name='num_pedimento'/>
+                            <field name='clave_aduana'/>
+                            <field name='pedimento_num'/>
+                            <field name='rfc_transportirsta'/>
+                            <field name='curp_transportista'/>
+                            <field name='nombre_transportista'/>
+                            <field name='pais_transportista'/>
+                            <field name='id_transporte'/>
+                            <field name='fecha_pago_transport'/>
+                            <field name='pais_transportista'/>
+                            <field name='clave_documento'/>
+                            <field name='pedimento_id'/>
+                            <field name='resumen_id'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_l10_mx_pedimento_transporte_view_tree">
+            <field name="name">Pedimento.tree</field>
+            <field name="model">l10n.mx.immex.pedimento.transporte</field>
+            <field name="arch" type="xml">
+                <tree string="Transporte Tree" create ="false" edit="false" delete ="false">
+                    <field name='patente'/>
+                    <field name='num_pedimento'/>
+                    <field name='clave_aduana'/>
+                    <field name='pedimento_num'/>
+                    <field name='rfc_transportirsta'/>
+                    <field name='curp_transportista'/>
+                    <field name='nombre_transportista'/>
+                    <field name='pais_transportista'/>
+                    <field name='id_transporte'/>
+                    <field name='fecha_pago_transport'/>
+                    <field name='pais_transportista'/>
+                    <field name='clave_documento'/>
+                    <field name='resumen_id'/>
+                </tree>
+            </field>
+        </record>
+
+
+       
+    </data>
+</odoo>

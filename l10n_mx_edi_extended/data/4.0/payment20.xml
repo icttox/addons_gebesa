@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="payment20">
+        <cfdi:Comprobante
+            xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd http://www.sat.gob.mx/Pagos20 http://www.sat.gob.mx/sitio_internet/cfd/Pagos/Pagos20.xsd"
+            xmlns:cfdi="http://www.sat.gob.mx/cfd/4"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:pago20="http://www.sat.gob.mx/Pagos20"
+            Version="4.0"
+            t-att-Serie="invoice._get_string_cfdi(serie or '', 25) or False"
+            t-att-Folio="invoice._get_string_cfdi(folio or '', 40) or False"
+            t-att-Fecha="date"
+            Sello=""
+            t-att-NoCertificado="certificate_number"
+            t-att-Certificado="certificate"
+            SubTotal="0"
+            Moneda="XXX"
+            Total="0"
+            TipoDeComprobante="P"
+            Exportacion="01"
+            t-att-LugarExpedicion="issued.zip or supplier.zip"
+            t-att-Confirmacion="confirmation">
+            <t t-set="related" t-value="record.get_cfdi_related()"/>
+            <t t-if="related">
+                <cfdi:CfdiRelacionados
+                    t-att-TipoRelacion="related['type']">
+                    <t t-foreach="related['related']" t-as="number">
+                        <cfdi:CfdiRelacionado t-att-UUID="number"/>
+                    </t>
+                </cfdi:CfdiRelacionados>
+            </t>
+            <cfdi:Emisor
+                t-att-Rfc="supplier.vat"
+                t-att-Nombre="invoice._get_string_cfdi(supplier.l10n_mx_edi_name, 254)"
+                t-att-RegimenFiscal="fiscal_position.l10n_mx_edi_code"/>
+            <cfdi:Receptor
+                t-att-Rfc="customer.l10n_mx_edi_get_customer_rfc()"
+                t-att-Nombre="invoice._get_string_cfdi(customer.commercial_partner_id.l10n_mx_edi_name, 254)"
+                t-att-DomicilioFiscalReceptor="customer.commercial_partner_id.zip if customer.l10n_mx_edi_get_customer_rfc() not in ['XEXX010101000', 'XAXX010101000'] else issued.zip or supplier.zip"
+                t-att-ResidenciaFiscal="customer.country_id.l10n_mx_edi_code if customer.country_id.l10n_mx_edi_code != 'MEX' else False"
+                t-att-NumRegIdTrib="receiver_reg_trib"
+                t-att-RegimenFiscalReceptor="customer.commercial_partner_id.property_account_position_id.l10n_mx_edi_code"
+                UsoCFDI="CP01"/>
+            <cfdi:Conceptos>
+                <cfdi:Concepto
+                    ClaveProdServ="84111506"
+                    Cantidad="1"
+                    ClaveUnidad="ACT"
+                    Descripcion="Pago"
+                    ValorUnitario="0"
+                    Importe="0"
+                    ObjetoImp="01"/>
+            </cfdi:Conceptos>
+            <cfdi:Complemento>
+                <pago20:Pagos
+                    Version="2.0">
+                    <t t-set="amount" t-value="record.amount - total_currency"/>
+                    <t t-set="inv_rate" t-value="('%.6f' % (total_paid / amount)) if record.currency_id != record.invoice_ids.mapped('currency_id') else False"/>
+                    <t t-set="inv_rate" t-value="(inv_rate if ((total_paid / float(inv_rate)) &lt;= amount) else '%.6f' % (float(inv_rate) + 0.000001)) if inv_rate else inv_rate"/>
+                    <t t-set="taxes_global" t-value="record._l10n_mx_edi_create_taxes_cfdi_values(payment_rate)"/>
+                    <pago20:Totales
+                        t-att-TotalRetencionesIVA="'%.2f' % (taxes_global['TotalRetencionesIVA']) if taxes_global['TotalRetencionesIVA'] else False"
+                        t-att-TotalRetencionesISR="'%.2f' % (taxes_global['TotalRetencionesISR']) if taxes_global['TotalRetencionesISR'] else False"
+                        t-att-TotalRetencionesIEPS="'%.2f' % (taxes_global['TotalRetencionesIEPS']) if taxes_global['TotalRetencionesIEPS'] else False"
+                        t-att-TotalTrasladosBaseIVA16="'%.2f' % (taxes_global['TotalTrasladosBaseIVA16']) if taxes_global['TotalTrasladosBaseIVA16'] else False"
+                        t-att-TotalTrasladosImpuestoIVA16="'%.2f' % (taxes_global['TotalTrasladosImpuestoIVA16']) if taxes_global['TotalTrasladosImpuestoIVA16'] else False"
+                        t-att-TotalTrasladosBaseIVA8="'%.2f' % (taxes_global['TotalTrasladosBaseIVA8']) if taxes_global['TotalTrasladosBaseIVA8'] else False"
+                        t-att-TotalTrasladosImpuestoIVA8="'%.2f' % (taxes_global['TotalTrasladosImpuestoIVA8']) if taxes_global['TotalTrasladosImpuestoIVA8'] else False"
+                        t-att-TotalTrasladosBaseIVA0="'%.2f' % (taxes_global['TotalTrasladosBaseIVA0']) if taxes_global['TotalTrasladosBaseIVA0'] else False"
+                        t-att-TotalTrasladosImpuestoIVA0="'%.2f' % (taxes_global['TotalTrasladosImpuestoIVA0']) if taxes_global['TotalTrasladosBaseIVA0'] else False"
+                        t-att-TotalTrasladosBaseIVAExento="'%.2f' % (taxes_global['TotalTrasladosBaseIVAExento']) if taxes_global['TotalTrasladosBaseIVAExento'] else False"
+                        t-att-MontoTotalPagos="'%.2f' % (float(payment_rate) * record.amount)"/>
+                        <!--t-att-MontoTotalPagos="'%.2f' % (taxes_global['MontoTotalPagos'])"/-->
+                    <pago20:Pago
+                        t-att-FechaPago="payment_date"
+                        t-att-FormaDePagoP="record.l10n_mx_edi_payment_method_id.code"
+                        t-att-MonedaP="record.currency_id.name"
+                        t-att-TipoCambioP="payment_rate"
+                        t-att-Monto="'%.*f' % (decimal_precision, record.amount)"
+                        t-att-NumOperacion="record.communication[:100].replace('|', ' ') if record.communication else None"
+                        t-att-RfcEmisorCtaOrd="pay_vat_ord or None"
+                        t-att-NomBancoOrdExt="pay_name_ord or None"
+                        t-att-CtaOrdenante="pay_account_ord or None"
+                        t-att-RfcEmisorCtaBen="pay_vat_receiver or None"
+                        t-att-CtaBeneficiario="pay_account_receiver or None"
+                        t-att-TipoCadPago="pay_ent_type"
+                        t-att-CertPago="pay_certificate"
+                        t-att-CadPago="pay_string"
+                        t-att-SelloPago="pay_stamp">
+                        <t t-set="writeoff_vals" t-value="record._l10n_mx_edi_get_payment_write_off()"/>
+                        <t t-foreach="record.invoice_ids" t-as="invoice">
+                            <t t-set="amount" t-value="[p for p in invoice._get_payments_vals() if (p.get('account_payment_id', False) == record.id or not p.get('account_payment_id') and (not p.get('invoice_id') or p.get('invoice_id') == invoice.id))]"/>
+                            <t t-set="amount_payment" t-value="sum([data.get('amount', 0.0) for data in amount])"/>
+                            <t t-set="amount" t-value="[p for p in invoice._get_payments_vals() if (p.get('account_payment_id', False) != record.id or not p.get('account_payment_id') and (not p.get('invoice_id') or p.get('invoice_id') == invoice.id))]"/>
+                            <t t-set="previous_amount" t-value="sum([data.get('amount', 0.0) for data in amount])"/>
+                            <t t-set="amount_payment" t-value="amount_payment if round(sum([p.get('amount') for p in invoice._get_payments_vals()]), invoice.currency_id.decimal_places) &lt;= invoice.amount_total else invoice.amount_total - previous_amount"/>
+                            <t t-set="amount_insoluto" t-value="invoice.residual"/>
+                            <t t-set="taxes" t-value="taxes_global['invoices'][invoice.id]"/>
+                            <pago20:DoctoRelacionado
+                                t-att-IdDocumento="invoice.l10n_mx_edi_cfdi_uuid or invoice.cfdi_uuid"
+                                t-att-Serie="invoice._get_string_cfdi(invoice._l10n_mx_get_serie_and_folio(invoice.number).get('serie', False), 25)"
+                                t-att-Folio="invoice._get_string_cfdi(invoice._l10n_mx_get_serie_and_folio(invoice.number).get('folio', False), 40)"
+                                t-att-MonedaDR="invoice.currency_id.name"
+                                t-att-EquivalenciaDR="inv_rate if record.currency_id != invoice.currency_id else '1'"
+                                t-att-NumParcialidad="len(invoice.payment_ids.filtered(lambda p: p.state not in ('draft', 'cancelled') and not p.move_line_ids.mapped('move_id.reverse_entry_id')).ids)"
+                                t-att-ImpSaldoAnt="'%0.*f' % (decimal_precision, invoice.residual + amount_payment)"
+                                t-att-ImpPagado="'%0.*f' % (decimal_precision, amount_payment - (writeoff_vals.get(invoice.id, 0) if invoice.currency_id == record.currency_id else 0))"
+                                t-att-ImpSaldoInsoluto="'%0.*f' % (decimal_precision, amount_insoluto + (writeoff_vals.get(invoice.id, 0) if invoice.currency_id == record.currency_id else 0))"
+                                t-att-ObjetoImpDR="'02' if (taxes['traslados'] is not None or taxes['retenciones'] is not None) else '01'">
+                                <t t-if="taxes['traslados'] is not None or taxes['retenciones'] is not None">
+                                    <pago20:ImpuestosDR>
+                                        <t t-if="taxes['retenciones']">
+                                            <pago20:RetencionesDR>
+                                                <t t-foreach="taxes['retenciones']" t-as="withhold">
+                                                    <pago20:RetencionDR
+                                                        t-att-BaseDR="'%0.*f' % (decimal_precision, withhold[0])"
+                                                        t-att-ImpuestoDR="tax_name(withhold[1])"
+                                                        t-att-TipoFactorDR="withhold[2]"
+                                                        t-att-TasaOCuotaDR="'%.6f' % (withhold[3])"
+                                                        t-att-ImporteDR="'%.4f' % (withhold[4])"/>
+                                                </t>
+                                            </pago20:RetencionesDR>
+                                        </t>
+                                        <t t-if="taxes['traslados']">
+                                            <pago20:TrasladosDR>
+                                                <t t-foreach="taxes['traslados']" t-as="transferred">
+                                                    <pago20:TrasladoDR
+                                                        t-att-BaseDR="'%0.*f' % (decimal_precision, transferred[0])"
+                                                        t-att-ImpuestoDR="tax_name(transferred[1])"
+                                                        t-att-TipoFactorDR="transferred[2]"
+                                                        t-att-TasaOCuotaDR="'%.6f' % (transferred[3])"
+                                                        t-att-ImporteDR="'%.4f' % (transferred[4])"/>
+                                                </t>
+                                            </pago20:TrasladosDR>
+                                        </t>
+                                    </pago20:ImpuestosDR>
+                                </t>
+                            </pago20:DoctoRelacionado>
+                        </t>
+                        <t t-if="taxes_global['RetencionesP'] or taxes_global['TrasladosP']">
+                            <pago20:ImpuestosP>
+                                <t t-if="taxes_global['RetencionesP']">
+                                    <pago20:RetencionesP>
+                                        <t t-foreach="taxes_global['RetencionesP']" t-as="tax">
+                                            <pago20:RetencionP
+                                                t-att-ImpuestoP="tax_name(taxes_global['RetencionesP'][tax]['name'])"
+                                                t-att-ImporteP="'%.6f' % (taxes_global['RetencionesP'][tax]['amount'])"/>
+                                        </t>
+                                    </pago20:RetencionesP>
+                                </t>
+                                <t t-if="taxes_global['TrasladosP']">
+                                    <pago20:TrasladosP>
+                                        <t t-foreach="taxes_global['TrasladosP']" t-as="tax">
+                                            <pago20:TrasladoP
+                                                t-att-BaseP="'%0.*f' % (decimal_precision, taxes_global['TrasladosP'][tax]['base'])"
+                                                t-att-ImpuestoP="tax_name(taxes_global['TrasladosP'][tax]['name'])"
+                                                t-att-TipoFactorP="taxes_global['TrasladosP'][tax]['type']"
+                                                t-att-TasaOCuotaP="'%.6f' % (taxes_global['TrasladosP'][tax]['rate'])"
+                                                t-att-ImporteP="'%.4f' % (taxes_global['TrasladosP'][tax]['amount'])"/>
+                                        </t>
+                                    </pago20:TrasladosP>
+                                </t>
+                            </pago20:ImpuestosP>
+                        </t>
+                    </pago20:Pago>
+                </pago20:Pagos>
+            </cfdi:Complemento>
+        </cfdi:Comprobante>
+    </template>
+</odoo>

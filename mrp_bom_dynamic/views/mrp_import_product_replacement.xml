@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_import_product_replacement_tree'>
+            <field name='name'>mrp.import.product.replacement.tree</field>
+            <field name='model'>mrp.import.product.replacement</field>
+            <field name='arch' type='xml'>
+                <tree string='Product Pricelist Import' create="true" edit="false">
+                    <field name="name"/>
+                    <field name='date'/>
+                    <field name='state'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mrp_import_product_replacement_form">
+            <field name="name">mrp.import.product.replacement.form</field>
+            <field name="model">mrp.import.product.replacement</field>
+            <field name="arch" type="xml">
+                <form string='Import Product Replacement' create="false" edit="false" >
+                    <header>
+                        <button name="import_product_replacement" states="draft" string="Confirm" type="object" class="oe_highligth"/>
+                        <field name="state" widget="statusbar" statusbar_colors='{"done":"blue"}'/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name"/>
+                            </div>
+                            <h1>
+                                <field name='name' default_focus="1" required="1" readonly="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name='date' required="1" readonly="True"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page>
+                                <field name='lines_ids' widget="one2many_list" attrs="{'readonly':True}"  options="{'no_edit': True,'no_create': True}" create="false" edit="false">
+                                    <tree string="lines" editable="bottom">
+                                        <field name='original_header_product'/>
+                                        <field name='original_detail_product'/>
+                                        <field name='replacement_header_product'/>
+                                        <field name='replacement_detail_product'/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id='action_mrp_import_product_replacement' model='ir.actions.act_window'>
+            <field name='name'>Import Product Replacement</field>
+            <field name='res_model'>mrp.import.product.replacement</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="mrp_import_product_replacement_menu" name="Import Product Replacement" parent="mrp.menu_mrp_bom" action="action_mrp_import_product_replacement"/>
+    </data>
+</odoo>

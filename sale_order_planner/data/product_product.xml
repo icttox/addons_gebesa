@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="product_generic_planner" model="product.product">
+            <field name="name">Generic product planner</field>
+            <field name="type">service</field>
+            <field eval="False" name="purchase_ok"/>
+            <field eval="True" name="sale_ok"/>
+        </record>
+         <record id="mpf_2020" model="res.partner">
+            <field name="name">ws.2020 Planner</field>
+            <field name="company_type">company</field>
+            <field name="customer">True</field>
+            <field name="supplier">False</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

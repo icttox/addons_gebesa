@@ -1,0 +1,199 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* shipment_freight_cost
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-01 19:26+0000\n"
+"PO-Revision-Date: 2021-11-01 13:28-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_mrp_shipment__amount_total_mxn
+msgid "Amount Total Mxn"
+msgstr "Monto Total Mxn"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_mrp_shipment__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_mrp_shipment__company_currency_id
+msgid "Company Currency"
+msgstr "Moneda de la empresa"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_shipment__create_uid
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_shipment__create_date
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_shipment__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__currency_inv_id
+msgid "Currency Invoice"
+msgstr "Moneda de la empresa"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__currency_order_id
+msgid "Currency Order"
+msgstr "Orden de moneda"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_shipment__display_name
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__gasto_pro_flete
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_mrp_shipment_line__gasto_pro_flete
+msgid "Gasto Prorrateo Flete"
+msgstr ""
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_mrp_shipment_line__gasto_pro_flete_mxn
+msgid "Gasto Prorrateo Flete MXN"
+msgstr ""
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_shipment__id
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__id
+msgid "ID"
+msgstr ""
+
+#. module: shipment_freight_cost
+#: model:ir.model,name:shipment_freight_cost.model_account_invoice
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_shipment__invoice_id
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__invoice_id
+#: model_terms:ir.ui.view,arch_db:shipment_freight_cost.sale_order_inherit_form
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: shipment_freight_cost
+#: model_terms:ir.ui.view,arch_db:shipment_freight_cost.inv_rel_so_tree_view
+msgid "Invoice Rel Sale Order"
+msgstr "Factura Rel Orden de Venta"
+
+#. module: shipment_freight_cost
+#: model_terms:ir.ui.view,arch_db:shipment_freight_cost.inv_rel_shipment_tree_view
+msgid "Invoice Rel Shipment"
+msgstr "Factura Rel Envío"
+
+#. module: shipment_freight_cost
+#: model_terms:ir.ui.view,arch_db:shipment_freight_cost.shipment_inherit_form
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_shipment____last_update
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_shipment__write_uid
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_shipment__write_date
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_account_invoice__inv_rel_so_ids
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__order_id
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_sale_order__inv_rel_so_ids
+#: model_terms:ir.ui.view,arch_db:shipment_freight_cost.shipment_freight_cost_form
+msgid "Order"
+msgstr "Orden"
+
+#. module: shipment_freight_cost
+#: model:ir.model,name:shipment_freight_cost.model_mrp_shipment
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_account_invoice__inv_rel_shipment_ids
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_shipment__shipment_id
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_mrp_shipment__inv_rel_shipment_ids
+#: model_terms:ir.ui.view,arch_db:shipment_freight_cost.shipment_freight_cost_form
+msgid "Shipment"
+msgstr "Embarque"
+
+#. module: shipment_freight_cost
+#: model:ir.model,name:shipment_freight_cost.model_mrp_shipment_line
+msgid "Shipment line"
+msgstr "Lineas embarcadas"
+
+#. module: shipment_freight_cost
+#: code:addons/shipment_freight_cost/models/inv_rel_shipment.py:29
+#: sql_constraint:inv.rel.shipment:0
+#, python-format
+msgid "The invoice must be unique."
+msgstr "La factura debe ser única."
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_mrp_shipment__total_gasto_flete
+msgid "Total Gasto Flete"
+msgstr ""
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_mrp_shipment__total_gasto_flete_mxn
+msgid "Total Gasto Flete Mxn"
+msgstr ""
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_shipment__total_inv
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__total_inv
+msgid "Total Invoice"
+msgstr "Total de la Factura"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_mrp_shipment_line__total_mxn
+msgid "Total Mxn"
+msgstr ""
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_account_invoice__total_sale
+msgid "Total Sale"
+msgstr "Total de las Ordenes de Venta"
+
+#. module: shipment_freight_cost
+#: model:ir.model.fields,field_description:shipment_freight_cost.field_inv_rel_so__total_so
+msgid "Total Sale Order"
+msgstr "Total de la Orden de Venta"
+
+#. module: shipment_freight_cost
+#: model:ir.model,name:shipment_freight_cost.model_inv_rel_shipment
+msgid "inv.rel.shipment"
+msgstr ""
+
+#. module: shipment_freight_cost
+#: model:ir.model,name:shipment_freight_cost.model_inv_rel_so
+msgid "inv.rel.so"
+msgstr ""
+
+#. module: shipment_freight_cost
+#: model:ir.model,name:shipment_freight_cost.model_sale_order
+msgid "sale.order"
+msgstr ""

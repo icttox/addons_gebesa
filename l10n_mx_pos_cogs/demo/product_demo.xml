@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="product.product_category_5" model="product.category">
+        <field name="property_valuation">real_time</field>
+        <field name="property_stock_account_input_categ_id" search="[('code', '=', '115.01.01')]"/>
+        <field name="property_stock_account_output_categ_id" search="[('code', '=', '115.01.01')]"/>
+    </record>
+
+    <record id="product.product_product_9" model="product.product">
+        <field name="type">product</field>
+        <field name="standard_price">55</field>
+        <field name="available_in_pos" eval="True"/>
+    </record>
+
+
+</odoo>

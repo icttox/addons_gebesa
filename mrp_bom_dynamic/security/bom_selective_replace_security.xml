@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="res.groups" id="group_mrp_bom_selective_replace_user">
+            <field name='name'>User Mrp Bom Selective Replace</field>
+        </record>
+        <record model="res.groups" id="group_mrp_bom_selective_replace_manager">
+            <field name='name'>Superuser Mrp Bom Selective Replace</field>
+        </record>
+    </data>
+</odoo>

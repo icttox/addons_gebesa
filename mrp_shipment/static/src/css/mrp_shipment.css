@@ -1,0 +1,23 @@
+.mrp_shipment_table{
+	margin-top: 8px;
+	margin-bottom: 8px;
+    border-collapse: separate;
+    width: 100%;
+}
+.mrp_shipment_table td{
+    border-bottom: 1px solid black;
+}
+.mrp_shipment_table_detail{
+    border: 1px solid black;
+}
+.mrp_shipment_table_detail td{
+	padding-left: 2px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.mrp_shipment_tr_kit{
+	background: lightgray;
+}
+.mrp_shipment_tr_kit_child{
+	background: #f2f2f2;
+}

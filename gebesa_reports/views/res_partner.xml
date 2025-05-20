@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_partner_form'>
+            <field name='name'>res.partner.partnertype.form</field>
+            <field name='model'>res.partner</field>
+            <field name='inherit_id' ref='base.view_partner_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook/page[@name='sales_purchases']/group/group/field[@name='supplier']" position="after">
+                    <field name="partner_type_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_res_partner_type" model="ir.actions.act_window">
+            <field name="name">Partner Type Gebesa</field>
+            <field name="res_model">res.partner.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to register a Partner Type
+            </p><p>
+                Make your first Partner Type.
+            </p>
+            </field>
+        </record>
+
+        <menuitem action="action_res_partner_type" id="menu_res_partner_type" parent="account.menu_finance_payables"  sequence="50"/>
+
+        <record model="ir.ui.view" id="res_partner_type_tree">
+            <field name="name">res.partner.type.tree</field>
+            <field name="model">res.partner.type</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Partner Type">
+                    <field name="code"/>
+                    <field name="name"/>                
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="res_partner_type_form">
+            <field name="name">res.partner.type.form</field>
+            <field name="model">res.partner.type</field>
+            <field name="arch" type="xml">
+                <form string='Partner Type'>              
+                    <sheet>
+                        <div class="oe_title">
+                            <h2>
+                                <field name='code'/>
+                            </h2>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                        </group>                  
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

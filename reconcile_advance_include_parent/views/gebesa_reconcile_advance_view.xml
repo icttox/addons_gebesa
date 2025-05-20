@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='include_parent_reconcile_form'>
+            <field name='name'>include.parent.reconcile.form</field>
+            <field name='model'>gebesa.reconcile.advance</field>
+            <field name='inherit_id' ref="gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='invoice_ids']" position="attributes">
+                   <attribute name="context">{'include_padre': True, 'partner_id': partner_id}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

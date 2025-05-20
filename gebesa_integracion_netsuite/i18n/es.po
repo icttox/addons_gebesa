@@ -1,0 +1,212 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* gebesa_integracion_netsuite
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-10 18:04+0000\n"
+"PO-Revision-Date: 2017-04-10 13:08-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.ui.view,arch_db:gebesa_integracion_netsuite.product_send_netsuite_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model,name:gebesa_integracion_netsuite.model_product_nst_line
+#: model:ir.model,name:gebesa_integracion_netsuite.model_product_nst_plant
+#: model:ir.model,name:gebesa_integracion_netsuite.model_product_nst_tipo
+msgid "Clase temporal mientras se tenga la integracion con NS"
+msgstr ""
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_line_create_uid
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_plant_create_uid
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_tipo_create_uid
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_send_netsuite_wizard_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_line_create_date
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_plant_create_date
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_tipo_create_date
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_send_netsuite_wizard_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_line_display_name
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_plant_display_name
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_tipo_display_name
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_send_netsuite_wizard_display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: gebesa_integracion_netsuite
+#: code:addons/gebesa_integracion_netsuite/wizard/product_send_netsuite.py:57
+#, python-format
+msgid "Failed to send NetSuite"
+msgstr "Error al enviar NetSuite"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_line_id
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_plant_id
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_tipo_id
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_send_netsuite_wizard_id
+msgid "ID"
+msgstr "ID"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model,name:gebesa_integracion_netsuite.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_line___last_update
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_plant___last_update
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_tipo___last_update
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_send_netsuite_wizard___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_line_write_uid
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_plant_write_uid
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_tipo_write_uid
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_send_netsuite_wizard_write_uid
+msgid "Last Updated by"
+msgstr "Ultima Actualizacion por"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_line_write_date
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_plant_write_date
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_tipo_write_date
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_send_netsuite_wizard_write_date
+msgid "Last Updated on"
+msgstr "Ultima Actualizacion en"
+
+#. module: gebesa_integracion_netsuite
+#: code:addons/gebesa_integracion_netsuite/models/product_nst_clasification.py:34
+#: model:ir.model.fields,help:gebesa_integracion_netsuite.field_product_nst_line_name
+#, python-format
+msgid "Line name"
+msgstr "Nombre de línea"
+
+#. module: gebesa_integracion_netsuite
+#: code:addons/gebesa_integracion_netsuite/models/product_nst_clasification.py:14
+#: code:addons/gebesa_integracion_netsuite/models/product_nst_clasification.py:31
+#: code:addons/gebesa_integracion_netsuite/models/product_nst_clasification.py:53
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_line_name
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_plant_name
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_tipo_name
+#, python-format
+msgid "Name"
+msgstr "Nombre"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_send_netsuite_wizard_nst_tipo_id
+msgid "NetSuite Group"
+msgstr "Grupo NetSuite"
+
+#. module: gebesa_integracion_netsuite
+#: code:addons/gebesa_integracion_netsuite/models/product_nst_clasification.py:21
+#: code:addons/gebesa_integracion_netsuite/models/product_nst_clasification.py:38
+#: code:addons/gebesa_integracion_netsuite/models/product_nst_clasification.py:60
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_line_nstid
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_plant_nstid
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_tipo_nstid
+#, python-format
+msgid "NetSuite Id"
+msgstr "Id de NetSuite"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_send_netsuite_wizard_nst_line_id
+msgid "NetSuite Line"
+msgstr "Línea NetSuite"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_send_netsuite_wizard_nst_plant_id
+msgid "NetSuite Plant"
+msgstr "Planta NetSuite"
+
+#. module: gebesa_integracion_netsuite
+#: code:addons/gebesa_integracion_netsuite/models/product_nst_clasification.py:17
+#: model:ir.model.fields,help:gebesa_integracion_netsuite.field_product_nst_plant_name
+#, python-format
+msgid "Plant name"
+msgstr "Nombre de planta"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model,name:gebesa_integracion_netsuite.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: gebesa_integracion_netsuite
+#: code:addons/gebesa_integracion_netsuite/models/product_nst_clasification.py:65
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_tipo_product_nstline_id
+#, python-format
+msgid "Product Line"
+msgstr "Línea de producto"
+
+#. module: gebesa_integracion_netsuite
+#: code:addons/gebesa_integracion_netsuite/models/product_nst_clasification.py:43
+#: model:ir.model.fields,field_description:gebesa_integracion_netsuite.field_product_nst_line_product_nstplant_id
+#, python-format
+msgid "Product Plant"
+msgstr "Planta de producto"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model,name:gebesa_integracion_netsuite.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.ui.view,arch_db:gebesa_integracion_netsuite.product_send_netsuite_wizard
+msgid "Send"
+msgstr "Enviar"
+
+#. module: gebesa_integracion_netsuite
+#: model:res.groups,name:gebesa_integracion_netsuite.group_send_product_netsuite
+msgid "Send Product Netsuite"
+msgstr "Enviar producto Netsuite"
+
+#. module: gebesa_integracion_netsuite
+#: code:addons/gebesa_integracion_netsuite/models/product_nst_clasification.py:56
+#: model:ir.model.fields,help:gebesa_integracion_netsuite.field_product_nst_tipo_name
+#, python-format
+msgid "Type name"
+msgstr ""
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.ui.view,arch_db:gebesa_integracion_netsuite.account_invoice_view_netsuite_form
+msgid "Update Netsuite"
+msgstr ""
+"\n"
+"15/5000\n"
+"Actualizar Netsuite"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.ui.view,arch_db:gebesa_integracion_netsuite.product_send_netsuite_wizard
+msgid "or"
+msgstr "o"
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.model,name:gebesa_integracion_netsuite.model_product_send_netsuite_wizard
+msgid "product.send.netsuite.wizard"
+msgstr ""
+
+#. module: gebesa_integracion_netsuite
+#: model:ir.ui.view,arch_db:gebesa_integracion_netsuite.product_normal_form_view
+msgid "send NetSuite"
+msgstr "Enviar a NetSuite"

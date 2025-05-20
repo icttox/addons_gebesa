@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="l10n_mx_edi_dropbox" model="ir.config_parameter">
+            <field name="key">l10n_mx_supplier_iva_dropbox_key</field>
+            <field name="value"></field>
+        </record>
+
+    </data>
+</odoo>

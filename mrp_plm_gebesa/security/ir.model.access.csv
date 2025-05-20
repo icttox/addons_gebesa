@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_project_task_stage_hist,project_task_stage_hist_manager,model_project_task_stage_hist,,1,1,1,1
+access_project_task_user_hist,project_task_user_hist_manager,model_project_task_user_hist,,1,1,1,1
+access_mrp_eco_bom_change_user,access_mrp_eco_bom_change_user,model_mrp_eco_bom_change_user,mrp_plm.group_plm_user,1,1,1,1

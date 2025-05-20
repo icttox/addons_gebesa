@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="wbl_type_station_form_view">
+            <field name="name">l10n.mx.wbl.type.station.form</field>
+            <field name="model">l10n.mx.wbl.type.station</field>
+            <field name="arch" type="xml">
+                <form string="Form Waybill type.station">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wbl_type_station_tree_view">
+            <field name="name">l10n.mx.wbl.type.station.tree</field>
+            <field name="model">l10n.mx.wbl.type.station</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Waybill Type Station">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="wbl_type_station_action">
+            <field name="name">Waybill Type Station</field>
+            <field name="res_model">l10n.mx.wbl.type.station</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the waybill type.station
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="wbl_type_station_action" id="menu_wbl_type_station" name="Type Station" parent="menu_wbl_complement" sequence="20"/>
+    </data>
+</odoo>
+    

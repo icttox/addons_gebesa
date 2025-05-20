@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_account_form'>
+        	<field name='name'>account_parent_view_form</field>
+        	<field name='model'>account.account</field>
+        	<field name='inherit_id' ref='account.view_account_form'/>
+        	<field name='arch' type='xml'>
+        		<xpath expr="//group/group/field[@name='deprecated']" position="after">
+        			<!--field name='income_statement'/-->
+                    <field name='trial_balance'/>
+        		</xpath>       		
+        	</field>
+        </record>
+    </data>
+</odoo>

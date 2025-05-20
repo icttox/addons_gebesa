@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="global_product_change_view_form" model="ir.ui.view">
+    		<field name="name">global.product.change.view.form</field>
+    		<field name="model">product.template</field>
+    		<field name="inherit_id" ref="integration_progress_fields.product_template_form_inherit_view"/>
+    		<field name="arch" type="xml">
+                <xpath expr="//field[@name='barcode']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[4]/group/group" position="inside">
+                    <field name="barcode"/>
+                </xpath>
+                <xpath expr="//field[@name='purchase_method']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='landed_cost_ok']" position="after">
+                    <field name="purchase_method" widget="radio"/>
+                    <field name="list_price"/>
+                    <field name="uom_po_id"/>
+                </xpath>
+                <xpath expr="//field[@name='invoice_policy']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[4]//field[@name='barcode']" position="after">
+                    <field name="invoice_policy" widget="radio"/>
+                </xpath>
+                <xpath expr="//field[@name='list_price']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='uom_po_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[@name='inventory']//label[@for='weight']" position="replace">
+                </xpath>
+                <xpath expr="//notebook/page[@name='inventory']//div[@name='weight']" position="replace">
+                    <!--attribute name="invisible">1</attribute>
+                    <attribute name="string"></attribute-->
+                </xpath>
+                <xpath expr="//notebook/page[@name='inventory']//label[@for='volume']" position="replace">
+                </xpath>
+                <xpath expr="//notebook/page[@name='inventory']//div[@name='volume']" position="replace">
+                    <!--attribute name="invisible">1</attribute>
+                    <attribute name="string"></attribute-->
+                </xpath>
+                <xpath expr="//notebook/page[1]//group/group" position="inside">
+                    <label for="weight" attrs="{'invisible':[('type', 'not in', ['product', 'consu']), ('product_variant_count', '&gt;', 1)]}"/>
+                    <div class="o_row" name="weight" attrs="{'invisible':[('type', 'not in', ['product', 'consu']), ('product_variant_count', '&gt;', 1)]}">
+                    <field name="weight" string="Weight"/>
+                    </div>
+                    <label for="volume" attrs="{'invisible':[('type', 'not in', ['product', 'consu']), ('product_variant_count', '&gt;', 1)]}"/>
+                    <div class="o_row" name="volume" attrs="{'invisible':[('type', 'not in', ['product', 'consu']), ('product_variant_count', '&gt;', 1)]}">
+                    <field name="volume" string="Volume"/>
+                    </div>
+                </xpath>
+                <xpath expr="//notebook/page[@name='product_classification']/group/group/field[@name='is_line']" position="replace">
+                    <!--attribute name="invisible">1</attribute-->
+                </xpath>
+                <xpath expr="//notebook/page[1]//field[@name='cutting_detail']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[@name='general_information']//field[@name='tariff_headings_id']" position="after">
+                    <field name="product_service_id" invisible="True"/>
+                    <field name="is_line"/>
+                    <field name="cutting_detail"/>
+                </xpath>
+    		</field>
+    	</record>    	
+    </data>
+</odoo>

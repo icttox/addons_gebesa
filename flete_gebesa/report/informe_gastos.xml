@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/flete_gebesa/static/src/css/travel_instructions.css"/>
+            </xpath>
+        </template>
+
+        <report
+            id="informe_gastos"
+            model="tms.travel"
+            string="Informe de Gastos"
+            report_type="qweb-pdf"
+            name="flete_gebesa.report_informe_gastos"
+            file="flete_gebesa.report_informe_gastos"
+        />
+
+        <record id="flete_gebesa.informe_gastos" model="ir.actions.report">
+            <field name="paperformat_informe_gastos_id" ref="flete_gebesa.paperformat_informe_gastos" />
+        </record>
+
+        <template id="informe_gastos_layout">
+            <div class="header">
+                <div id="cabezera">
+                </div>
+                <div width="100%">
+                    <div id="logo">
+                        <img class="logo_porte" t-if="doc.create_uid.partner_id.company_id.logo" t-att-src="'data:image/png;base64,%s' % doc.create_uid.partner_id.company_id.logo"/>
+                    </div>
+                    <div style="text-align:center;" id="titulo">
+                        INSTRUCCIONES DE GASTOS
+                    </div>
+                </div>
+                <div id="departamento">
+                    <span t-esc="doc.user_id.company_id.name"/>
+                </div>
+                <div style="text-align:center;" id="titulo">
+                        Fecha:&#160;<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                </div>
+            </div>
+
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+        </template>
+        <template id="report_informe_gastos_document">
+            <!--<t t-call="report.internal_layout">-->
+            <t t-call="flete_gebesa.informe_gastos_layout">
+                <div class="page" style="font-size: 10pt;">
+                    <div>
+                        <table class="mrp_shipment_table" width="100%">
+                            <tr>
+                                <td id="primer_tabla" width="10%">Folio:</td>
+                                <td width="15%">&#160;<span t-esc="doc.name"/></td>
+                                <td id="primer_tabla" width="10%">Kms Recorridos::</td>
+                                <td width="15%">&#160;</td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Operador:</td>
+                                <td>&#160;<span t-esc="doc.employee_id.name"/></td>
+                                <td id="primer_tabla">Disel Cargado:</td>
+                                <td>&#160;</td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Camion:</td>
+                                <td>&#160;<span t-esc="doc.unit_id.idname"/></td>
+                                <td id="primer_tabla">Caja:</td>
+                                <td>&#160;<span t-esc="doc.unit_id.load_capacity"/></td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Fecha Sal:</td>
+                                <td>&#160;<span t-esc="doc.date_start"/></td>
+                                <td id="primer_tabla">Fecha Regreso:</td>
+                                <td>&#160;</td>
+                            </tr> 
+                        </table>
+                    </div>
+                    <div>
+                        <table height="910px" class="mrp_shipment_table" width="100%">
+                            <tr>
+                                <td id="primer_tabla" align="center" width="10%"><br/><br/>Conceptos</td>
+                                <td id="primer_tabla" align="center" width="10%">Lunes</td>
+                                <td id="primer_tabla" align="center" width="10%">Martes</td>
+                                <td id="primer_tabla" align="center" width="10%">Miercoles</td>
+                                <td id="primer_tabla" align="center" width="10%">Jueves</td>
+                                <td id="primer_tabla" align="center" width="10%">Viernes</td>
+                                <td id="primer_tabla" align="center" width="10%">Sabado</td>
+                                <td id="primer_tabla" align="center" width="10%">Domingo</td>
+                                <td id="primer_tabla" align="center" width="10%"><br/><br/>Totales</td>
+                            </tr>
+                            <tr>
+                                <td align="center" width="10%"><br/><br/>Diesel</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td align="center" width="10%"><br/><br/>Comidas</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td align="center" width="10%"><br/><br/>Casetas</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td align="center" width="10%"><br/><br/>Maniobras, Pensiones, Guias, Taxis, Cocas</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr> 
+                            <tr>
+                                <td align="center" width="10%"><br/><br/>Reparaciones y Refacciones</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr> 
+                            <tr>
+                                <td align="center" width="10%"><br/><br/>Federales y Transitos</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr> 
+                            <tr>
+                                <td align="center" width="10%"><br/><br/>Talacha</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td align="center" width="10%"><br/><br/>Permisos</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td align="center" width="10%"><br/><br/>Otros </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td style="border:0px"> </td>
+                                <td style="border:0px"> </td>
+                                <td style="border:0px"> </td>
+                                <td style="border:0px"> </td>
+                                <td style="border:0px"> </td>
+                                <td style="border:0px"> </td>
+                                <td style="border:0px"> </td>
+                                <td align="center" width="10%" id="primer_tabla"><br/>TOTAL: </td>
+                                <td style="border:0px"> </td>
+                            </tr>       
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <template id="report_informe_gastos">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="flete_gebesa.report_informe_gastos_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

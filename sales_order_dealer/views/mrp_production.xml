@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_production_form_view'>
+            <field name='name'>mrp_production_dealer.mrpproduction</field>
+            <field name='model'>mrp.production</field>
+            <field name='inherit_id' ref='mrp.mrp_production_form_view'/>
+            <field name='arch' type='xml'>
+            <xpath expr="//field[@name='availability']" position="after">
+                <field name="partner_dealer_id" readonly="1"/>
+                <!--field name="dealer_id" readonly="1"/-->
+            </xpath>   
+            </field>
+        </record> 
+        <record model='ir.ui.view' id='mrp_production_tree_view'>
+            <field name='name'>mrp_production_dealer.mrpproduction_tree</field>
+            <field name='model'>mrp.production</field>
+            <field name='inherit_id' ref='mrp.mrp_production_tree_view'/>
+            <field name='arch' type='xml'>
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="partner_dealer_id" readonly="1"/>
+                <!--field name="dealer_id" readonly="1"/-->
+            </xpath>   
+            </field>
+        </record> 
+    </data>
+</odoo>

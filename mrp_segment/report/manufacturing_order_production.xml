@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="manufacturing_order_production"
+            model="mrp.production"
+            string="Manufacturing order"
+            report_type="qweb-pdf"
+            name="mrp_segment.report_manufacturing_order_production"
+            file="mrp_segment.report_manufacturing_order_production"
+        />
+        <template id="report_manufacturing_order_production">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="mrp_segment.report_manufacturing_order_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

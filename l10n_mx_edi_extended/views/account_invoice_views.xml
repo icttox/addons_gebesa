@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_l10n_mx_edi_extent_invoice_form_inherit" model="ir.ui.view">
+        <field name="name">l10n_mx_edi.extent.invoice.form.inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header/button[@name='action_invoice_draft']" position="after">
+                <button name="cancel_xml_mx" attrs="{'invisible':['|', ('state', '!=', 'open'),('type', '!=', 'out_invoice')]}" string="Cancel only on SAT" type="object" groups='res_users_cancel_invoice.group_cancel_invoice'/>
+                <button name="cancel_xml_mx" attrs="{'invisible':['|', ('type', '!=', 'out_refund'),('state', 'not in', ['paid', 'open'])]}" string="Cancel only on SAT" type="object" groups='res_users_cancel_invoice.group_cancel_invoice'/>
+                <button name="l10n_mx_edi_check_cancel_status" string="Check Cancel Status" type="object" attrs="{'invisible': [('l10n_mx_edi_pac_status', '!=', 'cancelled')]}"/>
+            </xpath>
+            <xpath expr="//notebook/page[last()]" position="after">
+                <page string="CFD-I Global">
+                    <group>
+                        <field name="l10n_mx_edi_periodicity"/>
+                        <field name="l10n_mx_edi_month"/>
+                        <field name="l10n_mx_edi_year"/>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//field[@name='move_id']" position="after">
+                <field name="break_down_disc"/>
+            </xpath>
+            <xpath expr="//field[@name='date_invoice']" position="after">
+                <field name="rate_mex" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_l10n_mx_edi_extent_invoice_replace_form_inherit" model="ir.ui.view">
+        <field name="name">l10n_mx_edi.extent.invoice.replace.form.inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account_invoice_replace.account_invoice_replace_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_cancelled']" position="after">
+                <field name="l10n_mx_edi_reason_cancellation"/>
+                <field name="l10n_mx_edi_invoices_replace" attrs="{'invisible':[('l10n_mx_edi_reason_cancellation', '!=', '01')], 'required':[('l10n_mx_edi_reason_cancellation', '=', '01')]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_l10n_mx_edi_extent_invoice_form_xml_intermediate" model="ir.ui.view">
+        <field name="name">l10n_mx_edi.extent.invoice.form.xml.intermediate</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="groups_id" eval="[(6,0, [ref('system_administrator.group_system_administrator_gebesa')])]"/>
+        <field name="arch" type="xml">
+            <!--xpath expr="//form/header/button[@name='action_invoice_draft']" position="after">
+                
+                
+            </xpath-->
+            <xpath expr="//notebook/page[last()]" position="after">
+                <page string="Intermediate XML">
+                    <button name="action_intermediate_xml" attrs="{'invisible':[('state', '!=', 'draft')]}" string="Generate Unsealed XML" type="object"/>
+                    <button name="action_read_intermediate_file" attrs="{'invisible':[('state', '!=', 'draft')]}" string="Read Unsealed XML" type="object"/>
+                    <field name='xml_intermediate'/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_l10n_mx_edi_extent_invoice_supplier_form_inherit" model="ir.ui.view">
+        <field name="name">l10n_mx_edi.extent.invoice.supplier.form.inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_invoice']" position="after">
+                <field name="rate_mex" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

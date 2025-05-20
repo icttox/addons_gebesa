@@ -1,0 +1,247 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* report_price_list
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-27 15:37+0000\n"
+"PO-Revision-Date: 2016-12-27 15:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.report_price_list_isometric_footer
+msgid "<br/>.com"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.report_price_list_isometric
+msgid "<strong>CODE</strong>"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.report_price_list_isometric
+msgid "<strong>Cu. Ft.</strong>"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.report_price_list_isometric
+msgid "<strong>DESCRIPTION</strong>"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.report_price_list_isometric
+msgid "<strong>DIMENSIONS <br/> W x D x H</strong>"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.report_price_list_isometric
+msgid "<strong>LB.</strong>"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.report_price_list_isometric
+msgid "<strong>PRICE</strong>"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.product_line_finished_form
+msgid "Composition"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.model.fields,field_description:report_price_list.field_product_line_composiciones_html
+msgid "Compositions Html"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.model.fields,field_description:report_price_list.field_report_report_price_list_report_price_list_isometric_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.product_line_finished_form
+msgid "Extra information"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.model.fields,field_description:report_price_list.field_product_line_acabados_html
+msgid "Finished Html"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_template.py:27
+#: model:ir.model.fields,field_description:report_price_list.field_product_template_height
+#, python-format
+msgid "Height"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.model.fields,field_description:report_price_list.field_report_report_price_list_report_price_list_isometric_id
+msgid "ID"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_product.py:13
+#, python-format
+msgid "Indicates whether the Product is line"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_product.py:12
+#: model:ir.ui.view,arch_db:report_price_list.product_product_isline_form_view
+#, python-format
+msgid "Is Line"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_template.py:12
+#: model:ir.model.fields,field_description:report_price_list.field_product_template_pricelist
+#, python-format
+msgid "Is price list"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.product_template_form_view
+msgid "Isometric"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_template.py:31
+#: model:ir.model.fields,field_description:report_price_list.field_product_template_isometric
+#, python-format
+msgid "Isometric image"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.model.fields,field_description:report_price_list.field_report_report_price_list_report_price_list_isometric___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_template.py:19
+#: model:ir.model.fields,field_description:report_price_list.field_product_template_length
+#, python-format
+msgid "Length"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_template.py:35
+#: model:ir.model.fields,field_description:report_price_list.field_product_template_isometric_medium
+#, python-format
+msgid "Medium-sized isometric image"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_template.py:16
+#: model:ir.model.fields,field_description:report_price_list.field_product_template_note_pricelist
+#, python-format
+msgid "Note price list"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.product_line_finished_form
+msgid "Notes"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.model.fields,field_description:report_price_list.field_product_line_notas_html
+msgid "Notes Html"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.model.fields,field_description:report_price_list.field_product_attribute_value_number
+msgid "Number"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.report_price_list_isometric_header
+msgid "PRICELIST"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.actions.report.xml,name:report_price_list.price_list_isometric
+msgid "Pricelist"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.model,name:report_price_list.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_template.py:42
+#: model:ir.model.fields,field_description:report_price_list.field_product_template_isometric_small
+#, python-format
+msgid "Small-sized isometric image"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.report_price_list_isometric_footer
+msgid "Terms and conditions:<br/>\n"
+"                            *Prices are subject to authorized discounts<br/>\n"
+"                            *Prices subject to change<br/>\n"
+"                            *Nominal dimensions shown"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.ui.view,arch_db:report_price_list.product_line_finished_form
+msgid "Textures and Finishes"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_template.py:23
+#: model:ir.model.fields,field_description:report_price_list.field_product_template_width
+#, python-format
+msgid "Width"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_template.py:28
+#: model:ir.model.fields,help:report_price_list.field_product_template_height
+#, python-format
+msgid "height in cm"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_template.py:20
+#: model:ir.model.fields,help:report_price_list.field_product_template_length
+#, python-format
+msgid "length in cm"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.model,name:report_price_list.model_product_attribute_value
+msgid "product.attribute.value"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.model,name:report_price_list.model_product_line
+msgid "product.line"
+msgstr ""
+
+#. module: report_price_list
+#: model:ir.model,name:report_price_list.model_report_report_price_list_report_price_list_isometric
+msgid "report.report_price_list.report_price_list_isometric"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_template.py:13
+#: model:ir.model.fields,help:report_price_list.field_product_template_pricelist
+#, python-format
+msgid "the product is displayed in the price list"
+msgstr ""
+
+#. module: report_price_list
+#: code:addons/report_price_list/models/product_template.py:24
+#: model:ir.model.fields,help:report_price_list.field_product_template_width
+#, python-format
+msgid "width in cm"
+msgstr ""
+

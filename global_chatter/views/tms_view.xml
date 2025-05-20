@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="tms_route_view_chatter_view_form">
+            <field name="name">tms.route.view.chatter.view.form</field>
+            <field name="model">tms.route</field>
+            <field name="inherit_id" ref="tms.view_tms_route_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="after">
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>  
+                </xpath>
+            </field>
+       </record>
+
+       <record model="ir.ui.view" id="tms_route_tollstation_view_chatter_view_form">
+            <field name="name">tms.route.tollstation.view.chatter.view.form</field>
+            <field name="model">tms.route.tollstation</field>
+            <field name="inherit_id" ref="tms.tms_route_tollstation_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="after">
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>  
+                </xpath>
+            </field>
+       </record>
+    </data>
+</odoo>    

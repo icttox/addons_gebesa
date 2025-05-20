@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="attendance_activity_normal" model="attendance.activity">
+			<field name="name">Normal Attendance</field>
+		</record>
+		<record id="attendance_activity_overtime" model="attendance.activity">
+			<field name="name">Overtime</field>
+		</record>
+
+		<record model="hr.salary.rule" id="bono_productividad">
+            <field name="name">BONO PRODUCTIVIDAD</field>
+            <field name="code">BONO</field>
+            <field name="id_microsip">4463</field>
+            <field name="category_id" ref="hr_payroll.NET"/>
+        </record>
+
+        <record model="hr.salary.rule" id="horas_extras">
+            <field name="name">Horas extras</field>
+            <field name="code">104</field>
+            <field name="id_microsip">107</field>
+            <field name="category_id" ref="hr_payroll.NET"/>
+        </record>
+	</data>
+	
+	<data noupdate="1">
+		<!-- Normal Attendance -->
+		<record id="attendance_device_state_code_0" model="attendance.state">
+			<field name="name">Check-in</field>
+			<field name="code" eval="0" />
+			<field name="activity_id" ref="attendance_activity_normal" />
+			<field name="type">checkin</field>
+			<field name="start_time">4.25</field>
+			<field name="end_time">11.9</field>
+		</record>
+		<record id="attendance_device_state_code_1" model="attendance.state">
+			<field name="name">Check-out</field>
+			<field name="code" eval="1" />
+			<field name="activity_id" ref="attendance_activity_normal" />
+			<field name="type">checkout</field>
+			<field name="start_time">15.25</field>
+			<field name="end_time">22.4833333333333</field>
+		</record>
+		<!-- <record id="attendance_device_state_code_2" model="attendance.state">
+			<field name="name">Break-Out</field>
+			<field name="code" eval="2" />
+			<field name="activity_id" ref="attendance_activity_normal" />
+			<field name="type">breakout</field>
+		</record>
+		<record id="attendance_device_state_code_3" model="attendance.state">
+			<field name="name">Break-In</field>
+			<field name="code" eval="3" />
+			<field name="activity_id" ref="attendance_activity_normal" />
+			<field name="type">breakin</field>
+		</record> -->
+		
+		<!-- Overtime Attendance -->
+		<record id="attendance_device_state_code_4" model="attendance.state">
+			<field name="name">Check-in</field>
+			<field name="code" eval="4" />
+			<field name="activity_id" ref="attendance_activity_overtime" />
+			<field name="type">checkin</field>
+		</record>
+		<record id="attendance_device_state_code_5" model="attendance.state">
+			<field name="name">Check-out</field>
+			<field name="code" eval="5" />
+			<field name="activity_id" ref="attendance_activity_overtime" />
+			<field name="type">checkout</field>
+		</record>
+
+		<record id="attendance_device_state_code_6" model="attendance.state">
+			<field name="name">Break</field>
+			<field name="code" eval="6" />
+			<field name="activity_id" ref="attendance_activity_normal" />
+			<field name="type">break</field>
+			<field name="start_time">11.9166666666667</field>
+			<field name="end_time">15.2333333333333</field>
+		</record>
+		<record id="attendance_device_state_code_7" model="attendance.state">
+			<field name="name">Night</field>
+			<field name="code" eval="7" />
+			<field name="activity_id" ref="attendance_activity_normal" />
+			<field name="type">night</field>
+			<field name="start_time">22.5</field>
+			<field name="end_time">4.23333333333333</field>
+		</record>
+
+		<record id="attendance_device_state_code_255" model="attendance.state">
+			<field name="name">No type</field>
+			<field name="code" eval="255" />
+			<field name="activity_id" ref="attendance_activity_normal" />
+			<field name="type">notype</field>
+		</record>
+	</data>
+</odoo>

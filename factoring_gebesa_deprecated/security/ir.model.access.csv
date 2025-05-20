@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+fact_cust_manager,factoring_customer_manager,model_factoring_customer,group_factoring_customer,1,1,1,1
+fact_supl_manager,factoring_supplier_manager,model_factoring_supplier,group_factoring_supplier,1,1,1,1

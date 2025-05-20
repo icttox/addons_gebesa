@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="tsca"
+            model="input.product.wz"
+            string="Entrada Producto"
+            report_type="qweb-pdf"
+            name="immex_gebesa.report_tsca" 
+            file="immex_gebesa.report_tsca"
+        />
+
+        <template id="report_tsca_document">
+            <t t-call="report.internal_layout">
+                <div class="page" style="font-size: 10pt;">
+                fsejedddeddawdwdawdaw
+                </div>
+            </t>
+        </template>
+
+        <template id="report_tsca">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="immex_gebesa.report_tsca_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

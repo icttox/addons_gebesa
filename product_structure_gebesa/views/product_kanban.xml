@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_normal_cost_kanban_view'>
+            <field name='name'>product.normal.cost.kanban.view</field>
+            <field name='model'>product.template</field>
+            <field name='inherit_id' ref="product.product_template_kanban_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//strong[@class='o_kanban_record_title']" position="replace">
+                    <strong class="o_kanban_record_title">
+                        [<field t-if="record.default_code.value" name="default_code"/>
+                         <field t-if="record.reference_mask" name="reference_mask"/>]
+                        <field name="name"/>
+                    </strong>
+                </xpath>
+                <field name="lst_price" position="after">
+                    <field name="standard_price"/>
+                    <field name="multi_variant"/>
+                </field>
+                <ul position="inside">
+                    <li>Costo: <field name="standard_price" widget="monetary"/></li>
+                </ul>
+                <xpath expr="//div[@groups='product.group_product_variant']" position="replace">
+                    <div t-if="record.multi_variant.raw_value" groups="product.group_product_variant">
+                        <strong>
+                            <t t-esc="record.product_variant_count.value"/> Variants
+                        </strong>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

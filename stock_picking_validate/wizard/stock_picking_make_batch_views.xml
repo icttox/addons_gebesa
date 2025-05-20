@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- add picking to batch  -->
+        <record id="stock_picking_make_batch_form" model="ir.ui.view">
+            <field name="name">stock.picking.make.batch.form</field>
+            <field name="model">stock.picking.make.batch</field>
+            <field name="arch" type="xml">
+                <form string="Add pickings to new batch">
+                    <footer>
+                        <button name="link_pickings" type="object" string="Add to new Batch" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!--  add picking to new batch action -->
+        <record id="stock_picking_make_batch_action" model="ir.actions.act_window">
+            <field name="name">Add to new Batch</field>
+            <field name="res_model">stock.picking.make.batch</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="stock_picking_make_batch_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <act_window id="stock_picking_make_batch_action_stock_picking"
+            multi="True"
+            key2="client_action_multi" name="Add to new batch"
+            res_model="stock.picking.make.batch" src_model="stock.picking"
+            view_mode="form" target="new" view_type="form"/>
+
+    </data>
+</odoo>

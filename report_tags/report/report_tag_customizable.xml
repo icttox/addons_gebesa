@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="tag_customizable"
+            model="mrp.production"
+            string="Etiqueta Personalizable"
+            report_type="qweb-pdf"
+            name="report_tags.report_tag_customizable"
+            file="report_tags.report_tag_customizable"
+        />
+        <record id="report_tags.tag_customizable" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag_vertical" />
+        </record>
+
+        <template id="report_tag_customizable_production_document_type1">
+            <div class="page" style="font-size: 7pt;">
+                <t t-foreach="line_ids" t-as="line_id">
+                    <t t-foreach="range(int(line_ids[line_id]))" t-as="qty">
+                        <div align="center" style="border: 1px solid #000000; height: 230px;">
+                            <div>
+                                <img t-att-src="'data:image/png;base64,%s' % code_customer[doc.id]['partner_id'].image" style="max-width: 290px;margin-top: 18px;"/>
+                            </div>
+                            <br/>
+                            <div style="font-size: 16pt;">
+                                <strong>
+                                    (<span t-esc="code_customer[doc.id]['customer_code'].qty"/>) <span t-esc="code_customer[doc.id]['customer_code'].customer_code"/>
+                                </strong>
+                                <br />
+                                <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'CCode39'">
+                                    <div style="margin-top: 10px;font-size: 12pt;font-family: CCode39;">
+                                        <t t-set="code" t-value="'*'+str(code_customer[doc.id]['customer_code'].qty)+' '+code_customer[doc.id]['customer_code'].customer_code+'*'"/>
+                                        <span t-esc="code"/>
+                                    </div>
+                                </t>
+                                <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'Code128bWin'">
+                                    <t t-set="code" t-value="str(code_customer[doc.id]['customer_code'].qty)+' '+code_customer[doc.id]['customer_code'].customer_code"/>
+                                    <t t-set="code_img" t-value="code128_image(code)"/>
+                                    <img t-att-src="'data:image/png;base64,%s' % code_img" style="max-width: 290px;margin-top: 18px;"/>
+                                </t>
+                                <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'UPC_A'">
+                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('UPCA', str(code_customer[doc.id]['customer_code'].qty)+' '+code_customer[doc.id]['customer_code'].customer_code, 1500, 400, 1)" style="max-width: 290px;"/>
+                                </t>
+                            </div>
+                            <br />
+                            <br />
+                            <div style="font-size: 8pt;">
+                                Made in Mexico / Hecho en México / Fabriqué au Mexique
+                            </div>
+                        </div>
+                        <div align="center" style="border: 1px solid #000000; height: 160px;font-size: 8pt">
+                            <br />
+                            <t t-foreach="langs" t-as="lang">
+                                <t t-set="trans" t-value="code_customer[doc.id]['customer_code'].with_context({'lang':lang})"/>
+                                <span t-esc="trans.customer_description"/>
+                                <br />
+                            </t>
+                        </div>
+                        <div align="center" style="border: 1px solid #000000; height: 160px;font-size: 8pt">
+                            <br />
+                            Manufactured for / Manufacturado para / Fabriqué pour
+                            <br />
+                            <span t-esc="code_customer[doc.id]['partner_id'].tag_footer"/>
+                        </div>
+                        Página <span t-esc="qty + 1"/> de <span t-esc="'%.0f'%int(line_ids[line_id])"/>
+                        <div style="page-break-after: always;">&#160;</div>
+                    </t>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_customizable_production_document_type2">
+            <div class="page" style="font-size: 7pt;">
+                <t t-foreach="line_ids" t-as="line_id">
+                    <t t-foreach="range(int(line_ids[line_id]))" t-as="qty">
+                        <div align="center" style="border: 1px solid #000000; height: 230px;">
+                            <div>
+                                <img t-att-src="'data:image/png;base64,%s' % code_customer[doc.id]['partner_id'].image" style="max-width: 290px;margin-top: 18px;"/>
+                            </div>
+                            <br />
+                            <div style="font-size: 16pt;">
+                                <br />
+                                <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'CCode39'">
+                                    <div style="margin-top: 10px;font-size: 16pt;font-family: CCode39;"> 
+                                        <t t-set="code" t-value="'*'+str(code_customer[doc.id]['customer_code'].customer_code)+'*'"/>
+                                        <span t-esc="code"/>
+                                    </div>
+                                </t>
+                                <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'Code128bWin'">
+                                    <img t-att-src="'data:image/png;base64,%s' % code_customer[doc.id]['customer_code'].code_128_bina" style="max-width: 290px;margin-top: 18px;"/>
+                                </t>
+                                <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'UPC_A'">
+                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('UPCA', code_customer[doc.id]['customer_code'].customer_code, 1500, 400, 1)" style="max-width: 290px;"/>
+                                </t>
+                                <br />
+                                <strong>
+                                    <span t-esc="code_customer[doc.id]['customer_code'].customer_code"/>
+                                </strong>
+                            </div>
+                            <br />
+                            <br />
+                        </div>
+                        <div align="center" style="border: 1px solid #000000; height: 160px;font-size: 8pt">
+                            <br />
+                            <t t-foreach="langs" t-as="lang">
+                                <t t-set="trans" t-value="code_customer[doc.id]['customer_code'].with_context({'lang':lang})"/>
+                                <span t-esc="trans.customer_description"/>
+                                <br />
+                            </t>
+                        </div>
+                        <div align="center" style="border: 1px solid #000000; height: 160px;font-size: 8pt">
+                            <br />
+                            Manufactured for / Manufacturado para / Fabriqué pour
+                            <br />
+                            <span t-esc="code_customer[doc.id]['partner_id'].tag_footer"/>
+                        </div>
+                        Página <span t-esc="qty + 1"/> de <span t-esc="'%.0f'%int(line_ids[line_id])"/>
+                        <div style="page-break-after: always;">&#160;</div>
+                    </t>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_customizable_production_document_type3">
+            <div class="page" style="font-size: 7pt;">
+                <t t-foreach="line_ids" t-as="line_id">
+                    <t t-foreach="range(int(line_ids[line_id]))" t-as="qty">
+                        <div align="center" >
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'CCode39'">
+                                <div style="font-size: 13pt;font-family: CCode39;"> 
+                                    <t t-set="code" t-value="'*'+str(code_customer[doc.id]['customer_code'].customer_code)+'*'"/>
+                                    <span t-esc="code"/>
+                                </div>
+                            </t>
+                            <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'Code128bWin'">
+                                <div> 
+                                    <img t-att-src="'data:image/png;base64,%s' % code_customer[doc.id]['customer_code'].code_128_bina" style="max-width: 290px;margin-top: 18px;"/>
+                                </div>
+                            </t>
+                            <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'UPC_A'">
+                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('UPCA', code_customer[line.id].customer_code, 1500, 400, 1)" style="max-width: 290px;"/>
+                            </t>
+                            <br/>
+                            <strong style="font-size: 20pt;">
+                                <span t-esc="code_customer[doc.id]['customer_code'].customer_code"/>
+                            </strong>
+                            <br/>
+                            <br/>
+                            <t t-set="trans" t-value="code_customer[doc.id]['customer_code'].with_context({'lang':code_customer[doc.id]['partner_id'].lang})"/>
+                            <span style="font-size: 14pt;" t-esc="trans.customer_description"/>
+                            <br/>
+                            <div style="font-size: 12pt;">
+                                Weight: <span t-esc="float(code_customer[doc.id]['customer_code'].product_id.weight) * 2.205"/> LBS
+                            </div>
+                            <br/>
+                            <div style="font-size: 12pt;">
+                                PO: <span t-esc="line_id.order_id.client_order_ref"/>
+                            </div>
+                        </div>
+                        <div style="page-break-after: always;">&#160;</div>
+                    </t>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_customizable_production_document_type4">
+            <div class="page">
+                <t t-foreach="range(int(doc.product_uom_qty))" t-as="qty">
+                    <div style="border: 2px solid #000000; height: 370px;page-break-after: always;">
+                        <div align="center" style="font-size: 16pt;margin-top: 15px;">
+                            <strong>
+                                (<span t-esc="code_customer[doc.id]['customer_code'].qty"/>) <span t-esc="code_customer[doc.id]['customer_code'].customer_code"/>
+                            </strong>
+                            <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'CCode39'">
+                                <div style="font-family: CCode39;">
+                                    <t t-set="code" t-value="'*'+str(code_customer[doc.id]['customer_code'].qty)+' '+code_customer[doc.id]['customer_code'].customer_code+'*'"/>
+                                    <span t-esc="code"/>
+                                </div>
+                            </t>
+                            <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'Code128bWin'">
+                                <t t-set="code" t-value="str(code_customer[doc.id]['customer_code'].qty)+' '+code_customer[doc.id]['customer_code'].customer_code"/>
+                                <t t-set="code_img" t-value="code128_image(code)"/>
+                                <img t-att-src="'data:image/png;base64,%s' % code_img" style="max-width: 290px;margin-top: 18px;"/>
+                            </t>
+                            <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'UPC_A'">
+                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('UPCA', str(code_customer[line.id].qty)+' '+code_customer[line.id].customer_code, 1500, 400, 1)" style="max-width: 300px;"/>
+                            </t>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-12 text-right mt-3" style="font-size: 13pt;">
+                                Made in Mexico / Hecho en México / Fabriqué au Mexique
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-12 text-right mt-3" style="font-size: 5pt;">
+                                ©2019 Caterpillar. CAT, CATERPILLAR, their respective logos, “Caterpillar Yellow”, “Caterpillar Corporate Yellow”,<br/>
+                                as well as corporate and product identity used herein, are trademarks of Caterpillar<br/>
+                                and may not be used without permission.<br/>
+                                Manufacturas Post Form S.A. de C.V., a licensee of Caterpillar Inc.
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-12 text-right mt-3" style="font-size: 5pt;">
+                                ©2019 Caterpillar. CAT, CATERPILLAR, leurs logos respectifs, “Caterpillar Yellow”, “Caterpillar Corporate Yellow”,<br/>
+                                ainsi que l'identité de l'entreprise et du produit utilisés dans le présent document, sont des marques commerciales de Caterpillar<br/>
+                                et ne peuvent être utilisées sans autorisation.<br/>
+                                Manufacturas Post Form S.A. de C.V., titulaire de la licence de Caterpillar Inc.
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-12 text-right mt-3" style="font-size: 5pt;">
+                                ©2019 Caterpillar.Todos los derechos reservados. CAT, CATERPILLAR, sus respectivos logos, “Amarillo de Caterpillar”,<br/>
+                                asi como la identidad de producto y corporativa utilizadas en este paquete son marcas de Caterpillar<br/>
+                                y no pueden ser utilizadas sin permiso.<br/>
+                                Manufacturas Post Form S.A. de C.V., un concencionario de Caterpillar Inc.
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-5 mt-3" align="left" style="font-size: 5pt;">
+                                <div class="row no-gutters">
+                                    <div class="col-3">
+                                        <img src='/report_tags/static/src/img/CAT.png' style="max-width: 40px;"/>
+                                    </div>
+                                    <div class="col-9 mt-2">
+                                        Manufactured by/Fabricado por/ Fabriqué par:<br/>
+                                        <span t-esc="doc.company_id.name"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-7 mt-3" align="right" style="font-size: 6pt;">
+                                <t t-foreach="langs" t-as="lang">
+                                    <t t-set="trans" t-value="code_customer[doc.id]['customer_code'].with_context({'lang':lang})"/>
+                                    <span t-esc="trans.customer_description"/>
+                                    <br />
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_customizable_production_document_type5">
+            <div class="page" style="font-family:Arial;">
+                <t t-foreach="line_ids" t-as="line_id">
+                    <t t-foreach="range(int(line_ids[line_id]))" t-as="qty">
+                        <br/>
+                        <div style="font-size: 12pt;margin-top: 20px;page-break-after: always;">
+                            <div style="font-size: 12pt;margin-top: 20px;">
+                                <span style="font-size: 20pt;">University Loft Company</span>
+                                <br/>
+                                <br/>
+                                <b>Part #:</b><br/>
+                                <t t-if="len(code_customer[doc.id]['customer_code'].customer_code) &lt;= 16">
+                                    <span t-esc="code_customer[doc.id]['customer_code'].customer_code" style="font-size: 23pt;"/>
+                                </t>
+                                <t t-if="len(code_customer[doc.id]['customer_code'].customer_code) &gt; 16">
+                                    <span t-esc="code_customer[doc.id]['customer_code'].customer_code" style="font-size: 18pt;"/>
+                                </t>
+                                <br/>
+                                <br/>
+                                <b>Rev #:</b>
+                                <br/>
+                                <span t-esc="code_customer[doc.id]['customer_code'].version" style="font-size: 23pt;"/>
+                                <br/>
+                                <br/>
+                                <div style="font-size: 8pt">
+                                    <b>Description:</b>
+                                    <br/>
+                                    <span t-esc="code_customer[doc.id]['customer_code'].customer_description"/>
+                                    <br/>
+                                    <br/>
+                                    <t t-set="jv" t-value="jv_template5(line_id.order_id.commitment_date, line_id.order_id.date_reception)+line_id.order_id.partner_id.vendor_code"/>
+                                    <table style="font-size: 8pt">
+                                        <tr>
+                                            <td><b>Po Number:</b></td>
+                                            <td><span t-esc="line_id.order_id.client_order_ref"/></td>
+                                        </tr>
+                                        <tr><td></td><td></td></tr>
+                                        <tr>
+                                            <td><b>JV:</b></td>
+                                            <td>
+                                                <span t-esc="jv"/>
+                                            </td>
+                                        </tr>
+                                        <tr><td></td><td></td></tr>
+                                        <tr>
+                                            <td><b>Container:</b></td>
+                                            <td> </td>
+                                        </tr>
+                                        <tr><td></td><td></td></tr>
+                                        <tr>
+                                            <td><b>Package Qty:</b></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr><td></td><td></td></tr>
+                                        <tr>
+                                            <td><b>Shipment #:</b></td>
+                                            <td> </td>
+                                        </tr>
+                                        <tr><td></td><td></td></tr>
+                                        <tr>
+                                            <td><b>Commen:</b></td>
+                                            <td>
+                                                <t t-if="line_id.order_id.note">
+                                                    <span t-esc="line_id.order_id.note[0:50]"/>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <br/>
+                                <br/>
+                                <t t-set="bc" t-value="'*'+str(code_customer[doc.id]['customer_code'].bc_value)+'*'"/>
+                                <div align="center" style="font-family: CCode39;font-size: 19pt;">
+                                    <span t-esc="bc.replace(' ',u'\xa0').encode('utf-8')"/>
+                                </div>
+                                <div align="center"  style="margin-top: 15px;">
+                                    <span t-esc="code_customer[doc.id]['customer_code'].bc_value.replace(' ',u'\xa0').encode('utf-8')"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_customizable_production_document_type6">
+            <div class="page" style="font-family:Arial; font-size: 26pt;">
+                <t t-foreach="line_ids" t-as="line_id">
+                    <t t-foreach="range(int(line_ids[line_id]))" t-as="qty">
+                        <div class="row" style="background-color: #0DB4C3;">
+                            <div class="col-12 my-4">
+                                <div class="row">
+                                    <div class="col-12" align="center">
+                                        <img src='/report_tags/static/src/img/LogoGebesaLema.png' style="max-width: 180px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-4" align="center">
+                                <span>DOANE KEYES ASSOCIATES</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-4" style="border-top: 3px solid #0DB4C3;">
+                                <div class="row mt-3">
+                                    <div class="col-2">CODE#</div>
+                                    <div class="col-10"><span t-esc="doc.product_id.default_code"/></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-3" style="border-top: 3px solid #0DB4C3;">
+                                <div class="row mt-3">
+                                    <div class="col-4">DOANE KEYES PO#</div>
+                                    <div class="col-8"><span t-esc="line_id.order_id.client_order_ref"/></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 my-3" style="border-top: 3px solid #0DB4C3; border-bottom: 3px solid #0DB4C3">
+                                <div class="row my-3">
+                                    <div class="col-4">QTY</div>
+                                    <div class="col-8"><span t-esc="line_ids[line_id]"/></div>
+                                </div>
+                            </div>
+                            <div class="col-6 my-3" style="border-top: 3px solid #0DB4C3; border-bottom: 3px solid #0DB4C3;;border-left: 3px solid #0DB4C3;">
+                                <div class="row my-3">
+                                    <div class="col-4">PACK</div>
+                                    <div class="col-8"><span t-esc="qty + 1"/></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row mt-3">
+                                    <div class="col-3">DESCRIPTION</div>
+                                    <div class="col-9">
+                                        <t t-if="doc.product_id.individual_name">
+                                            <t t-set="trans" t-value="doc.product_id.with_context({'lang':line_id.order_id.partner_id.lang})"/>
+                                            <span t-esc="trans.individual_name"/>
+                                        </t>
+                                        <t t-if="not doc.product_id.individual_name">
+                                            <t t-set="trans" t-value="doc.product_id.product_tmpl_id.with_context({'lang':line_id.order_id.partner_id.lang})"/>
+                                            <span t-esc="trans.name"/>
+                                        </t>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-3" style="border-top: 3px solid #0DB4C3;">
+                                <div class="row mt-3">
+                                    <div class="col-3">SALES ORDER</div>
+                                    <div class="col-9"><span t-esc="line_id.order_id.name"/></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="page-break-after: always;">
+                            <div class="col-6 my-3" style="border-top: 3px solid #0DB4C3; border-bottom: 3px solid #0DB4C3">
+                                <div class="row my-3">
+                                    <div class="col-4">TAG LINE</div>
+                                    <div class="col-8"><span t-esc="line_id.line_tag_number"/></div>
+                                </div>
+                            </div>
+                            <div class="col-6 my-3" style="border-top: 3px solid #0DB4C3; border-bottom: 3px solid #0DB4C3;;border-left: 3px solid #0DB4C3;">
+                                <div class="row my-3">
+                                    <div class="col-4">TAG</div>
+                                    <div class="col-8"><span t-esc="line_id.order_id.general_tag_num"/></div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_customizable_production_document_type7">
+            <div class="page" style="font-family:Arial;">
+                <t t-foreach="range(int(doc.product_qty))" t-as="qty">
+                    <div class="text-center" style="page-break-after: always;">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <img src='/report_tags/static/src/img/global_industrial.png' style="max-width: 400px;"/>
+                            </div>
+                        </div>
+                        <t t-set="trans" t-value="code_customer[doc.id]['customer_code'].with_context({'lang':code_customer[doc.id]['partner_id'].lang})"/>
+                        <div class="row mt-4 h4">
+                            <div class="col-12">
+                                <span t-esc="trans.customer_description"/>
+                                <br/>
+                                <span t-esc="'Model No. ' + code_customer[doc.id]['customer_code'].customer_code"/>
+                                <br/>
+                                <span>Qty. 1</span>
+                            </div>
+                        </div>
+                        <div class="row mt-4" t-if="code_customer[doc.id]['customer_code'].bc_value">
+                            <div class="col-12">
+                                <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'CCode39'">
+                                    <div class="h3" style="font-family: CCode39;">
+                                        <t t-set="code" t-value="'*'+code_customer[doc.id]['customer_code'].bc_value+'*'"/>
+                                        <span t-esc="code"/>
+                                    </div>
+                                    <span t-esc="code_customer[doc.id]['customer_code'].bc_value"/>
+                                </t>
+                                <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'Code128bWin'">
+                                    <t t-set="code" t-value="code_customer[doc.id]['customer_code'].bc_value"/>
+                                    <t t-set="code_img" t-value="code128_image(code)"/>
+                                    <img t-att-src="'data:image/png;base64,%s' % code_img" style="max-width: 290px;margin-top: 18px;"/>
+                                </t>
+                                <t t-if="code_customer[doc.id]['partner_id'].type_barcode == 'UPC_A'">
+                                     <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('UPCA', code_customer[doc.id]['customer_code'].bc_value, 1500, 400, 1)" style="max-width: 300px;"/>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_customizable">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-if="template != '6'">
+                            <t t-set="partner_lang" t-value="code_customer[doc.id]['partner_id'].lang"/>
+                        </t>
+                        <t t-set="line_ids" t-value="line_qty[doc.id]"/>
+                        <t t-if="template == '1'">
+                            <t t-call="report_tags.report_tag_customizable_production_document_type1"/>
+                        </t>
+                        <t t-if="template == '2'">
+                            <t t-call="report_tags.report_tag_customizable_production_document_type2"/>
+                        </t>
+                        <t t-if="template == '3'">
+                            <t t-call="report_tags.report_tag_customizable_production_document_type3"/>
+                        </t>
+                        <t t-if="template == '4'">
+                            <t t-call="report_tags.report_tag_customizable_production_document_type4"/>
+                        </t>
+                        <t t-if="template == '5'">
+                            <t t-call="report_tags.report_tag_customizable_production_document_type5"/>
+                        </t>
+                        <t t-if="template == '6'">
+                            <t t-call="report_tags.report_tag_customizable_production_document_type6"/>
+                        </t>
+                        <t t-if="template == '7'">
+                            <t t-call="report_tags.report_tag_customizable_production_document_type7"/>
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

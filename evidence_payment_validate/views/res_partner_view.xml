@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='required_evidence_view_partner_form'>
+            <field name='name'>required.evidence.view.partner.form</field>
+            <field name='model'>res.partner</field>
+            <field name='inherit_id' ref='base.view_partner_form'/>
+            <field name='arch' type='xml'>
+            <xpath expr="//form/sheet/group/group/field[@name='category_id']" position="after">
+                <field name="requires_evidence"/> 
+            </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

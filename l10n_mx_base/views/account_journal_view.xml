@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_account_journal_view_form_inh_l10n_mx_base">
+        <field name="name">view.account.journal.view.form.inh.l10n_mx_base</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='group_invoice_lines']" position="after">
+                <field name="address_issued_id" attrs="{'invisible':  [('type', '!=', 'sale')]}" context="{'default_type': 'invoice'}"/>
+                <field name="auto_send_invoice" attrs="{'invisible':  [('type', '!=', 'sale')]}"/>
+            </xpath>
+        </data>
+        </field>
+    </record>
+
+</odoo>

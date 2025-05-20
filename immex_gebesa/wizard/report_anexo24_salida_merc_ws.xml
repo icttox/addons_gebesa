@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='report_anexo24_salida_merc_ws_form'>
+            <field name='name'>report.anexo24.salida.merc.ws.form</field>
+            <field name='model'>report.anexo24.salida.merc.ws</field>
+            <field name='arch' type='xml'>
+                <form string='Anexo 24 Salida de Mercancias'>
+                    <group>
+                        <field name='fecha_inicio'/>
+                        <field name='fecha_final' />
+                    </group>
+                    <footer>
+                        <button string="Generar" name="get_report_salida_mercancia" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_report_anexo24_salida_merc_ws" model="ir.actions.act_window">
+            <field name="name">Anexo 24 Salida de Mercancias</field>
+            <field name="res_model">report.anexo24.salida.merc.ws</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="report_anexo24_salida_merc_ws_form"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+    
+
+         <menuitem id="action_report_anexo24_salida_merc_ws_menu" name="Anexo 24 Salida de Mercancias" parent="immex_gebesa.immex_report_anexo24" action="action_report_anexo24_salida_merc_ws"/>
+    </data>
+</odoo>

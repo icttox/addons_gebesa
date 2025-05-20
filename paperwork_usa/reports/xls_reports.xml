@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="usmca_format_xlsx"
+        model="mrp.shipment"
+        string="Export USMCA Certificate of origin"
+        report_type="xlsx"
+        name="paperwork_usa.usmca_format_xlsx"
+        file="usmca_format_xlsx"
+        attachment_use="False"
+    />
+    <report
+        id="tmec_format_xlsx"
+        model="mrp.shipment"
+        string="Exportar Certificado de Origin para TMEC"
+        report_type="xlsx"
+        name="paperwork_usa.tmec_format_xlsx"
+        file="formato_tmec_xlsx"
+        attachment_use="False"
+    />
+
+    <report
+        id="packing_list_xlsx"
+        model="mrp.shipment"
+        string="Packing List (xlsx)"
+        report_type="xlsx"
+        name="paperwork_usa.packing_list_xlsx"
+        file="packing_list_xlsx"
+        attachment_use="False"
+    />
+
+    <report
+        id="complement_information_waybill_xlsx"
+        model="mrp.shipment"
+        string="Informacion de complemento Carta Porte"
+        report_type="xlsx"
+        name="paperwork_usa.complement_information_waybill_xlsx"
+        file="complement_information_waybill_xlsx"
+        attachment_use="False"
+    />
+
+    <report
+        id="packing_list_xlsx_metros"
+        model="mrp.shipment"
+        string="Packing List M3 (xlsx)"
+        report_type="xlsx"
+        name="paperwork_usa.packing_list_xlsx_metros"
+        file="packing_list_xlsx_metros"
+        attachment_use="False"
+    />
+
+    <report
+        id="packing_list_customer_xlsx"
+        model="mrp.shipment"
+        string="Packing List Pedido (xlsx)"
+        report_type="xlsx"
+        name="paperwork_usa.packing_list_customer_xlsx"
+        file="packing_list_customer_xlsx"
+        attachment_use="False"
+    />
+</odoo>

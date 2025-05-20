@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_production_mrp_bost_form'>
+            <field name='name'>mrp.production.mrp.bost.form</field>
+            <field name='model'>mrp.production</field>
+            <field name='inherit_id' ref="mrp.mrp_production_form_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/sheet/group/group/field[@name='routing_id']" position="after">
+                    <field name="procurement_location_id" readonly="1"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='location_dest_id']" position="after">
+                    <field name="partner_ids" widget="many2many_tags"/>
+                    <field name="sale_order_ids" widget="many2many_tags"/>
+                    <field name="sale_order_line_ids" widget="many2many_tags"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/field[@name='move_raw_ids']/tree" position="attributes">
+                    <attribute name="decoration-muted">is_done or state=='cancel'</attribute>
+                    <attribute name="decoration-warning">quantity_done - product_uom_qty &gt; 0.0001 and state != 'cancel'</attribute>
+                    <attribute name="decoration-success">not is_done and quantity_done - product_uom_qty &lt; 0.0001 and state != 'cancel'</attribute>
+                    <attribute name="decoration-danger">not is_done and reserved_availability &lt; product_uom_qty and product_uom_qty - reserved_availability &gt; 0.0001 and state != 'cancel'</attribute>
+                    <attribute name="decoration-bf">state=='cancel'</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

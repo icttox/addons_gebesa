@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="res.groups" id="group_cancel_waybill_gebesa">
+            <field name="name">Administrador Cancelar Carta Porte / Liquidacion </field>
+        </record>
+        <record model="res.groups" id="group_validate_waybill_gebesa">
+            <field name="name">Administrador validar-Aprobar / Carta Porte</field>
+        </record>
+        <record model="res.groups" id="group_change_status_vehicle">
+            <field name="name">Cambiar status de los vehiculos</field>
+        </record>
+        <record model="res.groups" id="group_invoice_without_travel">
+            <field name="name">Factura sin el viaje</field>
+        </record>
+        <record model="res.groups" id="group_manager_diesel">
+            <field name="name">Manager diesel</field>
+        </record>
+        <record model="res.groups" id="group_decrease_travel_income">
+            <field name="name">Disminuir Ingreso del Viaje</field>
+            <field name="category_id" ref="tms.tms_group_category"/>
+        </record>
+        <record model="res.groups" id="group_read_data_tms">
+            <field name="name">Read Data TMS</field>
+            <field name="category_id" ref="tms.tms_group_category"/>
+        </record>
+        <record model="res.groups" id="group_dispersion_diesel">
+            <field name="name">Dispersion diesel</field>
+        </record>
+    </data>
+</odoo>

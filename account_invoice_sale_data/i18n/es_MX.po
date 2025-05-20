@@ -1,0 +1,281 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_sale_data
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20211011\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-21 17:42+0000\n"
+"PO-Revision-Date: 2023-07-21 11:44-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: account_invoice_sale_data
+#: model:res.groups,name:account_invoice_sale_data.invoice_lines_from_orders
+msgid "Add lines to invoices that come from orders"
+msgstr "Agregar líneas a facturas que provienen de pedidos"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,portfolio_type:0
+msgid "Agreement"
+msgstr "Convenio"
+
+#. module: account_invoice_sale_data
+#: model:ir.model,name:account_invoice_sale_data.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "Cuenta analítica"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,portfolio_type:0
+msgid "Attested copy"
+msgstr "Compulsa"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,portfolio_type:0
+msgid "Bad debt"
+msgstr "Incobrable"
+
+#. module: account_invoice_sale_data
+#: code:addons/account_invoice_sale_data/models/res_partner.py:13
+#, python-format
+msgid "Collection manager"
+msgstr "Gestor de cobranza"
+
+#. module: account_invoice_sale_data
+#: model:ir.model,name:account_invoice_sale_data.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_analytic_account__journal_sale_id
+msgid "Default sale journal"
+msgstr "Diario de ventas predeterminado"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,help:account_invoice_sale_data.field_account_analytic_account__journal_sale_id
+msgid "Default sale journal for this analytic"
+msgstr "Diario de ventas predeterminado para esta analítica"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_sale_order__geb_invoice_status
+msgid "Estado de la factura"
+msgstr ""
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice__executive
+msgid "Executive"
+msgstr "Ejecutivo"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,portfolio_type:0
+msgid "Foreign"
+msgstr "Extranjero"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice_line__freight_amount
+msgid "Freight Amount"
+msgstr "Cantidad de carga"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice__perc_freight
+msgid "Freight Percentage"
+msgstr "Porcentaje de flete"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_res_partner__collection_manager_id
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_res_users__collection_manager_id
+msgid "Gestor de cobranza"
+msgstr ""
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice_line__installation_amount
+msgid "Installation Amount"
+msgstr "Cantidad de instalación"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice__perc_installation
+msgid "Installation Percentage"
+msgstr "Porcentaje de instalación"
+
+#. module: account_invoice_sale_data
+#: model:ir.model,name:account_invoice_sale_data.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: account_invoice_sale_data
+#: model:ir.model,name:account_invoice_sale_data.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea de factura"
+
+#. module: account_invoice_sale_data
+#: code:addons/account_invoice_sale_data/models/sale_order.py:15
+#, python-format
+msgid "Invoice status"
+msgstr "Estado de la factura"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice__itinerary
+msgid "Itinerary"
+msgstr "Itinerario"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,help:account_invoice_sale_data.field_account_invoice__itinerary
+msgid "Itinerary number"
+msgstr "Número de itinerario"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,portfolio_type:0
+msgid "Legal"
+msgstr "Juridico"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,manufacture:0
+msgid "Line"
+msgstr "Línea"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,help:account_invoice_sale_data.field_account_invoice_line__margin_justification
+msgid "Low-margin justification for the invoice"
+msgstr "Justificación margen bajo para la factura"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice__manufacture
+msgid "Manufacture"
+msgstr "Manufactura"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,portfolio_type:0
+msgid "National"
+msgstr "Nacional"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice_line__net_sale
+msgid "Net Sales"
+msgstr "Las ventas netas"
+
+#. module: account_invoice_sale_data
+#: selection:sale.order,geb_invoice_status:0
+msgid "No facturado"
+msgstr ""
+
+#. module: account_invoice_sale_data
+#: code:addons/account_invoice_sale_data/models/sale_order.py:12
+#, python-format
+msgid "No invoice"
+msgstr "No facturado"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice__not_be_billed
+msgid "Not be Billed"
+msgstr "No ser facturado"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice_line__margin_justification
+msgid "P. M. Justification"
+msgstr "P. M. Justificación"
+
+#. module: account_invoice_sale_data
+#: selection:sale.order,geb_invoice_status:0
+msgid "Parcialmente facturado"
+msgstr ""
+
+#. module: account_invoice_sale_data
+#: code:addons/account_invoice_sale_data/models/sale_order.py:13
+#, python-format
+msgid "Partial invoice"
+msgstr "Parcialmente facturado"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice__portfolio_type
+msgid "Portfolio type"
+msgstr "Tipo Cartera"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice__profit_margin
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice_line__profit_margin
+msgid "Profit Margin"
+msgstr "Margen de beneficio"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,portfolio_type:0
+msgid "Replacement"
+msgstr "Reposicion"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,manufacture:0
+msgid "Replenishment"
+msgstr "Reposicion"
+
+#. module: account_invoice_sale_data
+#: model_terms:ir.ui.view,arch_db:account_invoice_sale_data.account_invoice_view_form
+msgid "Sale Data"
+msgstr "Datos de venta"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,portfolio_type:0
+msgid "Sample"
+msgstr "Muestra"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,manufacture:0
+msgid "Semi special"
+msgstr "Semi especial"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,manufacture:0
+msgid "Special"
+msgstr "Especial"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice_line__standard_cost
+msgid "Standard Cost"
+msgstr "Costo estándar"
+
+#. module: account_invoice_sale_data
+#: selection:account.invoice,portfolio_type:0
+msgid "Street market"
+msgstr "Tianguis"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice__total_cost
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice_line__total_cost
+msgid "Total Cost"
+msgstr "Costo total"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice__total_freight
+msgid "Total Freight"
+msgstr "Total flete"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice__total_installation
+msgid "Total Installation"
+msgstr "Total instalación"
+
+#. module: account_invoice_sale_data
+#: model:ir.model.fields,field_description:account_invoice_sale_data.field_account_invoice__total_net_sale
+msgid "Total Net Sale"
+msgstr "Venta neta total"
+
+#. module: account_invoice_sale_data
+#: code:addons/account_invoice_sale_data/models/sale_order.py:14
+#, python-format
+msgid "Total invoice"
+msgstr "Totalmente facturado"
+
+#. module: account_invoice_sale_data
+#: selection:sale.order,geb_invoice_status:0
+msgid "Totalmente facturado"
+msgstr ""
+
+#. module: account_invoice_sale_data
+#: model:ir.model,name:account_invoice_sale_data.model_sale_order
+msgid "sale.order"
+msgstr ""

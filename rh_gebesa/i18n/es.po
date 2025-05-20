@@ -1,0 +1,1713 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rh_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20211011\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-16 21:19+0000\n"
+"PO-Revision-Date: 2023-01-16 15:21-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: rh_gebesa
+#: code:addons/rh_gebesa/models/hr_employee.py:155
+#, python-format
+msgid " vacation for "
+msgstr ""
+
+#. module: rh_gebesa
+#: code:addons/rh_gebesa/models/hr_employee.py:156
+#, python-format
+msgid " year of work"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+", a quien en lo sucesivo se le denominará como \n"
+"                        <strong>“El Empleado”</strong>, al tenor de las siguientes declaraciones y cláusulas:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+msgid ""
+", el cual le será cubierto semanalmente\n"
+"                        los días Miércoles  de cada semana en el domicilio de “La Empresa”, y el cual ya incluye la proporción correspondiente a los séptimos días y días de descanso obligatorio. Como apoyo al trabajador se dispondrá de la opción de pago electrónico para seguridad y comodidad del empleado. Entregando en el domicilio de la empresa el comprobante correspondiente a su Jornada de trabajo. Conviniéndose en que la firma de “El Empleado” implicará un finiquito total hasta la fecha del recibo correspondiente\n"
+"                        <br/>\n"
+"                        “El Empleado” será acreedor a un bono de puntualidad el cual asciende al 10 % de su salario base el cual le otorgará “La Empresa”.\n"
+"                        <br/>\n"
+"                        Ambas partes convienen que. -\n"
+"                        <br/><br/>\n"
+"                        “El Empleado” que incurra en 3 retardos, en un periodo de 30 días se hará acreedor a la sanción equivalente a una falta injustificada con la pérdida del bono de puntualidad y asistencia. \n"
+"                        <br/><br/>\n"
+"                            1. Un retardo se considera después de los 5 minutos de tolerancia. \n"
+"                        “El Empleado” será acreedor a un bono de asistencia y puntualidad el cual asciende al 10 % de su salario base el cual le otorgará “La Empresa” siempre y cuando el “El Empleado” no falte a desempeñar sus labores.\n"
+"                        <br/><br/>\n"
+"                        Ambas partes convienen que. –\n"
+"                        <br/><br/>\n"
+"                        “El Empleado” que falte al desempeño de sus labores se le descontara un día de su salario, así como la pérdida del bono de asistencia y bono de puntualidad. \n"
+"                        <br/><br/>\n"
+"                        “EL Empleado que justifique la falta se le rebajaran solo partes proporcionales de los premios de puntualidad y asistencia.\n"
+"                        <br/><br/>\n"
+"                        “El Empleado” que falte 3 días se le descontará los días de salario, así como el bono de asistencia y puntualidad, y se le rescindirá el contrato sin responsabilidad para la empresa.\n"
+"                        <br/><br/>\n"
+"                        “La Empresa” hará por cuenta de “El Empleado” las deducciones legales correspondientes, particularmente las que se refieren a Impuesto sobre la Renta y aportaciones de seguridad social (IMSS, Infonavit y RCV), efectuando las inscripciones correspondientes ante dichas instituciones, en los términos de las legislaciones respectivas.\n"
+"                        <br/><br/>\n"
+"                        <strong>SÉXTA.-</strong> “El Empleado” disfrutará de 2 días de descanso mencionados en la cuarta cláusula con goce de salario íntegro. “LA EMPRESA” podrá, previo acuerdo con “El Empleado”, variar el descanso semanal conforme a las necesidades de la misma. Así mismo “El Empleado” gozará de 30 minutos para tomar sus alimentos, descansar o reposar fuera de la fuente de trabajo de lunes a viernes. Así mismo “El Empleado” reconoce que los días de descanso obligatorios son los contenidos en el Artículo 74 de la Ley Federal del Trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>SEPTIMA.-</strong> “El Empleado” no podrá laborar tiempo extraordinario de trabajo, sin previa autorización por escrito que “La Empresa” le otorgue por conducto de sus representantes, tomando en consideración el pago que de él devengue que el concepto de tiempo extra en actividades adicionales y extraordinarias que “LA EMPRESA” solicite por escrito a “El Empleado”.\n"
+"                        <br/><br/>\n"
+"                        <strong>OCTAVA.-</strong> “El Empleado” disfrutará de un período anual de vacaciones de seis  días, el cual se incrementará anualmente en los términos señalados en el artículo 76 de la Ley Federal del Trabajo. Asimismo, percibirá  una prima vacacional del 25 %, sobre la cantidad que le corresponda por el lapso en cuestión.\n"
+"                        <br/><br/>\n"
+"                        <strong>NOVENA.-</strong> “El Empleado” percibirá un aguinaldo anual de 20 días de salario, el cual se cubrirá de manera proporcional al tiempo de los servicios prestados a “La Empresa” durante dicho período.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA.-</strong> “El Empleado” se obliga en términos de la fracción X del artículo 134 de la Ley Federal del Trabajo, a someterse a los reconocimientos y exámenes médicos que “La Empresa” le indique.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA PRIMERA.-</strong> “EL Empleado” deberá ejecutar sus labores con la mayor intensidad, cuidado y esmero posibles,  quedando “LA EMPRESA” facultada para cambiar al “El Empleado” de lugar o actividad siempre y cuando se le respete su categoría y salario.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA SEGUNDA.-</strong> “LA EMPRESA” y “El Empleado” manifiestan que conocen las obligaciones que les imponen los Artículos 132 y 134 de la Ley Federal del Trabajo respectivamente, así como las prohibiciones establecidas por los Artículos 133 y 135 del mismo ordenamiento, por lo que cualquier violación a los mismos será causa de rescisión de la relación de trabajo.  \n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA TERCERA.-</strong> “El Empleado” tendrá, además de las obligaciones previstas en el presente contrato, en la Ley Federal del Trabajo y en el Reglamento Interior de Trabajo, las siguientes:\n"
+"                        a) No utilizará en beneficio, ni divulgará directa o indirectamente a cualquier persona física o moral, sin consentimiento previo y por escrito de “LA EMPRESA”, ningún conocimiento o información que adquiera con motivo de su trabajo.\n"
+"                        <br/>\n"
+"                        b) Cuando por cualquier motivo termine su relación de trabajo con “LA EMPRESA”, deberá entregar a éste, con la anticipación y requisitos que el mismo determine, todos los materiales, uniformes, herramienta y documentación que le pertenezcan a “LA EMPRESA” y que se encuentren directa o indirectamente bajo el control de “El Empleado”. \n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA CUARTA.-</strong> “El Empleado” reconoce y acepta que de conformidad con la Ley Federal del Derecho de Autor, todas las obras intelectuales (en adelante “LAS OBRAS”) que realice durante la jornada laboral y/o con recursos de “LA EMPRESA”, serán propiedad de este último, por lo que el mismo gozará de la titularidad de los derechos patrimoniales, así como las facultades relativas a la divulgación, integridad de la obra y de colección.\n"
+"                        “El Empleado” otorga su pleno consentimiento para que “LA EMPRESA”, obtenga en su favor el registro de las obras por él creadas, ante el Instituto Nacional del Derecho de Autor, así como los derechos patrimoniales correspondientes, reservándose únicamente los derechos morales que la Ley Federal del Derecho de Autor vigente le concede.\n"
+"                        <br/><br/>\n"
+"                        “El Empleado” reconoce que “LAS OBRAS” es propiedad exclusiva de “LA EMPRESA”, por lo que no podrá por ningún medio, reproducir, copiar, publicar, comercializar, utilizar, explotar y/o transmitir a terceros \"LAS OBRAS\", ni total ni parcialmente, salvo que medie autorización escrita de “LA EMPRESA”.  \n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA QUINTA.-</strong> “LA EMPRESA”, podrá rescindir sin responsabilidad la relación de trabajo cuando se dé cualquiera de los supuestos establecidos\n"
+"                        por el Artículo 47 de la Ley Federal del Trabajo o bien alguna de las causas análogas o las que se señalan en el Reglamento Interior de Trabajo, así como el incumplimiento a cualquiera de las disposiciones del presente contrato.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA SEXTA.-</strong> “El Empleado” se obliga a cumplir con las políticas que establezca “LA EMPRESA”, para el buen desempeño de sus labores,\n"
+"                        considerándose como falta de probidad y siendo causa de rescisión de la relación de trabajo sin responsabilidad para “LA EMPRESA”, la falta de cumplimiento\n"
+"                        expreso a la presente cláusula. Se faculta expresamente a “LA EMPRESA”, para que marque las políticas por las cuales deberá conducirse “El Empleado”.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA SÉPTIMA.-</strong> “El Empleado” estará obligado a someterse a  reconocimientos médicos periódicos, con el objeto de comprobar que posee buena salud y que no se encuentra incapacitado ni padece ninguna enfermedad que haga imposible el desempeño de las labores encomendadas, debiendo poner en conocimiento de “LA EMPRESA” en forma inmediata y por escrito cualquier enfermedad contagiosa o incurable así como cualquier incapacidad al tiempo de su ingreso o durante la relación de trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA OCTAVA.-</strong> “El Empleado” estará obligado a registrar diariamente su ingreso y su salida del lugar de trabajo, en los medios que para tal efecto determine “LA EMPRESA”, por lo que el incumplimiento a este requisito indicará la falta injustificada a sus labores, para todos los efectos legales.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA NOVENA.-</strong> Cualquier ausencia de “El Empelado” por motivo de enfermedad, solamente se considerará justificada mediante la presentación de las incapacidades que para tal efecto expida el Instituto Mexicano del Seguro Social, mismas que deberán ser presentadas a “LA EMPRESA” al día siguiente de su expedición, ya sea por el interesado o por conducto de un tercero.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA.-</strong> “El Empleado” no podrá prestar simultáneamente servicios de ninguna otra índole para otro patrón, sin el consentimiento previo y por escrito de “LA EMPRESA”.  El incumplimiento de esta disposición supondrá la rescisión del presente Contrato sin responsabilidad para “LA EMPRESA”.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA PRIMERA.-</strong> “El Empleado” se obliga a participar en los cursos de capacitación y adiestramiento que “La Empresa” le indique para el mejor conocimiento y desarrollo de sus aptitudes, mismos que podrán impartirse dentro y/o fuera de la jornada de labores.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA SEGUNDA.-</strong> Lo no previsto por este contrato se regirá por las disposiciones previstas en la Ley Federal del Trabajo y en el fuero local o federal que corresponda a la Ciudad de Gómez Palacio, Durango, independientemente del estado en que se encuentre laborando “El Empleado”.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA TERCERA.-</strong> “El Empleado” se obliga a acatar las medidas de seguridad e higiene establecidas por la ley, la Comisión de Seguridad e higiene y el Patrón, en la inteligencia de que si no cumple con esta cláusula, el Patrón le podrá rescindir su Contrato de Trabajo sin ninguna responsabilidad, de acuerdo a la Ley Federal del Trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA CUARTA.-</strong> “LA EMPRESA” reconoce una antigüedad al Trabajador a partir del día"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+", el cual le será cubierto semanalmente los días Miércoles  de cada semana en el domicilio de “La Empresa”, y el cual ya incluye la proporción correspondiente a los séptimos días y días de descanso obligatorio. Como apoyo al trabajador se dispondrá de la opción de pago electrónico para seguridad y comodidad del empleado. Entregando en el domicilio de la empresa el comprobante correspondiente a su Jornada de trabajo. Conviniéndose en que la firma de “El Empleado” implicará un finiquito total hasta la fecha del recibo correspondiente\n"
+"                        <br/>\n"
+"                        “El Empleado” será acreedor a un bono de puntualidad el cual asciende al 10 % de su salario base el cual le otorgará “La Empresa”.\n"
+"                        <br/>\n"
+"                        Ambas partes convienen que. -\n"
+"                        <br/><br/>\n"
+"                        “El Empleado” que incurra en 3 retardos, en un periodo de 30 días se hará acreedor a la sanción equivalente a una falta injustificada con la pérdida del bono de puntualidad y asistencia. \n"
+"                        <br/><br/>\n"
+"                            1. Un retardo se considera después de los 5 minutos de tolerancia. \n"
+"                        “El Empleado” será acreedor a un bono de asistencia y puntualidad el cual asciende al 10 % de su salario base el cual le otorgará “La Empresa” siempre y cuando el “El Empleado” no falte a desempeñar sus labores.\n"
+"                        <br/><br/>\n"
+"                        Ambas partes convienen que. –\n"
+"                        <br/><br/>\n"
+"                        “El Empleado” que falte al desempeño de sus labores se le descontara un día de su salario, así como la pérdida del bono de asistencia y bono de puntualidad. \n"
+"                        <br/><br/>\n"
+"                        “EL Empleado que justifique la falta se le rebajaran solo partes proporcionales de los premios de puntualidad y asistencia.\n"
+"                        <br/><br/>\n"
+"                        “El Empleado” que falte 3 días se le descontará los días de salario, así como el bono de asistencia y puntualidad, y se le rescindirá el contrato sin responsabilidad para la empresa.\n"
+"                        <br/><br/>\n"
+"                        “La Empresa” hará por cuenta de “El Empleado” las deducciones legales correspondientes, particularmente las que se refieren a Impuesto sobre la Renta y aportaciones de seguridad social (IMSS, Infonavit y RCV), efectuando las inscripciones correspondientes ante dichas instituciones, en los términos de las legislaciones respectivas.\n"
+"                        <br/><br/>\n"
+"                        <strong>SÉXTA.-</strong> “El Empleado” disfrutará de 2 días de descanso mencionados en la cuarta cláusula con goce de salario íntegro. “LA EMPRESA” podrá, previo acuerdo con “El Empleado”, variar el descanso semanal conforme a las necesidades de la misma. Así mismo “El Empleado” gozará de 30 minutos para tomar sus alimentos, descansar o reposar fuera de la fuente de trabajo de lunes a viernes. Así mismo “El Empleado” reconoce que los días de descanso obligatorios son los contenidos en el Artículo 74 de la Ley Federal del Trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>SEPTIMA.-</strong> “El Empleado” no podrá laborar tiempo extraordinario de trabajo, sin previa autorización por escrito que “La Empresa” le otorgue por conducto de sus representantes, tomando en consideración el pago que de él devengue que el concepto de tiempo extra en actividades adicionales y extraordinarias que “LA EMPRESA” solicite por escrito a “El Empleado”.\n"
+"                        <br/><br/>\n"
+"                        <strong>OCTAVA.-</strong> “El Empleado” disfrutará de un período anual de vacaciones de seis  días, el cual se incrementará anualmente en los términos señalados en el artículo 76 de la Ley Federal del Trabajo. Asimismo, percibirá  una prima vacacional del 25 %, sobre la cantidad que le corresponda por el lapso en cuestión.\n"
+"                        <br/><br/>\n"
+"                        <strong>NOVENA.-</strong> “El Empleado” percibirá un aguinaldo anual de 20 días de salario, el cual se cubrirá de manera proporcional al tiempo de los servicios prestados a “La Empresa” durante dicho período.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA.-</strong> “El Empleado” se obliga en términos de la fracción X del artículo 134 de la Ley Federal del Trabajo, a someterse a los reconocimientos y exámenes médicos que “La Empresa” le indique.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA PRIMERA.-</strong> “EL Empleado” deberá ejecutar sus labores con la mayor intensidad, cuidado y esmero posibles,  quedando “LA EMPRESA” facultada para cambiar al “El Empleado” de lugar o actividad siempre y cuando se le respete su categoría y salario.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA SEGUNDA.-</strong> “LA EMPRESA” y “El Empleado” manifiestan que conocen las obligaciones que les imponen los Artículos 132 y 134 de la Ley Federal del Trabajo respectivamente, así como las prohibiciones establecidas por los Artículos 133 y 135 del mismo ordenamiento, por lo que cualquier violación a los mismos será causa de rescisión de la relación de trabajo.  \n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA TERCERA.-</strong> “El Empleado” tendrá, además de las obligaciones previstas en el presente contrato, en la Ley Federal del Trabajo y en el Reglamento Interior de Trabajo, las siguientes:\n"
+"                        a) No utilizará en beneficio, ni divulgará directa o indirectamente a cualquier persona física o moral, sin consentimiento previo y por escrito de “LA EMPRESA”, ningún conocimiento o información que adquiera con motivo de su trabajo.\n"
+"                        <br/>\n"
+"                        b) Cuando por cualquier motivo termine su relación de trabajo con “LA EMPRESA”, deberá entregar a éste, con la anticipación y requisitos que el mismo determine, todos los materiales, uniformes, herramienta y documentación que le pertenezcan a “LA EMPRESA” y que se encuentren directa o indirectamente bajo el control de “El Empleado”. \n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA CUARTA.-</strong> “El Empleado” reconoce y acepta que de conformidad con la Ley Federal del Derecho de Autor, todas las obras intelectuales (en adelante “LAS OBRAS”) que realice durante la jornada laboral y/o con recursos de “LA EMPRESA”, serán propiedad de este último, por lo que el mismo gozará de la titularidad de los derechos patrimoniales, así como las facultades relativas a la divulgación, integridad de la obra y de colección.\n"
+"                        “El Empleado” otorga su pleno consentimiento para que “LA EMPRESA”, obtenga en su favor el registro de las obras por él creadas, ante el Instituto Nacional del Derecho de Autor, así como los derechos patrimoniales correspondientes, reservándose únicamente los derechos morales que la Ley Federal del Derecho de Autor vigente le concede.\n"
+"                        <br/><br/>\n"
+"                        “El Empleado” reconoce que “LAS OBRAS” es propiedad exclusiva de “LA EMPRESA”, por lo que no podrá por ningún medio, reproducir, copiar, publicar, comercializar, utilizar, explotar y/o transmitir a terceros \"LAS OBRAS\", ni total ni parcialmente, salvo que medie autorización escrita de “LA EMPRESA”.  \n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA QUINTA.-</strong> “LA EMPRESA”, podrá rescindir sin responsabilidad la relación de trabajo cuando se dé cualquiera de los supuestos establecidos por el Artículo 47 de la Ley Federal del Trabajo o bien alguna de las causas análogas o las que se señalan en el Reglamento Interior de Trabajo, así como el incumplimiento a cualquiera de las disposiciones del presente contrato.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA SEXTA.-</strong> “El Empleado” se obliga a cumplir con las políticas que establezca “LA EMPRESA”, para el buen desempeño de sus labores, considerándose como falta de probidad y siendo causa de rescisión de la relación de trabajo sin responsabilidad para “LA EMPRESA”, la falta de cumplimiento expreso a la presente cláusula.  Se faculta expresamente a “LA EMPRESA”, para que marque las políticas por las cuales deberá conducirse “El Empleado”.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA SÉPTIMA.-</strong> “El Empleado” estará obligado a someterse a  reconocimientos médicos periódicos, con el objeto de comprobar que posee buena salud y que no se encuentra incapacitado ni padece ninguna enfermedad que haga imposible el desempeño de las labores encomendadas, debiendo poner en conocimiento de “LA EMPRESA” en forma inmediata y por escrito cualquier enfermedad contagiosa o incurable así como cualquier incapacidad al tiempo de su ingreso o durante la relación de trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA OCTAVA.-</strong> “El Empleado” estará obligado a registrar diariamente su ingreso y su salida del lugar de trabajo, en los medios que para tal efecto determine “LA EMPRESA”, por lo que el incumplimiento a este requisito indicará la falta injustificada a sus labores, para todos los efectos legales.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA NOVENA.-</strong> Cualquier ausencia de “El Empelado” por motivo de enfermedad, solamente se considerará justificada mediante la presentación de las incapacidades que para tal efecto expida el Instituto Mexicano del Seguro Social, mismas que deberán ser presentadas a “LA EMPRESA” al día siguiente de su expedición, ya sea por el interesado o por conducto de un tercero.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA.-</strong> “El Empleado” no podrá prestar simultáneamente servicios de ninguna otra índole para otro patrón, sin el consentimiento previo y por escrito de “LA EMPRESA”.  El incumplimiento de esta disposición supondrá la rescisión del presente Contrato sin responsabilidad para “LA EMPRESA”.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA PRIMERA.-</strong> “El Empleado” se obliga a participar en los cursos de capacitación y adiestramiento que “La Empresa” le indique para el mejor conocimiento y desarrollo de sus aptitudes, mismos que podrán impartirse dentro y/o fuera de la jornada de labores.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA SEGUNDA.-</strong> Lo no previsto por este contrato se regirá por las disposiciones previstas en la Ley Federal del Trabajo y en el fuero local o federal que corresponda a la Ciudad de Gómez Palacio, Durango, independientemente del estado en que se encuentre laborando “El Empleado”.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA TERCERA.-</strong> “El Empleado” se obliga a acatar las medidas de seguridad e higiene establecidas por la ley, la Comisión de Seguridad e higiene y el Patrón, en la inteligencia de que si no cumple con esta cláusula, el Patrón le podrá rescindir su Contrato de Trabajo sin ninguna responsabilidad, de acuerdo a la Ley Federal del Trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA CUARTA.-</strong> “LA EMPRESA” reconoce una antigüedad al Trabajador a partir del día"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ", está conforme en desempeñar  los  requerimientos del Patrón y en plasmar las condiciones de trabajo sobre las   cuales prestará sus servicios  personales."
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ", está conforme en desempeñar  los  requerimientos del Patrón y en plasmar las condiciones de trabajo sobre las cuales prestará sus servicios personales."
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+", manifiesta bajo protesta de decir\n"
+"                        verdad ser los siguientes datos personales:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+", manifiesta que tiene la capacidad y aptitudes para desarrollar las actividades indicadas en el antecedente que precede.\n"
+"                        <br/><br/>\n"
+"                        V.- LA empresa"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+msgid ""
+".\n"
+"                        <br/><br/>\n"
+"                        <strong>CUARTA.-</strong> El lugar de prestación  de los servicios de “EL TRABAJADOR” será el domicilio de “DE LA EMPRESA”. Asimismo “LAS PARTES” convienen y acepta “EL TRABAJADOR” que cuando por razones administrativas o de desarrollo de la actividad o prestación de servicios contratados haya necesidad de removerlo, podrá trasladarse al lugar que “LA EMPRESA” le asigne, siempre y cuando no se vea menoscabado su salario.\n"
+"                        <br/>\n"
+"                        En este caso “LA EMPRESA” le comunicará con anticipación la remoción del lugar de prestación de servicios indicándole el nuevo asignado.\n"
+"                        <br/>\n"
+"                        Para el caso que en el nuevo lugar de prestación de servicios que le fuera asignado variara el horario de labores, “EL TRABAJADOR”  acepta allanarse a dicha modalidad.\n"
+"                        <br/><br/>\n"
+"                        <strong>QUINTA.-</strong> La duración de la jornada de trabajo será de 48 horas semanales, y en términos del artículo 59 de “LA LEY”, para que “EL TRABAJADOR” disfrute de un descanso semanal mayor al comúnmente establecido, se amplía el horario diario de labores quedando poder distribuida como sigue:\n"
+"                        <br/><br/>\n"
+"                        <u><strong>LUNES A VIERNES: DE 8:30 A 18:30 HORAS CON UNA HORA PARA TOMAR SUS ALIMENTOS DE LAS 14:00 A LAS 15:00.\n"
+"                        DESCANSANDO LOS SABADOS Y DOMINGOS DE CADA SEMANA.</strong> </u>\n"
+"                        <br/><br/>\n"
+"                        “EL TRABAJADOR” únicamente podrá laborar tiempo extraordinario cuando “LA EMPRESA” se lo indique y medie orden por escrito, la que señalará el día o los días y el horario en el cual se desempeñará el mismo. Para el caso de computar el tiempo extraordinario laborado deberá “EL TRABAJADOR” recabar y conservar la orden referida a fin de que en su momento quede debidamente pagado el tiempo extra laborado; la falta de presentación de esa orden solo es imputable a “EL TRABAJADOR”. \n"
+"                        <br/><br/>\n"
+"                        <strong>SEXTA.-</strong> “EL TRABAJADOR” percibirá un salario por cuota diaria de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+msgid ""
+".\n"
+"                        <br/><br/>\n"
+"                        <strong>TRIGÉSIMA SEGUNDA.-</strong>  En caso de fallecimiento de “EL TRABAJADOR”, la o las personas designadas por el mismo, tendrán derecho a las prestaciones\n"
+"                        derivadas de la relación laboral, por lo que al efecto, el empleado designa como beneficiarios a las siguientes personas:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+".\n"
+"                        <br/><br/>\n"
+"                        <strong>TRIGÉSIMA SEGUNDA.-</strong>  En caso de fallecimiento de “EL TRABAJADOR”, la o las personas designadas por el mismo, tendrán derecho a las prestaciones derivadas de la relación laboral, por lo que al efecto, el empleado designa como beneficiarios a las siguientes personas:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+msgid ""
+".\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA QUINTA.-</strong> “El Empleado” acepta y reconoce el cuadro de prestaciones adicionales a las que la Ley Federal del Trabajo conmina a “LA EMPRESA” y que se entrega copia en este acto de las mismas y que queda adjunto al presente.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA SEXTA.-</strong> Los cambios de puesto y las modificaciones de salario serán consignadas en anexos que firmados por las partes se agreguen al presente contrato, debiendo recibir “El Empleado” la copia para que el original se archive en su expediente que lleva “LA EMPRESA”\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGESIMA SÉPTIMA.-</strong> Al momento de la firma del presente instrumento, “El Empleado” recibe una copia del Reglamento Interior de Trabajo mismo que forma parte del presente contrato, para su conocimiento.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA OCTAVA.-</strong> Mientras las partes no se comuniquen por escrito el cambio de los domicilios consignados en el apartado de sus Declaraciones, todas las notificaciones ya sean judiciales o extrajudiciales que en los mismos se realicen, se tendrán como legalmente efectuadas.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA NOVENA.-</strong> El presente contrato constituye el acuerdo celebrado entre las partes en relación con el objeto del mismo y deja sin efecto cualquier otra negociación, obligación o comunicación entre éstas, ya sea oral o escrita con anterioridad a esta fecha.\n"
+"                        <br/><br/>\n"
+"                        <strong>TRIGÉSIMA.-</strong> Ambas partes convienen que en defecto de lo establecido en este contrato se sujetarán a las disposiciones de la Ley Federal del Trabajo y al Reglamento Interior de Trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>TRIGÉSIMA PRIMERA.-</strong> Para la resolución de cualquier controversia que pudiera derivarse con motivo de la interpretación o cumplimiento\n"
+"                        del presente Contrato, las partes se someten a la jurisdicción y competencia de la H. Junta Local de Conciliación y Arbitraje de Gómez Palacio, Durango,\n"
+"                        o en la zona de la firma del contrato, renunciado expresamente a cualquier otro fuero que les pudiera corresponder.\n"
+"                        <br/><br/>\n"
+"                        Leído que fue el presente contrato por quienes en él intervienen, lo ratifican en todas y cada una de sus partes y lo suscriben a su más entera conformidad por duplicado, entregándose copia del mismo a “El Empleado” para los fines legales que a éste convengan, en la ciudad de <strong>Gómez Palacio, Durango,</strong> el"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+".\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA QUINTA.-</strong> “El Empleado” acepta y reconoce el cuadro de prestaciones adicionales a las que la Ley Federal del Trabajo conmina a “LA EMPRESA” y que se entrega copia en este acto de las mismas y que queda adjunto al presente.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA SEXTA.-</strong> Los cambios de puesto y las modificaciones de salario serán consignadas en anexos que firmados por las partes se agreguen al presente contrato, debiendo recibir “El Empleado” la copia para que el original se archive en su expediente que lleva “LA EMPRESA”\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGESIMA SÉPTIMA.-</strong> Al momento de la firma del presente instrumento, “El Empleado” recibe una copia del Reglamento Interior de Trabajo mismo que forma parte del presente contrato, para su conocimiento.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA OCTAVA.-</strong> Mientras las partes no se comuniquen por escrito el cambio de los domicilios consignados en el apartado de sus Declaraciones, todas las notificaciones ya sean judiciales o extrajudiciales que en los mismos se realicen, se tendrán como legalmente efectuadas.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA NOVENA.-</strong> El presente contrato constituye el acuerdo celebrado entre las partes en relación con el objeto del mismo y deja sin efecto cualquier otra negociación, obligación o comunicación entre éstas, ya sea oral o escrita con anterioridad a esta fecha.\n"
+"                        <br/><br/>\n"
+"                        <strong>TRIGÉSIMA.-</strong> Ambas partes convienen que en defecto de lo establecido en este contrato se sujetarán a las disposiciones de la Ley Federal del Trabajo y al Reglamento Interior de Trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>TRIGÉSIMA PRIMERA.-</strong> Para la resolución de cualquier controversia que pudiera derivarse con motivo de la interpretación o cumplimiento del presente Contrato, las partes se someten a la jurisdicción y competencia de la H. Junta Local de Conciliación y Arbitraje de Gómez Palacio, Durango, o en la zona de la firma del contrato, renunciado expresamente a cualquier otro fuero que les pudiera corresponder.\n"
+"                        <br/><br/>\n"
+"                        Leído que fue el presente contrato por quienes en él intervienen, lo ratifican en todas y cada una de sus partes y lo suscriben a su más entera conformidad por duplicado, entregándose copia del mismo a “El Empleado” para los fines legales que a éste convengan, en la ciudad de <strong>Gómez Palacio, Durango,</strong> el"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ""
+".\n"
+"                        <br/><br/>\n"
+"                        Leído que fue el presente contrato por quienes en el intervienen lo ratifican e impuestos de su contenido lo suscriben por duplicado quedando el original en poder de la empresa y la copia para el trabajador. En la ciudad de Gómez Palacio, Durango, el"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+msgid ""
+".\n"
+"                        <br/><br/>\n"
+"                        Leído que fue el presente contrato por quienes en el intervienen lo ratifican e impuestos de su contenido lo suscriben por duplicado quedando el original en poder de la empresa y la copia para el trabajador. En la ciudad de Gómez palacio, Durango, al"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ""
+".\n"
+"                        <br/><br/>\n"
+"                        VI.- El Trabajador"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ""
+". En consecuencia la relación de trabajo podrá rescindirse sin responsabilidad para “LA EMPRESA” si en su concepto dentro de los primeros 30 días de vigencia de este contrato, el trabajador <u>no tiene la capacidad y conocimiento con que se ostenta.</u>\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA PRIMERA.-</strong> “LAS PARTES” reconocen como fecha de antigüedad o inicio de prestación de servicios de “EL TRABAJADOR” a partir del día"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ""
+"<br/>\n"
+"                                    <br/><br/><br/><br/>\n"
+"                                    ____________________________________"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ""
+"<br/>\n"
+"                                    <br/><br/><br/><br/>\n"
+"                                    ____________________________________<br/>"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        1. LLAMARSE:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        10. CURP:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        2. NACIONALIDAD:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        3. CON DOMICILIO EN:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        4. COLONIA:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        5. CIUDAD:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        6. FECHA DE NACIMIENTO:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        7. SEXO:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        8. REG. IMSS:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        9. R.F.C.:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        <strong>C L Á U S U L A S</strong>"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+msgid ""
+"<br/>\n"
+"                        <strong>CONTRATO INDIVIDUAL DE TRABAJO POR TIEMPO DETERMINADO</strong> que \n"
+"                        celebran por una parte la empresa"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        <strong>CONTRATO INDIVIDUAL DE TRABAJO POR TIEMPO INDETERMINADO</strong> que \n"
+"                        celebran por una parte la empresa"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ""
+"<br/>\n"
+"                        <strong>PRIMERA.-</strong> Para efectos de mayor brevedad se denominará en lo sucesivo ADMONLAG, S.C.  Como “LA EMPRESA” al"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        <strong>PRIMERA.-</strong> “LA EMPRESA” y “El Empleado” convienen que la duración del presente contrato será por tiempo <strong>INDETERMINADO</strong>, como lo establece el artículo 35 de la Ley Federal del Trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>SEGUNDA.-</strong> “LA EMPRESA” quien tiene cubierta la plantilla de empleados de base necesarios para el desarrollo de sus labores normales de operación y que necesita contratar al empleado para que lleve a cabo\n"
+"                        las labores extraordinarias consistentes en Actividades y Relativos a su puesto que el personal de la plantilla de empleados actual no puede realizar, con fundamento en lo dispuesto en los Artículos 35 y\n"
+"                        37 de la Ley Federal de Trabajo, Por lo que “La Empresa” contrata a “El Empleado” por tiempo indeterminado, para que preste sus servicios en el puesto y/o categoría de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ""
+"<br/>\n"
+"                        CONTRATO INDIVIDUAL DE TRABAJO <strong>POR TIEMPO DETERMINADO</strong> QUE CELEBRAN POR UNA PARTE\n"
+"                        LA EMPRESA ADMONLAG, S.C. CON DOMICILIO EN"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+msgid ""
+"<br/>\n"
+"                        CONTRATO INDIVIDUAL DE TRABAJO <strong>POR TIEMPO INDETERMINADO</strong> QUE CELEBRAN POR UNA PARTE\n"
+"                        LA EMPRESA ADMONLAG, S.C. CON DOMICILIO EN"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/>\n"
+"                        I.- La Empresa denominada"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/><br/>\n"
+"                                    ____________________________________"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/><br/>\n"
+"                                    ____________________________________<br/>"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/><br/>\n"
+"                        II.- El Trabajador"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<br/><br/>\n"
+"                        III.- Declaran las partes que en el centro de trabajo las actividades preponderantes son: Fabricación de muebles para oficina de metal y madera.\n"
+"                        <br/><br/>\n"
+"                        IV.- El Trabajador"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ""
+"<br/><br/>\n"
+"                        III.- Declaran las partes que en el centro de trabajo las actividades preponderantes son: LA PRESTACION DE SERVICIOS PROFESIONALES EN AREAS ADMINISTRATIVAS, DESARROLLO ORGANIZACIONAL, CONTABILIDAD, AUDITORIA, PROMOCION FINANCIERA, MERCADOTECNIA, VENTAS, RECUPREACION Y NEGOCIACION DE CARTERA VENCIDA.\n"
+"                        <br/><br/>\n"
+"                        IV.- El Trabajador"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid "<br/>TRABAJADOR"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+msgid ""
+"<br/>en\n"
+"                        <strong>PRIMERA.-</strong> “LA EMPRESA” contrata al empleado por tiempo <strong>DETERMINADO</strong> y convienen que la duración del presente contrato será por un\n"
+"                        periodo de 30 dias, mismo que queda comprendido del dia"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.hr_contract_gebesa_form
+msgid "<span>/ day</span>"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<strong>\"El Trabajador\"</strong><br/>\n"
+"                                    <br/><br/><br/><br/>\n"
+"                                    ____________________________________<br/>"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"<strong>\"La Empresa\"</strong><br/>\n"
+"                                    <br/><br/><br/><br/>\n"
+"                                    ____________________________________"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid "<strong>A N T E C E D E N T E S</strong>"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid "<strong>D E C L A R A C I O N E S</strong>"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_layout
+msgid "<strong>DEPARTAMENTO RECURSOS HUMANOS GEBESA</strong>"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_layout
+msgid "<strong>INGRESO DE PERSONAL</strong>"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid "<strong>TESTIGOS</strong>"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"A \n"
+"                        través de su representante legal, ING. BOYARDO EUGENIO SALMON ACOSTA. A quien \n"
+"                        en lo sucesivo se le denominará <strong>“La Empresa”</strong>, y por la otra parte el"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid "AL TENOR DE LOS SIGUIENTES ANTECEDENTES Y CLÁUSULAS:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Antiguedad Vivienda:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__antiguedad_vivienda
+msgid "Antique Housing"
+msgstr "Antiguedad En La Vivienda"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_contract__premio_asistencia
+msgid "Assistance award"
+msgstr ""
+
+#. module: rh_gebesa
+#: selection:hr.employee,escolaridad:0
+msgid "Bachelors Degree"
+msgstr "Licenciatura"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Beneficiario 1:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Beneficiario 2:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__beneficio_1
+msgid "Beneficiary First"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__beneficio_2
+msgid "Beneficiary Second"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_resource_calendar__break_time
+msgid "Break Time"
+msgstr "Descanso"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "C.C.P.NOMINAS"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid "C.P."
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "C.U.R.P:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__curp
+msgid "CURP"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.employee_consecutive_forchange_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Categoria:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Centro Costo:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.employee_consecutive_forchange_wizard
+msgid "Change"
+msgstr "Cambio"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Ciudad:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Colonia:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_contract__company
+msgid "Company Witness"
+msgstr "Testigo de la empresa"
+
+#. module: rh_gebesa
+#: model:ir.actions.report,name:rh_gebesa.contrato_determinado
+msgid "Contrado Tiempo Determinado"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.actions.report,name:rh_gebesa.contrato_indeterminado_det
+msgid "Contrado Tiempo Determinado ADMONLAG"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.actions.report,name:rh_gebesa.contrato_indeterminado
+msgid "Contrado Tiempo Indeterminado"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.actions.report,name:rh_gebesa.contrato_indeterminado_ad
+msgid "Contrado Tiempo Indeterminado ADMONLAG"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Conyuge:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_department__analytic_id
+msgid "Cost Center"
+msgstr "Centro de Costos"
+
+#. module: rh_gebesa
+#: model:ir.actions.server,name:rh_gebesa.ir_cron_create_hr_leave_allocation_ir_actions_server
+#: model:ir.cron,cron_name:rh_gebesa.ir_cron_create_hr_leave_allocation
+#: model:ir.cron,name:rh_gebesa.ir_cron_create_hr_leave_allocation
+msgid "Create Leave Allocation"
+msgstr "Crear asignación de ausencias"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_employee_consecutive_forchange_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_employee_consecutive_forchange_wizard__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Credito Fonacot:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Credito Infonavit:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Código Postal:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Código: F-RH-31"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Código: P-RH-01 / P-RH-03"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "DATOS DEL EMPLEADO"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "DATOS DEL PUESTO"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "DIRECCION DEL EMPLEADO"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_contract__salario_diario
+msgid "Daily Salary"
+msgstr "Sueldo Diario"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__days_available_holidays
+msgid "Days available for holidays"
+msgstr "Días disponibles para vacaciones"
+
+#. module: rh_gebesa
+#. openerp-web
+#: code:addons/rh_gebesa/static/src/xml/menu_vacaciones.xml:19
+#, python-format
+msgid "Days available for holidays:"
+msgstr "Días disponibles para vacaciones:"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Departamento:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Dirección:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_employee_consecutive_forchange_wizard__display_name
+#: model:ir.model.fields,field_description:rh_gebesa.field_report_rh_gebesa_report_ingreso_personal__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: rh_gebesa
+#: selection:resource.calendar,finish_day:0
+#: selection:resource.calendar,starting_day:0
+msgid "Domingo"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model,name:rh_gebesa.model_hr_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: rh_gebesa
+#: model:res.groups,name:rh_gebesa.group_inactivate_employee_consecutive
+msgid "Employee Change Consecutive Button"
+msgstr "Empleado cambio consecutivo Boton"
+
+#. module: rh_gebesa
+#: code:addons/rh_gebesa/models/hr_employee.py:175
+#, python-format
+msgid "Employee Consecutive Forchange"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model,name:rh_gebesa.model_hr_contract
+msgid "Employee Contract"
+msgstr ""
+
+#. module: rh_gebesa
+#. openerp-web
+#: code:addons/rh_gebesa/static/src/xml/menu_vacaciones.xml:15
+#, python-format
+msgid "Employee:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.hr_employee_gebesa_form
+msgid "Employye Change Consecutive"
+msgstr "Empleado cambio consecutivo"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Empresa Destino:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+msgid ""
+"En consecuencia la relacion de trabajo podra rescindirse\n"
+"                        sin responsabilidad para la “EMPRESA” si en su concepto dentro de los primeros 30 dias de vigencia de este contrato, el trabajador no tiene la capacidad y conocimiento con que se ostenta.\n"
+"                        <br/><br/>\n"
+"                        <strong>SEGUNDA.-</strong> “LA EMPRESA” quien tiene cubierta la plantilla de empleados de base necesarios para el desarrollo de sus labores normales de operación y que necesita contratar al empleado \n"
+"                        para que lleve a cabo las labores extraordinarias consistentes en Actividades y Relativos a su puesto que el personal de la plantilla de empleados actual no puede realizar, con fundamento en lo dispuesto\n"
+"                        en los Artículos 35 y 37 de la Ley Federal de Trabajo, Por lo que “La Empresa” contrata a “El Empleado” por tiempo determinado, para que preste sus servicios en el puesto y/o categoría\n"
+"                        de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,help:rh_gebesa.field_resource_calendar__finish_hour
+msgid "End of working hour.\n"
+msgstr "Fin de la jornada laboral.\n"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__entry_date_vacation
+msgid "Entry date for vacation"
+msgstr "Fecha ingreso para vacaciones"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Escolaridad:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Estado Civil:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Estado:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__father
+msgid "Father"
+msgstr "Padre"
+
+#. module: rh_gebesa
+#: code:addons/rh_gebesa/models/hr_employee.py:220
+#, python-format
+msgid "Favor de recolectar las responsibas de:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Fecha Ingreso:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Fecha Nacimiento:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Fecha de revisión: 22/09/2021"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_layout
+msgid "Fecha:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_resource_calendar__finish_day
+msgid "Finish Day"
+msgstr "Día de finalización"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_resource_calendar__finish_hour
+msgid "Finish Hour"
+msgstr "Hora de Salida"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__porcentaje_1
+msgid "First Percentage"
+msgstr "Primer Porcentaje"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_contract__credito_fonacot
+msgid "Fonacot Credit"
+msgstr "Credito Fonacot"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_leave__for_payroll
+msgid "For payment by payroll"
+msgstr "Para pago por nomina"
+
+#. module: rh_gebesa
+#: model:ir.model,name:rh_gebesa.model_hr_department
+msgid "HR Department"
+msgstr ""
+
+#. module: rh_gebesa
+#: selection:hr.employee,escolaridad:0
+msgid "Hight School"
+msgstr "Preparatoria"
+
+#. module: rh_gebesa
+#. openerp-web
+#: code:addons/rh_gebesa/static/src/js/chrome/user_menu.js:33
+#: code:addons/rh_gebesa/static/src/xml/menu_vacaciones.xml:5
+#, python-format
+msgid "Holidays"
+msgstr "Vacaciones"
+
+#. module: rh_gebesa
+#: model:hr.leave.type,name:rh_gebesa.holiday_by_law
+msgid "Holidays by law "
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_employee_consecutive_forchange_wizard__id
+#: model:ir.model.fields,field_description:rh_gebesa.field_report_rh_gebesa_report_ingreso_personal__id
+msgid "ID"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "INGRESO DE PERSONAL"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.actions.report,name:rh_gebesa.ingreso_personal
+msgid "Imprimir Ingreso Personal"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_contract__incentivo
+msgid "Incentivo"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Incentivo:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_contract__credito_infonavit
+msgid "Infonavit Credit"
+msgstr "Credito Infonavit"
+
+#. module: rh_gebesa
+#: selection:resource.calendar,finish_day:0
+#: selection:resource.calendar,starting_day:0
+msgid "Jueves"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_employee_consecutive_forchange_wizard____last_update
+#: model:ir.model.fields,field_description:rh_gebesa.field_report_rh_gebesa_report_ingreso_personal____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_employee_consecutive_forchange_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_employee_consecutive_forchange_wizard__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: rh_gebesa
+#: model:ir.model,name:rh_gebesa.model_hr_leave
+msgid "Leave"
+msgstr "Ausencia"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_layout
+msgid "Logo"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Lugar Nacimiento:"
+msgstr ""
+
+#. module: rh_gebesa
+#: selection:resource.calendar,finish_day:0
+#: selection:resource.calendar,starting_day:0
+msgid "Lunes"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid "MAYTE VALDES ABRAHAM<br/>ADMONLAG S. C."
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Madre:"
+msgstr ""
+
+#. module: rh_gebesa
+#: selection:resource.calendar,finish_day:0
+#: selection:resource.calendar,starting_day:0
+msgid "Martes"
+msgstr ""
+
+#. module: rh_gebesa
+#: selection:hr.employee,escolaridad:0
+msgid "Medium School"
+msgstr "Secundaria"
+
+#. module: rh_gebesa
+#: selection:resource.calendar,finish_day:0
+#: selection:resource.calendar,starting_day:0
+msgid "Miercoles"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__mother
+msgid "Mother"
+msgstr "Madre"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid "NOMBRE"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_employee_consecutive_forchange_wizard__consecutivo
+msgid "New Employee Number"
+msgstr "Nuevo Número de Empleado"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__consecutive_id
+msgid "No. Employee"
+msgstr "No. Empleado"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__imss
+msgid "No. IMSS"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "No. IMSS:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "No. Trabajador:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Nombre:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Número Hijos:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Número:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid "PARENTESCO"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid "PORCENTAJE"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Padre:"
+msgstr ""
+
+#. module: rh_gebesa
+#: code:addons/rh_gebesa/models/hr_employee.py:200
+#, python-format
+msgid "Please enter valid CURP"
+msgstr "Por favor ingrese CURP válido"
+
+#. module: rh_gebesa
+#: code:addons/rh_gebesa/models/hr_employee.py:208
+#, python-format
+msgid "Please enter valid IMSS"
+msgstr "Por favor ingrese IMSS válido"
+
+#. module: rh_gebesa
+#: code:addons/rh_gebesa/models/hr_employee.py:204
+#, python-format
+msgid "Please enter valid RFC"
+msgstr "Por favor ingrese RFC válido"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Porcentaje:"
+msgstr ""
+
+#. module: rh_gebesa
+#: selection:hr.employee,escolaridad:0
+msgid "Postgraduate"
+msgstr "Postgrado"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Premio Asistencia:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Premio Puntualidad:"
+msgstr ""
+
+#. module: rh_gebesa
+#: selection:hr.employee,escolaridad:0
+msgid "Primary School"
+msgstr "Primaria"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Puesto:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_contract__premio_puntualidad
+msgid "Punctuality award"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_layout
+msgid "Página 1 de 1"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "R.F.C.:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ""
+"REPRESENTADA POR EL C. MAYTE VALDES ABRAHAM\n"
+"                        EN SU CARACTER DE REPRESENTANTE LEGAL, Y POR LA OTRA EL"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__rfc
+msgid "RFC"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid "RFC:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__reingreso
+msgid "Re-Entry"
+msgstr "Reingreso"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Reingreso:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model,name:rh_gebesa.model_resource_calendar
+msgid "Resource Working Time"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Revisión: 0"
+msgstr ""
+
+#. module: rh_gebesa
+#: selection:resource.calendar,finish_day:0
+#: selection:resource.calendar,starting_day:0
+msgid "Sabado"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Salario Diario:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__escolaridad
+msgid "Scholarship"
+msgstr "Escolaridad"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__porcentaje_2
+msgid "Second Percentage"
+msgstr "Segundo Porcentaje"
+
+#. module: rh_gebesa
+#: model:ir.actions.server,name:rh_gebesa.ir_cron_send_alert_contract_ir_actions_server
+#: model:ir.cron,cron_name:rh_gebesa.ir_cron_send_alert_contract
+#: model:ir.cron,name:rh_gebesa.ir_cron_send_alert_contract
+msgid "Send Email Contract"
+msgstr "Enviar contrato por correo electrónico"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Sexo:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Sidicalizado:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__sindicalizado
+msgid "Sindicalizado"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__spouse
+msgid "Spouse"
+msgstr "Esposo(a)"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_resource_calendar__start_hour
+msgid "Start Hour"
+msgstr "Hora de Inicio"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,help:rh_gebesa.field_hr_contract__date_trial_start
+msgid "Start date of the trial period (if there is one)."
+msgstr "Fecha de inicio del período de prueba (si existe)."
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_contract__date_trial_start
+msgid "Start of Trial Period"
+msgstr "Fecha de inicio de prueba"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,help:rh_gebesa.field_resource_calendar__start_hour
+msgid "Start of working hour.\n"
+msgstr "Hora de inicio de la jornada laboral.\n"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_resource_calendar__starting_day
+msgid "Starting Day"
+msgstr "Día de Inicio"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__resource_calendar_ids
+msgid "Switch working hours"
+msgstr "Rotacion de turnos"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid "TESTIGO"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Telefono Personal:"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "Telefono Trabajo:"
+msgstr ""
+
+#. module: rh_gebesa
+#: code:addons/rh_gebesa/models/hr_employee.py:118
+#, python-format
+msgid ""
+"The sum o the percentage\n"
+" Must be 100 "
+msgstr "La Suma del Porcentaje debe ser 100"
+
+#. module: rh_gebesa
+#: sql_constraint:hr.employee:0
+msgid "This field must be unique!"
+msgstr "¡Este campo debe ser único!"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_employee__umf
+msgid "UMF"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid "UMF:"
+msgstr ""
+
+#. module: rh_gebesa
+#. openerp-web
+#: code:addons/rh_gebesa/static/src/xml/menu_vacaciones.xml:24
+#, python-format
+msgid "User without employee"
+msgstr ""
+
+#. module: rh_gebesa
+#: selection:resource.calendar,finish_day:0
+#: selection:resource.calendar,starting_day:0
+msgid "Viernes"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_contract__witness
+msgid "Witness"
+msgstr "Testigo"
+
+#. module: rh_gebesa
+#: model:ir.model.fields,field_description:rh_gebesa.field_hr_contract__witness_rh
+msgid "Witness RH"
+msgstr "Testigo RH"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid ""
+"_______________________________\n"
+"                            <br/>\n"
+"                            FIRMA AUTORIZACION"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_document
+msgid ""
+"_______________________________\n"
+"                            <br/>\n"
+"                            FIRMA RECIBIDO NOMINAS"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid "al"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ""
+"al referirse al presente documento como “EL CONTRATO”, y a los que suscriben como “LAS PARTES”.\n"
+"                        <br/><br/>\n"
+"                        <strong>SEGUNDA.-</strong> Este “CONTRATO” se celebra por tiempo indeterminado según lo establece el artículo 35 de “LA LEY”.\n"
+"                        <br/><br/>\n"
+"                        <strong>TERCERA.-</strong> La prestación de los servicios de “EL TRABAJADOR” consistirá de acuerdo a la definición de su puesto de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"así como cualquier otra actividad conexa o complementaria, de conformidad con las instrucciones y lineamientos que reciba de la empresa y de conformidad con los reglamentos interiores, las políticas y procedimientos de la empresa.\n"
+"                        <br/><br/>\n"
+"                        4. VI.- El Trabajador"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+msgid ""
+"así como cualquier otra actividad conexa o complementaria, de conformidad con las instrucciones y lineamientos que reciba de la empresa y de conformidad con los reglamentos interiores, las políticas y procedimientos de la empresa.\n"
+"                        <br/><br/>\n"
+"                        VI.- El Trabajador"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid "con receso de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+msgid ""
+"de premio por asistencia los que percibirá el trabajador en forma constante y permanente por lo que de conformidad con el artículo 84 de la ley federal del trabajo.\n"
+"                        <br/><br/>\n"
+"                        El cual será cubierto los días miércoles de cada semana en el cual se encuentra incluida la proporción correspondiente a los séptimos días y días de descanso obligatorio, y le será pagado mediante deposito que realice  “la empresa”, en una institución bancaria, mediante cuenta de nómina.\n"
+"                        <br/><br/>\n"
+"                        Del salario anterior, “LA EMPRESA” hará por cuenta de “el trabajador” las deducciones legales correspondientes, particularmente las que se refieren a Impuestos Sobre La Renta, Seguro Social, Cuota Sindical en su caso etc. asimismo, se harán las aportaciones y altas al IMSS, INFONAVIT, SAR Y HACIENDA en los términos de las legislaciones respectivas. \n"
+"                        <br/><br/>\n"
+"                        <strong>“LA EMPRESA”</strong> otorgara gastos médicos menores al trabajador, por la cantidad de $1,500.00 mensuales no siendo estos acumulables.\n"
+"                        <br/><br/>\n"
+"                        <strong>SÉPTIMA.-</strong> “EL TRABAJADOR” recibirá el pago de su salario en el domicilio del lugar de la prestación del servicio. “LA EMPRESA” pagará su salario a “EL TRABAJADOR” los días DIAS MIERCOLES, POR MEDIO DE TARJETA BANCARIA NOMINAL EN BANCO <strong>BAJIO</strong>.\n"
+"                        <br/><br/>\n"
+"                        <strong>OCTAVA.-</strong> “EL TRABAJADOR” tendrá derecho por cada cinco días de labores a descansar dos con el pago del salario diario correspondiente. Queda establecido preferentemente como días de descanso semanal los días sábado y domingo de cada semana, pudiendo ser cambiado el mismo.\n"
+"                        <br/><br/>\n"
+"                        <strong>NOVENA.-</strong> Cuando “EL TRABAJADOR” por razones administrativas tenga que laborar el día domingo, “LA EMPRESA” le pagará, además de su salario ordinario, un 25 % (VEINTICINCO POR CIENTO) como prima dominical sobre el salario ordinario devengado, Independientemente del día de descanso semanal, al que tendrá derecho.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA.-</strong> Quedan establecidos como días de descanso obligatorios los señalados en el artículo 74 de “LA LEY”.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA PRIMERA.-</strong> “EL TRABAJADOR” tendrá derecho a disfrutar de un período anual de vacaciones según lo establecido en el artículo 76 de “LA LEY” tomando en consideración la antigüedad en el trabajador así  como a disfrutar del salario que le corresponda. De igual modo recibirá la Prima de Vacacional respectiva, equivalente al 25% del importe pagado por concepto de vacaciones, prestación que se pagara de acuerdo al salario diario integrado percibido.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA SEGUNDA.-</strong> “EL TRABAJADOR” tendrá derecho a recibir por parte de \n"
+"                        “LA EMPRESA” antes del día 20 de diciembre de cada año, el importe correspondiente a veinte días de salario como pago de aguinaldo a que se refiere el artículo 87 de “LA LEY”, o su parte proporcional por fracción de año, prestación que se pagara de acuerdo al salario diario integrado percibido.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA TERCERA.-</strong> “EL TRABAJADOR” acepta someterse a los exámenes médicos que periódicamente establezca “LA EMPRESA” en los términos del artículo 134 fracción X de “LA LEY”, a fin de mantener en forma óptima sus facultades físicas e intelectuales, para el mejor desempeño de sus funciones. El médico que practique los reconocimientos será designado y retribuido por “LA EMPRESA”.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA CUARTA.-</strong> “EL TRABAJADOR” deberá de integrarse a los Planes, Programas y Comisiones Mixtas de Capacitación y Adiestramiento así  como a los de Seguridad e Higiene en el Trabajo que tiene constituidos “LA EMPRESA”, tomando parte activa dentro de los mismos según los cursos establecidos y medidas preventivas de riesgos de trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA QUINTA.-</strong> “EL TRABAJADOR”, deberá observar y cumplir todo lo contenido en el Reglamento Interior de Trabajo con que cuenta “LA EMPRESA” y que tiene fijado en las áreas de mayor visibilidad.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA SEXTA.-</strong> “EL TRABAJADOR” acepta y por ende queda establecido que cuando por razones convenientes para “LA EMPRESA” éste modifique el horario de trabajo, podrá desempeñar su jornada en el que quede establecido ya que sus actividades al servicio de “LA EMPRESA” son prioritarias y no se contraponen a otras que pudiere llegar a desarrollar.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA SÉPTIMA.-</strong> “EL TRABAJADOR” deberá dar fiel cumplimiento a las disposiciones contenidas en el artículo134 de “LA LEY” y que corresponden a las obligaciones de los trabajadores en el desempeño de sus labores al servicio de “LA EMPRESA”.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA OCTAVA.-</strong> “EL TRABAJADOR” deberá presentarse puntualmente a sus labores en el horario de trabajo establecido y firmar las listas de asistencias acostumbradas o checar su tarjeta de asistencia del reloj-checador diariamente. En caso de retraso o falta de asistencia injustificada podrá “LA EMPRESA” imponerle cualquier corrección disciplinaria de las que contempla el reglamento Interior de Trabajo o “LA LEY”.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA NOVENA.-</strong> Para todo lo no previsto en el presente “CONTRATO” se estará a lo contenido en la “LEY”, así como el Reglamento Interior de Trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA.-</strong> “LAS PARTES” reconocen como fecha de antigüedad o inicio de prestación de servicios de “EL TRABAJADOR” a partir del día"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+msgid ""
+"declarando el “El Trabajador, bajo protesta de decir verdad que tiene la capacidad, aptitudes y conocimientos necesarios para desempeñar la actividad que requiere el puesto que va a ocupar, descrito anteriormente. \n"
+"                        <br/><br/>\n"
+"                        <strong>TERCERA.-</strong> “El Empleado” se obliga a prestar sus servicios en el domicilio de la empresa o en cualquier otro lugar que ésta le indique dentro de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"declarando el “El Trabajador, bajo protesta de decir verdad que tiene la capacidad, aptitudes y conocimientos necesarios para desempeñar la actividad que requiere el puesto que va a ocupar, descrito anteriormente. En consecuencia\n"
+"                        la relación de trabajo podrá rescindirse sin responsabilidad para “LA EMPRESA” si en su concepto dentro de los primeros treinta días de vigencia de este contrato, el Trabajador <u>no tiene la capacidad y conocimiento con que se ostenta.</u>\n"
+"                        <br/><br/>\n"
+"                        <strong>TERCERA.-</strong> “El Empleado” se obliga a prestar sus servicios en el domicilio de la empresa o en cualquier otro lugar que ésta le indique dentro de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model:ir.model,name:rh_gebesa.model_employee_consecutive_forchange_wizard
+#: model:ir.model,name:rh_gebesa.model_report_rh_gebesa_report_ingreso_personal
+msgid "descripcion pendiente"
+msgstr "descripción pendiente"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"es una sociedad\n"
+"                        mexicana representada por  ING. BOYARDO EUGENIO SALMON ACOSTA,\n"
+"                        con domicilio"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid "es una sociedad civil representada por C. MAYTE VALDES ABRAHAM, con domicilio en,"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid "horas a las"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid "horas, de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"minutos en jornada, permitiendo tener como días de descanso Sábado y Domingo de cada semana, conviniendo éste con “La Empresa” que en cualquier momento el mismo puede ser modificado de acuerdo con las necesidades de la compañía en cualquier otra modalidad equivalente.\n"
+"                        <br/><br/>\n"
+"                        <strong>QUINTA.-</strong> “El Empleado” disfrutará de un salario Diario de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid "más la cantidad de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.employee_consecutive_forchange_wizard
+msgid "or"
+msgstr "ó"
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid "por concepto de premio por puntualidad más la cantidad de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"requiere de los servicios del personal apto para el desarrollo de sus actividades,\n"
+"                        y de modo especial para el puesto o funciones de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_ingreso_personal_layout
+msgid "www.gebesa.com"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ""
+"y además actividades inherentes a su puesto. \n"
+"                        <br/><br/>\n"
+"                        <strong>CUARTA.-</strong> El lugar de prestación  de los servicios de “EL TRABAJADOR” será el domicilio de “DE LA EMPRESA”. Asimismo “LAS PARTES” convienen y acepta “EL TRABAJADOR” que cuando por razones administrativas o de desarrollo de la actividad o prestación de servicios contratados haya necesidad de removerlo, podrá trasladarse al lugar que “LA EMPRESA” le asigne, siempre y cuando no se vea menoscabado su salario.\n"
+"                        <br/>\n"
+"                        En este caso “LA EMPRESA” le comunicará con anticipación la remoción del lugar de prestación de servicios indicándole el nuevo asignado.\n"
+"                        <br/>\n"
+"                        Para el caso que en el nuevo lugar de prestación de servicios que le fuera asignado variara el horario de labores, “EL TRABAJADOR”  acepta allanarse a dicha modalidad.\n"
+"                        <br/><br/>\n"
+"                        <strong>QUINTA.-</strong> La duración de la jornada de trabajo será de 48 horas semanales, y en términos del artículo 59 de “LA LEY”, para que “EL TRABAJADOR” disfrute de un descanso semanal mayor al comúnmente establecido, se amplía el horario diario de labores quedando poder distribuida como sigue:\n"
+"                        <br/><br/>\n"
+"                        <u><strong>LUNES A VIERNES: DE 8:30 A 18:30 HORAS CON UNA HORA PARA TOMAR SUS ALIMENTOS DE LAS 14:00 A LAS 15:00.\n"
+"                        DESCANSANDO LOS SABADOS Y DOMINGOS DE CADA SEMANA.</strong> </u>\n"
+"                        <br/><br/>\n"
+"                        “EL TRABAJADOR” únicamente podrá laborar tiempo extraordinario cuando “LA EMPRESA” se lo indique y medie orden por escrito, la que señalará el día o los días y el horario en el cual se desempeñará el mismo. Para el caso de computar el tiempo extraordinario laborado deberá “EL TRABAJADOR” recabar y conservar la orden referida a fin de que en su momento quede debidamente pagado el tiempo extra laborado; la falta de presentación de esa orden solo es imputable a “EL TRABAJADOR”. \n"
+"                        <br/><br/>\n"
+"                        <strong>SEXTA.-</strong> “EL TRABAJADOR” percibirá un salario por cuota diaria de"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_det_document
+msgid ""
+"y permanente de conformidad con el artículo 84 de la ley federal del trabajo.\n"
+"                        <br/><br/>\n"
+"                        El cual será cubierto los días miércoles de cada semana en el cual se encuentra incluida la proporción correspondiente a los séptimos días y días de descanso obligatorio, y le será pagado mediante deposito que realice  “la empresa”, en una institución bancaria, mediante cuenta de nómina.\n"
+"                        <br/><br/>\n"
+"                        Del salario anterior, “LA EMPRESA” hará por cuenta de “el trabajador” las deducciones legales correspondientes, particularmente las que se refieren a Impuestos Sobre La Renta, Seguro Social, Cuota Sindical en su caso etc. asimismo, se harán las aportaciones y altas al IMSS, INFONAVIT, SAR Y HACIENDA en los términos de las legislaciones respectivas. \n"
+"                        <br/><br/>\n"
+"                        <strong>“EL TRABAJADOR”</strong> gozara de gastos médicos menores para él, los cuales le serán proporcionados APARTIR DE SU CONTRATO INDETERMINADO por la “EMPRESA”\n"
+"                        <br/><br/>\n"
+"                        <strong>SÉPTIMA.-</strong> “EL TRABAJADOR” recibirá el pago de su salario en el domicilio del lugar de la prestación del servicio. “LA EMPRESA” pagará su salario a “EL TRABAJADOR” los días DIAS MIERCOLES, POR MEDIO DE TARJETA BANCARIA NOMINAL EN BANCO <strong>BAJIO</strong>.\n"
+"                        <br/><br/>\n"
+"                        <strong>OCTAVA.-</strong> “EL TRABAJADOR” tendrá derecho por cada cinco días de labores a descansar dos con el pago del salario diario correspondiente. Queda establecido preferentemente como días de descanso semanal los días sábado y domingo de cada semana, pudiendo ser cambiado el mismo.\n"
+"                        <br/><br/>\n"
+"                        <strong>NOVENA.-</strong> Cuando “EL TRABAJADOR” por razones administrativas tenga que laborar el día domingo, “LA EMPRESA” le pagará, además de su salario ordinario, un 25 % (VEINTICINCO POR CIENTO) como prima dominical sobre el salario ordinario devengado, Independientemente del día de descanso semanal, al que tendrá derecho.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA.-</strong> Quedan establecidos como días de descanso obligatorios los señalados en el artículo 74 de “LA LEY”.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA PRIMERA.-</strong> “EL TRABAJADOR” tendrá derecho a disfrutar de un período anual de vacaciones según lo establecido en el artículo 76 de “LA LEY” tomando en consideración la antigüedad en el trabajador así  como a disfrutar del salario que le corresponda. De igual modo recibirá la Prima de Vacacional respectiva, equivalente al 25% del importe pagado por concepto de vacaciones, prestación que se pagara de acuerdo al salario diario integrado percibido.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA SEGUNDA.-</strong> “EL TRABAJADOR” tendrá derecho a recibir por parte de \n"
+"                        “LA EMPRESA” antes del día 20 de diciembre de cada año, el importe correspondiente a veinte días de salario como pago de aguinaldo a que se refiere el artículo 87 de “LA LEY”, o su parte proporcional por fracción de año, prestación que se pagara de acuerdo al salario diario integrado percibido.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA TERCERA.-</strong> “EL TRABAJADOR” acepta someterse a los exámenes médicos que periódicamente establezca “LA EMPRESA” en los términos del artículo 134 fracción X de “LA LEY”, a fin de mantener en forma óptima sus facultades físicas e intelectuales, para el mejor desempeño de sus funciones. El médico que practique los reconocimientos será designado y retribuido por “LA EMPRESA”.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA CUARTA.-</strong> “EL TRABAJADOR” deberá de integrarse a los Planes, Programas y Comisiones Mixtas de Capacitación y Adiestramiento así  como a los de Seguridad e Higiene en el Trabajo que tiene constituidos “LA EMPRESA”, tomando parte activa dentro de los mismos según los cursos establecidos y medidas preventivas de riesgos de trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA QUINTA.-</strong> “EL TRABAJADOR”, deberá observar y cumplir todo lo contenido en el Reglamento Interior de Trabajo con que cuenta “LA EMPRESA” y que tiene fijado en las áreas de mayor visibilidad.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA SEXTA.-</strong> “EL TRABAJADOR” acepta y por ende queda establecido que cuando por razones convenientes para “LA EMPRESA” éste modifique el horario de trabajo, podrá desempeñar su jornada en el que quede establecido ya que sus actividades al servicio de “LA EMPRESA” son prioritarias y no se contraponen a otras que pudiere llegar a desarrollar.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA SÉPTIMA.-</strong> “EL TRABAJADOR” deberá dar fiel cumplimiento a las disposiciones contenidas en el artículo134 de “LA LEY” y que corresponden a las obligaciones de los trabajadores en el desempeño de sus labores al servicio de “LA EMPRESA”.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA OCTAVA.-</strong> “EL TRABAJADOR” deberá presentarse puntualmente a sus labores en el horario de trabajo establecido y firmar las listas de asistencias acostumbradas o checar su tarjeta de asistencia del reloj-checador diariamente. En caso de retraso o falta de asistencia injustificada podrá “LA EMPRESA” imponerle cualquier corrección disciplinaria de las que contempla el reglamento Interior de Trabajo o “LA LEY”.\n"
+"                        <br/><br/>\n"
+"                        <strong>DÉCIMA NOVENA.-</strong> Para todo lo no previsto en el presente “CONTRATO” se estará a lo contenido en la “LEY”, así como el Reglamento Interior de Trabajo.\n"
+"                        <br/><br/>\n"
+"                        <strong>VIGÉSIMA.-</strong> La empresa contrata al empleado por tiempo Determinado, y por un periodo de 30 días, mismo que queda comprendido del día"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_determinado_document
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_document
+msgid ""
+"y/o cualquiera otra entidad de la República Mexicana.\n"
+"                        <br/><br/>\n"
+"                        <strong>CUARTA.-</strong> El horario de labores convenido entre “LA EMPRESA” y “El Empleado” será de las"
+msgstr ""
+
+#. module: rh_gebesa
+#: model_terms:ir.ui.view,arch_db:rh_gebesa.report_contrato_indeterminado_ad_document
+msgid ""
+"“EL TRABAJADOR”; a la Ley Federal del Trabajo como “LA LEY”, al referirse al presente documento como “EL CONTRATO”, y a los que suscriben como “LAS PARTES”.\n"
+"                        <br/><br/>\n"
+"                        <strong>SEGUNDA.-</strong> Este “CONTRATO” se celebra por tiempo indeterminado según lo establece el artículo 35 de “LA LEY”.\n"
+"                        <br/><br/>\n"
+"                        <strong>TERCERA.-</strong> La prestación de los servicios de “EL TRABAJADOR” consistirá de acuerdo a la definición de su puesto de"
+msgstr ""

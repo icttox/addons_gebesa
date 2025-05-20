@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_send_netsuite_wizard'>
+        	<field name='name'>product.send.netsuite.wizard</field>
+        	<field name='model'>product.send.netsuite.wizard</field>
+        	<field name='arch' type='xml'>
+        		<form>
+        			<group>
+        				<field name='nst_plant_id'/>
+        				<field name='nst_line_id' domain="[('product_nstplant_id','=',nst_plant_id)]"/>
+        				<field name='nst_tipo_id' domain="[('product_nstline_id','=',nst_line_id)]"/>
+        			</group>
+        			<footer>
+                        <button name="add_netsuite" string="Send" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+    </data>
+</odoo>

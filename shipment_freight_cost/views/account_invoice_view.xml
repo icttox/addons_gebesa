@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="shipment_freight_cost_form" model="ir.ui.view">
+            <field name="name">shipment_freight_cost_form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Order">
+                        <field name="inv_rel_so_ids">
+                            <tree editable="bottom">
+                                <field name='order_id' domain="[('state','in', ['done', 'cancel'])]"/>
+                                <field name='total_so'/>
+                                <field name='gasto_pro_flete'/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>  
+                <xpath expr="//notebook" position="inside">
+                    <page string="Shipment">
+                        <label for="total_sale"/>
+                        <field name='total_sale'/>
+                        <field name="inv_rel_shipment_ids">
+                            <tree editable="bottom">
+                                <field name='shipment_id' domain="[('state','in', ['done', 'finished'])]"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>             
+            </field>
+        </record>
+    </data>
+</odoo>

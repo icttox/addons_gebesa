@@ -1,0 +1,133 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pedidos_vinculados
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-13 18:11+0000\n"
+"PO-Revision-Date: 2017-10-13 18:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pedidos_vinculados
+#: code:addons/pedidos_vinculados/models/pedidos_vinculados.py:25
+#, python-format
+msgid "Active"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados_activo
+msgid "Activo"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: code:addons/pedidos_vinculados/models/pedidos_vinculados.py:16
+#, python-format
+msgid "Date"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados_description
+msgid "Descripción"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: code:addons/pedidos_vinculados/models/pedidos_vinculados.py:29
+#, python-format
+msgid "Description"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados_partner_id
+msgid "Empresa"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados_fecha
+msgid "Fecha"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: code:addons/pedidos_vinculados/models/pedidos_vinculados.py:12
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados_folio
+#, python-format
+msgid "Folio"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados_id
+msgid "ID"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.actions.act_window,name:pedidos_vinculados.action_pedidos_vinculados
+#: model:ir.ui.menu,name:pedidos_vinculados.menu_pedidos_vinculados
+#: model:ir.ui.view,arch_db:pedidos_vinculados.pedidos_vinculados_form
+#: model:res.groups,name:pedidos_vinculados.group_pedidos_vinculados
+msgid "Linked Orders"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: code:addons/pedidos_vinculados/models/pedidos_vinculados.py:34
+#: model:ir.ui.view,arch_db:pedidos_vinculados.pedidos_vinculados_form
+#, python-format
+msgid "Orders"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: code:addons/pedidos_vinculados/models/pedidos_vinculados.py:21
+#, python-format
+msgid "Partner"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model.fields,field_description:pedidos_vinculados.field_pedidos_vinculados_order_ids
+msgid "Pedidos"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model,name:pedidos_vinculados.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: pedidos_vinculados
+#: model:ir.model,name:pedidos_vinculados.model_pedidos_vinculados
+msgid "pedidos.vinculados"
+msgstr ""
+

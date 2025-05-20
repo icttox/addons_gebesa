@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="gebesa_mrp_bom_dynamic" model="ir.ui.view">
+            <field name="name">gebesa.mrp.bom.dynamic</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp_cut_detail.mrp_bom_cut_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="action_propagar" string="Propagate" type="object" groups="mrp_bom_dynamic.group_detalles_dinamicos"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id='action_mrp_product_caliber' model='ir.actions.act_window'>
+            <field name='name'>Catalog Caliber</field>
+            <field name='res_model'>mrp.product.caliber</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+            <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to register a Caliber
+            </p><p>
+                Make your first record of Caliber.
+            </p>
+            </field>
+        </record>
+
+        <menuitem id="mrp_product_caliber_menu" name="Catalog Caliber" parent="stock.menu_stock_config_settings" action="action_mrp_product_caliber"/>
+
+        <record model='ir.ui.view' id='mrp_product_caliber_tree'>
+            <field name='name'>mrp.product.caliber.tree</field>
+            <field name='model'>mrp.product.caliber</field>
+            <field name='arch' type='xml'>
+                <tree string='Caliber(s)'>
+                    <field name='key_caliber'/>
+                    <field name='espesor_mm'/>
+                    <field name='espesor_pgs'/>
+                    <field name='peso_kg'/>
+                    <field name='peso_lb'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='mrp_product_caliber_form'>
+            <field name='name'>mrp.product.caliber.form</field>
+            <field name='model'>mrp.product.caliber</field>
+            <field name='arch' type='xml'>
+                <form string='Caliber'>
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name='key_caliber' required='True'/>
+                                <field name='espesor_mm' required='True'/>
+                                <field name='espesor_pgs' required='True'/>
+                            </group>
+                            <group>
+                                <field name='name_caliber' required='True'/>
+                                <field name='peso_kg' required='True'/>
+                                <field name='peso_lb' required='True'/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

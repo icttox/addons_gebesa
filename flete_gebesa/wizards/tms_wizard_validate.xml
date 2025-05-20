@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="tms_wizard_validate" model="ir.ui.view">
+            <field name="name">Validate</field>
+            <field name="model">tms.wizard.validate</field>
+            <field name="arch" type="xml">
+                <form string="Validate">
+                    <separator colspan="4" string="Approve, authorize and confirm the selected records"/>
+                    <footer>
+                        <button name="process_all" string="Validate" type="object"/>or
+                        <button class="oe_link" special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <act_window id="action_advance_wizard_validate" key2="client_action_multi" name="Validate advance" res_model="tms.wizard.validate" src_model="tms.advance" target="new" view_mode="form"/>
+        <act_window id="action_tollstation_wizard_validate" key2="client_action_multi" name="Validate tollstation" res_model="tms.wizard.validate" src_model="tms.travel.tollstation" target="new" view_mode="form"/>
+    </data>
+</odoo>

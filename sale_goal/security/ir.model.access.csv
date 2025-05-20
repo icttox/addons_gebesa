@@ -1,0 +1,9 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+sales_goals_manager,salesgoals_manager,model_sale_goal,group_sales_goals,1,1,1,1
+sales_goals_user,salesgoals_user,model_sale_goal,,1,0,0,0
+sales_goals_weekly_manager,salesgoals_weekly_manager,model_sale_goal_weekly,group_sales_goals,1,1,1,1
+sales_goals_weekly_user,salesgoals_weekly_user,model_sale_goal_weekly,,1,0,0,0
+sales_goals_monthly_manager,salesgoals_monthly_manager,model_sale_goal_monthly,group_sales_goals,1,1,1,1
+sales_goals_monthly_user,salesgoals_monthly_user,model_sale_goal_monthly,,1,0,0,0
+sales_goals_quarterly_manager,salesgoals_quarterly_manager,model_sale_goal_quarterly,group_sales_goals,1,1,1,1
+sales_goals_quarterly_user,salesgoals_quarterly_user,model_sale_goal_quarterly,,1,0,0,0

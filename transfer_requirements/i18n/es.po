@@ -1,0 +1,280 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* transfer_requirements
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-10 18:01+0000\n"
+"PO-Revision-Date: 2018-09-10 18:01+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.view_transfer_kanban
+msgid "<br/>\n"
+"                                    Cheque:"
+msgstr "Cheque"
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.view_transfer_kanban
+msgid "<br/>\n"
+"                                    Solicitud de:"
+msgstr "solicitud de "
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_emp_ven_id
+msgid "A favor de:"
+msgstr "a favor de"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_message_needaction
+msgid "Action Needed"
+msgstr "Acción Requerida"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_quantity_fac
+msgid "Amount to invoice"
+msgstr "Monto a facturar"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_bank_id
+msgid "Bank:"
+msgstr "Banco"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_name_cheke
+msgid "Check:"
+msgstr "Cheque"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_checkin_a
+msgid "Checkin:"
+msgstr "facturar a:"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_color
+msgid "Color"
+msgstr "Color"
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.transfer_requirements_form_view
+msgid "Company"
+msgstr "Compañía"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_company_id
+msgid "Company:"
+msgstr "Compañía"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_con_obs
+msgid "Concept y Obs:"
+msgstr "Concepto y Obs"
+
+#. module: transfer_requirements
+#: model:ir.actions.act_window,help:transfer_requirements.transfer_req_list_action
+msgid "Create your first transfer"
+msgstr "Crea tu primer transferncia"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: transfer_requirements
+#: code:addons/transfer_requirements/models/transfer_requirements.py:32
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_date
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,help:transfer_requirements.field_transfer_requirements_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr "Fecha de último trabajo realizado en esta cuenta"
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.view_transfer_kanban
+msgid "Delete"
+msgstr "Suprimir"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_spending_id
+msgid "Expense for: "
+msgstr "Gasto por"
+
+#. module: transfer_requirements
+#: code:addons/transfer_requirements/models/transfer_requirements.py:15
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_consecutive
+#, python-format
+msgid "Folio"
+msgstr "Folio"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Socios)"
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.transfer_requirements_form_view
+msgid "General"
+msgstr "General"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_id
+msgid "ID"
+msgstr "ID"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,help:transfer_requirements.field_transfer_requirements_message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si se marca, los nuevos mensajes requieren su atención"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,help:transfer_requirements.field_transfer_requirements_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_message_is_follower
+msgid "Is Follower"
+msgstr "Es un Seguidor"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_message_last_post
+msgid "Last Message Date"
+msgstr "Fecha de Ultimo Mensaje"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements___last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_message_ids
+msgid "Messages"
+msgstr "Mensages"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero de Acciones"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,help:transfer_requirements.field_transfer_requirements_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,help:transfer_requirements.field_transfer_requirements_message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes sin leer"
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.transfer_requirements_form_view
+msgid "Observations"
+msgstr "Observacion"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_responsible_id
+msgid "Request:"
+msgstr "Solicitud"
+
+#. module: transfer_requirements
+#: sql_constraint:transfer.requirements:0
+msgid "This field must be unique!"
+msgstr "This field must be unique!"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_Transfer
+msgid "Transfer"
+msgstr "Transferencia"
+
+#. module: transfer_requirements
+#: model:res.groups,name:transfer_requirements.group_manager_transfer_requirements
+msgid "Transfer Requirements/ Manager"
+msgstr "Requisitos de transferencia / Gerente"
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.transfer_req_view
+msgid "Transfer Tree"
+msgstr "Árbol de transferencia"
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.transfer_requirements_form_view
+msgid "Transfer from"
+msgstr "Forma de transferencia"
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.view_transfer_kanban
+msgid "Transferencia:"
+msgstr "Transferencia"
+
+#. module: transfer_requirements
+#: model:ir.actions.act_window,name:transfer_requirements.transfer_req_list_action
+#: model:ir.ui.menu,name:transfer_requirements.transfer_menu
+#: model:ir.ui.menu,name:transfer_requirements.transferencia_menu
+msgid "Transferencias"
+msgstr "Transferencias"
+
+#. module: transfer_requirements
+#: model:ir.ui.menu,name:transfer_requirements.main_transfer_req_menu
+msgid "Transferencias "
+msgstr "Transferencia"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_message_unread
+msgid "Unread Messages"
+msgstr "Mensajes sin leer"
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_requirements_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes sin leer"
+
+#. module: transfer_requirements
+#: model:ir.model,name:transfer_requirements.model_transfer_requirements
+msgid "transfer"
+msgstr "Transferencia"
+

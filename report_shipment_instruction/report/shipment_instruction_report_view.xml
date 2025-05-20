@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/report_shipment_instruction/static/src/css/shipment_instruction.css"/>
+            </xpath>
+        </template> -->
+
+        <report
+            id="shipment_instruction_report"
+            model="mrp.shipment"
+            string="Instrucciones de Embarque"
+            report_type="qweb-pdf"
+            name="report_shipment_instruction.report_shipment"
+            file="report_shipment_instruction.report_shipment"
+        />
+
+        <template id="shipment_instruction_layout">
+            <t t-set="company" t-value="res_company"/>
+            <div class="header" style="font-size: 10pt;">
+                <div class="row">
+                    <div class="col-3 border">
+                        <img t-if="company.logo_invoice" t-att-src="image_data_uri(company.logo_invoice)" class="ml-3" style="z-index: 50; max-width: 160px; max-height: 110px;margin-top: 10px"/>
+                    </div>
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-8 border text-center">
+                                <strong>CARTA DE INSTRUCCIONES</strong>
+                            </div>
+                            <div class="col-4 border text-center">
+                                <strong>REVISION: 0</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="row">
+                                    <div class="col-6 border text-center">
+                                        <strong>CODIGO:F-LOG-05</strong>
+                                    </div>
+                                    <div class="col-6 border text-center">
+                                        <strong>DERIVA DE:<br/>P-LOG-01</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 border text-center">
+                                <strong>FECHA DE REVISION:<br/>14/07/2021</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="header">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img t-if="company.logo_invoice" t-att-src="image_data_uri(company.logo_invoice)" style="max-height: 60px;max-width: 250px;"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-4 text-center">
+                        <h2>EMBARQUE CARTA DE INSTRUCCIONES</h2>
+                    </div>
+                </div>
+            </div>-->
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer">
+                <div class="text-right mt-4">
+                    <div t-if="report_type == 'pdf'" class="text-muted">
+                        <span class="page"/> / <span class="topage"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_shipment_instruction_document">
+            <t t-call="report_shipment_instruction.shipment_instruction_layout">
+                <div class="page" style="font-size: 10pt; font-weight: bold;">
+                    <table class="table table-sm table-bordered">
+                        <tr>
+                            <td colspan="2">PARA: <span t-field="doc.partner_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">NOMBRE:</td>
+                        </tr>
+                        <tr>
+                            <td>SOLICITANTE: <span t-esc="user.name"/></td>
+                            <td>FECHA: <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/></td>
+                        </tr>
+                        <tr>
+                            <td>POSICIONAMIENTO(FECHA): <span t-field="doc.date_positioning"/></td>
+                            <td>POSICIONAMIENTO(HORA): <span t-field="doc.time_positioning"/></td>
+                        </tr>
+                        <tr>
+                            <td class="w-50">EQUIPO: <span t-field="doc.team"/></td>
+                            <td class="w-50">MERCANCIA: <span t-field="doc.mercancia"/></td>
+                        </tr>
+                    </table>
+                    
+                    <table class="table table-sm w-50 mt-4">
+                        <tr>
+                            <td class="btn-dark text-center" colspan="2">** INSTRUCCIONES ESPECIALES **</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Folio de Embarque:</strong>
+                            </td>
+                            <td >
+                               <span t-field="doc.folio" />
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Maniobras:</strong>
+                            </td>
+                            <td>
+                                <t t-if="doc.maniobras==True">
+                                    SI
+                                </t>
+                                <t t-if="doc.maniobras!=True">
+                                    NO
+                                </t>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="table table-sm mt-4">
+                        <tr>
+                            <td class="btn-dark text-center" colspan="2">ORIGEN (RECOLECCION)</td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Cliente:</td>
+                            <td>
+                                <span t-esc="user.company_id.name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Domicilio:</td>
+                            <td>
+                                Guanacevi 370 Parque Industrial, Gomez Palacio Dgo. 35078
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Contacto:</td>
+                            <td>
+                                <span t-field="user.name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Teléfono:</td>
+                            <td>
+                                871 707 77 77 ext 146
+                            </td>
+                        </tr>
+                        <t t-set="entrega_n" t-value="0" />
+                        <t t-foreach="doc.partner_ids" t-as="partner">
+                            <t t-set="entrega_n" t-value="entrega_n + 1" />
+                            <tr>
+                                <td class="btn-dark text-center" colspan="2">ENTREGA: <span t-esc="entrega_n"/></td>                          
+                            </tr>
+                            <tr>
+                                <td>Cliente:</td>
+                                <td>
+                                    <span t-esc="partner.partner_id.display_name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Domicilio:</td>
+                                <td id="shipment">
+                                    <t t-if="partner.partner_id.street">
+                                        <span t-esc="partner.partner_id.street + ' - '"/>
+                                    </t>
+                                    <t t-if="partner.partner_id.state_id.name">
+                                        <span t-esc="partner.partner_id.state_id.name + ' - '"/>
+                                    </t>
+                                    <t t-if="partner.partner_id.country_id.name">
+                                        <span t-esc="partner.partner_id.country_id.name"/>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Contacto:</td>
+                                <td>
+                                    <span t-esc="partner.partner_id.function"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Teléfono:</td>
+                                <td>
+                                    <span t-esc="partner.partner_id.phone"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hora/Fecha de Llegada:</td>
+                                <td>
+                                    <span t-esc="partner.date_arrival"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maniobras:</td>
+                                <td>
+                                    <t t-if="partner.maniobras==True">
+                                        SI
+                                    </t>
+                                    <t t-if="partner.maniobras!=True">
+                                        NO
+                                    </t>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_shipment">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                   <t t-call="report_shipment_instruction.report_shipment_instruction_document" />
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

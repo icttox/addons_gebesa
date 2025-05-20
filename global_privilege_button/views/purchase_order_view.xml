@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='purchase_order_cancel_button_form'>
+        	<field name='name'>purchase.order.cancel.button.form</field>
+        	<field name='model'>purchase.order</field>
+        	<field name='inherit_id' ref='purchase.purchase_order_form'/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//button[@name='button_cancel']" position="replace">
+                    <button name="button_cancel" states="draft,to approve,sent,purchase" string="Cancel" type="object" groups="global_privilege_button.group_cancel_purchase"/>
+                </xpath>
+                <!--xpath expr="//button[@name='button_confirm']" position="replace">
+                    <button name="button_confirm" attrs="{'invisible':['|', ('state', '!=', 'draft')]}" string="Confirm Order" type="object" class="oe_highlight"/>
+                </xpath-->      		     		
+        	</field>
+        </record>
+    </data>
+</odoo>

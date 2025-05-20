@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="account_voucher_report"
+            model="account.voucher"
+            string="Voucher"
+            report_type="qweb-pdf"
+            name="l10n_mx_supplier_iva_statement.account_voucher_report_qweb"
+            file="l10n_mx_supplier_iva_statement.account_voucher_report_qweb"
+        />
+
+        <template id="account_voucher_report_qweb">
+            <t t-call="web.html_container">
+                <t t-call="web.internal_layout">
+                    <t t-foreach="docs" t-as="doc">
+                        <div class="page">
+                            <div class="col-xs-12" style="font-size:23pt">
+                                <span t-field="doc.number"/>
+                            </div>
+                            <div class="col-xs-12 mb16" style="font-size:16pt">
+                                
+                            </div>
+                            <table width="100%" style="font-size:12pt">
+                                <tr>
+                                    <td width="17%">
+                                        Journal:
+                                    </td>
+                                    <td width="33%">
+                                        <span t-field="doc.journal_id"/>
+                                    </td>
+                                    <td width="17%">
+                                        Date:
+                                    </td>
+                                    <td width="33%">
+                                        <span t-field="doc.date"/>
+                                    </td>
+                                </tr>
+                                <tr height="10px"><td></td></tr>
+                                <tr>
+                                    <td width="17%" t-if="doc.partner_id">
+                                        Partner:
+                                    </td>
+                                    <td width="33%" t-if="doc.partner_id">
+                                        <span t-field="doc.partner_id"/>
+                                    </td>
+                                    <td width="17%" t-if="doc.reference">
+                                        Reference:
+                                    </td>
+                                    <td width="33%" t-if="doc.reference">
+                                        <span t-field="doc.reference"/>
+                                    </td>
+                                </tr>
+                                <tr height="10px"><td></td></tr>
+                                <tr>
+                                    <td t-if="doc.account_id">
+                                        Account:
+                                    </td>
+                                    <td t-if="doc.account_id">
+                                        <span t-field="doc.account_id"/>
+                                    </td>
+                                    <td t-if="doc.pay_now">
+                                        Payment type:
+                                    </td>
+                                    <td t-if="doc.pay_now">
+                                        <span t-field="doc.pay_now"/>
+                                    </td>
+                                </tr>
+                                <tr height="10px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        User:
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.create_uid"/>
+                                    </td>
+                                    <td>
+                                        Company:
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.company_id"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/><br/>
+                            <div class="col-xs-12" style="font-size:15pt">
+                                Voucher lines
+                            </div>
+                            <br/><br/>
+                            <table class="table table-striped" width="100%" style="font-size:10pt;border: 1">
+                            	<tr>
+                            		<th>Product</th>
+                                    <th>Account</th>
+                                    <th>Concept</th>
+                                    <th>Analytic</th>
+                                    <th>Quantity</th>
+                                    <th>Unit price</th>
+                                    <th>Amount</th>
+                                </tr>
+                                <t t-foreach="doc.line_ids" t-as="line">
+                                    <tr>
+                                    	<td>
+                                            <span t-field="line.product_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.account_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.account_analytic_id"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.quantity"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.price_unit"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.price_subtotal"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+                            <div class="row">
+                                <div class="col-xs-4 pull-right">
+                                    <table class="table table-condensed">
+                                        <tr class="border-black">
+                                            <td><strong>Taxes</strong></td>
+                                            <td class="text-right">
+                                                <span t-field="doc.tax_amount" options="{'currency_field': 'doc.currency_id'}" widget="monetary"/>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-black">
+                                            <td><strong>Total</strong></td>
+                                            <td class="text-right">
+                                                 <span t-field="doc.amount" options="{'currency_field': 'doc.currency_id'}" widget="monetary"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

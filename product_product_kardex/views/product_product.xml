@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_kardex_form_view'>
+        	<field name='name'>product.normal.send.kardex.form.view</field>
+        	<field name='model'>product.product</field>
+            <field name='inherit_id' ref='product.product_normal_form_view'/>
+        	<field name='arch' type='xml'>
+                <header>
+                    <button name="print_kardex" string="Print Kardex" type="object"/> 
+                </header>
+        	</field>
+        </record>
+    </data>
+</odoo>

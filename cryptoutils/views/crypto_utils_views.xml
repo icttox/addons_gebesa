@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="view_crypto_utils_action">
+            <field name="name">Crypto Utils</field>
+            <field name="res_model">crypto.utils</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Crypto Utils
+                </p>
+            </field>
+        </record>
+
+         <menuitem id="crypto_utils_menu" name="Crypto utils" parent="cfdi32.cfdi_menu" action="view_crypto_utils_action"/>
+
+        <record id="view_crypto_utils_tree" model="ir.ui.view">
+            <field name="name">crypto.utils.tree</field>
+            <field name="model">crypto.utils</field>
+            <field name="arch" type="xml">
+                <tree string="Cripto Utils">
+                    <field name="cadena_original"/>
+                    <field name="cadena_firmada"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_crypto_utils_form" model="ir.ui.view">
+            <field name="name">crypto.utils.form</field>
+            <field name="model">crypto.utils</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form string="Crypto Utils">
+                <header>
+                    <button name="genera_cadena_original" string="Genera Cadena" type="object" class="oe_highlight"/>
+                    <button name="firma_cadena_original" string="Firma Cadena" type="object" class="oe_highlight"/>
+                    <button name="firma_cadena_original_sha256" string="Firma Cadena sha256" type="object" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <div class="oe_title oe_inline">
+                    </div>
+                    <group>
+                        <group>
+                            <field name="xml_string"/>
+                            <field name="cadena_original"/>
+                            <field name="cadena_firmada"/>
+                            <field name='company_id'/>
+                        </group>
+                        <group>
+                            <div>
+                                <field name="contenido_cer_pem"/>
+                            </div>
+                            <div>
+                                <field name="contenido_key_pem"/>
+                            </div>
+                        </group>
+                    </group>
+                    <div class="oe_clear"/>
+                </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

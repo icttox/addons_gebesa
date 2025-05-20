@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_bom_line_massive_replacement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-23 00:26+0000\n"
+"PO-Revision-Date: 2016-12-22 18:27-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.ui.view,arch_db:mrp_bom_line_massive_replacement.view_massive_replacement
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_replacement.field_mrp_bom_line_massive_replacement_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_replacement.field_mrp_bom_line_massive_replacement_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_replacement.field_mrp_bom_line_massive_replacement_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_replacement.field_mrp_bom_line_massive_replacement_id
+msgid "ID"
+msgstr ""
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_replacement.field_mrp_bom_line_massive_replacement___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_replacement.field_mrp_bom_line_massive_replacement_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_replacement.field_mrp_bom_line_massive_replacement_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.actions.act_window,name:mrp_bom_line_massive_replacement.action_massive_replacement_wizard
+#: model:ir.ui.menu,name:mrp_bom_line_massive_replacement.massive_replacement_wizard_menu
+#: model:ir.ui.view,arch_db:mrp_bom_line_massive_replacement.view_massive_replacement
+msgid "Massive Replacement"
+msgstr "Remplazo masivo"
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_replacement.field_mrp_bom_line_massive_replacement_new_product_id
+msgid "New product"
+msgstr "Producto nuevo"
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.ui.view,arch_db:mrp_bom_line_massive_replacement.view_massive_replacement
+msgid "Process"
+msgstr "Procesar"
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_replacement.field_mrp_bom_line_massive_replacement_product_id
+msgid "Product origin"
+msgstr "Producto origen"
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.model,name:mrp_bom_line_massive_replacement.model_mrp_bom_line_massive_replacement
+msgid "mrp.bom.line.massive.replacement"
+msgstr ""
+
+#. module: mrp_bom_line_massive_replacement
+#: model:ir.ui.view,arch_db:mrp_bom_line_massive_replacement.view_massive_replacement
+msgid "or"
+msgstr "O"

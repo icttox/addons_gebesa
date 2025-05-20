@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_mrp_production_filter'>
+            <field name='name'>mrp.production.segment.filter.view</field>
+            <field name='model'>mrp.production</field>
+            <field name='inherit_id' ref="mrp.view_mrp_production_filter"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="segment" string="Segment" filter_domain="[('segment','ilike',self)]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='mrp_production_form_view'>
+            <field name='name'>mrp.production.segment.form.view</field>
+            <field name='model'>mrp.production</field>
+            <field name='inherit_id' ref="mrp.mrp_production_form_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook/page[last()]" position="after">
+                    <page string="Segment">
+                        <field name='segment_line_ids'>
+                            <tree>
+                                <field name='segment_id' readonly="1"/>
+                                <field name='product_id' readonly="1"/>
+                                <field name='manufacture_qty' readonly="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <!--xpath expr="//notebook/page/field[@name='product_lines']" position="replace">
+                    <field name="product_lines">
+                        <tree tring="Products to Consume">
+                            <field name="product_id"/>
+                            <field name="standard_cost"/>
+                            <field name="product_qty"  string="Quantity"/>
+                            <field name="product_uom" options="{'no_open':True,'no_create':True}" string="Unit of Measure" groups="product.group_uom"/>
+                        </tree>
+                    </field>
+                </xpath-->
+            </field>
+        </record>
+    </data>
+</odoo>

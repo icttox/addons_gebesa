@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_order_backorder_user,sale_order_backorder.user,model_sale_order_backorder,,1,0,0,0
+access_sale_order_backorder_manager,sale_order_backorder.manager,model_sale_order_backorder,,1,1,1,1

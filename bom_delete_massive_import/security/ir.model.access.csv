@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_delete_massive_user,bom.delete.massive.import.user,model_bom_delete_massive_import,group_bom_delete_massive_import_user,1,0,0,0
+access_product_delete_massive_manager,bom.delete.massive.import.manager,model_bom_delete_massive_import,group_bom_delete_massive_import_manager,1,1,1,1
+access_product_delete_massive_line_user,bom.delete.massive.import.line.user,model_bom_delete_massive_import_line,group_bom_delete_massive_import_user,1,0,0,0
+access_product_delete_massive_line_manager,bom.delete.massive.import.line.manager,model_bom_delete_massive_import_line,group_bom_delete_massive_import_manager,1,1,1,1

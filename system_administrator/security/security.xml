@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="res.groups" id="group_system_administrator_gebesa">
+            <field name="name">System Administrator Gebesa</field>
+        </record>
+
+        <record id="base.user_admin" model="res.users">
+            <field name="groups_id" eval="[(4, ref('system_administrator.group_system_administrator_gebesa'))]"/>
+        </record>
+        <record id="base.user_root" model="res.users">
+            <field name="groups_id" eval="[(4, ref('system_administrator.group_system_administrator_gebesa'))]"/>
+        </record>
+    </data>
+</odoo>

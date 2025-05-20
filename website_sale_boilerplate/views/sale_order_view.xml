@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record model='ir.ui.view' id='view_order_form'>
+            <field name='name'>view_order_form.idhubspot.form</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref="sale.view_order_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/sheet/group/group/field[@name='partner_shipping_id']" position="after">
+                    <field name="hubspot_id" attrs='{"required":[("hubspot_user", "=", True)]}'/>
+                    <field name="hubspot_user" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+        <record id='backorder_pedido_tree_hubspot' model='ir.ui.view'>
+            <field name='name'>backorder_pedido_tree_hubspot</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref='backorder_pedido_ventas_simple.backorder_pedido_tree'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//tree/field[@name='warehouse_id']" position="after">
+                    <field name="hubspot_id" string="Hubspot ID"/>
+                </xpath>
+            </field>
+        </record>
+        <record id='view_sales_order_hubspot_filter' model='ir.ui.view'>
+            <field name='name'>sale.order.hubspot</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref='sale.view_sales_order_filter'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="hubspot_id" string="ID Hubspot"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

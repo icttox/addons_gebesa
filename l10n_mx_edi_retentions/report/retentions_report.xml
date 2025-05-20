@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="report_retention"
+            model="l10n_mx_edi.retentions"
+            string="Retentions"
+            name="l10n_mx_edi_retentions.report_retentions"
+            file="l10n_mx_edi_retentions.report_retentions"
+            report_type="qweb-pdf" />
+
+        <template id="retentions_layout">
+            <t t-call="l10n_mx_edi_retentions.retentions_header" />
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <t t-call="l10n_mx_edi_retentions.retentions_footer" />
+        </template>
+
+        <template id="retentions_header">
+            <t t-set="xml_data" t-value="doc.l10n_mx_edi_get_xml_etree()"/>
+            <t t-set="tfd" t-value="doc.l10n_mx_edi_get_tfd_etree(xml_data)"/>
+            <div class="header">
+                <div class="row no-gutters" style="font-size:9px">
+                    <div class="col-12 text-right">
+                        <ul class="list-inline">
+                            Page:
+                            <span class="page"/>
+                            /
+                            <span class="topage"/>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center">
+                        <p style="font-weight: bold;">
+                            CERTIFICATE OF RETENTION FOR <span t-esc="doc.retention_type_id.name.upper()"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-5 text-center" style="font-size:12px;padding-left: 0.1em; padding-right: 0.1em;">
+                        <div style="width: 150px; height: 25px;">
+                            <img t-if="doc.company_id.logo" t-att-src="'data:image/png;base64,%s' % to_text(doc.company_id.logo)" style="max-width: 180px; max-height: 120px;" class="pull-left"/>
+                        </div>
+                        <br/>
+                        <div id="emitter" class="text-left" style="font-size:9px">
+                            <t t-set="emitter" t-value="xml_data.Emisor"/>
+                            <div style="font-size:12px">
+                                <strong><span t-esc="emitter.get('NomDenRazSocE', '')"/></strong>
+                            </div>
+                            <div style="font-size:10px">
+                                <t t-if="emitter.get('RFCEmisor', '')">
+                                    <strong><span>VAT. </span><span t-esc="emitter.get('RFCEmisor', '')"/></strong>
+                                </t>
+                            </div>
+                            <div>
+                                <span t-esc="str(doc.company_id.partner_id.street_name) + ' No. ' + str(doc.company_id.partner_id.street_number) + ' Col. ' + str(doc.company_id.partner_id.l10n_mx_edi_colony) + ' ' + str(doc.company_id.partner_id.l10n_mx_edi_locality) + ' ' + str(doc.company_id.partner_id.state_id.name) + ', ' + str(doc.company_id.partner_id.country_id.name) + ' CP: ' + str(doc.company_id.partner_id.zip)"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7" style="padding-left: 0.1em; padding-right: 0.1em;">
+                        <div class="row no-gutters">
+                            <div class="col-5">
+                                <strong><span>Retention</span></strong>
+                            </div>
+                            <div class="col-7">
+                                <h5 style="color:red;" class="text-left">
+                                     <t t-if="xml_data.get('FolioInt', '')">
+                                        <strong t-esc="xml_data.get('FolioInt', '')"/>
+                                    </t>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <table class="table table-striped" style="font-size:9px; padding-top: 0.1em; padding-bottom: 0.1em;">
+                                    <tr>
+                                        <th colspan="2" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                            <span>Fiscal Folio:</span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="padding-top: 0.3em; padding-bottom: 0.3em;font-size:8px;">
+                                            <span t-esc="tfd.get('UUID')"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="padding-top: 0.3em; padding-bottom: 0.3em; background-color: #848484;color: #ffffff;">
+                                            <span>Issue Date:</span>
+                                        </th>
+                                        <th style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                            <span>Certificate Number:</span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                            <span t-esc="xml_data.get('FechaExp', '').replace('T', ' ')"/>
+                                        </td>
+                                        <td style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                            <span t-esc="xml_data.get('NumCert', 'No identificado')"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="retentions_footer">
+            <div class="footer">
+                <div class="row no-gutters">
+                    <div class="col-8"></div>
+                    <div class="col-4 text-center">
+                        <strong>__________________</strong>
+                        <br/>
+                        <strong>SIGNING</strong>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_mx_retentions">
+            <t t-call="l10n_mx_edi_retentions.retentions_layout">
+                <div class="page">
+                    <t t-set="xml_data" t-value="doc.l10n_mx_edi_get_xml_etree()"/>
+                    <br/>
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            <div class="text-center">
+                                <strong>RECEPTOR</strong>
+                            </div>
+                            <t t-set="receiver" t-value="xml_data.Receptor"/>
+                            <t t-if="receiver.get('Nacionalidad', '')=='Extranjero'">
+                                <t t-set="xml_partner" t-value="receiver.Extranjero"/>
+                            </t>
+                            <t t-if="receiver.get('Nacionalidad', '')!='Extranjero'">
+                                <t t-set="xml_partner" t-value="receiver.Nacional"/>
+                            </t>
+                            <span t-esc="xml_partner.get('NomDenRazSocR', '')"/>
+                            <span t-esc="xml_partner.get('NumRegIdTrib', '')"/>
+                            <br/>
+                            <span t-esc="str(doc.partner_id.street_name) + ' No. ' + str(doc.partner_id.street_number) + ' Col. ' + str(doc.partner_id.l10n_mx_edi_colony) + ' ' + str(doc.partner_id.l10n_mx_edi_locality) + ' ' + str(doc.partner_id.state_id.name) + ', ' + str(doc.partner_id.country_id.name) + ' CP: ' + str(doc.partner_id.zip)"/>
+                        </div>
+                        <div class="col-6 text-center">
+                            <strong>PERIOD</strong>
+                            <table class="table table-striped" style="font-size:10px;">
+                                <tr>
+                                    <th class="text-center" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        Initial month
+                                    </th>
+                                    <th class="text-center" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        Final month
+                                    </th>
+                                    <th class="text-center" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        Fiscal year
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td style="padding-top: 0.3em; padding-bottom: 0.3em;" class="text-center">
+                                        <span t-field="doc.initial_month"/>
+                                    </td>
+                                    <td style="padding-top: 0.3em; padding-bottom: 0.3em;" class="text-center">
+                                        <span t-field="doc.final_month"/>
+                                    </td>
+                                    <td style="padding-top: 0.3em; padding-bottom: 0.3em;" class="text-center">
+                                        <span t-field="doc.fiscal_year"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-center">
+                                <strong>RETENTIONS</strong>
+                            </div>
+                            <table class="table table-striped" style="font-size:10px;">
+                                <tr>
+                                    <th class="text-center" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        TAX
+                                    </th>
+                                    <th class="text-center" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        TYPE OF WITHHOLDING PAYMENT
+                                    </th>
+                                    <th class="text-center" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        RETENTION BASE
+                                    </th>
+                                    <th class="text-center" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        AMOUNT RETAINED
+                                    </th>
+                                </tr>
+                                <t t-foreach="doc.retentions_detail_ids" t-as="line">
+                                    <tr>
+                                        <td style="padding-top: 0.3em; padding-bottom: 0.3em;" class="text-center">
+                                            <span t-field="line.tax"/>
+                                        </td>
+                                        <td style="padding-top: 0.3em; padding-bottom: 0.3em;" class="text-center">
+                                            <span t-field="line.retention_type"/>
+                                        </td>
+                                        <td style="padding-top: 0.3em; padding-bottom: 0.3em;" class="text-center">
+                                            <span t-field="line.base_amount"/>
+                                        </td>
+                                        <td style="padding-top: 0.3em; padding-bottom: 0.3em;" class="text-center">
+                                            <span t-field="line.retained_amount"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-8">
+                        </div>
+                        <div class="col-4">
+                            <t t-set="totales" t-value="xml_data.Totales"/>
+                            <table class="table table-striped" style="font-size:10px">
+                                <tr>
+                                    <th class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        <span>Operation Total:</span>
+                                    </th>
+                                    <td class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <span t-esc="float(totales.get('montoTotOperacion', '0.0'))" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.currency_id}"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        <span>Total Taxed:</span>
+                                    </th>
+                                    <td class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <span t-esc="float(totales.get('montoTotGrav', '0.0'))" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.currency_id}"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        <span>Total Exempt:</span>
+                                    </th>
+                                    <td class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <span t-esc="float(totales.get('montoTotExent', '0.0'))" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.currency_id}"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        <span>Total Withheld:</span>
+                                    </th>
+                                    <td class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <span t-esc="float(totales.get('montoTotRet', '0.0'))" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.currency_id}"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <t t-if="doc.l10n_mx_edi_cfdi_uuid">
+                        <t t-set="emitter" t-value="xml_data.Emisor"/>
+                        <t t-set="tfd" t-value="doc.l10n_mx_edi_get_tfd_etree(xml_data)"/>
+                        <div class="row" id='complement'>
+                            <div class="barcode col-3">
+                                <t t-set="sello" t-value="xml_data.get('Sello', 'No identificado')[-8:]"/>
+                                <t t-if="receiver.get('Nacionalidad', '')=='Extranjero'">
+                                    <img alt="Barcode" t-att-src="'/report/barcode/?type=QR&amp;value=%s' % quote_plus(
+                                    'https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx?' + keep_query(
+                                        re=emitter.get('RFCEmisor', ''), nr=xml_partner.get('NumRegIdTrib', ''),
+                                        tt='%.*f' % (doc.currency_id.decimal_places, float(totales.get('montoTotOperacion', '0.0'))), id=tfd.get('UUID', ''))
+                                        + '&amp;fe=%s' % quote_plus(
+                                            sello, 'utf-8', 'strict', '=/').replace('%2B', '+'))"/>
+                                </t>
+                                <t t-if="receiver.get('Nacionalidad', '')!='Extranjero'">
+                                    <img alt="Barcode" t-att-src="'/report/barcode/?type=QR&amp;value=%s' % quote_plus(
+                                    'https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx?' + keep_query(
+                                        re=emitter.get('RFCEmisor', ''), rr=xml_partner.get('NumRegIdTrib', ''),
+                                        tt='%.*f' % (doc.currency_id.decimal_places, float(totales.get('montoTotOperacion', '0.0'))), id=tfd.get('UUID', ''))
+                                        + '&amp;fe=%s' % quote_plus(
+                                            sello, 'utf-8', 'strict', '=/').replace('%2B', '+'))"/>
+                                </t> 
+                            </div>
+                            <div class="complement-details col-9">
+                                <div class="digital-stamp">
+                                    <span>Digital stamp of the emitter</span>
+                                </div>
+                                <div class="digital-stamp-content">
+                                    <span t-esc="xml_data.get('Sello', 'No identificado')"/>
+                                </div>
+                                <div class="digital-stamp">
+                                    <span>Digital stamp SAT</span>
+                                </div>
+                                <div class="digital-stamp-content">
+                                    <span t-esc="tfd.get('selloSAT', 'No identificado')"/>
+                                </div>
+                                <div class="digital-stamp">
+                                    <span>Extra Info</span>
+                                </div>
+                                <div class="digital-stamp-content">
+                                    <span>Emitter certificate:</span> <span t-esc="xml_data.get('NumCert')"/>
+                                    <span> | SAT Certificate:</span> <span t-esc="tfd.get('noCertificadoSAT')"/>
+                                    <span> | Emission Date:</span> <span t-esc="xml_data.get('FechaExp', '').replace('T', ' ')"/>
+                                    <span> | Certification Date:</span> <span t-esc="tfd.get('FechaTimbrado', '').replace('T', ' ')"/>
+                                    <span> | Fiscal Folio:</span> <span t-esc="tfd.get('UUID')"/>
+                                </div>
+                                <div class="digital-stamp-content text-center">
+                                    <strong>This document is a printed representation of a CFDI</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_retentions">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="l10n_mx_edi_retentions.report_mx_retentions"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

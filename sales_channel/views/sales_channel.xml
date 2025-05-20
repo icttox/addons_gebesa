@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='sales_channel_tree'>
+        	<field name='name'>sales.channel.tree</field>
+        	<field name='model'>sales.channel</field>
+        	<field name='arch' type='xml'>
+        		<tree string='Sales channel'>
+        			<field name='code'/>
+        			<field name='name'/>
+        		</tree>
+        	</field>
+        </record>
+
+        <record model='ir.ui.view' id='sales_channel_form'>
+        	<field name='name'>sales.channel.form</field>
+        	<field name='model'>sales.channel</field>
+        	<field name='arch' type='xml'>
+        		<form string='Sales channel'>
+        			<sheet>
+        				<div class="oe_title">
+        					<label for="code" class="oe_edit_only"/>
+        					<h1>
+        						<field name='code'/>
+        					</h1>
+        				</div>
+        				<group>
+        					<group>
+        						<field name='name'/>
+        						<field name='parent_id'/>
+                                <field name='company_id'/>
+        					</group>
+        					<group>
+        						<field name='other_income'/>
+                                <field name='is_export'/>
+                                <field name='active'/>
+        					</group>
+        				</group>
+        				<group>
+    						<field name='description'/>
+    					</group>
+        			</sheet>
+        		</form>
+        	</field>
+        </record>
+
+        <record id='action_sales_channel' model='ir.actions.act_window'>
+        	<field name='name'>Sales channel</field>
+        	<field name='res_model'>sales.channel</field>
+        	<field name='view_type'>form</field>
+        	<field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="sales_channel_menu" name="Sales channel" parent="sale.menu_sale_config" action="action_sales_channel"/>
+
+        
+    </data>
+</odoo>

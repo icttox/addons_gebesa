@@ -1,0 +1,7 @@
+<odoo>
+	<data>
+        <record model="res.groups" id="invoice_lines_from_orders">
+            <field name="name">Add lines to invoices that come from orders</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<template id="report_stock_picking_flete_gebesa" inherit_id="stock.report_picking">
+			<xpath expr="//t/t/t/div[@class='page']/table[2]" position="after">
+				<div groups="tms.group_expenses,tms.group_monitoring,tms.group_supervisor_traffic,tms.group_traffic">
+					<h1 width="100%" class="mt0">TMS</h1>
+					<table width="100%" class="table table-condensed">
+						<thead>
+							<tr>
+								<th><strong>Vehicle</strong></th>
+								<th><strong>Full Tank</strong></th>
+								<th><strong>Route</strong></th>
+								<th><strong>Driver</strong></th>
+								<th><strong>Kilometer</strong></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span t-field="o.vehicle_id"/>
+								</td>
+								<td>
+									<span t-field="o.full_tank"/>
+								</td>
+								<td>
+									<span t-field="o.route_id"/>
+								</td>
+								<td>
+									<span t-field="o.driver_id"/>
+								</td>
+								<td>
+									<span t-field="o.kilometer"/>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<br/>
+					<table width="100%" class="table table-condensed">
+						<thead>
+							<tr>
+								<th><strong>Núm Viaje</strong></th>
+								<th><strong>Kilometro Ruta</strong></th>
+							</tr>
+						</thead>
+						<tbody>
+						  	<t t-foreach="o.travel_ids" t-as="travel">
+								<tr>
+									<td>
+										<span t-esc="travel.name"/>
+									</td>
+									<td>
+										<span t-esc="travel.distance_route"/>
+									</td>
+								</tr>
+							</t>
+						</tbody>
+					</table>
+				</div>
+			</xpath>
+		</template>
+	</data>
+</odoo>

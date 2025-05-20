@@ -1,0 +1,6 @@
+id,code,name
+l10n_mx_wbl_transport_01,01,Autotransporte Federal
+l10n_mx_wbl_transport_02,02,Transporte Marítimo
+l10n_mx_wbl_transport_03,03,Transporte Aéreo
+l10n_mx_wbl_transport_04,04,Transporte Ferroviario
+l10n_mx_wbl_transport_05,05,Ducto

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_family_update_wizard_form'>
+            <field name='name'>product.family.update.wizard.form</field>
+            <field name='model'>product.family.update.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='Product Family Update Wizard'>
+                    <group>
+                        <field name='family_id' required="True"/>
+                    </group>
+
+                    <footer>
+                        <button string="Update Family" name="update_family" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_product_family_update_wizard"
+            multi="True"
+            key2="client_action_multi" name="Update Family"
+            res_model="product.family.update.wizard" src_model="product.template"
+            view_mode="form" target="new" view_type="form" />
+    </data>
+</odoo>

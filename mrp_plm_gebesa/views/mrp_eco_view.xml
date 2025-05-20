@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="mrp_eco_form" model="ir.ui.view">
+            <field name="name">mrp.eco.form</field>
+            <field name="model">mrp.eco</field>
+            <field name="inherit_id" ref="mrp_plm.mrp_eco_view_form"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/group/field[@name='product_tmpl_id']" position="after">
+                    <field name="product_id" string="Variantes de producto" attrs="{'readonly': [('state', '!=', 'confirmed')], 'invisible': [('type', '=', 'routing')], 'required': [('type', 'in', ('bom', 'both', 'product', 'plano', 'plano_bom'))]}"/>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='product_tmpl_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '!=', 'confirmed')], 'invisible': [('type', '=', 'routing')], 'required': [('type', 'in', ('bom', 'both', 'product', 'plano', 'plano_bom'))]}</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='bom_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '!=', 'confirmed')], 'invisible': [('type', 'in', ('routing', 'product', 'plano'))], 'required': [('type', 'in', ('bom', 'both', 'plano_bom'))]}</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='routing_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '!=', 'confirmed')], 'invisible': [('type', 'in', ('bom','product','plano','plano_bom'))], 'required': [('type', 'in', ('routing', 'both'))]}</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/notebook" position="inside">
+                    <page string="BoM Changes" attrs="{'required': [('type', 'in', ('plano_bom','bom', 'both'))]}" help="Changes made on the new revision bill of materials">
+                        <field name="bom_user_change_ids">
+                            <tree editable="buttom" decoration-danger="change_type=='remove'" decoration-info="change_type=='add'">
+                                <field name="change_type"/>
+                                <field name="product_id"/>
+                                <field name="new_product_qty"/>
+                                <field name="new_uom_id" groups="uom.group_uom"/>
+                                <field name="new_operation_id" groups="mrp.group_mrp_routings"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

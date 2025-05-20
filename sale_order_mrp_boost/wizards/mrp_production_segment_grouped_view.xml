@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="production_segment_grouped_wizard_form">
+            <field name="name">Abastecer segmento</field>
+            <field name="model">mrp.production.segment.grouped</field>
+            <field name="arch" type="xml">
+                <form string="Abastecer segmento">
+                    <group>
+                        <field name="segment_id" domain="[('state', '=', 'confirm')]" attrs="{'readonly': [('visibility', '=', True)]}" required="1"/>
+                        <field name="location_id" domain="[('usage', '=', 'internal'), ('type_stock_loc', '!=', 'fp'),('name', 'not ilike', 'Operaciones')]" attrs="{'invisible': [('visibility', '=', True)]}" required="1"/>
+                        <field name="visibility" invisible="1"/>
+                    </group>
+                    <field name="mo_grouped" attrs="{'invisible': [('visibility', '=', False)]}">
+                        <tree tring="Products to Grouped" editable="bottom" create="false" delete="false">
+                            <field name="product_id" readonly="1"/>
+                            <field name="quantity_pending" readonly="1"/>
+                            <field name="quantity"/>
+                            <field name="delivered_quantity" readonly="1"/>
+                            <field name="total_quantity" readonly="1"/>
+                        </tree>
+                    </field>
+                    <group>
+                        <field name="percentage" attrs="{'invisible': [('visibility', '=', False)]}" groups="system_administrator.group_system_administrator_gebesa"/>
+                        <button name="quantity_percentage" type="object" string="Asignar cantidades" class="oe_highlight" attrs="{'invisible': [('visibility', '=', False)]}" icon="fa-arrow-right"/>
+                    </group>
+                    <footer>
+                        <button name="get_mo_produced" type="object" string="Confirm" class="oe_highlight" attrs="{'invisible': [('visibility', '=', True)]}" icon="fa-check-square-o"/>
+                        <button name="action_confirm"  type="object" string="Generar abastecimiento" class="oe_highlight" attrs="{'invisible': [('visibility', '=', False)]}"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_production_segment_grouped_wizard" name="Abastecer segmento" res_model="mrp.production.segment.grouped" view_mode="form" target="new" view_id="production_segment_grouped_wizard_form"/>
+
+        <menuitem id="production_segment_grouped_menu" parent="mrp.menu_mrp_manufacturing" sequence="50" name="Abastecer segmento" action="action_production_segment_grouped_wizard"/>
+
+    </data>
+</odoo>

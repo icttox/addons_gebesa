@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <template id="portal_my_home_menu_shipment_backorder" name="Portal layout : shipment backorder menu entries" inherit_id="portal.portal_breadcrumbs" priority="25">
+    <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+      <li t-if="page_name == 'ship_backorder'" t-attf-class="breadcrumb-item #{'active '}">
+        <a t-if="ship_backorder" t-attf-href="/my/ship_backorder?{{ keep_query() }}">Shipment Backorder</a>
+        <t t-else="">Shipment Backorder</t>
+      </li>
+    </xpath>
+  </template>
+
+  <template id="portal_my_home_shipment_backorder" name="Portal My Home : shipment backorder entry" inherit_id="portal.portal_my_home" priority="25">
+    <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+        <t t-if="order_count" t-call="portal.portal_docs_entry">
+            <t t-set="title">Shipment backorder</t>
+            <t t-set="url" t-value="'/my/ship_backorder'"/>
+            <t t-set="count" t-value="shipment_count"/>
+        </t>
+    </xpath>
+  </template>
+
+  <template id="portal_my_shpment_backorder" name="Portal: My Shipments backorder">
+    <t t-call="portal.portal_layout">
+      <t t-call="portal.portal_searchbar">
+        <t t-set="title">Shipments backorder</t>
+      </t>
+      <t t-if="orders" t-call="portal.portal_table">
+        <!--t t-if="orders">
+        <div class="table-responsive-sm">
+        <table class="table table-striped table-bordered w-auto" style="font-size: 10px;"-->
+        <thead class="thead-light" style="font-size: 10px;">
+          <tr class="active">
+            <th>Week</th>
+            <th>Number</th>
+            <th>Date</th>
+            <th>Code</th>
+            <th>Product</th>
+            <th>Pending qty</th>
+            <th>PO</th>
+            <th>Shipment</th>
+            <th>Departure date</th>
+            <th>City</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody style="font-size: 10px;">
+          <t t-foreach="orders" t-as="order">
+            <tr>
+              <td><span t-esc="order['week_number']"/></td>
+              <td><a t-att-href="order['portal_url']"><t t-esc="order['name']"/></a></td>
+              <td><span t-esc="order['date_order']"/></td>
+              <td><span t-esc="order['default_code']"/></td>
+              <td><span t-esc="order['product_es']"/></td>
+              <td><span t-esc="order['pending_qty']"/></td>
+              <td><span t-esc="order['client_order_ref']"/></td>
+              <td><span t-esc="order['shipped_folio']"/></td>
+              <td><span t-esc="order['shipment_departure_date']"/></td>
+              <td><span t-esc="order['destination']"/></td>
+              <td><span t-esc="order['msl_reference']"/></td>
+            </tr>
+          </t>
+        </tbody>
+        <!--/table>
+        </div-->
+      </t>
+    </t>
+  </template>
+
+</odoo>

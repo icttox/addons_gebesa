@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='res_company_form'>
+            <field name='name'>res.company.form</field>
+            <field name='model'>res.company</field>
+            <field name='inherit_id' ref="base.view_company_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='immex_num']" position="after">
+                    <field name="stc_type_permit"/>
+                    <field name="sct_reg"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

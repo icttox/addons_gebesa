@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_payment_invoices" model="ir.ui.view">
+            <field name="name">account.payment.form.inherit</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <sheet position='inside'>
+                    <notebook>
+                        <page string="Invoices">
+                            <field name="register_line_ids" readonly="1">
+                                <tree string="Invoices payed">
+                                    <field name="move_line_id" readonly="1"/>
+                                    <field name="name" readonly="1"/>
+                                    <field name="origin" readonly="1"/>
+                                    <field name="reference" readonly="1"/>
+                                    <field name="date_original" readonly="1"/>
+                                    <field name="date_due" readonly="1"/>
+                                    <field name="amount_original" readonly="1"/>
+                                    <field name="amount_unreconciled" readonly="1"/>
+                                    <field name="reconcile" readonly="1"/>
+                                    <field name="amount" readonly="1" sum="Total to pay"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Conciliaciones de anticipos">
+                            <field name="reconcile_advance_ids" readonly="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </field>
+        </record>
+    </data>
+</odoo>

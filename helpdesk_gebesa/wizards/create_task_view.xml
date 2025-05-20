@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='create_task_wizard'>
+        	<field name='name'>create.task.ticket</field>
+        	<field name='model'>create.task.ticket</field>
+        	<field name='arch' type='xml'>
+        		<form>
+        			<group>
+        			  	<field name='acceptance_criterias'/>
+						<field name='type_id'/>
+						<field name='priority_id'/>
+        			</group>
+        			<footer>
+                        <button name="task_create" string="Create Task" type="object" class="oe_highlight"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+    </data>
+</odoo>

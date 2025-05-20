@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_product_replenish_location'>
+            <field name='name'>view.product.replenish.location</field>
+            <field name='model'>product.replenish</field>
+            <field name='inherit_id' ref='stock.view_product_replenish'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/group/field[@name='warehouse_id']" position="after">
+                    <field name="location_id" domain="[('stock_warehouse_id', '=', warehouse_id)]" groups="stock.group_stock_multi_warehouses" required="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

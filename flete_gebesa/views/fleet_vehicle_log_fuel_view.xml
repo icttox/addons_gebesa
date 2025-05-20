@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='fleet_vehicle_log_fuel_tree_gebesa'>
+            <field name='name'>tms.fleet.vehicle.log.fuel.tree.gebesa</field>
+            <field name='model'>fleet.vehicle.log.fuel</field>
+            <field name='inherit_id' ref='fleet.fleet_vehicle_log_fuel_view_tree'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//tree/field[@name='vendor_id']" position="after">
+                    <field name='ticket_number'/>
+                </xpath>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='fleet_vehicle_log_fuel_form_gebesa'>
+            <field name='name'>tms.fleet.vehicle.log.fuel.form.gebesa</field>
+            <field name='model'>fleet.vehicle.log.fuel</field>
+            <field name='inherit_id' ref='fleet.fleet_vehicle_log_fuel_view_form'/>
+            <field name='arch' type='xml'>
+                <!--xpath expr="//form/header/button[@name='action_cancel']" position="before">
+                    <button name="generate_qr" string="Generar Autorizacion" type="object"/>
+                </xpath-->
+                <!-- <xpath expr="//form/sheet/group/group[2]/field[@name='ticket_number']" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','not in',('confirmed', 'closed','draft','approved'))]}</attribute>
+                </xpath> -->
+                <xpath expr="//form/sheet/group/notebook/page/group/group" position="after">
+                    <group>
+                        <field name="km_traveled"/>
+                        <field name="performance_km_l" readonly="1"/>
+                        <field name="hours_worked" widget="float_time"/>
+                        <field name="performance_h_l" readonly="1"/>
+                        <field name="dispersion_id" attrs="{'readonly':True}"/>
+                    </group>
+                </xpath>
+                <xpath expr="//form/header/button[@name='set_2_draft']" position="attributes">
+                    <attribute name="groups">system_administrator.group_system_administrator_gebesa</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

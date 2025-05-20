@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_git_commit" model="ir.ui.view">
+        <field name="name">project.git.commit.form</field>
+        <field name="model">project.git.commit</field>
+        <field name="inherit_id" ref="project_git.view_git_commit_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='url']" position="after">
+                    <field name="branch_id"/>
+                    <field name="authored_date"/>
+                    <field name="short_id"/>
+                    <field name="author_name"/>
+                    <field name="author_email"/>
+                    <field name="committer_name"/>
+                    <field name="committer_email"/>
+                    <field name="additions"/>
+                    <field name="deletions"/>
+                    <field name="total"/>
+                    <field name="diff"/>
+                    <field name="new_path"/>
+                    <field name="old_path"/>
+                    <field name="new_file"/>
+                    <field name="renamed_file"/>
+                    <field name="deleted_file"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="view_git_commit_tree" model="ir.ui.view">
+        <field name="name">project.git.commit.form</field>
+        <field name="model">project.git.commit</field>
+        <field name="inherit_id" ref="project_git.view_git_commit_tree"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='avatar']" position="replace">
+                    <field name="message"/>
+                    <field name="short_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='name']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='date']" position="after">
+                    <field name="additions"/>
+                    <field name="deletions"/>
+                    <field name="new_file"/>
+                    <field name="renamed_file"/>
+                    <field name="deleted_file"/>
+                </xpath>
+
+                <xpath expr="//field[@name='image_type']" position="replace">
+                    <field name="diff"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>

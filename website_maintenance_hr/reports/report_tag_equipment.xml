@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="tag_equipment"
+            model="maintenance.equipment"
+            string="Etiqueta"
+            report_type="qweb-pdf"
+            name="website_maintenance_hr.report_tag_equipment_document"
+            file="website_maintenance_hr.report_tag_equipment_document"
+        />
+
+        <record id="website_maintenance_hr.tag_equipment" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag" />
+        </record>
+
+        <template id="report_tag_equipment_document">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <div class="page">
+                        <t t-foreach="docs" t-as="doc">
+                            <div class="row" style="border: 5px solid black !important;height: 370px;">
+                                <div class="col-6">
+                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=https://erp.portalgebesa.com/equipments/%s&amp;width=%s&amp;height=%s&amp;humanreadable=0' % ('QR_quiet', doc.id , 250, 250)" class="mt-5"/>
+                                </div>
+                                <div class="col-6">
+                                    <br/><br/>
+                                    <b>
+                                        <h4><span t-field="doc.consecutive_id"/></h4>
+                                        <h2><span t-field="doc.name"/></h2>
+                                        <h4>N° de serie: <span t-field="doc.serial_no"/></h4>
+                                        <h4>Modelo: <span t-field="doc.model"/></h4>
+                                        <h4>Marca: <span t-field="doc.mark"/></h4>
+                                    </b>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

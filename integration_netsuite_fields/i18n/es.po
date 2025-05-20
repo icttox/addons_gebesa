@@ -1,0 +1,169 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* integration_netsuite_fields
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-30 23:50+0000\n"
+"PO-Revision-Date: 2016-03-30 23:50+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/res_partner.py:17
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_res_partner_id_dir_ns
+#, python-format
+msgid "ID Address Netsuite"
+msgstr "ID Dirección Netsuite"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/res_partner.py:13
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_res_partner_id_ns
+#, python-format
+msgid "ID Netsuite"
+msgstr "ID Netsuite"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/product.py:13
+#: code:addons/integration_netsuite_fields/models/sale_order.py:14
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_product_template_id_ns
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_sale_order_ns_internal_id
+#: model:ir.ui.view,arch_db:integration_netsuite_fields.product_template_form_ns_inherit_view
+#, python-format
+msgid "Internal ID in Netsuite"
+msgstr "ID Interno en Netsuite"
+
+#. module: integration_netsuite_fields
+#: model:ir.model,name:integration_netsuite_fields.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: integration_netsuite_fields
+#: model:ir.model,name:integration_netsuite_fields.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea Factura"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/account_invoice.py:21
+#: model:ir.model.fields,help:integration_netsuite_fields.field_account_invoice_netsuite_ok
+#, python-format
+msgid "It indicates whether update the order status in NetSuite"
+msgstr "Indica la actualización del estado del pedido en NetSuite"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/account_invoice.py:13
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_account_invoice_msj
+#, python-format
+msgid "Last Message"
+msgstr "Último Mensaje"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/account_invoice_line.py:13
+#: code:addons/integration_netsuite_fields/models/stock_move.py:13
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_account_invoice_line_netsuite_line
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_stock_move_netsuite_line
+#, python-format
+msgid "Line NS"
+msgstr "Línea NS"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/sale_order_line.py:13
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_sale_order_line_netsuite_line
+#, python-format
+msgid "Line Netsuite"
+msgstr "Línea Netsuite"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/sale_order_line.py:14
+#: model:ir.model.fields,help:integration_netsuite_fields.field_sale_order_line_netsuite_line
+#, python-format
+msgid "Line number in Netsuite"
+msgstr "Número de línea en Netsuite"
+
+#. module: integration_netsuite_fields
+#: model:ir.model.fields,help:integration_netsuite_fields.field_account_invoice_line_netsuite_line
+#: model:ir.model.fields,help:integration_netsuite_fields.field_stock_move_netsuite_line
+msgid "Line number on Netsuite"
+msgstr "Número de línea en Netsuite"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/account_invoice.py:16
+#: model:ir.model.fields,help:integration_netsuite_fields.field_account_invoice_msj
+#, python-format
+msgid "Message generated to upload XML to sign"
+msgstr "Mensaje generado para cargar XML para firmar"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/sale_order.py:24
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_sale_order_date_netsuite
+#, python-format
+msgid "NetSuite capture date"
+msgstr "Fecha captura Netsuite"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/account_invoice.py:20
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_account_invoice_netsuite_ok
+#, python-format
+msgid "Netsuite Updated"
+msgstr "Actualizado Netsuite"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/sale_order.py:30
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_sale_order_ok_etl
+#, python-format
+msgid "OK ETL"
+msgstr "OK ETL"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/sale_order_line.py:18
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_sale_order_line_options
+#: model:ir.model.fields,help:integration_netsuite_fields.field_sale_order_line_options
+#, python-format
+msgid "Options"
+msgstr "Opciones"
+
+#. module: integration_netsuite_fields
+#: model:ir.model,name:integration_netsuite_fields.model_product_template
+msgid "Product Template"
+msgstr "Plantilla Producto"
+
+#. module: integration_netsuite_fields
+#: model:ir.model,name:integration_netsuite_fields.model_sale_order
+msgid "Sales Order"
+msgstr "Orden de Venta"
+
+#. module: integration_netsuite_fields
+#: model:ir.model,name:integration_netsuite_fields.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea Orden de Venta"
+
+#. module: integration_netsuite_fields
+#: model:ir.model,name:integration_netsuite_fields.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento Almacen"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/sale_order.py:18
+#: model:ir.model.fields,field_description:integration_netsuite_fields.field_sale_order_total_nste
+#, python-format
+msgid "Total Netsuite"
+msgstr "Total Netsuite"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/sale_order.py:20
+#: model:ir.model.fields,help:integration_netsuite_fields.field_sale_order_total_nste
+#, python-format
+msgid "Total order in NetSuite"
+msgstr "Total del Pedido en Netsuite"
+
+#. module: integration_netsuite_fields
+#: code:addons/integration_netsuite_fields/models/product.py:22
+#, python-format
+msgid "Internal ID in Netsuite:"
+msgstr "ID Interno en Netsuite:"

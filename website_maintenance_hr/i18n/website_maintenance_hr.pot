@@ -1,0 +1,181 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_maintenance_hr
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20211011\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-19 21:03+0000\n"
+"PO-Revision-Date: 2022-08-19 21:03+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_maintenance_hr
+#: model:mail.template,body_html:website_maintenance_hr.mail_template_maintenance_request
+msgid "\n"
+"                <div>\n"
+"                    Dear ${object.employee_id.name},<br/><br/>\n"
+"                    Thank you for getting in touch with us.<br />\n"
+"                    We have received your request for the maintenance of ${object.equipment_id.name} and we are working on it.<br />\n"
+"                    Our ${object.maintenance_team_id.name} team will get in touch with you shortly.\n"
+"                    <br/><br/>\n"
+"                    Thank you,<br/><br/>\n"
+"                    ${object.company_id.name}\n"
+"                    <br/>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "<b>Maintenance Request</b>"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Cancel"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Details"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Equipment"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "High"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model:ir.model.fields,field_description:website_maintenance_hr.field_maintenance_request__image
+msgid "Image"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model:website.menu,carousel_header_name:website_maintenance_hr.menu_maintenance
+msgid "Latest"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Low"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model:website.menu,name:website_maintenance_hr.menu_maintenance
+msgid "Maintenance"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model:ir.model,name:website_maintenance_hr.model_maintenance_equipment_category
+msgid "Maintenance Equipment Category"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model:ir.model,name:website_maintenance_hr.model_maintenance_request
+msgid "Maintenance Request"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model:ir.model,name:website_maintenance_hr.model_maintenance_team
+msgid "Maintenance Teams"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model:mail.template,subject:website_maintenance_hr.mail_template_maintenance_request
+msgid "Maintenance of ${object.equipment_id.name}"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Normal"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Picture"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Priority"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model:ir.model.fields,field_description:website_maintenance_hr.field_maintenance_equipment_category__website_published
+#: model:ir.model.fields,field_description:website_maintenance_hr.field_maintenance_team__website_published
+msgid "Publish on website"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.nouser_ir_ui_view
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.thanks_ir_ui_view
+#: model_terms:website.page,arch_db:website_maintenance_hr.nouser
+#: model_terms:website.page,arch_db:website_maintenance_hr.thanks
+msgid "Return"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Select Equipment"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Select Priority"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Select Team"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Submit"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Team"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.thanks_ir_ui_view
+#: model_terms:website.page,arch_db:website_maintenance_hr.thanks
+msgid "Thank You"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.Maintenance
+msgid "Very Low"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.nouser_ir_ui_view
+#: model_terms:website.page,arch_db:website_maintenance_hr.nouser
+msgid "We're Sorry.!"
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.nouser_ir_ui_view
+#: model_terms:website.page,arch_db:website_maintenance_hr.nouser
+msgid "You cannot send maintenance request to us since you are not a registered employee."
+msgstr ""
+
+#. module: website_maintenance_hr
+#: model_terms:ir.ui.view,arch_db:website_maintenance_hr.thanks_ir_ui_view
+#: model_terms:website.page,arch_db:website_maintenance_hr.thanks
+msgid "Your maintenance request has been submitted successfully."
+msgstr ""
+

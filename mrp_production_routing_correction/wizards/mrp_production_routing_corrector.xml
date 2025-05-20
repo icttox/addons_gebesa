@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_production_routing_corrector_form'>
+            <field name='name'>mrp.production.routing.corrector.form</field>
+            <field name='model'>mrp.production.routing.corrector</field>
+            <field name='arch' type='xml'>
+                <form string='Production Routing Corrector'>
+                    <group>
+                        <field name='location_id' domain="[('usage', '=', 'internal'), ('type_stock_loc', '=', 'wip')]"/>
+                    </group>
+                    <p class="oe_grey">
+                        *Esta opción ya no es válida toda vez que la versión 12 de Odoo no es compatible con ella.
+                    </p>
+                    <footer>
+                        <button string="Correct production routing" name="correct_production_routing" type="object" default_focus="1" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_production_routing_correct"
+            multi="True"
+            key2="client_action_multi" name="Production Routing Corrector"
+            res_model="mrp.production.routing.corrector" src_model="mrp.production"
+            view_mode="form" target="new" view_type="form" />
+    </data>
+</odoo>

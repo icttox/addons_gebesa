@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <!-- Mail template are declared in a NOUPDATE block
+         so users can freely customize/delete them -->
+    <data noupdate="0">
+        <!--Email template -->
+        <record id="email_template_finish_task_notification" model="mail.template">
+            <field name="name">Completion of the Task</field>
+            <field name="email_from">${(object.sudo().create_uid.email and '%s &lt;%s&gt;' % (object.sudo().create_uid.name, object.sudo().create_uid.email) or '')|safe}</field>
+            <field name="subject">Finish Task (Ref ${object.name or 'n/a'}) Customer: ${object.partner_id.name or 'n/a'} Project: ${object.project_id.name or 'n/a'} Sale order: ${object.order_id.name or 'n/a'} Product: ${object.product_id.name or 'n/a'}</field>
+            <field name="partner_to">${object.sudo().user_id.partner_id.id}</field>
+            <field name="email_to">sistemas@gebesa.com,costos@gebesa.com,diseno@gebesa.com,aip@gebesa.com,servicioalcliente@gebesa.com,equipocompras@gebesa.com,proyespeciales@gebesa.com,programacion@gebesa.com,calidad@gebesa.com</field>
+            <field name="model_id" ref="project.model_project_task"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="att_default" eval="True"/>
+            <field name="lang">${object.sudo().user_id.lang}</field>
+            <field name="body_html"><![CDATA[
+<div style="font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
+    <p>The next Task is already finished: </p>
+    
+    <p style="border-left: 1px solid #8e0000; margin-left: 30px;">
+       &nbsp;&nbsp;<strong>REFERENCES</strong><br/>
+       &nbsp;&nbsp;Name: <strong>${object.name}</strong><br/>
+       &nbsp;&nbsp;Project: <strong>${object.project_id.name}</strong><br/>
+       &nbsp;&nbsp;Product: <strong>${object.product_id.name}</strong><br/>
+       &nbsp;&nbsp;Customer: <strong>${object.partner_id.name}</strong><br/>
+       &nbsp;&nbsp;Assigned to: <strong>${object.user_id.name}</strong><br/>
+       &nbsp;&nbsp;Deadline: <strong>${object.date_deadline}</strong><br/>
+       &nbsp;&nbsp;Sale Order: <strong>${object.order_id.name}</strong><br/>
+       &nbsp;&nbsp;Warehouse: <strong>${object.warehouse_id.name}</strong><br/>
+       &nbsp;&nbsp;Muestra: <strong>${object.muestra}</strong><br/>
+       &nbsp;&nbsp;Clave: <strong>${object.clave}</strong><br/>
+       &nbsp;&nbsp;Costo: <strong>${object.costo}</strong><br/>
+       &nbsp;&nbsp;Sembrado: <strong>${object.planted}</strong><br/>
+       &nbsp;&nbsp;Render: <strong>${object.render}</strong><br/>
+    </p>  
+
+    <p>You can check more details <a href="http://erp.portalgebesa.com/web?debug=#id=${object.id}&view_type=form&model=project.task&action=203&active_id=219&menu_id=164">here</a></p>
+    
+    <div style="width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;">
+        <h3 style="margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;">
+            <strong style="text-transform:uppercase;">${object.company_id.name}</strong></h3>
+    </div>
+    <div style="width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;">
+        <span style="color: #222; margin-bottom: 5px; display: block; ">
+            ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}
+        </span>
+        % if object.company_id.phone:
+            <div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; ">
+                Phone:&nbsp; ${object.company_id.phone}
+            </div>
+        % endif
+        % if object.company_id.website:
+            <div>
+                Web :&nbsp;<a href="${object.company_id.website}">${object.company_id.website}</a>
+            </div>
+        %endif
+        <p></p>
+    </div>
+</div>
+            ]]></field>
+        </record>
+    </data>
+</odoo>

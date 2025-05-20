@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model='ir.ui.view' id='product_document_tree'>
+		 	<field name='name'>product_document.tree</field>
+		 	<field name='model'>product.document</field>
+		 	<field name='arch' type='xml'>
+		 		<tree string='Product Document'>
+		 			<field name="product_template_id"/>
+		 			<field name="is_line"/>
+                   	<field name="product_type"/>
+                   	<field name="description"/>
+                   	<field name="revision"/>
+                   	<field name="change_log"/>
+	                <field name="link" widget="url"/>
+	 		</tree>
+		 	</field>
+		</record>
+
+        <record model="ir.ui.view" id="document_product_form">
+            <field name="name">document.product.form</field>
+            <field name="model">product.document</field>
+            <field name="arch" type="xml">
+                <form string="Product Document" create ="false" edit="false" delete ="false">
+                	<sheet>
+                		<group>
+	                		<group>
+	                			<field name="product_template_id"/>
+	                			<field name="is_line"/>
+	                        	<field name="product_type"/>
+	                		</group>
+	                		<group>
+	                			<field name="description"/>
+	                			<field name="link" widget="url"/>
+	                			<field name="revision"/>
+                   				<field name="change_log"/>
+	                		</group>
+	                	</group>
+                	</sheet>
+                </form>                
+            </field>
+        </record>	
+
+        <record id="document_product_search" model="ir.ui.view">
+            <field name="name">document.product.search</field>
+            <field name="model">product.document</field>
+            <field name="arch" type="xml">
+                <search string="Documentos">
+                    <field name="product_template_id" string="Producto"/>
+                    <field name="description" filter_domain="[('description','ilike',self)]" string="Descripcion del documento"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Tipo de documento" name="product_type" domain="" context="{'group_by':'product_type'}"/>
+                        <filter string="Producto" name="product_template_id" domain="" context="{'group_by':'product_template_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+		<record id="product_document_action" model="ir.actions.act_window">
+			<field name="name">Product Document</field>
+			<field name="res_model">product.document</field>
+			<field name="view_type">form</field>
+			<field name="search_view_id" ref="document_product_search"/>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="product_document_tree"/>
+		</record>
+
+		 <menuitem id="menu_document_product" parent="sale.sale_order_menu" name="Product Document" action="product_document_action"/>	
+	</data>
+</odoo>

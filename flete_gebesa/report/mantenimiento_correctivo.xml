@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/flete_gebesa/static/src/css/travel_instructions.css"/>
+            </xpath>
+        </template>
+
+        <report
+            id="mantenimiento_correctivo"
+            model="tms.travel"
+            string="Mantenimiento Correctivo"
+            report_type="qweb-pdf"
+            name="flete_gebesa.report_mantenimiento_correctivo"
+            file="flete_gebesa.report_mantenimiento_correctivo"
+        />
+
+        <template id="mantenimiento_correctivo_layout">
+            <div class="header">
+                <div class="row">
+                    <div class="col-3" id="logo">
+                        <img t-if="doc.create_uid.partner_id.company_id.logo" t-att-src="'data:image/png;base64,%s' % to_text(doc.create_uid.partner_id.company_id.logo)" style="max-width: 180px; max-height: 120px;" class="pull-left"/>
+                    </div>
+                    <div class="col-6 text-center">
+                        MANTENIMIENTO CORRECTIVO
+                        <br/>
+                        <strong>
+                             ORDEN DE REPARACION
+                        </strong>
+                    </div>
+                    <div class="col-3" style="text-align:right;">
+                        FOLIO: <span t-esc="doc.name"/>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12">
+                        <strong>
+                            <span t-esc="doc.create_uid.partner_id.company_id.name"/>
+                        </strong>
+                        <br/>
+                            Fecha:&#160;<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+
+            <!-- FOOTER
+            <div class="footer">
+                <div  align="center" class="col-xs-4" style="border:1px solid black; border-radius:10px">
+                    <b>OPERADOR DE UNIDAD</b>
+                    <br/>
+                    <br/>
+                    _______________________________
+                    <br/>
+                    &#160;&#160;&#160;&#160;Nombre y Firma
+                </div>
+                <div align="center" class="col-xs-4" style="border:1px solid black; border-radius:10px">
+                    <b>COORDINADOR OPERATIVO</b>
+                    <br/>
+                    <br/>
+                    _______________________________
+                    <br/>
+                     &#160;&#160;&#160;Nombre y Firma Depto. Embarques
+                </div>
+                <div align="center" class="col-xs-4" style="border:1px solid black; border-radius:10px">
+                    <strong>RESPONSABLE DE REPARACION</strong>
+                    <br/>
+                    <br/>
+                    _______________________________
+                     &#160;&#160;&#160;Nombre y Firma Credito y Cobranza
+                </div>
+            </div>-->
+        </template>
+
+        <template id="report_mantenimiento_correctivo_document">
+             <t t-call="flete_gebesa.mantenimiento_correctivo_layout">
+            <!--<t t-call="report.internal_layout">-->            
+                <div class="page" style="font-size: 10pt;padding:0px;">
+                    <t t-set="tot_1" t-value="0"/>
+                    <t t-set="tot_2" t-value="0"/>
+                    <div class="row" style="padding:0px;">
+                        <div class="col-8" style="border: 1px solid black">
+                            <strong>
+                                DATOS GENERALES
+                            </strong>
+                        </div>
+                        <div class="col-2" style="border: 1px solid black">
+                            <strong>
+                                REPARAR
+                            </strong>
+                        </div>
+                        <div align="center" class="col-2" style="border: 1px solid black; padding:0px;">
+                            <strong>
+                                DATOS INGRESO
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="row" style="padding:0px;">
+                        <div class="col-8" style="padding:0px; border: 1px solid black;">
+                            <table width="100%" style="padding:0px;">
+                                <tr>
+                                    <td style="border: 1px solid black;" width="10%">CHOFER:</td>
+                                    <td style="border: 1px solid black;" colspan="5" width="85%">&#160;<span t-esc="doc.employee_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black;" width="10%">DESTINO:</td>
+                                    <td colspan="5" style="border: 1px solid black" width="85%">&#160;<span t-esc="doc.arrival_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black" width="10%">CAMION:</td>
+                                    <td colspan="4" style="border: 1px solid black;" width="85%">&#160;<span t-esc="doc.unit_id.idname"/></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black;" width="4%">MARCA:</td>
+                                    <td style="border: 1px solid black" width="16%">&#160;<span t-esc="doc.unit_id.model_id.name"/></td>
+                                    <td style="border: 1px solid black;" width="4%">PLACAS:</td>
+                                    <td style="border: 1px solid black" width="11%">&#160;<span t-esc="doc.unit_id.license_plate"/></td>
+                                    <td style="border: 1px solid black;" width="4%">KMS.PROG:</td>
+                                    <td style="border: 1px solid black" width="11%">&#160;<span t-esc="doc.route_id.distance"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" style="border: 1px solid black;" width="11%">CAJA:</td>
+                                    <td colspan="5" style="border: 1px solid black" width="85%">&#160;<span t-esc="doc.trailer1_id.idname"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="4%" style="border: 1px solid black">MARCA:</td>
+                                    <td style="border: 1px solid black;" width="16%">&#160;<span t-esc="doc.trailer1_id.model_id.name"/></td>
+                                    <td style="border: 1px solid black;" width="4%">PLACAS:</td>
+                                    <td style="border: 1px solid black;" width="11%">&#160;<span t-esc="doc.trailer1_id.license_plate"/></td>
+                                    <td style="border: 1px solid black;" width="4%">KMS.ACT:</td>
+                                    <td style="border: 1px solid black" width="11%">&#160;<span t-esc="doc.odometer"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-2" style="border: 1px solid black;">
+                            <table class="mrp_shipment_table" width="100%">
+                                <tr>
+                                    <h6>
+                                        <input type="checkbox"/> CAMION &#160;&#160;&#160;&#160;
+                                    </h6>
+                                </tr>
+                                <tr>
+                                    <h6>
+                                        <input type="checkbox"/> CAJA &#160;&#160;&#160;&#160;
+                                    </h6>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-2" style="border: 1px solid black;">
+                            <table width="100%">
+                                <tr>
+                                    <td width="40%">Fecha:</td>
+                                    <td width="15%">&#160;</td>
+                                </tr>
+                                <tr>
+                                    <td width="60%">Hora:</td>
+                                    <td>&#160; </td>
+                                </tr>
+                                <tr>
+                                    <td>&#160; </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row mt-4" style="border:1px solid black">
+                        <div class="col-12 text-center" style="border:1px solid black">
+                            <strong>
+                                FALLA REPORTADA POR EL OPERADOR
+                            </strong>
+                            <div class="row" style="border: 1px solid black">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 text-center" style="padding:0px;border:1px solid black">
+                            <div class="col-9" style="padding:0px;border:1px solid black">
+                                <strong>
+                                    DIAGNÓSTICO DEL MECÁNICO
+                                </strong>
+                            </div>
+                            <div class="col-3" style="padding:0px;border:1px solid black">
+                                <strong>
+                                    DIAGNOSTICADOR
+                                </strong>
+                            </div>  
+                    </div>
+                    <div class="row text-center" style="padding:0px;">
+                        <div class="col-9" style="padding:0px;border:1px solid black">
+                            <br/>
+                            <br/>
+                            <br/>
+                        </div>
+                        <div class="col-3" style="border:1px solid black">
+                            <br/>
+                            <br/>
+                            <strong>
+                                NOMBRE Y FIRMA
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="row mt-4" style="padding:0px;">
+                        <div class="col-9" style="border: 1px solid black" align="center">
+                            <strong>
+                                CAMION
+                            </strong>
+                        </div>
+                        <div class="col-3" style="border: 1px solid black">
+                            <strong>
+                                CAJA
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="row" style="padding:0px;">
+                        <div class="col-9" style="padding:0px; border: 1px solid black;">
+                            <table width="100%" style="padding:0px;">
+                                <tr>
+                                    <td width="10%">1.- Sist. de Aire</td>
+                                    <td width="10%">6.- Sist. de Enfriamiento</td>
+                                    <td width="10%">11.- Sist. de Dirección</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%">2.- Sist. de Enfriamiento
+                                    </td>
+                                    <td width="10%">7.- Sist. de Frenos
+                                    </td>
+                                    <td width="10%">12.- Llantas
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="10%">3.- Sist. Eléctrico</td>
+                                    <td width="10%">8.- Sist. Embragues</td>
+                                    <td width="10%">13.- Sist. Chasis</td>
+                                </tr>
+                                <tr>
+                                    <h6>
+                                        <td width="10%">4.- Rep. Motor
+                                        </td>
+                                        <td width="10%">9.- Tren Motriz
+                                        </td>
+                                        <td width="10%">14.- Carrocería
+                                        </td>
+                                    </h6>
+                                </tr>
+                                <tr>
+                                    <td width="10%">5.- Transmisiones y Diferencias
+                                    </td>
+                                    <td width="10%">10.- Sist. de Emisiones
+                                    </td>
+                                    <td width="10%">15.- Sist. de Inyección
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    &#160;
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-3" style="border: 1px solid black;">
+                            <table width="100%">
+                                <tr>
+                                    <td width="10%">1.1.- Sist. de Aire</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%">2.1.- Sist. de Frenos</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%">3.1.- Sist. de Suspensión</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%">4.1.- Sist. Eléctrico</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%">5.1.- Chasis</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%">6.1.- Llantas</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row" align="center" style="border: 1px solid black; padding:0px">
+                        <strong>
+                            ACCION
+                        </strong>
+                    </div>
+                    <div class="row" style="border: 1px solid black;padding:0px">
+                        <table width="100%">
+                            <tr>
+                                <input type="checkbox"/>&#160;&#160;Reporte Improcedente se Reingreso a Ruta
+                            </tr>
+                            <tr>
+                                <input type="checkbox"/>&#160;&#160;Ingreso a Taller Base Galbo &#160;&#160;&#160;&#160;
+                            </tr>
+                            <tr>
+                                <input type="checkbox"/>&#160;&#160;Reparición Taller Externo &#160;&#160;&#160;&#160;
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row mt-4" align="center" style="border: 1px solid black; padding:0px">
+                        <strong>
+                            DETALLES DE LA REPARACIÓN Y/O SERVICIO
+                        </strong>
+                    </div>
+                    <div class="row" style="border: 1px solid black; padding:0px; font-size: 8pt;">
+                        <div class="col-1" style="border: 1px solid black;padding:0px">
+                                Sistema
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                        </div>
+                        <div class="col-2" style="padding:0px;border: 1px solid black" align="center">
+                                Reparaciones Realizadas
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                        </div>
+                        <div class="col-2" style="padding:0px;border: 1px solid black" align="center">
+                                Responsable
+                                <br/>
+                                No.Empleado &#160;&#160;&#160;&#160;Especialidad
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                        </div>
+                        <div class="col-2" style="padding:0px;border: 1px solid black" align="center">
+                                Tiempo de Reparación
+                                <br/>
+                                &#160;&#160;&#160;&#160;&#160;Inicio&#160;&#160;&#160;&#160;&#160;Terminación
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                        </div>
+                        <div class="col-1" style="padding:0px;border: 1px solid black">
+                                Proveedor
+                                <br/>
+                                Razón Social
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                        </div>
+                        <div class="col-3" style="padding:0px;border: 1px solid black" align="center">
+                                Datos del Proveedor Externo
+                                <br/>
+                                &#160;&#160;&#160;&#160;Factura&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                                Dirección&#160;&#160;&#160;&#160;&#160;&#160;Telefono
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                        </div>
+                        <div class="col-1" style="border: 1px solid black; padding:0px">
+                                Precio Neto
+                             <br/>
+                             <br/>
+                             <br/>
+                             <br/>
+                             <br/>
+                             <br/>
+                        </div>
+                    </div>
+                    <div class="row mt-4" style="padding:0px;">
+                        <div class="col-9 text-center" style="padding:0px;border:1px solid black">
+                            <strong>
+                                Observaciones
+                            </strong>
+                            <br/>
+                            <br/>
+                        </div>
+                        <div class="col-3 text-center" style="padding:0px;border:1px solid black">
+                            <table width="100%" style="padding:0px; border:1px solid black">
+                                <tr style="border:1px solid black" align="center">
+                                    <strong>
+                                        UNIDAD DISPONIBLE
+                                    </strong>
+                                </tr>
+                                <tr>
+                                    <h6 class="text-left">
+                                        Fecha:
+                                    </h6>
+                                </tr>
+                                <tr>
+                                    <h6 class="text-left">
+                                        Hora:
+                                    </h6>
+                                </tr>
+                           </table>
+                        </div>
+                    </div>
+                        <div class="row mt-4" style="padding:0px">
+                            <div  align="center" class="col-4" style="border:1px solid black; border-radius:10px">
+                                <b>OPERADOR DE UNIDAD</b>
+                                <br/>
+                                <br/>
+                                _______________________________
+                                <br/>
+                                &#160;&#160;&#160;&#160;Nombre y Firma
+                            </div>
+                            <div align="center" class="col-4" style="border:1px solid black; border-radius:10px">
+                                <b>COORDINADOR OPERATIVO</b>
+                                <br/>
+                                <br/>
+                                _______________________________
+                                <br/>
+                                 &#160;&#160;&#160;Nombre y Firma
+                            </div>
+                            <div align="center" class="col-4" style="border:1px solid black; border-radius:10px">
+                                <strong>RESPONSABLE DE REPARACION</strong>
+                                <br/>
+                                <br/>
+                                _______________________________
+                                 &#160;&#160;&#160;Nombre y Firma
+                            </div>
+                        </div>
+                </div>                
+               <!-- </t>-->
+            </t>
+        </template>
+        <template id="report_mantenimiento_correctivo">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="flete_gebesa.report_mantenimiento_correctivo_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

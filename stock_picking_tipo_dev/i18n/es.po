@@ -1,0 +1,84 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_tipo_dev
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-29 22:43+0000\n"
+"PO-Revision-Date: 2016-03-29 16:55-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: stock_picking_tipo_dev
+#: selection:account.invoice,dev_tipo:0
+#: code:addons/stock_picking_tipo_dev/models/account_invoice.py:14
+#: code:addons/stock_picking_tipo_dev/models/stock_move.py:14
+#: code:addons/stock_picking_tipo_dev/models/stock_picking.py:14
+#: selection:stock.move,dev_tipo:0 selection:stock.picking,dev_tipo:0
+#, python-format
+msgid "Cancellation"
+msgstr "Cancelación"
+
+#. module: stock_picking_tipo_dev
+#: model:ir.model,name:stock_picking_tipo_dev.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: stock_picking_tipo_dev
+#: selection:account.invoice,dev_tipo:0
+#: code:addons/stock_picking_tipo_dev/models/account_invoice.py:12
+#: code:addons/stock_picking_tipo_dev/models/stock_move.py:12
+#: code:addons/stock_picking_tipo_dev/models/stock_picking.py:12
+#: selection:stock.move,dev_tipo:0 selection:stock.picking,dev_tipo:0
+#, python-format
+msgid "Normal"
+msgstr "Normal"
+
+#. module: stock_picking_tipo_dev
+#: selection:account.invoice,dev_tipo:0
+#: code:addons/stock_picking_tipo_dev/models/account_invoice.py:13
+#: code:addons/stock_picking_tipo_dev/models/stock_move.py:13
+#: code:addons/stock_picking_tipo_dev/models/stock_picking.py:13
+#: selection:stock.move,dev_tipo:0 selection:stock.picking,dev_tipo:0
+#, python-format
+msgid "Rebilling"
+msgstr "Refacturación"
+
+#. module: stock_picking_tipo_dev
+#: model:ir.model,name:stock_picking_tipo_dev.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: stock_picking_tipo_dev
+#: model:ir.model,name:stock_picking_tipo_dev.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: stock_picking_tipo_dev
+#: code:addons/stock_picking_tipo_dev/models/account_invoice.py:15
+#: code:addons/stock_picking_tipo_dev/models/stock_move.py:16
+#: code:addons/stock_picking_tipo_dev/models/stock_picking.py:16
+#: model:ir.model.fields,field_description:stock_picking_tipo_dev.field_account_invoice_dev_tipo
+#: model:ir.model.fields,field_description:stock_picking_tipo_dev.field_stock_move_dev_tipo
+#: model:ir.model.fields,field_description:stock_picking_tipo_dev.field_stock_picking_dev_tipo
+#, python-format
+msgid "Type"
+msgstr "Tipo"
+
+#. module: stock_picking_tipo_dev
+#: code:addons/stock_picking_tipo_dev/models/account_invoice.py:16
+#: code:addons/stock_picking_tipo_dev/models/stock_move.py:17
+#: code:addons/stock_picking_tipo_dev/models/stock_picking.py:17
+#: model:ir.model.fields,help:stock_picking_tipo_dev.field_account_invoice_dev_tipo
+#: model:ir.model.fields,help:stock_picking_tipo_dev.field_stock_move_dev_tipo
+#: model:ir.model.fields,help:stock_picking_tipo_dev.field_stock_picking_dev_tipo
+#, python-format
+msgid "defines the type"
+msgstr "Define el tipo"

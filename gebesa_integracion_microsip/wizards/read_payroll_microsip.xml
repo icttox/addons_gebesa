@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='wizard_read_payroll_microsip'>
+            <field name='name'>read.payroll.microsip.wizards</field>
+            <field name='model'>read.payroll.microsip</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <group>
+                        <group>
+                            <field name="date_start"/>
+                        </group>
+                        <group>
+                            <field name="date_end"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="read_prepayroll_microsip" string="Read payroll" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_read_payroll_microsip" model="ir.actions.act_window">
+            <field name="name">Read payroll</field>
+            <field name="res_model">read.payroll.microsip</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="read_payroll_microsip_menu" name="Read payroll" parent="gebesa_integracion_microsip.microsip_payroll_submenu" action="action_read_payroll_microsip" groups="hr_payroll.group_hr_payroll_user"/>
+    </data>
+</odoo>

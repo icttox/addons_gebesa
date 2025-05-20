@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* report_wizard_rw_order
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-18 19:38+0000\n"
+"PO-Revision-Date: 2018-01-18 19:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: report_wizard_rw_order
+#: model:ir.ui.view,arch_db:report_wizard_rw_order.raw_material_order_wizard
+msgid "Cancel"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: model:ir.actions.act_window,name:report_wizard_rw_order.action_raw_material_order_wizard
+#: model:ir.ui.menu,name:report_wizard_rw_order.menu_raw_material_order_wizard
+msgid "Concentrate raw material per order"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: model:ir.model.fields,field_description:report_wizard_rw_order.field_raw_material_order_wizard_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: model:ir.model.fields,field_description:report_wizard_rw_order.field_raw_material_order_wizard_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: model:ir.model.fields,field_description:report_wizard_rw_order.field_raw_material_order_wizard_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: model:ir.ui.view,arch_db:report_wizard_rw_order.raw_material_order_wizard
+msgid "Export"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: model:ir.model.fields,field_description:report_wizard_rw_order.field_raw_material_order_wizard_id
+msgid "ID"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: model:ir.model.fields,field_description:report_wizard_rw_order.field_raw_material_order_wizard___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: model:ir.model.fields,field_description:report_wizard_rw_order.field_raw_material_order_wizard_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: model:ir.model.fields,field_description:report_wizard_rw_order.field_raw_material_order_wizard_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: code:addons/report_wizard_rw_order/wizard/wizard_rw_order.py:13
+#, python-format
+msgid "Orders"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: model:ir.model.fields,field_description:report_wizard_rw_order.field_raw_material_order_wizard_order_ids
+msgid "Pedidos"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: model:ir.ui.view,arch_db:report_wizard_rw_order.raw_material_order_wizard
+msgid "or"
+msgstr ""
+
+#. module: report_wizard_rw_order
+#: model:ir.model,name:report_wizard_rw_order.model_raw_material_order_wizard
+msgid "raw.material.order.wizard"
+msgstr ""
+

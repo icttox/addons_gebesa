@@ -1,0 +1,132 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mrp_product_caliber
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-12 21:47+0000\n"
+"PO-Revision-Date: 2016-10-12 21:47+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_product_caliber
+#: model:ir.ui.view,arch_db:mrp_product_caliber.mrp_product_caliber_form
+msgid "Caliber"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: model:ir.ui.view,arch_db:mrp_product_caliber.mrp_product_caliber_tree
+msgid "Caliber(s)"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: model:ir.actions.act_window,name:mrp_product_caliber.action_mrp_product_caliber
+#: model:ir.ui.menu,name:mrp_product_caliber.mrp_product_caliber_menu
+msgid "Catalog Caliber"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: model:ir.actions.act_window,help:mrp_product_caliber.action_mrp_product_caliber
+msgid "Click to register a Caliber"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber_id
+msgid "ID"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: code:addons/mrp_product_caliber/models/mrp_product_caliber.py:15
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber_key_caliber
+#, python-format
+msgid "Key Caliber"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: model:ir.actions.act_window,help:mrp_product_caliber.action_mrp_product_caliber
+msgid "Make your first record of Caliber."
+msgstr ""
+
+#. module: mrp_product_caliber
+#: code:addons/mrp_product_caliber/models/mrp_product_caliber.py:19
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber_name_caliber
+#, python-format
+msgid "Name Caliber"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: code:addons/mrp_product_caliber/models/mrp_product_caliber.py:24
+#: sql_constraint:mrp.product.caliber:0
+#, python-format
+msgid "The field Key Caliber must be unique!"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: model:ir.model,name:mrp_product_caliber.model_mrp_product_caliber
+msgid "mrp.product.caliber"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: code:addons/mrp_product_caliber/models/mrp_product_caliber.py:24
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber_espesor_mm
+#, python-format
+msgid "Density MM"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: code:addons/mrp_product_caliber/models/mrp_product_caliber.py:29
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber_espesor_pgs
+#, python-format
+msgid "Density PGS"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: code:addons/mrp_product_caliber/models/mrp_product_caliber.py:34
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber_peso_kg
+#, python-format
+msgid "Weight KG"
+msgstr ""
+
+#. module: mrp_product_caliber
+#: code:addons/mrp_product_caliber/models/mrp_product_caliber.py:39
+#: model:ir.model.fields,field_description:mrp_product_caliber.field_mrp_product_caliber_peso_lb
+#, python-format
+msgid "Weight LB"
+msgstr ""
+

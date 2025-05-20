@@ -1,0 +1,78 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_prepayment_return
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-15 14:36+0000\n"
+"PO-Revision-Date: 2021-09-15 09:40-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: account_prepayment_return
+#: selection:account.payment,prepayment_type:0
+msgid "Advance"
+msgstr "Anticipo"
+
+#. module: account_prepayment_return
+#: selection:account.payment,prepayment_type:0
+msgid "Advance Refund"
+msgstr "Reembolso Anticipo"
+
+#. module: account_prepayment_return
+#: model:ir.model.fields,field_description:account_prepayment_return.field_account_payment__advance_refund_id
+msgid "Advance to Return"
+msgstr "Anticipo a Devolver"
+
+#. module: account_prepayment_return
+#: code:addons/account_prepayment_return/models/account_payment.py:59
+#, python-format
+msgid ""
+"Error!\n"
+"The amount of the refund must be lessor equal to the amount of the advance"
+msgstr "El monto de la Devolución debe ser menor o igual al monto del Anticipo"
+
+#. module: account_prepayment_return
+#: code:addons/account_prepayment_return/models/account_payment.py:53
+#, python-format
+msgid ""
+"Error!\n"
+"The date of the advance maynot exceed the date of the return."
+msgstr ""
+"Error!\n"
+"La fecha del anticipo no podrá exceder la fecha de la devolución."
+
+#. module: account_prepayment_return
+#: selection:account.payment,prepayment_type:0
+msgid "Factoraje"
+msgstr ""
+
+#. module: account_prepayment_return
+#: selection:account.payment,prepayment_type:0
+msgid "Normal"
+msgstr ""
+
+#. module: account_prepayment_return
+#: model:ir.model,name:account_prepayment_return.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: account_prepayment_return
+#: model:ir.model.fields,field_description:account_prepayment_return.field_account_payment__prepayment_type
+msgid "Prepayment Type"
+msgstr "Tipo de Prepago"
+
+#. module: account_prepayment_return
+#: code:addons/account_prepayment_return/models/account_payment.py:44
+#: code:addons/account_prepayment_return/models/account_payment.py:47
+#, python-format
+msgid "You need to add an advance account."
+msgstr "Debe agregar una cuenta de anticipo."

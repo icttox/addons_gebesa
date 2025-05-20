@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_segment_add_production_location_rule_form'>
+            <field name='name'>mrp.segment.add.production.form</field>
+            <field name='model'>mrp.segment.add.production</field>
+            <field name='inherit_id' ref="mrp_segment.mrp_segment_add_production_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='production_ids']" position="replace">
+                    <field name='production_ids' domain="[('procurement_location_id','=', location_id), ('segment_line_ids', '=', False), ('state', 'in', ['confirmed', 'planned'])]"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

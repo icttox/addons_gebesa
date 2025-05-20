@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-extend="UserMenu.Actions">
+        <t t-jquery=".dropdown-divider" t-operation="before">
+            <a role="menuitem" href="#" data-menu="holidays" class="dropdown-item d-none d-md-inline-block">Holidays</a>
+        </t>
+    </t>
+
+    <div t-name="UserMenu.holidays">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <table>
+                        <tr>
+                            <td><strong>Employee: </strong></td>
+                            <td style="text-align:right;"><t t-esc="user_name"/></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Days available for holidays: </strong></td>
+                            <t t-if="employee">
+                                <td style="text-align:right;"><t t-esc="employee.days_available_holidays"/></td>
+                            </t>
+                            <t t-if="!employee">
+                                <td style="text-align:left;">User without employee </td>
+                            </t>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</templates>

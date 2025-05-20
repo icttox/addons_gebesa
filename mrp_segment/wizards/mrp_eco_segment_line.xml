@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_eco_segment_line_form'>
+            <field name='name'>mrp.eco.segment.line.form</field>
+            <field name='model'>mrp.eco.segment.line</field>
+            <field name='arch' type='xml'>
+                <form string='Segment'>
+                    <group>
+                        <field name="bom_id" readonly="1"/>
+                        <field name="bom_products_ids" invisible="1"/>
+                    </group>
+                    <group>
+                        <group colspan="4">
+                            <field name="product_id" domain="[('id', 'in', bom_products_ids)]" required="1"/>
+                        </group>
+                        <group>
+                            <field name="type_adjustment1" attrs="{'invisible':['|', ('create_adjustment', '=', False), ('change_product', '=', True)]}"/>
+                        </group>
+                        <group>
+                            <field name="qty_adjustment1" attrs="{'invisible':[('create_adjustment', '=', False)]}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group  colspan="4">
+                            <field name="change_product" widget="boolean_toggle"/>
+                        </group>
+                        <group>
+                            <field name="new_product_id" domain="[('id', 'not in', bom_products_ids)]" attrs="{'invisible':[('change_product', '!=', True)], 'required':[('change_product', '=', True)]}"/>
+                        </group>
+                        <group>
+                            <field name="qty_adjustment2" attrs="{'invisible':['|', ('create_adjustment', '=', False), ('change_product', '=', False)]}"/>
+                        </group>
+                    </group>
+                    <group col="6">
+                        <group>
+                            <field name="change_qty" widget="boolean_toggle"/>
+                        </group>
+                        <group colspan="4">
+                            <field name="new_qty" attrs="{'invisible':[('change_qty', '!=', True)], 'required':[('change_qty', '=', True)]}"/>
+                        </group>
+                    </group>
+                    <group attrs="{'invisible':[('change_product', '=', False), ('change_qty', '=', False)]}">
+                        <field name="create_adjustment" widget="boolean_toggle"/>
+                        <field name="location_id" domain="[('usage', '=', 'internal'), ('type_stock_loc', '!=', 'fp'),('name', 'not ilike', 'Operaciones')]" attrs="{'invisible':[('create_adjustment', '!=', True)], 'required':[('create_adjustment', '=', True)]}"/>
+                    </group>
+                    <footer>
+                        <button string="Create ECO" name="create_eco" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_view_mrp_eco_segment_line" model="ir.actions.act_window">
+            <field name="name">Create ECO</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.eco.segment.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

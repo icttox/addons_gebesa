@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_order_create_supplierinfo_form">
+            <field name="name">view.order.create.supplierinfo.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/notebook/page/group/group/field[@name='company_id']" position="after">
+                    <field name="is_manufacturer" readonly="1"/>
+                    <field name="partner_sellers_ids" invisible="1"/>
+                    <field name="partner_salesrep_ids" invisible="1"/>
+                </xpath>
+                <xpath expr="//form/header/button[@name='action_unlock']" position="after">
+                    <button name="create_product_supplierinfo" class="oe_stat_button" string="Create Product Supplier Info" type="object" attrs="{'invisible': [('is_manufacturer', '=', True)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                    <attribute name="required">1</attribute>
+                    <attribute name="domain">[('id', 'in', partner_sellers_ids)]</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_product_pricelist_multicompany_salesrep_from">
+            <field name="name">view.product.pricelist.multicompany.salesrep.from</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="multicompany_gebesa.view_order_salesrep_form"/>
+            <field name="arch" type="xml">
+                <!--xpath expr="//field[@name='salesrep_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_manufacturer', '=', False)]}</attribute>
+                </xpath-->
+                <xpath expr="//field[@name='sales_person_id']" position="attributes">
+                    <attribute name="domain">[('id', 'in', partner_salesrep_ids)]</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

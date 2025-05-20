@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='maintenance_equipment_employee_log_wz_form'>
+            <field name='name'>maintenance.equipment.employee.log.wz.form</field>
+            <field name='model'>maintenance.equipment.employee.log.wz</field>
+            <field name='arch' type='xml'>
+                <form string='Equipo/Cliente'>
+                    <group>
+                        <field name='employee_id'/>
+                        <field name='date' />
+                        <field name='reason_reassignment'/>
+                    </group>
+                    <footer>
+                        <button string="Actualizar" name="hr_equipment_employee_log_wz_m" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='maintenance_equipment_employee_log_tree'>
+            <field name='name'>maintenance.equipment.employee.log.tree</field>
+            <field name='model'>maintenance.equipment.employee.log.wz</field>
+            <field name='arch' type='xml'>
+                <tree string='Empleado Equipo'>
+                    <field name='employee_id'/>
+                    <field name='date'/>
+                    <field name='reason_reassignment'/>
+                </tree>
+            </field>
+        </record>
+
+        <act_window id="action_hr_equipment_employee_log_wz"
+            multi="True"
+            key2="client_action_multi" name="Actualizar Empleado"
+            res_model="maintenance.equipment.employee.log.wz" src_model="maintenance.equipment"
+            view_mode="form" target="new" view_type="form" />
+    </data>
+</odoo>

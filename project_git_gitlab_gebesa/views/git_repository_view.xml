@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_git_repository" model="ir.ui.view">
+        <field name="name">project.git.repository.form</field>
+        <field name="model">project.git.repository</field>
+        <field name="inherit_id" ref="project_git.view_git_repository_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button name="action_get_branches"  string="Obtener Branchs" type="object" class="oe_highlight"/>
+                        <button name="%(action_project_git_gitlab_wizards)d" context="{'default_repository_id': id}" string="Obtener Commits" type="action" class="oe_highlight"/>
+                        <button name="action_get_users"  string="Obtener Users" type="object" class="oe_highlight"/>
+                    </header>
+                </xpath>
+                <xpath expr="//field[@name='project_id']" position="after">
+                    <field name="internal_id"/>
+                    <field name="private_token"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>

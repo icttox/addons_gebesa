@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="HrLunchDataFields">
+            <div class="form-group form-field o_website_form_required_custom">
+                <div class="form-group field-login">
+                    <label for="login">Empleado</label>
+                    <input type="password" placeholder="Empleado" name="identification_id" t-att-value="identification_id" id="identification_id" t-attf-class="form-control #{'form-control-sm' if form_small else ''}" required="required" autofocus="autofocus" autocapitalize="off"/>
+                </div>
+
+                <!--<div class="form-group field-password">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Password" name="lunch_pass" id="password" t-attf-class="form-control #{'form-control-sm' if form_small else ''}" required="required" autocomplete="current-password" t-att-autofocus="'autofocus' if login else None" maxlength="4096"/>
+                </div>-->
+
+                <div class="form-group">
+                    <div class="row"  style="height: 5rem;">
+                        <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5">
+                            <button type="submit" class="btn btn-primary btn-lg w-100 h-100 o_website_form_send">Submit</button>
+                            <span id="o_website_form_result">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+            </div>
+        </template>
+
+        <template id="HrLunchMessageError">
+            <br/><br/><br/>
+            <h1>We're Sorry.!</h1>
+            <div class="row">
+                <div class="col-lg-10">
+                    <div t-if="not msg_error" class="alert alert-warning" role="status" style="font-size: 25pt">
+                        You cannot put lunch orders since the employee information is wrong.
+                    </div>
+                    <div t-if="msg_error" class="alert alert-danger" role="status">
+                        <strong t-esc="msg_error"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="HrLunchThnxData">
+            <h1>
+                <span>Order</span>
+                <em t-field="order_line.order_id.id"/>
+                <t t-if="order_line.order_id.state == 'confirmed'">
+                    <span>Confirmed</span>
+                </t>
+            </h1>
+            <div class="row">
+                <div class="col-12 col-xl">
+                    <div class="oe_cart">
+                        <div class="thanks_msg">
+                            <h2>Thank you for your order.
+                            </h2>
+                        </div>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td width="100">
+                                        <strong t-field="order_line.employee_id.identification_id"/>
+                                        <strong t-field="order_line.employee_id.name"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100">
+                                        <strong t-field="order_line.create_date"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- METAL -->
+
+        <template id="HrLunchMetal">
+            <t t-call="web.basic_layout">
+                <div class="container">
+                    <t t-call-assets="web.assets_frontend" t-js="false"/>
+                    <t t-call-assets="web.assets_frontend" t-css="false"/>
+                    <title>Comedor</title>
+                    <form t-attf-action="/gebesa_metal_lunch-submit" method="post" data-success_page="/website_lunch_hr-thanks" enctype="multipart/form-data" style="font-size: 25pt">
+                        <div class="form-group form-field o_website_form_required_custom col-md-offset-2 col-sm-offset-3">
+                            <br/>
+                            <p style="font-size: 30pt">
+                                <b>Comedor Metal</b>
+                            </p>
+                        </div>
+                        <t t-call="website_lunch_hr.HrLunchDataFields"/>
+                    </form>
+                </div>
+            </t>
+        </template>
+
+        <template id="gebesa_metal_lunch_error">
+            <t t-call="web.basic_layout">
+                <div class="container">
+                    <t t-call-assets="web.assets_frontend" t-js="false"/>
+                    <title>Error</title>
+                    <form style="font-size: 25pt">
+                        <div class="oe_structure"/>
+                        <div class="container">
+                            <t t-call="website_lunch_hr.HrLunchMessageError"/>
+                            <div class="row mt5">
+                                <div class="col-lg-8" style="height: 3rem;">
+                                    <a href="/gebesa_metal_lunch">
+                                        <button type="button" class="btn btn-danger btn-lg w-100 h-100 o_website_form_send">Return</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </t>
+        </template>
+
+        <template id="HrLunchMetalThnx">
+            <t t-call="web.basic_layout">
+                <t t-set="additional_title">Order - Confirmed</t>
+                <div id="wrap">
+                    <div class="container oe_website_sale py-2">
+                        <t t-call="website_lunch_hr.HrLunchThnxData"/>
+                        <div class="row">
+                            <div class="col-12 col-xl">
+                                <div class="oe_cart">
+                                    <div>
+                                        <a role="button" class="btn btn-primary d-none d-md-inline-block" t-attf-href="/gebesa_metal_lunch/order/#{order_line.id}?download=false" aria-label="Print" title="Print"><i class="fa fa-print"></i> Imprimir vale</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <!-- MADERA -->
+
+        <template id="HrLunchMadera">
+            <t t-call="web.basic_layout">
+                <div class="container">
+                    <t t-call-assets="web.assets_frontend" t-js="false"/>
+                    <t t-call-assets="web.assets_frontend" t-css="false"/>
+                    <title>Comedor</title>
+                    <form t-attf-action="/gebesa_madera_lunch-submit" method="post" data-success_page="/website_lunch_hr-thanks" enctype="multipart/form-data" style="font-size: 25pt">
+                        <div class="form-group form-field o_website_form_required_custom col-md-offset-2 col-sm-offset-3">
+                            <br/>
+                            <p style="font-size: 30pt">
+                                <b>Comedor Madera</b>
+                            </p>
+                        </div>
+                        <t t-call="website_lunch_hr.HrLunchDataFields"/>
+                    </form>
+                </div>
+            </t>
+        </template>
+
+        <template id="gebesa_madera_lunch_error">
+            <t t-call="web.basic_layout">
+                <div class="container">
+                    <t t-call-assets="web.assets_frontend" t-js="false"/>
+                    <title>Error</title>
+                    <form style="font-size: 25pt">
+                        <div class="oe_structure"/>
+                        <div class="container">
+                            <t t-call="website_lunch_hr.HrLunchMessageError"/>
+                            <div class="row mt5">
+                                <div class="col-lg-8" style="height: 3rem;">
+                                    <a href="/gebesa_madera_lunch">
+                                        <button type="button" class="btn btn-danger btn-lg w-100 h-100 o_website_form_send">Return</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </t>
+        </template>
+
+        <template id="HrLunchMaderaThnx">
+            <t t-call="web.basic_layout">
+                <t t-set="additional_title">Order - Confirmed</t>
+                <div id="wrap">
+                    <div class="container oe_website_sale py-2">
+                        <t t-call="website_lunch_hr.HrLunchThnxData"/>
+                        <div class="row">
+                            <div class="col-12 col-xl">
+                                <div class="oe_cart">
+                                    <div>
+                                        <a role="button" class="btn btn-primary d-none d-md-inline-block" t-attf-href="/gebesa_madera_lunch/order/#{order_line.id}?download=false" aria-label="Print" title="Print"><i class="fa fa-print"></i> Imprimir vale</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

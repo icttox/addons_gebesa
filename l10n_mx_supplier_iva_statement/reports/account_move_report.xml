@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--report 
+            id="account_invoices_no_attach"
+            model="account.invoice"
+            string="Invoices"
+            report_type="qweb-pdf"
+            attachment_use="False"
+            attachment="temporal_ctto_invoice"
+            name="account.report_invoice"
+            file="account.report_invoice"
+        /-->
+
+        <report
+            id="account_move_report"
+            model="account.move"
+            string="Journal item"
+            report_type="qweb-pdf"
+            name="l10n_mx_supplier_iva_statement.account_move_report_qweb"
+            file="l10n_mx_supplier_iva_statement.account_move_report_qweb"
+        />
+
+        <template id="account_move_report_qweb">
+            <t t-call="web.html_container">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <t t-foreach="docs" t-as="doc">
+                            <t t-set="totdeb" t-value="0" />
+                            <t t-set="totcre" t-value="0" />
+                            <div class="col-12" style="font-size:23pt">
+                                <span t-field="doc.name"/>
+                            </div>
+                            <div class="col-12 mb16" style="font-size:16pt">
+                                
+                            </div>
+                            <table width="100%" style="font-size:12pt">
+                                <tr>
+                                    <td width="17%">
+                                        Journal:
+                                    </td>
+                                    <td width="33%">
+                                        <span t-field="doc.journal_id"/>
+                                    </td>
+                                    <td width="17%">
+                                        Date:
+                                    </td>
+                                    <td width="33%">
+                                        <span t-field="doc.date"/>
+                                    </td>
+                                </tr>
+                                <tr height="10px"><td></td></tr>
+                                <tr>
+                                    <td width="17%" t-if="doc.partner_id">
+                                        Partner:
+                                    </td>
+                                    <td width="33%" t-if="doc.partner_id">
+                                        <span t-field="doc.partner_id"/>
+                                    </td>
+                                    <td width="17%" t-if="doc.ref">
+                                        Reference:
+                                    </td>
+                                    <td width="33%" t-if="doc.ref">
+                                        <span t-field="doc.ref"/>
+                                    </td>
+                                </tr>
+                                <tr height="10px"><td></td></tr>
+                                <tr>
+                                    <td t-if="doc.move_exchange_id">
+                                        Movement related for exchange rate:
+                                    </td>
+                                    <td t-if="doc.move_exchange_id">
+                                        <span t-field="doc.move_exchange_id"/>
+                                    </td>
+                                    <td t-if="doc.move_untaxed_id">
+                                        Movement related for taxes:
+                                    </td>
+                                    <td t-if="doc.move_untaxed_id">
+                                        <span t-field="doc.move_untaxed_id"/>
+                                    </td>
+                                </tr>
+                                <tr height="10px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        User:
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.user"/>
+                                    </td>
+                                    <td>
+                                        Company:
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.company_id"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/><br/>
+                            <div class="col-12" style="font-size:15pt">
+                                Move lines
+                            </div>
+                            <br/>
+                            <table class="table table-striped" width="100%" style="font-size:10pt;border: 1; page-break-after: always;">
+                                <tr>
+                                    <th>Partner</th>
+                                    <th>Account</th>
+                                    <th>Concept</th>
+                                    <th>Analytic</th>
+                                    <th>Invoice</th>
+                                    <th>Payment</th>
+                                    <th>Currency</th>
+                                    <!--th>Amount Currency</th-->
+                                    <th>Debit</th>
+                                    <th>Credit</th>
+                                </tr>
+                                <t t-foreach="doc.line_ids" t-as="line">
+                                    <t t-set="totdeb" t-value="totdeb + line.debit"/>
+                                    <t t-set="totcre" t-value="totcre +line.credit"/>
+                                    <tr>
+                                        <td>
+                                            <span t-field="line.partner_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.account_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.analytic_account_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.invoice_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.payment_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.currency_id"/>
+                                        </td>
+                                        <!--td class="text-right">
+                                            <span t-field="line.amount_currency"/>
+                                        </td-->
+                                        <td class="text-right">
+                                            <span t-field="line.debit"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.credit"/>
+                                        </td>
+                                    </tr>
+                                </t>                                <tr>
+                                    <td colspan="7"></td>
+                                    <td class="text-right mt-1" style="border-top: 2px solid black;">
+                                        <strong><span t-esc="totdeb" t-options="{'widget': 'monetary', 'display_currency': doc.currency_id}"/></strong>
+                                    </td>
+                                    <td class="text-right mt-3" style="border-top: 2px solid black;">
+                                        <strong><span t-esc="totcre" t-options="{'widget': 'monetary', 'display_currency': doc.currency_id}"/></strong>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+                    </div> 
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

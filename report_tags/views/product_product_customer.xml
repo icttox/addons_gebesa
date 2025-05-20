@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_customer_product_code_tree" model="ir.ui.view">
+            <field name="name">product_customer_code_version_tree</field>
+            <field name="model">product.product.customer</field>
+            <field name="inherit_id" ref="product_product_customer.view_customer_product_code_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='qty']" position="after">
+                    <field name="version"/>
+                    <field name="bc_value"/>
+                    <field name="pack_num"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_customer_product_code_form" model="ir.ui.view">
+            <field name="name">product_customer_code_version_form</field>
+            <field name="model">product.product.customer</field>
+            <field name="inherit_id" ref="product_product_customer.view_customer_product_code_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='qty']" position="after">
+                    <field name="version"/>
+                    <field name="bc_value"/>
+                    <field name="pack_num"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+.contenedor-imagenes {
+  display: flex;
+}
+
+.contenedor-imagenes img:first-child {
+  margin-right: 100px;
+}
+
+.fondo-titulo {
+    padding: 1px;
+    background-color: rgb(33, 35, 32);
+    margin: 0;
+    color: white;
+    border: 6px solid rgb(222, 221, 238);
+}

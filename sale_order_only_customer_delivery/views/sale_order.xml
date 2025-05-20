@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_order_only_customer_delivery_readonly_form'>
+            <field name='name'>sale.order.only.customer.readonly.delivery.form</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref="sale_order_gebesa.view_order_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//page/group/group/field[@name='priority']" position="after">
+                    <field name="only_customer_delivery" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='view_order_only_customer_delivery_form'>
+            <field name='name'>sale.order.only.customer.delivery.form</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref="sale_order_only_customer_delivery.view_order_only_customer_delivery_readonly_form"/>
+            <field name="groups_id" eval="[(6, 0, [ref('system_administrator.group_system_administrator_gebesa')])]"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='only_customer_delivery']" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

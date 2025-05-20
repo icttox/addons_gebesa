@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="module_type_odoo" model="ir.module.type">
+        <field name="name">Odoo Core</field>
+    </record>
+
+    <record id="module_type_oca" model="ir.module.type">
+        <field name="name">OCA</field>
+    </record>
+</odoo>

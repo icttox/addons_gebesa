@@ -1,0 +1,87 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_product_color
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-12 21:53+0000\n"
+"PO-Revision-Date: 2016-10-12 16:56-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: mrp_product_color
+#: code:addons/mrp_product_color/models/mrp_product_color.py:13
+#: model:ir.model.fields,field_description:mrp_product_color.field_mrp_product_color_code
+#, python-format
+msgid "Code"
+msgstr "Codigo"
+
+#. module: mrp_product_color
+#: code:addons/mrp_product_color/models/mrp_bom_line_detail.py:13
+#: model:ir.actions.act_window,name:mrp_product_color.action_mrp_product_color
+#: model:ir.model.fields,field_description:mrp_product_color.field_mrp_bom_line_detail_color_id
+#: model:ir.ui.menu,name:mrp_product_color.mrp_product_color_menu
+#: model:ir.ui.view,arch_db:mrp_product_color.mrp_product_color_form
+#: model:ir.ui.view,arch_db:mrp_product_color.mrp_product_color_tree
+#, python-format
+msgid "Color"
+msgstr "Color"
+
+#. module: mrp_product_color
+#: model:ir.model.fields,field_description:mrp_product_color.field_mrp_product_color_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: mrp_product_color
+#: model:ir.model.fields,field_description:mrp_product_color.field_mrp_product_color_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: mrp_product_color
+#: model:ir.model.fields,field_description:mrp_product_color.field_mrp_product_color_display_name
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: mrp_product_color
+#: model:ir.model.fields,field_description:mrp_product_color.field_mrp_product_color_id
+msgid "ID"
+msgstr "Id"
+
+#. module: mrp_product_color
+#: model:ir.model.fields,field_description:mrp_product_color.field_mrp_product_color___last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion en"
+
+#. module: mrp_product_color
+#: model:ir.model.fields,field_description:mrp_product_color.field_mrp_product_color_write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: mrp_product_color
+#: model:ir.model.fields,field_description:mrp_product_color.field_mrp_product_color_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualizacion en"
+
+#. module: mrp_product_color
+#: code:addons/mrp_product_color/models/mrp_product_color.py:16
+#: model:ir.model.fields,field_description:mrp_product_color.field_mrp_product_color_name
+#, python-format
+msgid "Name"
+msgstr "Nombre"
+
+#. module: mrp_product_color
+#: model:ir.model,name:mrp_product_color.model_mrp_product_color
+msgid "Product Color"
+msgstr "Color del producto"
+
+#. module: mrp_product_color
+#: model:ir.model,name:mrp_product_color.model_mrp_bom_line_detail
+msgid "mrp.bom.line.detail"
+msgstr "mrp.bom.line.detail"

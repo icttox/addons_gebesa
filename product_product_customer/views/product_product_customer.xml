@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_variant_easy_edit_view'>
+        	<field name='name'>product_customer_code_form</field>
+        	<field name='model'>product.product</field>
+        	<field name='inherit_id' ref='product.product_variant_easy_edit_view'/>
+        	<field name='arch' type='xml'>
+        		<xpath expr="//group[4]" position="after">
+        			<notebook>
+        				<page string="Customer code">
+        					<field name='product_customer_ids'>
+                                <tree string="Customer code" editable="bottom">
+                                    <field name='partner_id' required="True" domain="[('customer', '=', True)]"/>
+                                    <field name='customer_code' required="True"/>
+                                    <field name='customer_description'/>
+                                    <field name='qty'/>
+                                </tree>
+                            </field>
+        				</page>
+        			</notebook>
+        		</xpath>
+        	</field>
+        </record>
+
+        <!-- Menu view product variants from sales -->
+        <!--record model='ir.ui.view' id='product_variant_sale_form_view'>
+            <field name='name'>product.variant.sale.form.view</field>
+            <field name='model'>product.product</field>
+            <field name='inherit_id' ref='product.product_normal_form_view'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook/page[3]" position="after">
+                    <page string="Customer Code">
+                        <field name='product_customer_ids'>
+                            <tree string="Customer code">
+                                <field name='partner_id' required="True" domain="[('customer', '=', True)]"/>
+                                <field name='customer_code' required="True"/>
+                                <field name='customer_description'/>
+                                <field name='qty'/>
+                            </tree>
+                            <form string="Customer code Line">
+                                <sheet>
+                                    <group>
+                                        <group>
+                                            <field name='partner_id' required="True" domain="[('customer', '=', True)]"/>
+                                            <field name='customer_code' required="True"/>
+                                            <field name='customer_description'/>
+                                            <field name='qty'/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record-->
+
+        <record id="view_partner_place_form" model="ir.ui.view">
+            <field name="name">view.partner.place.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/group/field[@name='category_id']" position="after">
+                    <field name="sku_on_invoices"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='product_normal_form_view'>
+            <field name='name'>product.normal.customer.code.form.view</field>
+            <field name='model'>product.product</field>
+            <field name='inherit_id' ref="product.product_normal_form_view"/>
+            <field name='arch' type='xml'>
+                <button name="263" position="replace">
+                    <button type="object"
+                        name="action_view_customer_codes"
+                        class="oe_stat_button"
+                        icon="fa-male"
+                        string="Customer codes"
+                        groups="base.group_user">
+                    </button>
+                </button>
+                <button name="toggle_active" position="before">
+                    <button type="action" name="263" attrs="{'invisible':['|',('type', '!=', 'product'),('nbr_reordering_rules', '==', 1)]}" class="oe_stat_button" icon="fa-refresh">
+                       <field name="nbr_reordering_rules" widget="statinfo"/>
+                   </button>
+               </button>
+            </field>
+        </record>
+
+        <record id="product_template_only_form_view" model="ir.ui.view">
+            <field name="name">product.partner.communication.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <button name="toggle_active" position="before">
+                    <button class="oe_stat_button"
+                        name="action_view_partner_communication"
+                        type="object" 
+                        icon="fa-comment-o"
+                        string="Partner communications"
+                        context="{'default_product_tmpl_id': id}"
+                        groups="base.group_user">
+                    </button>
+                </button>
+            </field>
+        </record>
+
+        <!-- Vistas propias del código de cliente -->
+        <record model="ir.actions.act_window" id="view_customer_product_code_action">
+            <field name="name">Product Customer View Info</field>
+            <field name="res_model">product.product.customer</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create Customer info for products
+                </p>
+            </field>
+        </record>
+
+         <menuitem id="customer_product_code_menu" name="Product Customer View Info" parent="sale.product_menu_catalog" action="view_customer_product_code_action"/>
+
+        <record model="ir.ui.view" id="view_customer_product_code_form">
+            <field name="name">view.customer.product.code.form</field>
+            <field name="model">product.product.customer</field>
+            <field name="arch" type="xml">
+                <form string="Product Customer View Info">
+                    <sheet>
+                        <group col="6" colspan="2">
+                            <field name='product_id'/>
+                            <field name='partner_id' required="True" domain="[('customer', '=', True)]"/>
+                            <field name='customer_code' required="True"/>
+                            <field name='customer_description'/>
+                            <field name='qty'/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form> 
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_customer_product_code_tree">
+            <field name="name">view.customer.product.code.tree</field>
+            <field name="model">product.product.customer</field>
+            <field name="arch" type="xml">
+                <tree string="Product Customer View Info">
+                    <field name='product_id'/>
+                    <field name='partner_id'/>
+                    <field name='customer_code'/>
+                    <field name='customer_description'/>
+                    <field name='qty'/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_product_customer_code_filter" model="ir.ui.view">
+            <field name="name">view.product.customer.code.filter</field>
+            <field name="model">product.product.customer</field>
+            <field name="arch" type="xml">
+                <search string="Search Product Customer View Info">
+                    <field name="customer_code" string="Code"/>
+                    <field name="customer_description" string="Description"/>
+                    <field name="partner_id" operator="child_of"/>
+                    <field name="product_id"/>
+                    <field name="create_uid"/>
+                    <separator/>
+                    <filter string="My Activities" name="activities_my"
+                        domain="[('activity_ids.user_id', '=', uid)]"/>
+                    <separator/>
+                    <filter string="Late Activities" name="activities_overdue"
+                        domain="[('activity_ids.date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]"
+                        help="Show all records which has next action date is before today"/>
+                    <filter string="Today Activities" name="activities_today"
+                        domain="[('activity_ids.date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter string="Future Activities" name="activities_upcoming_all"
+                        domain="[('activity_ids.date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))
+                        ]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Customer" name="customer" domain="[]" context="{'group_by':'partner_id'}"/>
+                        <filter string="Product" name="product" domain="[]" context="{'group_by':'product_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    <!-- Vistas propias del código de cliente -->
+
+    <!-- Vistas propias de comunicación del partner -->
+        <record model="ir.actions.act_window" id="view_partner_product_communication_action">
+            <field name="name">Product Partner Communication</field>
+            <field name="res_model">product.template.partner.communication</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create Partner communications for product templates
+                </p>
+            </field>
+        </record>
+
+         <menuitem id="partner_product_communication_menu" name="Product Partner Communication" parent="sale.product_menu_catalog" action="view_partner_product_communication_action"/>
+
+        <record model="ir.ui.view" id="view_partner_product_communication_form">
+            <field name="name">view.partnert.product.communication.form</field>
+            <field name="model">product.template.partner.communication</field>
+            <field name="arch" type="xml">
+                <form string="Product Partner Communication">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name='product_tmpl_id'/>
+                                <field name='partner_id' required="True" domain="[('customer', '=', True)]"/>
+                            </group>
+                            <group>
+                                <field name='partner_communication' required="True"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form> 
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_partner_product_communication_tree">
+            <field name="name">view.partner.product.communication.tree</field>
+            <field name="model">product.template.partner.communication</field>
+            <field name="arch" type="xml">
+                <tree string="Product Customer View Info">
+                    <field name='product_tmpl_id'/>
+                    <field name='partner_id'/>
+                    <field name='partner_communication'/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_product_partner_communication_filter" model="ir.ui.view">
+            <field name="name">view.product.partner.communication.filter</field>
+            <field name="model">product.template.partner.communication</field>
+            <field name="arch" type="xml">
+                <search string="Search Partner communications">
+                    <field name="partner_id" operator="child_of"/>
+                    <field name="product_tmpl_id"/>
+                    <field name="create_uid"/>
+                    <separator/>
+                    <filter string="My Activities" name="activities_my"
+                        domain="[('activity_ids.user_id', '=', uid)]"/>
+                    <separator/>
+                    <filter string="Late Activities" name="activities_overdue"
+                        domain="[('activity_ids.date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]"
+                        help="Show all records which has next action date is before today"/>
+                    <filter string="Today Activities" name="activities_today"
+                        domain="[('activity_ids.date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter string="Future Activities" name="activities_upcoming_all"
+                        domain="[('activity_ids.date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))
+                        ]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Partner" name="partner" domain="[]" context="{'group_by':'partner_id'}"/>
+                        <filter string="Product" name="product" domain="[]" context="{'group_by':'product_tmpl_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    <!-- Vistas propias del código de cliente -->
+    </data>
+</odoo>

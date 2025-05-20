@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_account_edores_type_manager,account.account.edores.type.manager,model_account_account_edores_type,account.group_account_manager,1,1,1,1
+access_account_account_edores_type,account.account.edores.type.manager,model_account_account_edores_type,account.group_account_user,1,0,0,0
+access_account_account_edores_type_user,account.account.edores.type.user,model_account_account_edores_type,base.group_user,1,0,0,0

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='raw_material_order_wizard'>
+            <field name='name'>raw.material.order.wizard</field>
+            <field name='model'>raw.material.order.wizard</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <field name='order_ids' domain="[('state', '=', 'done')]"/>
+                    <footer>
+                        <button name="print_report" string="Export" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_raw_material_order_wizard" model="ir.actions.act_window">
+            <field name="name">Concentrate raw material per order</field>
+            <field name="res_model">raw.material.order.wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="raw_material_order_wizard"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+        <menuitem action="action_raw_material_order_wizard" id="menu_raw_material_order_wizard" name="Concentrate raw material per order" parent="gebesa_reports.gebesa_report_compr_menu"/>
+        </data>
+</odoo>

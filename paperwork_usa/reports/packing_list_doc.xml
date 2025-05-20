@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_packing_list_document">
+            <t t-as="partner" t-foreach="data[o.id]">
+                <t t-call="paperwork_usa.packing_list_layout">
+                    <!--<t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>-->
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-xs-5 col-xs-offset-7"/>
+                            <div id="primero_pap">
+                                <table width="100%" class="tabla_datos_porte">
+                                    <tr>
+                                        <td align="center" id="titulo_tabla_porte" width="5%">Line Item</td>
+                                        <td align="center" id="titulo_tabla_porte" width="8%">SO</td>
+                                        <td align="center" id="titulo_tabla_porte" width="8%">PO</td>
+                                        <td align="center" id="titulo_tabla_porte" width="8%">Tag</td>
+                                        <td align="center" id="titulo_tabla_porte" width="8%">Tag<br/>Line</td>
+                                        <td align="center" id="titulo_tabla_porte" width="10%">Default<br/>Code</td>
+                                        <td align="center" id="titulo_tabla_porte" width="22%">Product<br/>Name</td>
+                                        <td align="center" id="titulo_tabla_porte" width="6%">Qty<br/>Ship</td>
+                                        <td align="center" id="titulo_tabla_porte" width="6%">Qty<br/>Order</td>
+                                        <td align="center" id="titulo_tabla_porte" width="10%">Backorder</td>
+                                        <td align="center" id="titulo_tabla_porte" width="10%">Bigo Number</td>
+                                        <td align="center" id="titulo_tabla_porte" width="10%">Cartons Count</td>
+                                    </tr>
+                                    <t t-foreach="len(data[o.id][partner]['order_line'])" t-as="line">
+                                        <t t-if="data[o.id][partner]['order_line'][line].product_id.id not in kits.keys()">
+                                            <tr>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].dealer_order_line"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].order_id.name"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].order_id.client_order_ref"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].order_id.general_tag_num"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].line_tag_number"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" >
+                                                        <spam t-esc="data[o.id][partner]['order_line'][line].product_id.default_code"/>
+                                                        <t t-if="data[o.id][partner]['order_line'][line].options">
+                                                            (<spam t-esc="data[o.id][partner]['order_line'][line].options"/>)
+                                                        </t>
+                                                    </h6>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <t t-if="data[o.id][partner]['order_line'][line].product_id.individual_name">
+                                                        <h6 class="small">
+                                                           &#160;<t t-esc="data[o.id][partner]['order_line'][line].product_id.individual_name"/>
+                                                        </h6>
+                                                    </t>
+                                                    <t t-if="not data[o.id][partner]['order_line'][line].product_id.individual_name">
+                                                        <h6 class="small">
+                                                           &#160;<t t-esc="data[o.id][partner]['order_line'][line].product_id.name_template"/>
+                                                        </h6>
+                                                    </t>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].quantity_shipped"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].product_uom_qty"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].pending_qty"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <t t-if="data[o.id][partner]['order_line'][line].product_id.id in kits.keys()">
+                                            <tr class="mrp_shipment_tr_kit">
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].dealer_order_line"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].order_id.name"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].order_id.client_order_ref"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].order_id.general_tag_num"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].line_tag_number"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].product_id.default_code"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <t t-if="data[o.id][partner]['order_line'][line].product_id.individual_name">
+                                                        <h6 class="small">
+                                                           &#160;<t t-esc="data[o.id][partner]['order_line'][line].product_id.individual_name"/>
+                                                        </h6>
+                                                    </t>
+                                                    <t t-if="not data[o.id][partner]['order_line'][line].product_id.individual_name">
+                                                        <h6 class="small">
+                                                           &#160;<t t-esc="data[o.id][partner]['order_line'][line].product_id.name_template"/>
+                                                        </h6>
+                                                    </t>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].quantity_shipped"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].product_uom_qty"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].pending_qty"/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6/>
+                                                </td>
+                                                <td id="contorno_porte" align="center">
+                                                    <h6/>
+                                                </td>
+                                            </tr>
+                                            <t t-foreach="kits[data[o.id][partner]['order_line'][line].product_id.id].bom_line_ids" t-as="bom_line">
+                                                <t t-set="bom_line_qty" t-value="data[o.id][partner]['order_line'][line].quantity_shipped * bom_line.product_qty"/>
+                                                <t t-set="bom_line_product_uom_qty" t-value="data[o.id][partner]['order_line'][line].product_uom_qty * bom_line.product_qty"/>
+                                                <t t-set="bom_line_pending_qty" t-value="data[o.id][partner]['order_line'][line].pending_qty * bom_line.product_qty"/>
+                                                <tr class="mrp_shipment_tr_kit_child">
+                                                    <td id="contorno_porte" align="center">
+                                                        <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].dealer_order_line"/>
+                                                    </td>
+                                                    <td id="contorno_porte" align="center">
+                                                        <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].order_id.name"/>
+                                                    </td>
+                                                    <td id="contorno_porte" align="center">
+                                                        <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].order_id.client_order_ref"/>
+                                                    </td>
+                                                    <td id="contorno_porte" align="center">
+                                                        <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].order_id.general_tag_num"/>
+                                                    </td>
+                                                    <td id="contorno_porte" align="center">
+                                                        <h6 class="small-1" t-esc="data[o.id][partner]['order_line'][line].line_tag_number"/>
+                                                    </td>
+                                                    <td id="contorno_porte" align="center">
+                                                        <h6 class="small-1" t-esc="bom_line.product_id.default_code"/>
+                                                    </td>
+                                                    <td id="contorno_porte" align="center">
+                                                        <t t-if="bom_line.product_id.individual_name">
+                                                            <h6 class="small">
+                                                               &#160;<t t-esc="bom_line.product_id.individual_name"/>
+                                                            </h6>
+                                                        </t>
+                                                        <t t-if="not bom_line.product_id.individual_name">
+                                                            <h6 class="small">
+                                                               &#160;<t t-esc="bom_line.product_id.name_template"/>
+                                                            </h6>
+                                                        </t>
+                                                    </td>
+                                                    <td id="contorno_porte" align="center">
+                                                        <h6 class="small-1" t-esc="bom_line_qty"/>
+                                                    </td>
+                                                    <td id="contorno_porte" align="center">
+                                                        <h6 class="small-1" t-esc="bom_line_product_uom_qty"/>
+                                                    </td>
+                                                    <td id="contorno_porte" align="center">
+                                                        <h6 class="small-1" t-esc="bom_line_pending_qty"/>
+                                                    </td>
+                                                    <td id="contorno_porte" align="center">
+                                                        <h6/>
+                                                    </td>
+                                                    <td id="contorno_porte" align="center">
+                                                        <h6/>
+                                                    </td>
+                                                </tr>
+                                            </t>
+                                        </t><!-- CIERRE CN KITS-->
+                                    </t>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+        <template id="report_packing_list">
+            <t t-call="web.html_container">
+                <t t-as="o" t-foreach="docs">
+                    <t t-call="paperwork_usa.report_packing_list_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

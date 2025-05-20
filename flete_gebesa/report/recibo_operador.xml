@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/flete_gebesa/static/src/css/travel_instructions.css"/>
+            </xpath>
+        </template>
+
+        <report
+            id="recibo_operador"
+            model="tms.expense"
+            string="Recibo Operador"
+            report_type="qweb-pdf"
+            name="flete_gebesa.report_recibo_operador"
+            file="flete_gebesa.report_recibo_operador"
+        />
+
+        <template id="report_recibo_operador_document">
+            <div class="header">
+                <div id="cabezera">
+                </div>
+                <div width="100%">
+                    <div id="logo">
+                        <img class="logo_porte" t-if="doc.operating_unit_id.company_id.logo" t-att-src="'data:image/png;base64,%s' % doc.operating_unit_id.company_id.logo"/>
+                    </div>
+                    <div style="text-align:center;" id="titulo">
+                        LIQUIDACION DEL VIAJE
+                    </div>
+                </div>
+                <div id="departamento">
+                    DEPARTAMENTO EMBARQUES
+                </div>
+                <div id="departamento">
+                    TRANSPORTES GALBO DEL NORTE S.A DE C.V
+                </div>
+                <div style="text-align:center;" id="titulo">
+                    Fecha:&#160;<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                </div>
+            </div>
+            <div class="page" style="font-size: 9pt;">
+                <div class="row text-center">
+                    <H4>Conductor: <span t-field="doc.employee_id.name"/></H4>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <strong>
+                            Ruta: <span t-esc="expenses[doc.id]['rutas']"/>
+                        </strong>
+                    </div>
+                    <div class="col-xs-4">
+                        <strong>Viaje: <span t-esc="expenses[doc.id]['viajes']"/></strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <strong>
+                            Fecha Inicial: <span t-field="doc.start_date"/>
+                        </strong>
+                    </div>
+                    <div class="col-xs-4">
+                        <strong>Fecha Final: <span t-field="doc.end_date"/></strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <strong>
+                            Carta Porte: <span t-esc="expenses[doc.id]['cartas']"/>
+                        </strong>
+                    </div>
+                    <div class="col-xs-4">
+                        <strong>
+                            Liquidacion: <span t-field="doc.name"/>
+                        </strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <strong>
+                            No. Evidencias: <span t-esc="expenses[doc.id]['attachment_count']"/>
+                        </strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <strong>
+                            Factura: <span t-esc="expenses[doc.id]['invoice_id']" />
+                        </strong>
+                    </div>
+                </div>
+                <div class="col-xs-12" id="cobranza">
+                    Información General
+                </div>
+                <table width="100%" class="table table-condensed">
+                    <tr>
+                        <th width="8%">Kms Gps</th>
+                        <th width="8%">Kms Scanner</th>
+                        <th width="8%">Lts Operador</th>
+                        <th width="8%">Lts Scanner</th>
+                        <th width="8%">Trc</th>
+                        <th width="8%">Caja</th>
+                        <th width="33%">Cliente</th>
+                        <th width="7%">Peso</th>
+                        <th width="12%">Km/Lt Rendimiento</th>
+                    </tr>
+                    <tr>
+                        <td width="8%"><span t-field="doc.distance_real"/></td>
+                        <td width="8%"><span t-field="doc.distance_loaded_real"/></td>
+                        <td width="8%"><span t-field="doc.fuel_qty"/></td>
+                        <td width="8%"><span t-field="doc.liters_scanner"/></td>
+                        <td width="8%"><span t-field="doc.unit_id.name"/></td>
+                        <td width="8%"><span t-esc="expenses[doc.id]['cajas']"/></td>
+                        <td width="33%">
+                            <span t-esc="expenses[doc.id]['clientes']"/>
+                        </td>
+                        <td width="7%">
+                            <span t-esc="expenses[doc.id]['peso']"/>
+                        </td>
+                        <td width="12%">
+                            <span t-field="doc.fuel_efficiency_real"/>
+                        </td>
+                    </tr>
+                </table>
+                <br/>                
+                <div class="col-xs-12" id="cobranza">
+                    Gastos Comprobados
+                </div>
+                <t t-set="total_expense" t-value="0"/>
+                <table width="100%" class="table table-condensed">
+                    <tr>
+                        <th width="40%">Producto</th>
+                        <th width="24%">Descripcion</th>
+                        <th width="12%">Cant</th>
+                        <th width="12%">Precio Unitario</th>
+                        <th width="12%">Total</th>
+                    </tr>
+                    <t t-foreach="doc.expense_line_ids" t-as="expense_line">
+                        <t t-if="expense_line.product_id.tms_product_category != 'fuel' and expense_line.product_id.tms_product_category != 'salary'">
+                            <tr>
+                                <td width="40%"><span t-field="expense_line.product_id.name_template"/></td>
+                                <td width="24%"><span t-field="expense_line.name"/></td>
+                                <td width="12%"><span t-esc="'%.2f'%expense_line.product_qty"/></td>
+                                <td width="12%"><span t-esc="'%.2f'%expense_line.unit_price"/></td>
+                                <td width="12%"><span t-esc="'%.2f'%expense_line.price_total"/></td>
+                                <t t-set="total_expense" t-value="total_expense + expense_line.price_total" />
+                            </tr>
+                        </t>
+                    </t>
+                    <tr>
+                        <td width="40%"></td>
+                        <td width="24%"></td>
+                        <td width="8%"></td>
+                        <td width="16%">Total Liquidacion:</td>
+                        <td width="12%">$<span t-esc="'%.2f'%total_expense"/></td>
+                    </tr>
+                </table>
+
+                <div class="col-xs-12" id="cobranza">
+                    Depositos
+                </div>
+                <t t-set="total_advance" t-value="0"/>
+                <table width="100%" class="table table-condensed">
+                    <tr>
+                        <th width="24%">Número Anticipo</th>
+                        <th width="18%">Fecha</th>
+                        <th width="40%">Producto</th>
+                        <th width="18%">Importe</th>
+                    </tr>
+                    <t t-foreach="doc.advance_ids" t-as="advance">
+                        <t t-if="advance.state != 'cancel'">
+                            <tr>
+                                <td width="24%"><span t-field="advance.name"/></td>
+                                <td width="18%"><span t-field="advance.date"/></td>
+                                <td width="40%"><span t-field="advance.product_id.name_template"/></td>
+                                <td width="18%"><span t-esc="'%.2f'%advance.amount"/></td>
+                                <t t-set="total_advance" t-value="total_advance + advance.amount"/>
+                            </tr>
+                        </t>
+                    </t>
+                    <tr>
+                        <td width="24%"></td>
+                        <td width="18%"></td>
+                        <td width="40%">Total Anticipos:</td>
+                        <td width="18%">$<span t-esc="'%.2f'%total_advance"/></td>
+                    </tr>
+                </table>
+
+                <div class="col-xs-12" id="cobranza">
+                    Calculo Salarial
+                </div>
+                <br/>
+                <table width="100%">
+                    <tr>
+                        <th>&#160; </th>
+                    </tr>
+                    <tr>
+                        <th width="30%">Total Gastos Comprobados:</th>
+                        <th style="text-align:right;" class="text-right" align="right" width="10%">
+                            $<span t-esc="'%.2f'%total_expense"/>
+                        </th>
+                        <th width="20%"> </th>
+                        <th align="left" width="30%">Ingresos:&#160;</th>
+                        <th style="text-align:left;" class="text-left" align="left" width="10%">
+                            $<span t-esc="'%.2f'%expenses[doc.id]['total_cartas']"/>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th width="30%">Total Depositos:</th>
+                        <th style="text-align:right;" class="text-right" align="right" width="10%">
+                            <t t-set="total_advance" t-value="total_advance*-1"/>
+                            $<span t-esc="'%.2f'%total_advance"/>
+                        </th>
+                        <th width="20%"> </th>
+                        <th align="left" width="30%">Casetas:&#160;</th>
+                        <th style="text-align:right;" class="text-right" align="right">
+                            $<span t-esc="'%.2f'%expenses[doc.id]['total_casetas']"/>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th width="30%">Salario:</th>
+                        <th style="text-align:right;" class="text-right" align="right" width="10%">
+                            $<span t-esc="'%.2f'%expenses[doc.id]['total_salario']"/>
+                        </th>
+                        <th width="20%"> </th>
+                        <th align="left" width="30%">Gasolina:&#160;</th>
+                        <th style="text-align:right;" class="text-right" align="right">
+                            $<span t-esc="'%.2f'%expenses[doc.id]['total_gasolina']"/>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th width="30%"> </th>
+                        <th width="10%"> </th>
+                        <th width="20%"> </th>
+                        <th align="left" width="30%">Salario:&#160;</th>
+                        <th style="text-align:right;" class="text-right" align="right">
+                            <t t-set="salario" t-value="expenses[doc.id]['total_salario']*-1"/>
+                            $<span t-esc="'%.2f'%salario"/>
+                        </th>
+                     </tr>
+                      <tr>
+                        <th width="30%"> </th>
+                        <th width="10%"> </th>
+                        <th width="20%"> </th>
+                        <th align="left" width="30%">Gastos:&#160;</th>
+                        <th style="text-align:right;" class="text-right" align="right">
+                            $<span t-esc="'%.2f'%expenses[doc.id]['total_gastos']"/>
+                        </th>
+                     </tr>
+                </table>
+
+                <table width="100%" class="table table-condensed">
+                    <tr>
+                        <th width="30%">Balance:</th>
+                        <th style="text-align:right;" class="text-right" align="right" width="10%">
+                            $<span t-field="doc.amount_balance"/>
+                        </th>
+                        <th width="10%"> </th>
+                        <th width="20%">Utilidad:</th>
+                        <th style="text-align:right;" class="text-right" align="right" width="20%">
+                            $<span t-esc="'%.2f'%expenses[doc.id]['utilidad']"/>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th width="30%">Diferencia Combustible:  </th>
+                        <th style="text-align:right;" class="text-right" align="right">
+                            <t t-set="diferencia" t-value="doc.amount_diff_liters*-1"/>
+                            $<span t-esc="'%.2f'%diferencia"/>
+                        </th>
+                        <th width="10%"> </th>
+                        <th width="20%">Margen:</th>
+                        <th style="text-align:right;" class="text-right" align="right" width="20%">
+                            <span t-esc="'%.2f'%expenses[doc.id]['margen']"/>%
+                        </th>
+                    </tr>
+                    <tr>
+                        <th width="30%">Total:</th>
+                        <th style="text-align:right;" class="text-right" align="right" width="10%">
+                            $<span t-field="doc.calculated_salary"/>
+                        </th>
+                    </tr>
+                </table>
+                <br/>
+                <div class="col-xs-12" id="cobranza">
+                    Paradas
+                </div>
+                <table width="100%" class="table table-condensed">
+                    <tr>
+                        <th width="35%">Direccion</th>
+                        <th width="12%">Latitud</th>
+                        <th width="12%">Longitud</th>
+                        <th width="12%">Distancia</th>
+                        <th width="12%">Duracion</th>
+                        <th width="12%">From Date</th>
+                        <th width="12%">From Date</th>
+                    </tr>
+
+                    <t t-foreach="doc.travel_ids.travel_stop_ids" t-as="travel_stop">
+                        <tr t-if="'huachicol' in travel_stop.address.lower()">
+                            <td width="30%" >
+                                <span t-field="travel_stop.address" style="text-transform: uppercase;"/>
+                            </td>
+                            <td width="15%"><span t-field="travel_stop.latitude"/></td>
+                            <td width="15%"><span t-field="travel_stop.longitude"/></td>
+                            <td width="8%"><span t-field="travel_stop.distance"/></td>
+                            <td width="12%"><span t-field="travel_stop.duration"/></td>
+                            <td width="12%"><span t-field="travel_stop.from_date"/></td>
+                            <td width="12%"><span t-field="travel_stop.to_date"/></td>
+                        </tr>
+                    </t>
+                </table>
+                <br/>
+                <div class="col-xs-12" id="cobranza">
+                    MANEJO EN NEUTRAL
+                </div>
+                <table width="100%" class="table table-condensed">
+                    <tr>
+                        <th width="10%">From date</th>
+                        <th width="10%">Initial speed</th>
+                        <th width="10%">Begin latitude</th>
+                        <th width="10%">Begin longitude</th>
+                        <th width="10%">From date</th>
+                        <th width="10%">Final speed</th>
+                        <th width="10%">End latitude</th>
+                        <th width="10%">End longitude</th>
+                        <th width="10%">Distance</th>
+                        <th width="10%">Duration</th>
+                        <th width="10%">Max speed</th>
+                        <th width="10%">Avg speed</th>
+                    </tr>
+                    <t t-foreach="doc.travel_ids.gear_coast_ids" t-as="gear_coast">
+                        <tr>
+                            <td width="10%"><span t-field="gear_coast.begin_date_time"/> </td>
+                            <td width="10%"><span t-field="gear_coast.begin_speed"/></td>
+                            <td width="10%"><span t-field="gear_coast.begin_latitude"/></td>
+                            <td width="10%"><span t-field="gear_coast.begin_longitude"/></td>
+                            <td width="10%"><span t-field="gear_coast.end_date_time"/></td>
+                            <td width="10%"><span t-field="gear_coast.end_speed"/></td>
+                            <td width="10%"><span t-field="gear_coast.end_latitude"/></td>
+                            <td width="10%"><span t-field="gear_coast.end_longitude"/></td>
+                            <td width="10%"><span t-field="gear_coast.distance"/></td>
+                            <td width="10%"><span t-field="gear_coast.duration"/></td>
+                            <td width="10%"><span t-field="gear_coast.max_speed"/></td>
+                            <td width="10%"><span t-field="gear_coast.avg_speed"/></td>
+                        </tr>
+                    </t>
+                </table>
+                <br/><br/><br/>
+
+                <div class="row" style="font-size: 11pt;">
+                    <div class="col-xs-5" style="border-bottom: 2px solid;text-align: center;">
+                        <span t-field="doc.employee_id.name"/>
+                    </div>
+                    <div class="col-xs-2">
+                    </div>
+                    <div class="col-xs-5" style="border-bottom: 2px solid;text-align: center;">
+                        <span>&#160;</span>
+                    </div>
+                </div>
+                <div class="row" style="font-size: 10pt;">
+                    <div class="col-xs-5" style="text-align: center;">
+                        <strong>Chofer</strong>
+                    </div>
+                    <div class="col-xs-2">
+                    </div>
+                    <div class="col-xs-5" style="text-align: center;">
+                        <strong>Recursos Humanos</strong>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_recibo_operador">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="flete_gebesa.report_recibo_operador_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

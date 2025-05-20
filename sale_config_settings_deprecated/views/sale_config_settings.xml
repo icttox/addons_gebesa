@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_sales_config" model="ir.ui.view">
+            <field name="name">view.sale.config.settings</field>
+            <field name="model">sale.config.settings</field>
+            <field name="inherit_id" ref="sale.view_sales_config"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group" position="before">
+                    <field name="has_default_company" invisible="1" />
+                    <group string="Company" groups="base.group_multi_company">
+                        <label for="id" string="Company"/>
+                        <div>
+                            <div attrs="{'invisible': [('has_default_company', '=', True)]}">
+                                <field name="company_id"
+                                    options="{'no_create': True}"
+                                    class="oe_inline"/>
+                            </div>
+                        </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

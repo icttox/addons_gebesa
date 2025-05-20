@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+	<record id="avalaible_sale_form_view_inh_variantdefaultcode" model="ir.ui.view">
+    		<field name="name">avalaible.sale.form.view</field>
+    		<field name="model">product.product</field>
+    		<field name="inherit_id" ref="product.product_normal_form_view"/>
+    		<field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='uom_id']" position="after">
+       				<field name="available_sale"/>       
+       	        </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

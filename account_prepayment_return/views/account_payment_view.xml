@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record model="ir.ui.view" id="gebesa_reconcile_advance_view">
+    		<field name="name">gebesa.reconcile.advance.view</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group" position="after">
+                    <group col="2">
+                        <field name="advance_refund_id" attrs='{"invisible":[("prepayment_type","!=", "advance_refund")], "required":[("prepayment_type", "==", "advance_refund")]}' domain="[('prepayment_type','=','advance'), ('partner_id','=', partner_id), ('pending_amount','&lt;&gt;', 0)]"/>
+                    </group>       
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

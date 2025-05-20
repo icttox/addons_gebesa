@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<odoo noupdate="1">
+
+    <record id="pac_vauxoo" model="res.pac">
+        <field name="company_id" ref="base.main_company"/>
+        <field name="name">Pac Vauxoo</field>
+        <field name="active">True</field>
+        <field name="url_webservice_sign">ci.cfdi.org</field>
+        <field name="url_webservice_cancel">ci.cfdi.org</field>
+        <field name="user">pacdemo@vauxoo.com</field>
+        <field name="password">Gw5bjGBETwDZeAP</field>
+        <field name="test_env">True</field>
+    </record>
+
+</odoo>

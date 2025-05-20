@@ -1,0 +1,7 @@
+<odoo>
+	<data>
+        <record model="res.groups" id="send_employee_to_microsip_button">
+            <field name="name">Send employee to microsip button</field>
+        </record>
+    </data>
+</odoo>

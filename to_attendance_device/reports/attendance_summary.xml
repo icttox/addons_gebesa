@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="attendance_summary_report"
+            model="attendance.reports.wizard"
+            string="Resumen de asistencia"
+            report_type="qweb-pdf"
+            name="to_attendance_device.report_attendance_summary"
+            file="to_attendance_device.report_attendance_summary"
+        />
+
+        <template id="report_attendance_summary_document">
+            <t t-set="title_report" t-value="'Resumen de asistencia'"/>
+            <t t-call="to_attendance_device.to_attendance_device_layout">
+                <div class="page">
+                    <t t-foreach="departments" t-as="dep">
+                        <div style="page-break-after: always;">
+                            <t t-set="dep_id" t-value="dep.id"/>
+                            <t t-set="count_row" t-value="1"/>
+                            <div class="row" style="font-size: 14pt;">
+                                <div class="col-12">
+                                    <strong>Departamento: <span t-field="dep.name"/></strong>
+                                </div>
+                            </div>
+                            <t t-foreach="sorted(attendance[dep_id])" t-as="emp">
+                                <t t-set="days_work" t-value="attendance[dep_id][emp]['emp'].resource_calendar_id.attendance_ids.mapped('dayofweek')"/>
+                                <t t-set="hours_average" t-value="datetime.timedelta(hours=attendance[dep_id][emp]['emp'].resource_calendar_id.hours_per_day)"/>
+                                <div class="row no-gutters border-top border-bottom border-dark mt-1" style="font-size: 10pt;">
+                                    <div class="col-4 mt-3">
+                                        <strong>
+                                            <div><span t-esc="attendance[dep_id][emp]['emp'].consecutive_id"/></div>
+                                            <div><span t-esc="attendance[dep_id][emp]['emp'].name"/></div>
+                                        </strong>
+                                    </div>
+                                    <div class="col-8 no-gutters mt-1">
+                                        <table width="100%">
+                                            <tr>
+                                                <td width="12.5%"></td>
+                                                <t t-foreach="dates" t-as="dat">
+                                                    <td class="border-left border-right text-center" width="12.5%">
+                                                        <span t-esc="dat.strftime('%a %d-%m')"/>
+                                                    </td>
+                                                </t>
+                                            </tr>
+                                            <tr>
+                                                <td width="12.5%"></td>
+                                                <t t-foreach="dates" t-as="dat">
+                                                    <td class="border-left border-right text-center" width="12.5%">
+                                                        <span t-if="attendance[dep_id][emp]['lea'][dat]" t-esc="attendance[dep_id][emp]['lea'][dat]"/>
+                                                    </td>
+                                                </t>
+                                            </tr>
+                                            <t t-foreach="att_fields" t-as="att_f">
+                                                <tr>
+                                                    <td style="font-size: 9pt;"><span t-esc="att_f.upper().replace('_', ' ')"/></td>
+                                                    <t t-foreach="dates" t-as="dat">
+                                                        <td class="border-left border-right text-center">
+                                                            <span t-if="attendance[dep_id][emp]['att'][dat][att_f]" t-esc="context_timestamp(attendance[dep_id][emp]['att'][dat][att_f]).strftime('%H:%M')"/>
+                                                        </td>
+                                                    </t>
+                                                </tr>
+                                            </t>
+                                            <tr>
+                                                <td>Reg</td>
+                                                <t t-foreach="dates" t-as="dat">
+                                                    <td class="border-left border-right border-top text-center">
+                                                        <span t-esc="attendance[dep_id][emp]['wt'][dat]"/>
+                                                    </td>
+                                                </t>
+                                            </tr>
+                                            <tr>
+                                                <td>OT</td>
+                                                <t t-foreach="dates" t-as="dat">
+                                                    <td class="border-left border-right text-center">
+                                                        <span t-esc="attendance[dep_id][emp]['ot'][dat]"/>
+                                                    </td>
+                                                </t>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <t t-foreach="dates" t-as="dat">
+                                                    <t t-set="days_week" t-value="int(dat.strftime('%w')) - 1"/>
+                                                    <t t-if="days_week &lt; 0">
+                                                        <t t-set="days_week" t-value="6"/>
+                                                    </t>
+                                                    <td class="border-left border-right border-bottom text-center">
+                                                        <span t-if="str(days_week) not in days_work" t-esc="'off'"/>
+                                                    </td>
+                                                </t>
+                                            </tr>
+                                            
+                                        </table>
+                                    </div>
+                                </div>
+                                <div t-if="count_row > 4" style="page-break-after: always;">&#160;</div>
+                                <t t-set="count_row" t-value="count_row + 1"/>
+                                <t t-if="count_row > 5">
+                                    <t t-set="count_row" t-value="1"/>
+                                </t>
+                            </t>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </template>
+
+
+        <template id="report_attendance_summary">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="to_attendance_device.report_attendance_summary_document"/>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

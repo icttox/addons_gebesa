@@ -1,0 +1,47 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_invoice_replace
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-10 17:20+0000\n"
+"PO-Revision-Date: 2018-10-10 17:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_invoice_replace
+#: code:addons/account_invoice_replace/models/account_invoice_replace.py:21
+#: model:ir.model.fields,field_description:account_invoice_replace.field_account_invoice_date_cancelled
+#, python-format
+msgid "Cancellation Date"
+msgstr ""
+
+#. module: account_invoice_replace
+#: model:ir.ui.view,arch_db:account_invoice_replace.account_invoice_replace_view_form
+msgid "Datos de Cancelacion"
+msgstr ""
+
+#. module: account_invoice_replace
+#: model:ir.model,name:account_invoice_replace.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: account_invoice_replace
+#: code:addons/account_invoice_replace/models/account_invoice_replace.py:17
+#: model:ir.model.fields,field_description:account_invoice_replace.field_account_invoice_invoice_replaced
+#, python-format
+msgid "Invoice that replaces"
+msgstr ""
+
+#. module: account_invoice_replace
+#: code:addons/account_invoice_replace/models/account_invoice_replace.py:28
+#, python-format
+msgid "Please select an invoice to substitute different to the invoice to be canceled"
+msgstr ""
+

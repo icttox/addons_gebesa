@@ -1,0 +1,734 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20211011\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-11 14:59+0000\n"
+"PO-Revision-Date: 2023-12-11 09:18-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "1.- Se realizaron  las pruebas para asegurar el correcto funcionamiento."
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "2.- Se solucionó el problema de raíz."
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "3.- Nivel de atención recibido por el personal de mantenimiento."
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "4.- Tiempo de entrega de la máquina o equipo reparado."
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_mto_layout
+msgid "<strong>Código:</strong><br/>F-MTO-01"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_preventivo_mto_layout
+msgid "<strong>Código:</strong><br/>F-MTO-08"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_mto_layout
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_preventivo_mto_layout
+msgid "<strong>Deriva de:</strong><br/>P-MTO-01"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_preventivo_mto_layout
+msgid "<strong>Fecha de Revisión:</strong><br/>07/12/2023"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_mto_layout
+msgid "<strong>Fecha de Revisión:</strong><br/>14/11/2023"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_mto_layout
+msgid "<strong>Orden de Servicio - Correctivo</strong>"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_preventivo_mto_layout
+msgid "<strong>Orden de Servicio - Preventivo</strong>"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_preventivo_mto_layout
+msgid "<strong>Revisión:</strong> 0"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_mto_layout
+msgid "<strong>Revisión:</strong> 4"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__accordance
+msgid "Accordance"
+msgstr "Conformidad"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Activo:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_request_view
+msgid "Asistio"
+msgstr "Asistió"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_request_view
+msgid "Atendio"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Atendió:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__attended_ids
+msgid "Attended"
+msgstr "Asistió"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,complexity:0
+msgid "Average"
+msgstr "Media"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,maintenance_attention:0
+msgid "Bad"
+msgstr "Malo"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,maintenance_type:0
+#: selection:maintenance.request,tipo_mante:0
+msgid "CCTV"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "COMENTARIOS DEL USUARIO"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__capacity
+msgid "Capacity"
+msgstr "Capacidad"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Complejidad:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__complexity
+msgid "Complexity"
+msgstr "Complejidad"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.equipment,status_validation:0
+msgid "Compliant verification"
+msgstr "Verificacion conforme vs RSM-001"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__component_ids
+msgid "Component"
+msgstr "Componente"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_equipment_view
+msgid "Components"
+msgstr "Componentes"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,maintenance_type:0
+#: selection:maintenance.request,tipo_mante:0
+msgid "Corrective"
+msgstr "Correctivo"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,help:maintenance_gebesa.field_maintenance_request__stopped_cost
+msgid "Costo de permanecer detenida la máquina"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Costos"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_it_software_equipment_rel__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_it_software_equipment_rel__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "DATOS DEL EQUIPO"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "DESCRIPCIÓN DEL MANTENIMIENTO REALIZADO"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+msgid "DESCRIPCIÓN DEL TRABAJO REALIZADO"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,delivery_time:0
+msgid "Day 1"
+msgstr "1 día"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__delivery_time
+msgid "Delivery time of the repaired machine or equipment"
+msgstr "Tiempo de entrega de la máquina o equipo reparado"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+msgid "Descripción de la falla reportada:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Descripción del trabajo que se realizó en el último servicio:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: selection:maintenance.equipment,status_validation:0
+msgid "Destruction Replacement"
+msgstr "Reposicion por destruccion"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__dimensions
+msgid "Dimensions"
+msgstr "Dimensiones"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_it_software_equipment_rel__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Duración:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "ENCUESTA DE SATISFACCIÓN DEL USUARIO"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_request_view
+msgid "Encuesta"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_request_view
+msgid "Encuesta de satisfacción"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Etapa:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,maintenance_attention:0
+msgid "Excellent"
+msgstr "Excelente"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.equipment,status_validation:0
+msgid "External calibration"
+msgstr "Calibracion externa"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_equipment_view
+msgid "Factura relacionada"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,maintenance_attention:0
+msgid "Fair"
+msgstr "Regular"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Fecha de servicio:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+msgid "Fecha de último servicio:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Fecha programada:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+msgid "Fecha y hora del reporte:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_equipment_view
+msgid "Ficha tecnia"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__ficha_tecnica
+msgid "Ficha tecnica"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__memo
+msgid "Final remarks"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Firma de Recibido (usuario)"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Firma de quién realizó el Mantenimiento"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Firma del Supervisor de Mantenimiento"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,maintenance_attention:0
+msgid "Good"
+msgstr "Bueno"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,complexity:0
+msgid "High"
+msgstr "Alta"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,help:maintenance_gebesa.field_maintenance_request__stopped_time
+msgid "Horas que permaneció detenida la máquina"
+msgstr "Horas que fueron detenidas por la máquina"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_it_software_equipment_rel__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__it_software_equipment_rel_ids
+msgid "IT Softare Equipment Rel"
+msgstr "Rel de equipos de software de TI"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_it_software_equipment_rel__it_software_id
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_equipment_view
+msgid "IT Software"
+msgstr "Software de TI"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_equipment_view
+msgid "IT Software Equipment Rel"
+msgstr "Rel de equipos de software de TI"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__image
+msgid "Image"
+msgstr "Imagen"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__image_plano
+msgid "Imagen plano"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__image_render
+msgid "Imagen render"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.actions.report,name:maintenance_gebesa.order_servicio_mto
+msgid "Imprimir Orden De Servicio Correctivo MTO"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.actions.report,name:maintenance_gebesa.order_servicio_preventivo_mto
+msgid "Imprimir Orden De Servicio Preventivo MTO"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__int_number
+msgid "Internal Number"
+msgstr "Número Interno"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.equipment,status_validation:0
+msgid "Internal verification"
+msgstr "Verificación interna"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__last_ip
+msgid "Last IP"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_it_software_equipment_rel____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_it_software_equipment_rel__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_it_software_equipment_rel__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,delivery_time:0
+msgid "Less than 1 hr"
+msgstr "Menos de 1 hr"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__maintenance_attention
+msgid "Level of attention received by maintenance staff"
+msgstr "Nivel de atención recibido por el personal de mantenimiento"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_mto_layout
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_preventivo_mto_layout
+msgid "Logo"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: selection:maintenance.equipment,status_validation:0
+msgid "Loss replacement"
+msgstr "Reposicion por perdida"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,complexity:0
+msgid "Low"
+msgstr "Baja"
+
+#. module: maintenance_gebesa
+#: model:ir.model,name:maintenance_gebesa.model_maintenance_equipment
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_it_software_equipment_rel__equipment_id
+msgid "Maintenance Equipment"
+msgstr "Equipo de mantenimiento"
+
+#. module: maintenance_gebesa
+#: model:ir.model,name:maintenance_gebesa.model_maintenance_request
+msgid "Maintenance Request"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__maintenance_type
+msgid "Maintenance Type"
+msgstr "Tipos de mantenimiento"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_equipment_view
+msgid "Maintenance history"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__mark
+msgid "Mark"
+msgstr "Marca"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__image_medium
+msgid "Medium-sized image"
+msgstr "Imagen de Tamaño-Medio"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,maintenance_type:0
+#: selection:maintenance.request,tipo_mante:0
+msgid "Mejora"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_request_view
+msgid "Memo"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,maintenance_type:0
+#: selection:maintenance.request,tipo_mante:0
+msgid "Migración SO"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Modelo:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,delivery_time:0
+msgid "More than 1 week"
+msgstr "Mas de 1 sem"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.equipment,status_validation:0
+msgid "New compliant verification"
+msgstr "Nuevo y verificacion conforme vs RSM-001"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "No"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,accordance:0
+msgid "Not satisfied"
+msgstr "No conforme"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Numero interno:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "N° de serie:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__parent_id
+msgid "Parent"
+msgstr "Padre"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,maintenance_type:0
+#: selection:maintenance.request,tipo_mante:0
+msgid "Predictive"
+msgstr "Predictivo"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,maintenance_type:0
+#: selection:maintenance.request,tipo_mante:0
+msgid "Preventive"
+msgstr "Preventivo"
+
+#. module: maintenance_gebesa
+#: code:addons/maintenance_gebesa/models/maintenance_equipment.py:117
+#, python-format
+msgid "Preventive Maintenance - %s"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_equipment_image_view_kanban
+msgid "Product"
+msgstr "Producto"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_mto_layout
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_preventivo_mto_layout
+msgid "Página 1 de 1"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Refacciones"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: selection:maintenance.equipment,status_validation:0
+msgid "Replenishment non compliance"
+msgstr "Reposicion por incumplimiento vs RSM-001"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.maintenance_equipment_view
+msgid "Reposición"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,accordance:0
+msgid "Satisfied"
+msgstr "Conforme"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__security_device
+msgid "Security Device"
+msgstr "Dispositivo de Seguridad"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Si"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__image_small
+msgid "Small-sized image"
+msgstr "Imagen pequeña"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__status_validation
+msgid "Status validation"
+msgstr "Status validacion"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__stopped_cost
+msgid "Stopped Cost"
+msgstr "Costo Aproximado"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__stopped_time
+msgid "Stopped Time"
+msgstr "Horas Detenida"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__funcionality_test
+msgid "Tests were carried out to ensure correct operation"
+msgstr "Se realizaron  las pruebas para asegurar el correcto funcionamiento"
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__root_problem
+msgid "The root problem was solved"
+msgstr "Se solucionó el problema de raíz"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Tipo de Mantenimiento:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Trabajo realizado por:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__tipo_mante
+msgid "Type of Maintenance"
+msgstr "Tipo de Mantenimiento"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "ULTIMO SERVICIO"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_request__location_physical
+msgid "Ubicación Fisica"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "Ubicación física:"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_it_software_equipment_rel__valid
+msgid "Valid"
+msgstr "Válido"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,accordance:0
+msgid "Very satisfied"
+msgstr "Muy conforme"
+
+#. module: maintenance_gebesa
+#: selection:maintenance.request,delivery_time:0
+msgid "Week 1"
+msgstr "1 Sem"
+
+#. module: maintenance_gebesa
+#: model:ir.model,name:maintenance_gebesa.model_it_software_equipment_rel
+#: model:ir.model,name:maintenance_gebesa.model_report_maintenance_gebesa_report_order_servicio_mto
+msgid "descripcion pendiente"
+msgstr "descripción pendiente"
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_mto_document
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.report_order_servicio_preventivo_mto_document
+msgid "horas"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model:ir.model.fields,field_description:maintenance_gebesa.field_maintenance_equipment__replacement
+msgid "replacement"
+msgstr ""
+
+#. module: maintenance_gebesa
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_mto_layout
+#: model_terms:ir.ui.view,arch_db:maintenance_gebesa.orden_servicio_preventivo_mto_layout
+msgid "www.gebesa.com"
+msgstr ""

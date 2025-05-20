@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="production_load_ticket"
+            model="mrp.production.daily.load"
+            string="Ticket carga diaria de producción"
+            report_type="qweb-pdf"
+            name="website_production_load.report_production_load_ticket"
+            file="website_production_load.report_production_load_ticket"
+        />
+        <record id="website_production_load.production_load_ticket" model="ir.actions.report">
+            <field name="paperformat_id" ref="website_lunch_hr.paperformat_ticket" />
+        </record>
+
+        <template id="report_production_load_ticket_document">
+            <div class="page h6">
+                <div class="row initialism">
+                    <div class="col-12 text-center">
+                        <strong t-if="doc.employee_id.company_id" t-esc="doc.employee_id.company_id.name"/>
+                        <strong t-if="not doc.employee_id.company_id">Manufacturas Post Form S.A. de C.V.</strong>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 text-center">
+                        # <t t-esc="'{0:,.0f}'.format(doc.id).replace(',', '')"/>
+                    </div>
+                </div>
+                <div class="row initialism">
+                    <div class="col-8 mt-2">
+                        <div class="row no-gutters">
+                            <span t-field="doc.date"/>
+                        </div>
+                        <div class="row no-gutters text-uppercase mt-2">
+                            <span t-field="doc.employee_id"/>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img t-if="doc.product_id.image_small" t-att-src="image_data_uri(doc.product_id.image_small)"/>
+                    </div>
+                </div>
+                <div class="row small text-uppercase mt-2">
+                    <div class="col-6">
+                        <span t-field="doc.work_id"/>
+                    </div>
+                    <div class="col-6">
+                        <span t-field="doc.operation_id"/>
+                    </div>
+                </div>
+                <div class="row initialism mt-2">
+                    <div class="col-12 text-center">
+                        (<span t-field="doc.quantity"/>) <span t-field="doc.product_id"/>
+                    </div>
+                </div>
+                <div class="row small mt-2">
+                    <div class="col-12 text-center">
+                        <span t-field="doc.daily_observations"/>
+                    </div>
+                </div>
+                <div class="row small mt-5" style="page-break-after: always;">
+                    <div class="col-12 text-center border-top">
+                        <span>Recibe</span>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_production_load_ticket">
+            <t t-call="web.html_container">
+                <!-- <t t-call="website_lunch_hr.report_ticket_layout_empty"> -->
+                <t t-call="web.basic_layout">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-call="website_production_load.report_production_load_ticket_document"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

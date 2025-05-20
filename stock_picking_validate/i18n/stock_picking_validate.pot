@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_picking_validate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-09 17:49+0000\n"
+"PO-Revision-Date: 2018-11-09 17:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_validate
+#: model:res.groups,name:stock_picking_validate.group_button_stock_picking
+msgid "Admin Stock Picking Validate"
+msgstr ""
+
+#. module: stock_picking_validate
+#: model:res.groups,name:stock_picking_validate.group_button_validate_adjustment
+msgid "Admin validate adjustment"
+msgstr ""
+
+#. module: stock_picking_validate
+#: code:addons/stock_picking_validate/models/stock_picking.py:13
+#: model:ir.model.fields,field_description:stock_picking_validate.field_stock_picking_authorized
+#: model:ir.ui.view,arch_db:stock_picking_validate.stock_picking_validate
+#, python-format
+msgid "Autorizar"
+msgstr ""
+
+#. module: stock_picking_validate
+#: code:addons/stock_picking_validate/models/stock_picking.py:31
+#, python-format
+msgid "Error!\n"
+"Does not count on provilegios to validate this exit by adjustment."
+msgstr ""
+
+#. module: stock_picking_validate
+#: code:addons/stock_picking_validate/models/stock_picking.py:27
+#, python-format
+msgid "Missing authorization module to be validated"
+msgstr ""
+
+#. module: stock_picking_validate
+#: model:ir.model,name:stock_picking_validate.model_stock_picking
+msgid "Transfer"
+msgstr ""
+

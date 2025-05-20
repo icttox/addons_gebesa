@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_account_payment_from_voucher" model="ir.ui.view">
+            <field name="name">account.voucher.payment.wizard</field>
+            <field name="model">account.voucher.payment</field>
+            <field name="arch" type="xml">
+                <form string="Register Payment" version="7">
+                    <group>
+                        <group>
+                        	<field name="partner_id" invisible="1"/>
+                            <field name="journal_id" widget="selection"/>
+                            <field name='payment_method_id' invisible="1"/>
+                            <field name="payment_type" invisible="1"/>
+                            <field name="partner_type" invisible="1"/>
+                            <field name='analytic_id' required="1"/>
+                            <field name="amount"/>
+                            <field name='company_id' invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                            <field name="communication"/>
+                            <field name='currency_id'/>
+                        </group>
+                    </group>
+                    <notebook>
+						<page string="Voucher">
+							<field name="line_ids">
+	                            <tree string="Vouchers to pay" editable="top" create="false" decoration-danger="amount &gt; amount_unreconciled or amount &lt; 0">
+	                                <field name="move_line_id" readonly="1"/>
+	                                <field name="name" readonly="1"/>
+	                                <field name="reference" readonly="1"/>
+	                                <field name="date_original" readonly="1"/>
+	                                <field name="date_due" readonly="1"/>
+	                                <field name="amount_original" readonly="1"/>
+	                                <field name="amount_unreconciled" readonly="1"/>
+	                                <field name="reconcile"/>
+	                                <field name="amount"  sum="Total to pay"/>
+	                            </tree>
+	                        </field>
+						</page>
+					</notebook>
+                    <footer>
+                        <button string='Validate' name="create_payment" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+               </form>
+            </field>
+        </record>
+
+        <act_window
+            id="action_account_payment_from_voucher"
+            name="Register Payment"
+            res_model="account.voucher.payment"
+            src_model="account.voucher"
+            view_mode="form"
+            multi="True"
+            target="new"
+            key2="client_action_multi"
+        />
+    </data>
+</odoo>

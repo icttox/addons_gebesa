@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_send_alert_contract" model="ir.cron">
+            <field name="name">Send Email Contract</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="model_id" ref="model_hr_contract"/>
+            <field name="state">code</field>
+            <field name="code">model.send_contract()</field>
+            <field name="active" eval="True" />
+        </record>
+
+        <record id="ir_cron_create_hr_leave_allocation" model="ir.cron">
+            <field name="name">Create Leave Allocation</field>
+            <field name="interval_number">12</field>
+            <field name="interval_type">months</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="model_id" ref="model_hr_employee"/>
+            <field name="state">code</field>
+            <field name="code">model.create_leave_allocation()</field>
+            <field name="active" eval="True" />
+        </record>
+
+        <record id="ir_cron_schedule_rotation" model="ir.cron">
+            <field name="name">Schedule Rotation</field>
+            <field name="interval_number">7</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="model_id" ref="model_hr_employee"/>
+            <field name="state">code</field>
+            <field name="code">model.schedule_rotation()</field>
+            <field name="active" eval="True" />
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="amount_of_the_pantry_bonus" model="ir.config_parameter">
+            <field name="key">rh_gebesa.amount_of_the_pantry_bonus</field>
+            <field name="value"></field>
+        </record>
+    </data>
+</odoo>

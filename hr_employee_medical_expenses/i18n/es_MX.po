@@ -1,0 +1,425 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_employee_medical_expenses
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20210430\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-13 15:47+0000\n"
+"PO-Revision-Date: 2021-07-13 11:04-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_needaction
+msgid "Action Needed"
+msgstr "Accion necesaria"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.actions.act_window,name:hr_employee_medical_expenses.action_expense_import_cfdi
+msgid "Attach CFD-I"
+msgstr "Adjuntar CFD-I"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_attachment_count
+msgid "Attachment Count"
+msgstr "Archivos adjuntos"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__authorized
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__authorized
+msgid "Authorized"
+msgstr "Autorizado"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_expense_import_cfdi__cfdi
+msgid "CFD-I"
+msgstr ""
+
+#. module: hr_employee_medical_expenses
+#: selection:hr.employee.medical.expense,status:0
+#: model_terms:ir.ui.view,arch_db:hr_employee_medical_expenses.employee_medical_expense_form
+#: model_terms:ir.ui.view,arch_db:hr_employee_medical_expenses.expense_import_cfdi_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: hr_employee_medical_expenses
+#: code:addons/hr_employee_medical_expenses/models/hr_employee_medical_expense.py:118
+#, python-format
+msgid "Check your expenses. They should not be the same."
+msgstr "Revisa tus gastos. No deberían ser los mismos."
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: hr_employee_medical_expenses
+#: model_terms:ir.actions.act_window,help:hr_employee_medical_expenses.employee_medical_exp_action
+msgid "Create the medical expenses"
+msgstr "Crear gastos médicos"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_expense_import_cfdi__create_uid
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__create_uid
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_expense_import_cfdi__create_date
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__create_date
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__date_cfdi
+msgid "Date CFDI"
+msgstr "Fecha CFDI"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__date_capture
+msgid "Date Capture"
+msgstr "Fecha de Captura"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_expense_import_cfdi__display_name
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__display_name
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: hr_employee_medical_expenses
+#: selection:hr.employee.medical.expense,status:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model,name:hr_employee_medical_expenses.model_hr_employee_medical_expense
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__medicalexp_id
+msgid "Employee Medical Expense"
+msgstr "Gasto Médico de Empleado"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model,name:hr_employee_medical_expenses.model_hr_employee_medical_expense_line
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__medical_expense_line_ids
+msgid "Employee Medical Expense Line"
+msgstr "Línea del Gasto Médico de Empleado"
+
+#. module: hr_employee_medical_expenses
+#: model_terms:ir.ui.view,arch_db:hr_employee_medical_expenses.employee_medical_exp_tree_view
+msgid "Employee Medical Expenses"
+msgstr "Gastos Médicos de Empleados"
+
+#. module: hr_employee_medical_expenses
+#: model_terms:ir.ui.view,arch_db:hr_employee_medical_expenses.employee_medical_expense_form
+msgid "Employee Medical Expenses Line"
+msgstr "Línea de Gastos Médicos del Empleado"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Partners)"
+
+#. module: hr_employee_medical_expenses
+#: model_terms:ir.ui.view,arch_db:hr_employee_medical_expenses.employee_medical_exp_line_form_view
+msgid "Form Employee Medical Expense Line"
+msgstr "Linea de los Gastos Médicos de Empleados"
+
+#. module: hr_employee_medical_expenses
+#: model_terms:ir.ui.view,arch_db:hr_employee_medical_expenses.employee_medical_expense_form
+msgid "Form Employee Medical Expenses"
+msgstr "Gastos Médicos de Empleados"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_expense_import_cfdi__id
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__id
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,help:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si se marca nuevos mensajes requieren su atención."
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,help:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si se marca, nuevos mensajes requieren su atención"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,help:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: hr_employee_medical_expenses
+#: model_terms:ir.ui.view,arch_db:hr_employee_medical_expenses.expense_import_cfdi_form
+msgid "Import"
+msgstr "Importar"
+
+#. module: hr_employee_medical_expenses
+#: model_terms:ir.ui.view,arch_db:hr_employee_medical_expenses.expense_import_cfdi_form
+msgid "Import CFD-I file"
+msgstr "Importar archivo CFD-I"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.ui.menu,name:hr_employee_medical_expenses.expense_import_menu
+msgid "Import XML"
+msgstr "Importar XML"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_expense_import_cfdi____last_update
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense____last_update
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_expense_import_cfdi__write_uid
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__write_uid
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_expense_import_cfdi__write_date
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__write_date
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.actions.act_window,name:hr_employee_medical_expenses.employee_medical_exp_action
+#: model:ir.ui.menu,name:hr_employee_medical_expenses.med_exp_menu
+#: model:ir.ui.menu,name:hr_employee_medical_expenses.med_expenses_menu
+msgid "Medical Expenses"
+msgstr "Gastos Médicos"
+
+#. module: hr_employee_medical_expenses
+#: model:res.groups,name:hr_employee_medical_expenses.group_hr_employee_medical_expense
+msgid "Medical Expenses / Manager"
+msgstr "Gastos Médicos / Manager"
+
+#. module: hr_employee_medical_expenses
+#: model:res.groups,name:hr_employee_medical_expenses.group_medical_expense_refund
+msgid "Medical Expenses / Refund"
+msgstr "Gastos Médicos / Reembolso"
+
+#. module: hr_employee_medical_expenses
+#: model:res.groups,name:hr_employee_medical_expenses.group_medical_expense_validated
+msgid "Medical Expenses / Validated"
+msgstr "Gastos Médicos / Validar"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_ids
+msgid "Messages"
+msgstr "Mensages"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__method_payment
+msgid "Method Payment"
+msgstr "Método de pago"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero de Acciones"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_has_error_counter
+msgid "Number of error"
+msgstr "Número de error"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,help:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requiere una acción"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,help:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,help:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__price_unit
+msgid "Price Unit"
+msgstr "Precio Unitario"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__product_sat_code_id
+msgid "Product SAT Code"
+msgstr "Código del Producto del SAT"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__supplier
+msgid "Proveedor"
+msgstr ""
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__rfc_supplier
+msgid "RFC Proveedor"
+msgstr ""
+
+#. module: hr_employee_medical_expenses
+#: selection:hr.employee.medical.expense,status:0
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__refund
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__refund
+#: model_terms:ir.ui.view,arch_db:hr_employee_medical_expenses.employee_medical_expense_form
+msgid "Refund"
+msgstr "Reembolso"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_expense_import_cfdi__state
+msgid "State"
+msgstr "Estatus"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__status
+msgid "Status"
+msgstr "Estatus"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__supplier_folio
+msgid "Supplier Folio"
+msgstr "Folio de Proveedor"
+
+#. module: hr_employee_medical_expenses
+#: code:addons/hr_employee_medical_expenses/wizards/wizard_employee_import_expenses.py:93
+#, python-format
+msgid "The xml does not have a UUID attribute, rfc receiver or a total"
+msgstr "El XML no tiene un atributo UUID, receptor RFC o un total."
+
+#. module: hr_employee_medical_expenses
+#: sql_constraint:hr.employee.medical.expense:0
+msgid "This medical expense must be unique!"
+msgstr "¡Este gasto médico debe ser único!"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__total
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__total
+msgid "Total"
+msgstr ""
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__uuid
+msgid "UUID"
+msgstr ""
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense_line__unit
+msgid "Unit"
+msgstr "Unidad"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_unread
+msgid "Unread Messages"
+msgstr "Los mensajes no leídos"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Los mensajes no leídos Contador"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__use_cfdi
+msgid "Use CFDI"
+msgstr "Uso CFDI"
+
+#. module: hr_employee_medical_expenses
+#: model_terms:ir.ui.view,arch_db:hr_employee_medical_expenses.employee_medical_expense_form
+msgid "Validate"
+msgstr "Validar"
+
+#. module: hr_employee_medical_expenses
+#: selection:hr.employee.medical.expense,status:0
+msgid "Validated"
+msgstr "Validada"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,field_description:hr_employee_medical_expenses.field_hr_employee_medical_expense__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes de sitios web"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model.fields,help:hr_employee_medical_expenses.field_hr_employee_medical_expense__website_message_ids
+msgid "Website communication history"
+msgstr "Historia de la comunicación sitio web"
+
+#. module: hr_employee_medical_expenses
+#: selection:expense.import.cfdi,state:0
+msgid "error"
+msgstr "Error"
+
+#. module: hr_employee_medical_expenses
+#: model:ir.model,name:hr_employee_medical_expenses.model_expense_import_cfdi
+msgid "expense.import.cfdi"
+msgstr ""
+
+#. module: hr_employee_medical_expenses
+#: selection:expense.import.cfdi,state:0
+msgid "init"
+msgstr ""
+
+#. module: hr_employee_medical_expenses
+#: selection:expense.import.cfdi,state:0
+msgid "ready"
+msgstr "Listo"

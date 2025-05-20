@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>        
+        <report
+            id="contrarecibo_report"
+            model="contrarecibo"
+            string="Contrarecibo"
+            report_type="qweb-pdf"
+            name="contrarecibo_gebesa.report_contrarecibo"
+            file="contrarecibo_gebesa.report_contrarecibo"
+        />
+
+        <record id="contrarecibo_gebesa.contrarecibo_report" model="ir.actions.report">
+            <field name="paperformat_id" ref="event.paperformat_euro_lowmargin" />
+        </record>
+
+         <template id="report_contrarecibo_document">
+         <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+                <div class="page">
+                     <t t-foreach="docs" t-as="doc">
+                        <!-- <div style="font-size: 11pt;" align="right">
+                            <div class="col-xs-3 text-right">
+                                <img src='http://127.0.0.1:8069/contrarecibo_gebesa/static/src/img/gebesa.png' style="max-height: 50px;margin-top: 30px;margin-right: 400px;"/>
+                            </div>
+                            <div>
+                                <td><b><span t-esc="doc['company_id'].name"/></b></td>
+                            </div>
+                            <br />
+                            <div>
+                                <td><span t-esc="doc['company_id'].street"/></td>
+                                <td>No.<span t-esc="doc['company_id'].external_num"/></td>
+                                <td><span t-esc="doc['company_id'].street2"/></td>
+                                <td><span t-esc="doc['company_id'].zip"/></td>
+                            </div>
+                            <div>
+                                <td><span t-esc="doc['company_id'].city"/>,</td>
+                                <td><span t-esc="doc['company_id'].state_id.name"/>,</td>
+                                <td><span t-esc="doc['company_id'].country_id.name"/></td>
+                            </div>
+                            <div>
+                                <td>Tel: <span t-esc="doc['company_id'].phone"/></td>
+                            </div>
+                        </div> -->
+                        <hr style="background: #04B404;" size="2" width="100%" noshade="noshade"/>
+                        <br />
+                        <div style="font-size: 12pt;">                        
+                            <div>
+                                <td><b>Fecha: </b><span t-esc="doc['date']"/></td>
+                            </div>
+                            <div>
+                                <td><b>Folio: </b><span t-esc="doc['consecutive']"/></td>
+                            </div>
+                        </div>
+                        <br />
+                        <br />        
+                        <div style="font-size: 14pt;">
+                            <div>
+                                <td><b>Recibimos de:  </b> <u><span t-esc="doc['partner_id'].name"/></u></td>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <div style="font-size: 12pt;" align="center">
+                            <td><b>La(s) siguiente(s) facturas para su revisión</b></td>
+                        </div>
+                        <br />
+                        <div>
+                            <table width="100%" align="center" style="font-size: 11pt; border-bottom: 1px solid black; border-top: 1px solid black;">
+                                <tr>
+                                    <th align="center" width="30%" height="30%"><b>Factura Proveedor</b></th>
+                                    <th align="center" width="30%" height="30%"><b>Factura Manufacturas</b></th>
+                                    <th align="center" width="20%" height="20%"><b>Fecha</b></th>
+                                    <th align="center" width="20%" height="20%"><b>Importe ($)</b></th>
+                                </tr>
+                            </table>
+                            <table width="100%" style="font-size: 11pt;">
+                                <t t-foreach="doc.invoice_ids" t-as="line">
+                                    <tr>
+                                        <td width="30%" height="30%"><span t-field="line.reference"/></td>
+                                        <td width="30%" height="30%"><span t-field="line.number"/></td>
+                                        <td width="20%" height="20%"><span t-field="line.date_invoice"/></td>
+                                        <td width="20%" height="20%"><span t-field="line.amount_total"/></td>  
+                                    </tr>
+                                </t>
+                            </table>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+        </template>
+
+        <template id="report_contrarecibo">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="contrarecibo_gebesa.report_contrarecibo_document" t-lang="doc.partner_id.lang"/>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="codigo_barras"
+            model="mrp.production"
+            string="Etiqueta Código Barras"
+            report_type="qweb-pdf"
+            name="mrp_plm_gebesa.report_codigo_barras"
+            file="mrp_plm_gebesa.report_codigo_barras"
+        />
+        <record id="mrp_plm_gebesa.codigo_barras" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag" />
+        </record>
+
+        <template id="report_codigo_barras_document">
+            <t t-foreach="range(int(doc.product_qty))" t-as="qty">
+                <div class="page">
+                    <div style="border: 1px solid #000000; border-radius:16px 16px 0px 0px;height: 55px">
+                        <div class="col-xs-3">
+                            <img t-att-src="'data:image/png;base64,%s' % logo" style="max-height: 30px;max-width: 100px;margin-top: 10px;margin-left: 3px;"/>
+                        </div>
+                        <div class="col-xs-6 text-center">
+                            <div><strong>www.gebesa.com</strong></div>
+                            <div><strong>01 800 8432 372</strong></div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                            <img src='/report_tags/static/src/img/hecho_mexico.png' style="max-height: 43px;margin-top: 3px;margin-right: 5px;"/>
+                        </div>
+                    </div>
+                    <div style="border-left: 1px solid #000000;border-right: 1px solid #000000;height: 260px">
+                        <!--<div class="col-xs-12"> -->
+                            <div align="center" class="col-xs-12" style="margin-top: 22px;font-size: 20pt;font-family: CCode39;">
+                                <t t-set="barcode39" t-value="'*'+doc.product_id.default_code+'*'"/>
+                                <span t-esc="barcode39"/>
+                                <!--<img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('Standard39', barcode39, 300, 50, 0)"/>-->
+                            </div>
+                            <div align="center" class="col-xs-12" style="margin-top: 22px;font-size: 18pt;">
+                                <span t-field="doc.product_id.default_code"/>
+                            </div>
+                            <t t-if="doc.id in option_line.keys()">
+                                <div align="center" class="col-xs-12" style="margin-top: 22px;font-size: 24pt;font-family: CCode39;">
+                                    <t t-set="barcode39" t-value="'*'+option_line[doc.id]+'*'"/>
+                                    <span t-esc="barcode39"/>
+                                    <!--<img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('Standard39', barcode39, 300, 50, 0)"/>-->
+                                </div>
+                                <div align="center" class="col-xs-12" style="margin-top: 22px;font-size: 18pt;">
+                                    <span t-esc="option_line[doc.id]"/>
+                                </div>
+                            </t>
+                        <!--</div> -->
+                    </div>
+                    <div style="border: 1px solid #000000; border-radius:0px 0px 16px 16px;height: 30px;" class="text-right">
+                        <div style="margin-right: 10px;margin-top: 20px;">
+                            <sup>CONSULTE EL INSTRUCTIVO PARA SU ENSAMBLE</sup>
+                        </div>
+                    </div>
+                    <div class="col-xs-3" style="margin-top: 5px;">
+                        <sub>Pagina <span t-esc="qty + 1"/> de <span t-esc="'%.0f'%doc.product_qty"/></sub>
+                    </div>
+                    <div class="col-xs-6 text-center" style="margin-top: 5px;">
+                        <sub>MANEJESE CON CUIDADO</sub>
+                    </div>
+                    <div class="col-xs-2 text-right" style="margin-top: 4px; font-size: 8px;">
+                        <sub><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d %B %Y')"/></sub>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_codigo_barras">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="mrp_plm_gebesa.report_codigo_barras_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_partner_form'>
+            <field name='name'>res.partner.goal.form</field>
+            <field name='model'>res.partner</field>
+        	<field name='inherit_id' ref='base.view_partner_form'/>
+        	<field name='arch' type='xml'>
+        		<xpath expr="//field[@name='property_payment_term_id']" position="before">
+        			<field name='customer_goal_id' domain="[('customer', '=', True)]" attrs="{'invisible': [('customer','=', False)]}"/>
+                </xpath>
+        	</field>
+        </record>
+    </data>
+</odoo>

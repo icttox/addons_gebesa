@@ -1,0 +1,31 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="quality_change_management_lines_tree">
+      <field name="name">quality.change.management.lines.tree</field>
+      <field name="model">quality.change.management.lines</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="activities"/>
+          <field name="responsible_id"/>
+          <field name="date_execution"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="quality_change_management_lines_form">
+      <field name="name">quality.change.management.lines.form</field>
+      <field name="model">quality.change.management.lines</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="activities"/>
+              <field name="responsible_id"/>
+              <field name="date_execution"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>

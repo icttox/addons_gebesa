@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_shipment_document" inherit_id="mrp_shipment.report_shipment_document">
+            <xpath expr="//table[@id='table_detail']" position="replace">
+                <table  id="table_detail2" width="100%" class="mrp_shipment_table_detail" style="font-size: 8pt;">
+                    <tr>
+                        <td width="17%">Producto(En)</td>
+                        <td width="9%">Clave</td>
+                        <td width="9%">Tag Line</td>
+                        <td width="21%">Articulo</td>
+                        <td width="5%">Peso</td>
+                        <td width="6%">Pedido</td>
+                        <td width="6%">Embarca</td>
+                        <td width="5%">Cantidad</td>
+                        <td width="10%">Pendiente por Facturar</td>
+                        <td width="12%">Instrucciones de Embarque</td>
+                    </tr>
+                    <t t-foreach="sorted(shipment[doc.id][partner][so][city], key=lambda kv: kv.product_id.with_context({'lang':'en_US'}).name)" t-as="line">
+                        <t t-set="line" t-value="line.with_context({'lang':'es_MX'})"/>
+                        <t t-set="qty_pending_inv" t-value="line.order_line_id.product_uom_qty - line.order_line_id.qty_invoiced"/>
+                        <t t-if="line.product_id.id not in kit.keys()">
+                            <tr t-att-style="'background: #FF3535;' if line.sale_order_id.priority == 'replenishment' else 'background: #F1F812' if line.sale_order_id.priority == 'sample' else ''">
+                                <td align="center">
+                                    <!--span t-esc="line.sale_order_id.client_order_ref"/-->
+                                    <t t-set="product_en" t-value="line.product_id.with_context({'lang':'en_US'})"/>
+                                    <t t-if="product_en.individual_name">
+                                        <span t-esc="product_en.individual_name"/>
+                                    </t>
+                                    <t t-if="not product_en.individual_name">
+                                        <span t-esc="product_en.product_tmpl_id.name"/>
+                                    </t>
+                                </td>
+                                <td><span t-esc="line.product_id.default_code"/></td>
+                                <td><span t-esc="line.order_line_id.line_tag_number"/></td>
+                                <td>
+                                    <t t-if="line.product_id.individual_name">
+                                        <span t-esc="line.product_id.individual_name"/>
+                                    </t>
+                                    <t t-if="not line.product_id.individual_name">
+                                        <span t-esc="line.product_id.product_tmpl_id.name"/>
+                                    </t>
+                                </td>
+                                <td><span t-esc="line.product_id.weight"/></td>
+                                <td><span t-esc="line.sale_order_id.name"/></td>
+                                <td><span t-esc="line.product_id.family_id.name"/></td>
+                                <td><span t-esc="line.quantity_shipped"/></td>
+                                <td><span t-esc="qty_pending_inv"/></td>
+                                <td><span t-esc="line.sale_order_id.delivery_instruction"/></td>
+                            </tr>
+                        </t>
+                        <t t-if="line.product_id.id in kit.keys()">
+                            <tr t-att-style="'background: #FF6868;' if line.sale_order_id.priority == 'replenishment' else 'background: #E0E700;' if line.sale_order_id.priority == 'sample' else 'background: lightgray;'">
+                                <td align="center">
+                                    <!--span t-esc="line.sale_order_id.client_order_ref"/-->
+                                    <t t-set="product_en" t-value="line.product_id.with_context({'lang':'en_US'})"/>
+                                    <t t-if="product_en.individual_name">
+                                        <span t-esc="product_en.individual_name"/>
+                                    </t>
+                                    <t t-if="not product_en.individual_name">
+                                        <span t-esc="product_en.product_tmpl_id.name"/>
+                                    </t>
+                                </td>
+                                <td><span t-esc="line.product_id.default_code"/></td>
+                                <td><span t-esc="line.order_line_id.line_tag_number"/></td>
+                                <td>
+                                    <t t-if="line.product_id.individual_name">
+                                        <span t-esc="line.product_id.individual_name"/>
+                                    </t>
+                                    <t t-if="not line.product_id.individual_name">
+                                        <span t-esc="line.product_id.product_tmpl_id.name"/>
+                                    </t>
+                                </td>
+                                <td><span t-esc="line.product_id.weight"/></td>
+                                <td><span t-esc="line.sale_order_id.name"/></td>
+                                <td><span t-esc="line.product_id.family_id.name"/></td>
+                                <td><span t-esc="line.quantity_shipped"/></td>
+                                <td><span t-esc="qty_pending_inv"/></td>
+                                <td><span t-esc="line.sale_order_id.delivery_instruction"/></td>
+                            </tr>
+                            <t t-foreach="kit[line.product_id.id]" t-as="bom_line">
+                                <t t-set="bom_line_qty" t-value="line.quantity_shipped * bom_line[3]"/>
+                                <tr t-att-style="'background: #FD8D8D;' if line.sale_order_id.manufacture == 'replenishment' else 'background: #FAFF5B;' if line.sale_order_id.priority == 'sample' else 'background: #F2F2F2;'">
+                                    <td align="center">
+                                        <!-- <span t-esc="line.sale_order_id.client_order_ref"/> -->
+                                        <span t-esc="bom_line[5]"/>
+                                    </td>
+                                    <td><span t-esc="bom_line[1]"/></td>
+                                    <td><span t-esc="line.order_line_id.line_tag_number"/></td>
+                                    <td>
+                                        <span t-esc="bom_line[2]"/>
+                                    </td>
+                                    <td><span t-esc="line.product_id.weight"/></td>
+                                    <td><span t-esc="line.sale_order_id.name"/></td>
+                                    <td><span t-esc="bom_line[4]"/></td>
+                                    <td><span t-esc="bom_line_qty"/></td>
+                                    <td></td>
+                                    <td><span t-esc="line.sale_order_id.delivery_instruction"/></td>
+                                </tr>
+                            </t>
+                        </t>
+                    </t>
+                </table>
+            </xpath>
+        </template>
+    </data>
+</odoo>

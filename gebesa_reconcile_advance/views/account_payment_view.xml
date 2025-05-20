@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="gebesa_reconcile_advance_view">
+            <field name="name">gebesa.reconcile.advance.view</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/group/field[@name='payment_type']" position="after">
+                    <field name='prepayment_type' attrs="{'readonly':[('state','!=','draft')]}"/>
+                </xpath>
+                <xpath expr="//group/group/field[@name='communication']" position="after">
+                    <field name='pending_amount' widget="monetary" readonly="1" attrs='{"invisible":[("prepayment_type","!=", "advance")]}'/>
+                </xpath>
+                <xpath expr="//group/group/field[@name='communication']" position="before">
+                    <field name='account_analytic_id' required='1' attrs="{'readonly':[('state','!=','draft')]}"/>
+                </xpath>
+                <xpath expr="//group/group/field[@name='communication']" position="after">
+                    <field name='responsible_id' attrs="{'required':[('prepayment_type','==','advance'),('partner_type','!=','customer')], 'readonly':[('state','!=','draft')]}"/>
+                    <field name='due_date_advance' attrs="{'required':[('prepayment_type','==','advance'),('partner_type','!=','customer')],
+                        'invisible':[('prepayment_type','!=', 'advance')],
+                        'readonly':[('state','!=','draft')]}"/>
+                </xpath>                                	
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="account_payment_customer_tree_view">
+            <field name="name">account.payment.customer.tree.view</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_tree"/>
+            <field name="arch" type="xml">
+                <field name="amount" position="after">
+                    <field name="pending_amount" widget="monetary" string="By Apply"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="account_payment_supplier_tree_view">
+            <field name="name">account.payment.supplier.tree.view</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_supplier_payment_tree"/>
+            <field name="arch" type="xml">
+                <field name="amount" position="after">
+                    <field name="pending_amount" widget="monetary" string="By Apply"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

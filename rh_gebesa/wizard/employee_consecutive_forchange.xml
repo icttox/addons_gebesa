@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='employee_consecutive_forchange_wizard'>
+        	<field name='name'>employee.consecutive.forchange.wizard</field>
+        	<field name='model'>employee.consecutive.forchange.wizard</field>
+        	<field name='arch' type='xml'>
+        		<form>
+        			<group>
+        				<field name='consecutivo'/>
+        			</group>
+        			<footer>
+                        <button name="change_uom_id" string="Change" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+    </data>
+</odoo>

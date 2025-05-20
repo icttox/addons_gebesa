@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="product_normal_form_view_type_expense" model="ir.ui.view">
+    		<field name="name">product.normal.form.view.type.expense</field>
+    		<field name="model">product.product</field>
+    		<field name="inherit_id" ref="product.product_normal_form_view"/>
+    		<field name="arch" type="xml">
+    			<field name="default_code" position="after">
+    				<field name="type_tms_expense"/>
+                </field>
+                <xpath expr="//notebook/page[@name='invoicing']/group/group" position="inside">
+                    <field name="estimated_amount"/>
+                    <field name="require_travel" readonly="True"/>
+                    <!--label for="require_travel"/-->
+                </xpath>
+                <!--
+                <field name="default_code" position="attributes">
+                    <attribute name="string">Clave       </attribute>
+                </field>-->
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="tms_product_template_view_estimated_amount">
+            <field name="name">tms.product.template.view.estimated.amount</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="account.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='invoicing']/group/group" position="inside">
+                    <field name="estimated_amount"/>
+                    <field name="require_travel"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--record model="ir.ui.view" id="tms_product_template_view_require_travel">
+            <field name="name">tms.product.template.view.require.travel</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='options']/div" position="after">
+                    <field name="require_travel"/>
+                    <label for="require_travel"/>
+                </xpath>
+            </field>
+        </record-->
+    </data>
+</odoo>

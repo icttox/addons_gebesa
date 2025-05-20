@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="maintenance_equipment_informatica_gebesa_form" model="ir.ui.view">
+            <field name="name">maintenance.equipment.informatica.gebesa.form</field>
+            <field name="model">maintenance.equipment</field>
+            <field name="priority">20</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+            <field name="arch" type="xml">       
+                <xpath expr="//button" position="before">
+                    <button name="toggle_active" type="object" groups="base.group_equipment_manager"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                    options='{"terminology": "active"}'/>
+                    </button>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='location']" position="replace">
+                    <field name="location_physical"/>
+                </xpath>
+
+                <xpath expr="//form/sheet/group/group/field[@name='equipment_assign_to']" position="after">
+                    <field name="active"/>
+                    <field name="consecutive_id"/>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='employee_id']" position="attributes">
+                    <attribute name="required">0</attribute>
+                    <attribute name="readonly">1</attribute> 
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='assign_date']" position="attributes">
+                    <attribute name="required">0</attribute>
+                    <attribute name="readonly">1</attribute>                    
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/field[@name='note']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='model']" position="after">
+                    <field name="nuevo"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='model']" position="before">
+                    <field name="fecha_vencimiento"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='model']" position="after">
+                    <field name="dias_restantes"/>
+                </xpath>                
+                <xpath expr="//form/sheet/notebook/page[2]" position="after">
+                    <page string="Historial Usuarios">
+                        <field name="employee_log_ids" widget="one2many_list" readonly='1'>
+                            <tree string='Empleado Equipo'>
+                                <field name='employee_id'/>
+                                <field name='date'/>
+                                <field name='reason_reassignment'/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <field name='warranty_date' position="attributes">
+                    <attribute name="string">Fecha de Compra</attribute>
+                    <attribute name="required">True</attribute>
+                </field>
+                <field name='cost' position="attributes">
+                    <attribute name="string">Precio</attribute>
+                </field>
+                <field name='partner_id' position="attributes">
+                    <attribute name="string">Proveedor</attribute>
+                </field>
+                <field name='partner_ref' position="attributes">
+                    <attribute name="string">Nº Factura</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="maintenance_informatica_gebesa_view_tree" model="ir.ui.view">
+            <field name="name">maintenance.equipment.informatica.gebesa.form</field>
+            <field name="model">maintenance.equipment</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_view_tree"/>
+            <field name="arch" type="xml">       
+
+                <xpath expr="//tree/field[@name='name']" position="after">
+                    <field name="consecutive_id"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='assign_date']" position="before">
+                    <field name="location_physical"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

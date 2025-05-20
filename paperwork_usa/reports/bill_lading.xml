@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/paperwork_usa/static/src/css/estilo_bill_lading.css"/>
+            </xpath>
+        </template>
+
+        <report 
+            id="bill_lading"
+            model="mrp.shipment"
+            string="Bill Lading Del Embarque"
+            report_type="qweb-pdf"
+            name="paperwork_usa.bill_ladind_report"
+            file="paperwork_usa.bill_ladind_report"
+        />
+
+        <template id="bill_lading_document_layout">
+            <div class="header">
+                <div style="background-color:black; border: 0.5pt solid black; height:10px; padding:0px 0px 0px 0px;">
+                </div>
+                <table width="100%">
+                    <tr>
+                        <th width="15%">
+                            <img src='/paperwork_usa/static/img/gebesa2.jpg' style="max-height: 40px;"/>
+                        </th>
+                        <th width="65%" align="center" style="font-size: 19pt;text-align:center;margin: 10px 170px 0px 20px;left:-50px !important;margin-left:-50px !important;">
+                            Bill Of Lading
+                        </th>
+                        <th width="20%">
+                        </th>
+                    </tr>
+                </table>
+                <table width="100%">
+                    <tr>
+                        <th width="5%">
+                            <h6 class="small-1">Ship to</h6>
+                        </th>
+                        <th width="75%">
+                            <h6 class="medium" t-field="line.partner_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                        </th>
+                        <th width="20%">
+                            <strong> Bill of Lading number</strong>
+                            <h6 t-field="doc.folio"/>
+                            <strong>Date: 
+                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                            </strong>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer">
+                <div class="text-center" style="border-top: 1px solid black;">
+                    <t t-set="company" t-value="res_company"/>
+                    <ul class="list-inline mb4">
+                        <li t-if="company.phone">Phone: <span t-field="company.phone"/></li>
+                        <li t-if="company.email">Email: <span t-field="company.email"/></li>
+                        <li t-if="company.website">Web: <span t-field="company.website"/></li>
+                        <li t-if="company.vat"><t t-esc="company.country_id.vat_label or 'TIN'"/>: <span t-field="company.vat"/></li>
+                    </ul>
+
+                    <div name="financial_infos">
+                        <span t-field="company.report_footer"/>
+                    </div>
+
+                    <div class="text-muted">
+                        Page: <span class="page"/> / <span class="topage"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="bill_lading_document">
+            <t t-set="tp" t-value="0"/>
+            <t t-set="tw" t-value="0"/>
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc"> 
+                    <t t-foreach="doc.sale_ids" t-as="line">
+                        <t t-call="paperwork_usa.bill_lading_document_layout">
+                            <div class="page">
+                                <table class="table" width="100%">
+                                    <tr>
+                                        <td width="30%">
+                                            <h6 class="small-1"> special delivery instructions</h6>
+                                            <strong t-if="doc.special_delivery_instructions">
+                                                <h6 class="small" t-field="doc.special_delivery_instructions"/>
+                                            </strong>
+                                        </td>
+                                        <td width="40%">
+                                            <h6 class="small-1">Attention</h6>
+                                            <t t-if="line.partner_id.phone and line.partner_id.function">
+                                                <h6 class="small" t-esc="line.partner_id.phone +' '+ line.partner_id.function"/>
+                                            </t>
+                                            <t t-if="line.partner_id.phone and not line.partner_id.function">
+                                                <h6 class="small" t-esc="line.partner_id.phone"/>
+                                            </t>
+                                            <t t-if="line.partner_id.function and not line.partner_id.phone">
+                                                <h6 class="small" t-esc="line.partner_id.function"/>
+                                            </t>
+                                            <br/>
+                                            <h6 class="small-1">Tag</h6>
+                                            <t t-if="line.sale_id.general_tag_num">
+                                                <h6 class="small" t-field="line.sale_id.general_tag_num"/>
+                                            </t>
+                                        </td>
+                                        <td width="30%">
+                                            <h6 class="small-1">
+                                                Freight Charge Terms (Freight charges are prepaid unless marked otherwise):
+                                            </h6>
+                                            <h6 class="small-1">
+                                                <br/> 
+                                            </h6>
+                                            <h6 class="small">
+                                                <input type="checkbox"/> Prepaid &#160;&#160;&#160;&#160;
+                                                <input type="checkbox"/> Collect &#160;&#160;&#160;&#160;
+                                                <input type="checkbox"/> 3rd Party&#160;&#160;&#160;&#160;
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <h6 class="small-2">
+                                            </h6>
+                                        </td>
+                                        <td>
+                                            <h6 class="small">
+                                                &#160;&#160;&#160;&#160;Master bill of lading with attached underlying bills of lading.
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <h6 class="small-1">
+                                                Carrier name
+                                                <br/>
+                                                <t t-if="doc.carrier_name">
+                                                    <h6 class="small"><t t-esc="doc.carrier_name"/></h6>
+                                                </t>
+                                            </h6>
+                                        </td>
+                                        <td>
+                                            <h6 class="small-1">
+                                                Trailer number
+                                                <br/>
+                                                <t t-if="doc.trailer_number">
+                                                    <h6 class="small"><t t-esc="doc.trailer_number"/></h6>
+                                                </t>
+                                            </h6>
+                                        </td>
+                                        <td>
+                                            <h6 class="small-1">
+                                                account number(s)
+                                            </h6>
+                                        </td>
+                                        <td>
+                                            <h6 class="small-1">
+                                                Seal
+                                                <br/>
+                                                <t t-if="doc.seal">
+                                                    <h6 class="small"><t t-esc="doc.seal"/></h6>
+                                                </t>
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                <table width="100%" class="mrp_bill_table_detail">
+                                    <tr>
+                                        <td width="5%"><h6 class="small-1">Number of <br/>packages</h6></td>
+                                        <td width="10%"><h6 class="small-1">P.O#</h6></td>
+                                        <td width="5%"><h6 class="small-1">F.O#</h6></td>
+                                        <td width="10%"><h6 class="small-1">Invoice</h6></td>
+                                        <td width="60%">
+                                            <h6 class="small-1">
+                                                Kind of package, description of articles, special marks, and exceptions
+                                            </h6>
+                                        </td>        
+                                        <td width="10%">
+                                            <h6 class="small-1">
+                                                Weight(subject<br/>to corrections)
+                                            </h6>
+                                        </td>
+                                    </tr>          
+                                    <tr>
+                                        <td width="5%"><h6 class="small-1">NONE</h6></td>
+                                        <td width="10%"><h6 class="small-1"></h6></td>
+                                        <td width="5%"><h6 class="small-1"> </h6></td>
+                                        <td width="10%"><h6 class="small-1"> </h6></td>
+                                        <td width="60%"><h6 class="small-1">Hazardous Material</h6></td>      
+                                        <td width="10%"><h6 class="small-1"> </h6></td>                 
+                                    </tr>        
+               
+                                    <t t-foreach="doc.line_ids" t-as="line"> 
+                                        <tr>             
+                                            <td width="5%">            
+                                                <t t-if="line.packages_number">
+                                                    <h6 class="small"><t t-esc="line.packages_number"/></h6>
+                                                    <t t-set="tp" t-value=" tp + line.packages_number"/>
+                                                </t>         
+                                            </td>
+                                            <td width="10%">
+                                                <h6 class="small">
+                                                    <t t-if="line.sale_order_id.client_order_ref">
+                                                        <t t-esc="line.sale_order_id.client_order_ref"/>
+                                                    </t>
+                                                </h6>
+                                            </td>
+                                            <td width="5%">
+                                                <h6 class="small">
+                                                    <t t-esc="line.sale_order_id.name"/>
+                                                </h6>
+                                            </td>
+                                            <td width="10%">
+                                                <h6 class="small">
+                                                    <t t-if="line.order_line_id.invoice_lines.invoice_id.number">
+                                                        <h6 class="small">
+                                                            <t t-esc="line.order_line_id.invoice_lines.invoice_id.number"/>
+                                                        </h6>
+                                                    </t>
+                                                </h6>
+                                            </td>
+                                            <td width="60%">
+                                                <h6 class="small">
+                                                    <t t-esc="line.product_id.name_template"/>
+                                                    <t t-if="line.product_id.id in kit.keys()">
+                                                        <t t-foreach="kit[line.product_id.id].bom_line_ids" t-as="bom_line">
+                                                            <br/>
+                                                            &#160;&#160;* <t t-esc='bom_line.product_id.name_template'/>
+                                                        </t>
+                                                    </t>
+                                                </h6>
+                                            </td>      
+                                            <td width="10%">      
+                                                <t t-if="line.product_id.weight">
+                                                    <t t-set="weight" t-value="line.product_id.weight * line.order_line_id.product_uom_qty"/>
+                                                    <t t-set="tw" t-value="tw + weight"/>
+                                                    <h6 class="small"><t t-esc="weight"/></h6>
+                                                </t>  
+                                                <t t-if="not line.product_id.weight">
+                                                    <h6 class="small">No inf.</h6>
+                                                </t>        
+                                            </td>
+                                        </tr>
+                                    </t> 
+                                </table>
+                                <table width="100%" class="mrp_bill_table_detail">
+                                    <tr>
+                                        <td width="50%">
+                                            <h6 class="small-1">Total packages</h6>
+                                            <h6 class="small"><t t-esc="tp"/></h6>
+                                        </td>
+                                        <td width="50%">
+                                            <h6 class="small-1">Total weight</h6> 
+                                            <h6 class="small"><t t-esc="tw"/></h6>
+                                        </td>
+                                    </tr> 
+                                </table>      
+                                <h6 class="small">
+                                    <br/>
+                                    Where the rate is dependent on value, shippers are required to state specifically in writing the agreed or declared value of the property as follows: “The agreed or declared value of the property is specifically stated by the shipper to benot exceeding _________________________per______________
+                                </h6>
+                                <br/>
+                                <h6 class="small">
+                                    COD Amount:___________________________________<br/><br/>
+                                    Fee terms: &#160;&#160;&#160;&#160; <input type="checkbox"/>&#160;&#160;Collect&#160;&#160;&#160;
+                                    <input type="checkbox"/>&#160;&#160;Prepaid&#160;&#160;&#160;
+                                    <input type="checkbox"/>&#160;&#160;Customer check acceptable
+                                </h6>
+                                <br/>
+                                <table width="100%" class="mrp_bill_table_detail">
+                                    <tr>
+                                        <td>
+                                            <h6 class="frist-2">
+                                                Note: Liability limitation for loss or damage in this shipment may be applicable. See 49 USC § 14706(c) (1) (A) and (B).
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="100%" class="mrp_bill_table_detail">
+                                    <tr>
+                                        <td width="50%">
+                                            <h6 class="small" text-align="center">
+                                                <br/>
+                                                Received, subject to individually determined rates or contracts that have been agreed upon in writing between the carrier and shipper, if applicable, otherwise to the rates, classifications, and rules that have been established by the carrier and are available to the shipper, on request, and to all applicable state and federal regulations.
+                                                <br/>
+                                            </h6>
+                                        </td>
+                                        <td width="50%">
+                                            <h6 class="small">
+                                                <br/>                
+                                                The carrier shall not make delivery of this shipment without payment of charges and all other lawful fees.
+                                                <br/>
+                                            </h6>
+                                            <h6 class="small-1">Shipper Signature</h6>
+                                            <br/>
+                                        </td>
+                                    </tr>
+                                </table> 
+                                <table width="100%" class="mrp_bill_table_detail">
+                                    <tr>
+                                        <td width="30%">
+                                            <h6 class="small-1">
+                                                Consignee Signature/Date/Time
+                                            </h6>
+                                        </td>
+                                        <td width="20%">
+                                            <h6 class="small-1">
+                                                Consignee Signature/Date/Time<br/>
+                                            </h6>
+                                                <h6 class="small">
+                                                <input type="checkbox"/>&#160;&#160;By shipper<br/>
+                                                <input type="checkbox"/>&#160;&#160;By driver<br/>
+                                            </h6>              
+                                        </td>
+                                        <td width="30%">
+                                            <h6 class="small-1">
+                                                Freight Counted:<br/>
+                                            </h6> 
+                                            <h6 class="small">
+                                                <input type="checkbox"/>&#160;&#160;By shipper<br/>
+                                                <input type="checkbox"/>&#160;&#160;By driver/pallets said to contain<br/>
+                                                <input type="checkbox"/>&#160;&#160;By driver/pieces
+                                            </h6>
+                                        </td>
+                                        <td width="20%">
+                                            <h6 class="small-1">
+                                                Carrier Signature/Pickup Date
+                                            </h6> 
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="100%" class="mrp_bill_table_detail">
+                                    <tr>
+                                        <td width="50%">
+                                            <h6 class="small">
+                                                Date:___________Time:_________<br/>
+                                                Goods or Materials received in good order except as noted.   
+                                            </h6>
+                                        </td>
+                                        <td width="50%">
+                                            <h6 class="small">
+                                                Carrier acknowledges receipt of packages and required placards. Carrier certifies emergency response information was made available and/or carrier has the DOT emergency response guidebook or equivalent documentation in the vehicle. Property described above is received in good order, except as noted.   
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="col-xs-12" style="margin-top: 0px;font-size: 10pt;" align="center">
+                                    <br/>
+                                    <strong>TSCA TITLE VI COMPLIANT</strong>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t> 
+            </t>
+        </template>
+
+        <template id="bill_ladind_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="paperwork_usa.bill_lading_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

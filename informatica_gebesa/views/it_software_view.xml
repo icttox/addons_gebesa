@@ -1,0 +1,54 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+
+    <record model="ir.actions.act_window" id="it_software_action">
+            <field name="name">IT Software</field>
+            <field name="res_model">it.software</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the first IT Software
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem id="it_software" name="IT Software" parent="maintenance.menu_maintenance_configuration"
+                  action="it_software_action"/>
+     
+        <record model="ir.ui.view" id="it_software_form_view">
+            <field name="name">it.software.form</field>
+            <field name="model">it.software</field>
+            <field name="arch" type="xml">
+                <form string="Form IT Software">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="merchant"/>
+                            </group>
+                            <group>
+                                <field name="function"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>    
+
+        <record model="ir.ui.view" id="it_software_tree_view">
+            <field name="name">it.software.tree</field>
+            <field name="model">it.software</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree IT Software">
+                    <field name="name"/>
+                    <field name="merchant"/>
+                    <field name="function"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

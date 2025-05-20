@@ -1,0 +1,145 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_sale_boilerplate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-26 14:33+0000\n"
+"PO-Revision-Date: 2018-04-26 14:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.translate_process_checkout
+msgid "<span class=\"hidden-xs\">Procesar Pedido</span>"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.extra_info_gebesa
+msgid "<span class=\"text-danger\">* </span>Orden de Compra"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.so_quotation_gebesa
+msgid "<strong>This offer expires in</strong>"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.footer_default_gebesa
+msgid "About us"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.cart_gebesa
+msgid "Add to Cart"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.extra_info_gebesa
+msgid "Continue"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.extra_info_gebesa
+msgid "Field required"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.so_quotation_gebesa
+msgid "Incl. tax)"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.extra_info_gebesa
+msgid "Información complementaria"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.model.fields,field_description:website_sale_boilerplate.field_product_product_show_web_portal
+#: model:ir.model.fields,field_description:website_sale_boilerplate.field_res_partner_show_web_portal
+msgid "Mostrar en Portal"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.model,name:website_sale_boilerplate.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.404_producto
+msgid "Please contact your executive."
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.model,name:website_sale_boilerplate.model_product_product
+msgid "Product"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.cart_gebesa
+msgid "Product Name"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.cart_gebesa
+msgid "Product not available"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.404_producto
+msgid "Return the Shop"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: code:addons/website_sale_boilerplate/models/product_product.py:12
+#: code:addons/website_sale_boilerplate/models/res_partner.py:12
+#, python-format
+msgid "Show in Portal"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.404_producto
+msgid "This Combination of color is temporary unavailable!"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.invoices_gebesa
+msgid "Tus Facturas y Pagos"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.sale_orders_gebesa
+msgid "Tus Pedidos"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.quotations_gebesa
+msgid "Tus Pedidos No Validados"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.so_quotation_gebesa
+msgid "Your advantage:"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.so_quotation_gebesa
+msgid "day"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.so_quotation_gebesa
+msgid "days"
+msgstr ""
+
+#. module: website_sale_boilerplate
+#: model:ir.ui.view,arch_db:website_sale_boilerplate.select_pricelist
+msgid "pagination form-inline"
+msgstr ""
+

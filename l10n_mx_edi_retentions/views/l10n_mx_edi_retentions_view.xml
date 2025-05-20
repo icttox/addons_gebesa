@@ -1,0 +1,175 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="retention_action">
+            <field name="name">Retentions</field>
+            <field name="res_model">l10n_mx_edi.retentions</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the first retention</p>
+            </field>
+        </record>
+
+        <menuitem id="retention_menu" name="Retentions" parent="account.menu_finance_entries_accounting_entries" action="retention_action" sequence="15"/>
+
+        <record model="ir.ui.view" id="retentions_form_view">
+            <field name="name">l10n_mx_edi.retentions.form</field>
+            <field name="model">l10n_mx_edi.retentions</field>
+            <field name="arch" type="xml">
+                <form string="Retentions">
+                    <header>
+                        <button name="action_validate" states="draft" type="object" string="Validate" class="oe_highlight"/>
+                        <button name="action_cancel" states="valid" type="object" string="Cancel"/>
+                        <field name="state" widget="statusbar"/> 
+                    </header>
+                    <sheet>
+                        <label for="number" class="oe_edit_only"/>
+                        <h1><field name="number" readonly="1"/></h1>
+                        <group>
+                            <group>
+                                <field name="partner_id" required="1" attrs="{'readonly':[('state','!=', 'draft')]}"/>
+                                <field name="retention_type_id" required="1" attrs="{'readonly':[('state','!=', 'draft')]}"/>
+                                <field name="retention_type_code" invisible="1"/>
+                                <field name="initial_month" required="1" attrs="{'readonly':[('state','!=', 'draft')]}"/>
+                                <field name="final_month" required="1" attrs="{'readonly':[('state','!=', 'draft')]}"/>
+                                <field name="fiscal_year" required="1" attrs="{'readonly':[('state','!=', 'draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="date" required="1" attrs="{'readonly':[('state','!=', 'draft')]}"/>
+                                <field name="operation_amount" attrs="{'readonly':[('state','!=', 'draft')]}"/>
+                                <field name="taxed_amount" attrs="{'readonly':[('state','!=', 'draft')]}"/>
+                                <field name="exempt_amount" attrs="{'readonly':[('state','!=', 'draft')]}"/>
+                                <field name="required_amount" readonly="1"/>
+                                <field name="currency_id" readonly="1"/>
+                            </group>
+                        </group>
+                            <notebook>
+                                <page string="Retention Line">
+                                    <separator string="Retention Line"/>
+                                    <field name="retentions_detail_ids" nolabel="True" widget="one2many_list" attrs="{'readonly':[('state','!=', 'draft')]}">
+                                        <tree editable="bottom" string="Retention Lines">
+                                            <field name="retention_type" required="1"/>
+                                            <field name="tax" required="1"/>
+                                            <field name="base_amount"/>
+                                            <field name="retained_amount"/>
+                                        </tree>    
+                                    </field>
+                                </page>
+                                <page string="Retention Complement">
+                                    <separator string="Retention Complement"/>
+                                    <field name="retentions_complement_ids" nolabel="True" widget="one2many_list" attrs="{'readonly':[('state','!=', 'draft')]}">
+                                        <tree editable="bottom" string="Retention Complements">
+                                            <field name="retention_type_code" invisible="1"/>
+                                            <field name="version"/>
+
+                                            <field name="beneficiary" attrs="{'column_invisible': [('parent.retention_type_code', '!=', '18')]}"/>
+                                            <field name="country_id" attrs="{'column_invisible': [('parent.retention_type_code', '!=', '18')], 'required': [('retention_type_code', '==', '18')]}"/>
+                                            <field name="taxpayer_type_id" attrs="{'column_invisible': [('parent.retention_type_code', '!=', '18')], 'required': [('retention_type_code', '==', '18')]}"/>
+
+                                            <field name="contract_intermediation" attrs="{'column_invisible': [('parent.retention_type_code', 'not in', ('06', '19'))], 'required': [('retention_type_code', 'in', ('06', '19'))]}"/>
+                                            <field name="earnings" attrs="{'column_invisible': [('parent.retention_type_code', 'not in', ('06', '19'))], 'required': [('retention_type_code', 'in', ('06', '19'))]}"/>
+                                            <field name="losses" attrs="{'column_invisible': [('parent.retention_type_code', 'not in', ('06', '19'))], 'required': [('retention_type_code', 'in', ('06', '19'))]}"/>
+
+                                            <field name="dividend_type_id" attrs="{'column_invisible': [('parent.retention_type_code', '!=', '14')], 'required': [('retention_type_code', '==', '14')]}"/>
+                                            <field name="amount_isr_mx" attrs="{'column_invisible': [('parent.retention_type_code', '!=', '14')], 'required': [('retention_type_code', '==', '14')]}"/>
+                                            <field name="amount_isr_foreing" attrs="{'column_invisible': [('parent.retention_type_code', '!=', '14')], 'required': [('retention_type_code', '==', '14')]}"/>
+                                            <field name="society_type" attrs="{'column_invisible': [('parent.retention_type_code', '!=', '14')], 'required': [('retention_type_code', '==', '14')]}"/>
+                                        </tree>
+                                    </field>    
+                                </page>
+                                <page string="CFD-I">
+                                    <separator string="CFD-I"/>
+                                    <group>
+                                        <group>
+                                            <field name="l10n_mx_edi_cfdi_uuid" readonly="1"/>
+                                            <field name="l10n_mx_edi_cfdi_issuing_rfc" readonly="1"/>
+                                            <field name="l10n_mx_edi_pac_status" readonly="1"/>
+                                            <field name="l10n_mx_edi_cfdi" invisible="1"/>
+                                        </group>
+                                        <group>
+                                            <field name="l10n_mx_edi_cfdi_certificate_id"  readonly="1"/>
+                                            <field name="l10n_mx_edi_cfdi_receptor_rfc" readonly="1"/>
+                                            <field name="l10n_mx_edi_sat_status"  readonly="1"/>
+                                        </group>
+                                    </group>
+                                </page>
+                            </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>    
+
+        <record model="ir.ui.view" id="retentions_tree_view">
+            <field name="name">l10n_mx_edi.retentions.tree</field>
+            <field name="model">l10n_mx_edi.retentions</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Retentions">
+                    <field name="number" select="1"/>
+                    <field name="date"/>
+                    <field name="partner_id"/>
+                    <field name="retention_type_id"/>
+                    <field name="initial_month"/>
+                    <field name="final_month"/>
+                    <field name="fiscal_year"/>
+                    <field name="operation_amount"/>
+                    <field name='taxed_amount'/>
+                    <field name="exempt_amount" readonly='1'/>
+                    <field name="required_amount"/>
+                </tree>
+            </field>
+        </record> 
+
+
+        <record model="ir.ui.view" id="retentions_lines_form_view">
+            <field name="name">l10n_mx_edi.retentions.taxes.form</field>
+            <field name="model">l10n_mx_edi.retentions.taxes</field>
+            <field name="arch" type="xml">
+                <form string="Retentions Line">
+                    <sheet>
+                        <group>
+                            <field name="retention_type"/>
+                            <field name="tax"/>
+                            <field name="base_amount"/>
+                            <field name="retained_amount"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="retentions_complement_form_view">
+            <field name="name">l10n_mx_edi.retentions.complement.form</field>
+            <field name="model">l10n_mx_edi.retentions.complement</field>
+            <field name="arch" type="xml">
+                <form string="Retentions Complement">
+                    <sheet>
+                        <group>
+                            <field name="version"/>
+                            <field name="retention_type_code" invisible="1"/>
+                            <field name="beneficiary" attrs="{'invisible':[('retention_type_code', '!=', '18')]}"/>
+                            <field name="country_id" attrs="{'invisible':[('retention_type_code', '!=', '18')]}"/>
+                            <field name="taxpayer_type_id" attrs="{'invisible':[('retention_type_code', '!=', '18')]}"/>
+
+                            <field name="contract_intermediation" attrs="{'invisible':[('retention_type_code', 'not in', ('06', '19'))]}"/>
+                            <field name="earnings" attrs="{'invisible':[('retention_type_code', 'not in', ('06', '19'))]}"/>
+                            <field name="losses" attrs="{'invisible':[('retention_type_code', 'not in', ('06', '19'))]}"/>
+
+                            <field name="dividend_type_id" attrs="{'invisible':[('retention_type_code', '!=', '14')]}"/>
+                            <field name="amount_isr_mx" attrs="{'invisible':[('retention_type_code', '!=', '14')]}"/>
+                            <field name="amount_isr_foreing" attrs="{'invisible':[('retention_type_code', '!=', '14')]}"/>
+                            <field name="society_type" attrs="{'invisible':[('retention_type_code', '!=', '14')]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

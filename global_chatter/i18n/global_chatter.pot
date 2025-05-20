@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* global_chatter
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-21 15:07+0000\n"
+"PO-Revision-Date: 2017-03-21 15:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: global_chatter
+#: model:ir.model.fields,field_description:global_chatter.field_account_payment_message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,help:global_chatter.field_account_payment_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,field_description:global_chatter.field_account_payment_message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,field_description:global_chatter.field_account_payment_message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,field_description:global_chatter.field_account_payment_message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,help:global_chatter.field_account_payment_message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,help:global_chatter.field_account_payment_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,field_description:global_chatter.field_account_payment_message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,field_description:global_chatter.field_account_payment_message_last_post
+msgid "Last Message Date"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,field_description:global_chatter.field_account_payment_message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,field_description:global_chatter.field_account_payment_message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,help:global_chatter.field_account_payment_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,help:global_chatter.field_account_payment_message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model,name:global_chatter.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,field_description:global_chatter.field_account_payment_message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,field_description:global_chatter.field_account_payment_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,field_description:global_chatter.field_account_payment_website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: global_chatter
+#: model:ir.model.fields,help:global_chatter.field_account_payment_website_message_ids
+msgid "Website communication history"
+msgstr ""
+

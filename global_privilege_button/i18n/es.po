@@ -1,0 +1,156 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* global_privilege_button
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-03 22:54+0000\n"
+"PO-Revision-Date: 2017-04-03 22:54+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: global_privilege_button
+#: model:ir.model,name:global_privilege_button.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Lista de Materiales"
+
+#. module: global_privilege_button
+#: model:ir.ui.view,arch_db:global_privilege_button.purchase_order_cancel_button_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: global_privilege_button
+#: code:addons/global_privilege_button/models/mrp_bom.py:16
+#: code:addons/global_privilege_button/models/mrp_bom_line.py:16
+#: code:addons/global_privilege_button/models/mrp_bom_line_detail.py:16
+#, python-format
+msgid "Error!\n"
+"You do not have privileges to Create Material(s) list.\n"
+"Check with your System Administrator."
+msgstr "Error! Tu no tienes privilegios para Crear Lista de Materiales. Consulte con el Administrador del Sistema. "
+
+#. module: global_privilege_button
+#: code:addons/global_privilege_button/models/product_product.py:16
+#: code:addons/global_privilege_button/models/product_template.py:16
+#, python-format
+msgid "Error!\n"
+"You do not have privileges to Create Product(s).\n"
+"Check with your System Administrator."
+msgstr "Error! Tu no tienes privilegios para Crear Producto(s). Consulte con el Administrador del Sistema. "
+
+#. module: global_privilege_button
+#: code:addons/global_privilege_button/models/mrp_bom.py:34
+#: code:addons/global_privilege_button/models/mrp_bom_line.py:34
+#: code:addons/global_privilege_button/models/mrp_bom_line_detail.py:34
+#, python-format
+msgid "Error!\n"
+"You do not have privileges to Delete Material(s) list.\n"
+"Check with your System Administrator."
+msgstr "Error! Tu no tienes privilegios para Eliminar Lista de Materiales. Consulte con el Administrador del Sistema. "
+
+#. module: global_privilege_button
+#: code:addons/global_privilege_button/models/mrp_bom.py:43
+#, python-format
+msgid "Error!\n"
+"You can not Inactivate this BOM, you need to delete all the lines."
+msgstr "No puedes Inactivar este BOM, necesitas eliminar todas las lineas."
+
+#. module: global_privilege_button
+#: code:addons/global_privilege_button/models/product_product.py:34
+#: code:addons/global_privilege_button/models/product_template.py:34
+#, python-format
+msgid "Error!\n"
+"You do not have privileges to Delete Product(s).\n"
+"Check with your System Administrator."
+msgstr "Error! Tu no tienes privilegios para Eliminar Producto(s). Consulte con el Administrador del Sistema. "
+
+#. module: global_privilege_button
+#: code:addons/global_privilege_button/models/mrp_bom.py:25
+#: code:addons/global_privilege_button/models/mrp_bom_line.py:25
+#: code:addons/global_privilege_button/models/mrp_bom_line_detail.py:25
+#, python-format
+msgid "Error!\n"
+"You do not have privileges to Modify Material(s) list.\n"
+"Check with your System Administrator."
+msgstr "Error! Tu no tienes privilegios para Modificar Lista de Materiales. Consulte con el Administrador del Sistema. "
+
+#. module: global_privilege_button
+#: code:addons/global_privilege_button/models/product_product.py:25
+#: code:addons/global_privilege_button/models/product_template.py:25
+#, python-format
+msgid "Error!\n"
+"You do not have privileges to Modify Product(s).\n"
+"Check with your System Administrator."
+msgstr "Error! Tu no tienes privilegios para Modificar Producto(s). Consulte con el Administrador del Sistema. "
+
+#. module: global_privilege_button
+#: model:res.groups,name:global_privilege_button.group_manager_ldm
+msgid "LDM Manager (Create, Delete, Write)"
+msgstr "Administrador LDM (Crear, Eliminar, Modificar)"
+
+#. module: global_privilege_button
+#: model:ir.model,name:global_privilege_button.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: global_privilege_button
+#: model:res.groups,name:global_privilege_button.group_inactivate_product
+msgid "Product Inactive Button"
+msgstr "Botòn Inactivar Producto"
+
+#. module: global_privilege_button
+#: model:res.groups,name:global_privilege_button.group_manager_product
+msgid "Product Manager (Create, Delete, Write)"
+msgstr "Administrador Producto (Crear, Eliminar, Modificar)"
+
+#. module: global_privilege_button
+#: model:ir.model,name:global_privilege_button.model_product_template
+msgid "Product Template"
+msgstr "Plantilla del Producto"
+
+#. module: global_privilege_button
+#: model:res.groups,name:global_privilege_button.group_cancel_purchase
+msgid "Purchase Order Cancel Button"
+msgstr "Botòn Cancelar Orden de Compra"
+
+#. module: global_privilege_button
+#: model:ir.model,name:global_privilege_button.model_mrp_bom_line
+msgid "mrp.bom.line"
+msgstr "mrp.bom.line"
+
+#. module: global_privilege_button
+#: model:ir.model,name:global_privilege_button.model_mrp_bom_line_detail
+msgid "mrp.bom.line.detail"
+msgstr "mrp.bom.line.detail"
+
+#. module: global_privilege_button
+#: model:res.groups,name:global_privilege_button.group_manager_is_line_product
+msgid "Manager Line Product"
+msgstr "Administrador Producto Linea"
+
+#. module: global_privilege_button
+#: code:addons/global_privilege_button/models/product_product.py:22
+#: code:addons/global_privilege_button/models/product_template.py:22
+#, python-format
+msgid "Error!\n"
+"You do not have privileges to Create Line Products."
+msgstr "Error! Tu no tienes privilegios para Crear Producto(s) de Linea."
+
+#. module: global_privilege_button
+#: code:addons/global_privilege_button/models/product_product.py:38
+#: code:addons/global_privilege_button/models/product_template.py:38
+#, python-format
+msgid "Error!\n"
+"You do not have privileges to Modify Line Products."
+msgstr "Error! Tu no tienes privilegios para Modificar Producto(s) de Linea."
+
+#. module: global_privilege_button
+#: model:ir.ui.view,arch_db:global_privilege_button.inactive_mrp_bom_form_view
+msgid "Inactive BOM"
+msgstr "Inactivar BOM"

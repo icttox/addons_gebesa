@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_template_form_inherit_view'>
+            <field name='name'>product.tem.form.inherit.view</field>
+            <field name='model'>product.template</field>
+            <field name="mode">primary</field>
+            <field eval="16" name="priority"/>
+            <field name='inherit_id' ref="product.product_template_only_form_view"/>
+            <field name='arch' type='xml'>
+                <group name="group_lots_and_weight" position="inside">
+                    <field name="numctrl_progress" string="Num. Ctrl. Progress" readonly="1" />
+                    <field name='num_package' string='Number Packages'/>
+                </group>
+        	</field>
+        </record>
+
+        <record model='ir.ui.view' id='product_product_form_inherit_view'>
+            <field name='name'>product.product.form.inherit.view</field>
+            <field name='model'>product.product</field>
+            <field name='inherit_id' ref="product.product_variant_easy_edit_view"/>
+            <field name='arch' type='xml'>
+                <field name="default_code" position="after">
+                    <field name="numctrl_progress" string="Num. Ctrl. Progress" readonly="1" />
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+hr_employee_medical_expense_manager,hr.employee.medical.expense manager,model_hr_employee_medical_expense,group_hr_employee_medical_expense,1,1,1,1
+hr_employee_medical_expense_read_all,hr.employee.medical.expense all,model_hr_employee_medical_expense,,1,0,0,0
+hr_employee_medical_expense_line_manager,hr.employee.medical.expense.line manager,model_hr_employee_medical_expense_line,group_hr_employee_medical_expense,1,1,1,1
+hr_employee_medical_expense_line_read_all,hr.employee.medical.expense.line all,model_hr_employee_medical_expense_line,,1,0,0,0

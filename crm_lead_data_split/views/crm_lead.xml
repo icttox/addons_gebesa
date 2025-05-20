@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='crm_lead_button_autofill'>
+        	<field name='name'>crm.lead.button.autofill</field>
+        	<field name='model'>crm.lead</field>
+        	<field name='inherit_id' ref="crm.crm_case_form_view_leads"/>
+        	<field name='arch' type='xml'>
+                <header>
+                    <button name="substring_message" string="Auto llenado" type="object"/>
+                </header>
+        	</field>
+        </record>
+    </data>
+</odoo>

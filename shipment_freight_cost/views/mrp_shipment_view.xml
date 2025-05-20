@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="shipment_inherit_form" model="ir.ui.view">
+            <field name="name">shipment_inherit_form</field>
+            <field name="model">mrp.shipment</field>
+            <field name="inherit_id" ref="mrp_shipment.mrp_shipment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Invoices">
+                        <field name="inv_rel_shipment_ids">
+                            <tree editable="bottom">
+                                <field name='invoice_id' domain="[('state','not in', ['draft', 'cancel']),('type', '=', 'in_invoice'),('purchase_ids', '=', False)]"/>
+                                <field name="total_inv"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='weight']" position="after">
+                    <field name="total_gasto_flete"/>
+                    <field name="amount_total_mxn"/>
+                    <field name="total_gasto_flete_mxn"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

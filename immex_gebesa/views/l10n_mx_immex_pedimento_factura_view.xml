@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="view_l10_mx_pedimento_factura_Action">
+            <field name="name">Pedimento factura</field>
+            <field name="res_model">l10n.mx.immex.pedimento.factura</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('clave_documento', 'in', ['IN', 'V1', 'AF', 'RT'])]</field>
+            <field name="context">{'create':False, 'edit':False, 'delete':False}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Pedimento Factura
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_l10_mx_pedimento_factura_admin">
+            <field name="name">Pedimento Factura (admin)</field>
+            <field name="res_model">l10n.mx.immex.pedimento.factura</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Pedimento Factura
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="pedimento_factura_menu" name="Pedimento Factura" parent="pedimento_menu" action="view_l10_mx_pedimento_factura_Action"/>
+        <menuitem id="menu_l10_mx_pedimento_factura_admin" name="Pedimento Factura (admin)" parent="immex_gebesa.pedimento_menu" action="action_l10_mx_pedimento_factura_admin" sequence="2" groups="system_administrator.group_system_administrator_gebesa"/>
+
+        <record model="ir.ui.view" id="view_l10_mx_Action_pedimento_factura_form">
+            <field name="name">pedimento.factura.form</field>
+            <field name="model">l10n.mx.immex.pedimento.factura</field>
+            <field name="arch" type="xml">
+                <form string="Factura Form">
+                    <header>
+                        <button name="check_vucem" type="object" string="Vucem" class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <group col="6" colspan="2">
+                            <field name='patente'/>
+                            <field name='num_pedimento'/>
+                            <field name='clave_aduana'/>
+                            <field name='pedimento_num'/>
+                            <field name='fecha_facturacion'/>
+                            <field name='num_factura'/>
+                            <field name='termino_facturacion'/>
+                            <field name='moneda_factura'/>
+                            <field name='monto_usd'/>
+                            <field name='monto_extranjera'/>
+                            <field name='pais_facturacion'/>
+                            <field name='estado'/>
+                            <field name='id_fiscal_proveedor'/>
+                            <field name='nombre_proveedor'/>
+                            <field name='calle_proveedor'/>
+                            <field name='num_interior_proveedor'/>
+                            <field name='num_exterior_proveedor'/>
+                            <field name='cp_proveedor'/>
+                            <field name='ciudad_proveedor'/>
+                            <field name='fecha_real_pago'/>
+                            <field name='clave_documento'/>
+                            <field name='pedimento_id'/>
+                            <field name='resumen_id'/>
+                            <field name="invoice_id"/>
+                            <field name="uuid"/>
+                        </group>
+                        <notebook colspan="6">
+                            <page string="Mercancias">
+                                <field name="factura_mercancia_ids">
+                                    <tree string="Mercancias" editable="bottom" delete ="false">
+                                        <field name="pedimento_id"/>
+                                        <field name="invoice_id"/>
+                                        <field name="descripcion" readonly="1"/>
+                                        <field name="clave_uom" readonly="1"/>
+                                        <field name="moneda" readonly="1"/>
+                                        <field name="cantidad" readonly="1"/>
+                                        <field name="valor_unitario" readonly="1"/>
+                                        <field name="valor_total" readonly="1"/>
+                                        <field name="valor_dolares" readonly="1"/>
+                                        <field name="partida_id" domain="[('pedimento_id', '=', pedimento_id)]"/>
+                                        <field name="invoice_line_id" domain="[('invoice_id', '=', invoice_id)]"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Requests">
+                                <field name="requests"/>
+                            </page>
+                            <page string="Response">
+                                <field name="response"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_l10_mx_Action_pedimento_factura_view_tree">
+            <field name="name">Pedimento.factura.tree</field>
+            <field name="model">l10n.mx.immex.pedimento.factura</field>
+            <field name="arch" type="xml">
+                <tree string="Factura Tree">
+                    <field name='patente'/>
+                    <field name='num_pedimento'/>
+                    <field name='clave_aduana'/>
+                    <field name='pedimento_num'/>
+                    <field name='fecha_facturacion'/>
+                    <field name='num_factura'/>
+                    <field name='termino_facturacion'/>
+                    <field name='moneda_factura'/>
+                    <field name='monto_usd'/>
+                    <field name='monto_extranjera'/>
+                    <field name='pais_facturacion'/>
+                    <field name='estado'/>
+                    <field name='id_fiscal_proveedor'/>
+                    <field name='nombre_proveedor'/>
+                    <field name='calle_proveedor'/>
+                    <field name='num_interior_proveedor'/>
+                    <field name='num_exterior_proveedor'/>
+                    <field name='cp_proveedor'/>
+                    <field name='ciudad_proveedor'/>
+                    <field name='fecha_real_pago'/>
+                    <field name='clave_documento'/>
+                    <field name='resumen_id'/>
+                    <field name="invoice_id"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

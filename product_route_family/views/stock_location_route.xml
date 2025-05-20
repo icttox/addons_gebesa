@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_route_family_form'>
+            <field name='name'>product.route.family.form</field>
+            <field name='model'>stock.location.route</field>
+            <field name='inherit_id' ref='stock.stock_location_route_form_view'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="route_default"/>
+                    <field name="is_manufacture"/>
+                    <field name="tsca"/>
+                </xpath>
+                <xpath expr="//field[@name='sequence']" position="after">
+                    <field name="family_ids" widget="many2many_tags" domain="[('analytic_id', '!=', False)]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='product_route_family_tree_view'>
+            <field name='name'>'product_route_family_tree_view</field>
+            <field name='model'>stock.location.route</field>
+            <field name='inherit_id' ref='stock.stock_location_route_tree'/>
+            <field name='arch' type='xml'>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="family_ids"/> 
+            </xpath>   
+            </field>
+        </record> 
+    </data>
+</odoo>

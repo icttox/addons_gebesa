@@ -1,0 +1,174 @@
+.logo {
+    height: 60px;
+    width: 250px;
+}
+
+#titulo_ship{
+    background: #616360;
+    color: white;
+    font-weight: bold;
+    border-right: black 4px solid;
+    border-left: black 4px solid;
+}
+
+#fijo {
+    color: black;
+}
+
+#data {
+    border-bottom: black 1px solid;
+    background: #a5a8a4;
+    text-align: center;
+    font-weight: bold;
+}
+
+#shipment {
+    border-bottom: black 1px solid;
+    background: #a5a8a4;
+    text-align: left;
+    font-weight: lighter;
+    padding-left: 1%;
+}
+
+#separator {
+    background: #616360;
+    text-align: center;    
+    font-weight: bold;
+    color: white;
+}
+
+.mrp_shipment_table{
+    width: 100%;
+    padding: 0px;
+}
+.mrp_shipment_table td{
+    border: 1px solid black;
+}
+.mrp_shipment_table_detail{
+    border: 1px solid black;
+}
+.mrp_shipment_table_detail td{
+	padding: 0px;
+    border: 1px solid black;
+}
+.mrp_shipment_tr_kit{
+	background: lightgray;
+}
+.mrp_shipment_tr_kit_child{
+	background: #f2f2f2;
+}
+
+#logo_porte{
+    height: 150px; 
+    width: 55px; 
+    margin: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 0px;
+}
+
+.logo_porte{
+    padding: 0pt;
+    height: 25pt;
+}
+
+#titulo_tabla{
+    background-color: #a5a8a4;
+    color: black;
+    font-weight: bold;
+}
+
+#primer_tabla{
+    background-color: #616360;
+    color: black;
+    font-weight: bold;
+}
+
+#contorno{
+}
+
+.currency:before{
+    content: '$';
+    number-format:"###,##0.00";
+}
+
+@decimal-format currency{
+    grouping-separator: ",";
+    decimal-séparator: ".";
+}
+
+#cobranza{
+    height: 19.5pt;
+    background-color: #616360;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+    top:5pt;
+
+}
+
+#tablaa{
+    top:10pt;
+    padding: 0pt;
+}
+
+#cobranza2{
+    top:103pt;
+    height: 19.5pt;
+    background-color: #616360;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+#tablaa2{
+    top:11pt;
+    padding: 0pt;
+    position: relative;
+}
+
+#foot{
+    padding: 0pt;
+}
+
+
+.mrp_shipment_table_2{
+    position: relative;
+    padding: 0px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-collapse: separate;
+    width: 7%;
+    top: 18px;
+}
+.mrp_shipment_table_2 td{
+    border: 1px solid black;
+}
+
+.mrp_shipment_table_3{
+    position: relative;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+.mrp_shipment_table_3 td{
+    border: 1px solid black;
+}
+
+#cobranza3{
+    top:45pt;
+    height: 22pt;
+    background-color: #616360;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+#cobranza4{
+    top:80pt;
+}
+
+#cobranza5{
+    top:100pt;
+}

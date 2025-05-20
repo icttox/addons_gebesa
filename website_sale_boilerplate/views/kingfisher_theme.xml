@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--Quitar el precio de la primera vista del producto -->
+        <template id="alternative_products_kingfisher" inherit_id="kingfisher_pro.king_pro_products_item" name="Kingfisher Product item">
+            <xpath expr="//form/div/div/div[@class='pwp-info']/p[@class='price']" position="replace">
+            </xpath>
+        </template>
+        <!--Quitar el precio de la segunda vista del producto -->
+        <template id="product_details_second" inherit_id="kingfisher_pro.kingfisher_pro_product_details" name="Product Details">
+            <!--Replasa el h1 para poner la clave -->
+            <xpath expr="//div[@id='product_details']/div/div[@class='product-title']/h1[@itemprop='name']" position="replace">
+                <h1 itemprop="name"><span/>[
+                    <t t-if="product.reference_mask">
+                        <span t-field="product.reference_mask" class="oe_inline"/>
+                    </t>
+                    <t t-if="not product.reference_mask">
+                        <span t-field="product.default_code" class="oe_inline"/>
+                    </t>
+                ]<span t-field="product.name" class="oe_inline"/></h1>
+            </xpath>
+            <!--no muestra el producto si no esta logeado-->
+            <xpath expr="//div[@id='product_details']/div/div[2]/form/div/div[@class='details']" position="attributes">
+                <attribute name="t-if">(user_id != website.user_id)
+                </attribute>
+            </xpath>
+            <xpath expr="//div[@id='product_details']/div/div[2]/form/div/p" position="after">
+                <div class="row">
+                    <div>              
+                        <input class="product_display_name" id="product_display_name" name="product_display_name" disabled="" size="85" style="border: 0; font-weight:bold; color: black; background-color: BEFF33"/>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <label class="container-chk" id="visible_cart_label">De acuerdo<input id="visible_cart_check" type="checkbox" onchange="toggle_visibility('add_to_cart');"/>
+                            <span class="checkmark-chk"></span>
+                        </label>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//a[@id='add_to_cart']" position="attributes">
+                <attribute name="style">display:none;</attribute>
+            </xpath>
+        </template>
+        <!--Quitar el precio de la tercera vista del producto -->
+        <!--template id="product_prices_" inherit_id="website_sale.cart" name="Shopping Cart">
+            <xpath expr="//div[@id='right_column']" position="replace">
+
+            </xpath>
+        </template-->
+        <!--Quitar lista precio de la configuracion-->
+        <template id="listprice_configuration" inherit_id="kingfisher_pro.kingfisher_pro_header_layout" name="Top Header">
+            <xpath expr="//div[@class='header-top']/div/div/div/div/div[2]/ul/li[@class='configuration']/div/div/div[@class='currency_bar']" position="replace">
+                
+            </xpath>
+        </template>
+        <!--Boton-->
+        <template id="button_add_cart" inherit_id="website_sale.product">
+            <xpath expr="//a[@id='add_to_cart']" position="attributes">
+                <attribute name="t-if">(user_id != website.user_id)</attribute>
+                
+                <!--<a 
+	               class="btn btn-primary pull-right mb32"
+	               href="/web/login?redirect=/shop/cart">
+	                <span>Log in and checkout</span>
+	                <span class="fa fa-long-arrow-right"/>
+	            </a> -->
+            </xpath>
+        </template>
+    </data>
+</odoo>

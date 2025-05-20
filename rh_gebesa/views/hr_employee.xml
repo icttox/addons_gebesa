@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="hr_employee_gebesa_form" model="ir.ui.view">
+            <field name="name">hr.employee.gebesa.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet" position="before">
+                    <header>
+                        <button name="send_id" string="Employee Change Consecutive" type="object"
+                        groups="rh_gebesa.group_inactivate_employee_consecutive"/>
+                        <button name="company_change_geb" string="Employee Change Company" type="object"
+                        groups="rh_gebesa.group_inactivate_employee_consecutive"/>
+                    </header>
+                </xpath>
+                <!--
+                <header>
+                    <button name="send_id" string="Employye Change Consecutive" type="object"
+                        groups="rh_gebesa.group_inactivate_employee_consecutive"/>
+                </header> -->
+                <xpath expr="//notebook/page/group/group/field[@name='resource_calendar_id']" position="before">
+                    <field name="entry_date_vacation"/>
+                </xpath>
+
+                <xpath expr="//notebook/page/group/group/field[@name='tz']" position="after">
+                    <field name="resource_calendar_ids"/>
+                </xpath>
+
+                <xpath expr="//notebook/page/group/group/field[@name='address_id']" position="before">
+                    <field name="consecutive_id" readonly="True"/>
+                    <field name="sindicalizado"/>
+                    <field name="reingreso"/>
+                </xpath>
+                <xpath expr="//notebook/page/group/group/field[@name='address_home_id']" position="after">
+                    <field name="rfc" required="True"/>
+                    <field name="curp"/>
+                    <field name="imss"/>
+                    <field name="umf"/>
+                    <field name="escolaridad"/>
+                    <field name="spouse"/>
+                    <field name="father"/>
+                    <field name="mother"/>
+                    <field name="beneficio_1" required="True"/>
+                    <field name="beneficio_2"/>
+                    <field name="porcentaje_1" required="True"/>
+                    <field name="porcentaje_2"/>
+                    <!--<field name="porcentaje_2" widget="percentpie"/> -->
+                </xpath>
+                <xpath expr="//notebook/page/group/group/field[@name='birthday']" position="after">
+                    <field name="age"/>
+                    <field name="antiguedad_vivienda"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="hr_employee_gebesa_tree" model="ir.ui.view">
+            <field name="name">hr.employee.gebesa.tree</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='name']" position="after">
+                    <field name="consecutive_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

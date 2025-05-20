@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='payroll_import_tree'>
+            <field name='name'>payroll.import.tree</field>
+            <field name='model'>payroll.import</field>
+            <field name='arch' type='xml'>
+                <tree string='Payroll import'>
+                    <field name='name'/>
+                    <field name='date'/>
+                    <field name='journal_id'/>
+                    <field name='move_id'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='payroll_import_form'>
+            <field name='name'>payroll.import.form</field>
+            <field name='model'>payroll.import</field>
+            <field name='arch' type='xml'>
+                <form string='Payroll'>
+                    <header>
+                        <button name="prueba_conexion_microsip" states="draft" string="PRUEBAS" type="object"/>
+                        <button name="action_done" states="draft" string="Confirm" type="object" class="oe_highligth"/>
+                        <field name="state" widget="statusbar" statusbar_colors='{"done":"blue"}'/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name"/>
+                            </div>
+                            <h1>
+                                <field name='name' default_focus="1" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name='date' required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name='company_id' required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name='debit'/>
+                            </group>
+                            <group>
+                                <field name='journal_id' required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name='move_id' readonly="1"/>
+                                <field name='credit'/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page>
+                                <field name='lines_ids' widget="one2many_list">
+                                    <tree string="lines" editable="bottom">
+                                        <field name='account_id' required="1"/>
+                                        <field name='debit'/>
+                                        <field name='credit'/>
+                                        <field name='description' required="1"/>
+                                        <field name='analytic_account_id' required="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+	                    <field name="message_follower_ids" widget="mail_followers"/>
+	                    <field name="message_ids" widget="mail_thread"/>
+	                </div>
+                </form>
+            </field>
+        </record>
+
+        <record id='action_payroll_import' model='ir.actions.act_window'>
+            <field name='name'>Payroll import</field>
+            <field name='res_model'>payroll.import</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="payroll_import_menu" name="Payroll import" parent="account.menu_finance_payables" action="action_payroll_import"/>
+    </data>
+</odoo>

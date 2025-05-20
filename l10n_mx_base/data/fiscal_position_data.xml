@@ -1,0 +1,135 @@
+<?xml version="1.0" ?>
+<odoo noupdate="1">
+    <record id="account_fiscal_position_601_fr" model="account.fiscal.position">
+        <field name="name">601 - General de Ley Personas Morales</field>
+    </record>
+    <record id="account_fiscal_position_603_fr" model="account.fiscal.position">
+        <field name="name">603 - Personas Morales con Fines no Lucrativos</field>
+    </record>
+    <record id="account_fiscal_position_605_fr" model="account.fiscal.position">
+        <field name="name">605 - Sueldos y Salarios e Ingresos Asimilados a Salarios</field>
+    </record>
+    <record id="account_fiscal_position_606_fr" model="account.fiscal.position">
+        <field name="name">606 - Arrendamiento</field>
+    </record>
+    <record id="account_fiscal_position_607_fr" model="account.fiscal.position">
+        <field name="name">607 - Régimen de Enajenación o Adquisición de Bienes</field>
+    </record>
+    <record id="account_fiscal_position_608_fr" model="account.fiscal.position">
+        <field name="name">608 - Demás ingresos</field>
+    </record>
+    <record id="account_fiscal_position_609_fr" model="account.fiscal.position">
+        <field name="name">609 - Consolidación</field>
+    </record>
+    <record id="account_fiscal_position_610_fr" model="account.fiscal.position">
+        <field name="name">610 - Residentes en el Extranjero sin Establecimiento Permanente en México</field>
+    </record>
+    <record id="account_fiscal_position_611_fr" model="account.fiscal.position">
+        <field name="name">611 - Ingresos por Dividendos (socios y accionistas)</field>
+    </record>
+    <record id="account_fiscal_position_612_fr" model="account.fiscal.position">
+        <field name="name">612 - Personas Físicas con Actividades Empresariales y Profesionales</field>
+    </record>
+    <record id="account_fiscal_position_614_fr" model="account.fiscal.position">
+        <field name="name">614 - Ingresos por intereses</field>
+    </record>
+    <record id="account_fiscal_position_615_fr" model="account.fiscal.position">
+        <field name="name">615 - Régimen de los ingresos por obtención de premios</field>
+    </record>
+    <record id="account_fiscal_position_616_fr" model="account.fiscal.position">
+        <field name="name">616 - Sin obligaciones fiscales</field>
+    </record>
+    <record id="account_fiscal_position_620_fr" model="account.fiscal.position">
+        <field name="name">620 - Sociedades Cooperativas de Producción que optan por diferir sus ingresos</field>
+    </record>
+    <record id="account_fiscal_position_621_fr" model="account.fiscal.position">
+        <field name="name">621 - Incorporación Fiscal</field>
+    </record>
+    <record id="account_fiscal_position_622_fr" model="account.fiscal.position">
+        <field name="name">622 - Actividades Agrícolas, Ganaderas, Silvícolas y Pesqueras</field>
+    </record>
+    <record id="account_fiscal_position_623_fr" model="account.fiscal.position">
+        <field name="name">623 - Opcional para Grupos de Sociedades</field>
+    </record>
+    <record id="account_fiscal_position_624_fr" model="account.fiscal.position">
+        <field name="name">624 - Coordinados</field>
+    </record>
+    <record id="account_fiscal_position_628_fr" model="account.fiscal.position">
+        <field name="name">628 - Hidrocarburos</field>
+    </record>
+    <record id="account_fiscal_position_629_fr" model="account.fiscal.position">
+        <field name="name">629 - De los Regímenes Fiscales Preferentes y de las Empresas Multinacionales</field>
+    </record>
+    <record id="account_fiscal_position_630_fr" model="account.fiscal.position">
+        <field name="name">630 - Enajenación de acciones en bolsa de valores</field>
+    </record>
+
+    <!-- Uso CFDI -->
+    <record id="fiscal_position_G01_cfdi" model="account.fiscal.position">
+        <field name="name">G01 - Adquisición de mercancias</field>
+    </record>
+    <record id="fiscal_position_G02_cfdi" model="account.fiscal.position">
+        <field name="name">G02 - Devoluciones, descuentos o bonificaciones</field>
+    </record>
+    <record id="fiscal_position_G03_cfdi" model="account.fiscal.position">
+        <field name="name">G03 - Gastos en general</field>
+    </record>
+    <record id="fiscal_position_I01_cfdi" model="account.fiscal.position">
+        <field name="name">I01 - Construcciones</field>
+    </record>
+    <record id="fiscal_position_I02_cfdi" model="account.fiscal.position">
+        <field name="name">I02 - Mobilario y equipo de oficina por inversiones</field>
+    </record>
+    <record id="fiscal_position_I03_cfdi" model="account.fiscal.position">
+        <field name="name">I03 - Equipo de transporte</field>
+    </record>
+    <record id="fiscal_position_I04_cfdi" model="account.fiscal.position">
+        <field name="name">I04 - Equipo de computo y accesorios</field>
+    </record>
+    <record id="fiscal_position_I05_cfdi" model="account.fiscal.position">
+        <field name="name">I05 - Dados, troqueles, moldes, matrices y herramental</field>
+    </record>
+    <record id="fiscal_position_I06_cfdi" model="account.fiscal.position">
+        <field name="name">I06 - Comunicaciones telefónicas</field>
+    </record>
+    <record id="fiscal_position_I07_cfdi" model="account.fiscal.position">
+        <field name="name">I07 - Comunicaciones satelitales</field>
+    </record>
+    <record id="fiscal_position_I08_cfdi" model="account.fiscal.position">
+        <field name="name">I08 - Otra maquinaria y equipo</field>
+    </record>
+    <record id="fiscal_position_D01_cfdi" model="account.fiscal.position">
+        <field name="name">D01 - Honorarios médicos, dentales y gastos hospitalarios.</field>
+    </record>
+    <record id="fiscal_position_D02_cfdi" model="account.fiscal.position">
+        <field name="name">D02 - Gastos médicos por incapacidad o discapacidad</field>
+    </record>
+    <record id="fiscal_position_D03_cfdi" model="account.fiscal.position">
+        <field name="name">D03 - Gastos funerales.</field>
+    </record>
+    <record id="fiscal_position_D04_cfdi" model="account.fiscal.position">
+        <field name="name">D04 - Donativos.</field>
+    </record>
+    <record id="fiscal_position_D05_cfdi" model="account.fiscal.position">
+        <field name="name">D05 - Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación).</field>
+    </record>
+    <record id="fiscal_position_D06_cfdi" model="account.fiscal.position">
+        <field name="name">D06 - Aportaciones voluntarias al SAR.</field>
+    </record>
+    <record id="fiscal_position_D07_cfdi" model="account.fiscal.position">
+        <field name="name">D07 - Primas por seguros de gastos médicos.</field>
+    </record>
+    <record id="fiscal_position_D08_cfdi" model="account.fiscal.position">
+        <field name="name">D08 - Gastos de transportación escolar obligatoria.</field>
+    </record>
+    <record id="fiscal_position_D09_cfdi" model="account.fiscal.position">
+        <field name="name">D09 - Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones.</field>
+    </record>
+    <record id="fiscal_position_D10_cfdi" model="account.fiscal.position">
+        <field name="name">D10 - Pagos por servicios educativos (colegiaturas)</field>
+    </record>
+    <record id="fiscal_position_P01_cfdi" model="account.fiscal.position">
+        <field name="name">P01 - Por definir</field>
+    </record>
+
+</odoo>

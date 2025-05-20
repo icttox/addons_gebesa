@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='freight_waybill_form'>
+        	<field name='name'>freight.waybill.form</field>
+        	<field name='model'>tms.waybill</field>
+        	<field name='inherit_id' ref="tms.view_tms_waybill_form"/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//form/sheet/group/field[@name='currency_id']" position="after">
+                    <field name="order_id" domain="[('partner_id', '=', partner_id),('state', '=', 'done')]"/>
+                    <field name="evidencia"/>
+                </xpath>
+                <xpath expr="//form/header/button[@name='action_confirm']" position="after">
+                    <button name="action_waybill_send" type="object"
+                                string="Send email" groups="tms.group_traffic,tms.group_expenses"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[8]/field[@name='notes']" position="after">
+                    <group>
+                        <field name="date_cancell" readonly="1"/>
+                        <field name="motivo_cancel"/>
+                    </group>
+                </xpath>
+        	</field>
+        </record>
+
+        <record model="ir.ui.view" id="freight_waybill_geb_tree_view">
+            <field name="name">freight.waybill.geb.tree.view</field>
+            <field name="model">tms.waybill</field>
+            <field name="inherit_id" ref="tms.view_tms_waybill_tree"/>
+            <field name="arch" type="xml">
+                <field name="travel_ids" position="after">
+                    <field name="unit"/>
+                    <field name="trailer1"/>
+                    <field name="dolly"/>
+                    <field name="trailer2"/>
+                    <field name="route"/>
+                    <field name="driver"/>
+                </field>
+                <field name="state" position="before">
+                    <field name="evidencia"/>
+                    <field name="invoice_paid"/>
+                    <field name="invoice_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

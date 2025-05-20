@@ -1,0 +1,5191 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* flete_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20181126\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-21 20:42+0000\n"
+"PO-Revision-Date: 2021-05-21 15:50-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#. module: flete_gebesa
+#: model:mail.template,body_html:flete_gebesa.email_template_waybill
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"    <p>Hello ${object.partner_id.name},</p>\n"
+"    <p>A new Waybill is available for you: </p>\n"
+"    \n"
+"    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong>REFERENCES</strong><br />\n"
+"       &nbsp;&nbsp;Waybill number: <strong>${object.name}</strong><br />\n"
+"       &nbsp;&nbsp;Waybill total: <strong>${object.amount_total} ${object.currency_id.name}</strong><br />\n"
+"       &nbsp;&nbsp;Waybill date: ${object.date_order}<br />\n"
+"       % if object.user_id:\n"
+"       &nbsp;&nbsp;Your contact: <a href=\"mailto:${object.user_id.email or ''}?subject=Waybill%20${object.name}\">${object.user_id.name}</a>\n"
+"       % endif\n"
+"    </p>  \n"
+"    \n"
+"    <br/>\n"
+"    <p>If you have any question, do not hesitate to contact us.</p>\n"
+"    <p>Thank you for choosing ${object.company_id.name or 'us'}!</p>\n"
+"    <br/>\n"
+"    <br/>\n"
+"    <br/>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"            <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"            ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}\n"
+"        </span>\n"
+"        % if object.company_id.phone:\n"
+"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                Phone:&nbsp; ${object.company_id.phone}\n"
+"            </div>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            <div>\n"
+"                Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"            </div>\n"
+"        %endif\n"
+"        <p></p>\n"
+"    </div>\n"
+"</div>\n"
+"            "
+msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"    <p style=\"font-size:13px;margin-block-start:0px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">Hello ${object.partner_id.name},</p>\n"
+"    <p style=\"font-size:13px;margin-block-start:0px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">A new Waybill is available for you: </p>\n"
+"    \n"
+"    <p style=\"font-size:13px;margin-block-start:0px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong style=\"font-weight:bold;\">REFERENCES</strong><br>\n"
+"       &nbsp;&nbsp;Waybill number: <strong style=\"font-weight:bold;\">${object.name}</strong><br>\n"
+"       &nbsp;&nbsp;Waybill total: <strong style=\"font-weight:bold;\">${object.amount_total} ${object.currency_id.name}</strong><br>\n"
+"       &nbsp;&nbsp;Waybill date: ${object.date_order}<br>\n"
+"       % if object.user_id:\n"
+"       &nbsp;&nbsp;Your contact: <a href=\"mailto:${object.user_id.email or ''}?subject=Waybill%20${object.name}\" style=\"text-decoration-color:initial;text-decoration-style:initial;text-decoration-line:none;color:rgb(33, 183, 153);background-color:transparent;\">${object.user_id.name}</a>\n"
+"       % endif\n"
+"    </p>  \n"
+"    \n"
+"    <br>\n"
+"    <p style=\"font-size:13px;margin-block-start:0px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">If you have any question, do not hesitate to contact us.</p>\n"
+"    <p style=\"font-size:13px;margin-block-start:0px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">Thank you for choosing ${object.company_id.name or 'us'}!</p>\n"
+"    <br>\n"
+"    <br>\n"
+"    <br>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"font-size:16px;color:inherit;line-height:1.1;font-weight:400;font-family:inherit;margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"            <strong style=\"font-weight:bold;text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"            ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}\n"
+"        </span>\n"
+"        % if object.company_id.phone:\n"
+"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                Phone:&nbsp; ${object.company_id.phone}\n"
+"            </div>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            <div>\n"
+"                Web :&nbsp;<a href=\"${object.company_id.website}\" style=\"text-decoration-color:initial;text-decoration-style:initial;text-decoration-line:none;color:rgb(33, 183, 153);background-color:transparent;\">${object.company_id.website}</a>\n"
+"            </div>\n"
+"        %endif\n"
+"        <p style=\"font-size:13px;margin-block-start:0px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\"></p>\n"
+"    </div>\n"
+"</div>\n"
+"            "
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "$ 0.00"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:mail.template,subject:flete_gebesa.email_template_waybill
+msgid "${object.company_id.name} Waybill (Ref ${object.name or 'n/a'})"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid ""
+"1. Al momento de salir con su remolque a ruta deberá revisar que lleve los candados y/o sellos y asegurarse que la mercancía vaya bien sujetada.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        2. Están prohibidas en esta ruta todas las paradas, si fuese necesario realizar alguna para cumplir con bitácora de horas de servicio debe dar aviso al departamento de monitoreo, así mismo deberán realizarse en lugares que sean seguros (casetas, gasolineras, OXXO, 7 ELEVEN), evitando paradas en huachicoleras, cachimbas, restaurancitos y domicilios personales (solicitar autorización), etc.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        3. Si existe algún problema mecánico o bloqueo de alguna ruta, deberá llamar a los teléfonos de monitoreo, mantenimiento, tráfico, según corresponda.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        4. Queda estrictamente <strong>PROHIBIDO</strong> el acceso a las unidades a personas ajenas a la empresa.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        5. Para solicitar anticipo en viaje, es necesario pasar gastos antes de las 5:00 pm de lunes a viernes, de lo contrario ya no se hará transferencia, hasta el día hábil siguiente.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        6. <strong style=\"font-size:18pt;\">NO SE HARÁN DEPOSITOS EN FIN DE SEMANA</strong>\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>Contactos Galbo Transportes:</strong> \n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>Monitoreo 24 hrs Cel.- 8712515192 - 871 736 2062 </strong>\n"
+"                        <br/>\n"
+"                        <strong>Tráfico Admon: 8717830780</strong>\n"
+"                        <br/>\n"
+"                        <strong>Tráfico Operativo: 8711052794 – 8718869357</strong>\n"
+"                        <br/>\n"
+"                        <strong>Atención a fallas mecánicas:</strong>\n"
+"                        <br/>\n"
+"                        <strong>Coordinador Taller: 8717362061</strong> \n"
+"                        <br/>\n"
+"                        <br/> \n"
+"                        <strong>EL DETENERSE EN LUGARES PROHIBIDOS AFECTARÁ SU LIQUIDACIÓN (Amerita sanción)</strong> \n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>RENDIMIENTOS AUTORIZADOS DE COMBUSTIBLE PARA ESA RUTA, PESO DE CARGA, TRACTO Y REMOLQUE ES:</strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "1.- Sist. de Aire"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "1.1.- Sist. de Aire"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tires,position:0
+msgid "10"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "10.- Sist. de Emisiones"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tires,position:0
+msgid "11"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "11.- Sist. de Dirección"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tires,position:0
+msgid "12"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "12.- Llantas"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "13.- Sist. Chasis"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "14.- Carrocería"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "15.- Sist. de Inyección"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "2.- Sist. de Enfriamiento"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "2.1.- Sist. de Frenos"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:mrp.shipment,type_route:0
+msgid "3 Tons"
+msgstr "3 Toneladas"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_route__three_tons
+msgid "3 Tons: "
+msgstr "3 Toneladas: "
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "3.- Sist. Eléctrico"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "3.1.- Sist. de Suspensión"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,categories_trucks:0
+msgid "4 Toneladas"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "4.- Rep. Motor"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "4.1.- Sist. Eléctrico"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,type_box:0
+msgid "48 Ft Dry Box"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "5.- Transmisiones y Diferencias"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "5.1.- Chasis"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,type_box:0
+msgid "53 Ft Dry Box"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "6.- Sist. de Enfriamiento"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "6.1.- Llantas"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "7.- Sist. de Frenos"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "8.- Sist. Embragues"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "9.- Tren Motriz"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<b>COORDINADOR OPERATIVO</b>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                _______________________________\n"
+"                                <br/>\n"
+"                                    Nombre y Firma"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "<b>Fecha de Regreso:</b> ____________________"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/fleet_vehicle_log_fuel.py:184
+#: code:addons/flete_gebesa/models/tms_travel_tollstation.py:241
+#, python-format
+msgid "<b>Fuel Voucher Confirmed.</b>"
+msgstr "<b> Vale de combustible confirmado. </b>"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<b>OPERADOR DE UNIDAD</b>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                _______________________________\n"
+"                                <br/>\n"
+"                                    Nombre y Firma"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "<b>Observaciones:</b>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<br/>\n"
+"                            <br/>\n"
+"                            <strong>\n"
+"                                NOMBRE Y FIRMA\n"
+"                            </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid ""
+"<br/>\n"
+"                            <br/>\n"
+"                            <strong><span>Gastos Del Viaje:  </span></strong>$"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.mantenimiento_correctivo_layout
+msgid ""
+"<br/>\n"
+"                            Fecha:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.travel_instructions_2_layout
+msgid ""
+"<br/>\n"
+"                        _______________________________\n"
+"                        <br/>\n"
+"                        Nombre y Firma Credito y Cobranza"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.travel_instructions_2_layout
+msgid ""
+"<br/>\n"
+"                        _______________________________\n"
+"                        <br/>\n"
+"                        Nombre y Firma Depto. Embarques"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.travel_instructions_2_layout
+msgid ""
+"<br/>\n"
+"                        _______________________________\n"
+"                        <br/>\n"
+"                        Nombre y Firma del Operador"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid ""
+"<br/><br/>\n"
+"                            <strong><span>Gastos Extras:</span></strong>\n"
+"                            <br/><br/>\n"
+"                            <strong><span>G. Indirectos:</span></strong>\n"
+"                            <br/><br/>\n"
+"                            <strong><span>Total:</span></strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "<br/><br/>Casetas"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "<br/><br/>Comidas"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "<br/><br/>Conceptos"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "<br/><br/>Diesel"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "<br/><br/>Federales y Transitos"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "<br/><br/>Maniobras, Pensiones, Guias, Taxis, Cocas"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "<br/><br/>Otros"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "<br/><br/>Permisos"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "<br/><br/>Reparaciones y Refacciones"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "<br/><br/>Talacha"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "<br/><br/>Totales"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "<br/>TOTAL:"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/waybill.py:143
+#, python-format
+msgid "<h5><strong>Cancel to Draft</strong></h5>"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:476
+#, python-format
+msgid "<h5><strong>Cancelled</strong></h5>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid ""
+"<span style=\"font-size:8pt;\"><strong>PAGARE   BUENO POR $</strong>__________________.  Por este pagare me(nos) obligo(amos) incondicionalmente a pagar a la orden de <strong>Transportes Galbo del Norte SA de CV</strong> en la ciudad de ____________________________________ o en cualquiera que se me(nos) requiera de pago por la cantidad de $________ (___________________________)  el día ______________ del mes de _____________de________ quedando convenido que en caso de falta de pago se causará un interés moratorio de ______% mensual hasta su total liquidación.</span><br/>\n"
+"                            <span>Nombre:_________________________________________________________       Domicilio:_________________________________________________________      Lugar y Fecha:________________________________________________</span><br/>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<span> (pesos </span>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<span> la cantidad de: $ </span>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<span>/100 M.N.), por concepto de gastos indirectos, segunitinerario arriba mencionado, no adeudándome cantidad alguno por este concepto.</span>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<span>Chofer</span>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<span>Depositos Durante El Viaje</span>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<span>Fletera</span>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<span>Recibi de </span>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>\n"
+"                                        UNIDAD DISPONIBLE\n"
+"                                    </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>\n"
+"                                    DIAGNOSTICADOR\n"
+"                                </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>\n"
+"                                    DIAGNÓSTICO DEL MECÁNICO\n"
+"                                </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>\n"
+"                                CAJA\n"
+"                            </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>\n"
+"                                CAMION\n"
+"                            </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>\n"
+"                                DATOS GENERALES\n"
+"                            </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>\n"
+"                                DATOS INGRESO\n"
+"                            </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>\n"
+"                                FALLA REPORTADA POR EL OPERADOR\n"
+"                            </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>\n"
+"                                Observaciones\n"
+"                            </strong>\n"
+"                            <br/>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>\n"
+"                                REPARAR\n"
+"                            </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>\n"
+"                            ACCION\n"
+"                        </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>\n"
+"                            DETALLES DE LA REPARACIÓN Y/O SERVICIO\n"
+"                        </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong><span>Casetas: </span></strong>$"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong><span>Margen De Utilidad: %</span></strong><br/><br/>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong><span>Observaciones</span></strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong><span>Tabulador: $</span></strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Caja: </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Camion: </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "<strong>Chofer</strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Destino: </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Dias Totales:</strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_stock_picking_flete_gebesa
+msgid "<strong>Driver</strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Fecha: </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_stock_picking_flete_gebesa
+msgid "<strong>Full Tank</strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice.py:129
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice_waybills.py:147
+#, python-format
+msgid "<strong>Invoice of:</strong> %s </br>"
+msgstr "<strong> Factura de: </strong> %s </br>"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_stock_picking_flete_gebesa
+msgid "<strong>Kilometer</strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_stock_picking_flete_gebesa
+msgid "<strong>Kilometro Ruta</strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Kms X Litro: </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Kms: </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Llegó: </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Margen Utilidad: </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_stock_picking_flete_gebesa
+msgid "<strong>Núm Viaje</strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid ""
+"<strong>PRIMERA.-</strong> Para los efectos del presente contrato de transporte se denomina \"Porteador\" al transportista y \"Remitente\" al usuario que contrate el servicio.\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>SEGUNDA.-</strong> El \"Remitente\" es responsable de que la información proporcionada al \"Porteador\" sea veráz y que la documentación que entregue para efectos del transporte sea la correcta.\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>TERCERA.-</strong> El \"Remitente\" debe declarar al \"Porteador\" el tipo de mercancía o efectos de que se trate, peso, medidas y/o número de la carga que entrega para su transporte y en su caso, el valor de la misma. La carga que se entregue a granel será pesada por el \"Porteador\" en el primer punto donde haya báscula apropiada o en su defecto, aforada en metros cúbicos con la conformidad del \"Remitente\".\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>CUARTA.-</strong> Para efectos del transporte, el \"Remitente\" deberá entregar al \"Porteador\" los documentos que las leyes y reglamentos que exijan para llevar a cabo el servicio, en caso de no cumplirse con estos requisitos el \"Porteador\" está obligado a rehusar el transporte de las mercancías.\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>QUINTA.-</strong> Si por sospecha de falsedad en la declaración del contenido de un bulto el \"Porteador\" deseare proceder a su reconocimiento, podrá hacerlo ante testigos y con asistencia del \"Remitente\" o del consignatario. Si este último no concurriere, se solicitará la presencia de un inspector de la Secretaría de Comunicaciones y Transportes y se levantará el acta correspondiente. El \"Porteador\" tendrá en todo caso la obligación de dejar los bultos en el estado en que se encontraban antes del reconocimiento.\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>SEXTA.-</strong>  El \"Porteador\" deberá recoger y entregar la carga precisamente en los domicilios que señale el \"Remitente\", ajustándose a los términos y condiciones convenidos. El \"Porteador\" solo está obligado a llevar la carga al domicilio del consignatario para su entrega una sola vez. Si ésta no fuere recibida, se dejará aviso de que la mercancía queda a disposición del interesado en las bodegas que indique el \"Porteador\".\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>SEPTIMA.-</strong> Si la carga no fuere retirada en los 30 días siguientes a aquel en que hubiere sido puesta a disposición del consignatario, el \"Porteador\" podrá solicitar la venta en pública subasta con arreglo a lo que dispone el Código de Comercio.\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>OCTAVA.-</strong> El \"Porteador\" y el \"Remitente\" negociarán libremente el precio del servicio, tomando en cuenta su tipo, característicamente de los embarques, volumen, regularidad, clase de carga y sistema de pago.\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>NOVENA.-</strong> Si el \"Remitente\" desea que el \"Porteador\" asuma la responsabilidad por el valor de las mercancías o efectos que él declare y que cubra toda clase de riesgos, inclusive los derivados de caso fortuito o de fuerza mayor, las partes deberán convenir un cargo adicional, equivalente al valor de la prima del seguro que se contrate, el cual se deberá expresar en la carta de porte.\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>DECIMA.-</strong> Cuando el importe del flete no incluya el cargo adicional, la responsabilidad del \"Porteador\" queda expresamente limitada a la cantidad equivalente a 15 días del salario mínimo vigente en el Distrito Federal por tonelada o cuando se trate de embarques cuyo peso sea mayor a los 200Kg. Pero menor a los 1000Kg y a 4 días de salario mínimo por remesa cuando se trate de embarques con peso hasta de 200Kg.\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>DECIMA PRIMERA.-</strong> El precio del transporte deberá pagarse en origen, salvo convenio entre las partes de pago en destino. Cuando el transporte se hubiera concertado \"Flete por Cobrar\", la entrega de las mercancías o efectos se hará contra el pago del flete y el \"Porteador\" tendrá derecho a retenerlos mientras no se le cubra el precio convenido.\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>DECIMA SEGUNDA.-</strong> Si al momento de la entrega resultare algún faltante o avería, el consignatario deberá hacerla constar en ese acto en la carta de porte y formular su reclamación por escrito al \"Porteador\" dentro de las 24 Hrs. Siguientes.\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>DECIMA TERCERA.-</strong> El \"Porteador\" queda eximido de la obligación de recibir mercancías o efectos para su transporte, en los siguientes casos:<br/> <strong>a)</strong> Cuando se trate de carga que por su naturaleza, peso, volumen, embalaje defectuoso o cualquier otra circunstancia no pueda transportarse sin destruirse o sin causar daño a los demás artículos o al material rodante, salvo que la empresa de que se trate tenga el equipo adecuado.\n"
+"                            <br/>\n"
+"                            <strong>b)</strong> Las mercancías cuyo transporte haya sido prohibido por disposiciones legales o reglamentarias. Cuando tales disposiciones no prohíban precisamente el transporte de determinadas mercancías, pero si ordenen la presentación de ciertos documentos para que puedan ser transportadas, el \"Remitente\" estará obligado a entregar al \"Porteador\" los documentos correspondientes.\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>DECIMA CUARTA.-</strong> Los casos no previstos en las presentes condiciones y las quejas derivadas de su aplicación se someterán por la vía administrativa a la Secretaría de Comunicaciones y Transportes."
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+msgid ""
+"<strong>PRIMERA.-</strong> Para los efectos del presente contrato de transporte se denomina \"Porteador\" al transportista y \"Remitente\" al usuario que contrate el servicio.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>SEGUNDA.-</strong> El \"Remitente\" es responsable de que la información proporcionada al \"Porteador\" sea veráz y que la documentación que entregue para efectos del transporte sea la correcta.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>TERCERA.-</strong> El \"Remitente\" debe declarar al \"Porteador\" el tipo de mercancía o efectos de que se trate, peso, medidas y/o número de la carga que entrega para su transporte y en su caso, el valor de la misma. La carga que se entregue a granel será pesada por el \"Porteador\" en el primer punto donde haya báscula apropiada o en su defecto, aforada en metros cúbicos con la conformidad del \"Remitente\".\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>CUARTA.-</strong> Para efectos del transporte, el \"Remitente\" deberá entregar al \"Porteador\" los documentos que las leyes y reglamentos que exijan para llevar a cabo el servicio, en caso de no cumplirse con estos requisitos el \"Porteador\" está obligado a rehusar el transporte de las mercancías.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>QUINTA.-</strong> Si por sospecha de falsedad en la declaración del contenido de un bulto el \"Porteador\" deseare proceder a su reconocimiento, podrá hacerlo ante testigos y con asistencia del \"Remitente\" o del consignatario. Si este último no concurriere, se solicitará la presencia de un inspector de la Secretaría de Comunicaciones y Transportes y se levantará el acta correspondiente. El \"Porteador\" tendrá en todo caso la obligación de dejar los bultos en el estado en que se encontraban antes del reconocimiento.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>SEXTA.-</strong>  El \"Porteador\" deberá recoger y entregar la carga precisamente en los domicilios que señale el \"Remitente\", ajustándose a los términos y condiciones convenidos. El \"Porteador\" solo está obligado a llevar la carga al domicilio del consignatario para su entrega una sola vez. Si ésta no fuere recibida, se dejará aviso de que la mercancía queda a disposición del interesado en las bodegas que indique el \"Porteador\".\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>SEPTIMA.-</strong> Si la carga no fuere retirada en los 30 días siguientes a aquel en que hubiere sido puesta a disposición del consignatario, el \"Porteador\" podrá solicitar la venta en pública subasta con arreglo a lo que dispone el Código de Comercio.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>OCTAVA.-</strong> El \"Porteador\" y el \"Remitente\" negociarán libremente el precio del servicio, tomando en cuenta su tipo, característicamente de los embarques, volumen, regularidad, clase de carga y sistema de pago.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>NOVENA.-</strong> Si el \"Remitente\" desea que el \"Porteador\" asuma la responsabilidad por el valor de las mercancías o efectos que él declare y que cubra toda clase de riesgos, inclusive los derivados de caso fortuito o de fuerza mayor, las partes deberán convenir un cargo adicional, equivalente al valor de la prima del seguro que se contrate, el cual se deberá expresar en la carta de porte.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>DECIMA.-</strong> Cuando el importe del flete no incluya el cargo adicional, la responsabilidad del \"Porteador\" queda expresamente limitada a la cantidad equivalente a 15 días del salario mínimo vigente en el Distrito Federal por tonelada o cuando se trate de embarques cuyo peso sea mayor a los 200Kg. Pero menor a los 1000Kg y a 4 días de salario mínimo por remesa cuando se trate de embarques con peso hasta de 200Kg.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>DECIMA PRIMERA.-</strong> El precio del transporte deberá pagarse en origen, salvo convenio entre las partes de pago en destino. Cuando el transporte se hubiera concertado \"Flete por Cobrar\", la entrega de las mercancías o efectos se hará contra el pago del flete y el \"Porteador\" tendrá derecho a retenerlos mientras no se le cubra el precio convenido.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>DECIMA SEGUNDA.-</strong> Si al momento de la entrega resultare algún faltante o avería, el consignatario deberá hacerla constar en ese acto en la carta de porte y formular su reclamación por escrito al \"Porteador\" dentro de las 24 Hrs. Siguientes.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>DECIMA TERCERA.-</strong> El \"Porteador\" queda eximido de la obligación de recibir mercancías o efectos para su transporte, en los siguientes casos:<br/> <strong>a)</strong> Cuando se trate de carga que por su naturaleza, peso, volumen, embalaje defectuoso o cualquier otra circunstancia no pueda transportarse sin destruirse o sin causar daño a los demás artículos o al material rodante, salvo que la empresa de que se trate tenga el equipo adecuado.\n"
+"                        <br/>\n"
+"                        <strong>b)</strong> Las mercancías cuyo transporte haya sido prohibido por disposiciones legales o reglamentarias. Cuando tales disposiciones no prohíban precisamente el transporte de determinadas mercancías, pero si ordenen la presentación de ciertos documentos para que puedan ser transportadas, el \"Remitente\" estará obligado a entregar al \"Porteador\" los documentos correspondientes.\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <strong>DECIMA CUARTA.-</strong> Los casos no previstos en las presentes condiciones y las quejas derivadas de su aplicación se someterán por la vía administrativa a la Secretaría de Comunicaciones y Transportes."
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Precio Por Litro: </strong>$"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Precio Por Litro: </strong>$ 0.00"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"<strong>RESPONSABLE DE REPARACION</strong>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                _______________________________\n"
+"                                    Nombre y Firma"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "<strong>Recursos Humanos</strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_stock_picking_flete_gebesa
+msgid "<strong>Route</strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Salió: </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_travel_tollstation.py:206
+#, python-format
+msgid "<strong>Tollstation approved.</strong>"
+msgstr "<strong>Caseta aprovada.</strong>"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_travel_tollstation.py:232
+#, python-format
+msgid "<strong>Tollstation drafted.</strong>"
+msgstr "<strong>Caseta en borrador.</strong>"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "<strong>Total Lts: </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_stock_picking_flete_gebesa
+msgid "<strong>Vehicle</strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "ACEPTA(MOS)"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__account_id
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_move_line__acc_number
+msgid "Account Number"
+msgstr "Número de cuenta"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__aceleraciones_max
+msgid "Aceleraciones Max"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_needaction
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_needaction
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_needaction
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_needaction
+msgid "Action Needed"
+msgstr "Accion necesaria"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__activity_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__activity_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__activity_state
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__activity_state
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_product_template
+msgid "Add Multiple Image in Product"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__address
+msgid "Address"
+msgstr "Dirección"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_stop_form
+msgid "Address -"
+msgstr "Address-"
+
+#. module: flete_gebesa
+#: model:res.groups,name:flete_gebesa.group_cancel_waybill_gebesa
+msgid "Administrador Cancelar Carta Porte "
+msgstr ""
+
+#. module: flete_gebesa
+#: model:res.groups,name:flete_gebesa.group_validate_waybill_gebesa
+msgid "Administrador validar-Aprobar / Carta Porte"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__tollstation_ids
+msgid "Advances"
+msgstr "Anticipos"
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,suspension:0
+msgid "Air"
+msgstr "Aire"
+
+#. module: flete_gebesa
+#: selection:tires,radi:0
+msgid "All Position"
+msgstr "Toda posición"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice_waybills.py:111
+#, python-format
+msgid "All trips must have the same truck."
+msgstr "Todos los viajes deben tener el mismo camión."
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Almacen"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__amount
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__amount
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_event__amount
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__amount
+msgid "Amount"
+msgstr "Monto"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:82
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__amount_diff_liters_gps
+#, python-format
+msgid "Amount Difference (Voucher - Estimated GPS)"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:58
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__amount_diff_liters
+#, python-format
+msgid "Amount Difference (Voucher - Estimated Scanner)"
+msgstr "Monto Diferencia (Vales - Estimado Escáner)"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:70
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__amount_estimated_liters_gps
+#, python-format
+msgid "Amount Liters Estimated GPS"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:46
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__amount_estimated_liters_scanner
+#, python-format
+msgid "Amount Liters Estimated Scanner"
+msgstr "Monto Litros Estimados Escáner"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_tree
+msgid "Amount Total"
+msgstr "Monto total"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__account_analytic_id
+msgid "Analytic Account"
+msgstr "Cuenta Analitica"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_operating_unit__analytic_account_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes__account_analytic_id
+msgid "Analytic account"
+msgstr "Centro de costos"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_tree
+msgid "Approve"
+msgstr "Aprobar"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_validate
+msgid "Approve, authorize and confirm the selected records"
+msgstr "Aprobar, autorizar y confirmar los registros seleccionados"
+
+#. module: flete_gebesa
+#: selection:tms.travel.tollstation,state:0
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: flete_gebesa
+#: model:ir.actions.act_window,name:flete_gebesa.action_account_move_line_export_bank
+#: model:ir.ui.menu,name:flete_gebesa.account_move_line_export_bank_menu
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.account_move_line_export_bank_tree
+msgid "Apuntes Contebles"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__arrival_address_id
+msgid "Arrival Address"
+msgstr "Dirección de Destino"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel__arrival_address_id
+msgid "Arrival address for current Waybill."
+msgstr "Dirección de destino para la carta de porte actual."
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_attachment_count
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__attachment_count
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_attachment_count
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_attachment_count
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_attachment_count
+msgid "Attachment Count"
+msgstr "Archivos adjuntos"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__avg_speed
+msgid "Avg Speed"
+msgstr "Velocidad Promedio"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Avg speed"
+msgstr "Velocidad Promedio"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__axis
+msgid "Axis"
+msgstr "Ejes"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Balance:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "Banco"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes__base
+msgid "Base"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__begin_latitude
+msgid "Begin Latitude"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__begin_longitude
+msgid "Begin Longitude"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Begin latitude"
+msgstr "Latitud Inicial"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Begin longitude"
+msgstr "Longitud Inicial"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "C.P."
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "CAJA"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "CAJA:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "CAMION"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "CAMION:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "CARGA"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "CARTA DE INSTRUCCIONES EN RUTA"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.carta_porte_travel_layout
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+msgid "CARTA PORTE"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "CHOFER:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "CLAUSULAS"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "COBRANZA"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Caja"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Caja:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__calculated_salary
+msgid "Calculated Salary"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Calculo Salarial"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:res.groups,name:flete_gebesa.group_change_status_vehicle
+msgid "Cambiar status de los vehiculos"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Camion:"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle.event,state:0 selection:hr.employee.event,state:0
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.account_export_bank_file_wizard_view
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.real_amount_wizard
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_toll_import_view_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_toll_import_view_gebesa_pase
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_invoice_supplier
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_invoice_waybills
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_validate
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__date_cancell
+msgid "Cancellation date"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tms.travel.tollstation,state:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Cant"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Cantidad"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Cantidad(UdM)"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Carga"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__carril
+msgid "Carril"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Carta Porte"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Carta Porte:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Casetas"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Casetas:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_product_product__category_geb_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__category
+msgid "Categoria"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__categories_trucks
+msgid "Categoria Camión"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Celular:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_mrp_shipment__linea_citys
+msgid "Citys"
+msgstr "Ciudades"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Client Invoice Data"
+msgstr "Datos de Factura de Cliente"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__partner_ids
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Cliente"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Cliente:"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tms.travel.tollstation,state:0
+msgid "Closed"
+msgstr "Cerrado"
+
+#. module: flete_gebesa
+#: selection:product.product,type_tms_expense:0
+msgid "Cocas"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tires.py:14
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__code_tires
+#, python-format
+msgid "Code"
+msgstr "Código"
+
+#. module: flete_gebesa
+#: selection:mrp.shipment,type_route:0
+msgid "Combo"
+msgstr "Combo:"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_route__combo
+msgid "Combo: "
+msgstr "Combo"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__comments_tires
+msgid "Comments"
+msgstr "Comentarios"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__commitment_date
+msgid "Commitment Date"
+msgstr "Fecha compromiso"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__complement
+msgid "Complemento"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/waybill.py:194
+#, python-format
+msgid "Compose Email"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "Concepto"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Conductor"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Conductor:"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle.event,state:0 selection:hr.employee.event,state:0
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_toll_import_view_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_toll_import_view_gebesa_pase
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_tree
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_invoice_supplier
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_invoice_waybills
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: flete_gebesa
+#: selection:tms.travel.tollstation,state:0
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Contactos Ordenados:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__point
+msgid "Coordinate"
+msgstr "Coordenada"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__cost_x_km
+msgid "Cost x KM"
+msgstr "Costo x KM"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__final_total_cost
+msgid "Costo total al liquidar"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__final_total_cost_wo_driver
+msgid "Costo total al liquidar sin chofer"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_travel_tollstation.py:213
+#, python-format
+msgid "Could not cancel Fuel Voucher !"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_travel_tollstation.py:218
+#, python-format
+msgid "Could not cancel Fuel Voucher !This Fuel Voucher is already linked to Travel Expenses record"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:465
+#, python-format
+msgid "Could not cancel this waybill becausethe waybill is already paid."
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/fleet_vehicle_log_fuel.py:160
+#: code:addons/flete_gebesa/models/fleet_vehicle_log_fuel.py:276
+#, python-format
+msgid "Could not reserve all requested products. Please use the 'Mark as Todo' button to handle the reservation manually."
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_travel_tollstation.py:228
+#, python-format
+msgid "Could not set this tollstation to draft because the travel is cancelled."
+msgstr "No se pudo cancelar esta estación de peaje porque la estación de peaje ya está pagada. Por favor cancele el pago primero."
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/waybill.py:140
+#, python-format
+msgid ""
+"Could not set to draft this Waybill !\n"
+"Travel is Cancelled !!!"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.actions.act_window,name:flete_gebesa.action_waybill_wizard_invoice
+msgid "Create Customer Invoice"
+msgstr "Crear Factura de Cliente"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_invoice_waybills
+msgid "Create Customer Invoice from selected Records ?"
+msgstr "¿Desea crear factura de cliente para los registros seleccionados?"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_invoice_waybills
+msgid "Create Invoice"
+msgstr "Crear factura"
+
+#. module: flete_gebesa
+#: model:ir.actions.act_window,name:flete_gebesa.action_tollstation_wizard_invoice
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_invoice_supplier
+msgid "Create Supplier Invoice"
+msgstr "Crear factura de proveedor"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_invoice_supplier
+msgid "Create Supplier Invoice from selected Records ?"
+msgstr "Crear factura de proveedor de los registros seleccionados?"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_export_bank_file_wizard__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_hist_kms_traveled__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard_pase__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_invoice_waybills__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_real_amount__create_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_validate__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_export_bank_file_wizard__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_hist_kms_traveled__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard_pase__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_invoice_waybills__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_real_amount__create_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_validate__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.account_move_line_export_bank_tree
+msgid "Crédito total"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__cubic_mtr
+msgid "Cubic Meters"
+msgstr "Metros Cubicos"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__currency_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle.event,type:0 selection:hr.employee.event,type:0
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__partner_id
+#: selection:tms.event,type:0
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_mrp_shipment__linea_partner
+msgid "Customers"
+msgstr "Clientes"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "DATOS CARTA PORTE"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "DATOS DEL VIAJE:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.carta_porte_travel_layout
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+msgid "DEPARTAMENTO DE TRAFICO"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.travel_instructions_2_layout
+msgid "DEPARTAMENTO EMBARQUES"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "DESTINO:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "DEVOLUCIONES: NO"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_hist_kms_traveled__date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Datos de refacturacion"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__details_payment
+msgid "Datos del Pago"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"Datos del Proveedor Externo\n"
+"                                <br/>\n"
+"                                    Factura       \n"
+"                                Dirección      Telefono\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/waybill.py:110
+#, python-format
+msgid "Debes capturar el motivo de cancelacion de esta Carta Porte"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:199
+#, python-format
+msgid "Debes capturar el motivo de cancelacion de esta Liquidacion"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__departure_address_id
+msgid "Departure Address"
+msgstr "Dirección de salida."
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel__departure_address_id
+msgid "Departure address for current Waybill."
+msgstr "Dirección de salida de la carta porte actual."
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Depositos"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Descripcion"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Descripción"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__name
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__name
+msgid "Description"
+msgstr "Descripción"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Descuento (%)"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Destination:"
+msgstr "Destino:"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_route_form
+msgid "Destino"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Destino:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "Dia"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__dictaminacion
+msgid "Dictaminacion"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "Diesel:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Dif. FLete:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Diferencia Combustible:"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:76
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__diff_liters_gps
+#, python-format
+msgid "Difference (Voucher - Estimated GPS)"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:52
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__diff_liters
+#, python-format
+msgid "Difference (Voucher - Estimated Scanner)"
+msgstr "Diferencia (Vales - Estimado Escáner)"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Direccion"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Dirección Destino:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Dirección Facturación:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Dirección Salida:"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tires,radi:0
+msgid "Direction"
+msgstr "Dirección"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__discount
+msgid "Discount (%)"
+msgstr "Descuento (%)"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "Disel Cargado:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:res.groups,name:flete_gebesa.group_decrease_travel_income
+msgid "Disminuir Ingreso del Viaje"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_export_bank_file_wizard__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_carta_porte_travel__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_informe_gastos__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_mantenimiento_correctivo__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_recibo_operador__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_travel_expense__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_travel_instructions_2__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_hist_kms_traveled__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard_pase__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_invoice_waybills__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_real_amount__display_name
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_validate__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__distance
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__distance
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__distance
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_stop__distance
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Distance"
+msgstr "Distancia"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Distancia"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__dolly
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Dolly"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "Domingo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__download_point
+msgid "Download Point"
+msgstr "Punto de Descarga"
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle.event,state:0 selection:hr.employee.event,state:0
+#: selection:tms.travel.tollstation,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: flete_gebesa
+#: selection:tires,radi:0
+msgid "Drag"
+msgstr "Arrastre"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__load_capacity
+msgid "Drag Load Capacity"
+msgstr "Capacidad de Carga Arrastre"
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle.event,type:0 selection:hr.employee.event,type:0
+#: model:ir.model.fields,field_description:flete_gebesa.field_stock_picking__driver_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__employee_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__driver
+#: selection:tms.event,type:0
+msgid "Driver"
+msgstr "Conductor"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__employee_two_id
+msgid "Driver 2"
+msgstr "Conductor 2"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Duracion"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__duration
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__duration
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Duration"
+msgstr "Duración"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.account_move_line_export_bank_tree
+msgid "Débito Total"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "ECU"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/stock_picking.py:53
+#, python-format
+msgid "El picking %s no tiene asignado un vehiculo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_invoice__shipment_id
+msgid "Embarque"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Embarque:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__employee_id
+msgid "Empleado"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_hr_employee
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee__employee_event_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_hr_employee_event_form
+msgid "Employee Events"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "En Contra"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,status:0
+msgid "En Viaje"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__end_latitude
+msgid "End Latitude"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__end_longitude
+msgid "End Longitude"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "End latitude"
+msgstr "latitud final"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "End longitude"
+msgstr "Longitud final"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tires.py:172
+#, python-format
+msgid "Enter the reason for cancellation"
+msgstr "Escriba el motivo de cancelación"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Entrega"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/fleet_vehicle.py:173
+#: code:addons/flete_gebesa/models/travel.py:766
+#: code:addons/flete_gebesa/models/travel.py:904
+#: code:addons/flete_gebesa/models/travel.py:1006
+#, python-format
+msgid "Error al conectarse con GPSError: %s."
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/waybill.py:120
+#, python-format
+msgid ""
+"Error!\n"
+"No tienes permiso para validar esta carta porte.\n"
+"Check with your System Administrator."
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/waybill.py:128
+#, python-format
+msgid ""
+"Error!\n"
+"YNo tienes permiso para confirmar esta carta porte.\n"
+"Check with your System Administrator."
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/account_invoice.py:53
+#, python-format
+msgid "Error. Duplicate Shipment."
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/account_invoice.py:38
+#, python-format
+msgid "Error. Duplicate Travel."
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Estado"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__status
+msgid "Estatus"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel__final_total_cost
+msgid "Este costo se calcula en la liquidación y se hereda automáticamente al viaje, considera salario, anticipos (gastos), casetas, vales de combustible e impuestos."
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_product_product__estimated_amount
+#: model:ir.model.fields,field_description:flete_gebesa.field_product_template__estimated_amount
+msgid "Estimated Amount"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__estimated_cost
+msgid "Estimated Cost"
+msgstr "Costo Estimado"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__estimated_cost_user
+msgid "Estimated Cost User"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__estimated_liters
+msgid "Estimated Diesel Liters"
+msgstr "Litros Diesel Estimados"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__estimated_diesel_user
+msgid "Estimated Diesel User"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__estimated_total_cost
+msgid "Estimated total cost"
+msgstr "Costo total estimado"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__estimated_total_cost_without_driver
+msgid "Estimated total cost without driver"
+msgstr "Costo estimado total sin Conductor"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__vehicle_event_id
+msgid "Event"
+msgstr "Evento"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_event
+msgid "Events"
+msgstr "Incidencias"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:26
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__evidence
+#, python-format
+msgid "Evidences"
+msgstr "Evidencias"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__evidencia
+msgid "Evidencias"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__expense_id
+msgid "Expense Record"
+msgstr "Registro de liquidación"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.account_export_bank_file_wizard_view
+msgid "Export"
+msgstr "Exportar"
+
+#. module: flete_gebesa
+#: model:ir.actions.act_window,name:flete_gebesa.action_account_export_bank_file_wizard
+msgid "Export Bank File"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.account_export_bank_file_wizard_view
+msgid "Export file"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "FIRMA(S)____________________________"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.mantenimiento_correctivo_layout
+msgid "FOLIO:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Factura"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__refacturacion_id
+msgid "Factura Cancelada"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:res.groups,name:flete_gebesa.group_invoice_without_travel
+msgid "Factura sin el viaje"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Factura:"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle.event,type:0 selection:hr.employee.event,type:0
+#: selection:tms.event,type:0
+msgid "Falta de Operador"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__date
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "Fecha"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tires_gebesa_tree
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_route_form
+msgid "Fecha De Compra"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Fecha Final:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__pay_day
+msgid "Fecha Informativa Pago"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Fecha Inicial:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Fecha Registro"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "Fecha Regreso:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Fecha Sal:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__fecha_cruze
+msgid "Fecha de Cruze"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_stock_picking__fecha_despacho
+msgid "Fecha de despacho"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.carta_porte_travel_layout
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.informe_gastos_layout
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.travel_instructions_2_layout
+msgid "Fecha:"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:product.product,type_tms_expense:0
+msgid "Federal"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__feet
+msgid "Feets"
+msgstr "Pies"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_export_bank_file_wizard__report_attach
+msgid "File CSV"
+msgstr "Archivo CSV"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_stock_picking__image_qr
+msgid "File QR"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard__filename
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard_pase__filename
+msgid "Filename"
+msgstr "Nombre del Archivo"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__end_speed
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Final speed"
+msgstr "Velocidad Final"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Flete"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Flete Tabulador"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Flete por Pedido"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+msgid "Flete:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Fletera:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tires_gebesa_tree
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_route_form
+msgid "Folio Galbo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Folio:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_follower_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_follower_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_follower_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_channel_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_channel_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_channel_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_partner_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_partner_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_partner_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Partners)"
+
+#. module: flete_gebesa
+#: selection:product.product,type_tms_expense:0
+msgid "Foods"
+msgstr "Comidas"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__amount_freight
+msgid "Freight"
+msgstr "Flete"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__frenados_max
+msgid "Frenado Max"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "From Date"
+msgstr "Partir de la fecha"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__begin_date_time
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__end_date_time
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__from_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__to_date
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "From date"
+msgstr "Partir de la fecha"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__fuel_efficiency_real
+msgid "Fuel Efficiency Real"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_fleet_vehicle_log_fuel
+msgid "Fuel log for vehicles"
+msgstr "Registro de combustible para los vehículos"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_stock_picking__full_tank
+msgid "Full tank"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_fleet_vehicle__latitude
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_stop__latitude
+msgid "GPS Latitude"
+msgstr "Latitud GPS"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_fleet_vehicle__longitude
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_stop__longitude
+msgid "GPS Longitude"
+msgstr "Longitud GPS"
+
+#. module: flete_gebesa
+#: model:ir.ui.menu,name:flete_gebesa.menu_tms_settings_vehicle_gps_form
+msgid "GPS Vehicles"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__begin_latitude
+msgid "GPS begin latitude"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__begin_longitude
+msgid "GPS begin longitude"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__end_latitude
+msgid "GPS end latitude"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__end_longitude
+msgid "GPS end longitude"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Gasolina:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Gastos Comprobados"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "Gastos Extras"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "Gastos Programados"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Gastos:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__gear_coast_ids
+msgid "Gear coast"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_picking_tms_form
+msgid "Generar Autorizacion"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Get Tollstation"
+msgstr "Obtener Casetas "
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_line__sequence
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_transportable_line__sequence
+msgid "Gives the sequence order when displaying a list of sales order lines."
+msgstr "Da el orden de la secuencia cuando las ventas son mostradas."
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.fleet_vehicle_form_gebesa
+msgid "Global Positioning"
+msgstr "Posicionamiento global"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__metas
+msgid "Goal"
+msgstr "Objetivo"
+
+#. module: flete_gebesa
+#: model:ir.cron,cron_name:flete_gebesa.ir_cron_gps_wsa_scan
+#: model:ir.cron,name:flete_gebesa.ir_cron_gps_wsa_scan
+msgid "Gps Wsa Scan"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.cron,cron_name:flete_gebesa.ir_cron_gps_wsa_scan_Delete
+#: model:ir.cron,name:flete_gebesa.ir_cron_gps_wsa_scan_Delete
+msgid "Gps Wsa Scan Delete"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,categories_trucks:0
+msgid "Grandes"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:product.product,type_tms_expense:0
+msgid "Guides"
+msgstr "Guías"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Habitos Manejo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__amount_highway_tolls
+msgid "Highway Tolls"
+msgstr "Casetas"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_employee_event_form
+msgid "Historico"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.fleet_vehicle_form_gebesa
+msgid "History"
+msgstr "Historial"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "Hora:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_log_fuel__hours_worked
+msgid "Hours worked"
+msgstr "Horas Trabajadas"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_form
+msgid "IAVE"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_export_bank_file_wizard__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_carta_porte_travel__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_informe_gastos__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_mantenimiento_correctivo__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_recibo_operador__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_travel_expense__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_travel_instructions_2__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_hist_kms_traveled__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard_pase__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_invoice_waybills__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_real_amount__id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_validate__id
+msgid "ID"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:877
+#: code:addons/flete_gebesa/models/travel.py:979
+#, python-format
+msgid "IMEI incorrecto"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.travel_instructions_2_layout
+msgid "INSTRUCCIONES A FLETERA"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.informe_gastos_layout
+msgid "INSTRUCCIONES DE GASTOS"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "INSTRUCCIONES DE VIAJE PARA EL OPERADOR:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__id_pago
+msgid "Id Pago"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tires__message_unread
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__message_unread
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_stop__message_unread
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_tollstation__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si se marca, los nuevos mensajes requieren su atención"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tires__message_needaction
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__message_needaction
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_stop__message_needaction
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_tollstation__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tires__message_has_error
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__message_has_error
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_stop__message_has_error
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_tollstation__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:669
+#, python-format
+msgid "If you want to cancel this travel, you must cancel the tollstation logs attached to this travel"
+msgstr "Si desea cancelar este viaje, debe cancelar los registros de las casetas adjuntos a este viaje."
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__imei
+msgid "Imei"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.actions.act_window,name:flete_gebesa.tms_toll_import_gebesa_action
+#: model:ir.ui.menu,name:flete_gebesa.tms_toll_import_gebesa_action_menu
+msgid "Import TollStations"
+msgstr "Importar Casetas"
+
+#. module: flete_gebesa
+#: model:ir.actions.act_window,name:flete_gebesa.tms_toll_import_gebesa_pase_action
+#: model:ir.ui.menu,name:flete_gebesa.tms_toll_import_gebesa_pase_action_menu
+msgid "Import TollStations Pase"
+msgstr "Importación de Casetas Pase"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_toll_import_view_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_toll_import_view_gebesa_pase
+msgid "Import information"
+msgstr "Importar Información"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Importe"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__importe_descuento
+msgid "Importe (Con Desc.)"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__importe_total
+msgid "Importe al 100%"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.real_amount_wizard
+msgid "Imprimir"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.actions.report,name:flete_gebesa.carta_porte_travel
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Imprimir Carta Porte"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.actions.report,name:flete_gebesa.carta_porte
+msgid "Imprimir Carta Porte "
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Impuestos"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+msgid "Impuestos:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__incentivo
+msgid "Incentivo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Información General"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.actions.report,name:flete_gebesa.informe_gastos
+msgid "Informe de Gastos"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__ingreso_operacion
+msgid "Ingreso Operación"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "Ingreso a Taller Base Galbo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Ingresos:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__begin_speed
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Initial speed"
+msgstr "Velocidad Inicial"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Ins. de Cobranza"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.account_invoice_reference_travel
+msgid "Instrucciones de viaje"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Instrucción"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__amount_insurance
+msgid "Insurance"
+msgstr "Seguro "
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_account_invoice
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__invoice_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__partner_invoice_id
+msgid "Invoice Address"
+msgstr "Dirección de Facturación"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Invoice Information"
+msgstr "Información de Facturación"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__invoice_paid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__invoice_paid
+msgid "Invoice Paid"
+msgstr "Factura Pagada"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel__partner_invoice_id
+msgid "Invoice address for current Waybill."
+msgstr "Dirección de Facturación de la Carta Porte Actual"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_is_follower
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_is_follower
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_is_follower
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__move_id
+msgid "Journal Entry"
+msgstr "Entrada de Diario"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "Jueves"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__km_mm
+msgid "KM / MM original"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__kms_traveled
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__tms_kms_traveled_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_hist_kms_traveled__kms_traveled
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_hist_kms_traveled_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_hist_kms_traveled_tree
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_route_form
+msgid "KMS Traveled"
+msgstr "KMS recorridos"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "KMS.ACT:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "KMS.PROG:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_log_fuel__km_traveled
+msgid "Kilometers traveled"
+msgstr "Kms Recorridos"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_expense_form
+msgid "Kilometros GPS"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:176
+#: code:addons/flete_gebesa/models/tms_expense.py:189
+#, python-format
+msgid "Kilometros GPS must be greator than zero"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_expense_form
+msgid "Kilometros Scanner"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:172
+#: code:addons/flete_gebesa/models/tms_expense.py:185
+#, python-format
+msgid "Kilometros Scanner must be greator than zero"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Km/Lt Rendimiento"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Kms Gps"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "Kms Recorridos::"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Kms Scanner"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Kms:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "LINEAS DE LA CARTA PORTE"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "LIQUIDACION DEL VIAJE"
+msgstr ""
+
+#. module: flete_gebesa
+#: sql_constraint:tires:0
+msgid "La Unidad ya cuenta con una llanta en esta posición"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_export_bank_file_wizard____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_carta_porte_travel____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_informe_gastos____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_mantenimiento_correctivo____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_recibo_operador____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_travel_expense____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_report_flete_gebesa_report_travel_instructions_2____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_hist_kms_traveled____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard_pase____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_invoice_waybills____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_real_amount____last_update
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_validate____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_export_bank_file_wizard__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_hist_kms_traveled__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard_pase__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_invoice_waybills__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_real_amount__write_uid
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_validate__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_export_bank_file_wizard__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_hist_kms_traveled__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard_pase__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_invoice_waybills__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_real_amount__write_date
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_validate__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Latitud"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__latitude
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__latitude
+msgid "Latitude"
+msgstr "Latitud"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_tollstation__move_id
+msgid ""
+"Link to the automatically generated Journal Items.\n"
+"This move is only for Travel Expense Records with balance < 0.0"
+msgstr ""
+"Enlace al elemento de diario creado automáticamente.\n"
+"Este movimiento es sólo para registros de liquidaciones con un balance < 0.0"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Liquidacion:"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:64
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__estimated_liters_gps
+#, python-format
+msgid "Liters Estimated GPS"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:31
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__estimated_liters
+#, python-format
+msgid "Liters Estimated Route"
+msgstr "Litros Estimados Ruta"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:37
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__estimated_liters_scanner
+#, python-format
+msgid "Liters Estimated Scanner"
+msgstr "Litros Estimados Escáner"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:43
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__liters_scanner
+#, python-format
+msgid "Liters Scanner"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:174
+#: code:addons/flete_gebesa/models/tms_expense.py:187
+#, python-format
+msgid "Liters Scanner must be greator than zero"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/fleet_vehicle_log_fuel.py:182
+#, python-format
+msgid "Liters and Total must be greater than zero."
+msgstr "Litros y Total deben ser mayores que cero."
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_travel_tollstation.py:239
+#, python-format
+msgid "Liters, Taxes and Total must be greater than zero."
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_expense_form
+msgid "Litros Operador"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_form
+msgid "Log Info"
+msgstr "Información"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.carta_porte_travel_layout
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.travel_instructions_2_layout
+msgid "Logo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Longitud"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__longitude
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__longitude
+msgid "Longitude"
+msgstr "Longitud"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__low_date
+msgid "Low Date"
+msgstr "Fecha Baja"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Lts Operador"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Lts Scanner"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_res_partner__place_id
+msgid "Lugar"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "Lunes"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "MANEJO EN NEUTRAL"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.mantenimiento_correctivo_layout
+msgid ""
+"MANTENIMIENTO CORRECTIVO\n"
+"                        <br/>\n"
+"                        <strong>\n"
+"                             ORDEN DE REPARACION\n"
+"                        </strong>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "MARCA:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__mm_original
+msgid "MM Original"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_main_attachment_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_main_attachment_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_main_attachment_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: flete_gebesa
+#: model:res.groups,name:flete_gebesa.group_manager_diesel
+msgid "Manager diesel"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Manejo en neutral"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:product.product,type_tms_expense:0
+msgid "Maneuvers"
+msgstr "Maniobras"
+
+#. module: flete_gebesa
+#: model:ir.actions.report,name:flete_gebesa.mantenimiento_correctivo
+msgid "Mantenimiento Correctivo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__margen_utilidad
+msgid "Margen Utilidad"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__margen_final
+msgid "Margen Utilidad Final"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__margen_utilidad_without_driver
+msgid "Margen Utilidad Sin Chofer"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Margen:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__mark
+msgid "Mark"
+msgstr "Marca"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "Martes"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__vel_max_km
+msgid "Max Vel - Km/h"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__max_speed
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Max speed"
+msgstr "Velocidad Máxima"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__measure
+msgid "Measure"
+msgstr "Medida"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_has_error
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_has_error
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_has_error
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_ids
+msgid "Messages"
+msgstr "Mensages"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__meta_diaria
+msgid "Meta Diaria"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__meta_mensual
+msgid "Meta Mensual"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Metros Cubicos"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "Miercoles"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__aceleraciones_moderadas
+msgid "Moderate Accelerations"
+msgstr "Aceleraciones Moderadas"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__frenados_moderados
+msgid "Moderate Braking"
+msgstr "Frenado Moderado"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Moneda:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_advance
+msgid "Money advance payments for Travel expenses"
+msgstr "Pagos de Anticipos para Liquidaciones de Viajes"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:1058
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_wizard_real_amount__real_amount
+#, python-format
+msgid "Monto Real"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__cancellation_note
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__motivo_cancel
+msgid "Motivo de Cancelacion"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__amount_move
+msgid "Moves"
+msgstr "Movimientos"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Movimientos"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+msgid "Movimientos:"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tires,new_tires:0
+msgid "New"
+msgstr "Nuevo"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__new_tires
+msgid "New / Used"
+msgstr "Nuevo / Usado"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__activity_date_deadline
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__activity_date_deadline
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Siguiente plazo de actividad"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__activity_summary
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__activity_summary
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la Siguiente Actividad"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__activity_type_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__activity_type_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:570
+#, python-format
+msgid "No tiene privilegio para disminuir el ingreso del viaje"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:581
+#, python-format
+msgid "No tienes suficientes privilegios para realizar esta acccion..."
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "No. Evidencias:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__nombre_plaza
+msgid "Nombre Plaza"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:mrp.shipment,type_route:0
+msgid "Normal Box"
+msgstr "Caja Normal"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_route__normal_box
+msgid "Normal Box: "
+msgstr "Caja Normal: "
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__notes
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__notes
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Notas"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__notes
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__notes
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.fleet_vehicle_form_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_fleet_vehicle_event_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_hr_employee_event_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__num_invoice
+msgid "Number Invoice"
+msgstr "Número de Factura"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_needaction_counter
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_needaction_counter
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_needaction_counter
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero de Acciones"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_has_error_counter
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_has_error_counter
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_has_error_counter
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_has_error_counter
+msgid "Number of error"
+msgstr "Número de error"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tires__message_needaction_counter
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__message_needaction_counter
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_stop__message_needaction_counter
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_tollstation__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tires__message_has_error_counter
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__message_has_error_counter
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_stop__message_has_error_counter
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_tollstation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tires__message_unread_counter
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__message_unread_counter
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_stop__message_unread_counter
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_tollstation__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes sin leer"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__num_economico
+msgid "N° Economico"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__num_plaza
+msgid "N° Plaza"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Núm Viaje"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Número Anticipo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Observaciones carga"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Observaciones entrega"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:776
+#: code:addons/flete_gebesa/models/travel.py:914
+#: code:addons/flete_gebesa/models/travel.py:1016
+#, python-format
+msgid ""
+"Ocurrio un error del lado del proveedor del GPS \n"
+"Error: \n"
+" %s."
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__odometer_new
+msgid "Odometer New"
+msgstr "Odometro Nuevo"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__odometer_old
+msgid "Odometer Old"
+msgstr "Odometro Anterior"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:343
+#, python-format
+msgid ""
+"Oops! All the tollstation must be confirmed or cancelled \n"
+" Name of tollstation not confirmed or cancelled: \n"
+" State: "
+msgstr ""
+"Oops! Todas las casetas deben ser confirmadas o canceladas \n"
+" Nombre de la estación de peaje no confirmada o cancelada: \n"
+" Estado:"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_tollstation.py:134
+#, python-format
+msgid ""
+"Oops! Odoo has detected an error in the file. \n"
+"Please contact your admin system.\n"
+"\n"
+"Error message\n"
+"[]"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_tollstation.py:137
+#, python-format
+msgid "Oops! The files must have .txt or .dat extensions"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:399
+#, python-format
+msgid ""
+"Oops! You have not defined a Driver factor in the Travel or the Waybill\n"
+"Travel: %s"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__operador
+msgid "Operador"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Operador:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_operating_unit
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__operating_unit_id
+msgid "Operating Unit"
+msgstr "Unidad Operativa"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Orden Venta:"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/waybill.py:14
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__order_id
+#, python-format
+msgid "Orden de Venta"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__partner_order_id
+msgid "Ordering Contact"
+msgstr "Contactos Ordenados"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_route_form
+msgid "Origen"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Origin:"
+msgstr "Origen:"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__original_cost
+msgid "Original Cost"
+msgstr "Costo Original"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__amount_other
+msgid "Other"
+msgstr "Otro"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+msgid "Otro:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+#: selection:product.product,type_tms_expense:0
+msgid "Otros"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tms.travel.gear.coast,activity_state:0
+#: selection:tms.travel.stop,activity_state:0
+#: selection:tms.travel.tollstation,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "PLACAS:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Pagar viaje"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__paid
+msgid "Paid"
+msgstr "Pagado"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Paradas"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,status:0
+msgid "Parado Falta Chofer"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,status:0
+msgid "Parado Falta Ventas"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,status:0
+msgid "Parado Por Taller"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__partner_tires_id
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:741
+#: code:addons/flete_gebesa/models/travel.py:872
+#: code:addons/flete_gebesa/models/travel.py:974
+#, python-format
+msgid "Password incorrecto"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__payment_move_id
+msgid "Payment Entry"
+msgstr "Registro de Pago"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Pedido"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:product.product,type_tms_expense:0
+msgid "Pensions"
+msgstr "Pensiones"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__performance
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_log_fuel__performance_km_l
+msgid "Performance"
+msgstr "Rendimiento"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_log_fuel__performance_h_l
+msgid "Performance hours "
+msgstr "Rendimiento horas"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Peso"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Peso(Kg)"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:product.product,type_tms_expense:0
+msgid "Phytosanitary"
+msgstr "Fitosanitario"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tires_gebesa_tree
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_route_form
+msgid "Piso Remanente MM"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Placas:"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tms.travel.gear.coast,activity_state:0
+#: selection:tms.travel.stop,activity_state:0
+#: selection:tms.travel.tollstation,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Planta"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,type_box:0
+msgid "Platform 40 Ft 2 Axles"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,type_box:0
+msgid "Platform 40 Ft 3 Axles"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_toll_import_view_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_toll_import_view_gebesa_pase
+msgid "Please upload the file with tollstations information"
+msgstr "Por favor sube el archivo con la información de casetas"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_line__discount
+msgid "Please use 99.99 format..."
+msgstr "Por favor use el formato 99.99 "
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,suspension:0
+msgid "Pneumatics"
+msgstr "Neumática"
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,status:0
+msgid "Por Llegar"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,status:0
+msgid "Por Salir"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.fleet_vehicle_form
+msgid "Posicion Global"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tires_gebesa_tree
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_route_form
+msgid "Posición"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__position
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.fleet_vehicle_form_gebesa
+msgid "Position"
+msgstr "Cargo"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__position_new
+msgid "Position New"
+msgstr "Posición Nueva"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__position_old
+msgid "Position Old"
+msgstr "Posición Anterior"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__positive
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_event__positive
+msgid "Positive"
+msgstr "Positivo"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__positive
+msgid "Positivo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"Precio Neto\n"
+"                             <br/>\n"
+"                             <br/>\n"
+"                             <br/>\n"
+"                             <br/>\n"
+"                             <br/>\n"
+"                             <br/>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Precio Unitario"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__price_per_km
+msgid "Precio por Km"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tires_gebesa_tree
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_route_form
+msgid "Precio sin IVA"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__price_tires
+msgid "Price"
+msgstr "Precio"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_product_product
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__product_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_product_product__product_document_ids
+msgid "Product Document"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Producto"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"Proveedor\n"
+"                                <br/>\n"
+"                                Razón Social\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Punto de Descarga:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Punto de Subida:"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:mrp.shipment,type_route:0
+msgid "Pupies"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_route__pupies
+msgid "Pupies: "
+msgstr "Pupies"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.carta_porte_travel_layout
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+msgid "Página 1 de 1"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__product_qty
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__quantity
+msgid "Quantity (UoM)"
+msgstr "Cantidad (UdM)"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "RECABAR NOMBRE, FIRMA Y SELLO EN FACTURAS"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__rp_ms_1700
+msgid "RP MS > 1700"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__rp_ms_1800
+msgid "RP MS > 1800"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__rp_ms_1900
+msgid "RP MS > 1900"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__rp_ms_2000
+msgid "RP MS > 2000"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__rp_ms_2100
+msgid "RP MS > 2100"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__rp_ms_max
+msgid "RP MS MAX"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:res.groups,name:flete_gebesa.group_read_data_tms
+msgid "Read Data TMS"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__reading_date
+msgid "Reading Date"
+msgstr "Fecha lectura"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__reason_for_cancellation
+msgid "Reason for Cancellation"
+msgstr "Razón de Cancelación"
+
+#. module: flete_gebesa
+#: model:ir.actions.report,name:flete_gebesa.recibo_operador
+msgid "Recibo Operador"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__red
+msgid "Red"
+msgstr "Rojo"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__refacturacion
+msgid "Refacturación"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_export_bank_file_wizard__ref
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__floor
+msgid "Remaining floor mm"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Remisión:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__rendimiento
+msgid "Rendimiento"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_expense_form
+msgid "Rendimiento GPS"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_expense_form
+msgid "Rendimiento Operador"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tires,new_tires:0
+msgid "Repaired"
+msgstr "Reparado"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"Reparaciones Realizadas\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "Reparición Taller Externo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Repartos:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Report of stops"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid "Reporte Improcedente se Reingreso a Ruta"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Reporte manejo en neutral"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_product_product__require_travel
+#: model:ir.model.fields,field_description:flete_gebesa.field_product_template__require_travel
+msgid "Require Travel"
+msgstr "Requiere Viaje"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"Responsable\n"
+"                                <br/>\n"
+"                                No.Empleado     Especialidad\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__activity_user_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__activity_user_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/fleet_vehicle_log_fuel.py:100
+#, python-format
+msgid "Return "
+msgstr "Devolucion"
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle.event,type:0 selection:hr.employee.event,type:0
+#: model:ir.model.fields,field_description:flete_gebesa.field_stock_picking__route_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__route
+#: selection:tms.event,type:0
+msgid "Route"
+msgstr "Ruta"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_route
+#: model:ir.model.fields,field_description:flete_gebesa.field_mrp_shipment__route_ids
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tires_gebesa_tree
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_route_form
+msgid "Routes"
+msgstr "Rutas"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Ruta"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Ruta:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "Sabado"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Salario:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Secuencia"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Seguro"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+msgid "Seguro:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_waybill_form
+msgid "Send email"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__sequence
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__sequence
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__series_tires
+msgid "Series"
+msgstr "Serie"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_form
+msgid "Set to Draft"
+msgstr "Cambiar a borrador"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_stop_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_route_form
+msgid "Share a message..."
+msgstr "Comparte un Mensaje"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_mrp_shipment
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__shipment_id
+msgid "Shipment"
+msgstr "Embarque"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_travel_transportable_line
+msgid "Shipped Product"
+msgstr "Producto Envíado"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"Sistema\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/waybill.py:112
+#, python-format
+msgid "Solo Gerencia puede cancelar esta Carta Porte"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:201
+#, python-format
+msgid "Solo Gerencia puede cancelar esta Liquidacion"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/waybill.py:136
+#, python-format
+msgid "Solo Gerencia puede revertir a borrador esta Carta Porte"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_expense.py:230
+#, python-format
+msgid "Solo Gerencia puede revertir a borrador este registro."
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tires,position:0
+msgid "Spare"
+msgstr "Refacción"
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,suspension:0
+msgid "Springs"
+msgstr "Muelles"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__state
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__state
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__state
+msgid "State"
+msgstr "Status"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__activity_state
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_stop__activity_state
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_tollstation__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencida: la fecha tope ya ha pasado\n"
+"Hoy: La fecha tope es hoy\n"
+"Planificada: futuras actividades."
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,categories_trucks:0
+msgid "Sterlin"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_stop_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_stop_tree
+msgid "Stops"
+msgstr "Se detiene"
+
+#. module: flete_gebesa
+#: model:ir.actions.act_window,name:flete_gebesa.action_tms_travel_stop
+#: model:ir.ui.menu,name:flete_gebesa.menu_tms_travel_stop
+msgid "Stops for travel"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__aceleraciones_fuertes
+msgid "Strong Accelerations"
+msgstr "Fuertes Aceleraciones"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__frenados_fuertes
+msgid "Strong Braking"
+msgstr "Fuertes Frenados"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__amount_untaxed
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__amount_untaxed
+msgid "SubTotal"
+msgstr "Subtotal"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__price_subtotal
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Subtotal"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+msgid "Subtotal:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__product_qty
+msgid "Sum Qty"
+msgstr "Cantidad Sumada"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__product_volume
+msgid "Sum Volume"
+msgstr "Suma del Volúmen "
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__product_weight
+msgid "Sum Weight"
+msgstr "Suma del Peso"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__suspension
+msgid "Suspension"
+msgstr "Suspención"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_stock_picking_flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_picking_tms_form
+msgid "TMS"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_fleet_vehicle_event_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_fleet_vehicle_event_tree_view
+msgid "TMS Events"
+msgstr "Incidencias"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "TRANSPORTES GALBO DEL NORTE S.A DE C.V"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Tabulador:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__tag
+msgid "Tag"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__tank
+msgid "Tank"
+msgstr "Tanque"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes__tax_id
+msgid "Tax"
+msgstr "Impuestos"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes__account_id
+msgid "Tax Account"
+msgstr "Cuenta de Impuestos"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__tax_amount
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes__tax_amount
+msgid "Tax Amount"
+msgstr "Importe impuesto"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__tax_line_ids
+msgid "Tax Lines"
+msgstr "Líneas de Impuestos"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__amount_tax
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__tax_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__amount_tax
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: flete_gebesa
+#: selection:product.product,type_tms_expense:0
+msgid "Taxis"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_travel_tollstation.py:191
+#, python-format
+msgid "The amount must be greater than zero."
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_payment.py:66
+#, python-format
+msgid "The document %s must be confirmed and unpaid."
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_payment.py:45
+#, python-format
+msgid "The driver %s does not have a bank account_assigned"
+msgstr "El conductor% s no tiene una cuenta bancaria_asignada"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/fleet_vehicle_log_fuel.py:98
+#: code:addons/flete_gebesa/models/fleet_vehicle_log_fuel.py:214
+#, python-format
+msgid "The fields are not configured"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel__partner_order_id
+msgid "The name and address of the contact who requested the order or quotation."
+msgstr "El nombre y la dirección de contacto que pidió la orden."
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice.py:83
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice_waybills.py:115
+#, python-format
+msgid "The record is already invoiced"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice.py:86
+#, python-format
+msgid "The record must be confirmed or closed"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice_waybills.py:118
+#, python-format
+msgid "The record must be progress, done or closed"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice.py:115
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice_waybills.py:132
+#, python-format
+msgid "The records must be of the same currency."
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice.py:112
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice_waybills.py:129
+#, python-format
+msgid "The records must be of the same partner."
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:327
+#, python-format
+msgid "The state of the trip cannot be draft or progress"
+msgstr "El estado del viaje no puede ser draft o progress"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/account_invoice.py:86
+#, python-format
+msgid "The total of the invoice is less                         than the waybill"
+msgstr "El total de la factura es menor al total de las cartas porte"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tires.py:163
+#, python-format
+msgid "The unit already contains a tire in that position"
+msgstr "La Unidad ya cuenta con una llanta en esta posición"
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,type_box:0
+msgid "Thermo 48 Ft"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,type_box:0
+msgid "Thermo 53 Ft"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/tms_travel_tollstation.py:214
+#, python-format
+msgid "This Fuel Voucher is already Invoiced"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:322
+#, python-format
+msgid "This action need a Details Payment"
+msgstr "Esta acción necesita Datos de Pago"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice.py:40
+#, python-format
+msgid "This product does not have a supplier"
+msgstr "Este producto no tiene un proveedor"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/report/travel_instructions_2.py:31
+#, python-format
+msgid "This travel has not shipment"
+msgstr "Este viaje no tiene embarque"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:572
+#: code:addons/flete_gebesa/models/travel.py:579
+#, python-format
+msgid "This travel need Waybill Lines"
+msgstr "Este viaje necesita Lineas de la Carta Porte"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:707
+#, python-format
+msgid "This travel need a Date End Real"
+msgstr "Este viaje necesita Fecha Final Real"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:690
+#, python-format
+msgid "This travel need a Date Start Real"
+msgstr "Este viaje necesita Fecha Inicio Real"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:717
+#: code:addons/flete_gebesa/models/travel.py:850
+#: code:addons/flete_gebesa/models/travel.py:952
+#, python-format
+msgid "This travel need a Date Start Real and Date End Real"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:688
+#, python-format
+msgid "This travel need a Employee"
+msgstr "Este viaje necesita Empleado"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:686
+#, python-format
+msgid "This travel need a Trailer"
+msgstr "Este viaje necesita Trailer"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:684
+#, python-format
+msgid "This travel need a Unit"
+msgstr "Este viaje necesita Unidad"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/fleet_vehicle.py:150
+#, python-format
+msgid "This truck %s has not a valid imei number"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_mantenimiento_correctivo_document
+msgid ""
+"Tiempo de Reparación\n"
+"                                <br/>\n"
+"                                     Inicio     Terminación\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__type
+#: model:ir.model.fields,field_description:flete_gebesa.field_hr_employee_event__type
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tires_gebesa_tree
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_route_form
+msgid "Tipo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__tires_id
+msgid "Tire"
+msgstr "Llanta"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tires_position_hist_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tires_position_hist_tree
+msgid "Tire Position History"
+msgstr "Historial de posición de los neumáticos"
+
+#. module: flete_gebesa
+#: model:ir.actions.act_window,name:flete_gebesa.action_tires_gebesa_form
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__tms_tire_hist_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_hist_kms_traveled__tire_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__tire_id
+#: model:ir.ui.menu,name:flete_gebesa.menu_tires_gebesa_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.fleet_vehicle_form_gebesa
+msgid "Tires"
+msgstr "Llantas"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_route_form
+msgid "Tires History"
+msgstr "Historial de Llantas"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_form
+msgid "To authorize advance"
+msgstr "Anticipo por autorizar"
+
+#. module: flete_gebesa
+#: selection:tms.travel.gear.coast,activity_state:0
+#: selection:tms.travel.stop,activity_state:0
+#: selection:tms.travel.tollstation,activity_state:0
+msgid "Today"
+msgstr "Hoy"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_tree
+msgid "Tollstation"
+msgstr "Caseta"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_travel_tollstation_form
+msgid "Tollstation -"
+msgstr "Caseta -"
+
+#. module: flete_gebesa
+#: model:ir.actions.act_window,name:flete_gebesa.action_tms_travel_tollstation
+#: model:ir.ui.menu,name:flete_gebesa.menu_tms_travel_tollstation
+msgid "Tollstation for travel"
+msgstr "Caseta por viaje"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__name
+msgid "Tollstation name"
+msgstr "Nombre de la caseta"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_expense__amount_tollstation
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__tollstation_ids
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tms_expense_form
+msgid "Tollstations"
+msgstr "Casetas"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__amount_total
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__amount_total
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_hist_kms_traveled_tree
+msgid "Total"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Total Anticipos:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Total Depositos:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "Total Ext:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "Total Flete:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Total Gastos Comprobados:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Total Liquidacion:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_expense_document
+msgid "Total:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_travel_instructions_document_2
+msgid "Totales"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tires,radi:0
+msgid "Traction"
+msgstr "Tracción"
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle.event,type:0 selection:hr.employee.event,type:0
+#: selection:tms.event,type:0
+msgid "Trafico"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Trailer 1"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle__type_box
+msgid "Trailer Type"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__trailer1
+msgid "Trailer1"
+msgstr "Trailer 1"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__trailer2
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Trailer2"
+msgstr "Trailer 2"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__tramo
+msgid "Tramo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,categories_trucks:0
+msgid "Transformados"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__transportable_line_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__transportable_id
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Transportable"
+msgstr "Carga"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_travel
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_invoice__travel_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_account_invoice__travel_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__travel_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__travel_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__travel_id
+msgid "Travel"
+msgstr "Viaje"
+
+#. module: flete_gebesa
+#: model:ir.actions.report,name:flete_gebesa.travel_expense
+msgid "Travel Expeense"
+msgstr "Gasto por viaje"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_hist_kms_traveled__tms_expense_id
+msgid "Travel Expense"
+msgstr "Viaje Liquidado"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_expense
+msgid "Travel Expenses"
+msgstr "Liquidación de Viajes"
+
+#. module: flete_gebesa
+#: model:ir.actions.report,name:flete_gebesa.travel_instructions_2
+msgid "Travel Instructions"
+msgstr "Instrucciones de viaje"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__travel_stop_ids
+msgid "Travel stops"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_stock_picking__travel_ids
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.account_invoice_reference_travel
+msgid "Travels"
+msgstr "Viajes"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Trc"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__radi
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_event__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_product_product__type_tms_expense
+msgid "Type Expenses"
+msgstr "Tipo de Gastos"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_mrp_shipment__type_route
+msgid "Type route"
+msgstr "Tipe de ruta"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:733
+#: code:addons/flete_gebesa/models/travel.py:864
+#: code:addons/flete_gebesa/models/travel.py:966
+#, python-format
+msgid "URL incorecta"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+msgid "Unida Operativa:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Unidad"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.view_tires_gebesa_tree
+msgid "Unidad / Remolque / Dolly"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "Unidad Operativa:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__unit_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_waybill__unit
+msgid "Unit"
+msgstr "Unidad"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__unit_new_id
+msgid "Unit New"
+msgstr "Unidad Nueva"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_tire_position_hist__unit_old_id
+msgid "Unit Old"
+msgstr "Unidad Anterior"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__unit_price
+msgid "Unit Price"
+msgstr "Precio Unitario"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__unit_name
+msgid "Unit name"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__transportable_uom_id
+msgid "Unit of Measure "
+msgstr "Unidad de Medida"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_unread
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_unread
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_unread
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_unread
+msgid "Unread Messages"
+msgstr "Los mensajes no leídos"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__message_unread_counter
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__message_unread_counter
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__message_unread_counter
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Los mensajes no leídos Contador"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__upload_point
+msgid "Upload Point"
+msgstr "Punto de Carga"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard__file
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_toll_wizard_pase__file
+msgid "Upload TollStation"
+msgstr "Subir Caseta"
+
+#. module: flete_gebesa
+#: selection:tires,new_tires:0
+msgid "Used"
+msgstr "Usado"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:737
+#: code:addons/flete_gebesa/models/travel.py:868
+#: code:addons/flete_gebesa/models/travel.py:970
+#, python-format
+msgid "Usuario incorrecto"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Utilidad:"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document_travel
+msgid "VIAJES"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_validate
+msgid "Validate"
+msgstr "Validar"
+
+#. module: flete_gebesa
+#: model:ir.actions.act_window,name:flete_gebesa.action_advance_wizard_validate
+msgid "Validate advance"
+msgstr "Validar anticipos"
+
+#. module: flete_gebesa
+#: model:ir.actions.act_window,name:flete_gebesa.action_tollstation_wizard_validate
+msgid "Validate tollstation"
+msgstr "Validar casetas"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_fleet_vehicle
+#: model:ir.model.fields,field_description:flete_gebesa.field_fleet_vehicle_event__vehicle_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_stock_picking__vehicle_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__fleet_vehicle_id
+msgid "Vehicle"
+msgstr "Vehículo"
+
+#. module: flete_gebesa
+#: model:geoengine.vector.layer,name:flete_gebesa.geoengine_vector_layer_vehicle
+msgid "Vehicle Basic point"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.actions.act_window,name:flete_gebesa.geoengine_vehicle_view
+msgid "Vehicle GPS view"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:geoengine.raster.layer,name:flete_gebesa.geoengine_raster_layer_tmsvehiclemaposm
+msgid "Vehicle Open Street Map"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle.event,type:0 selection:hr.employee.event,type:0
+#: selection:tms.event,type:0
+msgid "Ventas"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__local_travel
+msgid "Viaje Local"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__viaje_pagado
+#: selection:tms.travel,viaje_pagado:0
+msgid "Viaje Pagado"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tms.travel,viaje_pagado:0
+msgid "Viaje Sin Pagar"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_recibo_operador_document
+msgid "Viaje:"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle,categories_trucks:0
+msgid "Viejos"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_informe_gastos_document
+msgid "Viernes"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.fleet_vehicle_form
+msgid "View in Google Maps"
+msgstr "Ver en Google Maps"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:349
+#, python-format
+msgid "Volume"
+msgstr ""
+
+#. module: flete_gebesa
+#: selection:tms.travel.tollstation,state:0
+msgid "Waiting for authorization"
+msgstr "Esperando autorización"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:641
+#, python-format
+msgid "Warning. It was not configured, a product with tollstation type"
+msgstr "Advertencia. No fue configurado, un producto con el tipo caseta"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_line__travel_id
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_taxes__travel_id
+msgid "Waybill"
+msgstr "Cartas Porte"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__customer_factor_ids
+msgid "Waybill Customer Charge Factors"
+msgstr "Factores para la carga del Ciente"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Waybill Information"
+msgstr "Información Carta Porte"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_travel_line
+msgid "Waybill Line"
+msgstr "Línea de la Carta Porte"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel__waybill_line_ids
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.freight_travel_form
+msgid "Waybill Lines"
+msgstr "Lineas de la Carta Porte"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_travel_taxes
+msgid "Waybill Taxes"
+msgstr "Impuestos "
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_waybill
+msgid "Waybills"
+msgstr "Cartas Porte"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tires__website_message_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_gear_coast__website_message_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_stop__website_message_ids
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_tollstation__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes de sitios web"
+
+#. module: flete_gebesa
+#: model:ir.model.fields,help:flete_gebesa.field_tires__website_message_ids
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_gear_coast__website_message_ids
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_stop__website_message_ids
+#: model:ir.model.fields,help:flete_gebesa.field_tms_travel_tollstation__website_message_ids
+msgid "Website communication history"
+msgstr "Sitio Web historial de comunicación"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:352
+#, python-format
+msgid "Weight"
+msgstr "Peso"
+
+#. module: flete_gebesa
+#: selection:product.product,type_tms_expense:0
+msgid "Work Permit"
+msgstr "Permisos"
+
+#. module: flete_gebesa
+#: selection:fleet.vehicle.event,type:0 selection:hr.employee.event,type:0
+#: selection:tms.event,type:0
+msgid "Workshop"
+msgstr "Taller"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/fleet_vehicle_log_fuel.py:65
+#, python-format
+msgid "You can only delete vouchers in draft status"
+msgstr "Solo puede eliminar vales en estado borrador"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_payment.py:52
+#, python-format
+msgid "You cannot pay documents for different currency"
+msgstr "No puede pagar documentos por moneda diferente"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_payment.py:38
+#, python-format
+msgid "You cannot pay documents for different driver"
+msgstr "No puede pagar documentos por conductor diferente"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_payment.py:55
+#, python-format
+msgid "You cannot pay documents in different currency of the bank (%s)"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:469
+#, python-format
+msgid "You cannot unlink the invoice of this waybill because the invoice is still valid, please check it."
+msgstr "No puede desvincular la factura de esta guía porque la factura aún es válida, verifíquela."
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/travel.py:319
+#, python-format
+msgid "You do not have privileges to pay for this travel"
+msgstr "Usted no tiene los privilegios para pagar este viaje"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/models/account_invoice.py:90
+#, python-format
+msgid "You do not have privileges to validate this invoice without travel."
+msgstr "Usted no tiene privilegios para validar esta factura sin viaje."
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice.py:54
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice_waybills.py:84
+#, python-format
+msgid "You must have an expense account in the product or its category"
+msgstr "Debe tener una cuenta de gastos en el producto o su categoría"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_invoice_waybills.py:50
+#, python-format
+msgid "You must have an income account in the product or its category."
+msgstr "Debe tener una cuenta de ingresos en el producto o su categoría."
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_tollstation.py:75
+#: code:addons/flete_gebesa/wizards/tms_wizard_tollstation_pase.py:47
+#, python-format
+msgid "You need a configuration Operating Unit"
+msgstr "Necesita una configuración Unidad operativa"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_account_export_bank_file_wizard
+msgid "account.export.bank.file.wizard"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:geoengine.raster.layer,name:flete_gebesa.geoengine_raster_layer_basic0
+msgid "basic"
+msgstr "básico"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.real_amount_wizard
+msgid "description"
+msgstr "Descripcion"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_fleet_vehicle_event
+msgid "fleet.vehicle.event"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_hr_employee_event
+msgid "hr.employee.event"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_stock_picking__kilometer
+msgid "kilometer"
+msgstr ""
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.real_amount_wizard
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_invoice_supplier
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_invoice_waybills
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.tms_wizard_validate
+msgid "or"
+msgstr "ó"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_report_flete_gebesa_report_carta_porte
+msgid "report.flete_gebesa.report_carta_porte"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_report_flete_gebesa_report_carta_porte_travel
+msgid "report.flete_gebesa.report_carta_porte_travel"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_report_flete_gebesa_report_informe_gastos
+msgid "report.flete_gebesa.report_informe_gastos"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_report_flete_gebesa_report_mantenimiento_correctivo
+msgid "report.flete_gebesa.report_mantenimiento_correctivo"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_report_flete_gebesa_report_recibo_operador
+msgid "report.flete_gebesa.report_recibo_operador"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_report_flete_gebesa_report_travel_expense
+msgid "report.flete_gebesa.report_travel_expense"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_report_flete_gebesa_report_travel_instructions_2
+msgid "report.flete_gebesa.report_travel_instructions_2"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tires
+msgid "tires"
+msgstr "Llantas"
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_hist_kms_traveled
+msgid "tms.hist.kms.traveled"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_tire_position_hist
+msgid "tms.tire.position.hist"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_toll_wizard
+msgid "tms.toll.wizard"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_toll_wizard_pase
+msgid "tms.toll.wizard.pase"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_travel_gear_coast
+msgid "tms.travel.gear.coast"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_travel_stop
+msgid "tms.travel.stop"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_travel_tollstation
+msgid "tms.travel.tollstation"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_wizard_invoice
+msgid "tms.wizard.invoice"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_wizard_invoice_waybills
+msgid "tms.wizard.invoice.waybills"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_wizard_payment
+msgid "tms.wizard.payment"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_wizard_real_amount
+msgid "tms.wizard.real.amount"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model,name:flete_gebesa.model_tms_wizard_validate
+msgid "tms.wizard.validate"
+msgstr ""
+
+#. module: flete_gebesa
+#: model:ir.model.fields,field_description:flete_gebesa.field_tms_travel_transportable_line__travel_id
+msgid "waybill"
+msgstr "carta porte"
+
+#. module: flete_gebesa
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.carta_porte_travel_layout
+#: model_terms:ir.ui.view,arch_db:flete_gebesa.report_carta_porte_document
+msgid "www.gebesa.com"
+msgstr ""
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_tollstation_pase.py:103
+#, python-format
+msgid "¡Error! The files must have .txt or .dat extensions"
+msgstr "¡Error! Los archivos deben tener extensiones .txt o .dat"
+
+#. module: flete_gebesa
+#: code:addons/flete_gebesa/wizards/tms_wizard_tollstation_pase.py:100
+#, python-format
+msgid ""
+"¡Warning! Odoo has detected an error in the file. \n"
+"Please contact your admin system.\n"
+"\n"
+"Error message\n"
+"[]"
+msgstr ""
+"¡Advertencia! Odoo ha detectado un error en el archivo.\n"
+"Comuníquese con su sistema de administración.\n"
+"\n"
+"Mensaje de error\n"
+"[]"

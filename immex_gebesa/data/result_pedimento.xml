@@ -1,0 +1,392 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Header>
+      <wsse:Security S:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsu:Timestamp xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsu:Created>2019-10-25T16:44:10Z</wsu:Created>
+            <wsu:Expires>2019-10-25T16:45:10Z</wsu:Expires>
+         </wsu:Timestamp>
+      </wsse:Security>
+   </S:Header>
+   <S:Body>
+      <ns2:consultarPedimentoCompletoRespuesta xmlns="http://www.ventanillaunica.gob.mx/pedimentos/ws/oxml/comunes" xmlns:ns2="http://www.ventanillaunica.gob.mx/pedimentos/ws/oxml/consultarpedimentocompleto" xmlns:ns3="http://www.ventanillaunica.gob.mx/common/ws/oxml/respuesta" xmlns:ns4="http://www.ventanillaunica.gob.mx/common/ws/oxml/resolucion" xmlns:ns5="http://www.ventanillaunica.gob.mx/common/ws/oxml/respuestatra" xmlns:ns6="http://www.ventanillaunica.gob.mx/common/ws/oxml/dictamen" xmlns:ns7="http://www.ventanillaunica.gob.mx/common/ws/oxml/observacion" xmlns:ns8="http://www.ventanillaunica.gob.mx/common/ws/oxml/requisito" xmlns:ns9="http://www.ventanillaunica.gob.mx/common/ws/oxml/opinion">
+         <ns3:tieneError>false</ns3:tieneError>
+         <ns2:numeroOperacion>7982670700</ns2:numeroOperacion>
+         <ns2:pedimento>
+            <ns2:pedimento>9001732</ns2:pedimento>
+            <ns2:encabezado>
+               <ns2:tipoOperacion>
+                  <ns2:clave>1</ns2:clave>
+                  <ns2:descripcion>Importacion</ns2:descripcion>
+               </ns2:tipoOperacion>
+               <ns2:claveDocumento>
+                  <ns2:clave>A4</ns2:clave>
+                  <ns2:descripcion>IMPORTACION A DEPOSITO FISCAL EN  ALMACEN GENERAL DE DEPOSITO</ns2:descripcion>
+               </ns2:claveDocumento>
+               <ns2:destino>
+                  <ns2:clave>9</ns2:clave>
+                  <ns2:descripcion>INTERIOR DEL PAIS</ns2:descripcion>
+               </ns2:destino>
+               <ns2:aduanaEntradaSalida>
+                  <ns2:clave>160</ns2:clave>
+                  <ns2:descripcion>MANZANILLO, MANZANILLO, COLIMA.</ns2:descripcion>
+               </ns2:aduanaEntradaSalida>
+               <ns2:tipoCambio>19.06610</ns2:tipoCambio>
+               <ns2:pesoBruto>256531.000</ns2:pesoBruto>
+               <ns2:medioTrasnporteSalida>
+                  <ns2:clave>7</ns2:clave>
+                  <ns2:descripcion>CARRETERO</ns2:descripcion>
+               </ns2:medioTrasnporteSalida>
+               <ns2:medioTrasnporteArribo>
+                  <ns2:clave>1</ns2:clave>
+                  <ns2:descripcion>MARITIMO</ns2:descripcion>
+               </ns2:medioTrasnporteArribo>
+               <ns2:medioTrasnporteEntrada>
+                  <ns2:clave>1</ns2:clave>
+                  <ns2:descripcion>MARITIMO</ns2:descripcion>
+               </ns2:medioTrasnporteEntrada>
+               <ns2:curpApoderadomandatario>GOAJ641219HDFMBQ09</ns2:curpApoderadomandatario>
+               <ns2:rfcAgenteAduanalSocFactura>OEF1008101P8</ns2:rfcAgenteAduanalSocFactura>
+               <ns2:valorDolares>0.00</ns2:valorDolares>
+               <ns2:valorAduanalTotal>3318025.00</ns2:valorAduanalTotal>
+               <ns2:valorComercialTotal>3302974.00</ns2:valorComercialTotal>
+            </ns2:encabezado>
+            <ns2:importadorExportador>
+               <ns2:rfc>MPF861014CD6</ns2:rfc>
+               <ns2:razonSocial>MANUFACTURAS POST FORM S.A. DE C.V.</ns2:razonSocial>
+               <ns2:domicilio>
+                  <ns2:calle>AV. GUANACEVI, COL. PARQUE INDUSTRIAL LAGUNERO</ns2:calle>
+                  <ns2:numeroExterior>370</ns2:numeroExterior>
+                  <ns2:ciudadMunicipio>GOMEZ PALACIO</ns2:ciudadMunicipio>
+                  <ns2:codigoPostal>35078</ns2:codigoPostal>
+               </ns2:domicilio>
+               <ns2:seguros>15051.00</ns2:seguros>
+               <ns2:fletes>0.00</ns2:fletes>
+               <ns2:embalajes>0.00</ns2:embalajes>
+               <ns2:incrementables>0.00</ns2:incrementables>
+               <ns2:aaduanaDespacho>
+                  <ns2:clave>160</ns2:clave>
+                  <ns2:descripcion>MANZANILLO, MANZANILLO, COLIMA.</ns2:descripcion>
+               </ns2:aaduanaDespacho>
+               <ns2:bultos>0</ns2:bultos>
+               <ns2:fechas>
+                  <ns2:fecha>2019-06-27-05:00</ns2:fecha>
+                  <ns2:tipo>
+                     <ns2:clave>2</ns2:clave>
+                     <ns2:descripcion>FECHA DE PAGO DE LAS CONTRIBUCIONES</ns2:descripcion>
+                  </ns2:tipo>
+               </ns2:fechas>
+               <ns2:fechas>
+                  <ns2:fecha>2019-06-25-05:00</ns2:fecha>
+                  <ns2:tipo>
+                     <ns2:clave>1</ns2:clave>
+                     <ns2:descripcion>FECHA DE ENTRADA A TERRITORIO NAL.</ns2:descripcion>
+                  </ns2:tipo>
+               </ns2:fechas>
+               <ns2:efectivo>302.00</ns2:efectivo>
+               <ns2:otros>28770.00</ns2:otros>
+               <ns2:total>29072.00</ns2:total>
+               <ns2:pais>
+                  <clave>MEX</clave>
+                  <descripcion>MEXICO (ESTADOS UNIDOS MEXICANOS)</descripcion>
+               </ns2:pais>
+            </ns2:importadorExportador>
+            <ns2:tasas>
+               <ns2:contribucion>
+                  <ns2:clave>15</ns2:clave>
+                  <ns2:descripcion>PREVALIDAAAA</ns2:descripcion>
+               </ns2:contribucion>
+               <ns2:tipoTasa>
+                  <clave>2</clave>
+                  <descripcion>ESPECIFICO</descripcion>
+               </ns2:tipoTasa>
+               <ns2:tasaAplicable>240.0000000000</ns2:tasaAplicable>
+               <ns2:formaPago>
+                  <clave>0</clave>
+                  <descripcion>EFECTIVO</descripcion>
+               </ns2:formaPago>
+               <ns2:importe>240.00</ns2:importe>
+            </ns2:tasas>
+            <ns2:tasas>
+               <ns2:contribucion>
+                  <ns2:clave>1</ns2:clave>
+                  <ns2:descripcion>DTA</ns2:descripcion>
+               </ns2:contribucion>
+               <ns2:tipoTasa>
+                  <clave>7</clave>
+                  <descripcion>AL MILLAR DTA</descripcion>
+               </ns2:tipoTasa>
+               <ns2:tasaAplicable>8.0000000000</ns2:tasaAplicable>
+               <ns2:formaPago>
+                  <clave>6</clave>
+                  <descripcion>PAGO PENDIENTE</descripcion>
+               </ns2:formaPago>
+               <ns2:importe>28530.00</ns2:importe>
+            </ns2:tasas>
+            <ns2:tasas>
+               <ns2:contribucion>
+                  <ns2:clave>21</ns2:clave>
+                  <ns2:descripcion>CONTRAPRESTA</ns2:descripcion>
+               </ns2:contribucion>
+               <ns2:tipoTasa>
+                  <clave>2</clave>
+                  <descripcion>ESPECIFICO</descripcion>
+               </ns2:tipoTasa>
+               <ns2:tasaAplicable>20.0000000000</ns2:tasaAplicable>
+               <ns2:formaPago>
+                  <clave>0</clave>
+                  <descripcion>EFECTIVO</descripcion>
+               </ns2:formaPago>
+               <ns2:importe>62.00</ns2:importe>
+            </ns2:tasas>
+            <ns2:proveedoresCompradores>
+               <ns2:identificadorFiscal>223441425</ns2:identificadorFiscal>
+               <ns2:proveedorComprador>BAOSTEEL AMERICA INC</ns2:proveedorComprador>
+               <ns2:valorMonedaExtranjera>0.000000</ns2:valorMonedaExtranjera>
+               <ns2:valorDolares>0.00</ns2:valorDolares>
+            </ns2:proveedoresCompradores>
+            <ns2:proveedoresCompradores>
+               <ns2:identificadorFiscal>223441425</ns2:identificadorFiscal>
+               <ns2:proveedorComprador>BAOSTEEL AMERICA INC</ns2:proveedorComprador>
+               <ns2:valorMonedaExtranjera>0.000000</ns2:valorMonedaExtranjera>
+               <ns2:valorDolares>0.00</ns2:valorDolares>
+            </ns2:proveedoresCompradores>
+            <ns2:proveedoresCompradores>
+               <ns2:identificadorFiscal>223441425</ns2:identificadorFiscal>
+               <ns2:proveedorComprador>BAOSTEEL AMERICA INC</ns2:proveedorComprador>
+               <ns2:valorMonedaExtranjera>0.000000</ns2:valorMonedaExtranjera>
+               <ns2:valorDolares>0.00</ns2:valorDolares>
+            </ns2:proveedoresCompradores>
+            <ns2:facturas>
+               <ns2:fecha>2019-05-05-05:00</ns2:fecha>
+               <ns2:numero>COVE1931E0802</ns2:numero>
+               <ns2:terminoFacturacion>
+                  <ns2:clave>CFR</ns2:clave>
+                  <ns2:descripcion>COSTE Y FLETE (... PUERTO DE DESTINO CONVENIDO)</ns2:descripcion>
+               </ns2:terminoFacturacion>
+               <ns2:valorDolares>0.00</ns2:valorDolares>
+               <ns2:valorMonedaExtranjera>0.000000</ns2:valorMonedaExtranjera>
+               <ns2:identificadorFiscalProveedorComprador>223441425</ns2:identificadorFiscalProveedorComprador>
+               <ns2:proveedorComprador>BAOSTEEL AMERICA INC</ns2:proveedorComprador>
+            </ns2:facturas>
+            <ns2:facturas>
+               <ns2:fecha>2019-05-05-05:00</ns2:fecha>
+               <ns2:numero>COVE1931E0886</ns2:numero>
+               <ns2:terminoFacturacion>
+                  <ns2:clave>CFR</ns2:clave>
+                  <ns2:descripcion>COSTE Y FLETE (... PUERTO DE DESTINO CONVENIDO)</ns2:descripcion>
+               </ns2:terminoFacturacion>
+               <ns2:valorDolares>0.00</ns2:valorDolares>
+               <ns2:valorMonedaExtranjera>0.000000</ns2:valorMonedaExtranjera>
+               <ns2:identificadorFiscalProveedorComprador>223441425</ns2:identificadorFiscalProveedorComprador>
+               <ns2:proveedorComprador>BAOSTEEL AMERICA INC</ns2:proveedorComprador>
+            </ns2:facturas>
+            <ns2:facturas>
+               <ns2:fecha>2019-05-05-05:00</ns2:fecha>
+               <ns2:numero>COVE1931E0843</ns2:numero>
+               <ns2:terminoFacturacion>
+                  <ns2:clave>CFR</ns2:clave>
+                  <ns2:descripcion>COSTE Y FLETE (... PUERTO DE DESTINO CONVENIDO)</ns2:descripcion>
+               </ns2:terminoFacturacion>
+               <ns2:valorDolares>0.00</ns2:valorDolares>
+               <ns2:valorMonedaExtranjera>0.000000</ns2:valorMonedaExtranjera>
+               <ns2:identificadorFiscalProveedorComprador>223441425</ns2:identificadorFiscalProveedorComprador>
+               <ns2:proveedorComprador>BAOSTEEL AMERICA INC</ns2:proveedorComprador>
+            </ns2:facturas>
+            <ns2:transportes>
+               <ns2:identificador>DALIANSTAR</ns2:identificador>
+               <ns2:paisTransporte>
+                  <clave>MHL</clave>
+                  <descripcion>ISLAS MARSHALL</descripcion>
+               </ns2:paisTransporte>
+               <ns2:nombre>NAVECOPA S DE RL DE CV</ns2:nombre>
+            </ns2:transportes>
+            <ns2:guias>
+               <ns2:guiaManifiesto>47Y014SHA015</ns2:guiaManifiesto>
+               <ns2:tipoGuia>M</ns2:tipoGuia>
+            </ns2:guias>
+            <ns2:guias>
+               <ns2:guiaManifiesto>47Y014SHA012</ns2:guiaManifiesto>
+               <ns2:tipoGuia>M</ns2:tipoGuia>
+            </ns2:guias>
+            <ns2:guias>
+               <ns2:guiaManifiesto>47Y014SHA016</ns2:guiaManifiesto>
+               <ns2:tipoGuia>M</ns2:tipoGuia>
+            </ns2:guias>
+            <ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>0192190GG6N54</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>CC</clave>
+                     <descripcion>CARTA DE CUPO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>90669</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>0438190F4IRO2</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>0438190F4IRH3</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>0192190GG6NS8</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>04201900BCJ34</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>0192190GG6NK4</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>PD</clave>
+                     <descripcion>PARTES DOS</descripcion>
+                  </claveIdentificador>
+                  <complemento1>6</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>CR</clave>
+                     <descripcion>CLAVE DE RECINTO FISCAL O FISCALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>76</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>0192190GG6N03</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>04201900BCJ57</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>0192190GG6LB5</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>01711902PYM32</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>0192190GG6MI6</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>AG</clave>
+                     <descripcion>ALMACEN GENERAL DE DEPOSITO FISCAL</descripcion>
+                  </claveIdentificador>
+                  <complemento1>9005</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>0438190F4IRM7</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>01711902PYM02</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>01711902PYM18</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>0192190GG6LP8</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>SF</clave>
+                     <descripcion>CLAVE SIDEFI</descripcion>
+                  </claveIdentificador>
+                  <complemento1>114</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>0192190GG6LS4</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>04201900BCJ47</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>ED</clave>
+                     <descripcion>E_DOCUMENT DOCUMENTO DIGITALIZADO</descripcion>
+                  </claveIdentificador>
+                  <complemento1>0192190GG6NX1</complemento1>
+               </ns2:identificadores>
+               <ns2:identificadores>
+                  <claveIdentificador>
+                     <clave>AC</clave>
+                     <descripcion>ALMACENES CERTIFICADOS</descripcion>
+                  </claveIdentificador>
+                  <complemento1>ACNS006</complemento1>
+               </ns2:identificadores>
+            </ns2:identificadores>
+            <ns2:observaciones>SE ANEXAN LOS SIGUIENTES DOCUMENTOS DE CONFORMIDAD CON LOS ARTICULOS 36 Y 36 A FRACCION I DE LA LEY ADUANERA EN VIGOR ASI COMO LAS REGLAS 1.9.1, 1.9.18, 3.1.7, 3.1.12, 3.1.13, Y 3.1.30 DE LAS REGLAS GENERALES DE COMERCIO EXTERIOR PARA 2019.- FACTURAS COMERCIALES.                                                                                                 - LISTAS DE EMPAQUES.                                                                                                   - CERTIFICADOS DE MOLINO.                                                                                               - CARTAS TRADUCCION DE FACTURA.                                                                                         - CONOCIMIENTO MARITIMO REVALIDADO.                                                                                     SE DETERMINAN LAS CONTRIBUCIONES Y SU PAGO SE DIFIERE AL MOMENTO DE LA EXTRACCION DE LAS MERCANCIAS DEL ALMACEN CORRESPONDIENTE ALMACENADORA DEL VALLE DE MEXICO S.A. DE C.V. OPERACION DE CONFORMIDAD CON EL ARTICULO 119 Y 120 DE LA LEY ADUANERA EN VIGOR.                                                                                                           SE DECLARA QUE AL MOMENTO DE EXTRAER LAS MERCANCIAS DE DEPOSITO FISCAL LAS CONTRIBUCIONES SE ACTULIZARAN CONFORME A LA VARIACION CAMBIARIA DEL PESO FRENTE AL DOLAR (TIPO DE CAMBIO) EN APEGO A LO ESTABLECIDO EN EL REGLA 4.5.5 DE LAS REGLAS GENERALES EN MATERIA DE COMERCIO EXTERIOR PARA 2019.</ns2:observaciones>
+            <ns2:partidas>3</ns2:partidas>
+            <ns2:partidas>1</ns2:partidas>
+            <ns2:partidas>2</ns2:partidas>
+         </ns2:pedimento>
+      </ns2:consultarPedimentoCompletoRespuesta>
+   </S:Body>
+</S:Envelope>

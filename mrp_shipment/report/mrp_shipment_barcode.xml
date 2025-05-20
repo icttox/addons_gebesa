@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="mrp_shipment/static/src/css/mrp_shipment.css"/>
+            </xpath>
+        </template>
+
+        <report
+            id="shipment_barcode_report"
+            model="mrp.shipment"
+            string="Lista de embarques (Codigos de barras)"
+            report_type="qweb-pdf"
+            name="mrp_shipment.report_shipment_barcode"
+            file="mrp_shipment.report_shipment_barcode"
+        />
+
+        <template id="report_shipment_barcode_document">
+            <t t-call="web.internal_layout">
+                <div class="page" style="font-size: 10pt;">
+                    <t t-foreach="shipment[doc.id]" t-as="ship">
+                        <div class="col-xs-12" style="border: 1px solid black">
+                            <t t-set="total_m" t-value="0"/>
+                            <t t-set="total_fle" t-value="0"/>
+                            <t t-set="total_imp" t-value="0"/>
+                            <t t-set="m" t-value="0"/>
+                            <t t-set="n" t-value="1"/>
+                            <table class="mrp_shipment_table">
+                                <tr>
+                                    <td width="10%">Folio:</td>
+                                    <th width="1%">&#160;</th>
+                                    <td width="15%"><span t-esc="doc.folio"/></td>
+                                    <th width="1%">&#160;</th>
+                                    <td width="10%">Desc:</td>
+                                    <th width="1%">&#160;</th>
+                                    <td><span t-esc="doc.reference"/></td>
+                                    <th width="1%">&#160;</th>
+                                    <td width="10%">Fecha:</td>
+                                    <th width="1%">&#160;</th>
+                                    <td width="15%"><span t-esc="doc.date"/></td>
+                                </tr>
+                                <t t-foreach="shipment[doc.id]" t-as="ship2">
+                                    <t t-set="m" t-value="0"/>
+                                    <t t-foreach="shipment[doc.id][ship2]" t-as="partner">
+                                        <t t-foreach="shipment[doc.id][ship2][partner]" t-as="city">
+                                            <t t-foreach="shipment[doc.id][ship2][partner][city]" t-as="line">
+                                                <t t-set="m" t-value="m+(line.product_id.volume*line.quantity_shipped)"/>
+                                                <t t-set="total_fle" t-value="total_fle+((line.order_line_id.freight_amount/line.order_line_id.product_uom_qty)*line.quantity_shipped)"/>
+                                                <t t-set="total_imp" t-value="total_imp+((line.order_line_id.net_sale/line.order_line_id.product_uom_qty)*line.quantity_shipped)"/>
+                                            </t>
+                                        </t>
+                                    </t>
+                                    <td>MTS&#160;<span t-esc="ship2"/></td>
+                                    <th>&#160;</th>
+                                    <td><span t-esc="m"/></td>
+                                    <t t-if="n!=3">
+                                        <th>&#160;</th>
+                                    </t>
+                                    <t t-set="total_m" t-value="total_m+m"/>
+                                    <t t-set="n" t-value="n+1"/>
+                                    <t t-if="n==4">
+                                        <tr></tr>
+                                        <t t-set="n" t-value="1"/>
+                                    </t>
+                                </t>
+                                <tr>
+                                    <td>Mts Tot:</td>
+                                    <th>&#160;</th>
+                                    <td><span t-esc="total_m"/></td>
+                                    <th>&#160;</th>
+                                    <td>Tot Fle:</td>
+                                    <th>&#160;</th>
+                                    <td>$&#160;<span t-esc="total_fle"/></td>
+                                    <th>&#160;</th>
+                                    <td>Tot Impor:</td>
+                                    <th>&#160;</th>
+                                    <td>$&#160;<span t-esc="total_imp"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-12">
+                            Estatus:&#160;&#160;<span t-esc="doc.state"/>
+                        </div>
+                        <div class="col-xs-12" style="margin-top: 15px;">
+                            <div class="col-xs-12" style="text-align:center;font-size:20pt">
+                                ///&#160;<span t-esc="ship"/>&#160;\\\
+                            </div>
+                            <t t-foreach="shipment[doc.id][ship]" t-as="partner">
+                                <div class="col-xs-12" style="text-align:center;margin-top:10px">
+                                    <span t-esc="partner"/>
+                                    <br />
+                                    <t t-foreach="shipment[doc.id][ship][partner]" t-as="city">
+                                        <div class="col-xs-12" aling="center" style="text-align:center;margin-top:5px">
+                                            <span t-esc="city"/>
+                                            <t t-set="pedido" t-value="''"/>
+                                            <t t-set="mts" t-value="0"/>
+                                            <t t-set="peso" t-value="0"/>
+                                            <t t-set="flete" t-value="0"/>
+                                            <t t-set="importe" t-value="0"/>
+                                            <t t-foreach="shipment[doc.id][ship][partner][city]" t-as="line">
+                                                <t t-set="line" t-value="line.with_context({'lang':'es_MX'})"/>
+                                                <t t-if="line.sale_order_id.name not in pedido">
+                                                    <t t-set="pedido" t-value="pedido+line.sale_order_id.name+','"/>
+                                                </t>
+                                                <t t-set="mts" t-value="mts+(line.product_id.volume*line.quantity_shipped)"/>
+                                                <t t-set="peso" t-value="peso+(line.product_id.weight*line.quantity_shipped)"/>
+                                                <t t-set="flete" t-value="flete+((line.order_line_id.freight_amount/line.order_line_id.product_uom_qty)*line.quantity_shipped)"/>
+                                                <t t-set="importe" t-value="importe+((line.order_line_id.net_sale/line.order_line_id.product_uom_qty)*line.quantity_shipped)"/>
+                                            </t>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td width="8%">Pedidos:</td>
+                                                    <td width="12%"><span t-esc="pedido"/></td>
+                                                    <td width="8%">Mts:</td>
+                                                    <td width="12%"><span t-esc="mts"/></td>
+                                                    <td width="8%">Peso:</td>
+                                                    <td width="12%"><span t-esc="peso"/></td>
+                                                    <td width="8%">Flete:</td>
+                                                    <td width="12%">$&#160;<span t-esc="flete"/></td>
+                                                    <td width="8%">Importe:</td>
+                                                    <td width="10%">$&#160;<span t-esc="importe"/></td>
+                                                </tr>
+                                            </table>
+                                            <br />
+                                            <table width="100%" class="mrp_shipment_table_detail">
+                                                <tr>
+                                                    <td width="30%">Picking</td>
+                                                    <td width="40%">Articulo</td>
+                                                    <td width="10%">Pedido</td>
+                                                    <td width="10%">Embarca</td>
+                                                    <td width="10%">Cantidad</td>
+                                                </tr>
+                                                <t t-foreach="shipment[doc.id][ship][partner][city]" t-as="line">
+                                                    <t t-set="line" t-value="line.with_context({'lang':'es_MX'})"/>
+                                                    <t t-if="line.product_id.id not in kit.keys()">
+                                                        <tr>
+                                                            <td align="center">
+                                                                <t t-set="picking" t-value="picking_open(line.sale_order_id)"></t>
+                                                                <t t-if="picking">
+                                                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', picking, 600, 100)" style="margin:2px 2px 2px 2px;width:300px;height:50px"/>
+                                                                    <br/>
+                                                                    <span t-esc="picking"/>
+                                                                </t>
+                                                            </td>
+                                                            <td align="center">
+                                                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', line.product_id.default_code, 600, 100)" style="margin:2px 2px 2px 2px;width:350px;height:50px"/>
+                                                                <br/>
+                                                                <span t-esc="line.product_id.default_code"/>
+                                                            </td>
+                                                            <td><span t-esc="line.sale_order_id.name"/></td>
+                                                            <td><span t-esc="line.product_id.family_id.name"/></td>
+                                                            <td><span t-esc="line.quantity_shipped"/></td>
+                                                        </tr>
+                                                    </t>
+                                                    <t t-if="line.product_id.id in kit.keys()">
+                                                        <tr class="mrp_shipment_tr_kit">
+                                                            <td align="center">
+                                                                <t t-set="picking" t-value="picking_open(line.sale_order_id)"></t>
+                                                                <t t-if="picking">
+                                                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', picking, 600, 100)" style="margin:2px 2px 2px 2px;width:300px;height:50px"/>
+                                                                    <br/>
+                                                                    <span t-esc="picking"/>
+                                                                </t>
+                                                            </td>
+                                                            <td align="center">
+                                                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', line.product_id.default_code, 600, 100)" style="margin:2px 2px 2px 2px;width:350px;height:50px"/>
+                                                                <br/>
+                                                                <span t-esc="line.product_id.default_code"/>
+                                                            </td>
+                                                            <td><span t-esc="line.sale_order_id.name"/></td>
+                                                            <td><span t-esc="line.product_id.family_id.name"/></td>
+                                                            <td><span t-esc="line.quantity_shipped"/></td>
+                                                        </tr>
+                                                        <t t-foreach="kit[line.product_id.id].bom_line_ids" t-as="bom_line">
+                                                            <t t-set="bom_line" t-value="bom_line.with_context({'lang':'es_MX'})"/>
+                                                            <t t-set="bom_line_qty" t-value="line.quantity_shipped * bom_line.product_qty"/>
+                                                            <tr class="mrp_shipment_tr_kit_child">
+                                                                <td align="center">
+                                                                    <t t-if="picking">
+                                                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', picking, 600, 100)" style="margin:2px 2px 2px 2px;width:300px;height:50px"/>
+                                                                        <br/>
+                                                                        <span t-esc="picking"/>
+                                                                    </t>
+                                                                </td>
+                                                                <td align="center">
+                                                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', bom_line.product_id.default_code, 600, 100)" style="margin:2px 2px 2px 2px;width:350px;height:50px"/>
+                                                                    <br/>
+                                                                    <span t-esc="bom_line.product_id.default_code"/>
+                                                                </td>
+                                                                <td><span t-esc="line.sale_order_id.name"/></td>
+                                                                <td><span t-esc="bom_line.product_id.family_id.name"/></td>
+                                                                <td><span t-esc="bom_line_qty"/></td>
+                                                            </tr>
+                                                        </t>
+                                                    </t>
+                                                </t>
+                                            </table>
+                                        </div>
+                                    </t>
+                                </div>
+                            </t>
+                        </div>
+                        <div style="page-break-after: always;">&#160;</div>
+                    </t>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_shipment_barcode">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="mrp_shipment.report_shipment_barcode_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

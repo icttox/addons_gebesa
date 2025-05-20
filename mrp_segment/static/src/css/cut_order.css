@@ -1,0 +1,26 @@
+.order_order_table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-size: 7pt;
+}
+.order_order_table td{
+    border-left: 1px solid black;
+    border-bottom: 0.5px solid black;
+    padding-left: 2px;
+    padding-right: 2px
+}
+
+.order_order_table_note{
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-size: 7pt;
+}
+.order_order_table_note th{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.order_order_title{
+    padding-top: 15px;
+    text-align: center;
+}

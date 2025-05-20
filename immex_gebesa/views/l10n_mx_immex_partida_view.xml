@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="view_l10_mx_immex_partida_Action">
+            <field name="name">Immex partida</field>
+            <field name="res_model">l10n.mx.immex.partida</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('clave_documento', 'in', ['IN', 'V1', 'AF', 'RT'])]</field>
+            <field name="context">{'create':False, 'edit':False, 'delete':False}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Immex Partida
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="view_l10_mx_immex_aduanera_entradas">
+            <field name="name">Información Aduanera de Entradas</field>
+            <field name="res_model">l10n.mx.immex.partida</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('clave_documento', 'in', ['IN', 'V1'])]</field>
+            <field name="context">{'create':False, 'edit':False, 'delete':False}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Información Aduanera de Entradas (Importaciones Temporales)
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="view_l10_mx_immex_aduanera_salidas">
+            <field name="name">Información Aduanera de Salidas</field>
+            <field name="res_model">l10n.mx.immex.partida</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('clave_documento', '=', 'RT')]</field>
+            <field name="context">{'create':False, 'edit':False, 'delete':False}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Información Aduanera de Salidas
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="view_l10_mx_immex_activo_fijo">
+            <field name="name">Activo Fijo</field>
+            <field name="res_model">l10n.mx.immex.partida</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('clave_documento', '=', 'AF')]</field>
+            <field name="context">{'create':False, 'edit':False, 'delete':False}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Activo Fijo
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="view_l10_mx_immex_partida_action_admin">
+            <field name="name">Immex partida(Admin)</field>
+            <field name="res_model">l10n.mx.immex.partida</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Immex Partida
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="immex_partida_menu" name="Immex Partida" parent="partida_menu" action="view_l10_mx_immex_partida_Action"/>
+        <menuitem id="immex_partida_menu_admin" name="Immex Partida (Admin)" parent="partida_menu" action="view_l10_mx_immex_partida_action_admin" sequence="1" groups="system_administrator.group_system_administrator_gebesa"/>
+
+        <record id="view_l10n_mx_immex_partida_search" model="ir.ui.view">
+            <field name="name">l10n.mx.immex.partida.search</field>
+            <field name="model">l10n.mx.immex.partida</field>
+            <field name="arch" type="xml">
+                <search string="Partidas">
+                    <field name="num_pedimento" filter_domain="[('num_pedimento','ilike',self)]" string="Numero pedimento"/>
+                    <field name="descripcion" filter_domain="[('descripcion','ilike',self)]" string="Descripcion de la mercancia"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_l10_mx_Action_immex_partida_form">
+            <field name="name">immex.partida.form</field>
+            <field name="model">l10n.mx.immex.partida</field>
+            <field name="arch" type="xml">
+                <form string="Immex partida Form">
+                    <sheet>
+                        <group col="6" colspan="2">
+                            <field name='patente'/>
+                            <field name='num_pedimento'/>
+                            <field name='clave_aduana'/>
+                            <field name='pedimento_num'/>
+                            <field name="descripcion"/>
+                            <field name='fraccion_arancelaria'/>
+                            <field name='secuencia_fraccion'/>
+                            <field name='subdivision_fraccion'/>
+                            <field name='precio_unitario'/>
+                            <field name="amount"/>
+                            <field name="saldo_mxn_pendiente"/>
+                            <field name='valor_aduana'/>
+                            <field name='valor_comercial'/>
+                            <field name='valor_usd'/>
+                            <field name='cantidad_udm_comercial'/>
+                            <field name='udm_comercial'/>
+                            <field name='cantidad_udm_tarifa'/>
+                            <field name='udm_tarifa'/>
+                            <field name='valor_agregado'/>
+                            <field name='clave_vinculacion'/>
+                            <field name='metodo_valorizacion'/>
+                            <field name='codigo_mercancia'/>
+                            <field name='marca_mercancia'/>
+                            <field name='modelo_mercancia'/>
+                            <field name='pais'/>
+                            <field name='pais_extranjero'/>
+                            <field name='estado_origen'/>
+                            <field name='estado_destino'/>
+                            <field name='estado_comprador'/>
+                            <field name='estado_vendedor'/>
+                            <field name='tipo_operacion'/>
+                            <field name='clave_documento'/>
+                            <field name='fecha_pago_real'/>
+                            <field name='pedimento_id'/>
+                            <field name='resumen_id'/>
+                            <field name='immex_type_id'/>
+                            <field name="porcentaje_desperdicio"/>
+                            <field name='regime_changed'/>
+                            <field name='regularization_entry_id'/>
+                            <field name='cantidad_udm_comercial_related' readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="materials_code"/>
+                        </group>
+                        <notebook>
+                            <page string="Permisos">
+                                <div>
+                                    <field name="permisos_ids">
+                                        <tree editable="bottom"> 
+                                            <field name='clave_permiso'/>
+                                            <field name='firma_descargo'/>
+                                            <field name='num_permiso'/>
+                                            <field name='valor_comercial_usd'/>
+                                            <field name='cantidad_tigie'/>
+                                            <field name='fecha_pago_real'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Garantias">
+                                <div>
+                                    <field name="garantias_ids">
+                                        <tree editable="bottom"> 
+                                            <field name='clave_garantia'/>
+                                            <field name='num_cuenta'/>
+                                            <field name='valor_unitario_titulo'/>
+                                            <field name='cantidad_udm_estimado'/>
+                                            <field name='fecha_pago_real'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Tasas">
+                                <div>
+                                    <field name="tasas_ids">
+                                        <tree editable="bottom"> 
+                                            <field name='tasa_contribucion'/>
+                                            <field name='tipo_tasa'/>
+                                            <field name='fecha_pago_real'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Contribuciones">
+                                <div>
+                                    <field name="contribuciones_ids">
+                                        <tree editable="bottom"> 
+                                            <field name='clave_contribucion'/>
+                                            <field name='importe_pago'/>
+                                            <field name='forma_pago'/>
+                                            <field name='fecha_pago_real'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Incidencias">
+                                <div>
+                                    <field name="incidencias_ids">
+                                        <tree editable="bottom"> 
+                                            <field name='fecha_ini'/>
+                                            <field name='fecha_fin'/>
+                                            <field name='hora_ini'/>
+                                            <field name='hora_fin'/>
+                                            <field name='grado_incidencia'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Mercancias">
+                                <div>
+                                    <field name="mercancias_ids">
+                                        <tree editable="bottom"> 
+                                            <field name='num_pedimento'/>
+                                            <field name='secuencia_fraccion'/>
+                                            <field name='num_serie'/>
+                                            <field name='kms'/>
+                                            <field name='fecha_pago_real'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Casos">
+                                <div>
+                                    <field name="casos_ids">
+                                        <tree editable="bottom"> 
+                                            <field name='pedimento_num'/>
+                                            <field name='fecha_pago_real'/>
+                                            <field name='clave_caso'/>
+                                            <field name='complemento'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Descargue Linea">
+                                <div>
+                                    <field name="descargue_line_ids">
+                                        <tree editable="bottom"> 
+                                            <field name='invoice_id'/>
+                                            <field name='invoice_line_id'/>
+                                            <field name='product_id'/>
+                                            <field name='quantity'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div> 
+                </form> 
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_l10_mx_Action_immex_partida_view_tree">
+            <field name="name">immex.partida.tree</field>
+            <field name="model">l10n.mx.immex.partida</field>
+            <field name="arch" type="xml">
+                <tree string="immex partida Tree">
+                    <field name='patente'/>
+                    <field name='num_pedimento'/>
+                    <field name='clave_aduana'/>
+                    <field name='pedimento_num'/>
+                    <field name="descripcion"/>
+                    <field name='fraccion_arancelaria'/>
+                    <field name='secuencia_fraccion'/>
+                    <field name='subdivision_fraccion'/>
+                    <field name='precio_unitario'/>
+                    <field name="amount"/>
+                    <field name='valor_aduana'/>
+                    <field name='valor_comercial'/>
+                    <field name='valor_usd'/>
+                    <field name='cantidad_udm_comercial'/>
+                    <field name='udm_comercial'/>
+                    <field name='cantidad_udm_tarifa'/>
+                    <field name='udm_tarifa'/>
+                    <field name='valor_agregado'/>
+                    <field name='clave_vinculacion'/>
+                    <field name='metodo_valorizacion'/>
+                    <field name='codigo_mercancia'/>
+                    <field name='marca_mercancia'/>
+                    <field name='modelo_mercancia'/>
+                    <field name='pais'/>
+                    <field name='pais_extranjero'/>
+                    <field name='estado_origen'/>
+                    <field name='estado_destino'/>
+                    <field name='estado_comprador'/>
+                    <field name='estado_vendedor'/>
+                    <field name='tipo_operacion'/>
+                    <field name='clave_documento'/>
+                    <field name='fecha_pago_real'/>
+                    <field name='resumen_id'/>
+                    <field name='immex_type_id'/>
+                    <field name='regime_changed'/>
+                    <field name='regularization_entry_id'/>
+                    <field name='cantidad_udm_comercial_related'/>
+                </tree>
+            </field>
+        </record>
+
+        <menuitem id="menu_aduanas" name="Módulo de Aduanas" parent="immex_menu" sequence="70"/>
+        <menuitem id="immex_aduanas_entrada" name="Información Aduanera de Entradas" parent="menu_aduanas" action="view_l10_mx_immex_aduanera_entradas"/>
+        <menuitem id="immex_aduanas_salida" name="Información Aduanera de Salidas" parent="menu_aduanas" action="view_l10_mx_immex_aduanera_salidas"/>
+        <menuitem id="immex_activo_fijo" name="Activo Fijo" parent="menu_aduanas" action="view_l10_mx_immex_activo_fijo"/>
+
+    </data>
+</odoo>

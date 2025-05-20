@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="view_hr_salary_assingments_tree" model="ir.ui.view">
+        <field name="name">hr.salary.assingments.tree</field>
+        <field name="model">hr.salary.assingments</field>
+        <field name="arch" type="xml">
+            <tree string="Salary assignments">
+                <field name="category_id"/>
+                <field name="employee_identification_id"/>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="employee_comp_id"/> 
+                <field name="salary_rule_id"/>
+                <field name="name"/>
+                <field name="contract_id"/>
+                <field name="struct_id"/>
+                <field name="date_assing"/>
+                <field name="date_paid"/>
+                <field name="code"/>
+                <field name="quantity"/>
+                <field name="rate"/>
+                <field name="amount"/>
+                <field name="total"/>
+                <field name="state"/>
+                <field name="credit_note"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_hr_salary_assingments_form" model="ir.ui.view">
+        <field name="name">hr.salary.assingments.form</field>
+        <field name="model">hr.salary.assingments</field>
+        <field name="arch" type="xml">
+            <form string="Assingments Line">
+            <header>
+                <button name="validate" type="object" states="draft" string="Validate" class="oe_highlight"/>
+                <button name="cancel" type="object" states="validated" string="Cancel" class="oe_highlight"/>
+                <button name="reset_draft" type="object" states="cancel" string="Reset to draft" class="oe_highlight"/>
+                <field name="state" widget="statusbar" statusbar_visible="draft,validated,reserved,paid,cancel"/>
+            </header>
+            <sheet>
+                <label for="name" class="oe_edit_only"/>
+                <h1><field name="name" attrs="{'readonly':[('state','not in', ['draft'])]}"/></h1>
+                <group col="4">
+                    <field name="code" readonly="1"/>
+                    <field name="date_paid" attrs="{'readonly':[('state','not in', ['draft'])]}"/>
+                    <field name="employee_identification_id" attrs="{'readonly':[('state','not in', ['draft'])]}"/>
+                    <field name="employee_id" attrs="{'readonly':[('state','not in', ['draft'])]}"/>
+                    <field name="department_id" attrs="{'readonly':[('state','not in', ['draft'])]}"/>
+                    <field name="employee_comp_id" attrs="{'readonly':[('state','not in', ['draft'])]}"/>
+                    <field name="contract_id" attrs="{'readonly':[('state','not in', ['draft'])]}"/>
+                    <field name="date_assing" attrs="{'readonly':[('state','not in', ['draft'])]}"/>
+                    <field name="slip_id" attrs="{'invisible':[('state','not in', ['reserved', 'paid'])], 'readonly':[('state','not in', ['draft'])]}"/>
+                    <field name="struct_id" readonly="1"/>
+                    <!-- <field name="rule_ids" invisible="1"/>   ('id', 'in', rule_ids),  -->
+                    <field name="salary_rule_id" domain="[('novelty', '=', True)]" attrs="{'readonly':[('state','not in', ['draft'])]}"/>
+                    <field name="credit_note"/>
+                </group>
+                <group string="Calculations">
+                    <field name="category_id" readonly="1"/>
+                    <field name="quantity" attrs="{'readonly':[('state','not in', ['draft'])]}"/>
+                    <!-- <field name="type_salary_rule" invisible="1"/>  'invisible': [('type_salary_rule', '!=', 'overtime')] -->
+                    <field name="rate" attrs="{'readonly':[('state','not in', ['draft'])]}"/>
+                    <field name="type_amount" required="True"/>
+                    <field name="amount" attrs="{'readonly':['|', ('state','not in', ['draft'])]}"/>
+                    <field name="total"/>
+                </group>
+                <field name="note" attrs="{'readonly':[('state','not in', ['draft'])]}"/>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_salary_assingments_search" model="ir.ui.view">
+        <field name="name">hr.salary.assingments.search</field>
+        <field name="model">hr.salary.assingments</field>
+        <field name="arch" type="xml">
+            <search string="Assingments">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="salary_rule_id" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hr_salary_assingments_view">
+        <field name="name">Salary assingments</field>
+        <field name="res_model">hr.salary.assingments</field>
+         <field name="view_id" ref="view_hr_salary_assingments_tree"/>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="salary_assingments" name="Salary assignments" sequence="4" parent="hr_payroll.menu_hr_payroll_root" groups="hr_payroll.group_hr_payroll_user"/>
+
+    <menuitem id="salary_assingments_action_menu" name="Salary assignments" sequence="5" parent="hr_salary_assignments.salary_assingments"
+              groups="hr_payroll.group_hr_payroll_user" action="hr_salary_assignments.action_hr_salary_assingments_view"/>
+
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_service_user,catalog.product.service.user,model_catalog_product_service,foreign_commerce_complement.group_coex_user,1,0,0,0
+access_product_service_manager,catalog.product.service.manager,model_catalog_product_service,foreign_commerce_complement.group_coex_manager,1,1,1,1

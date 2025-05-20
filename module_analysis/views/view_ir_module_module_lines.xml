@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_ir_module_line_form" model="ir.ui.view">
+        <field name="model">ir.module.module.lines</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="module_id" invisible="1"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_ir_module_line_tree" model="ir.ui.view">
+        <field name="model">ir.module.module.lines</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="module_id"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_ir_module_line" model="ir.actions.act_window">
+        <field name="name">Modules Line</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ir.module.module.lines</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_module_line"
+        name="Module lines"
+        parent="module_analysis.menu_module_analysis_settings" sequence="15"
+        action="module_analysis.action_ir_module_line"
+        groups="base.group_no_one"/>
+</odoo>

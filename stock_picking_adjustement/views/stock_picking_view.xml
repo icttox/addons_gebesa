@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='picking_total_cost_tree_view'>
+            <field name='name'>picking.total.cost.tree.view</field>
+            <field name='model'>stock.picking</field>
+            <field name='inherit_id' ref="stock.vpicktree"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='state']" position="before">
+                    <field name='total_cost'/>
+                </xpath>
+                <xpath expr="//field[@name='location_dest_id']" position="before">
+                    <field name='location_id'/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='stock_picking_form_view'>
+        	<field name='name'>stock.picking.form.view</field>
+        	<field name='model'>stock.picking</field>
+        	<field name='inherit_id' ref="stock.view_picking_form"/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//field[@name='location_dest_id']" position="attributes">
+                    <attribute name="attrs">{'invisible': False}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='location_id']" position="attributes">
+                    <attribute name="attrs">{'invisible': False}</attribute>
+                </xpath>
+                <field name='owner_id' position="before">
+                    <field name='adjustment_responsible'/>
+                    <field name='adj_reason'/>
+                    <field name='adj_class'/>
+                    <field name='type_adjustment_id'/>
+                </field>
+                <xpath expr="//field[@name='owner_id']" position="attributes">
+                    <attribute name="attrs">{'invisible': True}</attribute>
+                </xpath>
+                <xpath expr="//div/button[@name='action_assign_owner']" position="attributes">
+                    <attribute name="attrs">{'invisible': True}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='move_type']" position="attributes">
+                    <attribute name="attrs">{'readonly': True}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='picking_type_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': False}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='group_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': False}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='stock_picking_form_view2'>
+            <field name='name'>stock.picking.form.view</field>
+            <field name='model'>stock.picking</field>
+            <field name='inherit_id' ref="stock_picking_invoice.view_picking_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook/page[3]/group/group/field[@name='invoice_state']" position="attributes">
+                    <attribute name="attrs">{'readonly': True}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--record model='ir.ui.view' id='stock_picking_form_view3'>
+            <field name='name'>stock.picking.form.view</field>
+            <field name='model'>stock.picking</field>
+            <field name='inherit_id' ref="stock_picking_wave.view_stock_picking_wave_inherit"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='wave_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': True}</attribute>
+                </xpath>
+            </field>
+        </record-->
+    </data>
+</odoo>

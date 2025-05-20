@@ -1,0 +1,196 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_move_multicurrency
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-19 15:13+0000\n"
+"PO-Revision-Date: 2020-10-19 10:39-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__account_account_id
+msgid "Account Account"
+msgstr "Cuenta Cuenta"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__account_analytic_id
+msgid "Account Analytic"
+msgstr "Analítica de Cuenta"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__journal_id
+msgid "Account Journal"
+msgstr "Diario contable"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__account_move_id
+msgid "Account Move"
+msgstr "Movimiento de cuenta"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__account_move_line_id
+msgid "Account Move Line"
+msgstr "Línea de Movimiento de Cuenta"
+
+#. module: account_move_multicurrency
+#: model:ir.actions.act_window,name:account_move_multicurrency.account_move_mt_list_action
+#: model:ir.model,name:account_move_multicurrency.model_account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__account_move_multicurrency_id
+#: model:ir.ui.menu,name:account_move_multicurrency.account_move_mt_menu
+#: model:ir.ui.menu,name:account_move_multicurrency.courses_menu
+#: model:ir.ui.menu,name:account_move_multicurrency.main_account_move_mt_menu
+msgid "Account Move Multicurrency"
+msgstr "Movimiento de Cuenta Multimoneda"
+
+#. module: account_move_multicurrency
+#: model:ir.actions.act_window,name:account_move_multicurrency.Account_move_mt_line_list_action
+#: model:ir.model,name:account_move_multicurrency.model_account_move_multicurrency_line
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__account_move_multicurrency_line_ids
+#: model:ir.ui.menu,name:account_move_multicurrency.Account_move_mt_line_menu
+msgid "Account Move Multicurrency Line"
+msgstr "Línea de Movimiento de Cuenta Multimoneda"
+
+#. module: account_move_multicurrency
+#: model:res.groups,name:account_move_multicurrency.group_manager
+msgid "AccountMoveMulticurrency / Manager"
+msgstr "Movimiento de Cuenta Multimoneda / Gerente"
+
+#. module: account_move_multicurrency
+#: code:addons/account_move_multicurrency/models/models.py:82
+#, python-format
+msgid "Check your accounts. Should only be credit or debit."
+msgstr "Revise sus cuentas. Solo debe ser de crédito o débito."
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: account_move_multicurrency
+#: model_terms:ir.actions.act_window,help:account_move_multicurrency.account_move_mt_list_action
+msgid "Create the first account move multicurrency"
+msgstr "Crea el primer movimiento de cuenta multimoneda"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__create_uid
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__create_date
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__credit
+msgid "Credit"
+msgstr "Haber"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__debit
+msgid "Debit"
+msgstr "Debe"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__display_name
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: account_move_multicurrency
+#: model_terms:ir.ui.view,arch_db:account_move_multicurrency.account_move_mt_form_view
+msgid "Form Account Move Multicurrency"
+msgstr "Forma de Movimiento de Cuenta Multimoneda"
+
+#. module: account_move_multicurrency
+#: model_terms:ir.ui.view,arch_db:account_move_multicurrency.account_move_mt_line_form_view
+msgid "Form Account Move Multicurrency Line"
+msgstr "Forma de Línea de Movimiento de Cuenta Multimoneda"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__id
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency____last_update
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__write_uid
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__write_date
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__currency_id
+msgid "Moneda"
+msgstr "Moneda"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__consecutive
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__ref
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: account_move_multicurrency
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency__partner_id
+#: model:ir.model.fields,field_description:account_move_multicurrency.field_account_move_multicurrency_line__partner_id
+msgid "Socio"
+msgstr "Socio"
+
+#. module: account_move_multicurrency
+#: sql_constraint:account.move.multicurrency:0
+msgid "This field must be unique!"
+msgstr "¡Este campo debe ser único!"
+
+#. module: account_move_multicurrency
+#: model_terms:ir.ui.view,arch_db:account_move_multicurrency.account_move_mt_tree_view
+msgid "Tree Account Move Multicurrency"
+msgstr "Árbol de Movimiento de Cuenta Multimoneda"
+
+#. module: account_move_multicurrency
+#: model_terms:ir.ui.view,arch_db:account_move_multicurrency.account_move_mt_line_course_tree_view
+msgid "Tree Account Move Multicurrency Line Tree"
+msgstr "Árbol de Línea de Movimiento de Cuenta de Árbol"
+
+#. module: account_move_multicurrency
+#: model_terms:ir.ui.view,arch_db:account_move_multicurrency.account_move_mt_form_view
+msgid "Validate"
+msgstr "Validar"

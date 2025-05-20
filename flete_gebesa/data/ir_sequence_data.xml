@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="dispersion_diesel_sequence" model="ir.sequence">
+            <field name="name">Dispersion diesel</field>
+            <field name="code">dispersion.diesel</field>
+            <field name="prefix">Dispersion - </field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>            
+            <field name="company_id" eval="False"/>
+            <field name="padding">6</field>
+        </record>
+    </data>
+</odoo>

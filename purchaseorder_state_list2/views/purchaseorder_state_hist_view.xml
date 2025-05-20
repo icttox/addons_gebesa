@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+       <!-- Creacion de formulario purchase order state hist -->
+        <record model="ir.ui.view" id="purchase_order_hist_form_view">
+ 			<field name="name">purchaosorder.form</field>
+ 			<field name="model">purchase.order.state.hist</field>
+ 			<field name="arch" type="xml">
+ 				<form string="Purchase Order State History">
+ 					<sheet>
+ 						<group>
+ 					        <field name="date"/>
+ 							<field name="status_old"/>
+ 							<field name="status_new"/>
+ 						</group>
+ 					</sheet>
+ 				</form>
+ 			</field>
+ 		</record>
+ 		<!-- creacion de vista de arbol -->
+ 		<record model="ir.ui.view" id="purchase_order_hist_tree_view">
+ 			<field name="name">purchesorder.tree</field>
+ 			<field name="model">purchase.order.state.hist</field>
+ 			<field name="arch" type="xml">
+ 			  <tree string="Purchase Order State History">
+ 			  		<field name="date"/>
+ 			  		<field name="status_old"/>
+ 			  		<field name="status_new"/>
+ 			  </tree>
+ 			</field>
+ 		</record>
+ 	</data>
+</odoo>

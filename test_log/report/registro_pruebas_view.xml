@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<report
+            id="registro_pruebas"
+            model="test.log"
+            string="Registro de Pruebas"
+            report_type="qweb-pdf"
+            name="test_log.report_registro_pruebas"
+            file="test_log.report_registro_pruebas"
+        />
+                
+
+        <template id="report_registro_pruebas_document">
+            <t t-call="web.html_container">
+	            <t t-call="web.external_layout">
+	            	<h2><strong>Registro de Pruebas</strong></h2>
+	                <div class="page" style="font-size: 11pt;">
+                        <h3><span t-esc="doc.name"/></h3>
+                        <br/><br/>
+                        <div class="row mt16 mb32" id="informations">
+			                <div class="col-2">
+			                    <strong>Interesado:</strong>
+			                 </div>
+			                 <div class="col-2">
+			                    <p t-field="doc.user_id.name"/>
+			                </div>
+			                <div class="col-2">
+			                    <strong>Departamento:</strong>
+			                 </div>
+			                 <div class="col-2">
+			                    <p t-field="doc.department_id.name"/>
+			                </div>
+			                <div class="col-2">
+			                    <strong>Módulo:</strong>
+			                 </div>
+			                 <div class="col-2">
+			                    <p t-field="doc.module_id.shortdesc"/>
+			                </div>
+			            </div>
+			            <div class="row mt16 mb32" id="informations">
+			            	<div class="col-2">
+			                    <strong>Descripción de la Prueba:</strong>
+			                 </div>
+			                 <div class="col-3">
+			                    <p t-field="doc.description_test"/>
+			                </div>				                
+			                <div class="col-2">
+			                    <strong>Prioridad:</strong>
+			                </div>
+			                <div class="col-1">
+			                    <p t-if="doc.priority=='very_high'">
+			                    	MUY ALTA
+			                    </p>
+			                    <p t-if="doc.priority=='high'">
+			                    	ALTA
+			                    </p>
+			                    <p t-if="doc.priority=='normal'">
+			                    	NORMAL
+			                    </p>
+			                    <p t-if="doc.priority=='low'">
+			                    	BAJA
+			                    </p>
+			                </div>
+			                <div class="col-2">
+			                	<strong>Fecha Ejecución:</strong>
+			                </div>
+			                <div class="col-2">
+			                	<p t-field="doc.test_execution_date"/>
+			                </div>			                
+			            </div>
+			            <div class="row" id="informations">
+			                <div class="col-2">
+			                    <strong>Pruebas Solicitadas:</strong>
+			                </div>
+			                <div class="col-1">
+			                    <p t-field="doc.number_test_request"/>
+			                </div>
+			                <div class="col-2">
+			                    <strong>Prueba Exitosa:</strong>
+			                </div>
+			                <div class="col-1">
+			                    <p t-if="doc.successful_test==True">Sí</p>
+			                    <p t-if="doc.successful_test!=True">No</p>
+			                </div>
+			                <div class="col-5">
+			                    <strong>Póliza revisada por Contabilidad:</strong>
+			                </div>
+			                <div class="col-1">
+			                    <p t-if="doc.policy_revised==True">Sí</p>
+			                    <p t-if="doc.policy_revised!=True">No</p>
+			                </div>
+			            </div>
+			            <div class="row mt16 mb32" id="informations">
+			                <div class="col-2">
+			                	<strong>Resultados Esperados:</strong>
+			                </div>
+			                <div class="col-4">
+			                	<p t-field="doc.expected_results"/>
+			                </div>
+			                <div class="col-2">
+			                	<strong>Resultados Obtenidos:</strong>
+			                </div>
+			                <div class="col-4">
+			                	<p t-field="doc.results_obtained"/>
+			                </div>
+			            </div>
+			            <div class="row mt16 mb32" id="informations">
+			                <div class="col-4">
+			                	<strong>Notas Adicionales:</strong>
+			                </div>
+			                <div class="col-10 mw-100 mb-2">
+			                	<p t-field="doc.additional_notes"/>		
+			                </div>
+			            </div>
+
+		                <br/><br/><br/>
+		               	<table t-if="doc.move_ids" class="table table-sm o_main_table">
+	                        <thead>
+	                            <tr>
+	                            	<t t-set="colspan" t-value="7"/>
+	                                <th class="text-left">Fecha</th>
+	                                <th class="text-left">Número</th>
+	                                <th class="text-left">Empresa</th>
+	                                <th class="text-left">Referencia</th>
+	                                <th class="text-left">Diario</th>
+	                                <th class="text-right">Importe</th>
+	                                <th class="text-left">Estado</th>
+	                            </tr>
+	                        </thead>
+	                        <tbody  class="sale_tbody">
+	                            <tr t-as="move" t-foreach="doc.move_ids">
+	                                <td>
+	                                    <span t-field="move.date"/>
+	                                </td>
+	                                <td>
+	                                	<span t-field="move.name"/>
+	                                </td>
+	                                <td>
+	                                	<span t-field="move.partner_id"/>
+	                                </td>
+	                                <td>
+	                                	<span t-field="move.ref"/>
+	                                </td>
+	                                <td>
+	                                	<span t-field="move.journal_id"/>
+	                                </td>
+	                                <td class="text-right">
+	                                    <span t-field="move.amount" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;currency_field&quot;: &quot;o.currency_id&quot;}"/>
+	                                </td>
+	                                <td>
+	                                	<span t-field="move.state"/>
+	                                </td>
+	                            </tr>
+	                        </tbody>
+	                    </table>
+	                    <br/><br/><br/><br/><br/><br/><br/><br/>
+	                    <div class="table">
+	                		<div class="container">
+	                			<div class="row">
+		                			<div class="col-4">
+		                			</div>
+		                			<div class="col-4" style="border-bottom: 1.2px solid #000;">
+		                			</div>
+		                			<div class="col-4">
+		                			</div>
+		                		</div>
+		                		<div class="row">
+		                			<div class="col-4">
+		                			</div>
+		                			<div class="col-4 text-center">
+		                				<b><span t-field="doc.user_id.name"/></b>
+		                			</div>
+		                			<div class="col-4">
+		                			</div>
+		                		</div>
+		                	</div>
+		                </div>
+		            </div>
+	            </t>
+	        </t>
+        </template>
+
+        <template id="report_registro_pruebas">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="test_log.report_registro_pruebas_document"/>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

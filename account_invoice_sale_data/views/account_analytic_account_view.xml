@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_account_analytic_journ_form'>
+        	<field name='name'>view.account.analytic.journ.form</field>
+        	<field name='model'>account.analytic.account</field>
+        	<field name='inherit_id' ref="analytic.view_account_analytic_account_form"/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//sheet/group/group/field[@name='partner_id']" position="after">
+                    <field name="journal_sale_id" widget="selection" domain="[('type', '=', 'sale')]"/>
+                </xpath>
+        	</field>
+        </record>
+    </data>
+</odoo>

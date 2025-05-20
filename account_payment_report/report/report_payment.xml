@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="account_payment_report"
+            model="account.payment"
+            string="Payment"
+            report_type="qweb-pdf"
+            name="account_payment_report.report_account_payment"
+            file="account_payment_report.report_account_payment"
+        />
+
+        <template id="report_account_payment">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                <!-- <t t-call="report.internal_layout"> -->
+                    <div class="page">
+                        <t t-foreach="docs" t-as="doc">
+                            <h2>
+                                <span t-field="doc.name"/>
+                            </h2>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14pt">
+                                    <strong>
+                                        <span t-if="doc.partner_type==supplier">Proveedor:</span>
+                                        <span t-if="doc.partner_type!=supplier">Cliente:</span>
+                                    </strong>
+                                    <span t-field="doc.partner_id"/>
+                                </div>
+                            </div>
+
+                            <table width="100%" style="font-size:10pt;">
+                                <tr>
+                                    <td width="17%">
+                                        <strong>Tipo de pago:</strong>
+                                    </td>
+                                    <td width="33%">
+                                        <span t-field="doc.payment_type"/>
+                                    </td>
+                                    <td width="17%">
+                                        <strong>Fecha de pago:</strong>
+                                    </td>
+                                    <td width="33%">
+                                        <span t-field="doc.payment_date"/>
+                                    </td>
+                                </tr>
+                                <tr height="8px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        <strong>Tipo:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.prepayment_type"/>
+                                    </td>
+                                    <td>
+                                        <strong>Cuenta Analitica:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.account_analytic_id"/>
+                                    </td>
+                                </tr>
+                                <tr height="8px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        <strong>Metodo de pago:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.journal_id"/>
+                                    </td>
+                                    <td>
+                                        <strong>Responsable:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.responsible_id"/>
+                                    </td>
+                                </tr>
+                                <tr height="8px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        <strong>Monto Pagado:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.amount"/>
+                                    </td>
+                                    <td>
+                                        <strong>Monto Pendiente:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.pending_amount"/>
+                                    </td>
+                                </tr>
+                                <tr height="8px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        <strong>Memo:</strong>
+                                    </td>
+                                    <td colspan="3">
+                                        <span t-field="doc.communication"/>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <div class="row my-4">
+                                <div class="col-12" style="font-size:15pt">
+                                    <strong>Facturas</strong>
+                                </div>
+                            </div>
+                            <table class="table table-striped" width="100%" style="font-size:10pt;border: 1">
+                            	<tr>
+                            		<th>Asiento<br/>Contable</th>
+                                    <th>Descripcion</th>
+                                    <th>Origen</th>
+                                    <th>Referencia</th>
+                                    <th>Fecha</th>
+                                    <th>Fecha<br/>Vencimiento</th>
+                                    <th>Monto<br/>Original</th>
+                                    <th>Saldo<br/>Pendiente</th>
+                                    <th>Monto</th>
+                                </tr>
+                                <t t-foreach="doc.register_line_ids" t-as="line">
+                                    <tr>
+                                    	<td>
+                                            <span t-field="line.move_line_id.move_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.origin"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="line.reference"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.date_original"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.date_due"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.amount_original"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.amount_unreconciled"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.amount"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+                            <div class="row" style="page-break-after:always;">
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

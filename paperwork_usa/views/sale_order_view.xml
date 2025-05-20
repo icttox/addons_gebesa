@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="general_tag_num_view">
+			<field name="name">general.tag.num</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//sheet/group/group/field[@name='partner_shipping_id']" position="after">
+					<field name="general_tag_num"/>
+					<field name="contract_num"/>
+				</xpath>
+				<xpath expr="//form/header/button[@name='action_closed']" position="after">
+                    <button name="force_quotation_send"  string="Acknowledgement" type="object" context="{'execute_acknowledgement': True}"/>
+                </xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="contract_num">
+			<field name="name">contract.num</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale_order_gebesa.view_order_form"/>
+			<field name="arch" type="xml">
+				
+		<xpath expr="//page[@name='production_data']/group/group/field[@name='priority']" position="after">
+			<field name="delivery_instruction"/>
+		</xpath>
+
+	</field>
+	</record>
+
+	</data>
+</odoo>

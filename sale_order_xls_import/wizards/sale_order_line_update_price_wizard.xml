@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_line_update_price_wiz_form" model="ir.ui.view">
+        <field name="name">sale.order.line.update.price.wiz.form</field>
+        <field name="model">sale.order.line.update.price.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Update Price">
+                <group>
+                    <field name="price_unit" required="True"/>
+                </group>
+                <footer>
+                    <button name="update_price" string="Update" type="object" class="btn-primary"/>
+                    Or
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_order_line_update_price"
+            multi="True"
+            key2="client_action_multi" name="Update Price"
+            res_model="sale.order.line.update.price.wizard" src_model="sale.order.line"
+            view_mode="form" target="new" view_type="form"
+            groups="sale_order_xls_import.group_update_order_line_price_done"/>
+</odoo>

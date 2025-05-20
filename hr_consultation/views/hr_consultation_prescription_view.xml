@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="consultation_prescription_form_view">
+            <field name="name">hr.consultation.prescription.form</field>
+            <field name="model">hr.consultation.prescription</field>
+            <field name="arch" type="xml">
+                <form string="Form Consultation Prescription">
+                    <sheet>
+                        <group>                           
+                            <field name="consultation_id"/>
+                            <field name="name"/>
+                            <field name="dose"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

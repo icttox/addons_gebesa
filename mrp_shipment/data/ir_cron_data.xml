@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_delete_shipment_partner" model="ir.cron">
+            <field name="name">Delete shipment partner not shipment id</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="model_id" ref="model_mrp_shipment_partner"/>
+            <!-- <field eval="'delete_partner_not_shipment_id'" name="function"/>
+            <field eval="" name="args"/> -->
+            <field name="state">code</field>
+            <field name="code">model.delete_partner_not_shipment_id()</field>
+            <field name="active" eval="True" />
+        </record>
+        <record id="ir_cron_recalculate_shiptment_status" model="ir.cron">
+            <field name="name">Recalcula el estatus de embarque de los pedidos</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="model_id" ref="model_sale_order"/>
+            <!-- <field eval="'recalculate_shiptment_status'" name="function"/>
+            <field eval="" name="args"/> -->
+            <field name="state">code</field>
+            <field name="code">model.recalculate_shiptment_status()</field>
+            <field name="active" eval="True" />
+        </record>
+    </data>
+</odoo>

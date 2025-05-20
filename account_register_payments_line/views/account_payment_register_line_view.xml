@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_invoices_topay_tree" model="ir.ui.view">
+            <field name="name">account.register.payments.wizard.inherit</field>
+            <field name="model">account.register.payments</field>
+            <field name="inherit_id" ref="account.view_account_payment_from_invoices"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/group/field[@name='communication']" position="after">
+                    <field name='account_analytic_id' required='1'/>
+                </xpath>
+                <xpath expr="//field[@name='amount']" position="attributes">
+                    <attribute name="attrs">{'required':False}</attribute>
+                </xpath>                                     
+                <form position='inside'>
+                    <notebook>
+                        <page string="Invoices">
+                            <field name="line_ids">
+                                <tree string="Invoices to pay" editable="top" create="false" decoration-danger="amount &gt; amount_unreconciled or amount &lt; 0">
+                                    <field name="move_line_id" readonly="1"/>
+                                    <field name="name" readonly="1"/>
+                                    <field name="origin" readonly="1"/>
+                                    <field name="reference" readonly="1"/>
+                                    <field name="date_original" readonly="1"/>
+                                    <field name="date_due" readonly="1"/>
+                                    <field name="amount_original" readonly="1"/>
+                                    <field name="amount_unreconciled" readonly="1"/>
+                                    <field name="reconcile"/>
+                                    <field name="amount"  sum="Total to pay"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="daily_inspection"
+            model="quality.alert"
+            string="Inspeccion Diaria"
+            report_type="qweb-pdf"
+            name="management_system_gebesa.daily_inspection_report"
+            file="management_system_gebesa.daily_inspection_report"
+        />
+        <record id="management_system_gebesa.daily_inspection" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag_letter_vertical" />
+        </record>
+
+        <template id="daily_inspection_report_layout">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+            <div class="header" style="font-size: 10pt;">
+                <t t-raw="workcenter_ids[workcenter].daily_inspection_header"/>
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer o_standard_footer" style="font-size: 10pt;">
+                <div class="text-right mt-4">
+                </div>
+            </div>
+        </template>
+
+        <template id="daily_inspection_document">
+            <t t-call="web.html_container">
+                <t t-foreach="alert_ids[alert_date][workcenter]" t-as="oven">
+                    <t t-call="management_system_gebesa.daily_inspection_report_layout">
+                        <div class="page" style="font-size: 10pt;">
+                            <div class="row"><div class="col-12"/></div>
+                            <div class="row mt-5"><div class="col-12"/></div>
+                            <br/>
+                            <br/>
+                            <div class="row mt-3">
+                                <div class="col-1">Inspector:</div>
+                                <div class="col-3" style="border-bottom: 1px solid black;"/>
+                                <div class="col-2"/>
+                                <div class="col-1">Horno:</div>
+                                <div class="col-2" style="border-bottom: 1px solid black;">
+                                    <span t-esc="oven"/>
+                                </div>
+                                <div class="col-1"/>
+                                <div class="col-1">Fecha:</div>
+                                <div class="col-1" style="border-bottom: 1px solid black;">
+                                    <span t-esc="alert_date"/> 
+                                </div>
+                            </div>
+                            <table class="table table-sm table-bordered text-center mt-5">
+                                <tr>
+                                    <th colspan="4"/>
+                                    <th colspan="7">Rechazados</th>
+                                    <th colspan="2">Estatus</th>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">Pedido</th>
+                                    <th rowspan="2">Cant.</th>
+                                    <th rowspan="2">Descripcion del mueble</th>
+                                    <th rowspan="2">Color</th>
+                                    <th rowspan="2">Cant.</th>
+                                    <th rowspan="2">Defecto</th>
+                                    <th rowspan="2">Area</th>
+                                    <th colspan="2">Disposicion</th>
+                                    <th rowspan="2">Acciones tomadas</th>
+                                    <th rowspan="2">Rechazado</th>
+                                    <th rowspan="2">Liberado</th>
+                                    <th rowspan="2">Fecha de <br/>liberacion</th>
+                                </tr>
+                                <tr>
+                                    <th>Retrab</th>
+                                    <th>Scrap</th>
+                                </tr>
+                                <tr><th colspan="11"> </th></tr>
+                                <t t-set="qty_rev" t-value="0"/>
+                                <t t-set="qty_rej" t-value="0"/>
+                                <t t-foreach="alert_ids[alert_date][workcenter][oven]" t-as="order">
+                                    <t t-foreach="alert_ids[alert_date][workcenter][oven][order]" t-as="prod">
+                                        <t t-set="inde" t-value="0"/>
+                                        <t t-foreach="alert_ids[alert_date][workcenter][oven][order][prod]" t-as="alert">
+                                            <t t-if="inde == 0">
+                                                <t t-set="qty_rev" t-value="qty_rev + alert.qty_reviewed"/>
+                                            </t>
+                                            <t t-set="qty_rej" t-value="qty_rej + alert.qty_rejected"/>
+                                            <tr>
+                                                <td><t t-if="inde == 0"><span t-field="alert.sale_id.name"/></t></td>
+                                                <td><t t-if="inde == 0"><span t-field="alert.qty_reviewed"/></t></td>
+                                                <td>
+                                                    <t t-if="inde == 0">
+                                                        <span t-if="alert.product_id.individual_name != False" t-field="alert.product_id.individual_name"/>
+                                                        <span t-if="alert.product_id.individual_name == False" t-field="alert.product_id.name"/>
+                                                    </t>
+                                                </td>
+                                                <td><span t-field="alert.color"/></td>
+                                                <td><span t-field="alert.qty_rejected"/></td>
+                                                <td><span t-field="alert.flaw_id.code"/></td>
+                                                <td></td>
+                                                <td><t t-if="alert.provision == 'repair'">X</t></td>
+                                                <td><t t-if="alert.provision == 'scrap'">X</t></td>
+                                                <td><span t-field="alert.action_corrective"/></td>
+                                                <td></td>
+                                                <td><t t-if="alert.stage_id.done">&#10003;</t></td>
+                                                <td><span t-field="alert.date_close" t-options='{"widget": "date"}'/></td>
+                                            </tr>
+                                            <t t-set="inde" t-value="inde + 1"/>
+                                        </t>
+                                    </t>
+                                </t>
+                            </table>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div class="row mt-5">
+                                <div class="col-4">
+                                    <div class="row">
+                                        <div class="col-6 border">Total de muebles revisados</div>
+                                        <div class="col-3 border"><span t-esc="qty_rev"/></div>
+                                        <div class="col-3 border">100.0%</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 border">Total de defectos</div>
+                                        <div class="col-3 border"><span t-esc="qty_rej"/></div>
+                                        <t t-set="per_rej" t-value="(100 / qty_rev) * qty_rej"/>
+                                        <div class="col-3 border"><span t-esc="'%.2f'%(per_rej)"/>%</div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12 text-center">
+                                            <strong>Revisar medidas de acuerdo al plano.</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-2"/>
+                                        <div class="col-8" style="border-bottom: 1px solid black"/>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2"/>
+                                        <div class="col-8 text-center">Firma responsable de area</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-2"/>
+                                        <div class="col-8" style="border-bottom: 1px solid black"/>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2"/>
+                                        <div class="col-8 text-center">Firma inspector de calidad</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <template id="daily_inspection_report">
+            <t t-call="web.html_container">
+                <t t-foreach="alert_ids" t-as="alert_date">
+                    <t t-foreach="alert_ids[alert_date]" t-as="workcenter">
+                        <t t-call="management_system_gebesa.daily_inspection_document"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

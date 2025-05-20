@@ -1,0 +1,366 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_level_price
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-01 18:21+0000\n"
+"PO-Revision-Date: 2017-03-01 18:21+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:65
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_dis_may
+#, python-format
+msgid "Base Dis-May 03:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:66
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_dis_may
+#, python-format
+msgid "Base Price 03"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:60
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_base_price
+#, python-format
+msgid "Base Price:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:61
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_base_price
+#, python-format
+msgid "Base.Price"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:110
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_standard_cost
+#, python-format
+msgid "Cost Std:"
+msgstr ""
+
+#. module: product_level_price
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_standard_cost
+msgid "Cost of the product template used for standard stock valuation in accounting and used as a base price on purchase orders. Expressed in the default unit of measure of the product."
+msgstr ""
+
+#. module: product_level_price
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: product_level_price
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:132
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_description
+#, python-format
+msgid "Description:"
+msgstr ""
+
+#. module: product_level_price
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: product_level_price
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_id
+msgid "ID"
+msgstr ""
+
+#. module: product_level_price
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: product_level_price
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: product_level_price
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: product_level_price
+#: model:ir.ui.view,arch_db:product_level_price.product_level_price_form
+#: model:ir.ui.view,arch_db:product_level_price.product_level_price_tree
+msgid "Level of Price by Articles"
+msgstr ""
+
+#. module: product_level_price
+#: model:ir.ui.view,arch_db:product_level_price.product_level_price_form
+msgid "Level of price by Articles"
+msgstr ""
+
+#. module: product_level_price
+#: model:ir.actions.act_window,name:product_level_price.product_level_price_action
+#: model:ir.ui.menu,name:product_level_price.product_level_price_menu
+msgid "Level of price by articles"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:124
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_mu_dist_may_id
+#, python-format
+msgid "M.U.Dist - May:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:130
+#: selection:product.level.price,description:0
+#, python-format
+msgid "Metal-Madera"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:16
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_dis_a
+#, python-format
+msgid "Price 00"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:21
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_dis_b
+#, python-format
+msgid "Price 00.01"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:26
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_dis_c
+#, python-format
+msgid "Price 01"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:31
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_dis_d
+#, python-format
+msgid "Price 02"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:36
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_dis_e
+#, python-format
+msgid "Price 03"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:41
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_dis_f
+#, python-format
+msgid "Price 04"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:46
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_dis_g
+#, python-format
+msgid "Price 05"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:51
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_dis_h
+#, python-format
+msgid "Price 06"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:56
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_dis_i
+#, python-format
+msgid "Price 07"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:20
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_dis_b
+#, python-format
+msgid "Price Dis 00-01:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:15
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_dis_a
+#, python-format
+msgid "Price Dis 00:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:25
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_dis_c
+#, python-format
+msgid "Price Dis 01:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:30
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_dis_d
+#, python-format
+msgid "Price Dis 02:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:35
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_dis_e
+#, python-format
+msgid "Price Dis 03:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:40
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_dis_f
+#, python-format
+msgid "Price Dis 04:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:45
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_dis_g
+#, python-format
+msgid "Price Dis 05:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:50
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_dis_h
+#, python-format
+msgid "Price Dis 06:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:55
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_dis_i
+#, python-format
+msgid "Price Dis 07:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:71
+#: code:addons/product_level_price/models/product_level_price.py:76
+#: code:addons/product_level_price/models/product_level_price.py:81
+#: code:addons/product_level_price/models/product_level_price.py:86
+#: code:addons/product_level_price/models/product_level_price.py:91
+#: code:addons/product_level_price/models/product_level_price.py:96
+#: code:addons/product_level_price/models/product_level_price.py:101
+#: code:addons/product_level_price/models/product_level_price.py:106
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_may_a
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_may_b
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_may_c
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_may_d
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_may_e
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_may_f
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_may_g
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_price_may_h
+#, python-format
+msgid "Price May"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:70
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_may_a
+#, python-format
+msgid "Price May 00:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:75
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_may_b
+#, python-format
+msgid "Price May 01:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:80
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_may_c
+#, python-format
+msgid "Price May 02:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:85
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_may_d
+#, python-format
+msgid "Price May 03:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:90
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_may_e
+#, python-format
+msgid "Price May 04:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:95
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_may_f
+#, python-format
+msgid "Price May 05:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:100
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_may_g
+#, python-format
+msgid "Price May 06:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:105
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_price_may_h
+#, python-format
+msgid "Price May 07:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:118
+#: code:addons/product_level_price/models/product_level_price.py:125
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_mu_dist_may_id
+#: model:ir.model.fields,help:product_level_price.field_product_level_price_product_id
+#, python-format
+msgid "Product"
+msgstr ""
+
+#. module: product_level_price
+#: model:res.groups,name:product_level_price.group_product_level_price
+msgid "Product Level Price / Manager"
+msgstr ""
+
+#. module: product_level_price
+#: model:ir.model,name:product_level_price.model_product_level_price
+msgid "Product Price Level"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:117
+#: model:ir.model.fields,field_description:product_level_price.field_product_level_price_product_id
+#, python-format
+msgid "Product:"
+msgstr ""
+
+#. module: product_level_price
+#: code:addons/product_level_price/models/product_level_price.py:131
+#: selection:product.level.price,description:0
+#, python-format
+msgid "Silleria-Cyber"
+msgstr ""
+

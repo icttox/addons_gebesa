@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="product_product_immex_tree_view" model="ir.ui.view">
+            <field name="name">product.product.immex.tree.view></field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='name']" position="after">
+                    <field name="l10n_mx_edi_tariff_fraction_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_uom_form_view_inh_variantdefaultcode" model="ir.ui.view">
+            <field name="name">product_uom.form.view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='uom_id']" position="before">
+                    <field name="product_uom"/>
+                    <field name="salida_a24"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="immex_type_id_view" model="ir.ui.view">
+            <field name="name">immex_type_id.form.view</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product_structure_gebesa.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='product_classification']/group/group/field[@name='group_id']" position="after">
+                    <field name="immex_type_id"/>
+                    <field name="apply_download_immex"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="immex_product_template_search_view" model="ir.ui.view">
+            <field name="name">immex.product.template.search</field>
+            <field name="model">product.template</field>
+            <field name="mode">primary</field>
+            <field name="inherit_id" ref="product.product_template_search_view"/>
+            <field name="arch" type="xml">
+            <xpath expr="//filter[@name='consumable']" position="after">
+                <separator/>
+                <filter string="Temporal Import Materials" name="temporal_import_materials" domain="[('immex_type_id', '!=', False)]"/>
+            </xpath>
+            </field>
+        </record>
+
+        <record id="material_action" model="ir.actions.act_window">
+            <field name="name">Materials</field>
+            <field name="res_model">product.template</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="immex_product_template_search_view"/>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_temporal_import_materials": 1}</field>
+        </record>
+
+        <record id="immex_product_product_search_view" model="ir.ui.view">
+            <field name="name">immex.product.product.search</field>
+            <field name="model">product.product</field>
+            <field name="mode">primary</field>
+            <field name="inherit_id" ref="product.product_search_form_view"/>
+            <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <separator/>
+                <filter string="Temporal Import Products" name="temporal_import_products" domain="[('salida_a24', '=', True)]"/>
+            </xpath>
+            </field>
+        </record>
+
+        <record id="product_action" model="ir.actions.act_window">
+            <field name="name">Products</field>
+            <field name="res_model">product.product</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="immex_product_product_search_view"/>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_temporal_import_products": 1}</field>
+        </record>
+
+        <menuitem id="menu_product_material" action="material_action" name="Materiales" parent="immex_gebesa.menu_l10n_mx_cat" sequence="80"/>
+        <menuitem id="menu_product_product" action="product_action" name="Productos" parent="immex_gebesa.menu_l10n_mx_cat" sequence="90"/>
+    </data>
+</odoo>

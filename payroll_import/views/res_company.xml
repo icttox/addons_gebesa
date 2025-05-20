@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_company_form'>
+            <field name='name'>view.company.db.microsip.form</field>
+            <field name='model'>res.company</field>
+            <field name='inherit_id' ref="base.view_company_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook/page/group/group[@name='social_media']" position="after">
+                    <group string="Microsip">
+                        <field name="db_microsip"/>
+                        <field name="host_microsip"/>
+                        <field name="port_microsip"/>
+                        <field name="user_microsip"/>
+                        <field name="pass_microsip" password="True" />
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

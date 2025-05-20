@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_segment_view_order_form'>
+        	<field name='name'>mrp.segment.view.order.form</field>
+        	<field name='model'>sale.order</field>
+        	<field name='inherit_id' ref="sale.view_order_form"/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//group/group/field[@name='complement_saleorder_id']" position="after">
+                    <field name="production_status" readonly="1"/>
+                </xpath>
+                <xpath expr="//group/group/field[@name='pricelist_id']" position="before">
+                    <field name="segment_status" readonly="1"/>
+                    <field name="invoice_status"/>
+                </xpath>
+                <xpath expr="//notebook/page/group/group/field[@name='invoice_status']" position="replace">
+
+                </xpath>
+                <xpath expr="//notebook/page/field[@name='order_line']/tree/field[@name='qty_to_invoice']" position="before">
+                    <field name="segment_qty" readonly="1"/>
+                </xpath>
+        	</field>
+        </record>
+
+        <record model='ir.ui.view' id='view_order_tree'>
+            <field name='name'>view_order_segment_status_tree</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref='sale.view_order_tree'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='invoice_status']" position="before">
+                    <field name='production_status' readonly="True"/>
+                    <field name='segment_status' readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

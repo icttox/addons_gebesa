@@ -1,0 +1,154 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="quality_change_management_tree">
+      <field name="name">quality.change.management.tree</field>
+      <field name="model">quality.change.management</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="folio"/>
+          <field name="date"/>
+          <field name="name_id"/>
+          <field name="departament_id"/>
+          <field name="exchange_rate"/>
+          <field name="company_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="quality_change_management_form">
+      <field name="name">quality.change.management.form</field>
+      <field name="model">quality.change.management</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <field name="status" widget="statusbar" clickable="True"/>
+          </header>
+          <sheet>
+            <group>
+              <group>              
+                <field name="folio" readonly="1"/>
+                <field name="name_id"/>
+                <field name="exchange_rate"/>
+              </group>
+              <group>              
+                <field name="date"/>
+                <field name="departament_id"/>
+                <field name="company_id" invisible="1"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Description">
+                <group>
+                  <group>
+                    <field name="description"/>
+                    <field name="risks"/>
+                  </group>
+                  <group>
+                    <field name="profits"/>
+                    <field name="resources"/>
+                  </group>
+                </group>
+              </page>
+              <page string="Modifications to consider once the change has been made">
+                <group>
+                  <group>
+                    <field name="risk_matrix" colspan="1" widget="boolean_toggle"/>
+                    <field name="risk_matrix_name" attrs="{'invisible':[('risk_matrix', '!=', True)]}"/>
+                    <field name="risk_matrix_description" attrs="{'invisible':[('risk_matrix', '!=', True)]}"/>
+                    <field name="risk_matrix_date" attrs="{'invisible':[('risk_matrix', '!=', True)]}"/>
+                    <field name="indicator" colspan="1" widget="boolean_toggle"/>
+                    <field name="indicator_name" attrs="{'invisible':[('indicator', '!=', True)]}"/>
+                    <field name="indicator_description" attrs="{'invisible':[('indicator', '!=', True)]}"/>
+                    <field name="indicator_date" attrs="{'invisible':[('indicator', '!=', True)]}"/>
+                    <field name="procedures" colspan="1" widget="boolean_toggle"/>
+                    <field name="procedures_name" attrs="{'invisible':[('procedures', '!=', True)]}"/>
+                    <field name="procedures_description" attrs="{'invisible':[('procedures', '!=', True)]}"/>
+                    <field name="procedures_date" attrs="{'invisible':[('procedures', '!=', True)]}"/>
+                  </group>
+                </group>
+              </page>
+              <page string="Activitis">
+                <field name="activitis_ids">
+                  <tree editable="bottom" string="Activitis">
+                    <field name="activities"/>
+                    <field name="responsible_id"/>
+                    <field name="date_execution"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="Verificacion">
+                <group>
+                  <group>
+                    <field name="check"/>
+                    <field name="date_close"/>
+                  </group>
+                  <group>
+                    <field name ="revised_id"/>
+                  </group>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+           <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div> 
+        </form>
+      </field>
+    </record>
+
+    <record id="quality_change_management_view_kanban" model="ir.ui.view">
+      <field name="name">quality.change.management.kanban</field>
+      <field name="model">quality.change.management</field>
+      <field name="priority">10</field>
+      <field name="arch" type="xml">
+        <kanban default_group_by="status">
+          <field name="folio"/>
+          <field name="date"/>
+          <field name="exchange_rate"/>
+          <templates>
+            <t t-name="kanban-box">
+              <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                <div class="row">
+                  <div class="col-12">
+                    <strong><span><li>Folio: <field name="folio"/></li></span></strong>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <li>Tipo de cambio: <field name="exchange_rate"/></li>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <field name="departament_id"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <field name="name_id"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <field name="date"/>
+                  </div>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+    
+    <record model="ir.actions.act_window" id="quality_change_management_action">
+      <field name="name">Change management</field>
+      <field name="res_model">quality.change.management</field>
+      <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <menuitem name="Change management" id="quality_change_management_menu" parent="management_system_gebesa.iso_actions"
+              action="management_system_gebesa.quality_change_management_action"/>
+
+  </data>
+</odoo>

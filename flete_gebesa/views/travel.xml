@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>        
+        <record model='ir.ui.view' id='freight_travel_form'>
+            <field name='name'>freight.travel.form</field>
+            <field name='model'>tms.travel</field>
+            <field name='inherit_id' ref="tms.view_tms_travel_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/header/button[@name='action_progress']" position="before">
+                    <button name="report_ecu" string="ECU" type="object" icon="fa-tachometer"/>
+                    <button name="report_stop" string="Report of stops" type="object" icon="fa-stop"/>
+                    <button name="print_cartas_porte" string="Imprimir Carta Porte" type="object"/>
+                    <button name="print_shipment_data" string="Exportar datos del embarque" type="object"/>
+                    <button name="get_no_gear_coast_report" string="Reporte manejo en neutral" type="object"/>
+                    <button name="paid_travel" string="Pagar viaje" type="object" groups="flete_gebesa.group_decrease_travel_income"/>
+                </xpath>
+                <xpath expr="//form/sheet/group/group[2]/field[@name='framework']" position="before">
+                    <field name="employee_two_id" attrs="{'readonly':[('state','in',('progress','done', 'closed'))]}"/>
+                </xpath>
+                <xpath expr="//group/group/field[@name='operating_unit_id']" position="attributes">
+                    
+                </xpath>
+                <xpath expr="//form/header/button[@name='action_draft']" position="after">
+                    <button name="get_tollstation_ids" type="object"
+                                string="Get Tollstation" states="draft" groups="tms.group_traffic,tms.group_expenses"/>
+                </xpath>
+
+                <xpath expr="//form/sheet/group/group[1]/field[@name='paid']" position="after">
+                    <field name="viaje_pagado"/>
+                    <field name="price_per_km" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                    <field name="attachment_count"/>
+                    <field name="gps_url"/>
+                </xpath>
+                <xpath expr="//form/sheet/group/group[2]/field[@name='framework']" position="after">
+                    <field name="shipment_id"/>
+                    <field name="estimated_total_cost"/>
+                    <field name="estimated_total_cost_without_driver"/>
+                    <field name="final_total_cost_wo_driver"/>
+                    <field name="final_total_cost"/>
+                    <field name="ingreso_operacion"/>
+                    <field name="margen_utilidad"/>
+                    <field name="margen_utilidad_without_driver"/>
+                    <field name="margen_final"/>
+                    <field name="refacturacion" attrs="{'readonly':[('refacturacion_id','=',False)]}"/>
+                    <field name="local_travel"/>
+                    <field name="complement"/>
+                    <field name="expense_id"/>
+                </xpath>
+                <xpath expr="//notebook/page[2]" position="after">
+                    <page string="Tollstations">
+                        <field name="tollstation_ids" context="{'default_operating_unit_id': operating_unit_id}" attrs="{'readonly':[('state','in',('closed'))]}"/>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook/page[6]/group" position="after">
+                    <group>
+                        <field name="details_payment"/>
+                        <field name="pay_day"/>
+                    </group>
+                </xpath>
+                <xpath expr="//notebook/page[7]/group/group/field[@name='fuel_efficiency_extraction']" position="after">
+                    <field name="estimated_liters"/>
+                    <field name="estimated_cost"/>
+                    <field name="rendimiento"/>
+                    <field name="estimated_diesel_user"/>
+                    <field name="estimated_cost_user"/>
+                </xpath>
+                <xpath expr="//notebook/page[7]/group[2]/field[@name='date_start_real']" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','not in',('done', 'closed','draft','progress'))]}</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[7]/group[2]/field[@name='date_end_real']" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','not in',('done', 'closed','draft','progress'))]}</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[7]" position="after">
+                    <page string="Habitos Manejo">
+                        <group>
+                            <group>
+                                <field name="vel_max_km"/>
+                                <field name="rp_ms_1700"/>
+                                <field name="rp_ms_1800"/>
+                                <field name="rp_ms_1900"/>
+                                <field name="rp_ms_2000"/>
+                                <field name="rp_ms_2100"/>
+                                <field name="rp_ms_max"/>
+                            </group>
+                            <group>
+                                <field name="frenados_moderados"/>
+                                <field name="frenados_fuertes"/>
+                                <field name="frenados_max"/>
+                                <field name="aceleraciones_moderadas"/>
+                                <field name="aceleraciones_fuertes"/>
+                                <field name="aceleraciones_max"/>
+                            </group>
+                        </group>
+                    </page>
+                    <page string="Paradas">
+                        <field name="travel_stop_ids" nolabel="1" readonly="1">
+                            <tree>
+                                <field name="address"/>
+                                <field name="latitude"/>
+                                <field name="longitude"/>
+                                <field name="distance"/>
+                                <field name="duration"/>
+                                <field name="from_date"/>
+                                <field name="to_date"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Manejo en neutral">
+                        <field name="gear_coast_ids" nolabel="1" readonly="1">
+                            <tree>
+                                <field name="begin_date_time"/>
+                                <field name="begin_speed"/>
+                                <field name="begin_latitude"/>
+                                <field name="begin_longitude"/>
+                                <field name="end_date_time"/>
+                                <field name="end_speed"/>
+                                <field name="end_latitude"/>
+                                <field name="end_longitude"/>
+                                <field name="distance"/>
+                                <field name="duration"/>
+                                <field name="max_speed"/>
+                                <field name="avg_speed"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook/page[8]" position="after">
+                    <page string="Datos de refacturacion">
+                        <group>
+                                <field name="refacturacion_id" domain="[('state', '!=', 'draft'),('move_name', '!=', 'False')]"/>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook/page[8]" position="after">
+                    <page string="Waybill Information">
+                        <group col="4">
+                            <field colspan="4" domain="[('customer','=',True), ('is_company', '=', True)]" name="partner_id" required="1"/>
+                            <field context="{'search_default_customer':1, 'show_address': 1}" domain="[('parent_id','=',partner_id)]" name="partner_order_id" options="{&quot;always_reload&quot;: True}"/>
+                            <field context="{'search_default_customer':1, 'show_address': 1}" domain="[('parent_id','=',partner_id)]" name="partner_invoice_id" options="{&quot;always_reload&quot;: True}"/>
+                            <!--field colspan="4" name="purchase_order"  required="1"/-->
+                            <field context="{'search_default_customer':1, 'show_address': 1}" name="departure_address_id" options="{&quot;always_reload&quot;: True}"/>
+                            <field context="{'search_default_customer':1, 'show_address': 1}" name="arrival_address_id" options="{&quot;always_reload&quot;: True}"/>
+                            <field name="upload_point" string="Observaciones carga"/>
+                            <field name="download_point"  string="Observaciones entrega"/>
+                            <field colspan="4" name="instructions_driver"/>                          
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook/page[8]" position="after">
+                    <page string="Waybill Lines">
+                        <group>
+                            <separator coslpan="4" string="Transportable"/>
+                            <field attrs="{'readonly':[('state','in',('cancel'))]}" colspan="4" name="transportable_line_ids" nolabel="1">
+                                <tree>
+                                    <field name="transportable_id"/>
+                                    <field name="name"/>
+                                    <field name="transportable_uom_id"/>
+                                    <field name="quantity"/>
+                                    <field name="notes"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="transportable_id"/>
+                                            <field name="quantity"/>
+                                        </group>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="transportable_uom_id"/>
+                                        </group>
+                                        <label for="notes"/>
+                                        <field name="notes"/>
+                                    </group>
+                                </form>
+                            </field>
+                            <separator colspan="4" string="Waybill Lines"/>
+                                <field attrs="{'readonly':[('state','in',('cancel'))]}" colspan="4" name="waybill_line_ids" nolabel="1">
+                                    <tree editable="bottom" string="Waybill Lines">
+                                        <field name="product_id" domain="[('tms_product_category', 'in', ('freight', 'move', 'insurance', 'tolls', 'other'))]"/>
+                                        <field name="name"/>
+                                        <field name="product_qty"/>
+                                        <field name="unit_price"/>
+                                        <field name="discount"/>
+                                        <field name="tax_ids" widget="many2many_tags"/>
+                                        <field name="price_subtotal"/>
+                                        <field invisible="1" name="tax_amount"/>
+                                    </tree>
+                                </field>
+                                <group col="4" colspan="4">
+                                    <group colspan="2">
+                                        <field attrs="{'readonly':[('state','in',('cancel'))]}" name="tax_line_ids" nolabel="1">
+                                            <tree create="false" delete="false">
+                                                <field name="tax_id"/>
+                                                <field name="base"/>
+                                                <field name="tax_amount" sum="Impuestos"/>
+                                            </tree>
+                                        </field>
+                                    </group>
+                                    <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total">
+                                        <field name="amount_freight" options="{'currency_field': 'currency_id'}" widget="monetary"/>
+                                        <field name="amount_move" options="{'currency_field': 'currency_id'}" widget="monetary"/>
+                                        <field name="amount_highway_tolls" options="{'currency_field': 'currency_id'}" widget="monetary"/>
+                                        <field name="amount_insurance" options="{'currency_field': 'currency_id'}" widget="monetary"/>
+                                        <field name="amount_other" options="{'currency_field': 'currency_id'}" widget="monetary"/>
+                                        <div class="oe_subtotal_footer_separator oe_inline">
+                                            <label for="amount_untaxed"/>
+                                        </div>
+                                        <field class="oe_subtotal_footer_separator" name="amount_untaxed" nolabel="1" options="{'currency_field': 'currency_id'}" widget="monetary"/>
+                                        <field name="amount_tax" options="{'currency_field': 'currency_id'}" widget="monetary"/>
+                                        <div class="oe_subtotal_footer_separator oe_inline">
+                                            <label for="amount_total"/>
+                                        </div>
+                                        <field class="oe_subtotal_footer_separator" name="amount_total" nolabel="1" options="{'currency_field': 'currency_id'}" widget="monetary"/>
+                                    </group>
+                                </group>
+                            </group>
+                        </page>
+                    </xpath>
+                    <xpath expr="//notebook/page[8]" position="after">
+                        <page string="Invoice Information">
+                            <group colspan="2">
+                                <separator colspan="2" string="Client Invoice Data"/>
+                                <field name="invoice_id"/>
+                                <field name="invoice_paid"/>
+                                <newline/>
+                            </group>
+                        </page>
+                    </xpath>
+                </field>
+        </record>
+        <record model='ir.ui.view' id='freight_travel_tree'>
+            <field name='name'>freight.travel.tree</field>
+            <field name='model'>tms.travel</field>
+            <field name='inherit_id' ref="tms.view_tms_travel_tree"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//tree/field[@name='name']" position="after">
+                    <field name="estimated_total_cost"/>
+                    <field name="estimated_total_cost_without_driver"/>
+                    <field name="final_total_cost_wo_driver"/>
+                    <field name="final_total_cost"/>
+                    <field name="ingreso_operacion"/>
+                    <field name="margen_utilidad"/>
+                    <field name="margen_final"/>
+                    <field name="attachment_count"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='paid']" position="after">
+                    <field name="invoice_id"/>
+                </xpath>
+
+                <xpath expr="//tree/field[@name='waybill_ids']" position="after">
+                    <field name="partner_id"/>
+                    <field name="refacturacion"/>
+                    <field name="local_travel"/>
+                    <field name="complement"/>
+                </xpath>
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="decoration-primary">margen_utilidad &lt; 50</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/flete_gebesa/static/src/css/travel_instructions.css"/>
+            </xpath>
+        </template>
+
+        <report
+            id="travel_instructions_2"
+            model="tms.travel"
+            string="Travel Instructions"
+            report_type="qweb-pdf"
+            name="flete_gebesa.report_travel_instructions_2"
+            file="flete_gebesa.report_travel_instructions_2"
+        />
+
+        <template id="travel_instructions_2_layout">
+            <div class="header">
+                <div id="cabezera">
+                </div>
+                <div width="100%">
+                    <div id="logo">
+                        <img class="logo" t-if="doc.operating_unit_id.company_id.logo" t-att-src="image_data_uri(doc.operating_unit_id.company_id.logo)" alt="Logo" style="max-width: 150px;"/>
+                    </div>
+                    <div style="text-align:center;" id="titulo">
+                        INSTRUCCIONES A FLETERA
+                    </div>
+                </div>
+                <div id="departamento">
+                    DEPARTAMENTO EMBARQUES
+                </div>
+                <div id="departamento">
+                    <span t-esc="travel[doc.id]['Empresa']"/>
+                </div>
+                <div style="text-align:center;" id="titulo">
+                        Fecha: <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                </div>
+            </div>
+
+            <div class="article o_report_layout_standard">
+                <t t-raw="0"/>
+            </div>
+
+            <!-- FOOTER-->
+            <div class="footer">
+                <div class="row" style="font-size: small">
+                    <div  align="center" class="col-4">
+                        <b><span t-esc="doc.employee_id.name"/></b>
+                        <br/>
+                        _______________________________
+                        <br/>
+                        Nombre y Firma del Operador
+                    </div>
+                    <div align="center" class="col-4">
+                        <b><span t-esc="nombre_usuario"/></b>
+                        <br/>
+                        _______________________________
+                        <br/>
+                        Nombre y Firma Depto. Embarques
+                    </div>
+                    <div align="center" class="col-4">
+                        <br/>
+                        _______________________________
+                        <br/>
+                        Nombre y Firma Credito y Cobranza
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_travel_instructions_document_2">
+            <!--<t t-call="report.internal_layout">-->
+            <t t-call="flete_gebesa.travel_instructions_2_layout">
+                <div class="page" style="font-size: 10pt;">
+                    <t t-set="doc" t-value="doc.sudo()"/>
+                    <t t-set="tot_1" t-value="0"/>
+                    <t t-set="tot_2" t-value="0"/>
+                    <div class="row">
+                        <div class="col-3" id="logo">
+                            <img class="logo_porte" t-if="doc.create_uid.partner_id.company_id.logo" t-att-src="'data:image/png;base64,%s' % doc.create_uid.partner_id.company_id.logo"/>
+                        </div>
+                        <div class="col-12" id="cobranza">
+                            INSTRUCCIONES A FLETERA
+                        </div>
+                    </div>
+                    <br/>
+                    <div>
+                        <t t-set="total_m" t-value="0"/>
+                        <t t-set="total_fle" t-value="0"/>
+                        <t t-set="total_imp" t-value="0"/>
+                        <t t-set="m" t-value="0"/>
+                        <t t-set="n" t-value="1"/>
+                        <br/>
+                        <table class="mrp_shipment_table" width="100%">
+                            <tr>
+                                <td id="primer_tabla" width="10%">Folio:</td>
+                                <td width="15%">&#160;<span t-esc="doc.name"/></td>
+                                <td id="primer_tabla" width="10%">Fecha:</td>
+                                <td>&#160;<span t-esc="doc.date"/></td>
+                                <td id="primer_tabla" width="10%">Tabulador:</td>
+                                <td class="currency" width="15%">&#160;<span t-esc="doc.route_id.normal_box"/></td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Repartos:</td>
+                                <td>&#160;0</td>
+                                <td id="primer_tabla">Operador:</td>
+                                <td>&#160;<span t-esc="doc.employee_id.name"/></td>
+                                <td id="primer_tabla">Celular:</td>
+                                <td>&#160;<span t-esc="doc.employee_id.work_phone"/></td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Camion:</td>
+                                <td>&#160;<span t-esc="doc.unit_id.idname"/></td>
+                                <td id="primer_tabla">Caja:</td>
+                                <td>&#160;<span t-esc="doc.unit_id.load_capacity"/></td>
+                                <td id="primer_tabla">Kms:</td>
+                                <td>&#160;<span t-esc="doc.route_id.distance"/></td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Placas:</td>
+                                <td>&#160;<span t-esc="doc.unit_id.license_plate"/></td>
+                                <td id="primer_tabla">Ruta:</td>
+                                <td>&#160;<span t-esc="doc.route_id.name"/></td>
+                                <td id="primer_tabla">Origin:</td>
+                                <td>&#160;<span t-esc="doc.departure_id.name"/></td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Embarque:</td>
+                                <td>&#160;<span t-esc="doc.shipment_id.folio"/></td>
+                                <td id="primer_tabla">Fletera:</td>
+                                <td>&#160;<span t-esc="travel[doc.id]['Fletera']"/></td>
+                                <td id="primer_tabla">Remisión:</td>
+                                <td>&#160;</td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Carta Porte:</td>
+                                <td>&#160;<span t-esc="doc.waybill_ids.name"/></td>
+                                <td id="primer_tabla">Fecha Sal:</td>
+                                <td>&#160;<span t-esc="doc.date_start"/></td>
+                                <td id="primer_tabla">Destination:</td>
+                                <td>&#160;<span t-esc="doc.arrival_id.name"/></td>
+                            </tr> 
+                        </table>
+                    </div>
+                    <div class="col-xs-12" id="cobranza">
+                        COBRANZA
+                    </div>
+                    <div class="col-xs-12" id="tablaa"> 
+                    <!--SECCION TABLA -->
+                        <table width="100%" class="mrp_shipment_table_detail" style="top:15pt">
+                            <tr>
+                                <td id="titulo_tabla" width="25%">Cliente</td>
+                                <td id="titulo_tabla" width="19%">Ins. de Cobranza</td>
+                                <td id="titulo_tabla" width="8%">Pedido</td>
+                                <td id="titulo_tabla" width="9%">Factura</td>
+                                <td id="titulo_tabla" width="8%">Planta</td>
+                                <td id="titulo_tabla" width="9%">Importe</td>
+                                <td id="titulo_tabla" width="8%">Flete</td>
+                                <td id="titulo_tabla" width="8%">Entrega</td>
+                            </tr>
+                            <t t-foreach="travel[doc.id]['Shipment']" t-as="trav2">
+                                <tr>
+                                    <td>
+                                        <t><span t-esc="trav2['usuario']"/></t>
+                                    </td>
+                                    <td>
+                                        <t><span t-esc="trav2['credit_note']"/></t>
+                                    </td>
+                                    <td  align="center">
+                                        <t><span style="text-align:center" t-esc="trav2['orden']"/></t>
+                                    </td>
+                                    <td align="center">
+                                        <t><span style="text-align:center" t-esc="trav2['factura']"/></t>
+                                    </td>
+                                    <td align="center">
+                                        <t><span t-esc="trav2['almacen']"/></t>
+                                    </td>
+                                    <td align="right">
+                                        <t class="currency"><span t-esc="trav2['importe']"/></t>
+                                    </td>
+                                    <td align="right">
+                                        <t class="currency"><span t-esc="trav2['flete']"/></t>
+                                    </td>
+                                    <td>
+                                        <t><span t-esc="trav2['entrega']"/></t>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                    <div style="page-break-after: always;">&#160;</div>
+                    <!--SEGUNDA HOJA!!! -->
+                    <div class="col-xs-12" id="cobranza">
+                        INSTRUCCIONES A FLETERA
+                    </div>
+                    <br/>
+                    <div style="padding:0px;">
+                        <t t-set="total_m" t-value="0"/>
+                        <t t-set="total_fle" t-value="0"/>
+                        <t t-set="total_imp" t-value="0"/>
+                        <t t-set="m" t-value="0"/>
+                        <t t-set="n" t-value="1"/>
+                        <br/>
+                        <table width="100%" class="mrp_shipment_table">
+
+                            <tr>
+                                <td id="primer_tabla" width="10%">Folio:</td>
+                                <td width="15%">&#160;<span t-esc="doc.name"/></td>
+                                <td id="primer_tabla" width="10%">Fecha:</td>
+                                <td id="contorno">&#160;<span t-esc="doc.date"/></td>
+                                <td id="primer_tabla" width="10%">Tabulador:</td>
+                                <td class="currency" width="15%">&#160;<span t-as="tabu" t-esc="doc.route_id.normal_box"/></td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Repartos:</td>
+                                <td>&#160;0</td>
+                                <td id="primer_tabla">Operador:</td>
+                                <td>&#160;<span t-esc="doc.employee_id.name"/></td>
+                                <td id="primer_tabla">Celular:</td>
+                                <td>&#160;<span t-esc="doc.employee_id.work_phone"/></td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Camion:</td>
+                                <td>&#160;<span t-esc="doc.unit_id.idname"/></td>
+                                <td id="primer_tabla">Caja:</td>
+                                <td>&#160;<span t-esc="doc.unit_id.load_capacity"/></td>
+                                <td id="primer_tabla">Kms:</td>
+                                <td>&#160;<span t-esc="doc.route_id.distance"/></td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Placas:</td>
+                                <td>&#160;<span t-esc="doc.unit_id.license_plate"/></td>
+                                <td id="primer_tabla">Destino:</td>
+                                <td>&#160;<span t-esc="doc.route_id.name"/></td>
+                                <td id="primer_tabla">Origin:</td>
+                                <td>&#160;<span t-esc="doc.departure_id.name"/></td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Embarque:</td>
+                                <td>&#160;<span t-esc="doc.shipment_id.folio"/></td>
+                                <td id="primer_tabla">Fletera:</td>
+                                <td>&#160;<span t-esc="travel[doc.id]['Fletera']"/></td>
+                                <td id="primer_tabla">Remisión:</td>
+                                <td>&#160;</td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">Carta Porte:</td>
+                                <td>&#160;<span t-esc="doc.waybill_ids.name"/></td>
+                                <td id="primer_tabla">Fecha Sal:</td>
+                                <td>&#160;<span t-esc="doc.date_start"/></td>
+                                <td id="primer_tabla">Destination:</td>
+                                <td>&#160;<span t-esc="doc.arrival_id.name"/></td>
+                            </tr> 
+                        </table>
+                    </div>
+                        <div class="col-xs-12" id="cobranza">
+                            INSTRUCCIONES DE VIAJE PARA EL OPERADOR:
+                        </div>
+                        <div class="col-xs-12" id="tablaa">
+                            <table width="100%" class="mrp_shipment_table_detail" style="top:15pt">
+                                <tr><td id="titulo_tabla" width="6%" align="center">Secuencia&#160;</td>
+                                    <td id="titulo_tabla" width="47%" align="center">Cliente</td>
+                                    <td id="titulo_tabla" width="39%" align="center">Instrucción</td>  
+                                </tr>
+                                <t t-foreach="concatena" t-as="con">
+                                    <tr>
+                                        <td>
+                                            <t>&#160;</t>
+                                        </td>
+                                        <td>
+                                            <t><span t-esc="con"/></t>
+                                        </td>
+                                        <td align="center">
+                                            <t>RECABAR NOMBRE, FIRMA Y SELLO EN FACTURAS</t>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+                            <br/>
+                            <br/>
+                        </div>
+                        <div class="col-xs-12">
+                            <table width="100%" style="padding:0px;">
+                                <tr>
+                                    <h6>
+                                        &#160;
+                                    </h6>
+                                </tr>
+                                <tr>
+                                    <h6>
+                                        &#160;
+                                    </h6>
+                                </tr>
+                                <tr>
+                                    <h6>
+                                        &#160;
+                                    </h6>
+                                </tr>
+                                <tr>
+                                    <h6>
+                                        &#160;
+                                    </h6>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div class="col-xs-12" id="cobranza2">
+                            DATOS DEL VIAJE:
+                        </div>
+                        <div class="col-xs-12" id="tablaa2">
+                            <t t-foreach="datos_viaje[doc.id]" t-as="viaje">
+                                <table width="100%" class="mrp_shipment_table_3">
+                                    <tr>
+                                        <td align="center" id="titulo_tabla" width="10%">Almacen</td>
+                                        <td align="center" id="titulo_tabla" width="20%">Metros Cubicos</td>
+                                        <td align="center" id="titulo_tabla" width="20%">Peso(Kg)</td>
+                                        <td align="center" id="titulo_tabla" width="22%">Flete Tabulador</td>
+                                        <td align="center" id="titulo_tabla" width="22%">Flete por Pedido</td>
+                                    </tr>
+                                    <t t-foreach="datos_viaje[doc.id]" t-as="via">
+                                      <t t-foreach="datos_viaje[doc.id][via]" t-as="vi">
+                                         <t t-foreach="len(vi['peso'])" t-as="vi2">
+                                            <tr>
+                                                <td align="center">
+                                                    <t><span t-esc="vi['almacen'][vi2][0]"/></t>
+                                                </td>
+                                                <td align="center">
+                                                    <t><span t-esc="vi['volume'][vi2][0]"/></t>
+                                                </td>
+                                                <td align="center">
+                                                    <t><span t-esc="vi['peso'][vi2][0]"/></t>
+                                                </td>
+                                                <td align="center" class="currency">
+                                                    <t>
+                                                        <t t-if="doc.route_id.normal_box > 1 and vi['tot'][0][0] and vi['volume'][vi2][0]">
+                                                            <span t-esc="'{0:,.2f}'.format(int(((vi['volume'][vi2][0]/ vi['tot'][0][0])* doc.route_id.normal_box)))"/>
+                                                        </t>
+                                                    </t>
+                                                </td>
+                                                <!--
+                                                <t t-if="doc.route_id.normal_box">
+                                                    <t t-if="vi['tot'][0][0])">
+                                                        <td align="center" class="currency">
+                                                            <t>
+                                                        
+                                                                <span t-esc="'{0:,.2f}'.format(int(((vi['volume'][vi2][0]/ vi['tot'][0][0])* doc.route_id.normal_box)))"/>
+                                                           
+                                                            </t>
+                                                        </td>
+                                                    </t>
+                                                </t>-->
+                                                <td align="center" class="currency">
+                                                    <t>
+                                                        <span t-esc="vi['flete_pedido'][vi2][0]"/>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                      </t>
+                                    </t>
+                                </table>
+                                <table width="100%" class="mrp_shipment_table_3">
+                                    <t t-foreach="totales[doc.id]" t-as="via">
+                                      <t t-foreach="totales[doc.id][via]" t-as="vi">
+                                         <t t-foreach="len(vi['peso_tot'])" t-as="vi2">
+                                            <tr>
+                                                <td align="center" width="10%">
+                                                    <t>Totales</t>
+                                                </td>
+                                                <td align="center" width="20%">
+                                                    <t><span t-esc="vi['volume_tot'][vi2][0]"/></t>
+                                                </td>
+                                                <td align="center" width="20%">
+                                                    <t><span t-esc="vi['peso_tot'][vi2][0]"/></t>
+                                                </td>
+                                                <td align="center" width="22%" class="currency">
+                                                    <t><span t-esc="doc.route_id.normal_box"/></t>
+                                                </td>
+                                                <td align="center" width="22%" class="currency">
+                                                    <t><span t-esc="vi['flete_pedido_tot'][vi2][0]"/></t>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+                                                </td>
+                                                <td>
+                                                    
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td align="center">
+                                                    <t>Dif. FLete: </t>
+                                                    <t>En Contra</t>
+                                                </td>
+                                                <td align="center" class="currency">
+                                                    <t><span t-esc="'{0:,.2f}'.format(int(doc.route_id.normal_box - vi['flete_pedido_tot'][vi2][0]))"/></t>
+                                                </td>
+                                            </tr> 
+                                        </t>
+                                      </t>
+                                    </t>
+                                </table>
+                            </t>
+                        </div>
+                    <!-- FIN DE LAS TABLAS-->
+                    <div class="col-xs-12" id="cobranza3" style="text-decoration:underline;">
+                        DEVOLUCIONES: NO
+                    </div>
+                    <!-- FIN DE LAS TABLAS-->
+                    <div class="col-xs-12" id="cobranza4">
+                        <b>Fecha de Regreso:</b> ____________________
+                    </div>
+                    <br/>
+                    <br/>
+                    <!-- FIN DE LAS TABLAS-->
+                    <div class="col-xs-12" id="cobranza5">
+                        <b>Observaciones:</b> 
+                    </div>
+                </div> 
+            </t>           
+           <!-- </t>-->
+        </template>
+        <template id="report_travel_instructions_2">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="flete_gebesa.report_travel_instructions_document_2"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_production_segment_form'>
+            <field name='name'>mrp.production.segment.form</field>
+            <field name='model'>mrp.production.segment</field>
+            <field name='arch' type='xml'>
+                <form string='Segment'>
+                    <group>
+                        <field name='name'/>
+                        <field name='location_id' domain="[('type_stock_loc','=','wip')]"/>
+                    </group>
+                    <p class="oe_grey">
+                        *Do not take into account production orders that are not in the states "Awaiting Raw Materials" or "Ready to Produce".
+                    </p>
+                    <footer>
+                        <button string="Create Segment" name="create_segment" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_production_segment"
+            multi="True"
+            key2="client_action_multi" name="Segment"
+            res_model="mrp.production.segment" src_model="mrp.production"
+            view_mode="form" target="new" view_type="form" />
+    </data>
+</odoo>

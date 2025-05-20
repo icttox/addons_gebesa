@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="tag_prod_2_4_sin_barcode"
+            model="mrp.production"
+            string="Etiqueta 2X4(sin codigo de barras)"
+            report_type="qweb-pdf"
+            name="report_tags.report_tag_prod_2_4_sin_barcode"
+            file="report_tags.report_tag_prod_2_4_sin_barcode"
+        />
+        <record id="report_tags.tag_prod_2_4_sin_barcode" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag_2x4" />
+        </record>
+
+        <template id="report_tag_prod_2_4_sin_barcode_document">
+            <t t-set="doc" t-value="doc.with_context({'lang': lang})"/>
+            <div class="page">
+                <t t-foreach="range(int(doc.product_uom_qty))" t-as="qty">
+                    <table style="width:100%;">
+                        <tr>
+                            <td style="font-size: 4pt;">
+                                &#160;
+                            </td>
+                        </tr>
+                            <tr>
+                            <td align="center" style="font-size: 18pt; padding-top: 7%;">
+                                <span t-esc="code_customer[doc.id]['customer_code'].customer_code"/>
+                            </td>
+                        </tr>
+                        <tr>                                
+                            <td align="center" style="font-size: 16pt; padding-top: 2%;">
+                                <t t-set="trans" t-value="code_customer[doc.id]['customer_code'].with_context({'lang': lang})"/>
+                                <span t-esc="trans.customer_description"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="page-break-after: always;">&#160;</div>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_prod_2_4_sin_barcode">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-set="lang" t-value="code_customer[doc.id]['partner_id'].lang"/>
+                        <t t-call="report_tags.report_tag_prod_2_4_sin_barcode_document" t-lang="lang"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

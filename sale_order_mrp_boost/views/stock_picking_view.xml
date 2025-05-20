@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mrp_boost_picking_form_view" model="ir.ui.view">
+            <field name="name">mrp.boost.picking.form.view</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/group/field[@name='picking_type_id']" position="after">
+                    <field name="segment_id" readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

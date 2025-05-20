@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="mrp_bom_copy" model="ir.ui.view">
+            <field name="name">mrp.bom.copy</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp_cut_detail.mrp_bom_cut_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="action_copy_cut_detail" string="Copiar Sin Detalle Corte" type="object" groups="cut_detail_no_copy.group_mrp_bom_copy"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

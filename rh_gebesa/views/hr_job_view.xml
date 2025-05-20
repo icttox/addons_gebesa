@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="hr_job_form" model="ir.ui.view">
+            <field name="name">hr.job.form</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='hr_responsible_id']" position="after">
+                    <field name="wage"/>
+                    <field name="daily_salary"/>
+                    <field name="assistance_award"/>
+                    <field name="punctuality_award"/>
+                </xpath>
+                <div name="button_box" position="inside">
+                    <button name="propagate_salaries" string="Propagar salarios" type="object" class="oe_stat_button" icon="fa-money"/>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

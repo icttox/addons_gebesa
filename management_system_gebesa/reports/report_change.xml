@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="report_change_layout">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+            <div class="header" style="font-size: 10pt;">
+                <div class="row">
+                    <div class="col-3 border" align="center">
+                        <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" class="ml-3" style="z-index: 50; max-width: 100px; max-height: 60px;margin-top: 0px;" />
+                    </div>
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-9 border" style="text-align:center;">
+                                <strong>Titulo del Documento: Gestion del cambio</strong>
+                                
+                            </div>
+                            <div class="col-3 border" style="text-align:center;">
+                                <strong>Revision: 0</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="row">
+                                    <div class="col-6 border" style="text-align:center;">
+                                        <strong>Codigo: </strong>
+                                        <br/>F-SGC-28
+                                    </div>
+                                    <div class="col-6 border" style="text-align:center;">
+                                        <strong>Deriva de: </strong>
+                                        <br/>P-SGC-08
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 border" style="text-align:center;">
+                                <strong>Fecha de Revision</strong><br/> <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer o_standard_footer" style="font-size: 10pt;">
+                <div class="text-right mt-4">
+                    <div t-if="report_type == 'pdf'" class="text-muted">
+                        <span class="page"/> / <span class="topage"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <report
+            id="change_report"
+            model="quality.change.management"
+            string="Reporte Gestion del cambio"
+            report_type="qweb-pdf"
+            name="management_system_gebesa.report_change"
+            file="management_system_gebesa.report_change"
+        />
+       <template id="report_change">
+            <t t-call="web.html_container">
+                <t t-call="management_system_gebesa.report_change_layout">
+   
+                    <div class="page">
+                        <t t-foreach="docs" t-as="doc">
+        
+                            <table width="100%" style="font-size:10pt;">
+                                <tr>
+                                    <td width="17%">
+                                        <strong>Folio de solicitud:</strong>
+                                    </td>
+                                    <td width="33%">
+                                        <span t-field="doc.folio"/>
+                                    </td>
+                                    <td width="17%">
+                                        <strong>Fecha de solicitud:</strong>
+                                    </td>
+                                    <td width="33%">
+                                        <span t-field="doc.date"/>
+                                    </td>
+                                </tr>
+                                <tr height="8px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        <strong>Nombre del solicitante:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.name_id"/>
+                                    </td>
+                                </tr>
+                                <tr height="8px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        <strong>Departamento:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.departament_id"/>
+                                    </td>
+                                </tr>
+                                <tr height="8px"><td></td></tr>
+                                <tr>
+                                    <td>
+                                        <strong>Tipo de cambio:</strong>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.exchange_rate"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14px">
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        <strong>Descripcion del cambio</strong>
+                                    </div>
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <span t-esc="doc.description"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14px">
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        <strong>Fecha de cierre</strong>
+                                    </div>
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <span t-esc="doc.date_close"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row">
+                                <div class="col-12 mb16" style="font-size:14px">
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        <strong>Estado de accion</strong>
+                                    </div>
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <span t-esc="doc.status"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

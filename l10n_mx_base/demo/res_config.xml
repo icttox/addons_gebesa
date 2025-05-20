@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+     <function name="load_lang" model="lang.config.settings"/>
+</odoo>

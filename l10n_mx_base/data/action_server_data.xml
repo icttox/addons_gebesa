@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+
+    <!--record model="ir.actions.server" id="ping_pac_server_action">
+        <field name="name">Ping PAC server</field>
+        <field name="model_id" eval="ref('l10n_mx_base.model_res_pac')"/>
+        <field name="state">code</field>
+        <field name="condition"></field>
+        <field name="sequence">5</field>
+        <field name="code">
+# Available locals:
+#  - time, datetime, dateutil: Python libraries
+#  - env: Odoo Environement
+#  - model: Model of the record on which the action is triggered
+#  - object: Record on which the action is triggered if there is one, otherwise None
+#  - workflow: Workflow engine
+#  - Warning: Warning Exception to use with raise
+# To return an action, assign: action = {...}
+object.ping_pac_server()
+        </field>
+    </record-->
+
+    <!--record model="base.action.rule" id="action_rule_write_create_ping_pac_server">
+        <field name="name">Ping PAC server</field>
+        <field name="model_id" eval="ref('l10n_mx_base.model_res_pac')"/>
+        <field name="sequence">0</field>
+        <field name="active">True</field>
+        <field name="kind">on_create_or_write</field>
+        <field name="server_action_ids" eval="[(6, 0, [ref('l10n_mx_base.ping_pac_server_action')])]"/>
+    </record-->
+
+    <record model="ir.actions.server" id="generate_electronic_document_server_action">
+        <field name="name">Generate Electronic Document</field>
+        <field name="model_id" eval="ref('account.model_account_invoice')"/>
+        <field name="state">code</field>
+        <field name="condition"></field>
+        <field name="sequence">5</field>
+        <field name="code">
+# Available locals:
+#  - time, datetime, dateutil: Python libraries
+#  - env: Odoo Environement
+#  - model: Model of the record on which the action is triggered
+#  - object: Record on which the action is triggered if there is one, otherwise None
+#  - workflow: Workflow engine
+#  - Warning: Warning Exception to use with raise
+# To return an action, assign: action = {...}
+object.generate_electronic_document()
+        </field>
+    </record>
+
+    <!--record model="ir.actions.server" id="check_color_tag_action">
+        <field name="name">Check Account Color Tag</field>
+        <field name="model_id" eval="ref('account.model_account_account_tag')"/>
+        <field name="state">code</field>
+        <field name="condition"></field>
+        <field name="sequence">5</field>
+        <field name="code">
+# Available locals:
+#  - time, datetime, dateutil: Python libraries
+#  - env: Odoo Environement
+#  - model: Model of the record on which the action is triggered
+#  - object: Record on which the action is triggered if there is one, otherwise None
+#  - workflow: Workflow engine
+#  - Warning: Warning Exception to use with raise
+# To return an action, assign: action = {...}
+object.check_tag_color()
+        </field>
+    </record-->
+
+    <!--record model="base.action.rule" id="action_rule_write_create_check_color_tag_server">
+        <field name="name">Check Account Color Tag</field>
+        <field name="model_id" eval="ref('account.model_account_account_tag')"/>
+        <field name="sequence">0</field>
+        <field name="active">True</field>
+        <field name="kind">on_create_or_write</field>
+        <field name="server_action_ids" eval="[(6, 0, [ref('check_color_tag_action')])]"/>
+    </record-->
+
+</odoo>

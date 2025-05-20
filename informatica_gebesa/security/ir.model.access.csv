@@ -1,0 +1,6 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_equipment_employee_log,hr_equipment_employee_log.hr_equipment_employee_log,model_maintenance_equipment_employee_log,base.group_user,1,0,0,0
+access_hr_equipment_employee_log_manager,hr_equipment_employee_log.hr_equipment_employee_log_manager,model_maintenance_equipment_employee_log,maintenance.group_equipment_manager,1,1,1,1
+access_res_physical_location_log_manager,res_physical_location_employee_log.res_physical_location_employee_log_manager,model_res_physical_location,base.group_user,1,1,1,1
+access_it_software_user,it.software.user,model_it_software,,1,0,0,0
+access_it_software_manager,it.software.manager,model_it_software,,1,1,1,1

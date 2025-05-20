@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_tires_gebesa_tree" model="ir.ui.view">
+            <field name="name">view.tires.gebesa.tree</field>
+            <field name="model">tires</field> 
+            <field name="arch" type="xml">
+                <tree string="Routes">
+                    <field name="code_tires"/>
+                    <field name="new_tires"/>
+                    <field name="price_tires" widget="monetary" string="Precio sin IVA"/>
+                    <field name="commitment_date" string="Fecha De Compra"/>
+                    <field name="partner_tires_id"/>
+                    <field name="fleet_vehicle_id" string="Unidad / Remolque / Dolly"/>
+                    <field name="position" string="Posición"/>
+                    <field name="mark"/>
+                    <field name="series_tires" string="Folio Galbo"/>
+                    <field name="measure"/>
+                    <field name="radi" string="Tipo"/>
+                    <field name="floor" string="Piso Remanente MM"/>
+                    <field name="low_date"/>
+                    <field name="comments_tires" class="oe_inline"/>
+                    <field name="kms_traveled"/>
+                    <field name="reading_date"/>
+                    <field name="num_invoice"/>
+                    <field name="mm_original"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_tms_route_form" model="ir.ui.view">
+            <field name="name">tms.route.form</field>
+            <field name="model">tires</field>
+            <field name="arch" type="xml">
+                <form string="Routes" version="9.0">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options="{'terminology': 'active'}" modifiers="{}"/>
+                            </button>
+                        </div>
+                        <group col="4" colspan="4">
+                            <h1>
+                                <field colspan="4" name="code_tires" required="True"/>
+                            </h1>
+                        </group>
+                        <group col="4" colspan="4">
+                            <field name="new_tires"/>
+                            <field name="commitment_date" string="Fecha De Compra"/>
+                            <field name="price_tires" string="Precio sin IVA"/>
+                            <field name="mark"/>
+                            <field name="partner_tires_id"/>
+                            <field name="measure"/>
+                            <field name="series_tires" string="Folio Galbo"/>
+                            <field name="floor" string="Piso Remanente MM"/>
+                            <field name="radi" string="Tipo"/>
+                            <field name="comments_tires"/>
+                            <field name="low_date"/>
+                            <field name="sequence" readonly="True"/>
+                            <field name="fleet_vehicle_id"/>
+                            <field name="reason_for_cancellation" attrs="{'readonly':[('active', '=', False)]}"/>
+                            <field name="position" attrs="{'required':[('fleet_vehicle_id','!=',False)]}" string="Posición"/>
+                            <field name="reading_date"/>
+                            <field name="num_invoice"/>
+                            <field name="mm_original"/>
+                            <field name="kms_traveled"/>
+                            <field name="original_cost"/>
+                            <field name="cost_x_km"/>
+                            <field name="km_mm"/>
+                        </group>
+                        <notebook>
+                            <page string="Tires History">
+                                <group>
+                                    <field name="tms_tire_hist_ids" readonly="1"/>
+                                </group>
+                            </page>
+                            <page string="KMS Traveled">
+                                <group>
+                                    <field name="tms_kms_traveled_ids" readonly="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" placeholder="Share a message..." widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="action_tires_gebesa_form" model="ir.actions.act_window">
+            <field name="name">Tires</field>
+            <field name="res_model">tires</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem action="action_tires_gebesa_form" id="menu_tires_gebesa_form" name="Tires" parent="tms.menu_tms_settings_routes" sequence="10"/>
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="set_reposition_data_form" model="ir.ui.view">
+        <field name="name">set.reposition.data.form</field>
+        <field name="model">set.reposition.data</field>
+        <field name="arch" type="xml">
+            <form string="Set reposition data">
+                <group>
+                    <field name="sale_id" domain="[('partner_id', '=', partner_id)]"/>
+                    <field name="sale_line_id" domain="[('order_id','=', sale_id)]"/>
+                    <field name="partner_id" readonly="1"/>
+                </group>
+                <footer>
+                    <button name="update_set_reposition_data" string="Establecer datos de reposición" type="object" class="btn-primary"/>
+                    Or
+                    <button name="clear_reposition_data" string="Limpiar datos de reposición" type="object" class="btn-primary"/>
+                    Or
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_order_line_set_reposition_data"
+            multi="True"
+            key2="client_action_multi" name="Set reposition data"
+            res_model="set.reposition.data" src_model="sale.order.line"
+            view_mode="form" target="new" view_type="form"
+            groups="sale_order_xls_import.group_update_order_line_set_reposition_data"/>
+</odoo>

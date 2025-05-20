@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="tsca"
+            model="mrp.production"
+            string="TSCA Title"
+            report_type="qweb-pdf"
+            name="report_tags.report_tsca"
+            file="report_tags.report_tsca"
+        />
+        <record id="report_tags.tsca" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag" />
+        </record>
+
+        <template id="report_tsca_document">
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})"/>
+            <div class="page">
+                <t t-foreach="range(int(doc.product_qty))" t-as="qty">
+                    <div style="page-break-after: always;">
+                        <div class="row no-gutters" style="border: 1px solid #000000; border-radius:16px 16px 16px 16px;height: 370px">
+                            <div class="col-12" style="margin-top: 0px;font-size: 18pt;" align="center">
+                                <br/>
+                                <strong><span t-field="doc.company_id.name"/></strong>
+                                <br/>
+                                <strong><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d %B %Y')"/></strong>
+                                <br/>
+                                <strong>CALLE GUANACEVI #370 PIL GOMEZ PALACIO.DGO 35078 MEXICO</strong>
+                                <br/>
+                                <strong>TSCA TITLE VI COMPLIANT</strong>
+                                <br/>
+                                <strong>CALIFORNIA 93120 COMPLIANT FOR FORMALDEHYDE</strong>
+                                <br/>
+                                <strong>PHASE II</strong>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tsca">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-call="report_tags.report_tsca_document" t-lang="doc.sale_id.partner_id.lang"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="tms_place_rule" model="ir.rule">
+        <field name="name">Tms place</field>
+        <field name="model_id" ref="tms.model_tms_place"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+
+    <record id="fleet_vehicle_rule" model="ir.rule">
+        <field name="name">Fleet vehicle</field>
+        <field name="model_id" ref="fleet.model_fleet_vehicle"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('operating_unit_id','=',False),('operating_unit_id','in',[user.default_operating_unit_id.id])]</field>
+    </record> 
+</odoo>

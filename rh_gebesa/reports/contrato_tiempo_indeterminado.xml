@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="contrato_indeterminado"
+            model="hr.contract"
+            string="Contrado Tiempo Indeterminado"
+            report_type="qweb-pdf"
+            name="rh_gebesa.report_contrato_indeterminado"
+            file="rh_gebesa.report_contrato_indeterminado"
+            paperformat="base.paperformat_batch_deposit"
+        />
+
+        <template id="report_contrato_indeterminado_document">
+            <div class="page">
+                <div class="row no-gutters"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        <br/>
+                        <strong>CONTRATO INDIVIDUAL DE TRABAJO POR TIEMPO INDETERMINADO</strong> que 
+                        celebran por una parte la empresa <strong><span t-field="doc.company_id.name"/></strong> A 
+                        través de su representante legal, ING. BOYARDO EUGENIO SALMON ACOSTA. A quien 
+                        en lo sucesivo se le denominará <strong>“La Empresa”</strong>, y por la otra parte el
+                        <strong>C. <span t-field="doc.employee_id.name"/></strong>, a quien en lo sucesivo se le denominará como 
+                        <strong>“El Empleado”</strong>, al tenor de las siguientes declaraciones y cláusulas: 
+                    </div>
+                </div>
+                <br/>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center" style="text-align:center;">
+                        <strong>D E C L A R A C I O N E S</strong>
+                    </div>
+                </div>
+                <div class="row no-gutters my-2"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        <br/>
+                        I.- La Empresa denominada <span t-field="doc.company_id.name"/> es una sociedad
+                        mexicana representada por  ING. BOYARDO EUGENIO SALMON ACOSTA,
+                        con domicilio <strong><span t-field="doc.company_id.street"/> C.P. <span t-field="doc.company_id.zip"/>  RFC: <span t-field="doc.company_id.vat"/>.</strong>
+                        <br/><br/>
+                        II.- El Trabajador <strong>C. <span t-field="doc.employee_id.name"/></strong>, manifiesta bajo protesta de decir
+                        verdad ser los siguientes datos personales:
+                    </div>
+                </div>
+                <div class="row no-gutters my-2"> 
+                    <div class="col-12 text-left">
+                        <br/>
+                        1. LLAMARSE: <strong>C. <span t-field="doc.employee_id.name"/></strong><br/>
+                        2. NACIONALIDAD: <strong><span t-field="doc.employee_id.country_id.name"/></strong><br/>
+                        3. CON DOMICILIO EN: <strong><span t-field="doc.employee_id.address_home_id.street"/></strong><br/>
+                        4. COLONIA: <strong><span t-field="doc.employee_id.address_home_id.l10n_mx_edi_colony"/></strong><br/>
+                        5. CIUDAD: <strong><span t-field="doc.employee_id.address_home_id.city_id.name"/></strong><br/>
+                        6. FECHA DE NACIMIENTO: <strong><span t-field="doc.employee_id.birthday"/></strong><br/>
+                        7. SEXO: <strong><span t-field="doc.employee_id.gender"/></strong><br/>
+                        8. REG. IMSS: <strong><span t-field="doc.employee_id.imss"/></strong><br/>
+                        9. R.F.C.: <strong><span t-field="doc.employee_id.rfc"/></strong><br/>
+                        10. CURP: <strong><span t-field="doc.employee_id.curp"/></strong><br/>
+                    </div>
+                </div>
+                <div class="row no-gutters my-2"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        <br/><br/>
+                        III.- Declaran las partes que en el centro de trabajo las actividades preponderantes son: Fabricación de muebles para oficina de metal y madera.
+                        <br/><br/>
+                        IV.- El Trabajador <strong>C. <span t-field="doc.employee_id.name"/></strong>, manifiesta que tiene la capacidad y aptitudes para desarrollar las actividades indicadas en el antecedente que precede.
+                        <br/><br/>
+                        V.- LA empresa <strong><span t-field="doc.company_id.name"/></strong> requiere de los servicios del personal apto para el desarrollo de sus actividades,
+                        y de modo especial para el puesto o funciones de <span t-field="doc.employee_id.job_id.name"/> así como cualquier otra actividad conexa o complementaria, de conformidad con las instrucciones y lineamientos que reciba de la empresa y de conformidad con los reglamentos interiores, las políticas y procedimientos de la empresa.
+                        <br/><br/>
+                        4. VI.- El Trabajador <strong>C. <span t-field="doc.employee_id.name"/></strong>, está conforme en desempeñar  los  requerimientos del Patrón y en plasmar las condiciones de trabajo sobre las   cuales prestará sus servicios  personales.
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center" style="text-align:center;">
+                        <br/>
+                        <strong>C L Á U S U L A S</strong>
+                    </div>
+                </div>
+                <div class="row no-gutters my-2"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        <br/>
+                        <strong>PRIMERA.-</strong> “LA EMPRESA” y “El Empleado” convienen que la duración del presente contrato será por tiempo <strong>INDETERMINADO</strong>, como lo establece el artículo 35 de la Ley Federal del Trabajo.
+                        <br/><br/>
+                        <strong>SEGUNDA.-</strong> “LA EMPRESA” quien tiene cubierta la plantilla de empleados de base necesarios para el desarrollo de sus labores normales de operación y que necesita contratar al empleado para que lleve a cabo
+                        las labores extraordinarias consistentes en Actividades y Relativos a su puesto que el personal de la plantilla de empleados actual no puede realizar, con fundamento en lo dispuesto en los Artículos 35 y
+                        37 de la Ley Federal de Trabajo, Por lo que “La Empresa” contrata a “El Empleado” por tiempo indeterminado, para que preste sus servicios en el puesto y/o categoría de <strong><span t-field="doc.employee_id.job_id.name"/></strong>
+                        declarando el “El Trabajador, bajo protesta de decir verdad que tiene la capacidad, aptitudes y conocimientos necesarios para desempeñar la actividad que requiere el puesto que va a ocupar, descrito anteriormente. En consecuencia
+                        la relación de trabajo podrá rescindirse sin responsabilidad para “LA EMPRESA” si en su concepto dentro de los primeros treinta días de vigencia de este contrato, el Trabajador <u>no tiene la capacidad y conocimiento con que se ostenta.</u>
+                        <br/><br/>
+                        <strong>TERCERA.-</strong> “El Empleado” se obliga a prestar sus servicios en el domicilio de la empresa o en cualquier otro lugar que ésta le indique dentro de <strong><span t-field="doc.company_id.l10n_mx_edi_locality_id.name"/></strong>, <strong><span t-field="doc.company_id.state_id.name"/></strong>  y/o cualquiera otra entidad de la República Mexicana.
+                        <br/><br/>
+                        <strong>CUARTA.-</strong> El horario de labores convenido entre “LA EMPRESA” y “El Empleado” será de las
+                        <strong><t t-esc = "'% 02d:%02d'% (int (doc.resource_calendar_id.start_hour), doc.resource_calendar_id.start_hour% 1 * 60)" /></strong> horas a las <strong><t t-esc = "'% 02d:%02d'% (int (doc.resource_calendar_id.finish_hour), doc.resource_calendar_id.finish_hour% 1 * 60)"/></strong>
+                        horas, de <strong><span t-field="doc.resource_calendar_id.starting_day"/></strong> a <strong><span t-field="doc.resource_calendar_id.finish_day"/></strong> 
+                        con receso de <strong><t t-esc = "'% 02d:%02d'% (int (doc.resource_calendar_id.break_time), doc.resource_calendar_id.break_time% 1 * 60)" /></strong> minutos en jornada, permitiendo tener como días de descanso Sábado y Domingo de cada semana, conviniendo éste con “La Empresa” que en cualquier momento el mismo puede ser modificado de acuerdo con las necesidades de la compañía en cualquier otra modalidad equivalente.
+                        <br/><br/>
+                        <strong>QUINTA.-</strong> “El Empleado” disfrutará de un salario Diario de <strong><span t-field="doc.salario_diario"/></strong>, el cual le será cubierto semanalmente los días Miércoles  de cada semana en el domicilio de “La Empresa”, y el cual ya incluye la proporción correspondiente a los séptimos días y días de descanso obligatorio. Como apoyo al trabajador se dispondrá de la opción de pago electrónico para seguridad y comodidad del empleado. Entregando en el domicilio de la empresa el comprobante correspondiente a su Jornada de trabajo. Conviniéndose en que la firma de “El Empleado” implicará un finiquito total hasta la fecha del recibo correspondiente
+                        <br/>
+                        “El Empleado” será acreedor a un bono de puntualidad el cual asciende al 10 % de su salario base el cual le otorgará “La Empresa”.
+                        <br/>
+                        Ambas partes convienen que. -
+                        <br/><br/>
+                        “El Empleado” que incurra en 3 retardos, en un periodo de 30 días se hará acreedor a la sanción equivalente a una falta injustificada con la pérdida del bono de puntualidad y asistencia. 
+                        <br/><br/>
+                            1. Un retardo se considera después de los 5 minutos de tolerancia. 
+                        “El Empleado” será acreedor a un bono de asistencia y puntualidad el cual asciende al 10 % de su salario base el cual le otorgará “La Empresa” siempre y cuando el “El Empleado” no falte a desempeñar sus labores.
+                        <br/><br/>
+                        Ambas partes convienen que. –
+                        <br/><br/>
+                        “El Empleado” que falte al desempeño de sus labores se le descontara un día de su salario, así como la pérdida del bono de asistencia y bono de puntualidad. 
+                        <br/><br/>
+                        “EL Empleado que justifique la falta se le rebajaran solo partes proporcionales de los premios de puntualidad y asistencia.
+                        <br/><br/>
+                        “El Empleado” que falte 3 días se le descontará los días de salario, así como el bono de asistencia y puntualidad, y se le rescindirá el contrato sin responsabilidad para la empresa.
+                        <br/><br/>
+                        “La Empresa” hará por cuenta de “El Empleado” las deducciones legales correspondientes, particularmente las que se refieren a Impuesto sobre la Renta y aportaciones de seguridad social (IMSS, Infonavit y RCV), efectuando las inscripciones correspondientes ante dichas instituciones, en los términos de las legislaciones respectivas.
+                        <br/><br/>
+                        <strong>SÉXTA.-</strong> “El Empleado” disfrutará de 2 días de descanso mencionados en la cuarta cláusula con goce de salario íntegro. “LA EMPRESA” podrá, previo acuerdo con “El Empleado”, variar el descanso semanal conforme a las necesidades de la misma. Así mismo “El Empleado” gozará de 30 minutos para tomar sus alimentos, descansar o reposar fuera de la fuente de trabajo de lunes a viernes. Así mismo “El Empleado” reconoce que los días de descanso obligatorios son los contenidos en el Artículo 74 de la Ley Federal del Trabajo.
+                        <br/><br/>
+                        <strong>SEPTIMA.-</strong> “El Empleado” no podrá laborar tiempo extraordinario de trabajo, sin previa autorización por escrito que “La Empresa” le otorgue por conducto de sus representantes, tomando en consideración el pago que de él devengue que el concepto de tiempo extra en actividades adicionales y extraordinarias que “LA EMPRESA” solicite por escrito a “El Empleado”.
+                        <br/><br/>
+                        <strong>OCTAVA.-</strong> “El Empleado” disfrutará de un período anual de vacaciones de doce días, el cual se incrementará anualmente en los términos señalados en el artículo 76 de la Ley Federal del Trabajo. Asimismo, percibirá  una prima vacacional del 25 %, sobre la cantidad que le corresponda por el lapso en cuestión.
+                        <br/><br/>
+                        <strong>NOVENA.-</strong> “El Empleado” percibirá un aguinaldo anual de 20 días de salario, el cual se cubrirá de manera proporcional al tiempo de los servicios prestados a “La Empresa” durante dicho período.
+                        <br/><br/>
+                        <strong>DÉCIMA.-</strong> “El Empleado” se obliga en términos de la fracción X del artículo 134 de la Ley Federal del Trabajo, a someterse a los reconocimientos y exámenes médicos que “La Empresa” le indique.
+                        <br/><br/>
+                        <strong>DÉCIMA PRIMERA.-</strong> “EL Empleado” deberá ejecutar sus labores con la mayor intensidad, cuidado y esmero posibles,  quedando “LA EMPRESA” facultada para cambiar al “El Empleado” de lugar o actividad siempre y cuando se le respete su categoría y salario.
+                        <br/><br/>
+                        <strong>DÉCIMA SEGUNDA.-</strong> “LA EMPRESA” y “El Empleado” manifiestan que conocen las obligaciones que les imponen los Artículos 132 y 134 de la Ley Federal del Trabajo respectivamente, así como las prohibiciones establecidas por los Artículos 133 y 135 del mismo ordenamiento, por lo que cualquier violación a los mismos será causa de rescisión de la relación de trabajo.  
+                        <br/><br/>
+                        <strong>DÉCIMA TERCERA.-</strong> “El Empleado” tendrá, además de las obligaciones previstas en el presente contrato, en la Ley Federal del Trabajo y en el Reglamento Interior de Trabajo, las siguientes:
+                        a) No utilizará en beneficio, ni divulgará directa o indirectamente a cualquier persona física o moral, sin consentimiento previo y por escrito de “LA EMPRESA”, ningún conocimiento o información que adquiera con motivo de su trabajo.
+                        <br/>
+                        b) Cuando por cualquier motivo termine su relación de trabajo con “LA EMPRESA”, deberá entregar a éste, con la anticipación y requisitos que el mismo determine, todos los materiales, uniformes, herramienta y documentación que le pertenezcan a “LA EMPRESA” y que se encuentren directa o indirectamente bajo el control de “El Empleado”. 
+                        <br/><br/>
+                        <strong>DÉCIMA CUARTA.-</strong> “El Empleado” reconoce y acepta que de conformidad con la Ley Federal del Derecho de Autor, todas las obras intelectuales (en adelante “LAS OBRAS”) que realice durante la jornada laboral y/o con recursos de “LA EMPRESA”, serán propiedad de este último, por lo que el mismo gozará de la titularidad de los derechos patrimoniales, así como las facultades relativas a la divulgación, integridad de la obra y de colección.
+                        “El Empleado” otorga su pleno consentimiento para que “LA EMPRESA”, obtenga en su favor el registro de las obras por él creadas, ante el Instituto Nacional del Derecho de Autor, así como los derechos patrimoniales correspondientes, reservándose únicamente los derechos morales que la Ley Federal del Derecho de Autor vigente le concede.
+                        <br/><br/>
+                        “El Empleado” reconoce que “LAS OBRAS” es propiedad exclusiva de “LA EMPRESA”, por lo que no podrá por ningún medio, reproducir, copiar, publicar, comercializar, utilizar, explotar y/o transmitir a terceros "LAS OBRAS", ni total ni parcialmente, salvo que medie autorización escrita de “LA EMPRESA”.  
+                        <br/><br/>
+                        <strong>DÉCIMA QUINTA.-</strong> “LA EMPRESA”, podrá rescindir sin responsabilidad la relación de trabajo cuando se dé cualquiera de los supuestos establecidos por el Artículo 47 de la Ley Federal del Trabajo o bien alguna de las causas análogas o las que se señalan en el Reglamento Interior de Trabajo, así como el incumplimiento a cualquiera de las disposiciones del presente contrato.
+                        <br/><br/>
+                        <strong>DÉCIMA SEXTA.-</strong> “El Empleado” se obliga a cumplir con las políticas que establezca “LA EMPRESA”, para el buen desempeño de sus labores, considerándose como falta de probidad y siendo causa de rescisión de la relación de trabajo sin responsabilidad para “LA EMPRESA”, la falta de cumplimiento expreso a la presente cláusula.  Se faculta expresamente a “LA EMPRESA”, para que marque las políticas por las cuales deberá conducirse “El Empleado”.
+                        <br/><br/>
+                        <strong>DÉCIMA SÉPTIMA.-</strong> “El Empleado” estará obligado a someterse a  reconocimientos médicos periódicos, con el objeto de comprobar que posee buena salud y que no se encuentra incapacitado ni padece ninguna enfermedad que haga imposible el desempeño de las labores encomendadas, debiendo poner en conocimiento de “LA EMPRESA” en forma inmediata y por escrito cualquier enfermedad contagiosa o incurable así como cualquier incapacidad al tiempo de su ingreso o durante la relación de trabajo.
+                        <br/><br/>
+                        <strong>DÉCIMA OCTAVA.-</strong> “El Empleado” estará obligado a registrar diariamente su ingreso y su salida del lugar de trabajo, en los medios que para tal efecto determine “LA EMPRESA”, por lo que el incumplimiento a este requisito indicará la falta injustificada a sus labores, para todos los efectos legales.
+                        <br/><br/>
+                        <strong>DÉCIMA NOVENA.-</strong> Cualquier ausencia de “El Empelado” por motivo de enfermedad, solamente se considerará justificada mediante la presentación de las incapacidades que para tal efecto expida el Instituto Mexicano del Seguro Social, mismas que deberán ser presentadas a “LA EMPRESA” al día siguiente de su expedición, ya sea por el interesado o por conducto de un tercero.
+                        <br/><br/>
+                        <strong>VIGÉSIMA.-</strong> “El Empleado” no podrá prestar simultáneamente servicios de ninguna otra índole para otro patrón, sin el consentimiento previo y por escrito de “LA EMPRESA”.  El incumplimiento de esta disposición supondrá la rescisión del presente Contrato sin responsabilidad para “LA EMPRESA”.
+                        <br/><br/>
+                        <strong>VIGÉSIMA PRIMERA.-</strong> “El Empleado” se obliga a participar en los cursos de capacitación y adiestramiento que “La Empresa” le indique para el mejor conocimiento y desarrollo de sus aptitudes, mismos que podrán impartirse dentro y/o fuera de la jornada de labores.
+                        <br/><br/>
+                        <strong>VIGÉSIMA SEGUNDA.-</strong> Lo no previsto por este contrato se regirá por las disposiciones previstas en la Ley Federal del Trabajo y en el fuero local o federal que corresponda a la Ciudad de Gómez Palacio, Durango, independientemente del estado en que se encuentre laborando “El Empleado”.
+                        <br/><br/>
+                        <strong>VIGÉSIMA TERCERA.-</strong> “El Empleado” se obliga a acatar las medidas de seguridad e higiene establecidas por la ley, la Comisión de Seguridad e higiene y el Patrón, en la inteligencia de que si no cumple con esta cláusula, el Patrón le podrá rescindir su Contrato de Trabajo sin ninguna responsabilidad, de acuerdo a la Ley Federal del Trabajo.
+                        <br/><br/>
+                        <strong>VIGÉSIMA CUARTA.-</strong> “LA EMPRESA” reconoce una antigüedad al Trabajador a partir del día <strong><span t-field="doc.date_start"/></strong>.
+                        <br/><br/>
+                        <strong>VIGÉSIMA QUINTA.-</strong> “El Empleado” acepta y reconoce el cuadro de prestaciones adicionales a las que la Ley Federal del Trabajo conmina a “LA EMPRESA” y que se entrega copia en este acto de las mismas y que queda adjunto al presente.
+                        <br/><br/>
+                        <strong>VIGÉSIMA SEXTA.-</strong> Los cambios de puesto y las modificaciones de salario serán consignadas en anexos que firmados por las partes se agreguen al presente contrato, debiendo recibir “El Empleado” la copia para que el original se archive en su expediente que lleva “LA EMPRESA”
+                        <br/><br/>
+                        <strong>VIGESIMA SÉPTIMA.-</strong> Al momento de la firma del presente instrumento, “El Empleado” recibe una copia del Reglamento Interior de Trabajo mismo que forma parte del presente contrato, para su conocimiento.
+                        <br/><br/>
+                        <strong>VIGÉSIMA OCTAVA.-</strong> Mientras las partes no se comuniquen por escrito el cambio de los domicilios consignados en el apartado de sus Declaraciones, todas las notificaciones ya sean judiciales o extrajudiciales que en los mismos se realicen, se tendrán como legalmente efectuadas.
+                        <br/><br/>
+                        <strong>VIGÉSIMA NOVENA.-</strong> El presente contrato constituye el acuerdo celebrado entre las partes en relación con el objeto del mismo y deja sin efecto cualquier otra negociación, obligación o comunicación entre éstas, ya sea oral o escrita con anterioridad a esta fecha.
+                        <br/><br/>
+                        <strong>TRIGÉSIMA.-</strong> Ambas partes convienen que en defecto de lo establecido en este contrato se sujetarán a las disposiciones de la Ley Federal del Trabajo y al Reglamento Interior de Trabajo.
+                        <br/><br/>
+                        <strong>TRIGÉSIMA PRIMERA.-</strong> Para la resolución de cualquier controversia que pudiera derivarse con motivo de la interpretación o cumplimiento del presente Contrato, las partes se someten a la jurisdicción y competencia de la H. Junta Local de Conciliación y Arbitraje de Gómez Palacio, Durango, o en la zona de la firma del contrato, renunciado expresamente a cualquier otro fuero que les pudiera corresponder.
+                        <br/><br/>
+                        Leído que fue el presente contrato por quienes en él intervienen, lo ratifican en todas y cada una de sus partes y lo suscriben a su más entera conformidad por duplicado, entregándose copia del mismo a “El Empleado” para los fines legales que a éste convengan, en la ciudad de <strong>Gómez Palacio, Durango,</strong> el <strong><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/></strong>.
+                        <br/><br/>
+                        <strong>TRIGÉSIMA SEGUNDA.-</strong>  En caso de fallecimiento de “EL TRABAJADOR”, la o las personas designadas por el mismo, tendrán derecho a las prestaciones derivadas de la relación laboral, por lo que al efecto, el empleado designa como beneficiarios a las siguientes personas:
+                    </div>
+                </div>
+                <br/><br/>
+                <div class="row no-gutters">
+                    <div class="col-12"  style="text-align:center;">
+                        <table width="100%" class="table table-sm table-bordered" style="border-collapse:collapse;align:center;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 1px solid black; align: center;">NOMBRE</th>
+                                    <th style="border: 1px solid black; align: center;">PARENTESCO</th>
+                                    <th style="border: 1px solid black; align: center;">PORCENTAJE</th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.beneficio_1"/></td>
+                                    <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.beneficio_1"/></td>
+                                    <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.porcentaje_1"/></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.beneficio_2"/></td>
+                                    <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.beneficio_2"/></td>
+                                    <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.porcentaje_2"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br/><br/>
+                <div class="row">
+                    <div class="col-12">
+                        <table width="100%" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th><strong>"El Trabajador"</strong><br/>
+                                    <br/><br/><br/><br/>
+                                    ____________________________________<br/>
+                                    
+                                    </th>
+                                    <th><strong>"La Empresa"</strong><br/>
+                                    <br/><br/><br/><br/>
+                                    ____________________________________</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align:center;"><span t-field="doc.employee_id.name"/></td>
+                                    <td style="text-align:center;"><span t-field="doc.company"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br/><br/>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center" style="text-align:center;">
+                        <strong>TESTIGOS</strong>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-12">
+                        <table width="100%" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                    <br/><br/>
+                                    ____________________________________<br/>
+                                    
+                                    </th>
+                                    <th>
+                                    <br/><br/>
+                                    ____________________________________</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align:center;"><span t-field="doc.witness_rh"/></td>
+                                    <td style="text-align:center;"><span t-field="doc.witness"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- <div class="row no-gutters pt-5">
+                    <div class="col-12">
+                        <div class="col-6 text-center" style="text-align:left;">
+                            <strong>"El Trabajador"</strong><br/>
+                            _______________________________
+                            <br/>
+                            FIRMA AUTORIZACION
+                        </div>
+                        <div class="col-6 text-center" style="text-align:right;">
+                            <strong>"La Empresa"</strong><br/>
+                            _______________________________
+                            <br/>
+                            FIRMA RECIBIDO NOMINAS
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </template>
+
+        <template id="report_contrato_indeterminado">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="rh_gebesa.report_contrato_indeterminado_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

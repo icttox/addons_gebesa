@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_mrp_revaluation_revaluator,MRP Revaluation Revaluator,model_stock_revaluation,group_mrp_revaluator,1,1,1,1
+access_mrp_revaluation_all,MRP Revaluation All,model_stock_revaluation,,1,0,0,0
+access_mrp_revaluation_line_revaluator,MRP Revaluation Line Revaluator,model_stock_revaluation_line,group_mrp_revaluator,1,1,1,1
+access_mrp_revaluation_line_all,MRP Revaluation Line All,model_stock_revaluation_line,,1,0,0,0

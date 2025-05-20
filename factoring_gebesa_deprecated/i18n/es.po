@@ -1,0 +1,352 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* factoring_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-16 15:09+0000\n"
+"PO-Revision-Date: 2016-03-16 15:09+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_message_needaction
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_message_needaction
+msgid "Action Needed"
+msgstr "Accion necesaria"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/factoring_customer.py:27
+#: code:addons/factoring_gebesa/models/factoring_supplier.py:27
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_journal_id
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_journal_id
+#, python-format
+msgid "Bank"
+msgstr "Banco"
+
+#. module: factoring_gebesa
+#: selection:factoring.customer,state:0
+#: selection:factoring.supplier,state:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: factoring_gebesa
+#: model:ir.actions.act_window,help:factoring_gebesa.action_factoring_customer
+#: model:ir.actions.act_window,help:factoring_gebesa.action_factoring_supplier
+msgid "Click to register a Factoring"
+msgstr "Click para registrar un Factoraje"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/factoring_customer.py:33
+#: code:addons/factoring_gebesa/models/factoring_supplier.py:33
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_company_id
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_company_id
+#, python-format
+msgid "Company"
+msgstr "Compañía"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_create_uid
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_create_date
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/factoring_customer.py:22
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_partner_id
+#, python-format
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/factoring_customer.py:45
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_invoice_ids
+#, python-format
+msgid "Customer Invoices"
+msgstr "Facturas de Cliente"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/factoring_customer.py:39
+#: code:addons/factoring_gebesa/models/factoring_supplier.py:39
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_date
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_date
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,help:factoring_gebesa.field_factoring_customer_message_last_post
+#: model:ir.model.fields,help:factoring_gebesa.field_factoring_supplier_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr "Fecha del último mensaje publicado en el registro."
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_display_name
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: factoring_gebesa
+#: selection:factoring.customer,state:0
+#: selection:factoring.supplier,state:0
+msgid "Done"
+msgstr "Realizado"
+
+#. module: factoring_gebesa
+#: selection:factoring.customer,state:0
+#: selection:factoring.supplier,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: factoring_gebesa
+#: model:ir.ui.view,arch_db:factoring_gebesa.factoring_customer_form
+#: model:ir.ui.view,arch_db:factoring_gebesa.factoring_supplier_form
+msgid "Enter some reference..."
+msgstr "Escriba alguna referencia..."
+
+#. module: factoring_gebesa
+#: model:ir.ui.view,arch_db:factoring_gebesa.factoring_customer_form
+#: model:ir.ui.view,arch_db:factoring_gebesa.factoring_supplier_form
+msgid "Factoring"
+msgstr "Factoraje"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/account_invoice.py:14
+#: model:ir.model,name:factoring_gebesa.model_factoring_customer
+#: model:ir.model.fields,field_description:factoring_gebesa.field_account_invoice_factoring_customer_id
+#: model:ir.ui.view,arch_db:factoring_gebesa.factoring_customer_tree
+#, python-format
+msgid "Factoring Customer"
+msgstr "Factoraje Cliente"
+
+#. module: factoring_gebesa
+#: model:res.groups,name:factoring_gebesa.group_factoring_customer
+msgid "Factoring Customer / Manager"
+msgstr "Factoraje Cliente / Gerente"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/account_invoice.py:18
+#: model:ir.model,name:factoring_gebesa.model_factoring_supplier
+#: model:ir.model.fields,field_description:factoring_gebesa.field_account_invoice_factoring_supplier_id
+#: model:ir.ui.view,arch_db:factoring_gebesa.factoring_supplier_tree
+#, python-format
+msgid "Factoring Supplier"
+msgstr "Factoraje Proveedor"
+
+#. module: factoring_gebesa
+#: model:res.groups,name:factoring_gebesa.group_factoring_supplier
+msgid "Factoring Supplier / Manager"
+msgstr "Factoraje Proveedor / Gerente"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_message_follower_ids
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_message_channel_ids
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_message_partner_ids
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Partners)"
+
+#. module: factoring_gebesa
+#: model:ir.actions.act_window,name:factoring_gebesa.action_factoring_customer
+#: model:ir.ui.menu,name:factoring_gebesa.menu_action_factoring_customer_gebesa
+msgid "Gebesa Factoring Customer"
+msgstr "Gebesa Factoraje Cliente"
+
+#. module: factoring_gebesa
+#: model:ir.actions.act_window,name:factoring_gebesa.action_factoring_supplier
+#: model:ir.ui.menu,name:factoring_gebesa.menu_action_factoring_supplier_gebesa
+msgid "Gebesa Factoring Supplier"
+msgstr "Gebesa Factoraje Proveedor"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_id
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_id
+msgid "ID"
+msgstr "ID"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,help:factoring_gebesa.field_factoring_customer_message_unread
+#: model:ir.model.fields,help:factoring_gebesa.field_factoring_supplier_message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si se marca nuevos mensajes requieren su atención."
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,help:factoring_gebesa.field_factoring_customer_message_needaction
+#: model:ir.model.fields,help:factoring_gebesa.field_factoring_supplier_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si se marca, nuevos mensajes requieren su atención"
+
+#. module: factoring_gebesa
+#: model:ir.model,name:factoring_gebesa.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: factoring_gebesa
+#: model:ir.ui.view,arch_db:factoring_gebesa.factoring_customer_form
+#: model:ir.ui.view,arch_db:factoring_gebesa.factoring_supplier_form
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_message_is_follower
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_message_last_post
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_message_last_post
+msgid "Last Message Date"
+msgstr "Fecha de Ultimo Mensaje"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer___last_update
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier___last_update
+msgid "Last Modified on"
+msgstr "Modificada por última vez"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_write_uid
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización realizada por"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_write_date
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_write_date
+msgid "Last Updated on"
+msgstr "Última actualizacion en"
+
+#. module: factoring_gebesa
+#: model:ir.actions.act_window,help:factoring_gebesa.action_factoring_customer
+msgid "Make your first Factoring Customer."
+msgstr "Realize su primer Factoraje de Cliente"
+
+#. module: factoring_gebesa
+#: model:ir.actions.act_window,help:factoring_gebesa.action_factoring_supplier
+msgid "Make your first Factoring Supplier."
+msgstr "Realize su primer Factoraje de Proveedor "
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_message_ids
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_message_ids
+msgid "Messages"
+msgstr "Mensages"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_message_needaction_counter
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero de Acciones"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,help:factoring_gebesa.field_factoring_customer_message_needaction_counter
+#: model:ir.model.fields,help:factoring_gebesa.field_factoring_supplier_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requiere una acción"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,help:factoring_gebesa.field_factoring_customer_message_unread_counter
+#: model:ir.model.fields,help:factoring_gebesa.field_factoring_supplier_message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/factoring_customer.py:57
+#: code:addons/factoring_gebesa/models/factoring_supplier.py:57
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_date_bank
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_date_bank
+#, python-format
+msgid "Payment Date the Bank"
+msgstr "Fecha de Pago al Banco"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/factoring_customer.py:16
+#: code:addons/factoring_gebesa/models/factoring_supplier.py:16
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_reference
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_reference
+#, python-format
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/factoring_customer.py:52
+#: code:addons/factoring_gebesa/models/factoring_supplier.py:52
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_state
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_state
+#, python-format
+msgid "Status"
+msgstr "Estado"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/factoring_supplier.py:22
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_partner_id
+#, python-format
+msgid "Supplier"
+msgstr "Proveedor"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/factoring_supplier.py:45
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_invoice_ids
+#, python-format
+msgid "Supplier Invoices"
+msgstr "Facturas Proveedor"
+
+#. module: factoring_gebesa
+#: sql_constraint:factoring.customer:0
+#: sql_constraint:factoring.supplier:0
+msgid "This field must be unique!"
+msgstr "Este campo debe ser unico"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_message_unread
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_message_unread
+msgid "Unread Messages"
+msgstr "Los mensajes no leídos"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_message_unread_counter
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Los mensajes no leídos Contador"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_customer_website_message_ids
+#: model:ir.model.fields,field_description:factoring_gebesa.field_factoring_supplier_website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes de sitios web"
+
+#. module: factoring_gebesa
+#: model:ir.model.fields,help:factoring_gebesa.field_factoring_customer_website_message_ids
+#: model:ir.model.fields,help:factoring_gebesa.field_factoring_supplier_website_message_ids
+msgid "Website communication history"
+msgstr "Historia de la comunicación sitio web"
+
+#. module: factoring_gebesa
+#: code:addons/factoring_gebesa/models/factoring_customer.py:89
+#: code:addons/factoring_gebesa/models/factoring_supplier.py:89
+#, python-format
+msgid "You can not perform factoring!                                     You must select at leats one bill."
+msgstr "No se puede realizar el factoraje!                                Debes seleccionar al menos una factura"

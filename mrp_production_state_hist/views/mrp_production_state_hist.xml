@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+       <!-- Creacion de formulario mrp production state hist -->
+        <record model="ir.ui.view" id="mrp_production_hist_form_view">
+ 			<field name="name">mrpproduction.form</field>
+ 			<field name="model">mrp.production.state.hist</field>
+ 			<field name="arch" type="xml">
+ 				<form string="Mrp Production State History">
+ 					<sheet>
+ 						<group>
+ 					        <field name="date"/>
+                  <field name="status_old"/>
+                  <field name="status_new"/>
+ 						</group>
+ 					</sheet>
+ 				</form>
+ 			</field>
+ 		</record>
+ 		<!-- creacion de vista de arbol -->
+ 		<record model="ir.ui.view" id="mrp_production_hist_tree_view">
+ 			<field name="name">mrpproduction.tree</field>
+ 			<field name="model">mrp.production.state.hist</field>
+ 			<field name="arch" type="xml">
+ 			  <tree string="Mrp Production State History">
+ 			  		<field name="date"/>
+ 			  		<field name="status_old"/>
+ 			  		<field name="status_new"/>
+ 			  </tree>
+ 			</field>
+ 		</record>
+ 	</data>
+</odoo>

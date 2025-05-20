@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mrp_bom_line_massive_delete_user,mrp_bom_line_massive_delete.user,model_mrp_bom_line_massive_delete,,1,0,0,0
+access_mrp_bom_line_massive_delete_manager,mrp_bom_line_massive_delete.manager,model_mrp_bom_line_massive_delete,,1,1,1,1

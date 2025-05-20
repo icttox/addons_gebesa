@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_currency_rate_tree'>
+            <field name='name'>view_currency_rate_mex_tree</field>
+            <field name='model'>res.currency.rate</field>
+            <field name='inherit_id' ref='base.view_currency_rate_tree'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name='rate_mex'/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='res_currency_rate_form'>
+            <field name='name'>res.currency.rate.form</field>
+            <field name='model'>res.currency.rate</field>
+            <field name='arch' type='xml'>
+                <form string='Currency Rate'>
+                    <sheet>
+                        <group col="4">
+                            <field name="name" modifiers="{'required': true}"/>
+                            <field name="company_id" can_create="true" can_write="true"/>
+                            <field name="currency_id" can_create="true" can_write="true" modifiers="{'readonly': true}"/>
+                            <field name="rate_mex" />
+                            <field name="rate" invisible="True"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

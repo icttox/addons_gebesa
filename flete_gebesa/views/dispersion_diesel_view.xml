@@ -1,0 +1,125 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="dispersion_diesel_tree">
+      <field name="name">dispersion.diesel.tree</field>
+      <field name="model">dispersion.diesel</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="folio"/>
+            <field name="folio_fisico"/>
+            <field name="ticket_number"/>
+            <field name="date"/>
+            <field name="category"/>
+            <field name="unit_id"/>
+            <field name="last_fill_date"/>
+            <field name="cordinator_id"/>
+            <field name="liters_qty"/>
+            <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="dispersion_diesel_form">
+      <field name="name">dispersion.diesel.form</field>
+      <field name="model">dispersion.diesel</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <button name="action_cancel" states="done" string="Cancel" type="object" groups="system_administrator.group_system_administrator_gebesa"/>
+            <button class="oe_highlight" name="action_validate" states="draft" string="Validate" type="object"/>
+            <button name="disperse_liters" states="draft" string="Disperse liters" type="object" groups="system_administrator.group_system_administrator_gebesa"/>
+            <field name="state" widget="statusbar"/>
+          </header>
+          <sheet>
+            <group>
+              <group>              
+                <field name="folio" attrs="{'readonly':True}"/>
+                <field name="folio_fisico" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                <field name="ticket_number" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                <field name="employee_id" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                <field name="unit_id" domain="[('fleet_type', '=', 'tractor')]" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                <field name="last_fill_date" attrs="{'readonly':True}"/>
+
+              </group>
+              <group>
+                <field name="date" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>              
+                <field name="category" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                <field name="cordinator_id" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Other info">
+              	<group>
+              		<group>
+              		  <field name="liters_qty" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                    <field name="route_traveled" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                    <field name="km_traveled" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                    <field name="km_calculated" attrs="{'readonly':True}"/>
+                    <field name="observations" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                    <field name="causa_cotador_inicial" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                  </group>
+                  <group>
+                    <field name="liters_urea" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                    <field name="initial_counter" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                    <field name="final_counter" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>
+                    <field name="liters_calculated" attrs="{'readonly':True}"/>
+                    <field name="counter_calculated" attrs="{'readonly':True}"/>
+                    <!--<field name="causa_folio_fisico" attrs="{'readonly':[('state','in',('done','cancel'))]}"/>-->
+                  </group>
+                </group>
+              </page>
+              <page string="Travels">
+                <field name="travel_ids" attrs="{'readonly':[('state','in',('done','cancel'))]}">
+                  <tree editable="bottom" string="Travels">
+                    <!--<field name="unit_id" invisible="1"/>-->
+                    <field name="tms_travel_id" domain="[('state','!=', ('closed','cancel')), ('expense_id', '=', False)]" required="1"/>
+                    <field name="distance_route" readonly="1" sum="Total distance"/>
+                    <field name="liters" sum="Total to pay"/>
+                  </tree>
+                </field>
+                <field name="motivo" attrs="{'readonly':[('state','in',('done','cancel'))]}" placeholder="Motivo ...."/> 
+              </page>
+              <page string="Log fuel">
+                <field name="log_fuel_ids" attrs="{'readonly':True}"/>
+              </page>
+            </notebook>
+          </sheet>
+           <div class="oe_chatter">
+              <field name="message_follower_ids" widget="mail_followers"/>
+              <field name="message_ids" widget="mail_thread"/>
+          </div>  
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="dispersion_diesel_action">
+      <field name="name">Dispersion diesel</field>
+      <field name="res_model">dispersion.diesel</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="dispersion_diesel_action" id="dispersion_diesel_menu" name="Dispersion diesel" parent="tms.menu_tms_travels" sequence="50"/>
+
+    <record model="ir.ui.view" id="dispersion_diesel_travel_form">
+      <field name="name">dispersion.diesel.travel.form</field>
+      <field name="model">dispersion.diesel.travel</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="tms_travel_id"/>
+              <field name="liters"/>
+            </group>
+          </sheet> 
+        </form>
+      </field>
+    </record>
+    
+    <record model="ir.actions.act_window" id="dispersion_diesel_travel_action">
+      <field name="name">Dispersion Diesel Travel</field>
+      <field name="res_model">dispersion.diesel.travel</field>
+      <field name="view_mode">form</field>
+    </record>
+
+  </data>
+</odoo>

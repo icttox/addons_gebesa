@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_product_isline_form_view'>
+            <field name='name'>product.product.isline.form.view</field>
+            <field name='model'>product.product</field>
+            <field name='inherit_id' ref="product.product_variant_easy_edit_view"/>
+            <field name='arch' type='xml'>
+                <field name="active" position="after">
+                    <field name="is_line" string="Is Line" readonly="1"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

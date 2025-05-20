@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="pricelist_action">
+            <field name="name">Product Pricelist Category</field>
+            <field name="res_model">product.pricelist.category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="pricelist_cat_menu" name="Product Pricelist Category" parent="sale.product_menu_catalog" action="pricelist_action"/>
+
+        <record model="ir.ui.view" id="category_pricelist_form_view">
+            <field name="name">product.pricelist.category.form</field>
+            <field name="model">product.pricelist.category</field>
+            <field name="arch" type="xml">
+                <form string="Form Product Pricelist Category">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="isometric"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>    
+
+        <record model="ir.ui.view" id="category_pricelist_tree_view">
+            <field name="name">product.pricelist.category.tree</field>
+            <field name="model">product.pricelist.category</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Product Pricelist Category">
+                    <field name="name"/>
+                    <field name="isometric"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

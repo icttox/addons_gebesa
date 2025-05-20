@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>  
+        <record model='ir.ui.view' id='account_invoice_evidence_wizard_form'>
+            <field name='name'>account.invoice.evidence.wizard.form</field>
+            <field name='model'>account.invoice.wizard.evi</field>
+            <field name='arch' type='xml'>
+                <form string='Evidence Invoice Approve'>
+                    <p class="oe_grey">
+                        *Approve the evidences of these invoices?
+                    </p>
+                    <footer>
+                        <button string="Approve" name="button_invoice_evidence_wizard" type="object" default_focus="1" class="btn-primary"/>
+                            or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_account_invoice_wizard_evi"
+            multi="True"
+            key2="client_action_multi" name="Approve Evidence"
+            res_model="account.invoice.wizard.evi" src_model="account.invoice"
+            view_mode="form" target="new" view_type="form"
+            groups="evidence_payment_validate.group_invoice_evidence_button_gebesa"/>
+    </data>
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_shipment_form_route'>
+        	<field name='name'>mrp.shipment.form.route</field>
+        	<field name='model'>mrp.shipment</field>
+        	<field name='inherit_id' ref="mrp_shipment.mrp_shipment_form"/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//group/field[@name='departure_date']" position="after">
+                    <!--<page string="Shipment" > -->
+                    <field name="route_ids" readonly="0"/>
+                    <field name='type_route' attrs="{'required':[('route_ids','!=', False)]}"/>
+                    <field name="linea_citys"/>
+                    <field name="linea_partner"/>
+                    <!-- </page> -->
+
+                </xpath>
+                <!--<header>
+                    <button  string="Proceed" type="object" class="oe_highlight"/>
+                </header> -->
+        	</field>
+        </record>
+        <record model='ir.ui.view' id='mrp_shipment_tree_citys'>
+            <field name='name'>mrp.shipment.tree.citys</field>
+            <field name='model'>mrp.shipment</field>
+            <field name='inherit_id' ref="mrp_shipment.mrp_shipment_tree"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//tree/field[@name='departure_date']" position="after">
+                    <field name="linea_citys"/>
+                    <field name="linea_partner"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

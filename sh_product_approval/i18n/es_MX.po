@@ -1,0 +1,87 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_product_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-01 18:35+0000\n"
+"PO-Revision-Date: 2022-11-01 13:39-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: sh_product_approval
+#: selection:product.product,state:0
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: sh_product_approval
+#: model_terms:ir.actions.act_window,help:sh_product_approval.sh_under_approval_product
+msgid "Create a new product variant"
+msgstr "Crear una nueva variante del producto"
+
+#. module: sh_product_approval
+#: model:ir.actions.server,name:sh_product_approval.sh_product_approve_action
+msgid "Mass Approve"
+msgstr "Aprobar masivamente"
+
+#. module: sh_product_approval
+#: model:ir.actions.server,name:sh_product_approval.sh_product_not_approve_action
+msgid "Mass Not Approve"
+msgstr "Desaprobar masivamente"
+
+#. module: sh_product_approval
+#: selection:product.product,state:0
+msgid "Not Approved"
+msgstr "No aprobado"
+
+#. module: sh_product_approval
+#: model:ir.model,name:sh_product_approval.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: sh_product_approval
+#: model:res.groups,name:sh_product_approval.sh_product_approve_manager
+msgid "Product Manager"
+msgstr "Verificador de producto"
+
+#. module: sh_product_approval
+#: model:ir.model,name:sh_product_approval.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: sh_product_approval
+#: model:ir.model.fields,field_description:sh_product_approval.field_product_product__state
+msgid "State"
+msgstr "Status"
+
+#. module: sh_product_approval
+#: selection:product.product,state:0
+msgid "Under Approval"
+msgstr "Por aprobar"
+
+#. module: sh_product_approval
+#: model:ir.actions.act_window,name:sh_product_approval.sh_under_approval_product
+#: model:ir.ui.menu,name:sh_product_approval.under_approval_product_menu
+msgid "Under Approval Products"
+msgstr "Productos por aprobar"
+
+#. module: sh_product_approval
+#: model_terms:ir.actions.act_window,help:sh_product_approval.sh_under_approval_product
+msgid ""
+"You must define a product for everything you sell, whether it's a physical product,\n"
+"                a consumable or a service you offer to customers.\n"
+"                The product form contains information to simplify the sale process:\n"
+"                price, notes in the quotation, accounting data, procurement methods, etc."
+msgstr ""
+"Debe definir un producto para todo lo que vende, ya sea un producto físico,\n"
+"                un consumible o un servicio que ofrezca a los clientes.\n"
+"                El formulario del producto contiene información para simplificar el proceso de venta:\n"
+"                precio, notas en la cotización, datos contables, métodos de adquisición, etc."

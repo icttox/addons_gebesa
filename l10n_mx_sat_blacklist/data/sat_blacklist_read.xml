@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+      <data>
+            <record id='ir_cron_blacklist_sat_retrieve' model='ir.cron'>
+                  <field name="name">Lee la lista negra del SAT</field>
+                  <field name="interval_number">1</field>
+                  <field name="interval_type">days</field>
+                  <field name="numbercall">-1</field>
+                  <field eval="False" name="doall"/>
+                  <field name="model_id" ref="model_res_partner"/>
+                  <!-- <field eval="" name="args"/> -->
+                  <field name="state">code</field>
+                  <field name="code">model._get_sat_blacklist()</field>
+                  <!-- <field eval="'_get_sat_blacklist'" name="function"/> -->
+                  <field name="active" eval="True" />
+            </record>
+
+            <record id='ir_cron_blacklist_send_alert' model='ir.cron'>
+                  <field name="name">Envia alerta de proveedores en la lista negra del SAT</field>
+                  <field name="interval_number">1</field>
+                  <field name="interval_type">days</field>
+                  <field name="numbercall">-1</field>
+                  <field eval="False" name="doall"/>
+                  <field name="model_id" ref="model_res_partner"/>
+                  <!-- <field eval="'send_blacklist_alert'" name="function"/>
+                  <field eval="" name="args"/> -->
+                  <field name="state">code</field>
+                  <field name="code">model.send_blacklist_alert()</field>
+                  <field name="active" eval="True" />
+            </record>
+      </data>
+</odoo>

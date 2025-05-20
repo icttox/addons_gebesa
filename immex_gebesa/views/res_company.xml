@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+		<record id="immex_num_form_view_inh_variantdefaultcode" model="ir.ui.view">
+    		<field name="name">immex.num.form.view</field>
+    		<field name="model">res.company</field>
+    		<field name="inherit_id" ref="base.view_company_form"/>
+    		<field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_title']" position="after">
+                	<group>
+                        <field name="immex_num"/>
+                        <field name="pass_vucem"/>
+                        <field name="immex_certification_date"/>
+                    </group>          
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

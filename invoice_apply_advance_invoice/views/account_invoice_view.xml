@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='invoice_apply_advance_form_view'>
+            <field name='name'>invoice.apply.advance.form.view</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='comment']" position="before">
+                    <group>
+                        <group>
+                            <field name="advance_id" domain="[('prepayment_ok', '=', True), ('partner_id','=', partner_id), ('advance_applied', '=', False), ('state', '!=', ['draft','cancel'])]" readonly='1'/>
+                            <field name="amount_advance" widget="monetary" readonly='1'/>
+                        </group>
+                    </group>
+                </xpath>
+                <xpath expr="//form/header" position="inside">
+                    <button name="update_advance" states="draft" type="object" string="Update Advance" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='account_invoice_rel_advance_tree'>
+            <field name='name'>account_invoice_rel_advance.tree</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account_invoice_prepayment.account_invoice_prepayment_form_view'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//page[@name='advance_data']/group/group[2]" position="after">
+                    <field name="advance_ids" context="{'partner_advance_id': partner_id}" attrs="{'readonly':[('state','!=', 'draft')]}">
+                        <tree editable="bottom">
+                            <field name="invoice_id" invisible="1"/>
+                            <field name="advance_id" domain="[('prepayment_ok', '=', True), ('partner_id','=', context.get('partner_advance_id')), ('advance_applied', '=', False), ('state', '!=', ['draft','cancel']), ('l10n_mx_edi_cfdi_uuid', '!=', False)]"/>
+                            <field name="amount_advance" widget="monetary" sum="Total"/>
+                        </tree>
+                    </field>
+                </xpath>                
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='account_invoice_advance_form'>
+            <field name='name'>account.invoice.advance.form.view</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='invoice_apply_advance_invoice.account_invoice_rel_advance_tree'/>
+            <field name="groups_id" eval="[(6, 0, [ref('system_administrator.group_system_administrator_gebesa')])]"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='advance_ids']" position="attributes">
+                    <attribute name="attrs">{'readonly': False}</attribute>
+                </xpath>
+                <xpath expr="//form/header" position="inside">
+                    <button name="button_advance"  type="object" string="Reactualizar Anticipo" class="oe_highlight"/>
+                </xpath>                
+            </field>
+        </record>
+
+        
+        <record id="view_account_invoice_rel_advance_tree" model="ir.ui.view">
+            <field name="name">view.account.invoice.rel.advance.tree</field>
+            <field name="model">account.invoice.rel.advance</field>
+            <field name="groups_id" eval="[(6,0, [ref('system_administrator.group_system_administrator_gebesa')])]" />
+            <field name="arch" type="xml">
+                <tree string="Aplicación de facturas de anticipos manuales" create ="false" edit="false" delete ="false">
+                    <field name='invoice_id'/>
+                    <field name='advance_id'/>
+                    <field name='amount_advance'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_account_invoice_rel_advance">
+            <field name="name">Aplicación de facturas de anticipos manuales</field>
+            <field name="res_model">account.invoice.rel.advance</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Aplicación de facturas de anticipos manuales
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_account_invoice_rel_advance" name="Aplicación de facturas de anticipos manuales" parent="account.menu_finance_entries" action="action_account_invoice_rel_advance" sequence="1" groups="system_administrator.group_system_administrator_gebesa"/>
+    </data>
+</odoo>
+
+
+
+

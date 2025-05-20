@@ -1,0 +1,123 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* consumption_by_product_wizard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-04 20:40+0000\n"
+"PO-Revision-Date: 2017-07-04 20:40+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: consumption_by_product_wizard
+#: model:ir.ui.view,arch_db:consumption_by_product_wizard.product_product_consumption_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: consumption_by_product_wizard
+#: code:addons/consumption_by_product_wizard/wizards/product_product_consumption.py:18
+#: selection:product.product.consumption.wizard,state:0
+#, python-format
+msgid "Cancelled Order"
+msgstr "Orden Cancelada"
+
+#. module: consumption_by_product_wizard
+#: model:ir.model.fields,field_description:consumption_by_product_wizard.field_product_product_consumption_wizard_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: consumption_by_product_wizard
+#: model:ir.model.fields,field_description:consumption_by_product_wizard.field_product_product_consumption_wizard_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: consumption_by_product_wizard
+#: model:ir.model.fields,field_description:consumption_by_product_wizard.field_product_product_consumption_wizard_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: consumption_by_product_wizard
+#: code:addons/consumption_by_product_wizard/wizards/product_product_consumption.py:19
+#: selection:product.product.consumption.wizard,state:0
+#, python-format
+msgid "Done Order"
+msgstr "Orden Hecha"
+
+#. module: consumption_by_product_wizard
+#: model:ir.ui.view,arch_db:consumption_by_product_wizard.product_product_consumption_wizard
+msgid "Export"
+msgstr "Exportar"
+
+#. module: consumption_by_product_wizard
+#: model:ir.model.fields,field_description:consumption_by_product_wizard.field_product_product_consumption_wizard_id
+msgid "ID"
+msgstr ""
+
+#. module: consumption_by_product_wizard
+#: model:ir.model.fields,field_description:consumption_by_product_wizard.field_product_product_consumption_wizard___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: consumption_by_product_wizard
+#: model:ir.model.fields,field_description:consumption_by_product_wizard.field_product_product_consumption_wizard_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: consumption_by_product_wizard
+#: model:ir.model.fields,field_description:consumption_by_product_wizard.field_product_product_consumption_wizard_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: consumption_by_product_wizard
+#: code:addons/consumption_by_product_wizard/wizards/product_product_consumption.py:17
+#: selection:product.product.consumption.wizard,state:0
+#, python-format
+msgid "Pending Order"
+msgstr "Orden Pendiente"
+
+#. module: consumption_by_product_wizard
+#: model:ir.ui.view,arch_db:consumption_by_product_wizard.product_consumption_form_view
+msgid "Print Consumption"
+msgstr "Imprimir Consumo"
+
+#. module: consumption_by_product_wizard
+#: code:addons/consumption_by_product_wizard/wizards/product_product_consumption.py:13
+#: model:ir.model,name:consumption_by_product_wizard.model_product_product
+#, python-format
+msgid "Product"
+msgstr "Producto:"
+
+#. module: consumption_by_product_wizard
+#: code:addons/consumption_by_product_wizard/models/product_product.py:16
+#, python-format
+msgid "Product Consumption Report"
+msgstr "Reporte Consumo Producto"
+
+#. module: consumption_by_product_wizard
+#: model:ir.model.fields,field_description:consumption_by_product_wizard.field_product_product_consumption_wizard_product_id
+msgid "Producto"
+msgstr ""
+
+#. module: consumption_by_product_wizard
+#: code:addons/consumption_by_product_wizard/wizards/product_product_consumption.py:20
+#: model:ir.model.fields,field_description:consumption_by_product_wizard.field_product_product_consumption_wizard_state
+#, python-format
+msgid "Status"
+msgstr "Estatus"
+
+#. module: consumption_by_product_wizard
+#: model:ir.ui.view,arch_db:consumption_by_product_wizard.product_product_consumption_wizard
+msgid "or"
+msgstr "o"
+
+#. module: consumption_by_product_wizard
+#: model:ir.model,name:consumption_by_product_wizard.model_product_product_consumption_wizard
+msgid "product.product.consumption.wizard"
+msgstr ""
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_employee_event_form" model="ir.ui.view">
+            <field name="name">hr.employee.event.form</field>
+            <field name="model">hr.employee.event</field>
+            <field name="arch" type="xml">
+                <form string="Employee Events">
+                    <sheet>
+                        <group col="4">
+                            <field name="name"/>
+                            <field name="date"/>
+                            <field name="type"/>
+                            <field name="employee_id"/>
+                            <field name="amount"/>
+                            <field name="positive"/>
+                        </group>
+                        <group colspan="4" string="Notes">
+                            <field name="notes" nolabel="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

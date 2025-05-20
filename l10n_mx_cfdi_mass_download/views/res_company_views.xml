@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_company_form" model="ir.ui.view">
+            <field name="name">res.company.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='logo']" position="before">
+                    <div name="button_box" class="oe_button_box">
+                        <button id="validarlas" class="oe_stat_button" icon="fa-question-circle" string="Validar FIEL"></button>
+                        <button id="descargamasiva" class="oe_stat_button" icon="fa-cloud-download" string="Descarga Masiva"></button>
+                        <button id="descarg-return" class="oe_stat_button" icon="fa-cloud-download" string="Volver" style="display: none"></button>
+                    </div>
+                    <div class="descarga-masiva well" style="display: none;">
+                        <div class="row col-12">
+                            <div class="col-12 text-top" align="center">
+                                <h3>Periodo de descarga</h3>
+                            </div>
+                            <div class="row col-6">
+                                <div class="col-5" align="">
+                                    <p>inicio</p>
+                                </div>
+                                <div class="col-7">
+                                    <input type="date" id="start" name="start"/>
+                                </div>
+                            </div>
+                            <div class="row col-6 text-top">
+                                <div class="col-5" align="">
+                                    <p>final</p>
+                                </div>
+                                <div class="col-7">
+                                    <input type="date" id="final" name="final"/>
+                                </div>
+                            </div>
+                            <div class="col-12 text-top">
+                                <select name="tipo_solicitud" id="tipo_solicitud">
+                                    <option value="Receptor">Recibidos</option>
+                                    <option value="Emisor">Emitidos</option>
+                                </select>
+                            </div>
+                            <div class="col-12" align="center">
+                                <button id="descarga-inicio" type="button" class="btn btn-warning"
+                                    icon="fa-cloud-download" string=" Iniciar Descarga" name="csca">
+                                </button>
+                            </div>
+                        </div>
+                   </div>
+               </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

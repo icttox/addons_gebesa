@@ -1,0 +1,481 @@
+id,code,name,description,flag
+l10n_mx_wbl_unit_weight_Tu,Tu,Contenedor externo,"Tipo de caja de contención que sirve como contenedor de transporte externo, no especificado como equipo de transporte.",Packaging
+l10n_mx_wbl_unit_weight_X1A,X1A,Tambor de acero,,Packaging
+l10n_mx_wbl_unit_weight_X1B,X1B,Tambor de aluminio,,Packaging
+l10n_mx_wbl_unit_weight_X1D,X1D,Tambor contrachapado,,Packaging
+l10n_mx_wbl_unit_weight_X1F,X1F,Contenedor flexible,Contenedor de empaque de construcción flexible.,Packaging
+l10n_mx_wbl_unit_weight_X1G,X1G,Tambor de fibra,,Packaging
+l10n_mx_wbl_unit_weight_X1w,X1w,Tambor de madera,,Packaging
+l10n_mx_wbl_unit_weight_X2C,X2C,Barril de madera,,Packaging
+l10n_mx_wbl_unit_weight_X3A,X3A,Bidón de acero,,Packaging
+l10n_mx_wbl_unit_weight_X3H,X3H,Bidón de plástico,,Packaging
+l10n_mx_wbl_unit_weight_X43,X43,Bolsa de gran tamaño,Bolsa de tela de plástico o de papel que tiene las dimensiones del pallet sobre el que está construido.,Packaging
+l10n_mx_wbl_unit_weight_X44,X44,Bolsa de plástico,"Un tipo de bolsa de plástico, normalmente utilizada para envolver piezas promocionales, publicaciones, muestras de productos y / o catálogos.",Packaging
+l10n_mx_wbl_unit_weight_X4A,X4A,Caja de acero,,Packaging
+l10n_mx_wbl_unit_weight_X4B,X4B,Caja de aluminio,,Packaging
+l10n_mx_wbl_unit_weight_X4C,X4C,Caja de  madera natural,,Packaging
+l10n_mx_wbl_unit_weight_X4D,X4D,Caja de contrachapado,,Packaging
+l10n_mx_wbl_unit_weight_X4F,X4F,Caja de madera reconstituida,,Packaging
+l10n_mx_wbl_unit_weight_X4G,X4G,Caja de cartón,,Packaging
+l10n_mx_wbl_unit_weight_X4H,X4H,Caja de plástico,,Packaging
+l10n_mx_wbl_unit_weight_X5H,X5H,Bolsa de plástico tejido,,Packaging
+l10n_mx_wbl_unit_weight_X5L,X5L,Bolsa textil,,Packaging
+l10n_mx_wbl_unit_weight_X5M,X5M,Bolsa de papel,,Packaging
+l10n_mx_wbl_unit_weight_X6H,X6H,"Recipiente de plástico, Contenedor compuesto.",,Packaging
+l10n_mx_wbl_unit_weight_X6P,X6P,"Recipiente de vidrio, Contenedor compuesto.",,Packaging
+l10n_mx_wbl_unit_weight_X7A,X7A,Estuche para carro,Tipo de contenedor portátil diseñado para almacenar equipo para el transporte en un automóvil.,Packaging
+l10n_mx_wbl_unit_weight_X7B,X7B,Estuche de madera,Un estuche de madera para retener sustancias o artículos.,Packaging
+l10n_mx_wbl_unit_weight_X8A,X8A,Pallet de madera,"Plataforma o caja abierta de madera, en la que se conservan las mercancías para facilitar su manejo mecánico durante el transporte y almacenamiento.",Packaging
+l10n_mx_wbl_unit_weight_X8B,X8B,Cajón de madera,"Un contenedor de madera, en el que se conservan las mercancías para facilitar su manipulación mecánica durante el transporte y almacenamiento.",Packaging
+l10n_mx_wbl_unit_weight_X8C,X8C,Madera flejada,Piezas sueltas o sin contenedor de madera atadas o envueltas.,Packaging
+l10n_mx_wbl_unit_weight_XAA,XAA,Contenedor intermedio  para gráneles de plástico rígido,,Packaging
+l10n_mx_wbl_unit_weight_XAB,XAB,Contenedor de fibra,"Recipiente de contención de fibra, utilizado para retener sustancias o artículos.",Packaging
+l10n_mx_wbl_unit_weight_XAC,XAC,Contenedor de papel,"Recipiente de contención de papel, para retener sustancias o artículos.",Packaging
+l10n_mx_wbl_unit_weight_XAD,XAD,Contenedor de madera,"Recipiente de contención de madera, para retener sustancias o artículos.",Packaging
+l10n_mx_wbl_unit_weight_XAE,XAE,Aerosol,Una unidad de cuenta que define el número de Aerosoles,Packaging
+l10n_mx_wbl_unit_weight_XAF,XAF,"Pallet modular con collares,  80cms * 60cms",Pallet de tamaño estándar con dimensiones de 80 centímetros por 60 centímetros (cms).,Packaging
+l10n_mx_wbl_unit_weight_XAG,XAG,Pallet o empaquetado,La carga del pallet se asegura con una película de plástico transparente envuelta alrededor y luego encogido firmemente.,Packaging
+l10n_mx_wbl_unit_weight_XAH,XAH,"Pallet, 100cms X 110cms",Pallet tamaño estándar con dimensiones de 100 centímetros por 110 centímetros (cms).,Packaging
+l10n_mx_wbl_unit_weight_XAI,XAI,Contenedor tipo concha,,Packaging
+l10n_mx_wbl_unit_weight_XAJ,XAJ,Cono,Contenedor utilizado en el transporte de material lineal como el hilo.,Packaging
+l10n_mx_wbl_unit_weight_XAL,XAL,Esfera,Recipiente de contención esférico para retener sustancias o artículos.,Packaging
+l10n_mx_wbl_unit_weight_XAM,XAM,Ampolleta no protegida,,Packaging
+l10n_mx_wbl_unit_weight_XAP,XAP,Ampolleta protegida,,Packaging
+l10n_mx_wbl_unit_weight_XAT,XAT,Atomizador,,Packaging
+l10n_mx_wbl_unit_weight_XAV,XAV,Cápsula,,Packaging
+l10n_mx_wbl_unit_weight_XB4,XB4,Cinturón,Banda utiliza para retener varios artículos juntos.,Packaging
+l10n_mx_wbl_unit_weight_XBA,XBA,Barril,,Packaging
+l10n_mx_wbl_unit_weight_XBB,XBB,Bobina,,Packaging
+l10n_mx_wbl_unit_weight_XBC,XBC,Cajón para botellas / Estante para botellas,,Packaging
+l10n_mx_wbl_unit_weight_XBD,XBD,Tablero,,Packaging
+l10n_mx_wbl_unit_weight_XBE,XBE,Flejado,,Packaging
+l10n_mx_wbl_unit_weight_XBF,XBF,Globo no protegido,,Packaging
+l10n_mx_wbl_unit_weight_XBG,XBG,Bolso,Recipiente de material flexible con tapa abierta o cerrada.,Packaging
+l10n_mx_wbl_unit_weight_XBH,XBH,Manojo,,Packaging
+l10n_mx_wbl_unit_weight_XBI,XBI,Compartimiento,,Packaging
+l10n_mx_wbl_unit_weight_XBJ,XBJ,Cubeta,,Packaging
+l10n_mx_wbl_unit_weight_XBK,XBK,Cesta,,Packaging
+l10n_mx_wbl_unit_weight_XBL,XBL,Paca comprimida,,Packaging
+l10n_mx_wbl_unit_weight_XBM,XBM,Cuenco,,Packaging
+l10n_mx_wbl_unit_weight_XBN,XBN,Paca no comprimida,,Packaging
+l10n_mx_wbl_unit_weight_XBO,XBO,Botella no-protegida y cilíndrica,Recipiente de forma cilíndrica de cuello estrecho sin material de empaque protector externo.,Packaging
+l10n_mx_wbl_unit_weight_XBP,XBP,Globo protegido,,Packaging
+l10n_mx_wbl_unit_weight_XBQ,XBQ,Botella cilíndrica protegida,Recipiente de forma cilíndrica de cuello estrecho con material de empaque protector externo.,Packaging
+l10n_mx_wbl_unit_weight_XBR,XBR,Barra,,Packaging
+l10n_mx_wbl_unit_weight_XBS,XBS,"Botella, no-protegida en forma de bulbo",Recipiente en forma de bulbo de cuello estrecho sin material de empaque protector externo.,Packaging
+l10n_mx_wbl_unit_weight_XBT,XBT,Rollo de tela,,Packaging
+l10n_mx_wbl_unit_weight_XBU,XBU,Butt,Barril de 1/2 tonel,Packaging
+l10n_mx_wbl_unit_weight_XBV,XBV,Botella de bulbo protegido,Recipiente en forma de bulbo de cuello estrecho con material de empaque protector externo.,Packaging
+l10n_mx_wbl_unit_weight_XBW,XBW,Caja para líquidos,,Packaging
+l10n_mx_wbl_unit_weight_XBX,XBX,Caja,,Packaging
+l10n_mx_wbl_unit_weight_XBY,XBY,"Tablero, con fleje/ agrupados/ armados",,Packaging
+l10n_mx_wbl_unit_weight_XBZ,XBZ,"Barras, con fleje/ agrupados/ armados",,Packaging
+l10n_mx_wbl_unit_weight_XCA,XCA,Lata rectangular,,Packaging
+l10n_mx_wbl_unit_weight_XCB,XCB,Cajón para cerveza,,Packaging
+l10n_mx_wbl_unit_weight_XCC,XCC,Mantequera,,Packaging
+l10n_mx_wbl_unit_weight_XCD,XCD,Lata con mango y boquilla,,Packaging
+l10n_mx_wbl_unit_weight_XCE,XCE,Cesto tejido,,Packaging
+l10n_mx_wbl_unit_weight_XCF,XCF,Cofre,,Packaging
+l10n_mx_wbl_unit_weight_XCG,XCG,Contenedor tipo Jaula,,Packaging
+l10n_mx_wbl_unit_weight_XCH,XCH,Cajonera,,Packaging
+l10n_mx_wbl_unit_weight_XCI,XCI,Frasco,,Packaging
+l10n_mx_wbl_unit_weight_XCJ,XCJ,Ataúd,,Packaging
+l10n_mx_wbl_unit_weight_XCK,XCK,Barrica,,Packaging
+l10n_mx_wbl_unit_weight_XCL,XCL,Espiral,,Packaging
+l10n_mx_wbl_unit_weight_XCM,XCM,Paquete de tarjetas,Paquete plano normalmente hecho de cartón desde / hacia el cual el producto es a menudo colgado o unido.,Packaging
+l10n_mx_wbl_unit_weight_XCN,XCN,"Contenedor, no especificado como equipo de transporte",,Packaging
+l10n_mx_wbl_unit_weight_XCO,XCO,Garrafón no protegido,,Packaging
+l10n_mx_wbl_unit_weight_XCP,XCP,Garrafón protegido,,Packaging
+l10n_mx_wbl_unit_weight_XCQ,XCQ,Cartucho,Paquete que contiene una carga tal como un explosivo propulsor para armas de fuego o tóner de tinta para una impresora.,Packaging
+l10n_mx_wbl_unit_weight_XCR,XCR,Cajón,,Packaging
+l10n_mx_wbl_unit_weight_XCS,XCS,Estuche,,Packaging
+l10n_mx_wbl_unit_weight_XCT,XCT,Cartón,,Packaging
+l10n_mx_wbl_unit_weight_XCU,XCU,Vaso,,Packaging
+l10n_mx_wbl_unit_weight_XCV,XCV,Cubierta,,Packaging
+l10n_mx_wbl_unit_weight_XCW,XCW,Jaula estilo rodillo,,Packaging
+l10n_mx_wbl_unit_weight_XCX,XCX,Lata cilíndrica,,Packaging
+l10n_mx_wbl_unit_weight_XCY,XCY,Cilindro,,Packaging
+l10n_mx_wbl_unit_weight_XCZ,XCZ,Lona,,Packaging
+l10n_mx_wbl_unit_weight_XDA,XDA,Cajón multicapa de plástico,,Packaging
+l10n_mx_wbl_unit_weight_XDB,XDB,Cajón de varias capas de madera,,Packaging
+l10n_mx_wbl_unit_weight_XDC,XDC,Cajón multicapa de cartón,,Packaging
+l10n_mx_wbl_unit_weight_XDG,XDG,"Jaula, Según la clasificación de la compañía (Commonwealth Handling Equipment Pool (CHEP))",,Packaging
+l10n_mx_wbl_unit_weight_XDH,XDH,"Caja, Según la clasificación de la compañía (CHEP), Eurobox",Caja montada sobre una base de pallet Según la clasificación de la compañía (CHEP).,Packaging
+l10n_mx_wbl_unit_weight_XDI,XDI,Tambor de hierro,,Packaging
+l10n_mx_wbl_unit_weight_XDJ,XDJ,"damajuana o garrafa, no protegido",,Packaging
+l10n_mx_wbl_unit_weight_XDK,XDK,"Cajón a granel, cartón",,Packaging
+l10n_mx_wbl_unit_weight_XDL,XDL,Cajas de plástico,,Packaging
+l10n_mx_wbl_unit_weight_XDM,XDM,Cajones a granel de madera,,Packaging
+l10n_mx_wbl_unit_weight_XDN,XDN,Dispensador,,Packaging
+l10n_mx_wbl_unit_weight_XDP,XDP,"damajuana o garrafa, protegido",,Packaging
+l10n_mx_wbl_unit_weight_XDR,XDR,Tambor,,Packaging
+l10n_mx_wbl_unit_weight_XDS,XDS,Bandeja de una capa sin cubierta y de plástico,,Packaging
+l10n_mx_wbl_unit_weight_XDT,XDT,Bandeja de una capa sin cubierta y de madera,,Packaging
+l10n_mx_wbl_unit_weight_XDU,XDU,Bandeja de una capa sin cubierta y  poliestireno,,Packaging
+l10n_mx_wbl_unit_weight_XDV,XDV,Bandeja de una capa sin cubierta y de cartón,,Packaging
+l10n_mx_wbl_unit_weight_XDW,XDW,Bandeja de dos capas sin tapa y con bandeja de plástico,,Packaging
+l10n_mx_wbl_unit_weight_XDX,XDX,Bandeja de dos capas sin cubierta y de madera,,Packaging
+l10n_mx_wbl_unit_weight_XDY,XDY,Bandeja de dos capas sin cubierta y de cartón,,Packaging
+l10n_mx_wbl_unit_weight_XEC,XEC,Bolsa de plástico,,Packaging
+l10n_mx_wbl_unit_weight_XED,XED,"Estuche, con pallet de base",,Packaging
+l10n_mx_wbl_unit_weight_XEE,XEE,"Estuche, con pallet base de madera",,Packaging
+l10n_mx_wbl_unit_weight_XEF,XEF,"Estuche, con pallet base de cartón",,Packaging
+l10n_mx_wbl_unit_weight_XEG,XEG,"Estuche, con pallet base de plástico",,Packaging
+l10n_mx_wbl_unit_weight_XEH,XEH,"Estuche, con pallet base de metal",,Packaging
+l10n_mx_wbl_unit_weight_XEI,XEI,Estuche isotérmico,,Packaging
+l10n_mx_wbl_unit_weight_XEN,XEN,Sobre,,Packaging
+l10n_mx_wbl_unit_weight_XFB,XFB,Bolsa flexible,"Bolsa de contención flexible hecha de plástico, usado típicamente para el transporte de mercancías no peligrosas a granel, que usan contenedores de transporte de tamaño estándar.",Packaging
+l10n_mx_wbl_unit_weight_XFC,XFC,Cajón para fruta,,Packaging
+l10n_mx_wbl_unit_weight_XFD,XFD,Cajón enmarcado,,Packaging
+l10n_mx_wbl_unit_weight_XFE,XFE,Tanque flexible,"Contenedor flexible de plástico, usado típicamente para el transporte de cargas no peligrosas a granel usando contenedores de transporte de tamaño estándar.",Packaging
+l10n_mx_wbl_unit_weight_XFI,XFI,Firkin,Barril de 41 litros,Packaging
+l10n_mx_wbl_unit_weight_XFL,XFL,Matraz,,Packaging
+l10n_mx_wbl_unit_weight_XFO,XFO,Cajón para zapatos,,Packaging
+l10n_mx_wbl_unit_weight_XFP,XFP,Caja auxiliar para película fotográfica,,Packaging
+l10n_mx_wbl_unit_weight_XFR,XFR,Marco,,Packaging
+l10n_mx_wbl_unit_weight_XFT,XFT,Contenedor para alimentos,,Packaging
+l10n_mx_wbl_unit_weight_XFW,XFW,Carro de cama plana,Módulo con ruedas en el que las bandejas u otros artículos de forma regular se empacan para fines de transporte.,Packaging
+l10n_mx_wbl_unit_weight_XFX,XFX,Bolsa flexible tipo contenedor,,Packaging
+l10n_mx_wbl_unit_weight_XGB,XGB,Botella para gas,Cilindro metálico de cuello estrecho para la retención de gas licuado o comprimido.,Packaging
+l10n_mx_wbl_unit_weight_XGI,XGI,Viga,,Packaging
+l10n_mx_wbl_unit_weight_XGL,XGL,Contenedor tipo galón,Contenedor con una capacidad de un galón.,Packaging
+l10n_mx_wbl_unit_weight_XGR,XGR,Recipiente de vidrio,Recipiente de contención de vidrio para retener sustancias o artículos.,Packaging
+l10n_mx_wbl_unit_weight_XGU,XGU,Bandeja contenedor para apilar horizontalmente objetos planos,Bandeja para contiene objetos planos apilados uno encima del otro.,Packaging
+l10n_mx_wbl_unit_weight_XGY,XGY,Costal de Yute,"Hecho de yute, usado para transportar mercancías gruesas, tales como granos, patatas, y otros productos agrícolas.",Packaging
+l10n_mx_wbl_unit_weight_XGZ,XGZ,Vigas con correas o agrupadas,,Packaging
+l10n_mx_wbl_unit_weight_XHA,XHA,Cesta con mango y de plástico,,Packaging
+l10n_mx_wbl_unit_weight_XHB,XHB,Cesta con mango y de madera,,Packaging
+l10n_mx_wbl_unit_weight_XHC,XHC,Cesta  con asa y de  cartón,,Packaging
+l10n_mx_wbl_unit_weight_XHG,XHG,Hogshead,Barril de 1/4 de tonel,Packaging
+l10n_mx_wbl_unit_weight_XHN,XHN,Gancho,"Artefacto, cuya forma con un gancho en la parte superior, tiene el propósito de colgar artículos de un carril.",Packaging
+l10n_mx_wbl_unit_weight_XHR,XHR,Cesto,,Packaging
+l10n_mx_wbl_unit_weight_XIA,XIA,Paquete con pantalla y de madera,,Packaging
+l10n_mx_wbl_unit_weight_XIB,XIB,Paquete  con pantalla y de cartón,,Packaging
+l10n_mx_wbl_unit_weight_XIC,XIC,Paquete con pantalla y de plástico,,Packaging
+l10n_mx_wbl_unit_weight_XID,XID,Paquete con pantalla y de metal,,Packaging
+l10n_mx_wbl_unit_weight_XIE,XIE,Paquete de mostrador.,,Packaging
+l10n_mx_wbl_unit_weight_XIF,XIF,Envase para alimentos,"Envase flexible tubular o de piel, posiblemente transparente, a menudo utilizado para contener alimentos (por ejemplo salami).",Packaging
+l10n_mx_wbl_unit_weight_XIG,XIG,Paquete envuelto en papel,,Packaging
+l10n_mx_wbl_unit_weight_XIH,XIH,Tambor de plástico,,Packaging
+l10n_mx_wbl_unit_weight_XIK,XIK,Paquete de cartón con los agujeros para botellas,Material de empaque realizado en cartón que facilita la separación de botellas individuales de vidrio o plástico.,Packaging
+l10n_mx_wbl_unit_weight_XIL,XIL,Bandeja rígida con tapa y apilable (CEN TS 14482: 2002),Bandeja rígida apilable empotrada compatible con CEN TS 14482: 2002.,Packaging
+l10n_mx_wbl_unit_weight_XIN,XIN,Lingote,,Packaging
+l10n_mx_wbl_unit_weight_XIZ,XIZ,Lingotes  con correas/ agrupados,,Packaging
+l10n_mx_wbl_unit_weight_XJB,XJB,Bolsa jumbo,"Bolsa de contención flexible, ampliamente utilizada para almacenamiento, transporte y manipulación de materiales en polvo, escamas o granulares. Típicamente construido a partir de tejido de polipropileno (PP) tejido en forma de bolsas cúbicas.",Packaging
+l10n_mx_wbl_unit_weight_XJC,XJC,Bidón rectangular,,Packaging
+l10n_mx_wbl_unit_weight_XJG,XJG,Jarra,,Packaging
+l10n_mx_wbl_unit_weight_XJR,XJR,Tarro,,Packaging
+l10n_mx_wbl_unit_weight_XJT,XJT,Bolsa de yute,,Packaging
+l10n_mx_wbl_unit_weight_XJY,XJY,"Bidón, cilíndrico",,Packaging
+l10n_mx_wbl_unit_weight_XKG,XKG,Barrilete,,Packaging
+l10n_mx_wbl_unit_weight_XKI,XKI,Kit (Conjunto de piezas),Conjunto de artículos o implementos utilizados para un propósito específico.,Packaging
+l10n_mx_wbl_unit_weight_XLE,XLE,Valijas,"Colección de bolsas, cajas y / o contenedores que contienen objetos personales para un viaje.",Packaging
+l10n_mx_wbl_unit_weight_XLG,XLG,Bitácora,,Packaging
+l10n_mx_wbl_unit_weight_XLT,XLT,Lote,,Packaging
+l10n_mx_wbl_unit_weight_XLU,XLU,Caja de arrastre,Caja de madera para el transporte y almacenamiento de frutas y verduras.,Packaging
+l10n_mx_wbl_unit_weight_XLV,XLV,Contenedor pequeño,"Contenedor de madera o metal, usado para empacar artículos de uso doméstico y personales.",Packaging
+l10n_mx_wbl_unit_weight_XLZ,XLZ,Registros  con fleje/ agrupados/ armados,,Packaging
+l10n_mx_wbl_unit_weight_XMA,XMA,Cajón metálico,Caja de contención hecha de metal para retener sustancias o artículos.,Packaging
+l10n_mx_wbl_unit_weight_XMB,XMB,Múltiplo de bolsas,,Packaging
+l10n_mx_wbl_unit_weight_XMC,XMC,Cajón para leche,,Packaging
+l10n_mx_wbl_unit_weight_XME,XME,Contenedor de metal,"Tipo de caja de contención hecha de metal para retener sustancias o artículos, no especificado de otro modo como equipo de transporte.",Packaging
+l10n_mx_wbl_unit_weight_XMR,XMR,Recipiente de metal,Recipiente de contención de metal para retener sustancias o artículos.,Packaging
+l10n_mx_wbl_unit_weight_XMS,XMS,Saco milti-pared,,Packaging
+l10n_mx_wbl_unit_weight_XMT,XMT,Tapete,,Packaging
+l10n_mx_wbl_unit_weight_XMW,XMW,Contenedor envuelto en plástico,Recipiente de contención envuelto en plástico para retener sustancias o artículos.,Packaging
+l10n_mx_wbl_unit_weight_XMX,XMX,Caja pequeña de cerillos,,Packaging
+l10n_mx_wbl_unit_weight_XNA,XNA,No disponible,,Packaging
+l10n_mx_wbl_unit_weight_XNE,XNE,Sin empaque o no empaquetado,,Packaging
+l10n_mx_wbl_unit_weight_XNF,XNF,"Sin empaque o no empaquetado, unidad simple",,Packaging
+l10n_mx_wbl_unit_weight_XNG,XNG,"Sin empaque o no empaquetado, unidades múltiples",,Packaging
+l10n_mx_wbl_unit_weight_XNS,XNS,Caja nido,,Packaging
+l10n_mx_wbl_unit_weight_XNT,XNT,Red,,Packaging
+l10n_mx_wbl_unit_weight_XNU,XNU,Red de plástico con tubo,,Packaging
+l10n_mx_wbl_unit_weight_XNV,XNV,Red textil con tubo,,Packaging
+l10n_mx_wbl_unit_weight_XOA,XOA,"Pallet, Según la clasificación de la compañía (Commonwealth Handling Equipment Pool (CHEP) 40 cm x 60 cm",Pallet de dimensiones 40 centímetros x 60 centímetros.,Packaging
+l10n_mx_wbl_unit_weight_XOB,XOB,"Pallet, Según la clasificación de la compañía (Commonwealth Handling Equipment Pool (CHEP) 80 cm x 120 cm",Pallet de dimensiones 80 centímetros x 120 centímetros.,Packaging
+l10n_mx_wbl_unit_weight_XOC,XOC,"Pallet, Según la clasificación de la compañía (Commonwealth Handling Equipment Pool (CHEP) 100 cm x 120 cm",Pallet de dimensiones 100 centímetros x 120 centímetros.,Packaging
+l10n_mx_wbl_unit_weight_XOD,XOD,"Pallet, AS 4068-1993",Pallet con  estándar australiano de dimensiones 115.5 centímetros x 116.5 centímetros.,Packaging
+l10n_mx_wbl_unit_weight_XOE,XOE,"Pallet, ISO T11","Pallet con estándar ISO de dimensiones 110 centímetros x 110 centímetros, prevalente en la región Asia-Pacífico.",Packaging
+l10n_mx_wbl_unit_weight_XOF,XOF,"Plataforma, peso o dimensión no especificada",Plataforma de carga equivalente del Pallet de dimensiones desconocidas o peso desconocido.,Packaging
+l10n_mx_wbl_unit_weight_XOK,XOK,Bloque,"Una pieza sólida de una sustancia dura, tal como granito, que tiene uno o más lados planos.",Packaging
+l10n_mx_wbl_unit_weight_XOT,XOT,Octabin,"Envase estándar de cartón de grandes dimensiones para almacenar por ejemplo verduras, gránulos de plástico u otros productos secos.",Packaging
+l10n_mx_wbl_unit_weight_XP2,XP2,Charola,"Recipiente ancho y abierto, usualmente de metal.",Packaging
+l10n_mx_wbl_unit_weight_XPA,XPA,Cajetilla,Paquete pequeño.,Packaging
+l10n_mx_wbl_unit_weight_XPB,XPB,"Pallet, Caja combinada y abierta con caja y pallet.",,Packaging
+l10n_mx_wbl_unit_weight_XPC,XPC,Paquete postal,,Packaging
+l10n_mx_wbl_unit_weight_XPD,XPD,Pallet modular con collares (80cms * 100cms),Pallet tamaño estándar de dimensiones 80 centímetros por 100 centímetros (cms).,Packaging
+l10n_mx_wbl_unit_weight_XPE,XPE,Pallet modular con collares (80cms * 120cms),Pallet tamaño estándar de dimensiones 80 centímetros por 120 centímetros (cms).,Packaging
+l10n_mx_wbl_unit_weight_XPF,XPF,Corral,Pequeño recinto abierto para retener animales.,Packaging
+l10n_mx_wbl_unit_weight_XPG,XPG,Placa,,Packaging
+l10n_mx_wbl_unit_weight_XPH,XPH,Cantaro,,Packaging
+l10n_mx_wbl_unit_weight_XPI,XPI,Pleca,,Packaging
+l10n_mx_wbl_unit_weight_XPJ,XPJ,Canastilla,,Packaging
+l10n_mx_wbl_unit_weight_XPK,XPK,Paquete,Unidad de empaque estándar.,Packaging
+l10n_mx_wbl_unit_weight_XPL,XPL,Balde,,Packaging
+l10n_mx_wbl_unit_weight_XPN,XPN,Tablón,,Packaging
+l10n_mx_wbl_unit_weight_XPO,XPO,Bolsa pequeña,,Packaging
+l10n_mx_wbl_unit_weight_XPR,XPR,Contenedor de plástico,Recipiente de contención de plástico para retener sustancias o artículos.,Packaging
+l10n_mx_wbl_unit_weight_XPT,XPT,Maceta,,Packaging
+l10n_mx_wbl_unit_weight_XPU,XPU,Cacerola,,Packaging
+l10n_mx_wbl_unit_weight_XPV,XPV,"Tubos, con fleje/ agrupados/ armados",,Packaging
+l10n_mx_wbl_unit_weight_XPX,XPX,Pallet,"Plataforma o caja abierta, generalmente de madera, en la que se conservan las mercancías para facilitar el manejo mecánico durante el transporte y almacenamiento.",Packaging
+l10n_mx_wbl_unit_weight_XPY,XPY,Placas con fleje/ agrupados/ armados,,Packaging
+l10n_mx_wbl_unit_weight_XPZ,XPZ,Tablones con fleje/ agrupados/ armados,,Packaging
+l10n_mx_wbl_unit_weight_XQA,XQA,Tambor de acero con cabeza no desmontable,,Packaging
+l10n_mx_wbl_unit_weight_XQB,XQB,Tambor de  acero con cabeza extraíble,,Packaging
+l10n_mx_wbl_unit_weight_XQC,XQC,Tambor de aluminio con cabeza no extraíble,,Packaging
+l10n_mx_wbl_unit_weight_XQD,XQD,Tambor de aluminio con cabeza extraíble,,Packaging
+l10n_mx_wbl_unit_weight_XQF,XQF,"Tambor, plástico con cabeza no desmontable",,Packaging
+l10n_mx_wbl_unit_weight_XQG,XQG,"Tambor, plástico, cabeza extraíble",,Packaging
+l10n_mx_wbl_unit_weight_XQH,XQH,Barril de madera con tapón,,Packaging
+l10n_mx_wbl_unit_weight_XQJ,XQJ,Barril de madera con cabeza desprendible,,Packaging
+l10n_mx_wbl_unit_weight_XQK,XQK,Bidón de acero con cabeza no desmontable,,Packaging
+l10n_mx_wbl_unit_weight_XQL,XQL,Bidón de acero con cabeza desmontable,,Packaging
+l10n_mx_wbl_unit_weight_XQM,XQM,Bidón de plástico con cabeza no desmontable,,Packaging
+l10n_mx_wbl_unit_weight_XQN,XQN,Bidón de plástico con cabeza extraíble,,Packaging
+l10n_mx_wbl_unit_weight_XQP,XQP,Caja de madera natural estándar,,Packaging
+l10n_mx_wbl_unit_weight_XQQ,XQQ,Caja de madera natural con muros a prueba de filtraciones,,Packaging
+l10n_mx_wbl_unit_weight_XQR,XQR,Caja de plástico expandida,,Packaging
+l10n_mx_wbl_unit_weight_XQS,XQS,Caja de plástico sólida,,Packaging
+l10n_mx_wbl_unit_weight_XRD,XRD,Rod,,Packaging
+l10n_mx_wbl_unit_weight_XRG,XRG,Anillo,,Packaging
+l10n_mx_wbl_unit_weight_XRJ,XRJ,"Estante, Perchero para ropa",,Packaging
+l10n_mx_wbl_unit_weight_XRK,XRK,Estante,,Packaging
+l10n_mx_wbl_unit_weight_XRL,XRL,Carrete,Dispositivo giratorio cilíndrico con un reborde en cada extremo en el que se enrollan los materiales.,Packaging
+l10n_mx_wbl_unit_weight_XRO,XRO,Rollo,,Packaging
+l10n_mx_wbl_unit_weight_XRT,XRT,Red Roja,Material de confinamiento hecho de redes de malla roja para retener artículos (por ejemplo árboles).,Packaging
+l10n_mx_wbl_unit_weight_XRZ,XRZ,Varillas  con fleje/ agrupados/ armados,,Packaging
+l10n_mx_wbl_unit_weight_XSA,XSA,Saco,,Packaging
+l10n_mx_wbl_unit_weight_XSB,XSB,Losa,,Packaging
+l10n_mx_wbl_unit_weight_XSC,XSC,Cajón poco profundo,,Packaging
+l10n_mx_wbl_unit_weight_XSD,XSD,Huso,,Packaging
+l10n_mx_wbl_unit_weight_XSE,XSE,Baúl,,Packaging
+l10n_mx_wbl_unit_weight_XSH,XSH,Bolsa pequeña hermética,,Packaging
+l10n_mx_wbl_unit_weight_XSI,XSI,Patín,Una plataforma o plataforma móvil baja para facilitar el manejo y transporte de mercancías.,Packaging
+l10n_mx_wbl_unit_weight_XSK,XSK,Carcasa esqueleto,,Packaging
+l10n_mx_wbl_unit_weight_XSL,XSL,Hoja de deslizamiento,Láminas de plástico duro se utilizan principalmente como la base sobre la cual apilan mercancías para optimizar el espacio dentro de un contenedor. Puede utilizarse como alternativa a un embalaje paletizado.,Packaging
+l10n_mx_wbl_unit_weight_XSM,XSM,Hoja de metal,,Packaging
+l10n_mx_wbl_unit_weight_XSO,XSO,Carrete pequeño,"Contenedor de empaque utilizado en el transporte de artículos tales como alambre, cable, cinta e hilo.",Packaging
+l10n_mx_wbl_unit_weight_XSP,XSP,Hoja de empaque de plástico,,Packaging
+l10n_mx_wbl_unit_weight_XSS,XSS,Cajón de acero,,Packaging
+l10n_mx_wbl_unit_weight_XSU,XSU,Maleta,,Packaging
+l10n_mx_wbl_unit_weight_XSV,XSV,Sobre de acero,,Packaging
+l10n_mx_wbl_unit_weight_XSW,XSW,Envoltorio,Mercancías retenidas en una película de plástico transparente que ha sido envuelta alrededor y luego encogido fuertemente a las mercancías.,Packaging
+l10n_mx_wbl_unit_weight_XSY,XSY,Manga,,Packaging
+l10n_mx_wbl_unit_weight_XSZ,XSZ,Hojas  con fleje/ agrupados/ armados,,Packaging
+l10n_mx_wbl_unit_weight_XT1,XT1,Tableta,"Artículo suelto o sin empaque en forma de barra, bloque o pieza.",Packaging
+l10n_mx_wbl_unit_weight_XTB,XTB,Tina,,Packaging
+l10n_mx_wbl_unit_weight_XTC,XTC,Caja para té,,Packaging
+l10n_mx_wbl_unit_weight_XTD,XTD,Tubo plegable,,Packaging
+l10n_mx_wbl_unit_weight_XTG,XTG,Contenedor de tanque genérico,Recipiente especialmente construido para el transporte de líquidos y gases a granel.,Packaging
+l10n_mx_wbl_unit_weight_XTI,XTI,Tierce,Barril de 1/6 parte de tonel,Packaging
+l10n_mx_wbl_unit_weight_XTK,XTK,Tanque rectangular,,Packaging
+l10n_mx_wbl_unit_weight_XTL,XTL,Tina con tapa,,Packaging
+l10n_mx_wbl_unit_weight_XTN,XTN,Hojalata,,Packaging
+l10n_mx_wbl_unit_weight_XTO,XTO,Tonel,Barril con capacidad para 982 litros,Packaging
+l10n_mx_wbl_unit_weight_XTR,XTR,Maletero,,Packaging
+l10n_mx_wbl_unit_weight_XTS,XTS,Estructura,,Packaging
+l10n_mx_wbl_unit_weight_XTT,XTT,Bolsa de mano,Una gran bolsa o cesto.,Packaging
+l10n_mx_wbl_unit_weight_XTU,XTU,Tubo,,Packaging
+l10n_mx_wbl_unit_weight_XTV,XTV,Tubo con boquilla,"Tubo de plástico, metal o cartón, provisto de una boquilla, que contiene un producto líquido o semilíquido, por ejemplo silicio.",Packaging
+l10n_mx_wbl_unit_weight_XTW,XTW,Pallet tricapa,Una paleta ligera hecha de cartón ondulado resistente.,Packaging
+l10n_mx_wbl_unit_weight_XTY,XTY,Tanque cilíndrico,,Packaging
+l10n_mx_wbl_unit_weight_XTZ,XTZ,Tubos  con fleje/ agrupados/ armados,,Packaging
+l10n_mx_wbl_unit_weight_XUC,XUC,Sin empaque,,Packaging
+l10n_mx_wbl_unit_weight_XUN,XUN,Unidad,"Tipo de paquete compuesto de un solo artículo u objeto, no especificado de otro modo como una unidad de equipo de transporte.",Packaging
+l10n_mx_wbl_unit_weight_XVA,XVA,Tanque,,Packaging
+l10n_mx_wbl_unit_weight_XVG,XVG,"Tanque de gas (a 1,031 mbar y 15° C)",,Packaging
+l10n_mx_wbl_unit_weight_XVI,XVI,Frasco pequeño,,Packaging
+l10n_mx_wbl_unit_weight_XVK,XVK,Paquete transportable,Tipo de cajón de madera.,Packaging
+l10n_mx_wbl_unit_weight_XVL,XVL,Contenedor para líquidos a granel,,Packaging
+l10n_mx_wbl_unit_weight_XVN,XVN,Vehículo,Medio de transporte autopropulsado.,Packaging
+l10n_mx_wbl_unit_weight_XVO,XVO,"Contenedor para sólido de partículas grandes a granel (""nódulos"")",,Packaging
+l10n_mx_wbl_unit_weight_XVP,XVP,Envasado al vacío,,Packaging
+l10n_mx_wbl_unit_weight_XVQ,XVQ,Tanque para Gas licuado (a temperatura / presión anormal),,Packaging
+l10n_mx_wbl_unit_weight_XVR,XVR,Contenedor para sólidos de partículas granulares a granel (Granos),,Packaging
+l10n_mx_wbl_unit_weight_XVS,XVS,Contenedor de chatarra a granel,Chatarra suelta o sin empaquetar transportada a granel.,Packaging
+l10n_mx_wbl_unit_weight_XVY,XVY,"Contenedor para sólido de partículas finas a granel (""polvos"")",,Packaging
+l10n_mx_wbl_unit_weight_XWA,XWA,Contenedor de granel intermedio,"Recipiente reutilizable hecho de metal, plástico, textiles, madera o materiales compuestos utilizados para facilitar el transporte de sólidos y líquidos a granel en volúmenes manejables.",Packaging
+l10n_mx_wbl_unit_weight_XWB,XWB,Botella de mimbre,,Packaging
+l10n_mx_wbl_unit_weight_XWC,XWC,Contenedor intermedio para gráneles y de acero,,Packaging
+l10n_mx_wbl_unit_weight_XWD,XWD,Contenedor intermedio para gráneles y de aluminio,,Packaging
+l10n_mx_wbl_unit_weight_XWF,XWF,Contenedor intermedio para gráneles y de metal,,Packaging
+l10n_mx_wbl_unit_weight_XWG,XWG,Contenedor intermedio para gráneles y de acero presurizado menor a 10 kpa,,Packaging
+l10n_mx_wbl_unit_weight_XWH,XWH,"Contenedor intermedio para gráneles y de aluminio, presurizado menor a 10 kpa",,Packaging
+l10n_mx_wbl_unit_weight_XWJ,XWJ,Contenedor intermedio para gráneles y de metal con una presión de 10 kpa,,Packaging
+l10n_mx_wbl_unit_weight_XWK,XWK,Contenedor intermedio para gráneles y de acero para líquido,,Packaging
+l10n_mx_wbl_unit_weight_XWL,XWL,Contenedor intermedio para gráneles y de aluminio para líquido,,Packaging
+l10n_mx_wbl_unit_weight_XWM,XWM,Contenedor intermedio para gráneles y de metal para líquido,,Packaging
+l10n_mx_wbl_unit_weight_XWN,XWN,Contenedor intermedio para gráneles con tejido plástico sin capa con revestimiento,,Packaging
+l10n_mx_wbl_unit_weight_XWP,XWP,Contenedor intermedio para gráneles con tejido plástico y recubierto,,Packaging
+l10n_mx_wbl_unit_weight_XWQ,XWQ,Contenedor intermedio para gráneles con tejido plástico con revestimiento,,Packaging
+l10n_mx_wbl_unit_weight_XWR,XWR,"Contenedor intermedio para gráneles con tejido plástico, revestido y con forro",,Packaging
+l10n_mx_wbl_unit_weight_XWS,XWS,Contenedor intermedio para gráneles con película de plástico,,Packaging
+l10n_mx_wbl_unit_weight_XWT,XWT,Contenedor intermedio para gráneles textil sin capa / forro,,Packaging
+l10n_mx_wbl_unit_weight_XWU,XWU,Contenedor intermedio para gráneles de madera natural con forro interior,,Packaging
+l10n_mx_wbl_unit_weight_XWV,XWV,Contenedor intermedio para gráneles textil recubierto,,Packaging
+l10n_mx_wbl_unit_weight_XWW,XWW,Contenedor intermedio para gráneles textil con revestimiento,,Packaging
+l10n_mx_wbl_unit_weight_XWX,XWX,Contenedor intermedio para gráneles textil recubierto y con forro,,Packaging
+l10n_mx_wbl_unit_weight_XWY,XWY,Contenedor intermedio para gráneles contrachapado con revestimiento interior,,Packaging
+l10n_mx_wbl_unit_weight_XWZ,XWZ,Contenedor intermedio para gráneles de madera reconstituida con revestimiento interior,,Packaging
+l10n_mx_wbl_unit_weight_XXA,XXA,"Bolsa de tejido plástico, sin abrigo interior ni forro",,Packaging
+l10n_mx_wbl_unit_weight_XXB,XXB,Bolsa de tejido plástico a prueba de filtraciones,,Packaging
+l10n_mx_wbl_unit_weight_XXC,XXC,Bolsa de tejido plástico resistente al agua,,Packaging
+l10n_mx_wbl_unit_weight_XXD,XXD,Bolsa con película de plástico,,Packaging
+l10n_mx_wbl_unit_weight_XXF,XXF,Bolsa textil sin capa ni forro interior,,Packaging
+l10n_mx_wbl_unit_weight_XXG,XXG,Bolsa textil a prueba de filtraciones,,Packaging
+l10n_mx_wbl_unit_weight_XXH,XXH,Bolsa textil resistente al agua,,Packaging
+l10n_mx_wbl_unit_weight_XXJ,XXJ,Bolsa de papel multi-pared,,Packaging
+l10n_mx_wbl_unit_weight_XXK,XXK,"Bolsa de papel multi-pared, resistente al agua",,Packaging
+l10n_mx_wbl_unit_weight_XYA,XYA,"Empaque compuesto, recipiente de plástico en tambor de acero",,Packaging
+l10n_mx_wbl_unit_weight_XYB,XYB,"Empaque compuesto, recipiente de plástico en cajas de acero",,Packaging
+l10n_mx_wbl_unit_weight_XYC,XYC,"Empaque compuesto, recipiente de plástico en tambor de aluminio",,Packaging
+l10n_mx_wbl_unit_weight_XYD,XYD,"Empaque compuesto, recipiente de plástico en cajón de aluminio",,Packaging
+l10n_mx_wbl_unit_weight_XYF,XYF,"Empaque compuesto, recipiente de plástico en caja de madera",,Packaging
+l10n_mx_wbl_unit_weight_XYG,XYG,"Empaque compuesto, recipiente de plástico en tambor de madera contrachapada",,Packaging
+l10n_mx_wbl_unit_weight_XYH,XYH,"Empaque compuesto, recipiente de plástico en caja de madera contrachapada",,Packaging
+l10n_mx_wbl_unit_weight_XYJ,XYJ,"Empaque compuesto, recipiente de plástico en tambor de fibra",,Packaging
+l10n_mx_wbl_unit_weight_XYK,XYK,"Empaque compuesto, recipiente de plástico en caja de cartón",,Packaging
+l10n_mx_wbl_unit_weight_XYL,XYL,"Empaque compuesto, recipiente de plástico en el tambor de plástico",,Packaging
+l10n_mx_wbl_unit_weight_XYM,XYM,"Empaque compuesto, recipiente de plástico en caja de plástico sólido",,Packaging
+l10n_mx_wbl_unit_weight_XYN,XYN,"Empaque compuesto, receptáculo de vidrio en tambor de acero",,Packaging
+l10n_mx_wbl_unit_weight_XYP,XYP,"Empaque compuesto, receptáculo de vidrio en caja de cajas de acero",,Packaging
+l10n_mx_wbl_unit_weight_XYQ,XYQ,"Empaque compuesto, recipiente de vidrio en tambor de aluminio",,Packaging
+l10n_mx_wbl_unit_weight_XYR,XYR,"Empaque compuesto, receptáculo de vidrio en caja de aluminio",,Packaging
+l10n_mx_wbl_unit_weight_XYS,XYS,"Empaque compuesto, recipiente de vidrio en caja de madera",,Packaging
+l10n_mx_wbl_unit_weight_XYT,XYT,"Empaque compuesto, recipiente de vidrio en tambor de madera contrachapada",,Packaging
+l10n_mx_wbl_unit_weight_Xyv,Xyv,"Empaque compuesto, recipiente de vidrio en el cesto de mimbre",,Packaging
+l10n_mx_wbl_unit_weight_XYW,XYW,"Empaque compuesto, recipiente de vidrio en tambor de fibra",,Packaging
+l10n_mx_wbl_unit_weight_XYX,XYX,"Empaque compuesto, recipiente de vidrio en caja de cartón",,Packaging
+l10n_mx_wbl_unit_weight_XYY,XYY,"Empaque compuesto, recipiente de vidrio en paquete de plástico expandible",,Packaging
+l10n_mx_wbl_unit_weight_XYZ,XYZ,"Empaque compuesto, recipiente de vidrio en paquete de plástico sólido",,Packaging
+l10n_mx_wbl_unit_weight_XZA,XZA,"Contenedor de granel intermedio, papel, multi-pared",,Packaging
+l10n_mx_wbl_unit_weight_XZB,XZB,Bolsa grande,,Packaging
+l10n_mx_wbl_unit_weight_XZC,XZC,"Contenedor intermedio para gráneles de papel, multi-pared y resistente al agua",,Packaging
+l10n_mx_wbl_unit_weight_XZD,XZD,"Contenedor intermedio para gráneles de plástico rígido, con equipo estructural para sólidos",,Packaging
+l10n_mx_wbl_unit_weight_XZF,XZF,"Contenedor intermedio para gráneles de plástico rígido, autoportante para sólidos",,Packaging
+l10n_mx_wbl_unit_weight_XZG,XZG,"Contenedor intermedio para gráneles de plástico rígido, con equipo estructural, presurizado",,Packaging
+l10n_mx_wbl_unit_weight_XZH,XZH,"Contenedor intermedio para gráneles de plástico rígido, autoportante y presurizado",,Packaging
+l10n_mx_wbl_unit_weight_XZJ,XZJ,"Contenedor intermedio para gráneles de plástico rígido, con equipo estructural para líquidos",,Packaging
+l10n_mx_wbl_unit_weight_XZK,XZK,"Contenedor intermedio para gráneles de plástico rígido, autoportante, líquidos",,Packaging
+l10n_mx_wbl_unit_weight_XZL,XZL,"Contenedor intermedio para gráneles, compuesto y de plástico rígido, sólidos",,Packaging
+l10n_mx_wbl_unit_weight_XZM,XZM,"Contenedor intermedio para gráneles, compuesto y de plástico flexible, sólidos",,Packaging
+l10n_mx_wbl_unit_weight_XZN,XZN,"Contenedor intermedio para gráneles, compuesto y de plástico rígido, presurizado",,Packaging
+l10n_mx_wbl_unit_weight_XZP,XZP,"Contenedor intermedio para gráneles, compuesto y de plástico flexible, presurizado",,Packaging
+l10n_mx_wbl_unit_weight_XZQ,XZQ,"Contenedor intermedio para gráneles, compuesto y de plástico rígido, líquidos",,Packaging
+l10n_mx_wbl_unit_weight_XZR,XZR,"Contenedor intermedio para gráneles, compuesto y de plástico flexible para líquidos",,Packaging
+l10n_mx_wbl_unit_weight_XZS,XZS,"Contenedor intermedio para gráneles, compuesto",,Packaging
+l10n_mx_wbl_unit_weight_XZT,XZT,Contenedor intermedio para gráneles con tablero de fibras,,Packaging
+l10n_mx_wbl_unit_weight_XZU,XZU,Contenedor intermedio para gráneles flexible,,Packaging
+l10n_mx_wbl_unit_weight_XZV,XZV,"Contenedor intermedio para gráneles de metal, distinto del acero",,Packaging
+l10n_mx_wbl_unit_weight_XZW,XZW,"Contenedor intermedio para gráneles, de madera natural",,Packaging
+l10n_mx_wbl_unit_weight_XZX,XZX,"Contenedor intermedio para gráneles, de contrachapado",,Packaging
+l10n_mx_wbl_unit_weight_XZY,XZY,"Contenedor intermedio para gráneles, de madera reconstituida",,Packaging
+l10n_mx_wbl_unit_weight_KGM,KGM,Kilogramo,Una unidad de masa igual a mil gramos.,Mass
+l10n_mx_wbl_unit_weight_MC,MC,Microgramo,,Mass
+l10n_mx_wbl_unit_weight_DJ,DJ,Decagramo,,Mass
+l10n_mx_wbl_unit_weight_DG,DG,Decigramo,,Mass
+l10n_mx_wbl_unit_weight_GRM,GRM,Gramo,"Medida de masa, de símbolo g, que es igual a la milésima parte de un kilogramo.",Mass
+l10n_mx_wbl_unit_weight_CGM,CGM,Centigramo,,Mass
+l10n_mx_wbl_unit_weight_TNE,TNE,Tonelada (tonelada métrica),Sinónimo: tonelada métrica,Mass
+l10n_mx_wbl_unit_weight_DTN,DTN,Decitonelada métrica,"Sinónimo: centner, métrico 100 kg; Quintal, métrico 100 kg",Mass
+l10n_mx_wbl_unit_weight_MGM,MGM,Miligramo,"Medida de masa, de símbolo mg, que es igual a la milésima parte de un gramo.",Mass
+l10n_mx_wbl_unit_weight_HGM,HGM,Hectogramo,,Mass
+l10n_mx_wbl_unit_weight_KTN,KTN,Kilotonelada Métrica,,Mass
+l10n_mx_wbl_unit_weight_2U,2U,Megagramo,,Mass
+l10n_mx_wbl_unit_weight_LBR,LBR,Libra,"Unidad monetaria de Irlanda (hasta su sustitución por el euro), Reino Unido, Chipre, Egipto, Líbano, Malta, Siria y otros países.",Mass
+l10n_mx_wbl_unit_weight_GRN,GRN,Grano,"Es la mínima unidad de masa en el sistema inglés de medidas. Se considera con el mismo valor en cualquier país anglosajón. Se utiliza para estimar con más sensibilidad y precisión la poca masa de pequeños objetos (medicamentos, drogas, pólvora, proyectiles, piezas de joyería, etc.).",Mass
+l10n_mx_wbl_unit_weight_ONZ,ONZ,Onza (avoirdupois),"Es una unidad de masa usada desde la Antigua Roma para pesar con mayor precisión las mercancías y otros artículos, especialmente si su peso era menor que una libra romana",Mass
+l10n_mx_wbl_unit_weight_CWI,CWI,Hundredweight,,Mass
+l10n_mx_wbl_unit_weight_CWA,CWA,Hundred pound,,Mass
+l10n_mx_wbl_unit_weight_LTN,LTN,Tonelada (UK) o tonelada larga (estados unidos),Sinónimo: tonelada bruta (2240 ​​lb),Mass
+l10n_mx_wbl_unit_weight_STI,STI,Estone (UK),,Mass
+l10n_mx_wbl_unit_weight_STN,STN,Tonelada (estados unidos) o tonelada corta (UK y estados unidos),Sinónimo: tonelada neta (2000 lb),Mass
+l10n_mx_wbl_unit_weight_APZ,APZ,Onza troy u onza farmacéutica ,,Mass
+l10n_mx_wbl_unit_weight_F13,F13,Slug,Una unidad de masa. Un slug es la masa acelerada a 1 pie por segundo por segundo por una fuerza de 1 libra.,Mass
+l10n_mx_wbl_unit_weight_K64,K64,Libra (avoirdupois) por grado fahrenheit,,Mass
+l10n_mx_wbl_unit_weight_L69,L69,Tonelada por kelvin,,Mass
+l10n_mx_wbl_unit_weight_L87,L87,Tonelada corta por grado fahrenheit,,Mass
+l10n_mx_wbl_unit_weight_M85,M85,"Tonelada, ensayo","Unidad de masa no conforme al sistema internacional, utilizada en la mineralogía para determinar la concentración de metales preciosos en el mineral de acuerdo con la masa del metal precioso en miligramos en una muestra de la masa de un sonido de ensayo (número de onzas troy en una tonelada corta (1 000 lb)).",Mass
+l10n_mx_wbl_unit_weight_M86,M86,Libra Alemana,Anticuada unidad de masa usada en Alemania.,Mass
+l10n_mx_wbl_unit_weight_J33,J33,Microgramo por kilogramo,,Mass
+l10n_mx_wbl_unit_weight_L32,L32,Nanogramo por kilogramo,,Mass
+l10n_mx_wbl_unit_weight_NA,NA,Miligramo por kilogramo,,Mass
+l10n_mx_wbl_unit_weight_M29,M29,Kilogramo por kilogramo,,Mass
+l10n_mx_wbl_unit_weight_M91,M91,Libra por libra,Proporción de la masa consistente en la libra avoirdupois según el sistema unitario avoirdupois dividido por la libra avoirdupois según el sistema unitario avoirdupois.,Mass
+l10n_mx_wbl_unit_weight_Q29,Q29,Microgramo por hectogramo,Microgramo por hectogramo,Mass
+l10n_mx_wbl_unit_weight_MTQ,MTQ,Metro cúbico,Sinónimo: metro cúbico,Volume
+l10n_mx_wbl_unit_weight_MAL,MAL,Megalitro,,Volume
+l10n_mx_wbl_unit_weight_LTR,LTR,Litro,"Es una unidad de volumen equivalente a un decímetro cúbico (1 dm³). Su uso es aceptado en el Sistema Internacional de Unidades (SI), aunque ya no pertenece estrictamente a él.",Volume
+l10n_mx_wbl_unit_weight_MMQ,MMQ,Milímetro cúbico,"Medida de longitud, de símbolo mm, que es igual a la milésima parte de un metro.",Volume
+l10n_mx_wbl_unit_weight_CMQ,CMQ,Centímetro cúbico,"Medida de longitud, de símbolo cm, que es igual a la centésima parte de un metro.",Volume
+l10n_mx_wbl_unit_weight_DMQ,DMQ,Decímetro cúbico,"Medida de longitud, de símbolo dm, que es igual a la décima parte de un metro.",Volume
+l10n_mx_wbl_unit_weight_MLT,MLT,Mililitro,"Medida de volumen, de símbolo ml, que es igual a la milésima parte de un litro.",Volume
+l10n_mx_wbl_unit_weight_HLT,HLT,Hectolitro,"Es una unidad de volumen equivalente a cien litros, representado por el símbolo hl. Es el segundo múltiplo del litro y también equivale a 100 decímetros cúbicos (0,1 metros cúbicos).",Volume
+l10n_mx_wbl_unit_weight_CLT,CLT,Centilitro,"Medida de volumen, de símbolo cl, que es igual a la centésima parte de un litro.",Volume
+l10n_mx_wbl_unit_weight_DMA,DMA,Decámetro cúbico,,Volume
+l10n_mx_wbl_unit_weight_H19,H19,Hectómetro cúbico,,Volume
+l10n_mx_wbl_unit_weight_H20,H20,Kilómetro cúbico,,Volume
+l10n_mx_wbl_unit_weight_M71,M71,Metro cúbico por pascal (joules),"Unidad de Energía del sistema internacional, metro elevado al exponente 3 y dividido por la unidad pascal.",Volume
+l10n_mx_wbl_unit_weight_DLT,DLT,Decilitro,,Volume
+l10n_mx_wbl_unit_weight_4G,4G,Microlitro,,Volume
+l10n_mx_wbl_unit_weight_K6,K6,Kilolitro,,Volume
+l10n_mx_wbl_unit_weight_A44,A44,Decalitro,,Volume
+l10n_mx_wbl_unit_weight_G94,G94,Centímetro cúbico por bar,,Volume
+l10n_mx_wbl_unit_weight_G95,G95,Litro por bar,,Volume
+l10n_mx_wbl_unit_weight_G96,G96,Metro cúbico por bar,,Volume
+l10n_mx_wbl_unit_weight_G97,G97,Mililitro por bar ,,Volume
+l10n_mx_wbl_unit_weight_5I,5I,Pies cúbicos estándar,Utilice estándar (código común WSD),Volume
+l10n_mx_wbl_unit_weight_INQ,INQ,Pulgada cúbica,Sinónimo: pulgada cuadrada,Volume
+l10n_mx_wbl_unit_weight_FTQ,FTQ,Pie cúbico,,Volume
+l10n_mx_wbl_unit_weight_YDQ,YDQ,Yarda cúbica,,Volume
+l10n_mx_wbl_unit_weight_GLI,GLI,Galón (UK),"Es una unidad de volumen que se emplea en los países anglófonos (especialmente Estados Unidos) o con influencia de estos (como Liberia, Guatemala, Panamá, Honduras, Nicaragua, El Salvador, Colombia y parcialmente en México), para medir volúmenes de líquidos, principalmente la gasolina y su precio. Antiguamente, el volumen de un galón dependía de lo que se midiera, y dónde. Sin embargo, en el siglo XIX existían dos definiciones de uso común: ""galón de vino"" (wine gallon) y ""galón de cerveza británico"" (ale gallon).
+Es equivalente a 3.7854 litros.",Volume
+l10n_mx_wbl_unit_weight_GLL,GLL,Galón (EUA),"Es una unidad de volumen que se emplea en los países anglófonos (especialmente Estados Unidos) o con influencia de estos (como Liberia, Guatemala, Panamá, Honduras, Nicaragua, El Salvador, Colombia y parcialmente en México), para medir volúmenes de líquidos, principalmente la gasolina y su precio. Antiguamente, el volumen de un galón dependía de lo que se midiera, y dónde. Sin embargo, en el siglo XIX existían dos definiciones de uso común: ""galón de vino"" (wine gallon) y ""galón de cerveza británico"" (ale gallon).",Volume
+l10n_mx_wbl_unit_weight_PT,PT,Pinta (US),Utilice pinta líquida (código común PTL),Volume
+l10n_mx_wbl_unit_weight_PTI,PTI,Pint (uk),"Es una unidad de volumen inglesa en el sistema imperial y los Estados Unidos. La versión imperial usada en el UK es de 20 onzas líquidas y es equivalente a 568,26125 ml, mientras que en los EUA es de 16 onzas líquidas y es equivalente a 473,17647 ml.",Volume
+l10n_mx_wbl_unit_weight_QTI,QTI,Cuarto (UK),Es una unidad de medida de volumen equivalente a media fanega. En Castilla equivalía a aproximadamente a 6 celemines. La medida real cambia según regiones o incluso localidades.,Volume
+l10n_mx_wbl_unit_weight_PTL,PTL,Pinta líquida (estados unidos),,Volume
+l10n_mx_wbl_unit_weight_QTL,QTL,Cuarto de líquido (estadis unidos),,Volume
+l10n_mx_wbl_unit_weight_PTD,PTD,Pinta seca (estados unidos),,Volume
+l10n_mx_wbl_unit_weight_OZI,OZI,Onza líquida (UK),,Volume
+l10n_mx_wbl_unit_weight_QT,QT,Cuarto (EUA),Utilice cuarto de galón líquido (código común QTL),Volume
+l10n_mx_wbl_unit_weight_J57,J57,Barril (uk petróleo),Es el nombre de varias unidades de volumen usadas en el Reino Unido y en los Estados Unidos.,Volume
+l10n_mx_wbl_unit_weight_K21,K21,Pie cúbico por grado fahrenheit,,Volume
+l10n_mx_wbl_unit_weight_K23,K23,Pie cúbico por psi (libra por pulgada cuadrada),,Volume
+l10n_mx_wbl_unit_weight_L43,L43,Peck (UK),"Un peck es una unidad tradicional de medida de volúmenes. Aunque puede ser utilizado para medir seco y líquido, se utiliza generalmente para las materias secas. Es igual a 1/4 bushel, 2 galones, o 8 cuartos de galón.",Volume
+l10n_mx_wbl_unit_weight_L61,L61,Pinta (US seco),Utilice pinta seca (código común PTD),Volume
+l10n_mx_wbl_unit_weight_L62,L62,Cuarto de galón (seco de los EUA),Utilice cuarto seco (EUA) (código común QTD),Volume
+l10n_mx_wbl_unit_weight_L84,L84,Tonelada (flota UK),,Volume
+l10n_mx_wbl_unit_weight_L86,L86,Tonelada (flota estados unidos),,Volume
+l10n_mx_wbl_unit_weight_M11,M11,Yarda cúbica por grado fahrenheit,,Volume
+l10n_mx_wbl_unit_weight_M14,M14,Yarda cúbica por psi (libra por pulgada cuadrada),,Volume
+l10n_mx_wbl_unit_weight_OZA,OZA,Onza líquida (estados unidos),,Volume
+l10n_mx_wbl_unit_weight_BUI,BUI,Bushel (UK),"Un bushel tiene 4 pecks o 32 quarts, y equivale a 1,03205 del bushel de los Estados Unidos, que a su vez equivale a 0,35238 hectolitros. La palabra bushel está cayendo en desuso rápidamente.",Volume
+l10n_mx_wbl_unit_weight_BUA,BUA,Bushel (EUA),"El bushel es una unidad de medida de capacidad para mercancía sólida en los países anglosajones (países de habla inglesa). Se utiliza en el comercio de granos, harinas y otros productos análogos.",Volume
+l10n_mx_wbl_unit_weight_BLL,BLL,Barril (EUA),"Un barril estadounidense es igual a:
+
+42 galones estadounidenses
+168 cuartos estadounidenses
+336 pintas estadounidenses
+1344 gills estadounidenses
+5376 onzas líquidas estadounidenses
+158.987294928 litros",Volume
+l10n_mx_wbl_unit_weight_BLD,BLD,Barril seco (EUA),,Volume
+l10n_mx_wbl_unit_weight_GLD,GLD,Galón seco (EUA),,Volume
+l10n_mx_wbl_unit_weight_QTD,QTD,Cuarto seco (estados unidos),,Volume
+l10n_mx_wbl_unit_weight_G26,G26,Estere,,Volume
+l10n_mx_wbl_unit_weight_G21,G21,Taza (unidad de volumen),,Volume
+l10n_mx_wbl_unit_weight_G24,G24,Cucharada (estados unidos),"1/2 onzas fluidas, 3 cucharaditas, 15 mililitros",Volume
+l10n_mx_wbl_unit_weight_G25,G25,Cucharilla (estados unidos),1/6 onzas fluidas o 5 mililitros,Volume
+l10n_mx_wbl_unit_weight_G23,G23,Peck,Es una unidad de medida imperial y habitual en  Estados Unidos de volumen seco.,Volume
+l10n_mx_wbl_unit_weight_M67,M67,Acre-pie,"Unidad de volúmen, la cúal es usada en los Estados Unidos para medir la capacidad de las presas.",Volume
+l10n_mx_wbl_unit_weight_M68,M68,Cordón,Unidad tradicional del volumen de leña apilada que se ha medido con un cordón.,Volume
+l10n_mx_wbl_unit_weight_M69,M69,Milla cúbica (reino unido),,Volume
+l10n_mx_wbl_unit_weight_M70,M70,Unidad tradicional de capacidad de carga,,Volume
+l10n_mx_wbl_unit_weight_Q32,Q32,Femtolitro,,Volume
+l10n_mx_wbl_unit_weight_Q33,Q33,Picolitro,,Volume
+l10n_mx_wbl_unit_weight_Q34,Q34,Nanolitro,,Volume
+l10n_mx_wbl_unit_weight_NM3,NM3,Metro cúbico normalizado,Metros cúbicos normalizados (temperatura 0 ° C y presión 101325 milibares),Volume
+l10n_mx_wbl_unit_weight_SM3,SM3,Metro cúbico estándar,Metro cúbico estándar (temperatura 15 ° C y presión 101325 milibares),Volume

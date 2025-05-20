@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+inv_rel_shipment_read_all,inv.rel.shipment all,model_inv_rel_shipment,,1,1,1,1
+inv_rel_so_read_all,inv.rel.so all,model_inv_rel_so,,1,1,1,1

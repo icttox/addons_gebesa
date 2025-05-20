@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_order_form_readonly" model="ir.ui.view">
+            <field name="name">view_order_validate_line_form_readonly</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/notebook//field[@name='order_line']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', 'in', ('done','cancel','closed', 'validation_process'))]}</attribute>                    
+                </xpath>
+                <xpath expr="//sheet/group/group//field[@name='partner_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', 'in', ('done','cancel','closed', 'validation_process'))]}</attribute>                    
+                </xpath>
+                <xpath expr="//sheet/group/group//field[@name='pricelist_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': 1}</attribute>
+                    <attribute name="force_save">True</attribute>
+                </xpath>
+                <xpath expr="//sheet/notebook/page/group/group/field[@name='analytic_account_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', 'in', ('done','cancel','closed', 'validation_process'))]}</attribute>                    
+                </xpath>
+            </field>
+        </record>
+
+
+        <record model='ir.ui.view' id='view_sale_orders_warehouse_readonly'>
+            <field name='name'>view.sale.orders.warehouse.readonly</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref="sale_order_gebesa.view_sale_orders_warehouse"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='warehouse_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', 'in', ('done','cancel','closed', 'validation_process'))]}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_order_form" model="ir.ui.view">
+            <field name="name">view_order_validate_line_form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="groups_id" eval="[(6,0, [ref('system_administrator.group_system_administrator_gebesa')])]" />
+            <field name="arch" type="xml">
+                <xpath expr="//header/button[@name='preview_sale_order']" position="before">
+                    <button icon="fa-bullseye" name="perform_orders_validations" string="Validated by lines " type="object" attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('approve','in',('not_approved','suggested'))]}"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page/field[@name='order_line']/tree/field[@name='customer_lead']" position="after">
+                    <field name='revalidated' invisible="True"/>
+                    <button icon="fa-bullseye" name="re_validate_line" string="Re-run line" type="object" attrs="{'invisible': [('closed', '!=', True)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

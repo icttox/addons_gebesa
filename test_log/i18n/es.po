@@ -1,0 +1,194 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* test_log
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-09 15:24+0000\n"
+"PO-Revision-Date: 2020-06-09 10:31-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__additional_notes
+msgid "Additional Notes"
+msgstr "Notas Adicionales"
+
+#. module: test_log
+#: selection:test.log,status:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: test_log
+#: model_terms:ir.actions.act_window,help:test_log.action_test_log_form
+msgid "Click to start a test log."
+msgstr "Clic para crear un registro de pruebas"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__department_id
+msgid "Department"
+msgstr "Departamento"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: test_log
+#: selection:test.log,status:0
+msgid "Done"
+msgstr "Hecho"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__expected_results
+msgid "Expected results"
+msgstr "Resultados Esperados"
+
+#. module: test_log
+#: selection:test.log,priority:0
+msgid "High"
+msgstr "Alta"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__id
+msgid "ID"
+msgstr ""
+
+#. module: test_log
+#: model_terms:ir.ui.view,arch_db:test_log.test_log_view_form
+#: selection:test.log,status:0
+msgid "In Process"
+msgstr "En Proceso"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: test_log
+#: selection:test.log,priority:0
+msgid "Low"
+msgstr "baja"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__module_id
+msgid "Module"
+msgstr "Modulo"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: test_log
+#: selection:test.log,status:0
+msgid "New"
+msgstr "Nuevo"
+
+#. module: test_log
+#: selection:test.log,priority:0
+msgid "Normal"
+msgstr "Normal"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__number_test_request
+msgid "Number of tests requested"
+msgstr "Número de pruebas solicitadas"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__policy_revised
+msgid "Policy revised by accounting"
+msgstr "Póliza revisada por contabilidad"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__priority
+msgid "Priority"
+msgstr "Prioridad"
+
+#. module: test_log
+#: model_terms:ir.ui.view,arch_db:test_log.test_log_view_form
+msgid "Prueba Exitosa"
+msgstr ""
+
+#. module: test_log
+#: model_terms:ir.ui.view,arch_db:test_log.test_log_view_form
+msgid "Prueba Fallida"
+msgstr ""
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__results_obtained
+msgid "Results Obtained"
+msgstr "Resultados Obtenidos"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__user_id
+msgid "Stakeholder"
+msgstr "Interesado"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__status
+msgid "Status"
+msgstr "Estado"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__successful_test
+msgid "Successful test"
+msgstr "Prueba Exitosa"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__description_test
+msgid "Test Description"
+msgstr "Descripción de Prueba"
+
+#. module: test_log
+#: model:ir.actions.act_window,name:test_log.action_test_log_form
+#: model:ir.ui.menu,name:test_log.menu_action_test_log_form
+#: model:ir.ui.menu,name:test_log.menu_test_log
+#: model:ir.ui.menu,name:test_log.test_log_menu
+#: model_terms:ir.ui.view,arch_db:test_log.test_log_view_form
+#: model_terms:ir.ui.view,arch_db:test_log.test_log_view_tree
+msgid "Test Log"
+msgstr "Registro de Prueba"
+
+#. module: test_log
+#: model:ir.model.fields,field_description:test_log.field_test_log__test_execution_date
+msgid "Test execution date"
+msgstr "Fecha de Ejecución de Prueba"
+
+#. module: test_log
+#: selection:test.log,priority:0
+msgid "Very High"
+msgstr "Muy Alta"
+
+#. module: test_log
+#: model:ir.model,name:test_log.model_test_log
+msgid "test.log"
+msgstr ""

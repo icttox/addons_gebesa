@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_account_payment_edi_extended">
+        <field name="name">view.account.payment.inv.form.edi.extended</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="l10n_mx_edi.view_account_payment_inv_form_inh_l10n_mx"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='l10n_mx_edi_payment_method_id']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_account_payment_form_inh_l10n_mx">
+        <field name="name">view.account.payment.form.inh.l10n.mx</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="l10n_mx_edi.view_account_payment_form_inh_l10n_mx"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='l10n_mx_edi_payment_method_id']" position="attributes">
+                    <attribute name="attrs">{'required': [('payment_type', '=', 'inbound')], 'invisible': [('payment_type', '!=', 'inbound')]}</attribute>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_account_reg_payment_form_inh_l10n_mx_extend">
+        <field name="name">view.account.reg.payment.l10n.mx.extend</field>
+        <field name="model">account.register.payments</field>
+        <field name="inherit_id" ref="l10n_mx_edi.view_account_reg_payment_form_inh_l10n_mx"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='l10n_mx_edi_payment_method_id']" position="attributes">
+                    <attribute name="required">1</attribute>
+                    <attribute name="attrs">{'invisible': [('payment_type', '=', 'transfer')]}</attribute>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_account_payment_analytic_edi_extended">
+        <field name="name">view.account.payment.analytic.edi.extended</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_invoice_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='communication']" position="after">
+                    <field name="account_analytic_id" required="True"/>
+                </xpath>
+                <xpath expr="//field[@name='payment_difference_handling']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='l10n_mx_edi_payment_method_id']" position="attributes">
+                    <attribute name="attrs">{'required': [('payment_type', '=', 'inbound')], 'invisible': [('payment_type', '!=', 'inbound')]}</attribute>
+                </xpath>
+            </data>
+        </field> 
+    </record>
+
+    <record model="ir.ui.view" id="view_account_payment_edi_extended_form">
+        <field name="name">view.account.payment.edi.extended.form</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//form/header/button[@name='action_draft']" position="after">
+                    <button name="cancel_payment_sat" attrs="{'invisible':[('state', 'not in', ['reconciled', 'posted'])]}" string="Cancel only on SAT" type="object" groups='system_administrator.group_system_administrator_gebesa'/>
+                </xpath>
+                <xpath expr="//field[@name='payment_date']" position="after">
+                    <field name="rate_mex" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                </xpath>
+            </data>
+        </field> 
+    </record>
+
+    <record model="ir.ui.view" id="view_payment_invoices_edi_extended_form">
+        <field name="name">view.payment.invoices.edi.extended.form</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account_register_payments_line.view_payment_invoices"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Cancellation ">
+                        <group>
+                            <field name="l10n_mx_edi_reason_cancellation"/>
+                            <field name="l10n_mx_edi_invoices_replace" attrs="{'invisible':[('l10n_mx_edi_reason_cancellation', '!=', '01')], 'required':[('l10n_mx_edi_reason_cancellation', '=', '01')]}"/>
+                        </group>
+                    </page>
+                    <page string="Intermediate XML">
+                        <button name="action_read_intermediate_file" attrs="{'invisible':[('l10n_mx_edi_pac_status', '!=', 'to_sign')]}" string="Read Unsealed XML" type="object"/>
+                        <field name='xml_intermediate'/>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+</odoo>

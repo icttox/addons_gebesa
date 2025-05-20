@@ -1,0 +1,176 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* purchase_order_review_status
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-09 15:02+0000\n"
+"PO-Revision-Date: 2017-03-09 15:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_order_review_status
+#: code:addons/purchase_order_review_status/models/purchase_order.py:36
+#, python-format
+msgid "Can not confirm the order until it                     is reviewed"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.ui.view,arch_db:purchase_order_review_status.purchase_order_line_confirm_view
+msgid "Cancel"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.ui.view,arch_db:purchase_order_review_status.purchase_order_line_confirm_view
+msgid "Confirm Lines"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.actions.act_window,name:purchase_order_review_status.action_purchase_order_line_confirm
+msgid "Confirm Purchase Order Lines"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model,name:purchase_order_review_status.model_purchase_order_line_confirm
+msgid "Confirm the selected purchase order lines"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model.fields,field_description:purchase_order_review_status.field_purchase_order_line_confirm_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model.fields,field_description:purchase_order_review_status.field_purchase_order_line_confirm_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model.fields,field_description:purchase_order_review_status.field_purchase_order_line_confirm_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model.fields,field_description:purchase_order_review_status.field_purchase_order_line_confirm_id
+msgid "ID"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model.fields,field_description:purchase_order_review_status.field_purchase_order_line_confirm___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model.fields,field_description:purchase_order_review_status.field_purchase_order_line_confirm_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model.fields,field_description:purchase_order_review_status.field_purchase_order_line_confirm_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: code:addons/purchase_order_review_status/models/purchase_order.py:13
+#: selection:purchase.order,review:0
+#, python-format
+msgid "No Review"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.ui.view,arch_db:purchase_order_review_status.purchase_order_line_confirm_view
+msgid "Once draft invoices are confirmed, you will not be able\n"
+"                        to modify them. The invoices will receive a unique\n"
+"                        number and journal items will be created in your chart\n"
+"                        of accounts."
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.ui.menu,name:purchase_order_review_status.po_line_validation_menu
+msgid "PO Lines Validation"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.ui.view,arch_db:purchase_order_review_status.purchase_order_line_form_view
+msgid "Purchase Line"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model,name:purchase_order_review_status.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model,name:purchase_order_review_status.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.actions.act_window,name:purchase_order_review_status.action_po_line_validation
+#: model:ir.ui.view,arch_db:purchase_order_review_status.purchase_line_tree
+msgid "Purchase Order Lines To Validate"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model.fields,help:purchase_order_review_status.field_purchase_order_line_origin
+msgid "Reference of the document that generated this purchase order request (e.g. a sale order or an internal procurement request)"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: code:addons/purchase_order_review_status/models/purchase_order.py:14
+#: selection:purchase.order,review:0
+#, python-format
+msgid "Review"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.ui.view,arch_db:purchase_order_review_status.purchase_order_review_status_form
+msgid "Review Purchase"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:res.groups,name:purchase_order_review_status.group_review
+msgid "Review Warehouse / Manager"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model.fields,field_description:purchase_order_review_status.field_purchase_order_line_origin
+msgid "Source Document"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: code:addons/purchase_order_review_status/models/purchase_order.py:28
+#, python-format
+msgid "This purchase order has already been reviewed by the Warehouse Manager"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: code:addons/purchase_order_review_status/models/purchase_order.py:45
+#: model:ir.model.fields,field_description:purchase_order_review_status.field_purchase_order_line_reviewed
+#, python-format
+msgid "Valid"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.ui.view,arch_db:purchase_order_review_status.purchase_order_line_confirm_view
+msgid "Validate Purchase Order Lines"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: model:ir.model.fields,field_description:purchase_order_review_status.field_purchase_order_line_warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: purchase_order_review_status
+#: code:addons/purchase_order_review_status/models/purchase_order.py:15
+#: model:ir.model.fields,field_description:purchase_order_review_status.field_purchase_order_review
+#, python-format
+msgid "Warehouse Review"
+msgstr ""
+

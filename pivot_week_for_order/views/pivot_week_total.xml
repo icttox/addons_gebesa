@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Nodo requerido-->
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='pivot_week_total'>
+        	<field name='name'>pivot.week.total</field>
+        	<field name='model'>sale.order</field>
+        	<field name='arch' type='xml'>
+        		<tree string='Sale'>   
+                    <field name='name' string='Pedido de Venta'/>
+        			<field name='date_order' string='Fecha de Pedido' interval="week"/>
+                    <field name='analytic_account_id' string='Cuenta Analítica'/>
+                    <field name="o_net_sale_rate_mex"/>
+                    <field name='o_total_net_sale' string='Vta Neta Total'/>
+                    <field name='state'/>                               
+        		</tree>
+        	</field>
+            <!--Cierre de Registro-->
+        </record>
+
+        <record id="sale_order_pivot_total" model="ir.ui.view">
+            <field name="name">sale.order.pivot_pruebas</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <pivot string="Sale Orders">
+                    <field name="warehouse_id" type="row"/>
+                    <field name="analytic_account_id" type="row"/>
+                    <field name='date_validator' type="col" interval="week" ref="pivot_week_total"/>
+                    <field name="o_net_sale_rate_mex" type="measure" ref="pivot_week_total"/> 
+                </pivot>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_sale_order_graph_total">
+            <field name="name">sale.order.graph</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <graph string="Sales Orders">
+                    <field name="partner_id"/>
+                    <field name="amount_total" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id='action_pivot_week_total' model='ir.actions.act_window'>
+            <field name='name'>Captura Semanal</field>
+            <field name='res_model'>sale.order</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>pivot,tree,graph</field>
+            <field name="view_id" ref="sale_order_pivot_total"/>
+            <field name="domain">[('state', 'not in', ('cancel','sent','draft')), ('date_validator', '&gt;=', (datetime.date.today() - datetime.timedelta(weeks=52, days=datetime.date.today().weekday()) ).strftime('%Y-%m-%d')), '|', ('campaign_id', '!=', 36), ('campaign_id', '=', False)]</field>
+        </record>
+        <menuitem id="pivot_week_total_menu" parent="sale.menu_sale_report" name="Captura Semanal" action="action_pivot_week_total"/>
+
+
+        <record id="pivot_weekly_capture_family" model="ir.ui.view">
+            <field name="name">pivot.weekly.capture.family</field>
+            <field name="model">sale.order.line</field>
+            <field name="arch" type="xml">
+                <pivot string="Sale Orders">
+                    <field name="warehouse_id" type="row"/>
+                    <field name="family_id" type="row"/>
+                    <field name='date_validator' type="col" interval="week"/>
+                    <field name="net_sale_mx" type="measure"/> 
+                </pivot>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='tree_weekly_capture_family'>
+            <field name='name'>tree.weekly.capture.family</field>
+            <field name='model'>sale.order.line</field>
+            <field name='arch' type='xml'>
+                <tree string='Captura Semanal Por Familia'>
+                    <field name="order_id"/>
+                    <field name="warehouse_id"/>
+                    <field name="family_id"/>
+                    <field name="product_id"/>
+                    <field name='date_validator'/>
+                    <field name="net_sale_mx"/> 
+                </tree>
+            </field>
+        </record>
+        <record id='action_pivot_weekly_capture_family' model='ir.actions.act_window'>
+            <field name='name'>Captura Semanal Por Familia</field>
+            <field name='res_model'>sale.order.line</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>pivot,tree</field>
+            <field name="domain">[('state', 'not in', ('cancel','sent','draft')), ('date_validator', '&gt;=', (datetime.date.today() - datetime.timedelta(weeks=104, days=datetime.date.today().weekday()) ).strftime('%Y-%m-%d')),
+            ('family_id', '!=', False), ('closed', '!=', True), ('customer_lead', '!=', 587431)]</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'pivot', 'sequence': 1, 'view_id': ref('pivot_weekly_capture_family')}),
+                (0, 0, {'view_mode': 'tree', 'sequence': 2, 'view_id': ref('tree_weekly_capture_family')})]"/>
+        </record>
+        <menuitem id="pivot_weekly_capture_family_menu" parent="sale.menu_sale_report" name="Captura Semanal Por Familia" action="action_pivot_weekly_capture_family"/>
+    </data>
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="group_stock_picking_type" model="res.groups">
+            <field name="name">Stock type of move / Manager</field>
+        </record>        
+        <record id="ir_rule_stock_picking_type" model="ir.rule">
+            <field name="name">Stock type of move</field>
+            <field name="model_id" ref="model_stock_move_type"/>
+            <field name="groups" eval="[(4,ref('stock_picking_type.group_stock_picking_type'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field eval="False" name="global"/>
+        </record>
+        <record id="ir_rule_stock_picking_type_adjustment" model="ir.rule">
+            <field name="name">Stock type adjustment</field>
+            <field name="model_id" ref="model_type_adjustment"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+    </data>
+</odoo>

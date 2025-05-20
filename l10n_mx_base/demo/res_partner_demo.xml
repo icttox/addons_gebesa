@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+
+    <record id="main_mx_address_company" model="res.partner">
+        <field name="name">Your MX Address</field>
+        <field name="parent_id" ref="base.main_partner"/>
+        <field name="customer" eval="0"/>
+        <field name="is_company" eval="0"/>
+        <field name="street_name">Tu Calle</field>
+        <field name="l10n_mx_edi_colony">Tu Colonia</field>
+        <field name="street_number">Tu num exterior</field>
+        <field name="street_number2">Tu num interior</field>
+        <field name="zip">10000</field>
+        <field name="l10n_mx_locality">Tu localidad</field>
+        <field name="city">Ciudad Obregón</field>
+        <field name="state_id" ref="base.state_mx_son"/>
+        <field name="country_id" ref="base.mx"/>
+        <field name="email">tu_email@tu_dominio.com</field>
+        <field name="phone">tu-telefono</field>
+        <field name="type">invoice</field>
+    </record>
+
+    <record id="base.main_partner" model="res.partner">
+        <field name="vat">ACO560518KW7</field>
+        <field name="property_account_position_id" ref="account_fiscal_position_601_fr"/>
+        <field name="country_id" ref="base.mx"/>
+    </record>
+
+    <!-- The ampersand in the name and the vat number is intentional, in order to consider a little use case where
+    it was failing in the past and avoid regressions in the future. -->
+    <record id="res_partner_vauxoo_0" model="res.partner">
+        <field name="name">VAUXOO S.A. de C.V. &amp;</field>
+        <field eval="1" name="customer"/>
+        <field name="is_company">1</field>
+        <field name="street_name">Campobasso Norte</field>
+        <field name="l10n_mx_edi_colony">Fraccionamiento Montecarlo</field>
+        <field name="street_number">3206</field>
+        <field name="street_number2">9000</field>
+        <field name="zip">85134</field>
+        <field name="lang">es_MX</field>
+        <field name="l10n_mx_locality">Ciudad Obregón</field>
+        <field name="city">Ciudad Obregón</field>
+        <field name="state_id" ref="base.state_mx_son"/>
+        <field name="country_id" ref="base.mx"/>
+        <field name="email">info(at)vauxoo.com</field>
+        <field name="phone">477-773-3346</field>
+        <field name="vat">VCO120608KR7</field>
+        <field eval="1" name="supplier"/>
+        <field name="l10n_mx_payment_method_id" ref="l10n_mx_base.payment_method_efectivo"/>
+        <field name="l10n_mx_edi_usage">I06</field>
+    </record>
+
+    <record id="res_partner_address_vauxoo_1" model="res.partner">
+        <field name="name">Alejandro Negrin</field>
+        <field name="parent_id" ref="res_partner_vauxoo_0"/>
+        <field name="lang">es_MX</field>
+    </record>
+
+    <record id="base.res_partner_1" model="res.partner">
+        <field name="l10n_mx_payment_method_id" ref="l10n_mx_base.payment_method_otros"/>
+    </record>
+    <record id="base.res_partner_2" model="res.partner">
+        <field name="l10n_mx_payment_method_id" ref="l10n_mx_base.payment_method_otros"/>
+    </record>
+    <record id="base.res_partner_3" model="res.partner">
+        <field name="l10n_mx_payment_method_id" ref="l10n_mx_base.payment_method_otros"/>
+    </record>
+    <record id="base.res_partner_4" model="res.partner">
+        <field name="l10n_mx_payment_method_id" ref="l10n_mx_base.payment_method_otros"/>
+    </record>
+    <record id="base.res_partner_10" model="res.partner">
+        <field name="l10n_mx_payment_method_id" ref="l10n_mx_base.payment_method_otros"/>
+    </record>
+    <record id="base.res_partner_12" model="res.partner">
+        <field name="l10n_mx_payment_method_id" ref="l10n_mx_base.payment_method_otros"/>
+    </record>
+    <record id="base.res_partner_18" model="res.partner">
+        <field name="l10n_mx_payment_method_id" ref="l10n_mx_base.payment_method_otros"/>
+    </record>
+
+</odoo>

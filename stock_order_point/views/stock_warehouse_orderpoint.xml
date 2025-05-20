@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_warehouse_orderpoint_week_form">
+            <field name="name">view.warehouse.orderpoint.week.form</field>
+            <field name="model">stock.warehouse.orderpoint</field>
+            <field name='inherit_id' ref="stock.view_warehouse_orderpoint_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/group/field[@name='product_min_qty']" position="before">
+                    <field name="week_min_inv"/>
+                    <field name="week_max_inv"/>
+                    <separator/>
+                </xpath>
+         </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_segment_add_production_form'>
+            <field name='name'>mrp.segment.add.production.form</field>
+            <field name='model'>mrp.segment.add.production</field>
+            <field name='arch' type='xml'>
+                <form string='Segment'>
+                    <field name='production_ids' domain="[('location_dest_id','=', location_id), ('segment_line_ids', '=', False), ('state', 'in', ['confirmed', 'planned'])]"/>
+                    <field name='location_id' invisible="1"/>
+                    <footer>
+                        <button string="Add" name="add_production" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

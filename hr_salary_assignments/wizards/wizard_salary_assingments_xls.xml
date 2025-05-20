@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="wizard_assingments_import_xls_view" model="ir.ui.view">
+        <field name="name">wizard.salary.assingments.xls.form</field>
+        <field name="model">wizard.salary.assingments.xls</field>
+        <field name="arch" type="xml">
+            <form string="Import XLS/XLSX">
+               <sheet>
+                <div class="row" states="draft">
+                    <div class="col-xs-12">
+                        <h3 class="oe_grey">
+                            For the import of Salary Assignments you must select a file where the first
+                            row has the following titles and in the same order:
+                        </h3>
+                    </div>
+                    <div class="col-xs-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="font-size:10px">Name of the Employee</th>
+                                    <th style="font-size:10px">Name of the Salary Rule</th>
+                                    <th style="font-size:10px">Date of the Assignment (DD/MM/YYYY)</th>
+                                    <th style="font-size:10px">Payment Date (DD/MM/YYYY)</th>
+                                    <th style="font-size:10px">Quantity (Integer)</th>
+                                    <th style="font-size:10px">Rate  (1-100)</th>
+                                    <th style="font-size:10px">Amount (Float)</th>
+                                    <th style="font-size:10px">Contract (optional)</th>
+                                    <th style="font-size:10px">Salaried Structure (optional)</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <group  states="draft">
+                    <field name="type_amount" required="True"/>
+                     <field name="without_header"/>
+                    <field name="file_xls" nolabel="1"/>
+                </group>
+                <group colspan="4">
+                    <field invisible="1" name="state"/>
+                 <div states="error">
+                    <h2>Error during load file</h2>
+                    <field name="error_message" widget="html"/>
+                </div>
+            </group>
+               </sheet>
+                <footer states="draft">
+                    <button string="Generate" name="load_file" type="object" default_focus="1" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+  <record model="ir.actions.act_window" id="action_wizard_assingments_import_xls_view">
+        <field name="name">Import XLS/XLSX</field>
+        <field name="res_model">wizard.salary.assingments.xls</field>
+        <field name="view_id" ref="wizard_assingments_import_xls_view"/>
+        <field name="view_mode">form</field>
+    </record>
+
+</odoo>

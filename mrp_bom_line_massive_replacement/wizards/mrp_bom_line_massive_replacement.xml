@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_massive_replacement'>
+        	<field name='name'>view.massive.replacement</field>
+        	<field name='model'>mrp.bom.line.massive.replacement</field>
+        	<field name='arch' type='xml'>
+        		<form string='Massive Replacement'>
+    				<group>
+                        <field name='product_id'/>
+                        <field name='new_product_id'/>
+                        <field name='limit'/>
+        			</group>
+                    <footer>
+                        <button name="process" string="Process" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+
+
+        <record id='action_massive_replacement_wizard' model='ir.actions.act_window'>
+        	<field name='name'>Massive Replacement</field>
+        	<field name='res_model'>mrp.bom.line.massive.replacement</field>
+        	<field name='key2'>client_action_multi</field>
+        	<field name='multi'>True</field>
+        	<field name='view_type'>form</field>
+        	<field name='view_mode'>form</field>
+        	<field name='target'>new</field>
+        </record>
+
+        <menuitem id="massive_replacement_wizard_menu" name="Massive Replacement" parent="mrp.menu_mrp_bom" action="action_massive_replacement_wizard"/>
+    </data>
+</odoo>

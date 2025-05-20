@@ -1,0 +1,63 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="l10n_mx_immex_partida_descargue_form_view">
+            <field name="name">l10n.mx.immex.partida.descargue.form</field>
+            <field name="model">l10n.mx.immex.partida.descargue</field>
+            <field name="arch" type="xml">
+                <form string="Form IMMEX Partida Descargue">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="invoice_id"/>
+                                <field name="invoice_line_id"/>
+                                <field name="product_id"/>
+                                <field name="partida_type_id"/>
+                                <field name="quantity"/>
+                                <field name="qty_pending"/>
+                            </group>
+                            <field name="line_ids" widget="one2many_list">
+                            <tree editable="bottom" string="IMMEX Partida Descargue Line">
+                                <field name="partida_id"/>
+                                <field name="quantity"/>
+                            </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="l10n_mx_immex_partida_descargue_tree_view">
+            <field name="name">l10n.mx.immex.partida.descargue.tree</field>
+            <field name="model">l10n.mx.immex.partida.descargue</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="IMMEX Partida Descargue" create ="false" edit="false" delete ="false">
+                    <field name="create_date"/>
+                    <field name="invoice_id"/>
+                    <field name="invoice_line_id"/>
+                    <field name="product_id"/>
+                    <field name="partida_type_id"/>
+                    <field name="quantity"/>
+                    <field name="qty_pending"/>
+                    <field name="line_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="l10n_mx_immex_partida_descargue_action">
+            <field name="name">IMMEX Partida Descargue</field>
+            <field name="res_model">l10n.mx.immex.partida.descargue</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the immex partida descargue
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="l10n_mx_immex_partida_descargue_action" id="menu_l10n_mx_immex_partida_descargue" name="IMMEX Partida Descargue" parent="wizard_menu" sequence="70"/>
+    </data>
+</odoo>
+    

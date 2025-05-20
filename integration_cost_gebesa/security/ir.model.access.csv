@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+integr_cost_manager,integration_cost_manager,model_integration_cost_gebesa,group_integration_cost,1,1,1,1
+integr_cost_read_all,integration cost all,model_integration_cost_gebesa,,1,0,0,0

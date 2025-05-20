@@ -1,0 +1,9 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+prod_fam_manager,product_family_manager,model_product_family,stock.group_stock_manager,1,1,1,1
+prod_fam_user,product_family_user,model_product_family,stock.group_stock_user,1,0,0,0
+prod_gro_manager,product_group_manager,model_product_group,stock.group_stock_manager,1,1,1,1
+prod_gro_user,product_group_user,model_product_group,stock.group_stock_user,1,0,0,0
+prod_lin_manager,product_line_manager,model_product_line,stock.group_stock_manager,1,1,1,1
+prod_lin_user,product_line_user,model_product_line,stock.group_stock_user,1,0,0,0
+prod_typ_manager,product_type_manager,model_product_type,stock.group_stock_manager,1,1,1,1
+prod_typ_user,product_type_user,model_product_type,stock.group_stock_user,1,0,0,0

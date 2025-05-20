@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <report 
+            string="Production Order Gebesa" 
+            id="action_report_production_order" 
+            model="mrp.production" 
+            name="mrp_gebesa.report_mrporder_geb"
+            file="mrp_gebesa.reports.mrp_production_template_gebesa" 
+            report_type="qweb-pdf"
+            print_report_name="'Orden de Producción Gebesa - %s' % object.name"
+        />
+    </data>
+</odoo>

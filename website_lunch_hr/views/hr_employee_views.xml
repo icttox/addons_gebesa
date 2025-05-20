@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_employee_form" model="ir.ui.view">
+            <field name="name">hr.employee.lunch.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Lunch">
+                        <group>
+                            <button name="create_lunch_employee" string="Vale Comedor" class="btn-primary" type="object" groups="website_lunch_hr.group_report_lunch" icon="fa-ticket"/>
+                        </group>
+                        <separator/>
+                        <separator/>
+                        <separator/>
+                        <group>
+                            <label for="lunch_pass" class="oe_inline"/>
+                            <div class="row container">
+                                <div class="col-8">
+                                    <field name="lunch_pass" password="True" nolabel="1" style="max-width:450px" class="oe_inline text-truncate"/>
+                                </div>
+                                <div class="col-4">
+                                    <widget name="copy_to_clipboard" attrs="{'invisible': [('lunch_pass', '=', '')]}"/>
+                                    <button name="get_random_password" string="Generate" type="object" groups="hr.group_hr_manager" class="btn-outline-danger" confirm="Are you sure?" icon="fa-random"/>
+                                </div>
+                            </div>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>

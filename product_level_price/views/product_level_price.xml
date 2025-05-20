@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_level_price_tree'>
+            <field name='name'>product.level.price.tree</field>
+            <field name='model'>product.level.price</field>
+            <field name='arch' type='xml'>
+                <tree string='Level of Price by Articles'>
+                    <field name='price_dis_a'/>
+                    <field name='price_dis_b'/>
+                    <field name='price_dis_c'/>
+                    <field name='price_dis_d'/>
+                    <field name='price_dis_e'/>
+                    <field name='price_dis_f'/>
+                    <field name='price_dis_g'/>
+                    <field name='price_dis_h'/>
+                    <field name='price_dis_i'/>
+                    <field name='base_price'/>
+                    <field name='price_dis_may'/>
+                    <field name='price_may_a'/>
+                    <field name='price_may_b'/>
+                    <field name='price_may_c'/>
+                    <field name='price_may_d'/>
+                    <field name='price_may_e'/>
+                    <field name='price_may_f'/>
+                    <field name='price_may_g'/>
+                    <field name='price_may_h'/>
+                    <field name='product_id'/>
+                    <field name='mu_dist_may_id'/>
+                    <field name='standard_cost'/> 
+                    <field name='description'/>
+                </tree>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='product_level_price_form'>
+            <field name='name'>product.level.price.form</field>
+            <field name='model'>product.level.price</field>
+            <field name='arch' type='xml'>
+                <form string='Level of price by Articles'>
+                    <sheet>
+                        <h1>
+                     <!--       <label for='product_id'/> -->
+                            Level of Price by Articles
+                        </h1>
+                        
+                        <group>
+                            <group>
+                                <field name='product_id'/>
+                                <field name='mu_dist_may_id'/>
+                                <field name='standard_cost'/> 
+                            </group>
+                            <group>
+                                <field name='description'/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name='price_dis_a'/>
+                                <field name='price_dis_c'/>
+                                <field name='price_dis_d'/>
+                                <field name='price_dis_e'/>
+                                <field name='price_dis_e'/>
+                                <field name='price_dis_f'/>
+                                <field name='price_dis_g'/>
+                                <field name='price_dis_h'/>
+                                <field name='price_dis_i'/>
+                            </group>
+                            <group>
+                                <field name='base_price'/>
+                                <field name='price_dis_may'/>
+                                <field name='price_may_a'/>
+                                <field name='price_may_b'/>
+                                <field name='price_may_c'/>
+                                <field name='price_may_d'/>
+                                <field name='price_may_e'/>
+                                <field name='price_may_f'/>
+                                <field name='price_may_g'/>
+                                <field name='price_may_h'/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id='product_level_price_action' model='ir.actions.act_window'>
+            <field name='name'>Level of price by articles</field>
+            <field name='res_model'>product.level.price</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+        <menuitem id="product_level_price_menu" name="Level of price by articles" parent="sale.menu_sale_config" action="product_level_price_action"/>
+    </data>
+</odoo>

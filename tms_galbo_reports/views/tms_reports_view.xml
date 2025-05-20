@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <!-- TMS Report Menuitems -->
+        <record id="action_tms_report_tms_vehicles" model="ir.actions.client">
+            <field name="name">Vehicles Report</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'model': 'tms.fleet.vehicle'}" />
+        </record>
+        <record id="action_tms_report_tms_drivers" model="ir.actions.client">
+            <field name="name">Drivers Report</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'model': 'tms.fleet.driver'}" />
+        </record>
+        <record id="action_tms_report_tms_customer" model="ir.actions.client">
+            <field name="name">Customer Report</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'model': 'tms.fleet.customer'}" />
+        </record>
+
+        <menuitem id="tms_reports_audit_reports_menu" name="Audit Reports" parent="tms.menu_tms_reports" sequence="1"/>
+
+        <menuitem id="menu_action_tms_report_vehicles" name="Vehicles" action="action_tms_report_tms_vehicles" parent="tms_reports_audit_reports_menu" groups="account.group_account_user"/>
+        <menuitem id="menu_action_tms_report_drivers" name="Drivers" action="action_tms_report_tms_drivers" parent="tms_reports_audit_reports_menu" groups="account.group_account_user"/>
+        <menuitem id="menu_action_tms_report_customer" name="Customers" action="action_tms_report_tms_customer" parent="tms_reports_audit_reports_menu" groups="account.group_account_user"/>
+</odoo>

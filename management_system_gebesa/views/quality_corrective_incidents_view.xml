@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="quality_corrective_incidents_tree">
+      <field name="name">quality.corrective.incidents.tree</field>
+      <field name="model">quality.corrective.incidents</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="description"/>
+          <field name="responsible_id"/>
+          <field name="company_id"/>
+          <field name="date_commitment"/>
+          <field name="date_close"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="quality_corrective_incidents_form">
+      <field name="name">quality.corrective.incidents.form</field>
+      <field name="model">quality.corrective.incidents</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="description"/>
+              <field name="responsible_id"/>
+              <field name="company_id"/>
+              <field name="date_commitment"/>
+              <field name="date_close"/>
+            </group>
+          </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div> 
+        </form>
+      </field>
+    </record>
+    
+    <record model="ir.actions.act_window" id="quality_corrective_incidents_action">
+      <field name="name">Corrective actions</field>
+      <field name="res_model">quality.corrective.incidents</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+  </data>
+</odoo>

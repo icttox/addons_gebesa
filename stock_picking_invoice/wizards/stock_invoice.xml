@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_stock_invoice'>
+        	<field name='name'>view.stock.invoice</field>
+        	<field name='model'>stock.invoice</field>
+        	<field name='arch' type='xml'>
+        		<form string='Create invoice'>
+    				<h1>
+    					<field name='journal_type' readonly="True"/>
+    				</h1>
+    				<group>
+
+    					<field name='journal_id' required="True"/>
+    					<field name='group'/>
+    					<field name='invoice_date'/>
+        				</group>
+                    <footer>
+                        <button name="open_invoice" string="Create" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+
+        <record id='action_stock_invoice' model='ir.actions.act_window'>
+        	<field name='name'>Create draf invoice</field>
+        	<field name='res_model'>stock.invoice</field>
+        	<field name='src_model'>stock.picking</field>
+        	<field name='key2'>client_action_multi</field>
+        	<field name='multi'>True</field>
+        	<field name='view_type'>form</field>
+        	<field name='view_mode'>form</field>
+        	<field name='target'>new</field>
+        </record>
+    </data>
+</odoo>

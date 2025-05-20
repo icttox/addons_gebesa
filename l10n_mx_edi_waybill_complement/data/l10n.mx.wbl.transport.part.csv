@@ -1,0 +1,13 @@
+id,code,name
+l10n_mx_wbl_transport_part_PT01,PT01,Camión unitario
+l10n_mx_wbl_transport_part_PT02,PT02,Camión
+l10n_mx_wbl_transport_part_PT03,PT03,Tractocamión
+l10n_mx_wbl_transport_part_PT04,PT04,Remolque
+l10n_mx_wbl_transport_part_PT05,PT05,Semirremolque
+l10n_mx_wbl_transport_part_PT06,PT06,Vehículo ligero de carga
+l10n_mx_wbl_transport_part_PT07,PT07,Grúa
+l10n_mx_wbl_transport_part_PT08,PT08,Aeronave
+l10n_mx_wbl_transport_part_PT09,PT09,Barco o buque
+l10n_mx_wbl_transport_part_PT10,PT10,Carro o vagón
+l10n_mx_wbl_transport_part_PT11,PT11,Contenedor
+l10n_mx_wbl_transport_part_PT12,PT12,Locomotora

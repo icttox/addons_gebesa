@@ -1,0 +1,49 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="wbl_dangerous_material_form_view">
+            <field name="name">l10n.mx.wbl.dangerous.material.form</field>
+            <field name="model">l10n.mx.wbl.dangerous.material</field>
+            <field name="arch" type="xml">
+                <form string="Form Waybill Dangerous Material">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="division"/>
+                            <field name="active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wbl_dangerous_material_tree_view">
+            <field name="name">l10n.mx.wbl.dangerous.material.tree</field>
+            <field name="model">l10n.mx.wbl.dangerous.material</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Waybill Dangerous Material">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="division"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="wbl_dangerous_material_action">
+            <field name="name">Waybill Dangerous Material</field>
+            <field name="res_model">l10n.mx.wbl.dangerous.material</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the waybill dangerous material
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="wbl_dangerous_material_action" id="menu_wbl_dangerous_material" name="Dangerous Material" parent="menu_wbl_complement" sequence="50"/>
+    </data>
+</odoo>
+    

@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='fleet_vehicle_form'>
+            <field name='name'>fleet.vehicle.form</field>
+            <field name='model'>fleet.vehicle</field>
+            <field name='inherit_id' ref="fleet.fleet_vehicle_view_form"/>
+            <field name='arch' type='xml'>
+            <data>
+                <xpath expr="//field[@name='residual_value']" position="after">
+                    <field name="conf_vehicle" attrs="{'required':[('fleet_type', '=', 'tractor')]}"/>
+                    <field name="carry_trailer" invisible="1"/>
+                    <field name="trailer" attrs="{'invisible':[('carry_trailer', '!=', 'quantum')]}"/>
+                    <field name="sub_type_rem" attrs="{'required':[('fleet_type', '=', 'trailer')]}"/>
+                </xpath>
+            </data>
+            </field>
+        </record>
+    </data>
+</odoo>
+    

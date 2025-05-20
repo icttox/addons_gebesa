@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_move_form'>
+            <field name='name'>view.move..account.form</field>
+            <field name='model'>stock.move</field>
+            <field name='inherit_id' ref="stock.view_move_form"/>
+            <field name='arch' type='xml'>
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_fifo_distribution" icon="fa-list" class="oe_stat_button" string="FIFO Distribution" type="object"/>
+                </xpath>
+
+                <xpath expr="//header/field[@name='state']" position="before">
+                    <button name="stock_move_create_account_entry" string="Create accounting entry" type="object" groups="system_administrator.group_system_administrator_gebesa" attrs="{'invisible': ['|', ('state','!=','done'), ('account_move_ids','!=',[])]}"/>
+                </xpath>
+
+                <xpath expr="//field[@name='move_dest_ids']" position="after">
+                    <field name="account_move_ids" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="stock_move_fifo_balance_tree" model="ir.ui.view">
+            <field name="name">stock.move.fifo.info.tree</field>
+            <field name="model">stock.move</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="FIFO Balance" create="false" default_order='date'>
+                    <field name="product_id"/>
+                    <field name="product_uom_qty"/>
+                    <field name="picking_id"/>
+                    <field name="location_id" groups="stock.group_stock_multi_locations"/>
+                    <field name="location_dest_id" groups="stock.group_stock_multi_locations"/>
+                    <field name="create_date" groups="base.group_no_one"/>
+                    <field name="date" string="Date" groups="base.group_no_one"/>
+                    <field name="state"/>
+                    <field name="reference"/>
+                    <field name="name"/>
+                    <field name="price_unit"/>
+                    <field name="value"/>
+                    <field name="remaining_value"/>
+                    <field name="remaining_qty"/>
+                    <field name="partner_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="view_stock_move_fifo_balance_action">
+            <field name="name">Stock move FIFO balance</field>
+            <field name="res_model">stock.move</field>
+            <field eval="False" name="view_id"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">No FIFO balance
+                </p>
+            </field>
+        </record>
+
+        <!-- Vistas de distribucion FIFO -->
+        <record model="ir.actions.act_window" id="view_stock_move_fifo_dist_action">
+            <field name="name">Stock move FIFO distribution</field>
+            <field name="res_model">stock.move.fifo.distribution</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">No FIFO distributions
+                </p>
+            </field>
+        </record>
+
+         <menuitem id="customer_product_code_menu" name="Product Customer View Info" parent="sale.product_menu_catalog" action="view_stock_move_fifo_dist_action"/>
+
+         <record model="ir.ui.view" id="stock_move_fifo_distribution_tree_view">
+            <field name="name">stock.move.fifo.distribution.tree</field>
+            <field name="model">stock.move.fifo.distribution</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Stock move FIFO distribution">
+                    <field name="product_id"/>
+                    <field name="move_id"/>
+                    <field name="candidate_id" select="1"/>
+                    <field name="qty_taken_on_candidate"/>
+                    <field name='value_taken_on_candidate'/>
+                    <field name="candidate_price_unit"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

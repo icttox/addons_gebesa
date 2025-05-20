@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+position_gps_history_user,position.gps.history.user,model_position_gps_history,fleet.fleet_group_user,1,0,0,0
+position_gps_history_monitoring,position.gps.history.monitoring,model_position_gps_history,tms.group_monitoring,1,0,0,0
+position_gps_history_traffic,position.gps.history.traffic,model_position_gps_history,tms.group_traffic,1,1,1,0
+position_gps_history_user_manager,position.gps.history.manager,model_position_gps_history,fleet.fleet_group_manager,1,1,1,1
+read_position_gps_history,read.position.gps.history,model_position_gps_history,flete_gebesa.group_read_data_tms,1,0,0,0

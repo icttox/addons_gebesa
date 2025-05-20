@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="mrp_production_daily_load_tree" model="ir.ui.view">
+            <field name="name">mrp.production.daily.load.tree</field>
+            <field name="model">mrp.production.daily.load</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date"/>
+                    <field name="work_id" domain="[('daily_load_available', '=', True)]"/>
+                    <field name="operation_id" domain="[('daily_load_available_op', '=', True)]"/>                    
+                    <field name="segment_id"/>
+                    <field name="product_id"/>
+                    <field name="quantity"/>
+                    <field name="costo"/>
+                    <field name="costo_total" widget="monetary"/>
+                    <field name="daily_observations"/>
+                    <field name="create_uid"/>
+                    <field name="name" attrs="{'invisible':[('date','=', False)]}"/>            
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="mrp_production_daily_load__form">
+            <field name="name">mrp.production.daily.load.form</field>
+            <field name="model">mrp.production.daily.load</field>
+            <field name="arch" type="xml">
+                <form>
+                  <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options="{'terminology': 'active'}" modifiers="{}"/>
+                            </button>
+                        </div>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="date_start"/>
+                                <field name="work_id" domain="[('daily_load_available', '=', True)]"/>
+                                <field name="segment_id"/>
+                                <field name="product_id"/>
+                                <field name="costo"/>
+                                <field name="quantity"/>
+                                <field name="planned_qty"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                                <field name="create_uid"/>
+                                <field name="operation_id" domain="[('daily_load_available_op', '=', True)]"/>
+                                <field name="routing_line_id" readonly="1"/>
+                                <field name="costo_total" widget="monetary"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="daily_observations"/>
+                        </group>
+                  </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mrp_production_daily_load_search" model="ir.ui.view">
+            <field name="name">mrp.production.daily.load.search</field>
+            <field name="model">mrp.production.daily.load</field>
+            <field name="arch" type="xml">
+                <search string="Search Production Daily Load">
+                    <field name="name"/>
+                    <field name="product_id"/>
+                    <field name="work_id"/>
+                    <field name="operation_id"/>
+                    <separator/>
+                    <filter name="today" string="Today" domain="[('date', '&gt;=', datetime.datetime.now().replace(hour=0, minute=0, second=0)),('date', '&lt;=', datetime.datetime.now().replace(hour=23, minute=59, second=59))]" />
+                    <filter string="Date" name="date_filter" date="date" default_period="this_week"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_daily" model="ir.actions.act_window">
+            <field name="name">Production Daily Load</field>
+            <field name="res_model">mrp.production.daily.load</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create the production daily load.
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="action_daily" 
+            id="menu_mrp_segment_action"
+            name="Production Daily Load"
+            parent="mrp.menu_mrp_manufacturing"
+            sequence="40"/>
+
+    </data>
+</odoo>

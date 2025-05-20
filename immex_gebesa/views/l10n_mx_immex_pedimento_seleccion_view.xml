@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="view_l10_mx_pedimento_seleccion_Action">
+            <field name="name">Pedimento seleccion</field>
+            <field name="res_model">l10n.mx.immex.pedimento.seleccion</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('clave_documento', 'in', ['IN', 'V1', 'AF', 'RT'])]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Pedimento Seleccion
+                </p>
+            </field>
+        </record>
+
+
+         <menuitem id="pedimento_seleccion_menu" name="Pedimento Seleccion" parent="pedimento_menu" action="view_l10_mx_pedimento_seleccion_Action"/>
+
+        <record model="ir.ui.view" id="view_l10_mx_Action_pedimento_seleccion_form">
+            <field name="name">pedimento.seleccion.form</field>
+            <field name="model">l10n.mx.immex.pedimento.seleccion</field>
+            <field name="arch" type="xml">
+                <form string="seleccion Form" create ="false" edit="false" delete ="false">
+                    <sheet>
+                        <group col="6" colspan="2">
+                            <field name='patente'/>
+                            <field name='num_pedimento'/>
+                            <field name='clave_aduana'/>
+                            <field name='pedimento_num'/>
+                            <field name='consecutivo'/>
+                            <field name='numero'/>
+                            <field name='fecha'/>
+                            <field name='hora'/>
+                            <field name='semaforo'/>
+                            <field name='clave_documento'/> 
+                            <field name='tipo_operacion'/>
+                            <field name='pedimento_id'/>
+                            <field name='resumen_id'/>
+                        </group>
+                    </sheet>
+                </form> 
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_l10_mx_Action_pedimento_seleccion_view_tree">
+            <field name="name">Pedimento.seleccion.tree</field>
+            <field name="model">l10n.mx.immex.pedimento.seleccion</field>
+            <field name="arch" type="xml">
+                <tree string="seleccion Tree" create ="false" edit="false" delete ="false">
+                            <field name='patente'/>
+                            <field name='num_pedimento'/>
+                            <field name='clave_aduana'/>
+                            <field name='pedimento_num'/>
+                            <field name='consecutivo'/>
+                            <field name='numero'/>
+                            <field name='fecha'/>
+                            <field name='hora'/>
+                            <field name='semaforo'/>
+                            <field name='clave_documento'/> 
+                            <field name='tipo_operacion'/>
+                            <field name='resumen_id'/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

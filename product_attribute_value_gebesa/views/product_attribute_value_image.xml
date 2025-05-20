@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_attribute_value_gebesa_tree'>
+            <field name='name'>product.attribute.value.gebesa.tree</field>
+            <field name='model'>product.attribute.value</field>
+            <field name='arch' type='xml'>
+                <tree string='Sale'>
+                    <field name="sequence" widget="handle"/>
+                    <field name="attribute_id"/>
+                    <field name="active"/>
+                    <field name="name"/> 
+                    <field name="number"/>  
+                    <field name="attribute_code"/>
+                    <field name="html_color"/>
+                    <field name='isometric_medium' widget='image'/>
+                    <field name="factor"/>                               
+                </tree>
+            </field>
+            <!--Cierre de Registro-->
+        </record>
+        <record model="ir.ui.view" id="product_attribute_value_gebesa_form">
+            <field name="name">product.attribute.value.gebesa.form</field>
+            <field name="model">product.attribute.value</field>
+            <field name="arch" type="xml">
+                <form string="description">
+                    <header>
+                    </header>
+                    <sheet>
+                        <h1>
+                            <label for="name" string="Name"/>  
+                        </h1>
+                        <group>
+                            <field name="name"/>
+                            <field name="attribute_id"/>
+                            <group>
+                                <field name="attribute_code"/>
+                                <field name="sequence" widget="handle"/>
+                                <field name="active"/>
+                                <field name="html_color"/>
+                                <field name="factor"/>
+                            </group>
+                            <group>
+                                <group>
+                                     <field name='isometric_small' widget='image' class="oe_avatar"/>
+                                </group>
+                            </group>
+                        </group>
+                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id='action_product_attribute_value_gebesa_form' model='ir.actions.act_window'>
+            <field name='name'>Product Attribute Value Image</field>
+            <field name='res_model'>product.attribute.value</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+            <field name="view_id" ref="product_attribute_value_gebesa_tree"/>
+        </record> 
+        <menuitem action="action_product_attribute_value_gebesa_form"
+            id="menu_variants_action"
+            parent="sale.prod_config_main" sequence="5"/>
+    </data>
+</odoo>

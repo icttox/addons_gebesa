@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="fleet_vehicle_action">
+      <field name="name">Vehiculo</field>
+      <field name="res_model">fleet.vehicle</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="fleet_vehicle_menu" name="Vehiculo" parent="carta_porte_menu" action="fleet_vehicle_action"/>
+
+  </data>
+</odoo>

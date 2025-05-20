@@ -1,0 +1,573 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sale_goal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-03 17:46+0000\n"
+"PO-Revision-Date: 2017-01-03 17:46+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "10"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "11"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "12"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "13"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "14"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "15"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "16"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "17"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "18"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "19"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "20"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2016"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2017"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2018"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2019"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2020"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2021"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2022"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2023"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2024"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2025"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2026"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2027"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2028"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2029"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2030"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2031"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2032"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2033"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2034"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2035"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal,year:0
+msgid "2036"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "21"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "22"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "23"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "24"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "25"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "26"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "27"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "28"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "29"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "30"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "31"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "32"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "33"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "34"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "35"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "36"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "37"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "38"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "39"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "40"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "41"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "42"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "43"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "44"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "45"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "46"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "47"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "48"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "49"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "50"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "51"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.weekly,week:0
+msgid "52"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_monthly_amount
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_quarterly_amount
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_weekly_amount
+msgid "Amount"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.monthly,month:0
+msgid "April"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.monthly,month:0
+msgid "August"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.ui.view,arch_db:sale_goal.sale_goal_form
+msgid "Customer"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_res_partner_customer_goal_id
+msgid "Customer partner of goal"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.monthly,month:0
+msgid "December"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_display_name
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_monthly_display_name
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_quarterly_display_name
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_weekly_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.monthly,month:0
+msgid "February"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.actions.act_window,name:sale_goal.action_sale_goal
+#: model:ir.ui.menu,name:sale_goal.sale_goal_menu
+#: model:ir.ui.view,arch_db:sale_goal.sale_goal_form
+#: model:ir.ui.view,arch_db:sale_goal.sale_goal_tree
+msgid "Goal"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_id
+msgid "ID"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.monthly,month:0
+msgid "January"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.monthly,month:0
+msgid "July"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.monthly,month:0
+msgid "June"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal___last_update
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_monthly___last_update
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_quarterly___last_update
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_weekly___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.monthly,month:0
+msgid "March"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.monthly,month:0
+msgid "May"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_monthly_month
+#: model:ir.ui.view,arch_db:sale_goal.sale_goal_form
+msgid "Month"
+msgstr ""
+
+#. module: sale_goal
+#: sql_constraint:sale.goal.monthly:0
+msgid "Month already registered in this goal"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_goal_monthly_ids
+msgid "Monthly"
+msgstr ""
+
+#. module: sale_goal
+#: sql_constraint:sale.goal.monthly:0
+#: sql_constraint:sale.goal.quarterly:0
+#: sql_constraint:sale.goal.weekly:0
+msgid "No amount allowed 0"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.monthly,month:0
+msgid "November"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.monthly,month:0
+msgid "October"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_goal_id
+msgid "Parent goal"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model,name:sale_goal.model_res_partner
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_partner_ids
+msgid "Partner"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_quarterly_quarter
+msgid "Quarter"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_goal_quarterly_ids
+msgid "Quarterly"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model,name:sale_goal.model_sale_goal
+msgid "Sale Goal"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model,name:sale_goal.model_sale_goal_monthly
+msgid "Sale goal monthly"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model,name:sale_goal.model_sale_goal_quarterly
+msgid "Sale goal quarterly"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model,name:sale_goal.model_sale_goal_weekly
+msgid "Sale goal weekly"
+msgstr ""
+
+#. module: sale_goal
+#: model:res.groups,name:sale_goal.group_sales_goals
+msgid "Sales Goals"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_sales_channel_id
+msgid "Sales channel"
+msgstr ""
+
+#. module: sale_goal
+#: sql_constraint:sale.goal:0
+msgid "Sales channel already registered in this year"
+msgstr ""
+
+#. module: sale_goal
+#: selection:sale.goal.monthly,month:0
+msgid "September"
+msgstr ""
+
+#. module: sale_goal
+#: sql_constraint:sale.goal.quarterly:0
+msgid "Quarter already registered in this goal"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_weekly_week
+#: model:ir.ui.view,arch_db:sale_goal.sale_goal_form
+msgid "Week"
+msgstr ""
+
+#. module: sale_goal
+#: sql_constraint:sale.goal.weekly:0
+msgid "Week already registered in this goal"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_goal_weekly_ids
+msgid "Weekly"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.model.fields,field_description:sale_goal.field_sale_goal_year
+msgid "Year"
+msgstr ""
+
+#. module: sale_goal
+#: model:ir.ui.view,arch_db:sale_goal.sale_goal_form
+msgid "quarter"
+msgstr ""
+

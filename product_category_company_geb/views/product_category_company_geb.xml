@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+  
+        <record model="ir.actions.act_window" id="product_category_company_action">
+            <field name="name">Product Category Company</field>
+            <field name="res_model">product.category.company.geb</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Crear 
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="product_category_company_menu" name="Categoria Producto/Empresa" parent="stock.menu_stock_config_settings"
+                  action="product_category_company_action"/>
+
+        <record model="ir.ui.view" id="product_category_company_view_form">
+            <field name="name">product.category.company.action.form</field>
+            <field name="model">product.category.company.geb</field>
+            <field name="arch" type="xml">
+                <form string="Product Category Form">
+                    <sheet>
+                        <group>
+                            <field name="Nombre"/>
+                            <field name="Clave"/>
+                            <field name="company_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_category_company_view_tree">
+            <field name="name">product.category.company.tree</field>
+            <field name="model">product.category.company.geb</field>
+            <field name="arch" type="xml">
+                <tree string="Product Category Tree">
+                    <field name="Nombre"/>
+                    <field name="Clave"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

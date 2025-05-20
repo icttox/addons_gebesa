@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_picking_form'>
+            <field name='name'>stock.picking.form.account.view</field>
+            <field name='model'>stock.picking</field>
+            <field name='inherit_id' ref="stock.view_picking_form"/>
+            <field name='arch' type='xml'>
+                <div name="button_box" position="inside">
+                    <button name="action_view_fifo_distribution" icon="fa-list" class="oe_stat_button" string="FIFO Distribution" type="object"/>
+                </div>
+                <xpath expr="//button[@name='action_cancel']" position="after">
+                    <button name="picking_prepare_account_move" string="Create accounting entry" type="object" groups="system_administrator.group_system_administrator_gebesa" attrs="{'invisible': [('state','!=','done'), ('am_ids','!=',False)]}"/>
+                </xpath>
+                <xpath expr="//notebook/page/field[@name='move_ids_without_package']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('state', 'not in', ('draft', 'confirmed', 'waiting', 'done'))]}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

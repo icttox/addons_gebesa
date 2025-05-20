@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_payroll_import_manage,Payroll.import.manage,model_payroll_import,group_payroll_import_manager,1,1,1,1
+access_payroll_import_user,Payroll.import.user,model_payroll_import,group_payroll_import_user,1,0,0,0
+access_payroll_import_line_manage,Payroll.import.line.manage,model_payroll_import_line,group_payroll_import_manager,1,1,1,1
+access_payroll_import_line_user,Payroll.import.line.user,model_payroll_import_line,group_payroll_import_user,1,0,0,0

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='sol_gebesa_tree'>
+            <field name='name'>sol.gebesa.tree</field>
+            <field name='model'>sale.order.line</field>
+            <field name='arch' type='xml'>
+                <tree string='Sale Order Line' create="false" edit="false" delete="false">
+                    <field name='order_id'/>
+                    <field name='order_partner_id'/>
+                    <field name='product_id'/>
+                    <field name='product_uom_qty'/>
+                    <field name='price_unit'/>
+                    <field name='purchase_price'/> 
+                    <field name='profit_margin'/>
+                    <field name='net_sale'/>
+                    <field name='standard_cost'/> 
+                    <field name='discount'/>
+                    <field name='margin_justification'/> 
+                    <field name='low_mu'/> 
+                    <field name='route_id'/>
+                    <field name='family_id'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='sol_gebesa_tree_admin'>
+            <field name='name'>sol.gebesa.tree</field>
+            <field name='model'>sale.order.line</field>
+            <field name="groups_id" eval="[(6,0, [ref('system_administrator.group_system_administrator_gebesa')])]" />
+            <field name="inherit_id" ref="sale_order_xls_import.sol_gebesa_tree"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//tree" position="replace">
+                    <tree string='Sale Order Line' delete="false">
+                        <field name='order_id'/>
+                        <field name='order_partner_id'/>
+                        <field name='product_id'/>
+                        <field name='product_uom_qty'/>
+                        <field name='price_unit'/>
+                        <field name='purchase_price'/> 
+                        <field name='profit_margin'/>
+                        <field name='net_sale'/>
+                        <field name='standard_cost'/> 
+                        <field name='discount'/>
+                        <field name='margin_justification'/> 
+                        <field name='low_mu'/> 
+                        <field name='route_id'/>
+                        <field name='family_id'/>
+                    </tree>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='sol_gebesa_pivot'>
+            <field name='name'>sol.gebesa.pivot</field>
+            <field name='model'>sale.order.line</field>
+            <field name='arch' type='xml'>
+                <pivot string="Sale order lines">
+                    <!--field name="state" type="row"/>
+                    <field name="order_id" type="row"/-->
+                    <field name="product_id" type="row"/>
+                    <!--field name="create_date" type="col" interval="week"/-->
+                    <field name="line_tag_number" type="col"/>
+                    <field name='product_uom_qty' type="measure"/>
+                    <!--field name="net_sale_mx" type="measure"/-->
+                </pivot>
+            </field>
+        </record>
+
+        <record id='action_sol_gebesa' model='ir.actions.act_window'>
+            <field name='name'>Sale Order Line Gebesa</field>
+            <field name='res_model'>sale.order.line</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,pivot</field>
+            <field name="context" eval="{'sale_order_line_search_view': 1}"/>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'pivot', 'sequence': 2, 'view_id': ref('sol_gebesa_pivot')}),
+                (0, 0, {'view_mode': 'tree', 'sequence': 1, 'view_id': ref('sol_gebesa_tree')})]"/>
+        </record>
+
+        <menuitem id="sol_gebesa_menu" name="Lineas de Venta" parent="sale.sale_order_menu" action="action_sol_gebesa"/>
+
+        <!--VISTA BUSQUEDA-->
+        <record model="ir.ui.view" id="sale_order_line_search_view">
+            <field name="name">sale.order.line.search.closed</field>
+            <field name="model">sale.order.line</field>
+            <field name="arch" type="xml">
+                <search string="Search Sale Order Line">
+                    <field name="order_id" string="Order"/>
+                    <field name="state" string="State"/>
+                    <field name="order_partner_id" string="Partner"/>
+                    <field name="route_id" string="Route"/>
+                    <field name="family_id" string="Family"/>
+                    <filter name="close" string="Closed Line's" domain="[('closed','=',True)]"/>
+                    <filter string="Creation Date" name="creation_date_filter" date="create_date" default_period="this_week"/>
+                </search>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

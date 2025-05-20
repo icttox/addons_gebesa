@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="mrp_production_form_view" model="ir.ui.view">
+            <field name="name">mrp.production.sale.id.form.view</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page/group/group/field[@name='availability']" position="after">
+                    <field name="sale_line_id" readonly='True'/>
+                    <field name='sale_id' readonly="True"/>
+                    <field name='partner_id' readonly="True"/>
+                    <field name='client_order_ref' readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="mrp_production_tree_view" model="ir.ui.view">
+            <field name="name">mrp.production.tree.view</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_tree_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_planned_start']" position="before">
+                    <field name='warehouse_id'/>
+                    <field name='partner_id'/>
+                    <field name='city_shipping'/>
+                    <field name="create_date" string='Fecha Creación'/>
+                    <field name="date_start" />
+                    <field name="date_finished"/>
+                </xpath>
+                <xpath expr="//field[@name='date_planned_start']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

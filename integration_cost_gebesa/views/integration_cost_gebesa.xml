@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='integration_cost_gebesa_form'>
+            <field name='name'>integration.cost.gebesa.form</field>
+            <field name='model'>integration.cost.gebesa</field>
+            <field name='arch' type='xml'>
+                <form string='description'>
+                    <header>
+                        <button name="integrates_costs" states="draf" string="Integrar" type="object" class="oe_highlight"/>
+                        <button name="action_cancel" string="Cancelar" type="object" class="oe_highlight" attrs="{'invisible':[('state','!=','done')]}" groups="system_administrator.group_system_administrator_gebesa"/>
+                        <!-- <button name="action_draft" string="Set to Draft" type="object" class="oe_highlight" attrs="{'invisible':[('state','!=','cancel')]}"/> -->
+                        <field name='state' widget='statusbar' statusbar_color='{"draf":"blue", "cancel":"red"}'/>
+                    </header>
+                    <sheet>
+                        <div  class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name" />
+                            </div>
+                            <h1>
+                                <field name='name' placeholder="Name" required="True" attrs="{'readonly':[('state','!=','draf')]}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name='partner_id' required="True" attrs="{'readonly':[('state','!=','draf')]}"/>
+                                <field name='date' required="True" readonly="True"/>
+                                <field name='account_analytic_id' required="True" attrs="{'readonly':[('state','!=','draf')]}"/>
+                            </group>
+                            <group >
+                                <field name='date_post' required="True" readonly="True"/>
+                                <field name='journal_id' required="True" readonly="True" domain="[('type', '=', 'purchase')]"/>
+                                <field name='disc_additional' required="True" attrs="{'readonly':[('state','!=','draf')]}"/>
+                                <field name='move_id' readonly="True"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="invoices raw material">
+                                <separator string="Invoices raw material"/>
+                                <field name='invoice_mp_ids' nolabel="True" domain="[('integration_id', '=', False), ('origin', '!=', ''), ('state', '!=', 'draf'), ('partner_id', '=', partner_id)]" attrs="{'readonly':[('state','!=','draf')]}"/>
+                            </page>
+                            <page string="Invoices additional cost">
+                                <separator string="Additional cost"/>
+                                <field name='invoice_adi_ids' nolabel="True" domain="[('integration_id', '=', False), ('is_additional', '=', 'True'), ('state', '!=', 'draf'), ('account_analytic_id', '=', account_analytic_id)]"  attrs="{'readonly':[('state','!=','draf')]}" options="{'no_create': True}"/>
+                            </page>
+                            <page  string="Other info">
+                                <group col="4">
+                                    <field name='company_id' required="True" attrs="{'readonly':[('state','!=','draf')]}"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='integration_cost_gebesa_tree'>
+            <field name='name'>integration.cost.gebesa.tree</field>
+            <field name='model'>integration.cost.gebesa</field>
+            <field name='arch' type='xml'>
+                <tree string='description' decoration-info="state=='draf'" decoration-danger="state=='cancel'">
+                    <field name='name'/>
+                    <field name='date'/>
+                    <field name='date_post'/>
+                    <field name='move_id'/>
+                    <field name='partner_id'/>
+                    <field name='account_analytic_id'/>
+                    <field name='disc_additional'/>
+                    <field name='state'/>
+                </tree>
+            </field>
+        </record>
+
+        <record id='action_integration_cost_gebesa' model='ir.actions.act_window'>
+            <field name='name'>integration of additional costs</field>
+            <field name='res_model'>integration.cost.gebesa</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+            <field name='help' type="html">
+                <p class="oe_view_nocontent_create">Integrate its raw material costs with additional costs</p>
+            </field>
+        </record>
+
+        <menuitem id="integration_cost_gebesa_menu" name="Integration of additional costs" parent="account.menu_finance_payables" action="action_integration_cost_gebesa"/>
+
+    </data>
+</odoo>

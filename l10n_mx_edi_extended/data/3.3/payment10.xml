@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="payment_extend" inherit_id="l10n_mx_edi.payment10">
+        <xpath expr="(//*[local-name()='DoctoRelacionado'])" position="attributes">
+            <attribute name="t-att-IdDocumento">invoice.l10n_mx_edi_cfdi_uuid or invoice.cfdi_uuid</attribute>
+        </xpath>
+    </template>
+</odoo>

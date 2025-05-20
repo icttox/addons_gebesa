@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="vale_entrega"
+            model="stock.picking"
+            string="Picking Format"
+            report_type="qweb-pdf"
+            name="stock_delivery_slip_report.report_vale_entrega"
+            file="stock_delivery_slip_report.report_vale_entrega"
+        />
+        <template id="report_vale_entrega_document">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})" />
+                    <div class="page">
+                        <div class="row">
+                            <div class=".col-xs-8 .col-md-2">
+                                <h2>
+                                     <span> </span>
+                                </h2>
+                                <div style="margin-top:7px;">
+                                    <span><strong>Customer Address:</strong></span>
+                                </div>
+                                <div t-if="o.partner_id" name="partner_header">
+                                    <div t-field="o.partner_id"
+                                       t-options='{"widget": "contact", "fields": ["address", "name", "phone", "fax"], "no_marker": true}'/>
+                                </div>
+                            </div>    
+                        </div>
+                        <h2>
+                            Folio: <span t-field="o.name"/>
+                        </h2>
+                        <table  class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Referencia</th>
+                                    <th>Orden de venta</th>
+                                    <th>Origen</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span t-field="o.group_id.name"/> </td>
+                                    <td><span t-field="o.sale_id.name" /> </td>
+                                    <td><span t-field="o.origin"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table  class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Observación</th>
+                                    <th>Tipo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span t-field="o.note"/> </td>
+                                    <td><span t-field="o.type_adjustment_id"/> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th><strong>Order (Origin)</strong></th>
+                                    <th name="td_sched_date_h"><strong>Scheduled Date</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                 <tr>
+                                    <td>
+                                        <span t-field="o.picking_type_id"/>
+                                    </td>
+                                    <td name="td_sched_date">
+                                       <span t-field="o.scheduled_date"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-condensed mt48" t-if="not o.move_line_ids">
+                            <t t-set="total_imp" t-value="0"/>
+                            <thead>
+                                <tr>
+                                    <th><strong>Code</strong></th>
+                                    <th><strong>Product</strong></th>
+                                    <th><strong>Status</strong></th>
+                                    <th><strong>Location</strong></th>
+                                    <th class="text-right"><strong>Quantity</strong></th>
+                                    <th><strong>Cost</strong></th>
+                                    <th><strong>Import</strong></th>
+                                    <th><strong>Total</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="o.move_lines" t-as="move">
+                                    <td><span t-field="move.product_id.default_code"/></td>
+                                    <td><span t-field="move.product_id"/></td>
+                                    <td><span t-field="move.state"/></td>
+                                    <td><span t-field="move.location_id"/></td>
+                                    <td class="text-right">
+                                        <span t-field="move.product_uom_qty"/>
+                                        <span t-field="move.product_uom"/>
+                                    </td>
+                                    <td><span t-field="move.state"/></td>
+                                    <td><span t-field="move.product_id.standard_price"/></td>
+                                    <td><span t-esc="move.product_uom_qty * move.product_id.standard_price"/>
+                                    </td>
+                                    <td>
+                                        <t t-set="total_imp" t-value="total_imp+(move.product_uom_qty * move.product_id.standard_price)"/>
+                                    </td>
+                                    
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6"></td>    
+                                    <td>
+                                       <strong>Import Total</strong>: <span t-esc="total_imp"></span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <table class="table table-condensed mt48" t-if="o.move_line_ids" style="font-size: 8pt">
+                            <t t-set="has_serial_number" t-value="o.move_line_ids.mapped('lot_id')" groups="stock.group_production_lot"/>
+                            <t t-set="total_pending" t-value="0"/>
+                            <t t-set="total_done" t-value="0"/>
+                            <thead>
+                                <tr>
+                                    <th><strong>Code</strong></th>
+                                    <th><strong>Product</strong></th>
+                                    <th t-if="has_serial_number"><strong>Serial Number</strong></th>
+                                    <th><strong>Status</strong></th>
+                                    <th><strong>Location</strong></th>
+                                    <th class="text-right"><strong>Quantity pending</strong></th>
+                                    <th class="text-right"><strong>Quantity done</strong></th>
+                                    <th><strong>Cost</strong></th>
+                                    <th><strong>Amount pending</strong></th>
+                                    <th><strong>Amount done</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="o.move_line_ids" t-as="move_lines">
+                                    <td>
+                                        <span t-field="move_lines.product_id.default_code"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="move_lines.product_id"/>
+                                        <t t-if="not move_lines.product_id and move_lines.package_id">
+                                            <span  t-field="move_lines.package_id"/>
+                                        </t>
+                                    </td>
+                                    <t t-if="has_serial_number">
+                                        <td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td>
+                                                         <span t-field="move_lines.lot_id"/>
+                                                         <t t-if="not move_lines.lot_id">
+                                                             <span t-field="move_lines.lot_name"/>
+                                                         </t>
+                                                     </td>
+                                                     <td name="lot_qty">
+                                                         <t t-if="move_lines.product_qty"> 
+                                                            <span t-field="move_lines.product_qty"/>
+                                                        </t>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                      </td>
+                                    </t>
+                                    <td>
+                                        <t t-set="mls" t-value="move_lines.picking_id.move_lines"/>
+                                        <t t-set="check" t-value="True"/>
+                                        <t t-foreach="mls" t-as="ml">
+                                            <t t-if="ml.product_id.id == move_lines.product_id.id and check">
+                                                <t t-set="check" t-value="False"/>
+                                                <span t-field="ml.state"/>
+                                            </t>
+                                        </t>
+                                    </td>
+                                    <td>
+                                        <span t-field="move_lines.location_id"/>
+                                        <span t-if="move_lines.package_id">:</span>
+                                        <span t-field="move_lines.package_id"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="move_lines.product_uom_qty"/>
+                                        <span t-field="move_lines.product_uom_id"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="move_lines.qty_done"/>
+                                        <span t-field="move_lines.product_uom_id"/>
+                                    </td>
+                                    <td><span t-field="move_lines.product_id.standard_price"/></td>
+                                    <td>
+                                        <span t-esc="round(move_lines.product_uom_qty * move_lines.product_id.standard_price,2)"/>
+                                        <t t-set="total_pending" t-value="total_pending+round(move_lines.product_uom_qty * move_lines.product_id.standard_price,2)"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="round(move_lines.qty_done * move_lines.product_id.standard_price,2)"/>
+                                        <t t-set="total_done" t-value="total_done+round(move_lines.qty_done * move_lines.product_id.standard_price,2)"/>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                           
+                            <tfoot>
+                                <tr>
+                                    <td colspan="7"></td>   
+                                    <td>
+                                       <strong>Total pending</strong>: <span t-esc="total_pending"></span>
+                                    </td> 
+                                    <td>
+                                       <strong>Total done</strong>: <span t-esc="total_done"></span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <template id="report_vale_entrega">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="stock_delivery_slip_report.report_vale_entrega_document" t-lang="o.partner_id.lang"/>
+            </t>
+        </template>
+    </data>
+</odoo>

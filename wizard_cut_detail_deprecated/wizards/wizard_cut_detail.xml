@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='wizard_cut_detail'>
+        	<field name='name'>wizard.cut.detail</field>
+        	<field name='model'>wizard.cut.detail</field>
+        	<field name='arch' type='xml'>
+        		<form>
+        			<group>
+                        <field name='bom_id' readonly="True"/>
+        			</group>
+        			<footer>
+                        <button name="print_report_wizard" string="Export" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+    </data>
+</odoo>

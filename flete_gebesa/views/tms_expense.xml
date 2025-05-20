@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_tms_expense_form'>
+            <field name='name'>view.tms.expense.tollstation.form</field>
+            <field name='model'>tms.expense</field>
+            <field name='inherit_id' ref='tms.view_tms_expense_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/sheet/notebook/page[1]/group[1]" position="after">
+                    <group col="2">
+                        <field name="calculated_salary"/>
+                    </group>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/div/group/field[@name='amount_subtotal_real']" position="before">
+                    <separator colspan="2" string="------------------------------------------"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/div/group/field[@name='amount_total_real']" position="before">
+                    <separator colspan="2" string="------------------------------------------"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/div/group/field[@name='amount_balance']" position="before">
+                    <separator colspan="2" string="------------------------------------------"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/div/group/field[@name='amount_subtotal_total']" position="before">
+                    <separator colspan="2" string="------------------------------------------"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/div/group/field[@name='amount_total_total']" position="before">
+                    <separator colspan="2" string="------------------------------------------"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/div/group/field[@name='amount_fuel']" position="after">
+                    <field name="amount_tollstation"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[4]" position="after">
+                    <page string="Tollstations">
+                        <field colspan="4" name="tollstation_ids" nolabel="1" readonly="1">
+                            <tree string="">
+                                <field invisible="1" name="state"/>
+                                <field name="name"/>
+                                <field name="date"/>
+                                <field name="travel_id"/>
+                                <field name="employee_id"/>
+                                <field name="amount"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+               <!--  <xpath expr="//form/sheet/notebook/page[2]/group" position="inside">
+                    <group col="2" colspan="2">
+                        <field name="evidence"/>
+                    </group>
+                </xpath> -->
+                <field name='distance_loaded_real' position="attributes">
+                    <attribute name="string">Kilometros Scanner</attribute>
+                </field>
+                <field name='distance_loaded_real' position="after">
+                    <field name="liters_scanner"/>
+                </field>
+                <field name='distance_real' position="attributes">
+                    <attribute name="string">Kilometros GPS</attribute>
+                </field>
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='fuel_qty']" position="after">
+                    <!--field name="estimated_liters"/>
+                    <field name="estimated_liters_scanner"/-->
+                    <field name="diff_liters"/>
+                    <field name="amount_diff_liters"/>
+                    <separator colspan="2" string="------------------------------"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='fuel_qty']" position="attributes">
+                    <attribute name="string">Litros Operador</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='fuel_efficiency']" position="attributes">
+                    <attribute name="string">Rendimiento GPS</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='fuel_efficiency_real']" position="attributes">
+                    <attribute name="string">Rendimiento Operador</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='move_id']" position="after">
+                    <field name="cancellation_note"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="tms_expense_geb_tree_view">
+            <field name="name">tms.expense.geb.tree.view</field>
+            <field name="model">tms.expense</field>
+            <field name="inherit_id" ref="tms.view_tms_expense_tree"/>
+            <field name="arch" type="xml">
+                <field name="paid" position="after">
+                    <field name="evidence"/>
+                </field>
+                <field name="unit_id" position="after">
+                    <field name="travel_ids" widget="many2many_tags"/>
+                    <field name="partner_ids" widget="many2many_tags"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

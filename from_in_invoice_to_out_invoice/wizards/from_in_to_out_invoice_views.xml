@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_account_invoice_in_to_out" model="ir.ui.view">
+            <field name="name">account.invoice.in.to.out.form</field>
+            <field name="model">account.invoice.in.to.out</field>
+            <field name="arch" type="xml">
+                <form string="Create customer Invoice">
+                    <group>
+                         <group>
+                             <field name="partner_id"/>
+                             <field name="journal_id"/>
+                         </group>
+                    </group>
+                    <footer>
+                        <button string='Create customer invoice' name="copy_in_to_out_invoice" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+               </form>
+            </field>
+        </record>
+
+        <record id="action_account_invoice_in_to_out" model="ir.actions.act_window">
+            <field name="name">Create customer Invoice</field>
+            <field name="res_model">account.invoice.in.to.out</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+           <field name="view_id" ref="view_account_invoice_in_to_out"/>
+           <field name="target">new</field>
+        </record>
+
+
+    </data>
+</odoo>

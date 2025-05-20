@@ -1,0 +1,7 @@
+id,code,name
+l10n_mx_wbl_load_type_CGS,CGS,Carga General Suelta
+l10n_mx_wbl_load_type_CGC,CGC,Carga General Contenerizada
+l10n_mx_wbl_load_type_GMN,GMN,Gran Mineral
+l10n_mx_wbl_load_type_GAG,GAG,Granel Agrícola
+l10n_mx_wbl_load_type_OFL,OFL,Otros Fluidos
+l10n_mx_wbl_load_type_PYD,PYD,Pretóleo y Derivados

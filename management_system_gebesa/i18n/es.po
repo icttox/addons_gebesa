@@ -1,0 +1,1627 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* management_system_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20211011\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-27 17:32+0000\n"
+"PO-Revision-Date: 2022-10-27 13:13-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: management_system_gebesa
+#: model:mail.template,body_html:management_system_gebesa.email_corrective_actions_notification
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"    <p>Corrective action notification</p>\n"
+"    <p>Hello good morning</p>\n"
+"    <p>Verify corrective action data is correct</p>\n"
+"    <p>Attach evidence and close the corrective action</p>\n"
+"    <p>You have a good day</p>\n"
+"    <p>Regards</p>\n"
+"\n"
+"    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong>CORRECTIVE ACTION DATA</strong><br/>\n"
+"       &nbsp;&nbsp;Data: <strong>${object.date}</strong><br/>\n"
+"       &nbsp;&nbsp;Folio: <strong>${object.folio}</strong><br/>\n"
+"       &nbsp;&nbsp;Motive: <strong>${object.motive}</strong><br/>\n"
+"       &nbsp;&nbsp;Departament: <strong>${object.departament_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Company: <strong>${object.company_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Responsible: <strong>${object.responsible_id.name}</strong><br/>\n"
+"    </p>\n"
+"    <p>Corrective action<a href=\"http://erp.portalgebesa.com/web?debug=true#id=${object.id}&model=quality.corrective.action&view_type=form&menu_id=1753\"> Link</a></p> \n"
+"</div>"
+msgstr ""
+"\n"
+"<div style=\"font-size:13px;font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"    <p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">Notificación de acción correctiva<br><br>Hola buenos dias<br><br>Verifique que los datos de la acción correctiva sean correctos<br><br>Adjuntar evidencias y cerrar la acción correctiva<br><br>Saludos</p>\n"
+"\n"
+"    <p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong style=\"font-weight:bolder;\">CORRECTIVE ACTION DATA</strong><br>\n"
+"       &nbsp;&nbsp;Data: <strong style=\"font-weight:bolder;\">${object.date}</strong><br>\n"
+"       &nbsp;&nbsp;Folio: <strong style=\"font-weight:bolder;\">${object.folio}</strong><br>\n"
+"       &nbsp;&nbsp;Motive: <strong style=\"font-weight:bolder;\">${object.motive}</strong><br>\n"
+"       &nbsp;&nbsp;Departament: <strong style=\"font-weight:bolder;\">${object.departament_id.name}</strong><br>\n"
+"       &nbsp;&nbsp;Company: <strong style=\"font-weight:bolder;\">${object.company_id.name}</strong><br>\n"
+"       &nbsp;&nbsp;Responsible: <strong style=\"font-weight:bolder;\">${object.responsible_id.name}</strong><br>\n"
+"    </p>\n"
+"    <p style=\"margin:0px 0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">Corrective action<a href=\"http://erp.portalgebesa.com/web?debug=true#id=${object.id}&amp;model=quality.corrective.action&amp;view_type=form&amp;menu_id=1753\" style=\"text-decoration:none;background-color:transparent;color:rgb(0, 135, 132);\"> Link</a></p> \n"
+"</div>"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "100.0%"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Analisis de la causa raiz</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>CAUSA RAIZ:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Cantidad:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents_layout
+msgid ""
+"<strong>Codigo: </strong>\n"
+"                                        <br/>F-SGC-"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions_layout
+msgid ""
+"<strong>Codigo: </strong>\n"
+"                                        <br/>F-SGC-14"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change_layout
+msgid ""
+"<strong>Codigo: </strong>\n"
+"                                        <br/>F-SGC-28"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Deparamento:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change
+msgid "<strong>Departamento:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents_layout
+msgid ""
+"<strong>Deriva de: </strong>\n"
+"                                        <br/>P-SGC-"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions_layout
+msgid ""
+"<strong>Deriva de: </strong>\n"
+"                                        <br/>P-SGC-03"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change_layout
+msgid ""
+"<strong>Deriva de: </strong>\n"
+"                                        <br/>P-SGC-08"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Descripcion de la incidencia</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions
+msgid "<strong>Descripcion de la no conformida</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change
+msgid "<strong>Descripcion del cambio</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Empresa:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Estado accion</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change
+msgid "<strong>Estado de accion</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Fecha Factura:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Fecha Incidencia:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions_layout
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change_layout
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents_layout
+msgid "<strong>Fecha de Revision</strong><br/>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change
+msgid "<strong>Fecha de cierre</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions
+msgid "<strong>Fecha de inicio:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change
+msgid "<strong>Fecha de solicitud:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions
+msgid "<strong>Folio de AC:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change
+msgid "<strong>Folio de solicitud:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Motivo Reposicion:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions
+msgid "<strong>Motivo:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Nombre del producto:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions
+msgid "<strong>Nombre del responsable:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change
+msgid "<strong>Nombre del solicitante:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions
+msgid "<strong>Otro:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Pedido Actual:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Pedido Origen:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Planta:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "<strong>Revisar medidas de acuerdo al plano.</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change_layout
+msgid "<strong>Revision: 0</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents_layout
+msgid "<strong>Revision: 1</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions_layout
+msgid "<strong>Revision: 8</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change
+msgid "<strong>Tipo de cambio:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_actions_layout
+msgid "<strong>Titulo del Documento: Accion Correctiva</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_change_layout
+msgid "<strong>Titulo del Documento: Gestion del cambio</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents_layout
+msgid "<strong>Titulo del Documento: Incidencias</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>Venta neta:</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "<strong>¿Porque?</strong>"
+msgstr ""
+
+#. module: management_system_gebesa
+#: selection:quality.change.management,status:0
+#: selection:quality.corrective.action,status:0
+#: selection:quality.incidents,status:0
+msgid "Abierto"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Acciones tomadas"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_needaction
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_needaction
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_needaction
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_needaction
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_needaction
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_needaction
+msgid "Action Needed"
+msgstr "Accion necesaria"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_form
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_incidents_form
+msgid "Action contingent"
+msgstr "Acciónes contingentes"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_incidents_form
+msgid "Action corrective"
+msgstr "Acción correctiva"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__corrective_action_id
+msgid "Actions contingen"
+msgstr "Acciones contingentes"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__incidents_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__contingent_ids
+msgid "Actions contingent"
+msgstr "Acciones contingentes"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action_lines__corrective_action_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__incidents_corrective_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__corrective_ids
+#: model:ir.ui.menu,name:management_system_gebesa.quality_corrective_action_menu
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_form
+msgid "Actions corrective"
+msgstr "Acción correctiva"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management_lines__activities
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__activitis_ids
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_change_management_form
+msgid "Activitis"
+msgstr "Actividades"
+
+#. module: management_system_gebesa
+#: model:res.groups,name:management_system_gebesa.admin_quality_corrective_action
+msgid "Admin quality corrective action"
+msgstr "Administrador de acción correctiva de calidad"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_incidents_view_kanban
+msgid "Almacen:"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__amount
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__amount
+msgid "Amount"
+msgstr "Monto"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_incidents_form
+msgid "Analysis cause"
+msgstr "Análisis de la causa raíz"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Area"
+msgstr ""
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Armed"
+msgstr "Armado"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_attachment_count
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_attachment_count
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_attachment_count
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_attachment_count
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_attachment_count
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_attachment_count
+msgid "Attachment Count"
+msgstr "Archivos adjuntos"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__qty_attachments
+msgid "Attachments"
+msgstr "Adjuntos"
+
+#. module: management_system_gebesa
+#: selection:quality.corrective.action,motive:0
+msgid "Audit external"
+msgstr "Auditoria externa"
+
+#. module: management_system_gebesa
+#: selection:quality.corrective.action,motive:0
+msgid "Audit internal"
+msgstr "Auditoria interna"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Buy and sell"
+msgstr "Compra/venta"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.sale_order_incidents_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Cant."
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__product_uom_qty
+msgid "Cantidad total"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__cause
+msgid "Cause"
+msgstr "Causa raiz"
+
+#. module: management_system_gebesa
+#: selection:quality.change.management,status:0
+#: selection:quality.corrective.action,status:0
+#: selection:quality.incidents,status:0
+msgid "Cerrado"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management_lines__change_lines_id
+msgid "Change Lines"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.actions.act_window,name:management_system_gebesa.quality_change_management_action
+#: model:ir.ui.menu,name:management_system_gebesa.quality_change_management_menu
+msgid "Change management"
+msgstr "Gestión del cambio"
+
+#. module: management_system_gebesa
+#: selection:quality.change.management,exchange_rate:0
+msgid "Changes audit results"
+msgstr "Cambios resultados de auditoria"
+
+#. module: management_system_gebesa
+#: selection:quality.change.management,exchange_rate:0
+msgid "Changes to employee opinions"
+msgstr "Cambios por opiniones de empleados"
+
+#. module: management_system_gebesa
+#: selection:quality.change.management,exchange_rate:0
+msgid "Changes to satisfaction results"
+msgstr "Cambios por resultados de satisfacción"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__change
+msgid "Changes to the SGC (documents, indicators, etc.)"
+msgstr "Cambios al SGC (Documentos, indicadores, etc.)"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__check
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__check_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__check
+msgid "Check"
+msgstr "Verifico"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_form
+msgid "Close actions"
+msgstr "Cierre acción"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_form
+msgid "Closed"
+msgstr "Cerrada"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert_flaw__code
+msgid "Code"
+msgstr "Código"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert__color
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Color"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__company_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__company_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__company_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__company_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__company_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_form
+msgid "Contingent Actions"
+msgstr "Acciones contingentes"
+
+#. module: management_system_gebesa
+#: model:ir.actions.act_window,name:management_system_gebesa.quality_contingent_actions_action
+#: model:ir.actions.act_window,name:management_system_gebesa.quality_contingent_incidents_action
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__action_line_ids
+msgid "Contingent actions"
+msgstr "Acciones contingentes"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_form
+msgid "Corrective Action"
+msgstr "Acción  correctiva"
+
+#. module: management_system_gebesa
+#: model:ir.actions.act_window,name:management_system_gebesa.quality_corrective_action_action
+msgid "Corrective action"
+msgstr "Acción  correctiva"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__corrective_actions_ids
+msgid "Corrective action lines"
+msgstr "Lineas de acción correctiva"
+
+#. module: management_system_gebesa
+#: model:ir.actions.act_window,name:management_system_gebesa.quality_corrective_incidents_action
+msgid "Corrective actions"
+msgstr "Acciones correctivas"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.sale_order_incidents_form
+msgid "Create incidents"
+msgstr "Crear incidencia"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert_flaw__create_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__create_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management_lines__create_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__create_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__create_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__create_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action_lines__create_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__create_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__create_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert_flaw__create_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__create_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management_lines__create_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__create_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__create_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__create_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action_lines__create_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__create_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__create_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__order_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__order_id
+msgid "Current order"
+msgstr "Pedido actual"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_mrp_workcenter__daily_inspection_header
+msgid "Daily inspection header"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert__date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__date_close
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__date_close
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__date_close
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action_lines__date_close
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__date_close
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__date_close
+msgid "Date close"
+msgstr "Fecha de cierre"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__date_commitment
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__date_commitment
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action_lines__date_commitment
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__date_commitment
+msgid "Date commitment"
+msgstr "Fecha compromiso"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management_lines__date_execution
+msgid "Date execution"
+msgstr "Fecha de ejecucion"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__date_incident
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__date_incident
+msgid "Date incident"
+msgstr "Fecha incidencia"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__date_invoice
+msgid "Date invoice"
+msgstr "Fecha factura"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__indicator_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__procedures_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__risk_matrix_date
+msgid "Date of realization"
+msgstr "Fecha de realizacion"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__date
+msgid "Date request"
+msgstr "Fecha de solicitud"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Default MP"
+msgstr "Defecto MP"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Defecto"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_alert_flaw_tree
+msgid "Defects"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__departament_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__departament_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__departament_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__departament_id
+msgid "Department"
+msgstr "Departamento"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "Describa las acciones contingentes"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "Describa las acciones correctivas"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Descripcion del mueble"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__description
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__description
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__description
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action_lines__description
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__description
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__description
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__description
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_change_management_form
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_form
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_incidents_form
+msgid "Description"
+msgstr "Descripción"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__description
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__indicator_description
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__procedures_description
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__risk_matrix_description
+msgid "Description of the change"
+msgstr "Descripción del cambio"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_form
+msgid "Description of the nonconformity"
+msgstr "Descripción de la no conformidad"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Design incorrect"
+msgstr "Diseño incorrecto"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Dirty"
+msgstr "Sucio"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert_flaw__display_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__display_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management_lines__display_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__display_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__display_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__display_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action_lines__display_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__display_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__display_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_report_management_system_gebesa_daily_inspection_report__display_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Disposicion"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_form
+msgid "Email Notification"
+msgstr "Email acción correctiva"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Error production"
+msgstr "Error de produccion"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Estatus"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__exchange_rate
+msgid "Exchange rate"
+msgstr "Tipo de cambio"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Fault in the purchased product/sale"
+msgstr "Fallo en producto de compra/venta"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "Fecha cierre"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "Fecha compromiso"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Fecha de <br/>liberacion"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Fecha:"
+msgstr ""
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Finishes"
+msgstr "Acabados"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Firma inspector de calidad"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Firma responsable de area"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert__flaw_id
+msgid "Flaw"
+msgstr "Defecto"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__folio
+msgid "Folio de AC"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__folio
+msgid "Folio request"
+msgstr "Folio de solicitud"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_change_management_view_kanban
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_view_kanban
+msgid "Folio:"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_follower_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_follower_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_follower_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_follower_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_follower_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_channel_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_channel_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_channel_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_channel_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_channel_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_partner_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_partner_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_partner_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_partner_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_partner_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Partners)"
+
+#. module: management_system_gebesa
+#: model:ir.model,name:management_system_gebesa.model_hr_department
+msgid "HR Department"
+msgstr "Departamento de recursos humanos"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Hits"
+msgstr "Golpes"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Horno:"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert_flaw__id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management_lines__id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action_lines__id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_report_management_system_gebesa_daily_inspection_report__id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__id
+msgid "ID"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.ui.menu,name:management_system_gebesa.iso_actions
+msgid "ISO"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_change_management__message_unread
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_actions__message_unread
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_incidents__message_unread
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_action__message_unread
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_incidents__message_unread
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_incidents__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si se marca, los nuevos mensajes requieren su atención"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_change_management__message_needaction
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_actions__message_needaction
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_incidents__message_needaction
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_action__message_needaction
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_incidents__message_needaction
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_incidents__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_change_management__message_has_error
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_actions__message_has_error
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_incidents__message_has_error
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_action__message_has_error
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_incidents__message_has_error
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_incidents__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Incident for client"
+msgstr "Incidencia por cliente"
+
+#. module: management_system_gebesa
+#: model:ir.actions.act_window,name:management_system_gebesa.action_sale_order_incidents
+#: model:ir.actions.act_window,name:management_system_gebesa.quality_incidents_action
+#: model:ir.ui.menu,name:management_system_gebesa.quality_incidents_action_menu
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.sale_order_incidents_form
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.view_order_form
+msgid "Incidents"
+msgstr "Incidencias"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__indicate
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__indicate_1
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__indicate_2
+msgid "Indicate"
+msgstr "Indique"
+
+#. module: management_system_gebesa
+#: selection:quality.corrective.action,motive:0
+msgid "Indicator"
+msgstr "Indicador"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__indicator
+msgid "Indicators"
+msgstr "Indicadores"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_form
+msgid "Information SGC"
+msgstr "Información SGC"
+
+#. module: management_system_gebesa
+#: model:ir.actions.report,name:management_system_gebesa.daily_inspection
+msgid "Inspeccion Diaria"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Inspector:"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_is_follower
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_is_follower
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_is_follower
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_is_follower
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_is_follower
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Lack of components"
+msgstr "Falta de componentes"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert_flaw____last_update
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management____last_update
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management_lines____last_update
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions____last_update
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents____last_update
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action____last_update
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action_lines____last_update
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents____last_update
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents____last_update
+#: model:ir.model.fields,field_description:management_system_gebesa.field_report_management_system_gebesa_daily_inspection_report____last_update
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert_flaw__write_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__write_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management_lines__write_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__write_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__write_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__write_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action_lines__write_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__write_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__write_uid
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert_flaw__write_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__write_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management_lines__write_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__write_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__write_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__write_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action_lines__write_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__write_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__write_date
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Liberado"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_main_attachment_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_main_attachment_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_main_attachment_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_main_attachment_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_main_attachment_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Merchandise not arrive/parts"
+msgstr "No llega la mercancía / partes"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_has_error
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_has_error
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_has_error
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_has_error
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_has_error
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_ids
+msgid "Messages"
+msgstr "Mensages"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_change_management_form
+msgid "Modifications to consider once the change has been made"
+msgstr "Modificaciones a considerar una vez se haya realizado el cambio"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__motive
+msgid "Motive"
+msgstr "Motivo"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_incidents_view_kanban
+msgid "Motivo de reposicion:"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_view_kanban
+msgid "Motivo:"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert_flaw__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__name_id
+msgid "Name applicate"
+msgstr "Nombre del solicitante"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__product_id
+msgid "Name product"
+msgstr "Nombre del producto"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__responsible_id
+msgid "Name responsible"
+msgstr "Nombre del responsable"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__indicator_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__procedures_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__risk_matrix_name
+msgid "Name/Document code"
+msgstr "Nombre / Código del documento"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__net_sale_mx
+msgid "Net sale mx"
+msgstr "Venta neta (Pesos)"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__net_sale_dollars
+msgid "Net sales dollars"
+msgstr "Venta neta (Dolares)"
+
+#. module: management_system_gebesa
+#: model:mail.template,subject:management_system_gebesa.email_corrective_actions_notification
+msgid "New Corrective Action (Folio ${object.folio or 'n/a'}), Motivo: ${object.motive or 'n/a'}"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_needaction_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_needaction_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_needaction_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_needaction_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_needaction_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero de Acciones"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_action__qty_attachments
+msgid "Number of attachments for acction corrective"
+msgstr "Número de archivos adjuntos para la acción correctiva"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_has_error_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_has_error_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_has_error_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_has_error_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_has_error_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_has_error_counter
+msgid "Number of error"
+msgstr "Número de error"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_change_management__message_needaction_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_actions__message_needaction_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_incidents__message_needaction_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_action__message_needaction_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_incidents__message_needaction_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_incidents__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_change_management__message_has_error_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_actions__message_has_error_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_incidents__message_has_error_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_action__message_has_error_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_incidents__message_has_error_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_incidents__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_change_management__message_unread_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_actions__message_unread_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_incidents__message_unread_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_action__message_unread_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_incidents__message_unread_counter
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_incidents__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes sin leer"
+
+#. module: management_system_gebesa
+#: selection:quality.change.management,exchange_rate:0
+msgid "Opportunities"
+msgstr "Oportunidades"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.sale_order_incidents_form
+msgid "Or"
+msgstr "O"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__sale_order_id
+msgid "Origin order"
+msgstr "Pedido origen"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__sale_order_id
+msgid "Original order"
+msgstr "Pedido origen"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__other
+#: selection:quality.corrective.action,motive:0
+msgid "Other"
+msgstr "Otro"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert__oven
+msgid "Oven"
+msgstr "Horno"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Painting"
+msgstr "Pintura"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Pedido"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_incidents_view_kanban
+msgid "Pedido actual:"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_incidents_view_kanban
+msgid "Pedido de origen:"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__procedures
+msgid "Procedures, others"
+msgstr "Procedimientos, etc"
+
+#. module: management_system_gebesa
+#: selection:quality.change.management,status:0
+#: selection:quality.corrective.action,motive:0
+#: selection:quality.corrective.action,status:0
+#: selection:quality.incidents,status:0
+msgid "Proceso"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_form
+msgid "Process"
+msgstr "Procesar"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert__provision
+msgid "Procision"
+msgstr "Disposicion"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Product/parts incorrect"
+msgstr "Producto / Partes incorrectas"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Production/Quality Error"
+msgstr "Error de Producción/Calidad"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_incidents_view_kanban
+msgid "Producto:"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__profits
+msgid "Profits"
+msgstr "Beneficios"
+
+#. module: management_system_gebesa
+#: model:ir.model,name:management_system_gebesa.model_quality_alert
+msgid "Quality Alert"
+msgstr "Alerta de Calidad"
+
+#. module: management_system_gebesa
+#: model:ir.model,name:management_system_gebesa.model_quality_alert_flaw
+msgid "Quality Alert Defects"
+msgstr "Alerta de Calidad"
+
+#. module: management_system_gebesa
+#: model:ir.actions.act_window,name:management_system_gebesa.quality_alert_flaw_action
+#: model:ir.ui.menu,name:management_system_gebesa.menu_quality_alert_flaw
+msgid "Quality flaws"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert__qty_rejected
+msgid "Quantity rejected"
+msgstr "Cant. Rechazada"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert__qty_reviewed
+msgid "Quantity reviewed"
+msgstr "Cant. Revisada"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Rechazado"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Rechazados"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_alert_view_gebesa_form
+msgid "Rejected"
+msgstr "Rechazados"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Release error"
+msgstr "liberación errónea"
+
+#. module: management_system_gebesa
+#: selection:quality.alert,provision:0
+msgid "Repair"
+msgstr "Retrabajo"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__replacement
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__replacement
+msgid "Replacement"
+msgstr "Reposición"
+
+#. module: management_system_gebesa
+#: model:ir.model,name:management_system_gebesa.model_report_management_system_gebesa_daily_inspection_report
+msgid "Report Daily Inspection"
+msgstr "Reporte inspección diaria"
+
+#. module: management_system_gebesa
+#: model:ir.actions.report,name:management_system_gebesa.actions_report
+msgid "Reporte Accion correctiva"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.actions.report,name:management_system_gebesa.change_report
+msgid "Reporte Gestion del cambio"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.actions.report,name:management_system_gebesa.incidents_report
+msgid "Reporte Incidencias"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.mrp_workcenter_daily_inspection_form
+msgid "Reports"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__requer
+msgid "Requires updating of risks and opportunities"
+msgstr "Requiere actualización de los riesgos y oportunidades"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__resources
+msgid "Resources"
+msgstr "Recursos"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.report_incidents
+msgid "Responsable"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management_lines__responsible_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__responsible_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__responsible_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action_lines__responsible_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__responsible_id
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Retrab"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__revised_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__revised_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__revised_id
+msgid "Revised"
+msgstr "Reviso"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__risk_matrix
+msgid "Risk or opportunity matrix"
+msgstr "Matriz de riesgos u oportunidades"
+
+#. module: management_system_gebesa
+#: selection:quality.change.management,exchange_rate:0
+msgid "Risks"
+msgstr "Riesgos"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__field_name
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__risks
+msgid "Risks/consequences"
+msgstr "Riesgos / consecuencias"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__cause_root
+msgid "Root cause"
+msgstr "Causa raiz"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_corrective_action_form
+msgid "Root cause analysis"
+msgstr "Análisis causa raiz"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert__sale_id
+msgid "Sale order"
+msgstr "Orden de venta"
+
+#. module: management_system_gebesa
+#: model:res.groups,name:management_system_gebesa.group_sale_order_incidents
+msgid "Sale order incidents"
+msgstr "Incidencias de ordenes de venta"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+#: selection:quality.alert,provision:0
+msgid "Scrap"
+msgstr "Desecho"
+
+#. module: management_system_gebesa
+#: model:ir.actions.server,name:management_system_gebesa.ir_cron_send_alert_incidents_ir_actions_server
+#: model:ir.cron,cron_name:management_system_gebesa.ir_cron_send_alert_incidents
+#: model:ir.cron,name:management_system_gebesa.ir_cron_send_alert_incidents
+msgid "Send Email Incidents"
+msgstr ""
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Shipments"
+msgstr "Embarques"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_hr_department__show_incidents
+msgid "Show incidents"
+msgstr "Mostrar incidencias"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__status
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__status
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__status
+msgid "Status"
+msgstr ""
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Supplied by service"
+msgstr "Se surte por servicio"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__exist
+msgid "There are similar nonconformities"
+msgstr "Existen no conformidades simlares"
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_change_management_view_kanban
+msgid "Tipo de cambio:"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Total de defectos"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.daily_inspection_document
+msgid "Total de muebles revisados"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_unread
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_unread
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_unread
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_unread
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_unread
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_unread
+msgid "Unread Messages"
+msgstr "Los mensajes no leídos"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__message_unread_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__message_unread_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__message_unread_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__message_unread_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__message_unread_counter
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Los mensajes no leídos Contador"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__net_sale
+msgid "Venta neta"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__net_sale_mx
+msgid "Venta neta (Pesos)"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_change_management_form
+msgid "Verificacion"
+msgstr ""
+
+#. module: management_system_gebesa
+#: model_terms:ir.ui.view,arch_db:management_system_gebesa.quality_incidents_form
+msgid "Verification effectiveness"
+msgstr "Verificación de efectividad"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__warehouse_id
+#: model:ir.model.fields,field_description:management_system_gebesa.field_sale_order_incidents__warehouse_id
+msgid "Warehouse"
+msgstr "Almacen"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_change_management__website_message_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_actions__website_message_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_contingent_incidents__website_message_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__website_message_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_incidents__website_message_ids
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes de sitios web"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_change_management__website_message_ids
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_actions__website_message_ids
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_contingent_incidents__website_message_ids
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_action__website_message_ids
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_corrective_incidents__website_message_ids
+#: model:ir.model.fields,help:management_system_gebesa.field_quality_incidents__website_message_ids
+msgid "Website communication history"
+msgstr "Sitio Web historial de comunicación"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "Welding"
+msgstr "Soldadura"
+
+#. module: management_system_gebesa
+#: model:ir.model,name:management_system_gebesa.model_mrp_workcenter
+msgid "Work Center"
+msgstr "Centro de producción"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_alert_flaw__workcenter_ids
+msgid "Work Centers"
+msgstr "Centros de producción"
+
+#. module: management_system_gebesa
+#: model:ir.model,name:management_system_gebesa.model_quality_change_management
+#: model:ir.model,name:management_system_gebesa.model_quality_change_management_lines
+#: model:ir.model,name:management_system_gebesa.model_quality_contingent_actions
+#: model:ir.model,name:management_system_gebesa.model_quality_contingent_incidents
+#: model:ir.model,name:management_system_gebesa.model_quality_corrective_action
+#: model:ir.model,name:management_system_gebesa.model_quality_corrective_action_lines
+#: model:ir.model,name:management_system_gebesa.model_quality_corrective_incidents
+#: model:ir.model,name:management_system_gebesa.model_quality_incidents
+#: model:ir.model,name:management_system_gebesa.model_sale_order_incidents
+msgid "descripcion pendiente"
+msgstr "descripción pendiente"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "freight loses package"
+msgstr "Fletera pierde paquete"
+
+#. module: management_system_gebesa
+#: selection:quality.incidents,replacement:0
+#: selection:sale.order.incidents,replacement:0
+msgid "wrong measurements"
+msgstr "Medidas incorrectas"
+
+#. module: management_system_gebesa
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__why
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__why_1
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__why_2
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__why_3
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_corrective_action__why_4
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__why
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__why_1
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__why_2
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__why_3
+#: model:ir.model.fields,field_description:management_system_gebesa.field_quality_incidents__why_4
+msgid "¿Why?"
+msgstr "¿Porque?"

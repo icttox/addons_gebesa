@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_normal_cost_tree_view'>
+            <field name='name'>product.normal.cost.tree.view</field>
+            <field name='model'>product.product</field>
+            <field name='inherit_id' ref="product.product_product_tree_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//tree/field[@name='lst_price']" position="before">
+                    <field name="standard_price" string='Costo Producto'/>
+                    <field name="used_in_bom_count" string="Usado en BoM"/>
+                    <field name="bom_count" string="Listas de Materiales"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

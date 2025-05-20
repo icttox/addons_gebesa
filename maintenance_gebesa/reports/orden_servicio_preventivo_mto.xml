@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <report
+            id="order_servicio_preventivo_mto"
+            model="maintenance.request"
+            string="Imprimir Orden De Servicio Preventivo MTO"
+            report_type="qweb-pdf"
+            name="maintenance_gebesa.report_order_servicio_preventivo_mto"
+            file="maintenance_gebesa.report_order_servicio_preventivo_mto"
+        />
+
+        <template id="orden_servicio_preventivo_mto_layout">
+            <div class="header">
+                <div class="row">
+                    <div class="col-2 text-center table-bordered">
+                        <img t-if="doc.company_id.logo" t-att-src="image_data_uri(doc.company_id.logo)" style="max-height: 45px;max-width: 100px;margin-top: 25px;margin-left: 3px;" alt="Logo"/>
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-7 text-center table-bordered">
+                                <strong>Orden de Servicio - Preventivo</strong>
+                            </div>
+                            <div class="col-5 text-center table-bordered">
+                                <strong>Revisión:</strong> 1
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 text-center table-bordered">
+                                <strong>Código:</strong><br/>F-MTO-08
+                            </div>
+                            <div class="col-4 text-center table-bordered">
+                                <strong>Deriva de:</strong><br/>P-MTO-01
+                            </div>
+                            <div class="col-5 text-center table-bordered">
+                                <strong>Fecha de Revisión:</strong><br/>18/06/2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer">
+                <div class="row" style="border-top: 3px solid #000000;">
+                    <div class="col-6">
+                    www.gebesa.com
+                    </div>
+                    <div class="col-6" align="right">
+                        Página <span class="page"/> de <span class="topage"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+
+        <template id="report_order_servicio_preventivo_mto_document">
+            <t t-call="maintenance_gebesa.orden_servicio_preventivo_mto_layout">
+                <t t-set="doc" t-value="doc.with_context({'lang':doc.user_id.lang})"/>
+                <div class="page" style="font-size: small">
+                    <div class="row no-gutters mt-3">
+                        <div class="col-12 text-light text-center h6" style="background-color: #616360 !important;font-weight: bold;">
+                            DATOS DEL EQUIPO
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Activo:</td>
+                                <td width="16%">
+                                    <t t-if="doc.equipment_id.name">
+                                        <span t-esc="doc.equipment_id.name"/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Fecha programada:</td>
+                                <td width="16%">
+                                    <t t-if="doc.schedule_date">
+                                        <span t-esc="doc.schedule_date" t-options='{"widget": "date"}'/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Fecha de cierre:</td>
+                                <td width="16%">
+                                    <t t-if="doc.close_date">
+                                        <span t-esc="doc.close_date"/>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Modelo:</td>
+                                <td width="16%">
+                                    <t t-if="doc.equipment_id.model">
+                                        <span t-esc="doc.equipment_id.model"/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">N° de serie:</td>
+                                <td width="16%">
+                                    <t t-if="doc.equipment_id.serial_no">
+                                        <span t-esc="doc.equipment_id.serial_no"/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Ubicación física:</td>
+                                <td width="16%">
+                                    <t t-if="doc.equipment_id.location_physical.name">
+                                        <span t-esc="doc.equipment_id.location_physical.name"/>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Departamento:</td>
+                                <td width="16%">
+                                    <t t-if="doc.equipment_id.department_id.name">
+                                        <span t-esc="doc.equipment_id.department_id.name"/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Marca:</td>
+                                <td width="16%">
+                                    <t t-if="doc.equipment_id.mark">
+                                        <span t-esc="doc.equipment_id.mark"/>
+                                    </t>
+                                </td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Numero interno:</td>
+                                <td width="16%">
+                                    <t t-if="doc.equipment_id.int_number">
+                                        <span t-esc="doc.equipment_id.int_number"/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters mt-3">
+                        <div class="col-12 text-light text-center h6" style="background-color: #616360 !important;font-weight: bold;">
+                            ULTIMO SERVICIO
+                        </div>
+                    </div>
+                    <t t-if="doc.equipment_id.maintenance_ids">
+                        <t t-set="maintenance" t-value="doc.equipment_id.maintenance_ids.filtered(lambda m: m.stage_id.name == 'Verificada').sorted(key=lambda m: m.request_date, reverse=True)[0] if doc.equipment_id.maintenance_ids.filtered(lambda m: m.stage_id.name == 'Verificada') else False"/>
+                    </t>
+                    <t t-if="maintenance">
+                        <div class="row no-gutters">
+                            <table width="100%" class="table table-sm table-bordered">
+                                <tr>
+                                    <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Fecha de servicio:</td>
+                                    <td width="16%">
+                                        <t t-if="maintenance.request_date">
+                                            <span t-field="maintenance.request_date" t-options='{"widget": "date"}'/>
+                                        </t>
+                                    </td>
+                                    <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Etapa:</td>
+                                    <td width="16%">
+                                        <t t-if="maintenance.stage_id.name">
+                                            <span t-esc="maintenance.stage_id.name"/>
+                                        </t>
+                                    </td>
+                                    <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Tipo de Mantenimiento:</td>
+                                    <td width="16%">
+                                        <t t-if="maintenance.maintenance_type">
+                                            <span t-esc="maintenance.maintenance_type"/>
+                                        </t>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row no-gutters">
+                            <table width="100%" class="table table-sm table-bordered">
+                                <tr>
+                                    <td class="text-light text-left" style="background-color: #a5a8a4 !important;" width="100%">Descripción del trabajo que se realizó en el último servicio:</td>
+                                </tr>
+                                <tr>
+                                    <td  width="100%">
+                                        <t t-if="maintenance.description">
+                                            <span t-esc="maintenance.description"/>
+                                        </t>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row no-gutters">
+                            <table width="100%" class="table table-sm table-bordered">
+                                <tr>
+                                    <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="16%">Atendió:</td>
+                                    <td width="100%">
+                                        <t t-if="maintenance.attended_ids">
+                                            <span t-esc="maintenance.attended_ids and ', '.join([attended.name for attended in maintenance.attended_ids]) or ''"/>
+                                        </t>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </t>
+                    <div class="row no-gutters mt-3">
+                        <div class="col-12 text-light text-center h6" style="background-color: #616360 !important;font-weight: bold;">
+                            ACTIVIDADES DEL MANTENIMIENTO
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <t t-if="doc.equipment_id.maintenance_activities">
+                                    <ul>
+                                        <t t-foreach="doc.equipment_id.maintenance_activities.split('\n')" t-as="line">
+                                            <li>
+                                                <span t-esc="line"/>
+                                            </li>
+                                        </t>
+                                    </ul>
+                                </t>
+                            </tr>
+                        </table>
+                    </div>
+                    <br/>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <th class="text-light text-center" style="background-color: #a5a8a4 !important;" width="70%">Refacciones</th>
+                                <th class="text-light text-center" style="background-color: #a5a8a4 !important;" width="30%">Costos</th>
+                            </tr>
+                            <tr>
+                                <th width="70%"></th>
+                                <th width="30%">$</th>                            
+                            </tr>
+                            <tr>
+                                <th width="70%"></th>
+                                <th width="30%">$</th>
+                            </tr>
+                            <tr>
+                                <th width="70%"></th>
+                                <th width="30%">$</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters mt-3">
+                        <div class="col-12 text-light text-center h6" style="background-color: #616360 !important;font-weight: bold;">
+                            ENCUESTA DE SATISFACCIÓN DEL USUARIO
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-borderless">
+                            <tr>
+                                <th width="60%">1.- Se realizaron  las pruebas para asegurar el correcto funcionamiento.</th>
+                                <th width="10%">
+                                    <t t-if="doc.funcionality_test">Si</t>
+                                    <t t-else="doc.funcionality_test">No</t>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th width="60%">2.- Nivel de atención recibido por el personal de mantenimiento.</th>
+                                <t t-if="doc.maintenance_attention">
+                                    <t t-set="translated_attention" t-value="{
+                                        'excellent': 'Excelente',
+                                        'good': 'Bueno',
+                                        'fair': 'Regular',
+                                        'bad':'Malo',
+                                    }[doc.maintenance_attention]" />
+                                    <th width="10%"><span t-esc="translated_attention"/></th>
+                                </t>
+                            </tr>
+                            <tr>
+                                <th width="60%">3.- Tiempo de entrega de la máquina o equipo.</th>
+                                <t t-if="doc.delivery_time">
+                                    <th width="10%"><span t-esc="'%.2f' % doc.delivery_time"/> horas</th>
+                                </t>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters mt-3">
+                        <div class="col-12 text-light text-center h6" style="background-color: #616360 !important;font-weight: bold;">
+                            COMENTARIOS DEL USUARIO
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="25%">Trabajo realizado por:</td>
+                                <td width="100%">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="25%">Firma del Supervisor de Mantenimiento</td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="25%">Firma de quién realizó el Mantenimiento</td>
+                                <td class="text-light text-center" style="background-color: #a5a8a4 !important;" width="25%">Firma de Recibido (usuario)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters">
+                        <table width="100%" class="table table-sm table-bordered">
+                            <tr>
+                                <td width="25%"><br/><br/></td>
+                                <td width="25%"><br/><br/></td>
+                                <td width="25%"><br/><br/></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <template id="report_order_servicio_preventivo_mto">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="maintenance_gebesa.report_order_servicio_preventivo_mto_document" t-lang="doc.user_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

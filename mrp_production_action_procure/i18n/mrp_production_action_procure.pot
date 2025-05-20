@@ -1,0 +1,113 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mrp_production_action_procure
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-23 22:17+0000\n"
+"PO-Revision-Date: 2020-07-23 22:17+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_production_action_procure
+#: model:ir.ui.view,arch_db:mrp_production_action_procure.mrp_production_procura_form
+msgid "*It works only with production orders in state \"Awaiting Raw Materials\"."
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: code:addons/mrp_production_action_procure/wizards/mrp_production_procure.py:118
+#, python-format
+msgid "Back order <em>%s</em> <b>created</b>."
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.model.fields,help:mrp_production_action_procure.field_mrp_production_procure_include_rm
+msgid "Bring to production place the Raw matereials too."
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.model.fields,help:mrp_production_action_procure.field_mrp_production_procure_include_wip
+msgid "Bring to production place the Work in progress components."
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.ui.view,arch_db:mrp_production_action_procure.mrp_production_procura_form
+msgid "Cancel"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.model.fields,field_description:mrp_production_action_procure.field_mrp_production_procure_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.model.fields,field_description:mrp_production_action_procure.field_mrp_production_procure_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.model.fields,field_description:mrp_production_action_procure.field_mrp_production_procure_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.model.fields,field_description:mrp_production_action_procure.field_mrp_production_procure_id
+msgid "ID"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.model.fields,field_description:mrp_production_action_procure.field_mrp_production_procure_include_rm
+msgid "Include Raw Materials"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.model.fields,field_description:mrp_production_action_procure.field_mrp_production_procure_include_wip
+msgid "Include Work In Progress"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.model.fields,field_description:mrp_production_action_procure.field_mrp_production_procure___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.model.fields,field_description:mrp_production_action_procure.field_mrp_production_procure_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.model.fields,field_description:mrp_production_action_procure.field_mrp_production_procure_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.ui.view,arch_db:mrp_production_action_procure.mrp_production_procura_form
+msgid "Procure to produce MO"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.actions.act_window,name:mrp_production_action_procure.action_production_procure
+msgid "Production Procure"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.ui.view,arch_db:mrp_production_action_procure.mrp_production_procura_form
+msgid "Production Procurement"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.model,name:mrp_production_action_procure.model_mrp_production_procure
+msgid "mrp.production.procure"
+msgstr ""
+
+#. module: mrp_production_action_procure
+#: model:ir.ui.view,arch_db:mrp_production_action_procure.mrp_production_procura_form
+msgid "or"
+msgstr ""
+

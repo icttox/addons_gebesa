@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='stock_picking_force_availability_form'>
+        	<field name='name'>stock.picking.force.availability.form'</field>
+        	<field name='model'>stock.picking</field>
+        	<field name='inherit_id' ref='stock.view_picking_form'/>
+        	<field name='arch' type='xml'>
+                <!--xpath expr="//button[@name='force_assign']" position="replace">
+                    <button name="force_assign" states="confirmed,waiting,partially_available" string="Force Availability" type="object" groups="disable_force_availability_button.group_force_availability"/>
+                </xpath-->
+                <xpath expr="//notebook/page[3]/group/group/field[@name='company_id']" position="after">
+                    <field name='gavailavility' readonly="1"/>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel']" position="before">
+                    <button name="force_assign" states="confirmed,waiting,assigned" string="Force Availability" type="object" attrs="{'invisible': [('gavailavility', 'not in', ('waiting', 'partially_available','confirmed'))]}" groups="disable_force_availability_button.group_force_availability"/>
+                </xpath>
+                <xpath expr="//button[@name='action_assign']" position="replace">
+                    <button name="action_assign" states="confirmed,waiting" string="Reserve" type="object" class="oe_highlight" groups="disable_force_availability_button.group_reserve_button"/>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel']" position="replace">
+                    <button name="action_cancel" states="assigned,confirmed,draft,waiting" string="Cancel" groups="system_administrator.group_system_administrator_gebesa" type="object"/>
+                </xpath>      		     		
+        	</field>
+        </record>
+    </data>
+</odoo>

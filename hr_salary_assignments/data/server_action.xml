@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_salary_assingment_validate" model="ir.actions.server">
+        <field name="name">Validate</field>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="model_id" ref="hr_salary_assignments.model_hr_salary_assingments"/>
+        <field name="binding_model_id" ref="hr_salary_assignments.model_hr_salary_assingments"/>
+        <field name="code">
+    records.validate()
+        </field>
+    </record>
+    
+    <record id="action_salary_assingment_cancel" model="ir.actions.server">
+        <field name="name">Cancel</field>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="model_id" ref="hr_salary_assignments.model_hr_salary_assingments"/>
+        <field name="binding_model_id" ref="hr_salary_assignments.model_hr_salary_assingments"/>
+        <field name="code">
+    records.cancel()
+        </field>
+    </record>
+
+</odoo>

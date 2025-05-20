@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "gebesa_integracion_microsip",
+    'summary': "gebesa_integracion_microsip",
+    'description': "Sin description",
+    'author': "Marco Esquivel, Gebesa",
+    'website': "http://www.yourcompany.com",
+    'category': 'Uncategorized',
+    'version': '12.0.0',
+    'depends': ['base', 'hr', 'hr_payroll'],
+    'data': [
+        'data/action_server.xml',
+        'data/data.xml',
+        'reports/xls_reports.xml',
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'views/hr_department_view.xml',
+        'views/hr_employee_view.xml',
+        'views/hr_job_view.xml',
+        'views/hr_payroll_structure_view.xml',
+        'views/hr_salary_rule_view.xml',
+        'views/hr_leave.xml',
+        'views/hr_leave_type.xml',
+        'views/hr_payslip_view.xml',
+        'wizards/payroll_exceptions_microsip_views.xml',
+        'wizards/update_id_microsip_employee.xml',
+        'wizards/read_payroll_microsip.xml',
+    ],
+    'demo': [
+    ],
+}

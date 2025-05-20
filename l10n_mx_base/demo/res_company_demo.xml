@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<odoo noupdate="1">
+
+    <!-- In order to engage quickly a new user with demo data the company
+    should be properly configured.
+    -->
+    <record id="base.main_company" model="res.company">
+        <field name="address_parent_company_id" ref="main_mx_address_company"/>
+        <field name="city">tu ciudad</field>
+        <field name="state_id" ref="base.state_mx_gto"/>
+        <field name="country_id" ref="base.mx"/>
+    </record>
+
+</odoo>

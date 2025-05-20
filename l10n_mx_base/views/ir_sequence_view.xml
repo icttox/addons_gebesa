@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ir_sequence_form_l10n_mx_base" model="ir.ui.view">
+        <field name="name">ir.sequence.form.l10n_mx_base</field>
+        <field name="model">ir.sequence</field>
+        <field name="inherit_id" ref="base.sequence_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="OML" groups="l10n_mx_base.group_l10n_mx_base_manager">
+                    <group>
+                        <field name="pac_id"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

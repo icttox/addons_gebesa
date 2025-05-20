@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="account_export_bank_file_wizard_view" model="ir.ui.view">
+            <field name="name">Export Bank File</field>
+            <field name="model">account.export.bank.file.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Export file">
+                    <gruop>
+                        <group>
+                            <field name="ref"/>
+                        </group>
+                    </gruop>
+                    <footer>
+                        <button class="oe_highlight" name="export_file" string="Export" type="object"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <act_window id="action_account_export_bank_file_wizard" key2="client_action_multi" name="Export Bank File" res_model="account.export.bank.file.wizard" src_model="account.move.line" target="new" view_mode="form"/>
+    </data>
+</odoo>

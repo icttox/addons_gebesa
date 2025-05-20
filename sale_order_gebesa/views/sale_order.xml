@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="sale.menu_sale_report" name="Reporting" parent="sale.sale_menu_root" sequence="5" groups="base.group_user"/>
+
+        <record model='ir.ui.view' id='view_order_form'>
+        	<field name='name'>gebesa.sale.order.form</field>
+        	<field name='model'>sale.order</field>
+        	<field name='inherit_id' ref="sale.view_order_form"/>
+        	<field name='arch' type='xml'>
+
+                <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
+                    <attribute name="attrs">{'invisible':['|', ('state', 'not in', ['draft']), ('approve','in',('not_approved','suggested'))]}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_confirm'][1]" position="attributes">
+                    <attribute name="attrs">{'invisible':['|', ('state', 'not in', ['sent']), ('approve','in',('not_approved','suggested'))]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='state']" position="before">
+                    <button name="calculate_profit_margin" string="Calcular margen" type="object" states="draft,sent" context="{'recalculate_line':True}"/>
+                    <button name="approve_action" string="Aprobar" states="draft,sent" type="object" attrs="{'invisible':['|', ('approve', 'in', ('approved','not_approved'))]}" groups="sale_order_gebesa.group_approve_button"/>
+                    <button name="suggested_action" states="draft,sent" type="object" 
+                        string="Suggest Approval"
+                        attrs="{'invisible':['|', ('approve', 'in', ('approved','suggested'))]}" groups="sale_order_gebesa.group_suggested_button"/>
+                </xpath>
+                <!--Para poner los campos de flete y instalacion ademas cliente order-->
+                <xpath expr="//notebook/page/group/group/field[@name='client_order_ref']" position="replace">
+                     
+                </xpath>
+                <xpath expr="//group/group/field[@name='payment_term_id']" position="after">
+                    <field name="client_order_ref"/>
+                    <field name="perc_freight" attrs="{'readonly': [('state', 'in', ('done','cancel'))]}"/>
+                    <field name="perc_installation" attrs="{'readonly': [('state', 'in', ('done','cancel'))]}"/>
+                    <field name="freight_expense"/>
+                </xpath> 
+
+
+                <xpath expr="//group/group/field[@name='partner_shipping_id']" position="after">
+                    <field name="notify_approval" widget="email" />
+                    <field name='approve' readonly='1'/>
+                </xpath>
+
+                <xpath expr="//group/group/field[@name='partner_shipping_id']" position="attributes">
+                    <attribute name="domain">[('type', '=', 'delivery')]</attribute>
+                </xpath>
+
+                <xpath expr="//group/group/field[@name='analytic_account_id']" position="attributes">
+                    <attribute name="domain">[('use_salesorder', '=', True)]</attribute>
+                    <attribute name="string">Asigned Warehouse</attribute>
+                </xpath>
+                <xpath expr="//group/group/field[@name='partner_id']" position="attributes">
+                    <attribute name="domain">[('customer', '=', True),('company_type', '=', 'company'),('type' ,'=', 'invoice'),('parent_id', '=', False)]</attribute>
+
+                </xpath>
+                <!--xpath expr="//notebook/page/field[@name='warehouse_id']" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </xpath-->
+        		<xpath expr="//group/group/field[@name='validity_date']" position="after">
+        			<field name="date_delivery" required="False" invisible="True"/>
+        			<field name="date_reception" required="True" />
+                    <field name="date_production"/>
+        		</xpath>
+                <xpath expr="//field[@name='order_line']/form/group" position="after">
+                    <group>
+                        <group>
+                            <field name="margin_justification" attrs="{'required': [('low_mu', '=', True)], 'invisible': [('display_type', '!=', False)]}"/>
+                            <field name="low_mu" attrs="{'invisible': [('display_type', '!=', False)]}"/>
+                        </group>
+                        <group>
+                            <field name='profit_margin' readonly="True" attrs="{'invisible': [('display_type', '!=', False)]}"/> 
+                            <field name='freight_amount' readonly="True" attrs="{'invisible': [('display_type', '!=', False)]}"/>
+                            <field name='net_sale' readonly="True" attrs="{'invisible': [('display_type', '!=', False)]}"/>
+                            <field name='purchase_price_geb' readonly="True" attrs="{'invisible': [('display_type', '!=', False)]}"/>
+                            <field name='standard_cost' readonly="True" attrs="{'invisible': [('display_type', '!=', False)]}"/>
+                            <field name='installation_amount' readonly="True" attrs="{'invisible': [('display_type', '!=', False)]}"/>
+                        </group>
+                    </group>
+                </xpath>
+                <!--xpath expr="//field[@name='notify_approval']" position="after">
+                    <field name='approve' readonly='1'/>
+                </xpath-->
+                <xpath expr="//notebook/page/field[@name='order_line']/form/div" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <!--xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="after">
+                    <field name="fulfilled"/>
+                    <field name="invoiced"/>
+                </xpath-->
+                <xpath expr="//notebook/page/field[@name='order_line']/tree" position="attributes">
+                    <attribute name="limit">5000</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']/tree/field[@name='product_uom_qty']" position="after">
+                    <field name='volume'/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']/tree/field[@name='tax_id']" position="after">
+                    <field name="net_sale" widget="monetary"/>
+                    <field name="freight_amount" widget="monetary"/>
+                    <field name="installation_amount" widget="monetary"/>
+                    <field name="standard_cost" widget="monetary"/>
+                    <field name="profit_margin"/>
+                    <field name="margin_justification"/>
+                    <field name="low_mu"/>
+                </xpath>
+                <xpath expr="//notebook/page/group/group[@name='technical']/field[@name='origin']" position="after">
+                    <field name="webiste_operator" widget="boolean_button"/>
+                </xpath>
+        		<xpath expr="//notebook" position="inside">
+        			<page string="Sales data">
+        				<group>
+        					<group>
+        						<field name='total_net_sale' widget="monetary" readonly="True"/>
+        					<!--	<field name='perc_freight'/> -->
+        						<field name='total_freight' widget="monetary" readonly="True"/>
+        					<!--	<field name='perc_installation'/> -->
+        						<field name='total_installation' widget="monetary" readonly="True"/>
+        					</group>
+        					<group>
+                                <field name='total_cost'/>
+        						<field name='profit_margin' readonly="True"/>
+        						<field name='not_be_billed' string="No Entregar"/>
+                                <field name='no_facturar'/>
+                                <field name='sale_picking_adm' groups="system_administrator.group_system_administrator_gebesa"/>
+        						<field name='manufacture'/>
+        						<!-- <field name='executive'/> -->
+        						<field name='respo_reple'/>
+        					</group>
+        				</group>
+        			</page>
+                    <page string="Production data" name="production_data">
+                        <group>
+                            <group>
+                                <field name='priority'/>
+                            </group>
+                            <group>
+                                <field name='complement_saleorder_id'/>
+                            </group>
+                        </group>
+                        <label for='manufacturing_observations'/>
+                        <field name='manufacturing_observations'/>
+                        <label for='replenishing_motif'/>
+                        <field name='replenishing_motif'/>
+                    </page>
+                    <page string="Credit and collection">
+                        <group>
+                            <group>
+                                <field name='credit_status'/>
+                            </group>
+                        </group>
+                        <label for='credit_note'/>
+                        <field name='credit_note'/>
+                        <group>
+                            <field name='date_suggested' readonly="True"/>
+                            <field name='date_approved' readonly="True"/>
+                        </group>
+                    </page>
+        		</xpath>
+        	</field>
+        </record>
+        <record model='ir.ui.view' id='view_sale_orders_warehouse'>
+            <field name='name'>view.sale.orders.warehouse</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref="sale_stock.view_order_form_inherit_sale_stock"/>
+            <field name='arch' type='xml'>
+                 <xpath expr="//group[@name='sale_shipping']/field[@name='warehouse_id']" position="replace">
+                    <field name="warehouse_id" groups="system_administrator.group_system_administrator_gebesa"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='view_order_form_with_carrier_geb'>
+            <field name='name'>delivery.sale.order.form.view.with_carrier.geb</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref="delivery.view_order_form_with_carrier"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='available_carrier_ids']" position="replace">
+                </xpath>
+                <xpath expr="//label[@for='carrier_id']" position="replace">
+                </xpath>
+                <xpath expr="//div[@name='carrier_selection']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='product_qty']" position="replace">
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sale_margin_sale_order_line_replace">
+            <field name="name">sale.order.line.margin.replace.view.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_margin.sale_margin_sale_order_line"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='purchase_price']" position="replace">
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sale_margin_sale_order_line_replace_form">
+            <field name="name">sale.order.line.tree.margin.replace.view.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_margin.sale_margin_sale_order_line_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='purchase_price']" position="replace">
+                    <field name="purchase_price_geb" groups="base.group_user"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sale.action_quotations" model="ir.actions.act_window">
+            <field name="domain">[('state','in',('draft','sent','cancel'))]</field>
+        </record>
+    </data>
+</odoo>

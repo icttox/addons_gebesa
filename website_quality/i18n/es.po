@@ -1,0 +1,225 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_quality
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-01 22:02+0000\n"
+"PO-Revision-Date: 2022-11-01 16:04-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: website_quality
+#: model:mail.template,body_html:website_quality.mail_template_alert_quality
+msgid ""
+"\n"
+"                <div>\n"
+"                    Dear ${object.user_id.name},<br/><br/>\n"
+"                    Thank you for getting in touch with us.<br/>\n"
+"                    We have received your quality alert of ${object.product_id.default_code}<br/>\n"
+"                    Thank you,<br/><br/>\n"
+"                    ${object.company_id.name}\n"
+"                </div>\n"
+"            "
+msgstr ""
+"\n"
+"<div>\n"
+"                    Estimado ${object.user_id.name},<br/><br/>\n"
+"                    Gracias por ponerse en contacto con nosotros.<br/>\n"
+"                    Hemos recibido su alerta de calidad de ${object.product_id.default_code}<br/>\n"
+"                    Gracias,<br/><br/>\n"
+"                    ${object.company_id.name}\n"
+"                </div>\n"
+"            "
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "<b>Quality Alert </b>"
+msgstr "<b>Alerta de calidad</b>"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Color"
+msgstr ""
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Date"
+msgstr "Fecha"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Flaw"
+msgstr "Defecto"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Horno"
+msgstr ""
+
+#. module: website_quality
+#: model:ir.model.fields,field_description:website_quality.field_quality_alert__image
+msgid "Image"
+msgstr "Imagen"
+
+#. module: website_quality
+#: model:website.menu,carousel_header_name:website_quality.menu_quality
+msgid "Latest"
+msgstr ""
+
+#. module: website_quality
+#: code:addons/website_quality/controllers/controllers.py:93
+#, python-format
+msgid "Order %s not found,\n"
+msgstr "Pedido %s no encontrado,\n"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Picture"
+msgstr "Imagen"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Product"
+msgstr "Producto"
+
+#. module: website_quality
+#: code:addons/website_quality/controllers/controllers.py:98
+#, python-format
+msgid "Product %s not found"
+msgstr "Producto %s no encontrado"
+
+#. module: website_quality
+#: model:ir.model,name:website_quality.model_mrp_production
+msgid "Production Order"
+msgstr ""
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Provision"
+msgstr "Disposición"
+
+#. module: website_quality
+#: model:ir.model.fields,field_description:website_quality.field_mrp_workcenter__website_published
+msgid "Publish on website"
+msgstr "Publicar en el sitio web"
+
+#. module: website_quality
+#: model:website.menu,name:website_quality.menu_quality
+msgid "Quality"
+msgstr "Calidad"
+
+#. module: website_quality
+#: model:ir.model,name:website_quality.model_quality_alert
+msgid "Quality Alert"
+msgstr "Alerta de Calidad"
+
+#. module: website_quality
+#: model:mail.template,subject:website_quality.mail_template_alert_quality
+msgid "Quality Alert of ${object.product_id.default_code}"
+msgstr "Alerta de calidad de ${object.product_id.default_code}"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Rejected Quantity"
+msgstr "Cant. Rechazada"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Repair"
+msgstr "Reparar"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.quality_nouser_ir_ui_view
+#: model_terms:ir.ui.view,arch_db:website_quality.quality_thanks_ir_ui_view
+#: model_terms:website.page,arch_db:website_quality.quality_nouser
+#: model_terms:website.page,arch_db:website_quality.quality_thanks
+msgid "Return"
+msgstr "Regreso"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Revised Quantity"
+msgstr "Cant. Revisada"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Sale Order"
+msgstr "Orden de venta"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Scrap"
+msgstr "Desecho"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Select Provision"
+msgstr "Seleccionar disposición"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Select Workcenter"
+msgstr "Seleccionar centro de producción"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Select flaw"
+msgstr "Seleccionar defecto"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Submit"
+msgstr "Envíar"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.quality_thanks_ir_ui_view
+#: model_terms:website.page,arch_db:website_quality.quality_thanks
+msgid "Thank You"
+msgstr "Gracias"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Title"
+msgstr "Título"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.quality_nouser_ir_ui_view
+#: model_terms:website.page,arch_db:website_quality.quality_nouser
+msgid "We're Sorry.!"
+msgstr "Lo lamentamos.!"
+
+#. module: website_quality
+#: model:ir.model,name:website_quality.model_mrp_workcenter
+msgid "Work Center"
+msgstr "Centro de producción"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.Quality
+msgid "Workcenter"
+msgstr "Centro de trabajo"
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.quality_nouser_ir_ui_view
+#: model_terms:website.page,arch_db:website_quality.quality_nouser
+msgid "You cannot send quality alert to us since you are not a registered employee."
+msgstr "No puede enviarnos alertas de calidad ya que no es un empleado registrado."
+
+#. module: website_quality
+#: model_terms:ir.ui.view,arch_db:website_quality.quality_thanks_ir_ui_view
+#: model_terms:website.page,arch_db:website_quality.quality_thanks
+msgid "Your quality alert has been submitted successfully."
+msgstr "Su alerta de calidad se ha enviado con éxito."

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="hr_contract_gebesa_form" model="ir.ui.view">
+            <field name="name">hr.contract.gebesa.form</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/group/field[@name='job_id']" position="after">
+                    <field name="credito_infonavit"/>
+                    <field name="credito_fonacot"/>
+                    <field name="company"/>
+                    <field name="witness_rh"/>
+                    <field name="witness"/>
+                </xpath>
+                <xpath expr="//notebook/page/group/group/field[@name='advantages']" position="before">
+                    <label for="salario_diario"/>
+                    <div class="o_row" name="wage">
+                        <field name="salario_diario" nolabel="1"/>
+                        <span>/ day</span>
+                    </div>
+                    <field name="premio_asistencia"/>
+                    <field name="premio_puntualidad"/>
+                    <field name="incentivo"/>
+                </xpath>
+                <xpath expr="//field[@name='trial_date_end']" position="before">
+                    <field name="date_trial_start"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

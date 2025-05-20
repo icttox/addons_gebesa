@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_year_closing_user,account.year.closing.user,model_account_year_closing,,1,0,0,0
+access_account_year_closing_manager,account.year.closing.manager,model_account_year_closing,,1,1,1,1
+access_account_account_value_user,account.account.value.user,model_account_account_value,,1,0,0,0
+access_account_account_value_manager,account.account.value.manager,model_account_account_value,,1,1,1,1

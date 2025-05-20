@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='invoice_form_button_gebesa_approve_dos'>
+            <field name='name'>invoice.button.refund.form.approve.dos</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//button[9]" position="after">
+                    <button name="button_invoice_gebesa" string="Approve" type="object" class="oe_highlight" groups="invoice_refund_validate.group_invoice_button_gebesa" attrs="{'invisible': [('boton_privilegio', '=', True)]}"/>
+                </xpath> 
+                <xpath expr="//notebook/page/group/group/field[@name='journal_id']" position="before">
+                    <field name='boton_privilegio' readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='account_invoice_sale_order_ref'>
+            <field name='name'>account.invoice.sale.order.ref</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='flete_gebesa.account_invoice_reference_travel'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='travel_id']" position="after">
+                    <field name='order_ref_id'/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

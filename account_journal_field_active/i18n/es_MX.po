@@ -1,0 +1,57 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_journal_field_active
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-28 23:00+0000\n"
+"PO-Revision-Date: 2024-08-28 17:05-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.3\n"
+
+#. module: account_journal_field_active
+#: model:res.groups,name:account_journal_field_active.group_accounting_restricted
+msgid "Accounting restricted"
+msgstr "Cuenta restringida"
+
+#. module: account_journal_field_active
+#: model:ir.model.fields,field_description:account_journal_field_active.field_account_bank_statement_import_journal_creation__active
+#: model:ir.model.fields,field_description:account_journal_field_active.field_account_journal__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: account_journal_field_active
+#: model:ir.model,name:account_journal_field_active.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: account_journal_field_active
+#: model:ir.model,name:account_journal_field_active.model_account_move
+msgid "Journal Entries"
+msgstr "Entradas de diario"
+
+#. module: account_journal_field_active
+#: model:ir.model.fields,help:account_journal_field_active.field_account_bank_statement_import_journal_creation__active
+#: model:ir.model.fields,help:account_journal_field_active.field_account_journal__active
+msgid "Set active to false to hide the Journal without removing it."
+msgstr "Establezca active a false para ocultar el diario sin eliminarlo."
+
+#. module: account_journal_field_active
+#: code:addons/account_journal_field_active/models/account_move.py:17
+#, python-format
+msgid "The Journal %s cannot be used."
+msgstr "El Diario % no puede ser utilizado."
+
+#. module: account_journal_field_active
+#: code:addons/account_journal_field_active/models/account_move.py:20
+#, python-format
+msgid "You do not have the permissions to validate this entry."
+msgstr "No tiene permisos para validar entradas."

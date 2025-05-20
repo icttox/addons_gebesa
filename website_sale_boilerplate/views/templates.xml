@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_frontend" inherit_id="website.assets_frontend">
+            <xpath expr="script[last()]" position="after">
+                <script type="text/javascript" src="/website_sale_boilerplate/static/src/js/website_sale_boilerplate.js"></script>
+            </xpath>
+            <xpath expr="link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss" href="/website_sale_boilerplate/static/src/css/website_sale_boilerplate.scss"/>
+            </xpath>
+        </template>
+        
+        <!--template id="footer_default_gebesa" inherit_id="website.footer_default" customize_show="True" name="Automatic Footer">
+            <xpath expr="//div[@class='col-md-4 col-lg-5 col-lg-offset-1']" position="replace">
+                <h4>
+                    <span t-field="res_company.name" />
+                    <small> - <a href="/page/website.aboutus">About us</a></small>
+                </h4>
+                <t t-call="website.language_selector"/>
+            </xpath>
+        </template-->
+
+        <!--template id="so_quotation_gebesa" inherit_id="website_quote.so_quotation" name="Product Quotation">
+            <xpath expr="//div[@class='bs-sidebar']" position="replace">
+                <hr class="mt0 mb0"/>
+                <t t-call="website_quote.navigation_menu"/>
+                <hr class="mt0 mb0"/>
+                <div t-if="order_valid" class="text-center">
+                    <input type="hidden" t-att-value="quotation.validity_date" id="validity_date"/>
+                    <div class="mt8" t-if="days_valid &gt; 0">
+                        <strong>This offer expires in</strong>
+                        <div class="day_counter mt8 mb16">
+                            <i class="fa fa-clock-o"></i>
+                            <t t-esc="days_valid"/>
+                            <t t-if="days_valid &gt; 1">
+                              days
+                            </t>
+                            <t t-if="days_valid &lt;= 1">
+                              day
+                            </t>
+                        </div>
+                    </div>
+                    <div class="text-center mb16" t-if="quotation.amount_undiscounted &gt; quotation.amount_untaxed">
+                        <p class="text-muted mb8">Your advantage:</p>
+                        <t t-if="quotation.amount_untaxed == quotation.amount_total">
+                            <strong t-field="quotation.amount_total"
+                              t-options='{"widget": "monetary", "currency_field": "quotation.pricelist_id.currency_id"}'/>
+                            <strong t-field="quotation.amount_undiscounted"
+                              t-options='{"widget": "monetary", "currency_field": "quotation.pricelist_id.currency_id"}'
+                              style="text-decoration: line-through"
+                              class="text-danger"/>
+                        </t>
+                        <t t-if="quotation.amount_untaxed != quotation.amount_total">
+                            <strong t-field="quotation.amount_untaxed"
+                              t-options='{"widget": "monetary", "currency_field": "quotation.pricelist_id.currency_id"}'/>
+                            <strong t-field="quotation.amount_undiscounted"
+                              t-options='{"widget": "monetary", "currency_field": "quotation.pricelist_id.currency_id"}'
+                              style="text-decoration: line-through"
+                              class="text-danger"/>
+                            <br />
+                            (<span t-field="quotation.amount_total"
+                              t-options='{"widget": "monetary", "currency_field": "quotation.pricelist_id.currency_id"}'/> Incl. tax)
+                        </t>
+                    </div>
+                </div>
+        	</xpath>
+
+	        <xpath expr="//div[@id='quotation_toolbar']/a[@data-target='#modaldecline']" position="replace">
+	        </xpath>
+
+	        <xpath expr="//div[@id='quotation_toolbar']/a[@data-target='#modalaccept']" position="replace">
+	        </xpath>
+		</template-->
+
+		
+
+		<!--template id="quotations_gebesa" inherit_id="website_portal_sale.quotations" name="Quotations">
+			<xpath expr="//h3[@class='page-header']" position="replace">
+				<h3 class="page-header">Tus Pedidos No Validados</h3>
+			</xpath>
+	    </template-->
+
+	    <!--template id="sale_orders_gebesa" inherit_id="website_portal_sale.sale_orders" name="Sales Orders">
+	    	<xpath expr="//h3[@class='page-header']" position="replace">
+	        	<h3 class="page-header">Tus Pedidos</h3>
+	        </xpath>
+	    </template-->
+
+	    <!--template id="invoices_gebesa" inherit_id="website_portal_sale.invoices" name="Invoices and Payments">
+	    	<xpath expr="//h3[@class='page-header']" position="replace">
+	        	<h3 class="page-header">Tus Facturas y Pagos</h3>
+	        </xpath>
+
+	        <xpath expr="//a[@class='btn btn-xs btn-primary']" position="replace">
+	        </xpath>
+	        
+	    </template-->
+        
+        <!--Quitar el Select en la segunda vista cliente -->
+        <!--template id="select_pricelist" inherit_id="website_sale.products" name="Products">
+            <xpath expr="//t/div/div/div/div[@class='row']" position="replace">
+                <div class="row" style="width: 100%;">
+                  <t t-call="website_sale.search"><t t-set="search_class">pagination form-inline</t></t>
+                  <t t-call="website.pager"/>
+                </div>
+            </xpath>
+        </template-->
+        <!--Quitar el Select en la segunda vista cliente -->
+        <!--template id="select_pricelist_product" inherit_id="website_sale.product" name="Product">
+            <xpath expr="//t/div/section/div/div[@class='col-sm-2 text-right']" position="replace">
+                <div class="col-sm-2 text-right">
+                </div>
+            </xpath>
+        </template-->
+        <!--Quitar delivery order -->
+        <!--template id="shipping_address_product" inherit_id="website_sale_stock.portal_order_page_shipping" name="Orders Shipping Followup">
+            <xpath expr="//div[@id='shipping_address']" position="replace">
+                
+            </xpath>
+        </template-->
+        <!--Readonly in view 'your address' -->
+        <!--template id="checkout_gebesa" inherit_id="website_sale.checkout">
+            <xpath expr="//t/div[@id='wrap']/div/form/div/div[@class='col-md-8 oe_cart']/div[@class='row']/div[2]/input[@name='name']" position="attributes">
+                <attribute name="readonly">True</attribute>   
+            </xpath>
+            <xpath expr="//t/div[@id='wrap']/div/form/div/div[@class='col-md-8 oe_cart']/div[@class='row']/div[4]/input[@name='street']" position="attributes"> 
+                <attribute name="readonly">True</attribute>  
+            </xpath>
+            <xpath expr="//t/div[@id='wrap']/div/form/div/div[@class='col-md-8 oe_cart']/div[@class='row']/div[5]/input[@name='vat']" position="attributes"> 
+                <attribute name="readonly">True</attribute>  
+            </xpath-->
+            <!--Readonly in view low part street -->
+            <!--xpath expr="//t/div[@id='wrap']/div/form/div/div[@class='col-md-8 oe_cart']/div[@class='row']/div[8]/input[@name='street2']" position="attributes"> 
+                <attribute name="readonly">True</attribute>  
+            </xpath>
+            <xpath expr="//t/div[@id='wrap']/div/form/div/div[@class='col-md-8 oe_cart']/div[@class='row']/div[10]/input[@name='city']" position="attributes"> 
+                <attribute name="readonly">True</attribute>  
+            </xpath>
+            <xpath expr="//t/div[@id='wrap']/div/form/div/div[@class='col-md-8 oe_cart']/div[@class='row']/div[11]/input[@name='zip']" position="attributes"> 
+                <attribute name="readonly">True</attribute>  
+            </xpath>
+
+            <xpath expr="//t/div[@id='wrap']/div/form/div/div[@class='col-md-8 oe_cart']/div[@class='row']/div[12]/select[@name='country_id']" position="attributes">  
+                <attribute name="readonly">True</attribute> 
+            </xpath>
+            <xpath expr="//t/div[@id='wrap']/div/form/div/div[@class='col-md-8 oe_cart']/div[@class='row']/div[13]/select[@name='state_id']" position="attributes">  
+                <attribute name="disabled">disabled</attribute> 
+            </xpath>
+            
+            <xpath expr="//t/div[@id='wrap']/div/form/div/div[@class='col-md-8 oe_cart']/div[@class='row']/div[15]/select[@name='shipping_id']/option[2]" position="replace"> 
+                 
+            </xpath>
+        </template--> 
+        <!--Cambiar nombre en botones, boton cart-->
+        <!--template id="translate_process_checkout" inherit_id="website_sale.cart" name="Shopping Cart">
+            <xpath expr="//t/div[@id='wrap']/div/div[@class='row']/div/div/div/a[@class='btn btn-primary pull-right mb32 mr8']/span[@class='hidden-xs']" position="replace">
+                <span class="hidden-xs">Procesar Pedido</span>
+            </xpath>
+        </template-->
+        <!--View contact details-->
+        <!--template id="view_contact_details" inherit_id="website_portal.details">
+            <xpath expr="//t/div/div[@class='container']/form/div[@class='row o_website_portal_details']/div/div/div[2]/input[@name='name']" position="attributes"> 
+                <attribute name="readonly">True</attribute>
+            </xpath>
+            <xpath expr="//t/div/div[@class='container']/form/div[@class='row o_website_portal_details']/div/div/div[3]/input[@name='email']" position="attributes"> 
+                <attribute name="readonly">True</attribute>
+            </xpath>
+            <xpath expr="//t/div/div[@class='container']/form/div[@class='row o_website_portal_details']/div/div/div[4]/input[@name='phone']" position="attributes"> 
+                <attribute name="readonly">True</attribute>
+            </xpath>
+            <xpath expr="//t/div/div[@class='container']/form/div[@class='row o_website_portal_details']/div/div/div[6]/input[@name='street']" position="attributes"> 
+                <attribute name="readonly">True</attribute>
+            </xpath>
+            <xpath expr="//t/div/div[@class='container']/form/div[@class='row o_website_portal_details']/div/div/div[7]/input[@name='vat']" position="attributes"> 
+                <attribute name="readonly">True</attribute>
+            </xpath>
+            <xpath expr="//t/div/div[@class='container']/form/div[@class='row o_website_portal_details']/div/div/div[9]/input[@name='street2']" position="attributes"> 
+                <attribute name="readonly">True</attribute>
+            </xpath>
+            <xpath expr="//t/div/div[@class='container']/form/div[@class='row o_website_portal_details']/div/div/div[10]/input[@name='city']" position="attributes"> 
+                <attribute name="readonly">True</attribute>
+            </xpath>
+            <xpath expr="//t/div/div[@class='container']/form/div[@class='row o_website_portal_details']/div/div/div[11]/input[@name='zipcode']" position="attributes"> 
+                <attribute name="readonly">True</attribute>
+            </xpath>
+            <xpath expr="//t/div/div[@class='container']/form/div[@class='row o_website_portal_details']/div/div/div[12]" position="replace"> 
+                  
+            </xpath>
+            <xpath expr="//t/div/div[@class='container']/form/div[@class='row o_website_portal_details']/div/div/div[12]" position="replace"> 
+                  
+            </xpath-->
+            <!--boton confirm-->
+            <!--xpath expr="//t/div/div[@class='container']/form/div[@class='row o_website_portal_details']/div/div[2]" position="replace"> 
+                  
+            </xpath>
+        </template-->
+        <!--Poner Clave tercera pantalla-->
+        <!--template id="code_cart_lines" inherit_id="website_sale.cart_lines" name="Shopping Cart">
+            <xpath expr="//table/tbody/t/tr/td[3]/div/a/strong" position="replace">
+                <strong t-if='line.product_id.individual_name'>
+                        <span/>[<span t-esc="line.product_id.default_code" class="oe_inline"/>] <span t-esc="line.product_id.individual_name" class="oe_inline"/>
+                </strong>
+                <strong t-if='not line.product_id.individual_name'>
+                        <span/>[<span t-esc="line.product_id.default_code" class="oe_inline"/>] <span t-esc="line.product_id.name_template" class="oe_inline"/>
+                </strong>
+            </xpath>
+        </template-->
+         <!--Quitar el YOur issues-->
+        <!--template id="project_issue_gebesa" inherit_id="website_project_issue.portal_project_issue" name="Portal Project Issues">
+            <xpath expr="//h3" position="replace">
+                 
+            </xpath>
+            <xpath expr="//t[@t-if='not issues']" position="replace">
+                 
+            </xpath>
+        </template-->
+
+        <template id="checkout" inherit_id="website_sale.checkout">
+            <xpath expr="//t/div/div/div/div/t/div/div/div/div/form[@action='/shop/address']/a" position="replace">
+                <br/>
+            </xpath>
+        </template>
+
+        <!-- poner Orden de compra -->
+        <template id="extra_info_gebesa" inherit_id="website_sale.extra_info" name="Checkout Extra Info Orden Compra">
+            <xpath expr="//t/div/div/div/div/div/div/form[@class='s_website_form container-fluid']" position="replace">
+                <form action="/website_form/" method="post" class="s_website_form container-fluid" enctype="multipart/form-data" data-force_action="shop.sale.order" data-model_name="sale.order" data-success_page="/shop/payment">
+                    <div class="form-group row form-field o_website_form_custom">
+                        <div class="col-lg-3 col-md-4 text-md-right">
+                            <label class="col-form-label" for="client_order_ref"><span class='text-danger'>* </span>Your Reference</label>
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            <input type="text" class="form-control o_website_form_input" name="client_order_ref" required="True" placeholder="Field required"/>
+                        </div>
+                    </div>
+                    <div class="form-group row form-field o_website_form_custom">
+                        <div class="col-lg-3 col-md-4 text-md-right">
+                            <label class="col-form-label" for="hubspot_id"><span class='text-danger'>* </span>ID de Hubspot</label>
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            <input type="text" class="form-control o_website_form_input" name="hubspot_id" required="True" placeholder="Field required"/>
+                        </div>
+                    </div>
+                    <div class="form-group row form-field o_website_form_custom">
+                        <div class="col-lg-3 col-md-4 text-md-right">
+                            <label class="col-form-label" for="Give us your feedback">Give us your feedback</label>
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            <textarea class="form-control o_website_form_input" rows="8" name="Give us your feedback" />
+                        </div>
+                    </div>
+                    <div class="form-group row form-field o_website_form_custom">
+                        <div class="col-lg-3 col-md-4 text-md-right">
+                            <label class="col-form-label" for="a_document">A document to provide</label>
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            <input type="file" class="form-control o_website_form_input" name="a_document" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-3 col-md-4">
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            <a role="button" href="/shop/checkout" class="btn btn-secondary mb32 float-left"><span class="fa fa-chevron-left" /> Previous</a>
+                            <a role="button" class="btn btn-primary float-right mb32 o_website_form_send" href="/shop/confirm_order">Next <span class="fa fa-chevron-right" /></a>
+                        </div>
+                    </div>
+                </form>
+
+            </xpath>
+        </template>
+
+        <template id="invisible_delivery_orders" inherit_id="sale_stock.sale_order_portal_content_inherit_sale_stock" name="Delivery Orders invisible">
+            <xpath expr="//t[@t-if='sale_order.picking_ids']" position="replace"> 
+            </xpath>
+        </template>
+
+        <template id="invisible_task_project" inherit_id="project.portal_my_home" name="Task/Project invisible">
+            <xpath expr="//t[@t-if='project_count']" position="replace"> 
+            </xpath>
+            <xpath expr="//t[@t-if='task_count']" position="replace"> 
+            </xpath>
+        </template>
+
+        <template id="404_producto">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <t t-raw="0"/>
+                    <div class="oe_structure oe_empty">
+                        <div class="container">
+                            <h1 class="mt32">This Combination of color is temporary unavailable!</h1>
+                            <p>
+                                Please contact your executive.
+                            </p>
+                            <ul>
+                                <li><a href="/shop">Return the Shop</a></li>
+                                <!--<li><a href="/page/website.contactus/">Contact Us</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <t t-if="request.debug">
+                        <t t-call="website.http_error_debug"/>
+                    </t>
+                </div>
+            </t>
+        </template>
+
+        <template id="new_message_for_variants" inherit_id="website_sale.product">
+
+            <xpath expr="//div[hasclass('js_product')]/p" position="replace">
+                <p t-if="len(product.product_variant_ids) &gt; 1" class="css_not_available_msg bg-danger" style="padding: 15px;">
+                    <t t-if="product.env['ir.config_parameter'].sudo().get_param('stock.website_variants_visibility_message')"  t-raw="product.env['ir.config_parameter'].sudo().get_param('stock.website_variants_visibility_message')"/>
+                    <t t-else="">This variant cannot be purchased from the website. Please contact us for further information.</t>
+                </p>
+            </xpath>
+
+        </template>
+    </data>
+</odoo>

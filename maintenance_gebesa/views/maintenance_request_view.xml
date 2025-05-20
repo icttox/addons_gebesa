@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='maintenance_request_view'>
+            <field name='name'>maintenance.request.view</field>
+            <field name='model'>maintenance.request</field>
+            <field name='inherit_id' ref='maintenance.hr_equipment_request_view_form'/>
+            <field name='arch' type='xml'>
+                <data>
+                    <xpath expr="//field[@name='priority']" position="before">
+                        <field name='stopped_time' widget="float_time"/>
+                        <field name='stopped_cost'/>
+                    </xpath>
+                    <xpath expr="//form/sheet/field[@name='description']" position="after">
+                        <notebook>
+                            <page string="Asistio">
+                                <group string="Atendio">
+                                    <field name="attended_ids" widget="many2many"/>
+                                  <group>
+                                    <field name="complexity" widget="radio"/>
+                                  </group>
+                                  <group>
+                                    <field name="accordance" widget="radio"/>
+                                  </group>
+                                </group>
+                                <group>
+                                    <field name="memo" string="Memo" widget="html"/>
+                                </group>
+                            </page>
+                            <page string="Encuesta">
+                                <group string="Encuesta de satisfacción">
+                                    <group>
+                                        <field name="funcionality_test" widget="boolean_toggle"/>
+                                        <field name="root_problem" widget="boolean_toggle"/>
+                                    </group>
+                                    <group>
+                                        <field name="maintenance_attention" widget="radio"/>
+                                        <label for="delivery_time" modifiers="{}"/>
+                                        <div modifiers="{}">
+                                            <field name="delivery_time" widget="float_time" class="oe_inline" modifiers="{}"/>
+                                            <span class="ml8" modifiers="{}">
+                                                horas
+                                            </span>
+                                        </div>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='maintenance_request_tree_inherit'>
+            <field name='name'>maintenance.request.tree.inherit</field>
+            <field name='model'>maintenance.request</field>
+            <field name='inherit_id' ref='maintenance.hr_equipment_request_view_tree'/>
+            <field name='arch' type='xml'>
+                <data>
+                    <xpath expr="//field[@name='request_date']" position="replace"/>
+                    <xpath expr="//field[@name='user_id']" position="before">
+                        <field name='equipment_id'/>
+                        <field name='description'/>
+                        <field name='technical_description'/>
+                    </xpath>
+                    <xpath expr="//field[@name='category_id']" position="before">
+                        <field name='maintenance_type'/>
+                        <field name='location_physical'/>
+                        <field name='request_date'/>
+                        <field name='close_date'/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>

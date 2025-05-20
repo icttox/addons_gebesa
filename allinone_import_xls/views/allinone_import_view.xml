@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_allinone_import_tree" model="ir.ui.view">
+        <field name="name">allinone Import</field>
+        <field name="model">allinone.import</field>
+        <field name="arch" type="xml">
+            <tree string="allinone Import">
+                <field name="name" />
+                <field name="note" />
+                <field name="supplier_id"/>
+                <field name="picking_type_id"/>
+                <field name="purchase_id"/>
+                <field name="purchase_ids"/>
+                <field name="customer_id"/>
+                <field name="sales_warehouse_id"/>
+                <field name="sale_id"/>
+                <field name="sale_ids"/>
+                <field name="location_id"/>
+                <field name="location_dest_id"/>
+                <field name="picking_id"/>
+                <field name="reco_location_id"/>
+                <field name="reco_id"/>
+                <field name="allinone_lines" />
+                <field name="import_date" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_allinone_import_form" model="ir.ui.view">
+        <field name="name">allinone Import</field>
+        <field name="model">allinone.import</field>
+        <field name="arch" type="xml">
+            <form string="allinone Import">
+                <header>
+                    <button name="action_create_po"
+                        string="Create Purchase Order" class="oe_highlight" type="object"
+                        states='in_purchase' />
+
+                    <button name="action_create_so" string="Create Sales Order"
+                        class="oe_highlight" type="object" states='in_sales' />
+
+                    <button name="action_create_int_transfer"
+                        string="Create Transfer Picking" class="oe_highlight"
+                        type="object" states='in_internal_transfer' />
+
+                    <button name="action_create_reco"
+                        string="Create Reconcilation Order" class="oe_highlight"
+                        type="object" states='in_reco' />
+
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft" readonly="1" />
+                </header>
+                <sheet>
+                    <group attrs="{'invisible':[('confirm_process','=',False)]}">
+                        <h1>
+                            <field name="name" class="oe_inline" readonly="1" />
+                        </h1>
+                    </group>
+                    <group attrs="{'invisible': [('state','!=','purchased')]}">
+                        <div style="text-align: center;font-family:Times New Roman;">
+                            <h1>
+                                Purchase Quotations
+                                <field name="purchase_ids" class="oe_inline"
+                                    widget="many2many_tags" />
+                                Generated
+                            </h1>
+                        </div>
+                    </group>
+
+
+                    <group attrs="{'invisible': [('state','!=','sold')]}">
+                        <div style="text-align: center;font-family:Times New Roman;">
+                            <h1>
+                                Sales Quotations
+                                <field name="sale_ids" class="oe_inline"
+                                    widget="many2many_tags" />
+                                Generated
+                            </h1>
+                        </div>
+                    </group>
+
+                    <group
+                        attrs="{'invisible': [('state','!=','internal_transfered')]}">
+                        <div style="text-align: center;font-family:Times New Roman;">
+                            <h1>
+                                Internal Picking
+                                <field name="picking_id" class="oe_inline" />
+                                Generated
+                            </h1>
+                        </div>
+                    </group>
+
+                    <group attrs="{'invisible': [('state','!=','reconciled')]}">
+                        <div style="text-align: center;font-family:Times New Roman;">
+                            <h1>
+                                Reconciliation Order
+                                <field name="reco_id" class="oe_inline" />
+                                Generated
+                            </h1>
+                        </div>
+                    </group>
+
+                    <group invisible="1">
+                        <field name="purchase" />
+                        <field name="sales" />
+                        <field name="transfer" />
+                        <field name="reco" />
+                        <field name="confirm_process" />
+                        <field name="process_completed" />
+                    </group>
+
+                    <!-- First Page Redirection -->
+                    <group colspan="4"
+                        attrs="{'invisible':[('confirm_process','=',True)]}">
+                        <field name="base_on" required="1" colspan="2" />
+                    </group>
+                    <group attrs="{'invisible':[('confirm_process','=',True)]}"
+                        style="text-align:center;font-family:Times New Roman;">
+                        <group string="Want To Generate Purchase Entries?">
+                            <button name="action_purchase" states="draft"
+                                string="Purchase" type="object" icon="fa-shopping-cart" />
+                        </group>
+
+                        <group string="Want To Generate Sales Entries?">
+                            <button name="action_sales" states="draft" string="Sales"
+                                type="object" icon="fa-usd" />
+                        </group>
+                        <group string="Want To Generate Transfers Entries?">
+                            <button name="action_transfer" states="draft"
+                                type="object" string="Transfer" icon="fa-sitemap" />
+                        </group>
+                        <group string="Want To Generate Reconcile Entries?">
+                            <button name="action_reco" states="draft" string="Reco"
+                                type="object" icon="fa-spinner" />
+                        </group>
+                    </group>
+
+                    <!-- Second Page Headings -->
+                    <div
+                        attrs="{'invisible':['|',('purchase','=',False),('state','=','purchased')]}"
+                        style="text-align: center;font-family:Times New Roman;text-decoration: underline;">
+                        <span>
+                            <div style="font-size:25px;">Purchase Entries</div>
+                        </span>
+                    </div>
+                    <div
+                        attrs="{'invisible':['|',('sales','=',False),('state','=','sold')]}"
+                        style="text-align: center;font-family:Times New Roman;text-decoration: underline;">
+                        <span>
+                            <div style="font-size:25px;">Sales Entries</div>
+                        </span>
+                    </div>
+                    <div
+                        attrs="{'invisible':['|',('transfer','=',False),('state','=','internal_transfered')]}"
+                        style="text-align: center;font-family:Times New Roman;text-decoration: underline;">
+                        <span>
+                            <div style="font-size:25px;">Internal Transfer Entries</div>
+                        </span>
+                    </div>
+                    <div
+                        attrs="{'invisible':['|',('reco','=',False),('state','=','reconciled')]}"
+                        style="text-align: center;font-family:Times New Roman;text-decoration: underline;">
+                        <span>
+                            <div style="font-size:25px;">Reconciliation Entries</div>
+                        </span>
+                    </div>
+
+                    <!-- Second Page Values -->
+                    <group colspan="4"
+                        attrs="{'invisible':[('confirm_process','=',False)]}">
+                        <group>
+                            <field name="quotation_csv" filename="f_name"
+                                attrs="{'required':[('confirm_process','=',True)],'readonly': [('process_completed', '=', True)]}"
+                                string="Select File(.xls)" />
+                            <field name="f_name" invisible="1" />
+                        </group>
+                        <group>
+                            <field name="import_date" string="Date" />
+                        </group>
+                    </group>
+
+                    <group colspan="4" string="Purchase Detail"
+                        attrs="{'invisible':[('purchase','=',False)]}">
+                        <group>
+                            <field name="supplier_id"
+                                attrs="{'required': [('purchase', '=', True)],'readonly': [('process_completed', '=', True)]}"
+                                options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+                            <field name="picking_type_id"
+                                attrs="{'required': [('purchase', '=', True)],'readonly': [('process_completed', '=', True)]}"
+                                widget="selection" />
+                            <field name="purchase_currency_id"
+                                attrs="{'required': [('purchase', '=', True)],'readonly': [('process_completed', '=', True)]}"
+                                widget="selection" />
+                        </group>
+                        <!-- group> <field name="purchase_pricelist_id" readonly="1" /> </group -->
+                    </group>
+
+                    <group colspan="4" string="Sales Detail"
+                        attrs="{'invisible':[('sales','=',False)]}">
+                        <group>
+                            <field name="customer_id"
+                                attrs="{'required': [('sales', '=', True)],'readonly': [('process_completed', '=', True)]}"
+                                options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+                            <field name="sales_warehouse_id"
+                                attrs="{'required': [('sales', '=', True)],'readonly': [('process_completed', '=', True)]}"
+                                widget="selection" />
+                        </group>
+                        <group>
+                            <field name="sales_pricelist_id" readonly="1" />
+                            <field name="sales_currency_id" invisible="1" />
+                        </group>
+                    </group>
+
+                    <group colspan="4" string="Transfer Locations"
+                        attrs="{'invisible':[('transfer','=',False)]}">
+                        <group>
+                            <field name="location_id" widget="selection"
+                                domain="[('usage', 'in', ('internal','inventory'))]"
+                                attrs="{'required': [('transfer', '=', True)],'readonly': [('process_completed', '=', True)]}"
+                                options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+                        </group>
+                        <group>
+                            <field name="location_dest_id" widget="selection"
+                                domain="[('usage', 'in', ('internal','inventory'))]"
+                                attrs="{'required': [('transfer', '=', True)],'readonly': [('process_completed', '=', True)]}"
+                                options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+                        </group>
+                    </group>
+
+                    <group colspan="4" string="Reconcile Detail"
+                        attrs="{'invisible':[('reco','=',False)]}">
+                        <group>
+                            <field name="reco_location_id" widget="selection"
+                                domain="[('usage', '=', 'internal')]"
+                                attrs="{'required': [('reco', '=', True)],'readonly': [('process_completed', '=', True)]}"
+                                options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+                        </group>
+                        <group />
+                    </group>
+
+
+                    <button name="compare_lines" string="Compare Lines"
+                        class="oe_highlight" type="object"
+                        attrs="{'invisible':['|', ('confirm_process','=',False),('process_completed','=',True)]}" />
+
+                    <div class="oe_right oe_button_box" style="width: 300px;"
+                        name="buttons"
+                        attrs="{'invisible':['|', '|',('confirm_process','=',False), ('allinone_lines','=',[]),('process_completed','=',True)]}">
+                        <button string="Group By Product's" name="group_products"
+                            type="object" />
+                    </div>
+
+                    <group colspan="4"
+                        attrs="{'invisible':[('confirm_process','=',False)]}">
+                        <field name="allinone_lines" nolabel="1">
+                            <tree string="allinone Lines" editable="bottom"
+                                colors="red:valid==False" create="false">
+                                <field name="valid" readonly="1" />
+                                <field name="barcode" readonly="1" />
+                                <field name="product_id" readonly="1" />
+                                <field name="product_qty" />
+                                <field name="price_unit" />
+                                <field name="taxes_id" widget="many2many_tags"
+                                    readonly="1" />
+                                <field name="price_subtotal" />
+                                <field name="date_planned" readonly="1" />
+                                <field name="ref" readonly="1" />
+                            </tree>
+                        </field>
+                    </group>
+
+                    <!-- Purchase Total Amounts -->
+                    <group class="oe_subtotal_footer oe_right"
+                        attrs="{'invisible':[('purchase','=',False)]}">
+                        <field name="pur_amount_untaxed" widget="monetary"
+                            options="{'currency_field': 'purchase_currency_id'}" />
+                        <field name="pur_amount_tax" widget="monetary"
+                            options="{'currency_field': 'purchase_currency_id'}" />
+                        <div class="oe_subtotal_footer_separator 
+                            oe_inline">
+                            <div>Total</div>
+                            <button name="button_dummy" states="in_purchase"
+                                string="(update)" type="object" class="oe_edit_only oe_link" />
+                        </div>
+
+                        <field name="pur_amount_total" nolabel="1"
+                            class="oe_subtotal_footer_separator" widget="monetary"
+                            options="{'currency_field': 'purchase_currency_id'}" />
+                    </group>
+
+                    <!-- Sales Total Amounts -->
+                    <group class="oe_subtotal_footer oe_right"
+                        attrs="{'invisible':[('sales','=',False)]}">
+                        <field name="sales_amount_untaxed" widget="monetary"
+                            options="{'currency_field': 'sales_currency_id'}" />
+                        <field name="sales_amount_tax" widget="monetary"
+                            options="{'currency_field': 'sales_currency_id'}" />
+                        <div
+                            class="oe_subtotal_footer_separator 
+                            oe_inline">
+                            <div>Total</div>
+                        </div>
+                        <field name="sales_amount_total" nolabel="1"
+                            class="oe_subtotal_footer_separator" widget="monetary"
+                            options="{'currency_field': 'sales_currency_id'}" />
+                    </group>
+
+                    <group colspan="4"
+                        attrs="{'invisible':[('confirm_process','=',False)],'readonly': [('process_completed', '=', True)]}">
+                        <field name="note" class="oe_inline"
+                            placeholder="Terms and conditions..." nolabel="1" />
+                    </group>
+                    <group colspan="4"
+                        attrs="{'invisible':[('confirm_process','=',False)]}">
+                        <field name="notimport_xls" filename="fname_notimport" />
+                        <field name="fname_notimport" invisible="1" />
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_allinone_import"
+        model="ir.actions.act_window">
+        <field name="name">AllinOne Import</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">allinone.import</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_allinone_mangment" name="AllinOne Import"
+        parent="purchase.menu_purchase_root" sequence="2"
+        groups="group_allinone_import" />
+
+    <menuitem name="Import Catelog" id="menu_allinone_import_id"
+        action="action_allinone_import" parent="menu_allinone_mangment"
+        sequence="1" groups="group_allinone_import" />
+</odoo>

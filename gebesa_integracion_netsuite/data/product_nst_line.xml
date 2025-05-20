@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="nst_line_01" model="product.nst.line">
+            <field name="name">Almacenaje</field> 
+            <field name="nstid">1</field>
+            <field name="product_nstplant_id" ref="nst_plant_01"/>
+        </record>
+        <record id="nst_line_02" model="product.nst.line">
+            <field name="name">Global</field> 
+            <field name="nstid">2</field>
+            <field name="product_nstplant_id" ref="nst_plant_01"/>
+        </record>
+        <record id="nst_line_03" model="product.nst.line">
+            <field name="name">Concord</field> 
+            <field name="nstid">3</field>
+            <field name="product_nstplant_id" ref="nst_plant_01"/>
+        </record>
+        <record id="nst_line_05" model="product.nst.line">
+            <field name="name">Contemporanea</field> 
+            <field name="nstid">5</field>
+            <field name="product_nstplant_id" ref="nst_plant_04"/>
+        </record>
+        <record id="nst_line_06" model="product.nst.line">
+            <field name="name">Senior</field> 
+            <field name="nstid">6</field>
+            <field name="product_nstplant_id" ref="nst_plant_04"/>
+        </record>
+        <record id="nst_line_07" model="product.nst.line">
+            <field name="name">Basic</field> 
+            <field name="nstid">7</field>
+            <field name="product_nstplant_id" ref="nst_plant_03"/>
+        </record>
+        <record id="nst_line_08" model="product.nst.line">
+            <field name="name">Ergos</field> 
+            <field name="nstid">8</field>
+            <field name="product_nstplant_id" ref="nst_plant_03"/>
+        </record>
+        <record id="nst_line_09" model="product.nst.line">
+            <field name="name">G-Connect</field> 
+            <field name="nstid">9</field>
+            <field name="product_nstplant_id" ref="nst_plant_03"/>
+        </record>
+        <record id="nst_line_10" model="product.nst.line">
+            <field name="name">Millenium</field> 
+            <field name="nstid">10</field>
+            <field name="product_nstplant_id" ref="nst_plant_03"/>
+        </record>
+        <record id="nst_line_11" model="product.nst.line">
+            <field name="name">Req</field> 
+            <field name="nstid">11</field>
+            <field name="product_nstplant_id" ref="nst_plant_03"/>
+        </record>
+        <record id="nst_line_12" model="product.nst.line">
+            <field name="name">Spazio</field> 
+            <field name="nstid">12</field>
+            <field name="product_nstplant_id" ref="nst_plant_03"/>
+        </record>
+        <record id="nst_line_13" model="product.nst.line">
+            <field name="name">Stylus</field> 
+            <field name="nstid">13</field>
+            <field name="product_nstplant_id" ref="nst_plant_03"/>
+        </record>
+        <record id="nst_line_14" model="product.nst.line">
+            <field name="name">Urban</field> 
+            <field name="nstid">14</field>
+            <field name="product_nstplant_id" ref="nst_plant_03"/>
+        </record>
+        <record id="nst_line_15" model="product.nst.line">
+            <field name="name">Volt</field> 
+            <field name="nstid">15</field>
+            <field name="product_nstplant_id" ref="nst_plant_03"/>
+        </record>
+        <record id="nst_line_16" model="product.nst.line">
+            <field name="name">Ellite</field> 
+            <field name="nstid">16</field>
+            <field name="product_nstplant_id" ref="nst_plant_05"/>
+        </record>
+        <record id="nst_line_17" model="product.nst.line">
+            <field name="name">Optimus</field> 
+            <field name="nstid">17</field>
+            <field name="product_nstplant_id" ref="nst_plant_05"/>
+        </record>
+        <record id="nst_line_18" model="product.nst.line">
+            <field name="name">Synergy</field> 
+            <field name="nstid">18</field>
+            <field name="product_nstplant_id" ref="nst_plant_05"/>
+        </record>
+        <record id="nst_line_19" model="product.nst.line">
+            <field name="name">Cyber</field> 
+            <field name="nstid">19</field>
+            <field name="product_nstplant_id" ref="nst_plant_01"/>
+        </record>
+        <record id="nst_line_20" model="product.nst.line">
+            <field name="name">GB Sistemas</field> 
+            <field name="nstid">20</field>
+            <field name="product_nstplant_id" ref="nst_plant_01"/>
+        </record>
+        <record id="nst_line_21" model="product.nst.line">
+            <field name="name">Global Plus</field> 
+            <field name="nstid">21</field>
+            <field name="product_nstplant_id" ref="nst_plant_01"/>
+        </record>
+        <record id="nst_line_22" model="product.nst.line">
+            <field name="name">Nova</field> 
+            <field name="nstid">22</field>
+            <field name="product_nstplant_id" ref="nst_plant_01"/>
+        </record>
+        <record id="nst_line_35" model="product.nst.line">
+            <field name="name">Especial</field> 
+            <field name="nstid">35</field>
+            <field name="product_nstplant_id" ref="nst_plant_01"/>
+        </record>
+        <record id="nst_line_36" model="product.nst.line">
+            <field name="name">Especial-Lam</field> 
+            <field name="nstid">36</field>
+            <field name="product_nstplant_id" ref="nst_plant_03"/>
+        </record>
+        <record id="nst_line_37" model="product.nst.line">
+            <field name="name">Especial-Chapa</field> 
+            <field name="nstid">37</field>
+            <field name="product_nstplant_id" ref="nst_plant_04"/>
+        </record>
+        <record id="nst_line_40" model="product.nst.line">
+            <field name="name">Especial-Sille</field> 
+            <field name="nstid">40</field>
+            <field name="product_nstplant_id" ref="nst_plant_02"/>
+        </record>
+        <record id="nst_line_41" model="product.nst.line">
+            <field name="name">Especial-Mamp</field> 
+            <field name="nstid">41</field>
+            <field name="product_nstplant_id" ref="nst_plant_05"/>
+        </record>
+        <record id="nst_line_43" model="product.nst.line">
+            <field name="name">Kenza</field> 
+            <field name="nstid">43</field>
+            <field name="product_nstplant_id" ref="nst_plant_03"/>
+        </record>
+        <record id="nst_line_49" model="product.nst.line">
+            <field name="name">Bento</field> 
+            <field name="nstid">49</field>
+            <field name="product_nstplant_id" ref="nst_plant_04"/>
+        </record>
+        <record id="nst_line_53" model="product.nst.line">
+            <field name="name">Filo</field> 
+            <field name="nstid">53</field>
+            <field name="product_nstplant_id" ref="nst_plant_04"/>
+        </record>
+    </data>
+</odoo>

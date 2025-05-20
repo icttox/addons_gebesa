@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_move_line_tree'>
+        	<field name='name'>view.move.line.tree'</field>
+        	<field name='model'>stock.move.line</field>
+        	<field name='inherit_id' ref='stock.view_move_line_tree'/>
+        	<field name='arch' type='xml'>
+        		<xpath expr="//field[@name='reference']" position="after">
+                    <field name='sale_id'/>
+                    <field name='group_id'/>
+                    <field name="origin"/>
+                    <field name="warehouse_id"/>
+                    <field name='product_qty'/>
+                </xpath>
+        	</field>
+        </record>
+    </data>
+</odoo>

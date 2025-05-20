@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='purchase_not_necessary_form_view'>
+            <field name='name'>purchase.not.necessary.form.view</field>
+            <field name='model'>purchase.order</field>
+            <field name='inherit_id' ref='purchase.purchase_order_form'/>
+            <field name='arch' type='xml'>
+                <header>
+                    <button name="send_not_necessary" string="Not Necessary" type="object" groups="purchase_button_not_necessary.group_inactivate_purchase_not_necessary"/>
+                </header>
+            </field>
+        </record>
+
+        <!--record model="ir.ui.view" id="purchase_order_form_button">
+            <field name="name">purchase.order.form.button</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header/button[1]" position="replace">
+                    <button name="action_rfq_send" string="Send PO by Email" type="object" context="{'send_rfq':True}" class="oe_highlight" invisible="1"/>
+                </xpath>
+                <xpath expr="//header/button[2]" position="replace">
+                    <button name="action_rfq_send" states="sent" string="Re-Send PO by Email" type="object" context="{'send_rfq':True}"/>
+                </xpath>
+                <xpath expr="//header/button[8]" position="replace">
+                    <button name="action_rfq_send" string="Send PO by Email" type="object" context="{'send_rfq':True}" attrs="{'invisible':[('state','in',('draft','cancel','sent'))]}" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record-->
+
+        <template id="report_purchasequotation_document_barcode" inherit_id="purchase.report_purchasequotation_document">
+            <xpath expr="//div/h2" position="replace">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h2 style="font-size:22px;font-weight:600;">OC: <span t-field="o.name"/></h2>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="row">
+                            <div class="text-right col-xs-12">
+                                <p style="font-size:16px;padding-right:9%;font-weight:bold;">Entry Movement</p>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="text-right">
+                                    <tr t-foreach="o.picking_ids" t-as="picking">
+                                        <t t-if="o.state != 'cancel' and o.state != 'done'">
+                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('Code128', picking.name, 1800, 600, 0)" width="60%"/><br/>
+                                            <span style="font-size:20px;font-weight:500;padding-right:18%" t-field="picking.name"/>
+                                        </t>
+                                    </tr>
+                                </div>
+                            </div>
+                        </div>                         
+                    </div>
+                </div>            
+                <p><strong>Reference: </strong><span t-field="o.partner_ref"/></p>
+                <p><strong>Fecha-OC: </strong><span t-field="o.date_order"/></p>
+                <br/>
+            </xpath>
+            <xpath expr="//div/table/thead/tr" position="replace">
+                <tr>
+                    <th class="text-center" width="25%"><strong>Barcode</strong></th>
+                    <th class="text-center"><strong>Qty</strong></th>
+                    <th class="text-center"><strong>Unit Measurement</strong></th>
+                    <th><strong>Description</strong></th>
+                    <th width="10%"><strong>Price Unit</strong></th>
+                    <th width="15%"><strong>Importe Total</strong></th>
+                </tr>
+            </xpath>
+            <xpath expr="//div/table/tbody/tr" position="replace">
+                <tr t-foreach="o.order_line" t-as="order_line">
+                    <td class="text-center" width="25%">
+                        <t t-if="order_line.product_id.barcode">
+                            <!-- <img t-att-src="'/report/barcode/Code128/%s&amp;humanreadable=1' % order_line.product_id.default_code"                                 style="width:110%;height:50%;" />-->                        
+                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('Code128', order_line.product_id.default_code, 1800, 600, 0)" width="100%"/>
+                        </t>                    
+                    </td>                    
+                    <td class="text-right">
+                        <span t-esc="'{:,.2f}'.format(order_line.product_qty)"/>
+                    </td>
+                    <td class="text-center">
+                        <span t-field="order_line.product_uom" groups="product.group_uom"/>
+                    </td>
+                    <td>
+                        <span t-field="order_line.name"/>
+                    </td>
+                    <td class="text-right">
+                        $ <span t-esc="'{:,.2f}'.format(order_line.price_unit)"/>
+                    </td>
+                    <td class="text-right">
+                        $ <span t-esc="'{:,.2f}'.format(order_line.price_subtotal)"/>
+                    </td>
+                </tr>
+            </xpath>
+            <xpath expr="//div/table" position="after">
+                <div class="row">
+                    <div class="col-xs-6">
+
+                    </div>
+                    <div class="text-right col-xs-6">
+                        <div class="row">
+                            <div class="col-xs-6">
+                            </div>
+                            <div class="col-xs-6">
+                                <div style="padding-bottom: 0.5%; font-size:16px; border-top: 2px solid black;">
+                                    <strong>Subtotal:</strong> $<span t-esc="'{:,.2f}'.format(o.amount_untaxed)"/>
+                                </div>
+                                <div style="padding-bottom: 1.5%; font-size:16px;">
+                                    <strong>Impuestos: </strong> $<span t-esc="'{:,.2f}'.format(o.amount_tax)"/>
+                                </div>
+                                <div style="font-size:17px; border-top: 4px solid black;">
+                                    <strong>Total: </strong>$<span t-esc="'{:,.2f}'.format(o.amount_total)"/>
+                                </div>  
+                            </div>
+                        </div>                                              
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

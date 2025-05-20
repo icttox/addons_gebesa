@@ -1,0 +1,12 @@
+id,code,name,description
+l10n_mx_wbl_car_type_TC01,TC01,Furgón,
+l10n_mx_wbl_car_type_TC02,TC02,Góndola,
+l10n_mx_wbl_car_type_TC03,TC03,Tolva,
+l10n_mx_wbl_car_type_TC04,TC04,Tanque,
+l10n_mx_wbl_car_type_TC05,TC05,Plataforma Intermodal,Se utiliza cuando se transportan contenedores.
+l10n_mx_wbl_car_type_TC06,TC06,Plataforma Especializada,Se utiliza para transportar mercancías de gran peso o volumen
+l10n_mx_wbl_car_type_TC07,TC07,Plataforma Automotriz,Se utiliza cuando se transportan automóviles
+l10n_mx_wbl_car_type_TC08,TC08,Locomotora,
+l10n_mx_wbl_car_type_TC09,TC09,Carro Especial,
+l10n_mx_wbl_car_type_TC10,TC10,Pasajeros,
+l10n_mx_wbl_car_type_TC11,TC11,Mantenimiento de Vía,

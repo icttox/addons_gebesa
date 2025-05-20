@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_production_all_processes_form'>
+            <field name='name'>mrp.production.all.processes.form</field>
+            <field name='model'>mrp.production.all.processes</field>
+            <field name='arch' type='xml'>
+                <form string='Production Transfer'>
+                    <p class="oe_grey">
+                        * Supplies, produces and transfers the selected production orders
+                    </p>
+                    <footer>
+                        <button string="All processes" name="action_all_processes" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_mrp_production_all_processes"
+            multi="True"
+            key2="client_action_multi" name="All processes"
+            groups="stock_move_batch_validator.group_mrp_production_all_processes"
+            res_model="mrp.production.all.processes" src_model="mrp.production"
+            view_mode="form" target="new" view_type="form" />
+    </data>
+</odoo>

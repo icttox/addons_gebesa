@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="retention_cfdiv10">
+        <retenciones:Retenciones
+            xsi:schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/1 http://www.sat.gob.mx/esquemas/retencionpago/1/retencionpagov1.xsd http://www.sat.gob.mx/esquemas/retencionpago/1/pagosaextranjeros http://www.sat.gob.mx/esquemas/retencionpago/1/pagosaextranjeros/pagosaextranjeros.xsd http://www.sat.gob.mx/esquemas/retencionpago/1/dividendos http://www.sat.gob.mx/esquemas/retencionpago/1/dividendos/dividendos.xsd http://www.sat.gob.mx/esquemas/retencionpago/1/enajenaciondeacciones http://www.sat.gob.mx/esquemas/retencionpago/1/enajenaciondeacciones/enajenaciondeacciones.xsd"
+            xmlns:retenciones="http://www.sat.gob.mx/esquemas/retencionpago/1"
+            xmlns:pagosaextranjeros="http://www.sat.gob.mx/esquemas/retencionpago/1/pagosaextranjeros" 
+            xmlns:enajenaciondeacciones="http://www.sat.gob.mx/esquemas/retencionpago/1/enajenaciondeacciones" 
+            xmlns:dividendos="http://www.sat.gob.mx/esquemas/retencionpago/1/dividendos"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            Version="1.0"
+            t-att-FolioInt="record.number"
+            t-att-NumCert="certificate_number"
+            t-att-Cert="certificate"
+            t-att-FechaExp="date"
+            t-att-CveRetenc="record.retention_type_id.code"
+            t-att-DescRetenc="record.retention_type_id.name"
+            >
+            <retenciones:Emisor 
+                t-att-NomDenRazSocE="record.company_id.partner_id.name" 
+                t-att-RFCEmisor="record.company_id.partner_id.vat"/>
+            <retenciones:Receptor 
+                t-att-Nacionalidad="nationality">
+                <t t-if="nationality == 'Extranjero'">
+                    <retenciones:Extranjero 
+                        t-att-NumRegIdTrib="record.partner_id.vat"
+                        t-att-NomDenRazSocR="record.partner_id.name"/>
+                </t>
+                <t t-if="nationality == 'Nacional'">
+                    <retenciones:Nacional 
+                        t-att-RFCRecep="record.partner_id.vat"
+                        t-att-NomDenRazSocR="record.partner_id.name"/>
+                </t>
+            </retenciones:Receptor>
+            <retenciones:Periodo 
+                t-att-MesIni="record.initial_month" 
+                t-att-MesFin="record.final_month" 
+                t-att-Ejerc="record.fiscal_year"/>
+            <retenciones:Totales
+                t-att-montoTotOperacion="record.operation_amount"
+                t-att-montoTotGrav="record.taxed_amount"
+                t-att-montoTotExent="record.exempt_amount"
+                t-att-montoTotRet="record.required_amount">
+                <t t-foreach="record.retentions_detail_ids" t-as="tax_line">
+                    <retenciones:ImpRetenidos 
+                        t-att-BaseRet="tax_line.base_amount" 
+                        t-att-Impuesto="tax_line.tax" 
+                        t-att-montoRet="tax_line.retained_amount" 
+                        t-att-TipoPagoRet="tax_line.retention_type == 'final'  and 'Pago definitivo' or 'Pago provisional'"/>
+                </t>
+            </retenciones:Totales>
+            <retenciones:Complemento>
+                <t t-foreach="record.retentions_complement_ids" t-as="complement_line">
+                    <t t-if="complement_line.retention_type_code == '18'">
+                        <pagosaextranjeros:Pagosaextranjeros 
+                            t-att-Version="complement_line.version"
+                            t-att-EsBenefEfectDelCobro="'SI' and complement_line.beneficiary  or 'NO'">
+                            <t t-if="not complement_line.beneficiary ">
+                                <pagosaextranjeros:NoBeneficiario 
+                                    t-att-DescripcionConcepto="complement_line.taxpayer_type_id.name"
+                                    t-att-ConceptoPago="complement_line.taxpayer_type_id.code"
+                                    t-att-PaisDeResidParaEfecFisc="complement_line.country_id.code"/>
+                            </t>
+                            <t t-if="complement_line.beneficiary">
+                                <pagosaextranjeros:Beneficiario 
+                                    t-att-DescripcionConcepto="complement_line.taxpayer_type_id.name"
+                                    t-att-ConceptoPago="complement_line.taxpayer_type_id.code"
+                                    t-att-PaisDeResidParaEfecFisc="complement_line.country_id.code"/>
+                            </t>
+                        </pagosaextranjeros:Pagosaextranjeros>
+                    </t>
+                    <t t-if="complement_line.retention_type_code in ('06', '19')">
+                        <enajenaciondeacciones:EnajenaciondeAcciones
+                            t-att-Version="complement_line.version"
+                            t-att-ContratoIntermediacion="complement_line.contract_intermediation"
+                            t-att-Ganancia="complement_line.earnings"
+                            t-att-Perdida="complement_line.losses"/>
+                    </t>
+                    <t t-if="complement_line.retention_type_code == '14'">
+                        <dividendos:Dividendos
+                            t-att-Version="complement_line.version">
+                            <dividendos:DividOUtil
+                                t-att-CveTipDivOUtil="complement_line.dividend_type_id.code"
+                                t-att-MontISRAcredRetMexico="complement_line.amount_isr_mx"
+                                t-att-MontISRAcredRetExtranjero="complement_line.amount_isr_foreing"
+                                t-att-TipoSocDistrDiv="complement_line.society_type == 'national_society' and 'Sociedad Nacional' or 'Sociedad Extranjera'"/> 
+                        </dividendos:Dividendos>
+                    </t>
+                </t>
+            </retenciones:Complemento>
+        </retenciones:Retenciones>
+    </template>
+</odoo>

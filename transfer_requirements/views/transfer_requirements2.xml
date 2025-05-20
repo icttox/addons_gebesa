@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="transfer_requirements_form_view">
+            <field name="name">transfer_requirements</field>
+            <field name="model">transfer.requirements</field>
+            <field name="arch" type="xml">
+                <form string="Transfer from">
+                    <sheet>
+                        <group>
+                            <group string="General">
+                                <field name="consecutive" readonly= "1" required="True"/>
+                                 <field name="name_cheke" required="True" />  
+                                 <field name="responsible_id"/>
+                                 <field name="Transfer" required="True"/>
+                                 <field name="date" select="1"/>
+                            </group>
+                            <group string="Observations">     
+                                 <field name="spending_id"/>
+                                 <field name="con_obs"/>
+                            </group>   
+                            <group string="Company">
+                                 <field name="company_id"/>
+                                 <field name="bank_id" required="True" />
+                                 <field name="emp_ven_id"/>
+                            </group>
+                            <group>
+                                 <field name="quantity" required="True"/>
+                                 <field name="checkin_a"/>
+                                 <field name="quantity_fac" required ="True"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="transfer_req_list_action">
+            <field name="name">Transferencias</field>
+            <field name="res_model">transfer.requirements</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="context" eval="{'search_default_my_courses': 1}"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create your first transfer
+                </p>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="transfer_req_view">
+            <field name="name">transfer.requirements</field>
+            <field name="model">transfer.requirements</field>
+            <field name="arch" type="xml">
+                <tree string="Transfer Tree">
+                    <field name="consecutive"/>
+                    <field name="name_cheke"/>  
+                    <field name="responsible_id"/>
+                </tree>
+            </field>
+        </record>
+         <record model="ir.ui.view" id="view_transfer_kanban">
+            <field name="name">transfer.kanbann</field>
+            <field name="model">transfer.requirements</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="name_cheke">
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div
+                                 t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                                    <div class="oe_dropdown_toggle">
+                                        <i class="fa fa-bars fa-lg"/>
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"
+                                                    data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                <div t-attf-class="oe_kanban_content">
+                                    Transferencia:
+                                    <field name="consecutive"/>
+                                    <br/>
+                                    Cheque:
+                                    <field name="name_cheke"/>
+                                    <br/>
+                                    Solicitud de:
+                                    <field name="responsible_id"/>
+                                    <br/>
+                                </div>
+                             </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        <menuitem action="transfer_req_list_action" id="menu_action_transfer_requirements_gebesa" parent="account.menu_finance_payables"  sequence="60"/>
+    </data>
+</odoo>

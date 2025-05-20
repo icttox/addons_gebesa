@@ -1,0 +1,167 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* reporte_incidencias
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-24 22:16+0000\n"
+"PO-Revision-Date: 2017-08-24 22:16+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:48
+#, python-format
+msgid "Amount"
+msgstr ""
+
+#. module: reporte_incidencias
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_qty
+msgid "Cantidad"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:13
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_date
+#, python-format
+msgid "Date Order"
+msgstr ""
+
+#. module: reporte_incidencias
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_part
+msgid "Empresa"
+msgstr ""
+
+#. module: reporte_incidencias
+#: model:ir.ui.view,arch_db:reporte_incidencias.reporte_incidencias_tree
+msgid "Incidencias"
+msgstr ""
+
+#. module: reporte_incidencias
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_amou
+msgid "Monto"
+msgstr ""
+
+#. module: reporte_incidencias
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_note
+msgid "Nota"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:38
+#, python-format
+msgid "Note"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:18
+#, python-format
+msgid "Order"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:23
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_ref
+#, python-format
+msgid "Order Reference"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:78
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_team
+#, python-format
+msgid "Order Team"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:73
+#, python-format
+msgid "Partner"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:33
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_ship
+#, python-format
+msgid "Partner Shipping"
+msgstr ""
+
+#. module: reporte_incidencias
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_nom
+msgid "Pedidos"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:58
+#, python-format
+msgid "Product"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:63
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_produ
+#, python-format
+msgid "Product Name"
+msgstr ""
+
+#. module: reporte_incidencias
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_code
+msgid "Producto"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:28
+#, python-format
+msgid "Project"
+msgstr ""
+
+#. module: reporte_incidencias
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_proj
+msgid "Proyecto"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:43
+#, python-format
+msgid "Quantity"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:68
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_repl
+#, python-format
+msgid "Reason"
+msgstr ""
+
+#. module: reporte_incidencias
+#: model:ir.ui.menu,name:reporte_incidencias.reporte_incidencias_menu
+msgid "Reporte Incidencias"
+msgstr ""
+
+#. module: reporte_incidencias
+#: model:ir.model,name:reporte_incidencias.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: reporte_incidencias
+#: code:addons/reporte_incidencias/models/reporte_incidencias.py:53
+#, python-format
+msgid "State"
+msgstr ""
+
+#. module: reporte_incidencias
+#: model:ir.model.fields,field_description:reporte_incidencias.field_sale_order_line_stat
+msgid "Status"
+msgstr ""
+
+#. module: reporte_incidencias
+#: model:ir.actions.act_window,name:reporte_incidencias.action_reporte_incidencias
+msgid "reporte.incidencias"
+msgstr ""
+

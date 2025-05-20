@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="gebesa_mrp_bom_value_dynamic" model="ir.ui.view">
+            <field name="name">gebesa.mrp.bom.value.dynamic</field>
+            <field name="model">mrp.bom.line</field>
+            <field name="inherit_id" ref="mrp_cut_detail.mrp_bom_line_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page[1]" position="after">
+                    <page string="BoM Line Product replacement">
+                        <button name="action_get_product_variants" string="Get product variants" type="object" groups="mrp_bom_dynamic.group_detalles_dinamicos"/>
+                        <button name="action_export_replacement_list" string="Export Replacement List" type="object" groups="mrp_bom_dynamic.group_detalles_dinamicos"/>
+                        <button name="%(product_replacement_import_action)d" type="action" string="Import Replacement List" groups="mrp_bom_dynamic.group_detalles_dinamicos"/>
+                        <field name="bom_line_product_value_ids" widget="one2many_list">
+                            <tree string="List Values" editable="buttom">
+                                <field name="bom_product_id" required="1" readonly="1" domain="[('attribute_value_ids', '!=', False)]"/>
+                                <field name="product_id" required="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='product_qty']" position="after">
+                    <field name="fixed"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

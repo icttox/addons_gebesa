@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="group_detalles_dinamicos" model="res.groups">
+            <field name="name">Detalles Dinamicos</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+      <template id="assets_backend" name="js assets" inherit_id="web.assets_backend">
+          <xpath expr="." position="inside">
+              <script type="text/javascript" src="/l10n_mx_cfdi_mass_download/static/src/js/custom.js"/>
+              <script type="text/javascript" src="/l10n_mx_cfdi_mass_download/static/src/js/jszip.min.js"/>
+              <link href="/l10n_mx_cfdi_mass_download/static/src/css/l10n_mx_cfdi_mass_download.css" rel="stylesheet" type="text/css"/>
+          </xpath>
+      </template>
+    </data>
+</odoo>

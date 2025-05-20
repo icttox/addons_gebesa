@@ -1,0 +1,128 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* evidence_payment_validate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-29 14:35+0000\n"
+"PO-Revision-Date: 2018-08-29 14:35+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: evidence_payment_validate
+#: model:ir.ui.view,arch_db:evidence_payment_validate.account_invoice_evidence_wizard_form
+msgid "*Approve the evidences of these invoices?"
+msgstr "Aprobar las evidencias de estas facturas"
+
+#. module: evidence_payment_validate
+#: model:res.groups,name:evidence_payment_validate.group_invoice_evidence_button_gebesa
+msgid "Admin Evidencia Factura "
+msgstr "Admin Evidencia Factura"
+
+#. module: evidence_payment_validate
+#: model:ir.ui.view,arch_db:evidence_payment_validate.account_invoice_evidence_wizard_form
+msgid "Approve"
+msgstr "Aprobar"
+
+#. module: evidence_payment_validate
+#: model:ir.actions.act_window,name:evidence_payment_validate.action_account_invoice_wizard_evi
+msgid "Approve Evidence"
+msgstr "Aprobar Evidencias"
+
+#. module: evidence_payment_validate
+#: model:ir.ui.view,arch_db:evidence_payment_validate.account_invoice_evidence_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: evidence_payment_validate
+#: model:ir.model.fields,field_description:evidence_payment_validate.field_account_invoice_wizard_evi_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: evidence_payment_validate
+#: model:ir.model.fields,field_description:evidence_payment_validate.field_account_invoice_wizard_evi_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: evidence_payment_validate
+#: model:ir.model.fields,field_description:evidence_payment_validate.field_account_invoice_wizard_evi_display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: evidence_payment_validate
+#: model:ir.ui.view,arch_db:evidence_payment_validate.account_invoice_evidence_wizard_form
+msgid "Evidence Invoice Approve"
+msgstr "Aprobar evidencia facturas"
+
+#. module: evidence_payment_validate
+#: code:addons/evidence_payment_validate/models/account_invoice.py:14
+#: model:ir.model.fields,field_description:evidence_payment_validate.field_account_invoice_evidence_status
+#, python-format
+msgid "Evidencia Galbo"
+msgstr "Evidencia Galbo"
+
+#. module: evidence_payment_validate
+#: model:ir.ui.view,arch_db:evidence_payment_validate.account_invoice_evidence_form
+msgid "Evidencias Galbo"
+msgstr "Evidencias Galbo"
+
+#. module: evidence_payment_validate
+#: model:ir.model.fields,field_description:evidence_payment_validate.field_account_invoice_wizard_evi_id
+msgid "ID"
+msgstr "ID"
+
+#. module: evidence_payment_validate
+#: model:ir.model,name:evidence_payment_validate.model_account_invoice
+msgid "Invoice"
+msgstr "facturas"
+
+#. module: evidence_payment_validate
+#: model:ir.model.fields,field_description:evidence_payment_validate.field_account_invoice_wizard_evi___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: evidence_payment_validate
+#: model:ir.model.fields,field_description:evidence_payment_validate.field_account_invoice_wizard_evi_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: evidence_payment_validate
+#: model:ir.model.fields,field_description:evidence_payment_validate.field_account_invoice_wizard_evi_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualizacion en"
+
+#. module: evidence_payment_validate
+#: selection:account.invoice,evidence_status:0
+#: code:addons/evidence_payment_validate/models/account_invoice.py:13
+#, python-format
+msgid "Not Received"
+msgstr "No Recibida"
+
+#. module: evidence_payment_validate
+#: selection:account.invoice,evidence_status:0
+#: code:addons/evidence_payment_validate/models/account_invoice.py:12
+#, python-format
+msgid "Received"
+msgstr "Recibida"
+
+#. module: evidence_payment_validate
+#: model:ir.model,name:evidence_payment_validate.model_account_invoice_wizard_evi
+msgid "account.invoice.wizard.evi"
+msgstr "cuenta factura asistente wizard"
+
+#. module: evidence_payment_validate
+#: model:ir.model,name:evidence_payment_validate.model_invoice_evidence_wizard
+msgid "invoice.evidence.wizard"
+msgstr "factura.evidencia.wizard"
+
+#. module: evidence_payment_validate
+#: model:ir.ui.view,arch_db:evidence_payment_validate.account_invoice_evidence_wizard_form
+msgid "or"
+msgstr "en"
+

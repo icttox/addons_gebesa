@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="inv_rel_so_tree_view">
+            <field name="name">inv.rel.so.tree</field>
+            <field name="model">inv.rel.so</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Invoice Rel Sale Order">
+                    <field name="invoice_id" domain="[('state','not in', ['draft', 'cancel']),('type', '=', 'in_invoice'),('purchase_order_ids', '!=', True)]"/>
+                    <field name="order_id" domain="[('state','not in', ['done', 'cancel'])]"/>
+                    <field name="total_inv"/>
+                    <field name="total_so"/>
+                    <field name="gasto_pro_flete"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

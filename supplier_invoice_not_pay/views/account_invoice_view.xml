@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='not_pay_invoice_supplier'>
+            <field name='name'>not.pay.invoice.supplier</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref="account.invoice_supplier_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='authorizes_id']" position="after">
+                   <field name="not_pay" attrs="{'readonly':[('state','in',('paid','cancel'))]}" 
+                    groups="supplier_invoice_not_pay.group_notpay_invoice_supplier"/>
+                </xpath>
+                <xpath expr="//notebook/page/group/group/field[@name='company_id']" position="before">
+                   <field name="notpay_text" readonly='1'/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

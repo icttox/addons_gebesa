@@ -1,0 +1,33 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="l10n_mx_subemp_line_tree">
+      <field name="name">l10n.mx.subemp.line.tree</field>
+      <field name="model">l10n.mx.subemp.line</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="lower_limit"/>
+          <field name="subsidy_monthly"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="l10n_mx_subemp_line_form">
+      <field name="name">l10n.mx.subemp.line.form</field>
+      <field name="model">l10n.mx.subemp.line</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="lower_limit"/>
+              <field name="subsidy_monthly"/>
+            </group>
+          </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div> 
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>

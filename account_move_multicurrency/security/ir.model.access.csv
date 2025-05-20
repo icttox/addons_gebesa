@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+accountmovemulticurrency_manager,accountmovemulticurrency manager,model_account_move_multicurrency,group_manager,1,1,1,1
+accountmovemulticurrency_line_manager,accountmovemulticurrency manager,model_account_move_multicurrency_line,group_manager,1,1,1,1
+accountmovemulticurrency_read_all,accountmovemulticurrency all,model_account_move_multicurrency,,1,0,0,0
+accountmovemulticurrency_line_read_all,accountmovemulticurrency all,model_account_move_multicurrency_line,,1,0,0,0

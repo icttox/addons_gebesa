@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="nst_plant_01" model="product.nst.plant">
+            <field name="name">Metalicos</field>
+        	<field name="nstid">1</field>
+        </record>
+        <record id="nst_plant_02" model="product.nst.plant">
+            <field name="name">Silleria</field>
+        	<field name="nstid">2</field>
+        </record>
+        <record id="nst_plant_03" model="product.nst.plant">
+            <field name="name">Laminados</field>
+        	<field name="nstid">3</field>
+        </record>
+        <record id="nst_plant_04" model="product.nst.plant">
+            <field name="name">Chapa</field>
+        	<field name="nstid">4</field>
+        </record>
+        <record id="nst_plant_05" model="product.nst.plant">
+            <field name="name">Mamparas</field>
+        	<field name="nstid">5</field>
+        </record>
+    </data>
+</odoo>

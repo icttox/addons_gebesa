@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="product_pricelist_multicompany_form">
+        	<field name="name">Product_pricelist_multicompany_propagate_form</field>
+        	<field name="model">product.pricelist</field>
+        	<field name="inherit_id" ref="product.product_pricelist_view"/>
+        	<field name="arch" type="xml">
+        	 	<xpath expr="//form/sheet/div/button[@name='toggle_active']" position="before">
+        	 		<button name="pricelist_propagate" class="oe_stat_button" string="Propagar Mc" type="object" icon="fa-dollar"/>
+        	 		<!--nombre de boton es igual al metodo-->
+                </xpath>  
+        	</field>
+        </record>
+
+
+    </data>
+</odoo>
+

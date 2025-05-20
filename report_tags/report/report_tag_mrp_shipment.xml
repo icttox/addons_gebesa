@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="shipment_tag"
+            model="mrp.shipment"
+            string="Etiqueta Embarque"
+            report_type="qweb-pdf"
+            name="report_tags.report_shipment_tag"
+            file="report_tags.report_shipment_tag"
+        />
+        <record id="report_tags.shipment_tag" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag" />
+        </record>
+
+        <template id="report_shipment_tag">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <div class="page" style="font-size: small">
+                        <t t-foreach="docs" t-as="doc">
+                            <t t-set="pag_n" t-value="1"/>
+                            <t t-foreach="doc.line_ids" t-as="line">
+                                <t t-foreach="range(int(line.quantity_shipped))" t-as="qty">
+                                    <div class="row no-gutters" style="border: 1px solid #000000;height: 55px;">
+                                        <div class="col-6">
+                                            <t t-if="line.sale_order_id.company_id.logo_invoice">
+                                                <img t-att-src="image_data_uri(line.sale_order_id.company_id.logo_invoice)" style="max-height: 30px;max-width: 100px;margin-top: 10px;margin-left: 3px;" alt="Logo"/>
+                                            </t>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <div class="mr-2">
+                                                <strong>
+                                                    www.gebesa.com<br/>01 800 8432 372
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row no-gutters" style="border-left: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;">
+                                        <div class="col-11 mx-auto" style="margin-top: 10px;">
+                                            <div class="text-light bg-dark">
+                                                <strong>CLIENTE/CUSTOMER:</strong>
+                                            </div>
+                                            <div style="height: 75px">
+                                                <h4 class="align-items-center"><span t-field="line.partner_id.name"/></h4>
+                                            </div>
+                                            <div class="text-light bg-dark">
+                                                <strong>DESTINO/DESTINATION:</strong>
+                                            </div>
+                                            <div style="height: 75px">
+                                                <h4><span t-field="line.city"/>, <span t-field="line.state_id.name"/></h4>
+                                            </div>
+                                            <div class="row mx-auto">
+                                                <div class="col-3 text-light bg-dark">
+                                                    <strong>O.C./P.O.:</strong>
+                                                </div>
+                                                <div class="col-9" style="border: 1px solid #000000;">
+                                                    <span t-field="line.sale_order_id.client_order_ref"/>
+                                                </div>
+                                            </div>
+                                            <div style="margin-top: 10px;">
+                                                PEDIDO/S.O.: <span t-field="line.sale_order_id.name"/>
+                                            </div>
+                                            <div class="text-right my-3">
+                                                <sub><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d %B %Y')"/></sub>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mt-1">
+                                        <sub>Pagina <span t-esc="pag_n"/> de <span t-esc="pag_tot[doc.id]"/></sub>
+                                    </div>
+                                    <p style="page-break-after:always;">   </p>
+                                    <t t-set="pag_n" t-value="pag_n+1"/>
+                                </t>
+                            </t>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

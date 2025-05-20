@@ -1,0 +1,589 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* gebesa_reconcile_advance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-11 22:54+0000\n"
+"PO-Revision-Date: 2016-10-11 22:54+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/res_partner.py:22
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_res_partner_property_account_customer_advance_id
+#, python-format
+msgid "Account Customer Advance"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Account Reconcile Advance"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/res_partner.py:14
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_res_partner_property_account_supplier_advance_id
+#, python-format
+msgid "Account Supplier Advance"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:72
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_date_post
+#, python-format
+msgid "Accounting Date"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:112
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:113
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_move_id
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_move_id
+#, python-format
+msgid "Accounting Entry"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:107
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_journal_id
+#, python-format
+msgid "Accounting Journal where Entries will be posted"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: selection:account.payment,prepayment_type:0
+#: code:addons/gebesa_reconcile_advance/models/account_payment.py:14
+#, python-format
+msgid "Advance"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:132
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_av_aml_ids
+#, python-format
+msgid "Advance Entry Lines"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:100
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_partner_id
+#, python-format
+msgid "Advance Partner"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:res.groups,name:gebesa_reconcile_advance.group_gra_manager
+msgid "Advance Reconcile Manager"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:res.groups,name:gebesa_reconcile_advance.group_gra_user
+msgid "Advance Reconcile User"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: selection:account.payment,prepayment_type:0
+msgid "Advance Refund"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:123
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_payment_ids
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+#, python-format
+msgid "Advances"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:124
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_payment_ids
+#, python-format
+msgid "Advances to be used"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:248
+#, python-format
+msgid "All Invoices and Advances must beregistered in the same currency\n"
+"Please verify..."
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/account_payment.py:26
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_account_payment_account_analytic_id
+#, python-format
+msgid "Analytic Account"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:347
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:393
+#, python-format
+msgid "Application of advance to invoice: "
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:478
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:523
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:533
+#, python-format
+msgid "Application of advance: "
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.account_payment_customer_tree_view
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.account_payment_supplier_tree_view
+msgid "By Apply"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:83
+#: selection:gebesa.reconcile.advance,state:0
+#, python-format
+msgid "Cancel"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Cancel Advance"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:res.groups,name:gebesa_reconcile_advance.group_cancel_advance_reconcile
+msgid "Cancel Advance Reconcile"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:91
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:94
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_company_id
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_company_id
+#, python-format
+msgid "Company"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:136
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_account_analytic_id
+#, python-format
+msgid "Costs Center"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.actions.act_window,help:gebesa_reconcile_advance.gebesa_reconcile_advance_customer_action
+msgid "Create Your First Customer Advance Reconciliation"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.actions.act_window,help:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_action
+msgid "Create Your First Supplier Advance Reconciliation"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.actions.act_window,name:gebesa_reconcile_advance.gebesa_reconcile_advance_customer_action
+#: model:ir.ui.menu,name:gebesa_reconcile_advance.gebesa_reconcile_advance_customer_menu
+msgid "Customer Advance Reconciliation"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Customer Debts"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Customer Invoices"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Customer Payments"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:66
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_date
+#, python-format
+msgid "Date"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:74
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_date_post
+#, python-format
+msgid "Date to be used in Journal Entries when posted"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/res_config.py:14
+#, python-format
+msgid "Default Advance Tax"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:68
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_date
+#, python-format
+msgid "Document Date"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:84
+#: selection:gebesa.reconcile.advance,state:0
+#, python-format
+msgid "Done"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:82
+#: selection:gebesa.reconcile.advance,state:0
+#, python-format
+msgid "Draft"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model,name:gebesa_reconcile_advance.model_gebesa_reconcile_advance
+msgid "Email Thread"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:212
+#, python-format
+msgid "Error!\n"
+"Please Field the Invoices &                               Advances Fields."
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:614
+#, python-format
+msgid "Error!\n"
+"You do not have privileges to                             disengage an advance.\n"
+"Check with your                             system administrator."
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:235
+#, python-format
+msgid "For integration issues, only an advance isallowed per application,\n"
+"To apply another advance will have to createanother application."
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_advance_tree
+msgid "Gebesa Reconcile Advance"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_id
+msgid "ID"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:128
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_ai_aml_ids
+#, python-format
+msgid "Invoice Entry Lines"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:118
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_invoice_ids
+#, python-format
+msgid "Invoices"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Invoices & Debts"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:243
+#, python-format
+msgid "Invoices can not include a date subsequentto that of the Conciliation"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:119
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_invoice_ids
+#, python-format
+msgid "Invoices to be used in this Advance"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:105
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_journal_id
+#, python-format
+msgid "Journal"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model,name:gebesa_reconcile_advance.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_last_post
+msgid "Last Message Date"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:60
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_name
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+#, python-format
+msgid "Name"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:62
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_name
+#, python-format
+msgid "Name of this Advance Document"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: selection:account.payment,prepayment_type:0
+#: code:addons/gebesa_reconcile_advance/models/account_payment.py:13
+#, python-format
+msgid "Normal"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Other Info"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:99
+#: model:ir.model,name:gebesa_reconcile_advance.model_res_partner
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_partner_id
+#, python-format
+msgid "Partner"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:78
+#: selection:gebesa.reconcile.advance,type:0
+#, python-format
+msgid "Payment"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Payment Entry Lines"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model,name:gebesa_reconcile_advance.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/account_payment.py:20
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_account_payment_pending_amount
+#, python-format
+msgid "Pending Amount"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/account_payment.py:15
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_account_payment_prepayment_type
+#, python-format
+msgid "Prepayment Type"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:79
+#: selection:gebesa.reconcile.advance,type:0
+#, python-format
+msgid "Receipt"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Receipt Entry Lines"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Reconcile"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/account_payment.py:31
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_account_payment_responsible_id
+#, python-format
+msgid "Responsible Advance"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/gebesa_reconcile_advance.py:86
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_state
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_state
+#, python-format
+msgid "State"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.actions.act_window,name:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_action
+#: model:ir.ui.menu,name:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_menu
+msgid "Supplier Advance Reconciliation"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Supplier Debts"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Supplier Invoices"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.ui.view,arch_db:gebesa_reconcile_advance.gebesa_reconcile_advance_supplier_customer_form
+msgid "Supplier Payments"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/res_partner.py:24
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_res_partner_property_account_customer_advance_id
+#, python-format
+msgid "This account will be used for advance payment of Customers"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: code:addons/gebesa_reconcile_advance/models/res_partner.py:16
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_res_partner_property_account_supplier_advance_id
+#, python-format
+msgid "This account will be used for advance payment of Suppliers"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_type
+msgid "Type"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,field_description:gebesa_reconcile_advance.field_gebesa_reconcile_advance_website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model.fields,help:gebesa_reconcile_advance.field_gebesa_reconcile_advance_website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: gebesa_reconcile_advance
+#: model:ir.model,name:gebesa_reconcile_advance.model_account_config_settings
+msgid "account.config.settings"
+msgstr ""
+

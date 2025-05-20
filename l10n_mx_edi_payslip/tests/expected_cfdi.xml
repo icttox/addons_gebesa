@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nomina12:Nomina
+    FechaFinalPago="2017-02-28"
+    FechaInicialPago="2017-02-01"
+    FechaPago="2017-02-28"
+    NumDiasPagados="15"
+    TipoNomina="O"
+    TotalDeducciones="2400.0"
+    TotalOtrosPagos="300.0"
+    TotalPercepciones="13000.0"
+    Version="1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:nomina12="http://www.sat.gob.mx/nomina12">
+    <nomina12:Emisor
+        RegistroPatronal="1203256"
+        RfcPatronOrigen="ACO560518KW7">
+    <nomina12:EntidadSNCF OrigenRecurso="IP"/>
+    </nomina12:Emisor>
+    <nomina12:Receptor
+        Antigüedad="P4W"
+        Banco="012"
+        ClaveEntFed="GUA"
+        CuentaBancaria="1234567890"
+        Curp="PUXB571021HNELXR00"
+        Departamento="Research &amp; Development"
+        FechaInicioRelLaboral="2017-02-01"
+        NumEmpleado="7"
+        NumSeguridadSocial="123456789236958"
+        PeriodicidadPago="01"
+        Puesto="Experienced Developer"
+        RiesgoPuesto="1"
+        SalarioBaseCotApor="5000.0"
+        SalarioDiarioIntegrado="1000.0"
+        Sindicalizado="No"
+        TipoContrato="01"
+        TipoJornada="01"
+        TipoRegimen="02">
+    </nomina12:Receptor>
+    <nomina12:Percepciones
+        TotalExento="200.0"
+        TotalGravado="12800.0"
+        TotalSueldos="13000.0">
+        <nomina12:Percepcion
+            Clave="PE005"
+            Concepto="Fondo de Ahorro"
+            ImporteExento="0.0"
+            ImporteGravado="200.0"
+            TipoPercepcion="005">
+        </nomina12:Percepcion>
+        <nomina12:Percepcion
+            Clave="PG001"
+            Concepto="Sueldos, Salarios Rayas y Jornales"
+            ImporteExento="12500.0"
+            ImporteGravado="0.0"
+            TipoPercepcion="001">
+        </nomina12:Percepcion>
+        <nomina12:Percepcion
+            Clave="019"
+            Concepto="Horas extra"
+            ImporteExento="0.0"
+            ImporteGravado="300.0"
+            TipoPercepcion="019">
+            <nomina12:HorasExtra
+                Dias="1"
+                HorasExtra="1"
+                ImportePagado="300.0"
+                TipoHoras="02"/>
+        </nomina12:Percepcion>
+    </nomina12:Percepciones>
+    <nomina12:Deducciones
+        TotalImpuestosRetenidos="2000.0"
+        TotalOtrasDeducciones="400.0">
+        <nomina12:Deduccion
+            Clave="001"
+            Concepto="Seguridad social"
+            Importe="300.0"
+            TipoDeduccion="001"/>
+        <nomina12:Deduccion
+            Clave="002"
+            Concepto="ISR"
+            Importe="2000.0"
+            TipoDeduccion="002"/>
+        <nomina12:Deduccion
+            Clave="006"
+            Concepto="Descuento por incapacidad"
+            Importe="100.0"
+            TipoDeduccion="006"/>
+    </nomina12:Deducciones>
+    <nomina12:OtrosPagos>
+        <nomina12:OtroPago
+            Clave="OP003"
+            Concepto="Viáticos - entregados al trabajador"
+            Importe="300.0"
+            TipoOtroPago="003">
+        </nomina12:OtroPago>
+    </nomina12:OtrosPagos>
+    <nomina12:Incapacidades>
+        <nomina12:Incapacidad
+            DiasIncapacidad="1"
+            ImporteMonetario="100.0"
+            TipoIncapacidad="02"/>
+    </nomina12:Incapacidades>
+</nomina12:Nomina>

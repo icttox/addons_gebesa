@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_account_analytic_geb_form'>
+        	<field name='name'>view.account.analytic.geb.form</field>
+        	<field name='model'>account.analytic.account</field>
+        	<field name='inherit_id' ref="analytic.view_account_analytic_account_form"/>
+        	<field name='arch' type='xml'>
+                <xpath expr='//div[@name="project"]' position='inside'>
+                    <field name="use_salesorder"/>
+                    <label for="use_salesorder"/>
+                </xpath>
+
+        		<xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="warehouse_id" attrs="{'invisible':[('use_salesorder', '!=', True)], 'required': [('use_salesorder', '=', True)]}"/>
+                </xpath>
+        	</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="shipment_tag_2"
+            model="mrp.shipment"
+            string="Etiqueta Embarque 2"
+            report_type="qweb-pdf"
+            name="report_tags.report_shipment_tag_2"
+            file="report_tags.report_shipment_tag_2"
+        />
+        <record id="report_tags.shipment_tag_2" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag" />
+        </record>
+
+        <template id="report_shipment_tag_2">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <div class="page" style="font-size: small">
+                        <t t-foreach="docs" t-as="doc">
+                            <t t-set="pag_n" t-value="1"/>
+                            <t t-foreach="doc.line_ids" t-as="line">
+                                <t t-foreach="range(int(line.quantity_shipped))" t-as="qty">
+                                    <div style="border: 1px solid #000000;height: 340px">
+                                        <strong>
+                                            <div class="row">
+                                                <div class="col-6 mt-2 ml-1">
+                                                    <t t-if="line.sale_order_id.company_id.logo_invoice">
+                                                        <img t-att-src="image_data_uri(line.sale_order_id.company_id.logo_invoice)" style="max-height: 30px;max-width: 100px;" alt="logo"/>
+                                                    </t>
+                                                </div>
+                                                <div class="col-6 text-right">
+                                                    <div class="mr-2">
+                                                        www.gebesa.com<br/>01 800 8432 372
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="text-light bg-dark mt-1">
+                                                        CLIENTE/CUSTOMER:
+                                                    </div>
+                                                    <div style="height: 70px;font-size: 20px;">
+                                                        <span t-field="line.partner_id.name"/>
+                                                    </div>
+                                                    <div class="text-light bg-dark mt-1">
+                                                        DESTINO/DESTINATION:
+                                                    </div>
+                                                    <div style="height: 70px;font-size: 20px;">
+                                                        <span t-field="line.city"/>, <span t-field="line.state_id.name"/>
+                                                    </div>
+                                                    <div class="row mx-auto ">
+                                                        <div class="col-6 text-light bg-dark">
+                                                            O.C./P.O.:
+                                                        </div>
+                                                        <div class="col-6 text-light bg-dark">
+                                                            PEDIDO/S.O.:
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mx-auto">
+                                                        <div class="col-6" style="height: 35px;">
+                                                            <span t-field="line.sale_order_id.client_order_ref"/>
+                                                        </div>
+                                                        <div class="col-6" style="border-left: 1px solid #000000;height: 35px;">
+                                                            <span t-field="line.sale_order_id.name"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-light bg-dark text-center">
+                                                        PAQ./PACK
+                                                    </div>
+                                                    <div class="text-center">
+                                                        <span t-esc="qty + 1"/> DE <span t-esc="'%.0f'%line.quantity_shipped"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </strong>
+                                    </div>
+                                    <div class="row mt-1">
+                                        <div class="col-6 text-left">
+                                            <sub>Pagina <span t-esc="pag_n"/> de <span t-esc="pag_tot[doc.id]"/></sub>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <sub><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d %B %Y')"/></sub>
+                                        </div>
+                                    </div>
+                                    <p style="page-break-after:always;">   </p>
+                                    <t t-set="pag_n" t-value="pag_n+1"/>
+                                </t>
+                            </t>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

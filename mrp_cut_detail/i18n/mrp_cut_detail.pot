@@ -1,0 +1,320 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mrp_cut_detail
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-17 23:56+0000\n"
+"PO-Revision-Date: 2017-04-17 23:56+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_cut_detail
+#: model:ir.ui.view,arch_db:mrp_cut_detail.mrp_bom_line_detail_form_view
+msgid "<span> cms.</span>"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.ui.view,arch_db:mrp_cut_detail.mrp_bom_line_form_view
+msgid "BoM Line"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.actions.act_window,name:mrp_cut_detail.action_mrp_bom_line_detail
+#: model:ir.ui.menu,name:mrp_cut_detail.mrp_bom_line_detail_menu
+#: model:ir.ui.view,arch_db:mrp_cut_detail.mrp_bom_line_detail_form_view
+#: model:ir.ui.view,arch_db:mrp_cut_detail.mrp_bom_line_detail_tree
+msgid "BoM Line Detail"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line.py:15
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_bom_line_detail_ids
+#: model:ir.ui.view,arch_db:mrp_cut_detail.mrp_bom_line_form_view
+#, python-format
+msgid "BoM Line Details"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.actions.act_window,name:mrp_cut_detail.action_mrp_bom_line
+#: model:ir.ui.menu,name:mrp_cut_detail.mrp_bom_line_menu
+msgid "BoM Lines"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:83
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_caliber_id
+#, python-format
+msgid "Caliber"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_operation.py:12
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_operation_code
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_production_line_code
+#, python-format
+msgid "Code"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:78
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_color_id
+#, python-format
+msgid "Color"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:36
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_product_id
+#, python-format
+msgid "Composite Article"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_create_uid
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_operation_create_uid
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_production_line_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_create_date
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_operation_create_date
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_production_line_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:87
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_long_cut
+#, python-format
+msgid "Cut Long"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:55
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_width_cut
+#, python-format
+msgid "Cut Width"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_production_line_description
+msgid "Description"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_display_name
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_operation_display_name
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_production_line_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:47
+#: model:ir.model.fields,help:mrp_cut_detail.field_mrp_bom_line_detail_row
+#, python-format
+msgid "Gives the row order when displaying."
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_id
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_operation_id
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_production_line_id
+msgid "ID"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:95
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_kilos
+#, python-format
+msgid "Kilos"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail___last_update
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_operation___last_update
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_production_line___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_write_uid
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_operation_write_uid
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_production_line_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_write_date
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_operation_write_date
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_production_line_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.ui.view,arch_db:mrp_cut_detail.mrp_bom_line_form_view
+msgid "List Details"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_routing_id
+msgid "Manufacturing Routing"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:73
+#: code:addons/mrp_cut_detail/models/product_template.py:14
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_material
+#, python-format
+msgid "Material"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:67
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_meters2
+#, python-format
+msgid "Meters2"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:63
+#: code:addons/mrp_cut_detail/models/mrp_operation.py:16
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_name
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_operation_name
+#, python-format
+msgid "Name"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line.py:27
+#: code:addons/mrp_cut_detail/models/mrp_bom_line.py:40
+#, python-format
+msgid "One product cannot be detail of itself"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.actions.act_window,name:mrp_cut_detail.action_mrp_operation
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_routing_workcenter_operation_id
+#: model:ir.ui.menu,name:mrp_cut_detail.mrp_operation_menu
+#: model:ir.ui.view,arch_db:mrp_cut_detail.mrp_bom_line_tree_geb
+#: model:ir.ui.view,arch_db:mrp_cut_detail.mrp_operation_form
+#: model:ir.ui.view,arch_db:mrp_cut_detail.mrp_operation_tree
+msgid "Operation"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:27
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_bom_line_id
+#, python-format
+msgid "Parent BoM Line"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model,name:mrp_cut_detail.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.ui.view,arch_db:mrp_cut_detail.mrp_production_line_form
+msgid "Production Line"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.actions.act_window,name:mrp_cut_detail.action_mrp_production_line
+#: model:ir.ui.menu,name:mrp_cut_detail.mrp_production_line_menu
+#: model:ir.ui.view,arch_db:mrp_cut_detail.mrp_production_line_tree
+msgid "Production Lines"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_production_line_id
+msgid "Production line"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:51
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_quantity
+#, python-format
+msgid "Quantity"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:45
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_row
+#, python-format
+msgid "Row"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:91
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_side
+#, python-format
+msgid "Sides"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:110
+#: sql_constraint:mrp.bom.line.detail:0
+#, python-format
+msgid "The row must be unique !"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:59
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_thickness
+#, python-format
+msgid "Thickness"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line.py:30
+#: code:addons/mrp_cut_detail/models/mrp_bom_line.py:43
+#, python-format
+msgid "This product is already in this Bom"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: code:addons/mrp_cut_detail/models/mrp_bom_line_detail.py:99
+#: model:ir.model.fields,field_description:mrp_cut_detail.field_mrp_bom_line_detail_variants
+#: model:ir.ui.view,arch_db:mrp_cut_detail.mrp_bom_line_detail_form_view
+#, python-format
+msgid "Variants"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model,name:mrp_cut_detail.model_mrp_routing_workcenter
+msgid "Work Center Usage"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model,name:mrp_cut_detail.model_mrp_bom_line
+msgid "mrp.bom.line"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model,name:mrp_cut_detail.model_mrp_bom_line_detail
+msgid "mrp.bom.line.detail"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model,name:mrp_cut_detail.model_mrp_bom_line_detail_operation
+msgid "mrp.bom.line.detail.operation"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model,name:mrp_cut_detail.model_mrp_operation
+msgid "mrp.operation"
+msgstr ""
+
+#. module: mrp_cut_detail
+#: model:ir.model,name:mrp_cut_detail.model_mrp_production_line
+msgid "mrp.production.line"
+msgstr ""
+

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_segment_filter" model="ir.ui.view">
+            <field name="name">mrp.segment.filter</field>
+            <field name="model">mrp.segment</field>
+            <field name="arch" type="xml">
+                <search string="Search Segment">
+                    <field name="folio" string="Folio" filter_domain="[('folio', 'ilike', self)]"/>
+                    <field name="name" string="Segment Reference"/>
+                    <field name="date"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Status" domain="[]" name="status" context="{'group_by':'state'}"/>
+                        <filter string="Segment Month" name="month" domain="[]" context="{'group_by':'date'}" help="Segments by Month"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_segment_tree" model="ir.ui.view">
+            <field name="name">mrp.segment.tree</field>
+            <field name="model">mrp.segment</field>
+            <field name="arch" type="xml">
+                <tree string="Segments" decoration-muted="state == 'cancel'">
+                    <field name="folio"/>
+                    <field name='location_id'/>
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="commitment_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_segment_form" model="ir.ui.view">
+            <field name="name">mrp.segment.form</field>
+            <field name="model">mrp.segment</field>
+            <field name="arch" type="xml">
+                <form string="Segmentation">
+                    <header>
+                        <button name="prepare_segment" states="draft" string="Proceed" type="object" class="oe_highlight"/>
+                        <button name="process_segment" states="confirm" string="Process" type="object" class="oe_highlight"/>
+                        <button name="validate_segment" states="construction" string="Validate" type="object" class="oe_highlight"/>
+                        <button name="add" states="construction" string="Add production" type="object"/>
+                        <button name="cancel_segment" states="construction" string="Cancel" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,construction,confirm,done"/>
+                        <button name="reverse_in_construction" states="confirm" string="Reverse in Construction" type="object" class="oe_highlight" />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="folio" class="oe_edit_only"/>
+                            <h1><field name='folio'/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name" placeholder="Name for Segment"/>
+                                <field name="location_id" domain="[('usage','in', ['production'])]"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                                <field name="commitment_date"/>
+                                <field name="commitment_week_number" readonly="True"/>
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                                <field name="express" groups="mrp_segment.group_express_mrp_segment"/>
+                            </group>
+                        </group>
+                        <notebook attrs="{'invisible':[('state','=','draft')]}">
+                            <page string="Segment Details" >
+                                <field name="line_ids" string="Manufacturing Orders Details" >
+                                    <tree string="Segment Details" editable="bottom" create="false">
+                                        <field name="mrp_production_id"/>
+                                        <field name="state"/>
+                                        <field name="sale_name"/>
+                                        <!--field name="product_code"/-->
+                                        <field name="product_id"/>
+                                        <!--field name="product_name"/-->
+                                        <field name="standard_cost"/>
+                                        <field name="product_weight"/>
+                                        <field name="product_volume"/>
+                                        <field name='product_uom'/>
+                                        <field name="product_qty"/>
+                                        <field name="manufacture_qty"/>
+                                        <field name="quantity" attrs="{'readonly':[('state','not in',['planned','progress'])]}"/>
+                                        <!-- icon="fa-level-up" -->
+                                        <button icon="fa-steam" name="%(mrp_segment.action_view_mrp_eco_segment_line)d" string="Reportar error de lista de materiales" type="action"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page  string="Scheduled goods" >
+                                <field name="product_lines_ids">
+                                    <tree tring="Products to Consume">
+                                        <field name="location_id"/>
+                                        <field name='raw_material_production_id'/>
+                                        <field name="product_id"/>
+                                        <field name="standard_price"/>
+                                        <field name="product_qty"  string="Quantity"/>
+                                        <field name="product_uom" options="{'no_open':True,'no_create':True}" string="Unit of Measure" groups="product.group_uom"/>
+                                        <field name="state" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_segment_form" model="ir.actions.act_window">
+            <field name="name">Segments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.segment</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_segment_tree"/>
+            <field name="search_view_id" ref="view_segment_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to start a segment.
+                </p>
+                <p>
+                    Segments are useful for grouping Manufacturing Orders that will be dealt with within a certain time span, could be a week.
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="action_segment_form" 
+            id="menu_mrp_segment_action"
+            name="Segmentation"
+            parent="mrp.menu_mrp_manufacturing"
+            sequence="30"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_wizard_update_fiscal_information_sat" model="ir.ui.view">
+        <field name="name">Update Fiscal Information</field>
+        <field name="model">update.invoice.fiscal.information</field>
+        <field name="arch" type="xml">
+        <form string="Validate Invoice UUID SAT" version="8.0">
+            The Fiscal Information for the selected invoices will be updated. This may take a few minutes. Do you want to continue?
+            <group colspan="4">
+                <group>
+                    <field name='date_from'/>
+                </group>
+                <group>
+                    <field name='date_to'/>
+                </group>
+            </group>
+            <footer>
+                <button name="execute_update_invoice" string="Update" type="object" class="btn-primary"/>
+                <button string="Cancel" class="btn-default" special="cancel"/>
+            </footer>
+        </form>
+        </field>
+    </record>
+
+    <record id="action_wizard_update_fiscal_information_sat" model="ir.actions.act_window">
+        <field name="name">Update Fiscal Information</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">update.invoice.fiscal.information</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_wizard_update_fiscal_information_sat"/>
+        <field name="target">new</field>
+        <field name="help"></field>
+        <field name="context">{'ctx_active_ids': [], 'ctx_active_model':''}</field>
+    </record>
+
+    <act_window name="Update Fiscal Information"
+            res_model="update.invoice.fiscal.information"
+            src_model="account.invoice"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"
+            id="act_wizard_update_fiscal_information_sat"
+            context="{'ctx_active_ids': active_ids, 'ctx_active_model':active_model}"
+            groups="base.group_no_one"
+            />
+</odoo>

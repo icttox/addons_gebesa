@@ -1,0 +1,27 @@
+id,code,name,level
+l10_mx_immex_table_type_01,586328_501.asc,Datos Generales,pedimento
+l10_mx_immex_table_type_02,586328_502.asc,Transporte de las mercancias,pedimento
+l10_mx_immex_table_type_03,586328_503.asc,Guias,pedimento
+l10_mx_immex_table_type_04,586328_504.asc,Contenedores,pedimento
+l10_mx_immex_table_type_05,586328_505.asc,Facturas,pedimento
+l10_mx_immex_table_type_06,586328_506.asc,Fechas de Pedimento,pedimento
+l10_mx_immex_table_type_07,586328_507.asc,Casos del pedimento,pedimento
+l10_mx_immex_table_type_08,586328_508.asc,Cuentas Aduaneras de Garantia del Pedimento,pedimento
+l10_mx_immex_table_type_09,586328_509.asc,Tasas del pedimento,pedimento
+l10_mx_immex_table_type_10,586328_510.asc,Contribuciones del pedimento,pedimento
+l10_mx_immex_table_type_11,586328_511.asc,Observaciones del pedimento,pedimento
+l10_mx_immex_table_type_12,586328_512.asc,Descargos de mercancia,pedimento
+l10_mx_immex_table_type_13,586328_520.asc,Destinatarios de la mercancia,pedimento
+l10_mx_immex_table_type_14,586328_551.asc,Partidas,partida
+l10_mx_immex_table_type_15,586328_552.asc,Mercancias,partida
+l10_mx_immex_table_type_16,586328_553.asc,Permisos de la partida,partida
+l10_mx_immex_table_type_17,586328_554.asc,Casos de la partida,partida
+l10_mx_immex_table_type_18,586328_555.asc,Cuentas Aduaneras de Garantia del Pedimento,partida
+l10_mx_immex_table_type_19,586328_556.asc,Tasas de las contribuciones de la partida,partida
+l10_mx_immex_table_type_20,586328_557.asc,Contribuciones de la partida,partida
+l10_mx_immex_table_type_21,586328_558.asc,Observaciones de la partida,partida
+l10_mx_immex_table_type_22,586328_701.asc,Rectificaciones,pedimento
+l10_mx_immex_table_type_23,586328_702.asc,Diferencias de Contribuciones del pedimento,pedimento
+l10_mx_immex_table_type_24,586328_Inci.asc,Incidencias del reconocimiento aduanero,partida
+l10_mx_immex_table_type_25,586328_Resumen.asc,Resumen,pedimento
+l10_mx_immex_table_type_26,586328_Sel.asc,Seleccion automatizada,pedimento

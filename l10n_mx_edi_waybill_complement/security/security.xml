@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <record model="res.groups" id="group_products_services">
+            <field name="name">Allow products services</field>
+        </record>
+    </data>
+</odoo>

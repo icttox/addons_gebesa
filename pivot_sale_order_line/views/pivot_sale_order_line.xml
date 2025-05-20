@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="sale_order_line_product_pivot_t" model="ir.ui.view">
+            <field name="name">sale.order.line.product.pivot.t</field>
+            <field name="model">sale.order.line.ba</field>
+            <field name="arch" type="xml">
+                <pivot string="Sale Orders">
+                    <field name="code" type="row" string="Product"/>
+                    <field name='week' type="col" interval="week"/>
+                    <field name="net_s" type="measure"  string="Vta Neta MXN"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="sale_order_line_product_tree_t" model="ir.ui.view">
+            <field name="name">sale.order.line.product.tree.t</field>
+            <field name="model">sale.order.line.ba</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Orders">
+                    <field name="order"/>
+                    <field name="fecha_order"/>
+                    <field name="code"/>
+                    <field name='week' interval="week"/>
+                    <field name="net_s"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id='action_product_order_line_t' model='ir.actions.act_window'>
+            <field name='name'>Sales For Product</field>
+            <field name='res_model'>sale.order.line.ba</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>pivot,tree</field>
+            <field name="view_id" ref="sale_order_line_product_pivot_t"/>
+        </record>
+        <menuitem id="menu_product_order_line_t" parent="sale.menu_sale_report" name="Sales For Product" action="action_product_order_line_t"/>
+    </data>
+</odoo>
+<!--<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="sale_order_line_product_pivot_c" model="ir.ui.view">
+            <field name="name">sale_order_line_product_pivot_c</field>
+            <field name="model">sale.order.line.ba</field>
+            <field name="arch" type="xml">
+                <pivot string="Sale Orders">
+                    <field name='week' type="col" interval="week"/>
+                    <field name="net_s" type="measure"/> 
+                    <field name="code" type="row"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id='action_product_order_line_c' model='ir.actions.act_window'>
+            <field name='name'>Khe</field>
+            <field name='res_model'>sale.order.line.ba</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>pivot,tree</field>
+            <field name="view_id" ref="sale_order_line_product_pivot_c"/>
+        </record>
+        <menuitem id="menu_product_order_line_c" parent="base.menu_sale_report" name="Khe" action="action_product_order_line_c"/>
+    </data>
+</openerp>-->

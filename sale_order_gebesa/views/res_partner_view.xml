@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_res_partner_np_form'>
+            <field name='name'>view.res1.partner.np.form</field>
+            <field name='model'>res.partner</field>
+            <field name='inherit_id' ref="base.view_partner_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/sheet/group/group[2]/field[@name='website']" position="before">
+                    <field string="Notify Sale Approval" name="notify_approval" attrs="{'required': [('customer', '=', True)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

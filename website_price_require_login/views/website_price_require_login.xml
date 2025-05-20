@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<!--Oculta precio de todos los de la tienda-->
+    <template id="products_item" inherit_id="website_sale.products_item">
+        <xpath expr="//div[@class='product_price']" position="attributes">
+            <attribute name="t-if">(user_id != website.user_id and
+                not optional_products and
+                website_sale_order and
+                website_sale_order.website_order_line)
+            </attribute>
+        </xpath>
+    </template>
+    <!--Oculta el precio cuando se agrega al carrito-->
+    <template id="products_item_16" inherit_id="website_sale.product_price">
+        <xpath expr="//div[@class='product_price mt16']" position="attributes">
+            <attribute name="t-if">(user_id != website.user_id)</attribute>
+        </xpath>
+    </template>
+    <!--Oculta el precio con la cantida de piezas, tercera pantalla -->
+    <template id="products_prices" inherit_id="website_sale.cart_lines">
+        <xpath expr="//table[@id='cart_products']" position="attributes">
+            <attribute name="t-if">(user_id != website.user_id)</attribute>
+        </xpath>
+    </template>
+    <!--Oculta el precio del subtotal-->
+    <template id="products_prices_subtotal" inherit_id="website_sale.total">
+        <xpath expr="//div[@id='cart_total']" position="attributes">
+            <attribute name="t-if">(user_id != website.user_id)</attribute>
+        </xpath>
+    </template>
+</odoo> 

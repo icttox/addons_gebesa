@@ -1,0 +1,259 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* fletera_externa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-09 22:36+0000\n"
+"PO-Revision-Date: 2018-02-09 22:36+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "<b>Fecha de Regreso:</b> ____________________"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "<b>Observaciones:</b>"
+msgstr ""
+
+#. module: fletera_externa
+#: code:addons/fletera_externa/models/mrp_shipment.py:33
+#: model:ir.model.fields,field_description:fletera_externa.field_mrp_shipment_importe
+#, python-format
+msgid "Amount"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "CAJA:"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "CAMION:"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "COBRANZA"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "Cliente"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "DEPARTAMENTO RECURSOS HUMANOS GEBESA"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "DESTINO:"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "DEVOLUCIONES: NO"
+msgstr ""
+
+#. module: fletera_externa
+#: code:addons/fletera_externa/models/mrp_shipment.py:21
+#: model:ir.model.fields,field_description:fletera_externa.field_mrp_shipment_deliveries
+#, python-format
+msgid "Deliveries"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.model.fields,field_description:fletera_externa.field_report_fletera_externa_report_fletera_externa_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "FECHA:"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "FLETERA:"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "FOLIO:"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "Fecha:"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.model.fields,field_description:fletera_externa.field_report_fletera_externa_report_fletera_externa_id
+msgid "ID"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "INGRESO DE PERSONAL"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "INSTRUCCIONES A FLETERA ETERNA"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "INSTRUCCIONES DEL VIAJE PARA EL OPERADOR"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "Imp. Flete"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "Importe"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.actions.report.xml,name:fletera_externa.fletera_externa
+msgid "Imprimir Fletera Externa"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "Ins. Cobranza"
+msgstr ""
+
+#. module: fletera_externa
+#: code:addons/fletera_externa/models/mrp_shipment.py:37
+#: model:ir.model.fields,field_description:fletera_externa.field_mrp_shipment_cobranza
+#, python-format
+msgid "Ins. de Cobranza"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "Instrucción"
+msgstr ""
+
+#. module: fletera_externa
+#: code:addons/fletera_externa/models/mrp_shipment.py:41
+#: model:ir.model.fields,field_description:fletera_externa.field_mrp_shipment_instruction
+#, python-format
+msgid "Instruction"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.model.fields,field_description:fletera_externa.field_report_fletera_externa_report_fletera_externa___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "Manufacturas Post Form S.A de C.V."
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "OPERADOR:"
+msgstr ""
+
+#. module: fletera_externa
+#: code:addons/fletera_externa/models/mrp_shipment.py:13
+#: model:ir.model.fields,field_description:fletera_externa.field_mrp_shipment_operator
+#, python-format
+msgid "Operator"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "Orden"
+msgstr ""
+
+#. module: fletera_externa
+#: code:addons/fletera_externa/models/mrp_shipment.py:29
+#: model:ir.model.fields,field_description:fletera_externa.field_mrp_shipment_order
+#, python-format
+msgid "Order"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "PLACAS:"
+msgstr ""
+
+#. module: fletera_externa
+#: code:addons/fletera_externa/models/mrp_shipment.py:25
+#: model:ir.model.fields,field_description:fletera_externa.field_mrp_shipment_plaque
+#, python-format
+msgid "Plaque"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "Página 1 de 1"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "REPARTOS:"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.model,name:fletera_externa.model_mrp_shipment
+msgid "Shipment"
+msgstr ""
+
+#. module: fletera_externa
+#: code:addons/fletera_externa/models/mrp_shipment.py:17
+#: model:ir.model.fields,field_description:fletera_externa.field_mrp_shipment_truck
+#, python-format
+msgid "Truck"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "_______________________________\n"
+"                        <br/>\n"
+"                         Nombre y Firma del Operador"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "_______________________________\n"
+"                        <br/>\n"
+"                        Nombre y Firma Credito y Cobranza"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "_______________________________\n"
+"                        <br/>\n"
+"                        Nombre y Firma Depto. Embarques"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.model,name:fletera_externa.model_report_fletera_externa_report_fletera_externa
+msgid "report.fletera_externa.report_fletera_externa"
+msgstr ""
+
+#. module: fletera_externa
+#: model:ir.ui.view,arch_db:fletera_externa.report_fletera_externa_document
+msgid "www.gebesa.com"
+msgstr ""
+

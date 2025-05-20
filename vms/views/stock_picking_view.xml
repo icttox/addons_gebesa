@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="view_picking_vms_form" model="ir.ui.view">
+            <field name="name">view.picking.vms.form</field>
+            <field name="model">stock.picking</field>
+            <!-- <field name="groups_id" eval="[(6,0,[ref('tms.group_expenses'),ref('tms.group_monitoring'),ref('tms.group_supervisor_traffic'),ref('tms.group_traffic')])]"/> -->
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook" position="inside">
+                    <page string="VMS">
+                        <group>
+                            <field name="vms_order_line"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

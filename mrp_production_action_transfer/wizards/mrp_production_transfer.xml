@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_production_transfer_form'>
+            <field name='name'>mrp.production.transfer.form</field>
+            <field name='model'>mrp.production.transfer</field>
+            <field name='arch' type='xml'>
+                <form string='Production Transfer'>
+                    <p class="oe_grey">
+                        * Works only with production orders in "Done" or "In Production" status and transfers produced products that have not been shipped.
+                    </p>
+                    <footer>
+                        <button string="Transfer produced products" name="mrp_production_transfer" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_production_transfer"
+            multi="True"
+            key2="client_action_multi" name="Production Transfer"
+            res_model="mrp.production.transfer" src_model="mrp.production"
+            view_mode="form" target="new" view_type="form" />
+    </data>
+</odoo>

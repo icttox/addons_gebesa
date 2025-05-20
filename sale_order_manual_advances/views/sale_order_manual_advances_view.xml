@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='sale_order_manual_advances_form'>
+            <field name='name'>sale.order.manual.advances.form</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref="sale.view_order_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Manual Advances">
+                        <field name="advance_ids" context="{'partner_advance_id': partner_id}" attrs="{'readonly':[('geb_invoice_status','=','total_invoice')]}">
+                            <tree editable="bottom">
+                                <field name="sale_id" invisible="1"/>
+                                <field name="advance_id" domain="[('prepayment_ok', '=', True), ('partner_id','=', context.get('partner_advance_id')), ('advance_applied', '=', False), ('state', '!=', ['draft','cancel']), ('l10n_mx_edi_cfdi_uuid', '!=', False)]"/>
+                                <field name="amount_advance" widget="monetary" sum="Total"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

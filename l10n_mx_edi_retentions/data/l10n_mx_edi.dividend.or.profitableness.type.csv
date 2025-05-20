@@ -1,0 +1,7 @@
+id,code,name
+l10n_mx_edi_dividend_or_profitableness_type_01,01,Proviene de CUFIN
+l10n_mx_edi_dividend_or_profitableness_type_02,02,No proviene de CUFIN
+l10n_mx_edi_dividend_or_profitableness_type_03,03,Reembolso o reducción de capital
+l10n_mx_edi_dividend_or_profitableness_type_04,04,Liquidación de la persona moral
+l10n_mx_edi_dividend_or_profitableness_type_05,05,CUFINRE
+l10n_mx_edi_dividend_or_profitableness_type_06,06,Proviene de CUFIN al 31 de diciembre 2013.

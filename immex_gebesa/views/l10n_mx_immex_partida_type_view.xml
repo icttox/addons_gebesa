@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_l10_mx_partida_type_form">
+            <field name="name">view.l10.mx.partida.type.form</field>
+            <field name="model">l10n.mx.immex.partida.type</field>
+            <field name="arch" type="xml">
+                <form string="immex partida type Form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="clave" class="oe_edit_only"/>
+                            <h1><field name="clave" class="oe_inline"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="download_exceptions_apply"/>
+                            </group>
+                            <group>
+                                <field name="company_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Productos">
+                                <div>
+                                    <field name="product_ids">
+                                        <tree editable="bottom">
+                                            <field name='name'/>
+                                            <field name='type'/>
+                                            <field name='categ_id'/>
+                                            <field name='default_code'/>
+                                            <field name='uom_id'/>
+                                            <field name='uom_po_id'/>
+                                            <field name='apply_download_immex'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Partidas">
+                                <div>
+                                    <field name="partida_ids">
+                                        <tree editable="bottom">
+                                            <field name='pedimento_num'/>
+                                            <field name='cantidad_udm_comercial'/>
+                                            <field name='cantidad_udm_tarifa'/>
+                                            <field name='udm_comercial'/>
+                                            <field name='udm_tarifa'/>
+                                            <field name='clave_documento'/>
+                                            <field name='precio_unitario'/>
+                                            <field name='amount'/>
+                                            <field name='fecha_pago_real'/>
+                                            <field name='resumen_id'/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='view_l10_mx_partida_type_tree'>
+            <field name='name'>view.l10.mx.partida.type.tree</field>
+            <field name='model'>l10n.mx.immex.partida.type</field>
+            <field name='arch' type='xml'>
+                <tree string='immex partida type Tree'>
+                    <field name='clave'/>
+                    <field name="name"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_partida_type_tree" model="ir.actions.act_window">
+            <field name="name">Immex Partida Type</field>
+            <field name="res_model">l10n.mx.immex.partida.type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_l10_mx_partida_type_tree"/>
+        </record>
+        <menuitem action="action_partida_type_tree" groups="immex_gebesa.group_immex_manager" name="Immex Partida Type" id="menu_immex_partida_type" parent="immex_gebesa.configuration_menu" sequence="50"/>
+    </data>
+</odoo>

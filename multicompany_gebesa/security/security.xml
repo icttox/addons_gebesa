@@ -1,0 +1,13 @@
+<odoo>
+	<data>
+        <record model="res.groups" id="allow_po_so_amount_discrepancy">
+            <field name="name">Allow PO SO amount discrepancy</field>
+        </record>
+        <record model="res.groups" id="update_price_po">
+            <field name='name'>Update price po</field>
+        </record>
+        <record model="res.groups" id="validate_without_taxes">
+            <field name='name'>validate without taxes</field>
+        </record>
+    </data>
+</odoo>

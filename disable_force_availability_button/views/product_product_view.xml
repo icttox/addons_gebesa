@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_normal_form_view'>
+            <field name='name'>product.normal.traceability.form.view</field>
+            <field name='model'>product.product</field>
+            <field name='inherit_id' ref="product.product_normal_form_view"/>
+            <field name='arch' type='xml'>
+            	<button name="action_view_stock_move_lines" position="replace">
+            		<button type="object"
+                        name="action_view_stock_moves"
+                        class="oe_stat_button"
+                        icon="fa-list-ul"
+                        string="Traceabilidad"
+                        groups="base.group_user">
+                    </button>
+            	</button>
+                <button name="toggle_active" position="before">
+                    <button string="Product Moves" type="object" name="action_view_stock_move_lines" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" class="oe_stat_button" icon="fa-arrows-v" groups="stock.group_stock_user"/>
+                </button>
+            </field>
+        </record>
+    </data>
+</odoo>

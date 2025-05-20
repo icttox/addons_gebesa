@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/website_production_load/static/src/css/website_production_load.css"/>
+            </xpath>
+        </template>
+
+        <template id="assets_frontend" inherit_id="website.assets_frontend">
+            <xpath expr="script[last()]" position="after">
+                <script type="text/javascript" src="/website_production_load/static/src/js/website_production_load.js"></script>
+            </xpath>
+        </template>
+
+        <!-- No odoo frame templates -->
+        <template id="start_production_load">
+            <t t-call="web.basic_layout">
+                <div class="container">
+                    <t t-call-assets="web.assets_frontend" t-js="false"/>
+                    <t t-call-assets="web.assets_frontend" t-css="false"/>
+                    <title>Production Load</title>
+                    <form t-attf-action="/production_load-submit" method="post" data-success_page="/production_load-thanks" enctype="multipart/form-data" style="font-size: 18pt">
+                        <div class="form-group form-field o_website_form_required_custom col-md-offset-2 col-sm-offset-3">
+                            <br/>
+                            <p style="font-size: 30pt">
+                                <b>Production Load </b>
+                            </p>
+                        </div>
+                        <div class="form-group form-field o_website_form_required_custom">
+                            <div id="div_prod_load_employee_number">
+                                <label style="font-size: 18pt" class="col-md-5 col-sm-6 control-label" id="label_employee" name="label_employee" for="prod_load_employee_number">Número de empleado</label>
+                                <div id="div_employee" class="col-lg-7 col-md-8" name="div_employee">
+                                    <input type="text" class="form-control form-control-lg o_website_form_input" id="prod_load_employee_number" name="employee" style="-moz-appearance: textfield;" autocomplete="off"/>
+                                </div>
+                            </div>
+
+                            <div id="div_prod_load_workcenter_id" style="display:none">
+                                <label class="col-md-5 col-sm-6 control-label" style="font-size: 18pt" for="prod_load_workcenter_id">Centro de producción</label>
+                            
+                                <div class="col-lg-9 col-md-10">
+                                    <select class="form-control form-control-lg o_website_form_input" id="prod_load_workcenter_id" name="workcenter" required="1">
+                                        <option value="">Seleccionar centro de trabajo</option>
+                                        <t t-foreach="workcenter_selection" t-as="workcenter">
+                                            <option t-att-value="workcenter['id']">
+                                                <t t-esc="workcenter['name']"/>
+                                            </option>
+                                        </t>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div id="div_prod_load_product_id" style="display:none">
+                                <label class="col-md-5 col-sm-6 control-label" style="font-size: 18pt" for="prod_load_product_id">Producto</label>
+                                <ul class="list-inline" id="ul_prod_load_product">
+                                </ul>
+                            </div>
+
+                            <div id="div_prod_load_qty" style="display:none">
+                                <label class="col-md-5 col-sm-6 control-label" style="font-size: 18pt" for="prod_load_qty">Cantidad a registrar</label>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="number" step="any" min="0" class="form-control form-control-lg o_website_form_input" id="prod_load_qty" name="prod_load_qty" required="" onwheel="return false" style="-moz-appearance: textfield;" t-att-value="qty"/>
+                                </div>
+                            </div>
+
+                            <div id="div_prod_load_operation_id" style="display:none">
+                                <label class="col-md-5 col-sm-6 control-label" style="font-size: 18pt" for="prod_load_operation_id">Operación</label>
+                            
+                                <div class="col-lg-9 col-md-10">
+                                    <select class="form-control form-control-lg o_website_form_input" id="prod_load_operation_id" name="operation" required="1">
+                                        <option value="">Seleccionar Operación</option>
+                                        <t t-foreach="operation_selection" t-as="operation">
+                                            <option t-att-value="operation['id']">
+                                                <t t-esc="operation['name']"/>
+                                            </option>
+                                        </t>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div id="div_prod_load_comments" style="display:none">
+                                <label style="font-size: 18pt" class="col-md-5 col-sm-6" id="label_employee" name="label_comments" for="prod_load_comments">Comentarios</label>
+                                <div id="div_comments" class="col-lg-7 col-md-8" name="div_comments">
+                                    <input type="text" class="form-control form-control-lg o_website_form_input" id="prod_load_comments" name="comments" style="-moz-appearance: textfield;" autocomplete="off"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row"  style="height: 5rem;">
+                                <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5" id="div_prod_load_submit" style="display:none">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 h-100 o_website_form_send">Submit</button>
+                                    <span id="o_website_form_result">
+                                    </span>
+                                </div>
+                                <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5">
+                                    <a href="/start_production_load">
+                                        <button type="button" class="btn btn-danger btn-lg w-100 h-100 o_website_form_send">Cancel</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                    </form>
+                </div>
+            </t>
+        </template>
+
+        <template id="error_production_load">
+            <t t-call="web.basic_layout">
+                <div class="container">
+                    <t t-call-assets="web.assets_frontend" t-js="false"/>
+                    <t t-call-assets="web.assets_frontend" t-css="false"/>
+                    <title>Production Load Error</title>
+                    <form style="font-size: 25pt">
+                        <br/><br/>
+                        <div class="alert alert-danger" role="status">
+                            <strong t-esc="msg_error"/>
+                        </div>
+                        <br/><br/>
+                        <div class="form-group">
+                            <div class="row"  style="height: 5rem;">
+                                <!-- <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5">
+                                    <a href="/alert_quality">
+                                        <button type="button" class="btn btn-info btn-lg w-100 h-100 o_website_form_send">Return</button>
+                                    </a>
+                                </div> -->
+                                <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5">
+                                    <a href="/start_production_load">
+                                        <button type="button" class="btn btn-danger btn-lg w-100 h-100 o_website_form_send">Cancel</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

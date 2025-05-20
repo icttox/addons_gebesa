@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+  <data>
+    <record id="uuid_checker_view_form" model="ir.ui.view">
+      <field name="name">uuid.checker.form</field>
+      <field name="model">uuid.checker</field>
+      <field name="arch" type="xml">
+        <form string="UUID Checker">
+          <group>
+            <field name="data" filename="filename"/>
+            <field name="filename" invisible="1"/>
+          </group>
+          <footer>
+            <button name="execute_compare" string="Comparar" type="object" class="btn-primary"/>
+            <button string="Cancel" class="btn-default" special="cancel" />
+          </footer>
+        </form>
+      </field>
+    </record>
+
+    <record id="uuid_checker_action" model="ir.actions.act_window">
+      <field name="name">UUID Checker</field>
+      <field name="res_model">uuid.checker</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="uuid_checker_view_form"/>
+      <field name="target">new</field>
+      <field name="groups_id" eval="[(4,ref('system_administrator.group_system_administrator_gebesa'))]"/>
+    </record>
+
+    <menuitem id="uuid_checker_menu" name="UUID Checker" parent="account.menu_finance_entries" action="uuid_checker_action"/>
+
+  </data>
+</odoo>
+

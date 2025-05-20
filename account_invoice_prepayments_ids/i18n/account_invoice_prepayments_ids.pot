@@ -1,0 +1,36 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_invoice_prepayments_ids
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-14 17:52+0000\n"
+"PO-Revision-Date: 2016-06-14 17:52+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_invoice_prepayments_ids
+#: code:addons/account_invoice_prepayments_ids/models/account_invoice.py:17
+#: model:ir.model.fields,field_description:account_invoice_prepayments_ids.field_account_invoice_prepayment_move_ids
+#, python-format
+msgid "Accountant Move of the Advance Invoice"
+msgstr ""
+
+#. module: account_invoice_prepayments_ids
+#: model:ir.model,name:account_invoice_prepayments_ids.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: account_invoice_prepayments_ids
+#: code:addons/account_invoice_prepayments_ids/models/account_invoice.py:12
+#: model:ir.model.fields,field_description:account_invoice_prepayments_ids.field_account_invoice_prepayment_number
+#, python-format
+msgid "Number Invoice Advance"
+msgstr ""
+

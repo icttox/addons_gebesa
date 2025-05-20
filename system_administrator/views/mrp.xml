@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="gebesa_mrp_production_form_view" model="ir.ui.view">
+            <field name="name">system.administrator.mrp.production.form</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/group/div/button" position="replace">
+                    <button type="action" name="%(mrp.action_change_production_qty)d" string="Update" states="confirmed" class="oe_edit_only oe_link" groups="system_administrator.group_system_administrator_gebesa"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

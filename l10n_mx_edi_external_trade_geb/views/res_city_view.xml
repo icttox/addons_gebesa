@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="l10n_mx_edi_inh_city_tree" model="ir.ui.view">
+        <field name="name">l10n.mx.edi.inh.city.tree</field>
+        <field name="model">res.city</field>
+        <field name="inherit_id" ref="base_address_city.view_city_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="l10n_mx_edi_code"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="view_res_locality_action">
+        <field name="name">Localities</field>
+        <field name="res_model">l10n_mx_edi.res.locality</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">There's not localities created
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="sale_res_locality_menu" name="Localities" parent="contacts.menu_localisation" action="view_res_locality_action"/>
+
+    <record id="view_res_locality_tree" model="ir.ui.view">
+        <field name="name">view.res.locality.tree</field>
+        <field name="model">l10n_mx_edi.res.locality</field>
+        <field name="arch" type="xml">
+            <tree string="Localities">
+                <field name="country_id"/>
+                <field name="state_id"/>
+                <field name="code"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

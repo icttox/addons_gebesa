@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_product_consumption_wizard'>
+        	<field name='name'>product.product.consumption.wizard</field>
+        	<field name='model'>product.product.consumption.wizard</field>
+        	<field name='arch' type='xml'>
+        		<form>
+        			<group>
+                        <field name='product_id' readonly="True"/>
+                        <field name="state"/>
+        			</group>
+        		</form>
+        	</field>
+        </record>
+    </data>
+</odoo>

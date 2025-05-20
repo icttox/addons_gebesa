@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+       <record model='ir.ui.view' id='stock_inventory_tree'>
+           <field name='name'>stock.inventory.tree</field>
+           <field name='model'>stock.inventory</field>
+           <field name='inherit_id' ref='stock.view_inventory_tree'/>
+           <field name='arch' type='xml'>
+               <xpath expr="//tree/field[@name='name']" position="after">
+                   <field name="location_id"/>
+                   <field name="create_uid"/>
+               </xpath>
+           </field>
+       </record>
+   </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='account_invoice_recalculating_sales_data_form'>
+            <field name='name'>account_invoice_recalculating_sales_data</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/header/button[@name='action_invoice_draft']" position="after">
+                    <button name="recalculating_sales_data" string="Sale data" type="object" groups="system_administrator.group_system_administrator_gebesa"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

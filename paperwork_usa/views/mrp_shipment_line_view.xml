@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="package_number_id">
+			<field name="name">package.number</field>
+			<field name="model">mrp.shipment</field>
+			<field name="inherit_id" ref="mrp_shipment.mrp_shipment_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//form/sheet/notebook/page[2]/field[@name='line_ids']/tree/field[@name='shipment_id']" position="after">
+					<field name="packages_number"/>
+				</xpath>
+			</field>
+		</record>
+
+</data>
+</odoo>

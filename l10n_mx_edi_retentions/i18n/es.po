@@ -1,0 +1,1069 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_mx_edi_retentions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-10 22:59+0000\n"
+"PO-Revision-Date: 2021-11-10 17:41-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,fiscal_year:0
+msgid "2020"
+msgstr "2020"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,fiscal_year:0
+msgid "2021"
+msgstr "2021"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,fiscal_year:0
+msgid "2022"
+msgstr "2022"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,fiscal_year:0
+msgid "2023"
+msgstr "2023"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,fiscal_year:0
+msgid "2024"
+msgstr "2024"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,fiscal_year:0
+msgid "2025"
+msgstr "2025"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,fiscal_year:0
+msgid "2026"
+msgstr "2026"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,fiscal_year:0
+msgid "2027"
+msgstr "2027"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,fiscal_year:0
+msgid "2028"
+msgstr "2028"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,fiscal_year:0
+msgid "2029"
+msgstr "2029"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,fiscal_year:0
+msgid "2030"
+msgstr "2030"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<span> | Certification Date:</span>"
+msgstr "<span> | Fecha de Certificación:</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<span> | Emission Date:</span>"
+msgstr "<span> | Fecha de Emisión:</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<span> | Fiscal Folio:</span>"
+msgstr "<span> | Folio Fiscal:</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<span> | SAT Certificate:</span>"
+msgstr "<span> | Certificado SAT:</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_header
+msgid "<span>Certificate Number:</span>"
+msgstr "<span>Número de certificado:</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<span>Digital stamp SAT</span>"
+msgstr "<span>Sello digital de SAT</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<span>Digital stamp of the emitter</span>"
+msgstr "<span>Sello digital del emisor</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<span>Emitter certificate:</span>"
+msgstr "<span>Certificado del emisor:</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<span>Extra Info</span>"
+msgstr "<span>Información Extra</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_header
+msgid "<span>Fiscal Folio:</span>"
+msgstr "<span>Folio Fiscal:</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_header
+msgid "<span>Issue Date:</span>"
+msgstr "<span>Fecha de emisión:</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<span>Operation Total:</span>"
+msgstr "<span>Total de la operación:</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<span>Total Exempt:</span>"
+msgstr "<span>Total exento:</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<span>Total Taxed:</span>"
+msgstr "<span>Total Gravado:</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<span>Total Withheld:</span>"
+msgstr "<span>Total Retenido:</span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_header
+msgid "<span>VAT. </span>"
+msgstr "<span>RFC. </span>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_header
+msgid "<strong><span>Retention</span></strong>"
+msgstr "<strong><span>Retencion</span></strong>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<strong>PERIOD</strong>"
+msgstr "<strong>PERÍODO</strong>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<strong>RECEPTOR</strong>"
+msgstr "<strong>RECEPTOR </strong>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<strong>RETENTIONS</strong>"
+msgstr "<strong>RETENCIONES</strong>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "<strong>This document is a printed representation of a CFDI</strong>"
+msgstr "<strong>Este documento es una representación impresa de un CFDI</strong>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_footer
+msgid ""
+"<strong>__________________</strong>\n"
+"                        <br/>\n"
+"                        <strong>SIGNING</strong>"
+msgstr ""
+"<strong>__________________</strong>\n"
+"                        <br/>\n"
+"                        <strong>FIRMA</strong>"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "AMOUNT RETAINED"
+msgstr "MONTO RETENIDO"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_needaction
+msgid "Action Needed"
+msgstr "Acción necesaria"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__activity_state
+msgid "Activity State"
+msgstr "Estado de actividad"
+
+#. module: l10n_mx_edi_retentions
+#: code:addons/l10n_mx_edi_retentions/models/l10n_mx_edi_retentions.py:360
+#, python-format
+msgid "Addenda has been added in the CFDI with success"
+msgstr "Addenda se ha agregado en el CFDI con éxito"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__amount_isr_foreing
+msgid "Amount ISR Foreign"
+msgstr "Importe ISR Extranjero"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__amount_isr_mx
+msgid "Amount ISR Mexico"
+msgstr "Monto ISR México"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,final_month:0
+#: selection:l10n_mx_edi.retentions,initial_month:0
+msgid "April"
+msgstr "Abril"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_attachment_count
+msgid "Attachment Count"
+msgstr "Número de adjuntos"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,final_month:0
+#: selection:l10n_mx_edi.retentions,initial_month:0
+msgid "August"
+msgstr "Agosto"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "Barcode"
+msgstr "Código de barras"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_taxes__base_amount
+msgid "Base amount"
+msgstr "Monto base"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_header
+msgid "CERTIFICATE OF RETENTION FOR"
+msgstr "CONSTANCIA DE RETENCIÓN POR"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_form_view
+msgid "CFD-I"
+msgstr "CFD-I"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_cfdi_name
+msgid "CFDI name"
+msgstr "Nombre del CFDI"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,l10n_mx_edi_pac_status:0
+#: selection:l10n_mx_edi.retentions,l10n_mx_edi_sat_status:0
+#: selection:l10n_mx_edi.retentions,state:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_cfdi_certificate_id
+msgid "Certificate"
+msgstr "Certificado"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_cfdi
+msgid "Cfdi content"
+msgstr "Contenido del cfdi"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_dividend_or_profitableness_type__code
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_type__code
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_taxpayer_type__code
+msgid "Code"
+msgstr "Código"
+
+#. module: l10n_mx_edi_retentions
+#: code:addons/l10n_mx_edi_retentions/models/l10n_mx_edi_retentions.py:330
+#, python-format
+msgid "Code: %s"
+msgstr "Código: %s"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__complement_type
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__complement_type
+msgid "Complement type"
+msgstr "Tipo de complemento"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__taxpayer_type_id
+msgid "Concept"
+msgstr "Concepto"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__contract_intermediation
+msgid "Contract intermediation"
+msgstr "Contrato Intermediacion"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__country_id
+msgid "Country of Residence"
+msgstr "País de Residencia"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_retentions.l10n_mx_edi_dividend_action
+msgid "Create the first dividend type"
+msgstr "Crea el primer tipo de dividendo"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_retentions.retention_action
+msgid "Create the first retention"
+msgstr "Crea la primera retención"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_retentions.l10n_mx_edi_retentions_type_action
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_retentions.l10n_mx_edi_taxpayer_type_action
+msgid "Create the first retention types"
+msgstr "Crea los primeros tipos de retención"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_dividend_or_profitableness_type__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_taxes__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_type__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_taxpayer_type__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_dividend_or_profitableness_type__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_taxes__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_type__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_taxpayer_type__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,final_month:0
+#: selection:l10n_mx_edi.retentions,initial_month:0
+msgid "December"
+msgstr "Diciembre"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_dividend_or_profitableness_type__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_taxes__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_type__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_taxpayer_type__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,complement_type:0
+msgid "Disposal of Shares"
+msgstr "Enajenación de acciones"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__dividend_type_id
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.l10n_mx_edi_dividend_form
+msgid "Dividend or Profitable type"
+msgstr "Dividendo o tipo rentable"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,complement_type:0
+msgid "Dividends"
+msgstr "Dividendos"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.actions.act_window,name:l10n_mx_edi_retentions.l10n_mx_edi_dividend_action
+#: model:ir.ui.menu,name:l10n_mx_edi_retentions.l10n_mx_edi_dividend_menu
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.l10n_mx_edi_dividend_tree
+msgid "Dividends or Profitable types"
+msgstr "Dividendos o tipos rentables"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__earnings
+msgid "Earnings"
+msgstr "Ganancias"
+
+#. module: l10n_mx_edi_retentions
+#: code:addons/l10n_mx_edi_retentions/models/l10n_mx_edi_retentions.py:277
+#, python-format
+msgid "Error during the process: %s"
+msgstr "Error durante el proceso: %s"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__exempt_amount
+msgid "Exempt amount"
+msgstr "Monto exento"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,final_month:0
+#: selection:l10n_mx_edi.retentions,initial_month:0
+msgid "February"
+msgstr "Febrero"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__final_month
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "Final month"
+msgstr "Mes Final"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions.taxes,retention_type:0
+msgid "Final payment"
+msgstr "Pago definitivo"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_cfdi_uuid
+msgid "Fiscal Folio"
+msgstr "Folio Fiscal"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__fiscal_year
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "Fiscal year"
+msgstr "Ejercicio"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_cfdi_uuid
+msgid "Folio in electronic invoice, is returned by SAT when send to stamp."
+msgstr "Folio en facturación electrónica, es devuelto por SAT cuando se envía a firmar."
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Socios)"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions.complement,society_type:0
+msgid "Foreign Society"
+msgstr "Sociedad Extranjera"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_dividend_or_profitableness_type__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_taxes__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_type__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_taxpayer_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions.taxes,tax:0
+msgid "IEPS"
+msgstr "IEPS"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions.taxes,tax:0
+msgid "ISR"
+msgstr "ISR"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions.taxes,tax:0
+msgid "IVA"
+msgstr "IVA"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si está marcado, los mensajes nuevos requieren su atención."
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, los mensajes nuevos requieren su atención."
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__initial_month
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "Initial month"
+msgstr "Mes Inicial"
+
+#. module: l10n_mx_edi_retentions
+#: code:addons/l10n_mx_edi_retentions/models/l10n_mx_edi_retentions.py:248
+#, python-format
+msgid "Invalid given service type for Comercio Digital"
+msgstr "Tipo de servicio proporcionado no válido para Comercio Digital"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__beneficiary
+msgid "Is a beneficiary"
+msgstr "Es Beneficiario"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_cfdi_issuing_rfc
+msgid "Issuing RFC"
+msgstr "RFC del Emisión"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,final_month:0
+#: selection:l10n_mx_edi.retentions,initial_month:0
+msgid "January"
+msgstr "Enero"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,final_month:0
+#: selection:l10n_mx_edi.retentions,initial_month:0
+msgid "July"
+msgstr "Julio"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,final_month:0
+#: selection:l10n_mx_edi.retentions,initial_month:0
+msgid "June"
+msgstr "Junio"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_dividend_or_profitableness_type____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_taxes____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_type____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_taxpayer_type____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificación realizada"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_dividend_or_profitableness_type__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_taxes__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_type__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_taxpayer_type__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualización por"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_dividend_or_profitableness_type__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_taxes__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_type__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_taxpayer_type__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__losses
+msgid "Losses"
+msgstr "Pérdidas"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,final_month:0
+#: selection:l10n_mx_edi.retentions,initial_month:0
+msgid "March"
+msgstr "Marzo"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,final_month:0
+#: selection:l10n_mx_edi.retentions,initial_month:0
+msgid "May"
+msgstr "Mayo"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: l10n_mx_edi_retentions
+#: code:addons/l10n_mx_edi_retentions/models/l10n_mx_edi_retentions.py:332
+#, python-format
+msgid "Message: %s"
+msgstr "Mensaje: %s"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_dividend_or_profitableness_type__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_type__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_taxpayer_type__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions.complement,society_type:0
+msgid "National Society"
+msgstr "Sociedad Nacional"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Siguiente plazo de actividad"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la Siguiente Actividad"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,l10n_mx_edi_sat_status:0
+msgid "Not Found"
+msgstr "No encontrado"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,l10n_mx_edi_sat_status:0
+msgid "Not Synced Yet"
+msgstr "No sincronizado todavía"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,final_month:0
+#: selection:l10n_mx_edi.retentions,initial_month:0
+msgid "November"
+msgstr "Noviembre"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__number
+msgid "Number"
+msgstr "Numero"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero de Acciones"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_has_error_counter
+msgid "Number of error"
+msgstr "Número de error"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes sin leer"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,final_month:0
+#: selection:l10n_mx_edi.retentions,initial_month:0
+msgid "October"
+msgstr "Octubre"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__operation_amount
+msgid "Operation amount"
+msgstr "Monto de la operación"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,activity_state:0
+msgid "Overdue"
+msgstr "Atrasado"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_pac_status
+msgid "PAC status"
+msgstr "Estado del PAC"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_header
+msgid ""
+"Page:\n"
+"                            <span class=\"page\"/>\n"
+"                            /\n"
+"                            <span class=\"topage\"/>"
+msgstr ""
+"Página:\n"
+"                            <span class=\"page\"/>\n"
+"                            /\n"
+"                            <span class=\"topage\"/>"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,complement_type:0
+msgid "Payment foreinger"
+msgstr "Pago extranjero"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,activity_state:0
+msgid "Planned"
+msgstr "Planificado"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions.taxes,retention_type:0
+msgid "Provisional payment"
+msgstr "Pago provisional"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "RETENTION BASE"
+msgstr "BASE RETENCIÓN"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__partner_id
+msgid "Receiver"
+msgstr "Receptor"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_cfdi_receptor_rfc
+msgid "Receptor RFC"
+msgstr "RFC del receptor"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_pac_status
+msgid "Refers to the status of the retention inside the PAC."
+msgstr "Se refiere al estado de la retención dentro del PAC."
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_sat_status
+msgid "Refers to the status of the retention inside the SAT system."
+msgstr "Se refiere al estado de la retención dentro del sistema SAT."
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__required_amount
+msgid "Required amount"
+msgstr "Monto requerido"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_taxes__retained_amount
+msgid "Retained amount"
+msgstr "Monto retenido"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model,name:l10n_mx_edi_retentions.model_l10n_mx_edi_retentions_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_form_view
+msgid "Retention Complement"
+msgstr "Complemento de retención"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_form_view
+msgid "Retention Complements"
+msgstr "Complementos de retención"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_form_view
+msgid "Retention Line"
+msgstr "Línea de retención"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model,name:l10n_mx_edi_retentions.model_l10n_mx_edi_retentions_taxes
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_form_view
+msgid "Retention Lines"
+msgstr "Líneas de retención"
+
+#. module: l10n_mx_edi_retentions
+#: sql_constraint:l10n_mx_edi.retentions:0
+msgid "Retention Number must be unique per Company!"
+msgstr "¡El número de retención debe ser único por empresa!"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__retention_type_id
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_taxes__retention_type
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.l10n_mx_edi_retentions_type_form
+msgid "Retention type"
+msgstr "Tipo de retención"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.actions.act_window,name:l10n_mx_edi_retentions.l10n_mx_edi_retentions_type_action
+#: model:ir.ui.menu,name:l10n_mx_edi_retentions.l10n_mx_edi_retentions_type_menu
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.l10n_mx_edi_retentions_type_tree
+msgid "Retention types"
+msgstr "Tipos de retención"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.actions.act_window,name:l10n_mx_edi_retentions.retention_action
+#: model:ir.actions.report,name:l10n_mx_edi_retentions.report_retention
+#: model:ir.model,name:l10n_mx_edi_retentions.model_l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__retentions_id
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_taxes__retentions_id
+#: model:ir.ui.menu,name:l10n_mx_edi_retentions.l10n_mx_edi_retentions_conf
+#: model:ir.ui.menu,name:l10n_mx_edi_retentions.retention_menu
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_tree_view
+msgid "Retentions"
+msgstr "Retenciones"
+
+#. module: l10n_mx_edi_retentions
+#: model:res.groups,name:l10n_mx_edi_retentions.group_l10n_mx_edi_retentions_manager
+msgid "Retentions / Manager"
+msgstr "Administrador de Retenciones"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__retentions_complement_ids
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_complement_form_view
+msgid "Retentions Complement"
+msgstr "Complemento de Retenciones"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__retentions_detail_ids
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_lines_form_view
+msgid "Retentions Line"
+msgstr "Líneas de retención"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,l10n_mx_edi_pac_status:0
+msgid "Retry"
+msgstr "Reintentar"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model,name:l10n_mx_edi_retentions.model_l10n_mx_edi_certificate
+msgid "SAT Digital Sail"
+msgstr "SAT Digital Sail"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_sat_status
+msgid "SAT status"
+msgstr "Estado en el SAT"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,final_month:0
+#: selection:l10n_mx_edi.retentions,initial_month:0
+msgid "September"
+msgstr "Septiembre"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,l10n_mx_edi_pac_status:0
+msgid "Signed"
+msgstr "Firmado"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__society_type
+msgid "Society Type"
+msgstr "Tipo de sociedad"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,l10n_mx_edi_sat_status:0
+msgid "State not defined"
+msgstr "Estado no definido"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__state
+msgid "State of the retention"
+msgstr "Estado de la retención"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencida: la fecha tope ya ha pasado\n"
+"Hoy: La fecha tope es hoy\n"
+"Planificada: futuras actividades."
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "TAX"
+msgstr "IMPUESTO"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.report_mx_retentions
+msgid "TYPE OF WITHHOLDING PAYMENT"
+msgstr "TIPO DE PAGO DE LA RETENCIÓN"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_taxes__tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__taxed_amount
+msgid "Taxed amount"
+msgstr "Monto gravado"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.l10n_mx_edi_taxpayer_type_form
+msgid "Taxpayer Type"
+msgstr "Tipo de contribuyente"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.actions.act_window,name:l10n_mx_edi_retentions.l10n_mx_edi_taxpayer_type_action
+#: model:ir.ui.menu,name:l10n_mx_edi_retentions.l10n_mx_edi_taxpayer_type_menu
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.l10n_mx_edi_taxpayer_type_tree
+msgid "Taxpayer Types"
+msgstr "Tipos de contribuyentes"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_cfdi_name
+msgid "The attachment name of the CFDI."
+msgstr "El nombre del archivo adjunto del CFDI."
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_cfdi_certificate_id
+msgid "The certificate used during the generation of the cfdi."
+msgstr "El certificado utilizado durante la generación del cfdi."
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_cfdi
+msgid "The cfdi xml content encoded in base64."
+msgstr "El contenido xml del cfdi codificado en base64."
+
+#. module: l10n_mx_edi_retentions
+#: code:addons/l10n_mx_edi_retentions/models/l10n_mx_edi_retentions.py:318
+#, python-format
+msgid "The content of the attachment has been updated"
+msgstr "El contenido del archivo adjunto se ha actualizado"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_cfdi_receptor_rfc
+msgid "The customer tax identification number."
+msgstr "El número de identificación fiscal del cliente."
+
+#. module: l10n_mx_edi_retentions
+#: code:addons/l10n_mx_edi_retentions/models/l10n_mx_edi_retentions.py:306
+#, python-format
+msgid "The sign service has been called with success"
+msgstr "El servicio de timbrado ha sido convocado con éxito"
+
+#. module: l10n_mx_edi_retentions
+#: code:addons/l10n_mx_edi_retentions/models/l10n_mx_edi_retentions.py:320
+#: code:addons/l10n_mx_edi_retentions/models/l10n_mx_edi_retentions.py:327
+#, python-format
+msgid "The sign service requested failed"
+msgstr "El servicio de timbrado solicitado falló"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__l10n_mx_edi_cfdi_issuing_rfc
+msgid "The supplier tax identification number."
+msgstr "El número de identificación fiscal del proveedor."
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,l10n_mx_edi_pac_status:0
+msgid "To cancel"
+msgstr "Para cancelar"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,l10n_mx_edi_pac_status:0
+msgid "To sign"
+msgstr "Para timbrar"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,activity_state:0
+msgid "Today"
+msgstr "Hoy"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leídos"
+
+#. module: l10n_mx_edi_retentions
+#: selection:l10n_mx_edi.retentions,l10n_mx_edi_sat_status:0
+#: selection:l10n_mx_edi.retentions,state:0
+msgid "Valid"
+msgstr "Válido"
+
+#. module: l10n_mx_edi_retentions
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_retentions.retentions_form_view
+msgid "Validate"
+msgstr "Validar"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions_complement__version
+msgid "Version"
+msgstr "Versión"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,field_description:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes de sitios web"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model.fields,help:l10n_mx_edi_retentions.field_l10n_mx_edi_retentions__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicaciones del sitio web"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model,name:l10n_mx_edi_retentions.model_l10n_mx_edi_dividend_or_profitableness_type
+msgid "l10n_mx_edi.dividend.or.profitableness.type"
+msgstr "l10n_mx_edi.dividend.or.profitableness.type"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model,name:l10n_mx_edi_retentions.model_l10n_mx_edi_retentions_type
+msgid "l10n_mx_edi.retentions.type"
+msgstr "l10n_mx_edi.retentions.type"
+
+#. module: l10n_mx_edi_retentions
+#: model:ir.model,name:l10n_mx_edi_retentions.model_l10n_mx_edi_taxpayer_type
+msgid "l10n_mx_edi.taxpayer.type"
+msgstr "l10n_mx_edi.taxpayer.type"

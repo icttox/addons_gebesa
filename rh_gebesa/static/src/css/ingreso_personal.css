@@ -1,0 +1,41 @@
+
+#primer_tabla{
+    background-color: #a5a8a4 !important;
+    border: 1pt solid black !important;
+    font-weight: bold;
+    color:white !important;
+}
+
+#primero{
+
+}
+
+.currency:before{
+    content: '$';
+    number-format:"###,##0.00";
+}
+
+#contorno{
+	background-color: white;
+	color: black;
+	border: 1pt solid black;
+}
+
+#linea{
+	height: 2pt;
+	background-color: black;
+}
+
+#cobranza2{
+	top:-10pt;
+    height: 19.5pt;
+    background-color: #616360;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+#tabla_datos{
+	padding: 0pt;
+}

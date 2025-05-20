@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="inv_rel_shipment_tree_view">
+            <field name="name">inv.rel.shipment.tree</field>
+            <field name="model">inv.rel.shipment</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Invoice Rel Shipment">
+                    <field name="invoice_id" domain="[('state','not in', ['draft', 'cancel']),('type', '=', 'in_invoice'),('purchase_ids', '=', False)]"/>
+                    <field name="shipment_id" domain="[('state','not in', ['done', 'finished'])]"/>
+                    <field name="total_inv"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

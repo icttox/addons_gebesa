@@ -1,0 +1,116 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_prepayment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-09 16:22+0000\n"
+"PO-Revision-Date: 2019-07-09 11:24-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: account_invoice_prepayment
+#: code:addons/account_invoice_prepayment/models/account_invoice_rel_advance.py:16
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_rel_advance_advance_id
+#, python-format
+msgid "Advance"
+msgstr "Anticipo"
+
+#. module: account_invoice_prepayment
+#: code:addons/account_invoice_prepayment/models/account_invoice.py:17
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_advance_applied
+#, python-format
+msgid "Advance Applied"
+msgstr "Anticipo Aplicado"
+
+#. module: account_invoice_prepayment
+#: code:addons/account_invoice_prepayment/models/account_invoice.py:12
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_prepayment_ok
+#, python-format
+msgid "Advance Invoice"
+msgstr "Factura de Anticipo"
+
+#. module: account_invoice_prepayment
+#: code:addons/account_invoice_prepayment/models/account_invoice_rel_advance.py:19
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_rel_advance_amount_advance
+#, python-format
+msgid "Amount Advance"
+msgstr "Monto Anticipo"
+
+#. module: account_invoice_prepayment
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_amount_residual_advance
+msgid "Amount Residual Advance"
+msgstr "Monto Residual Anticipo"
+
+#. module: account_invoice_prepayment
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_rel_advance_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: account_invoice_prepayment
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_rel_advance_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: account_invoice_prepayment
+#: model:ir.ui.view,arch_db:account_invoice_prepayment.account_invoice_prepayment_form_view
+msgid "DATOS ANTICIPO"
+msgstr "DATOS ANTICIPO"
+
+#. module: account_invoice_prepayment
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_rel_advance_display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: account_invoice_prepayment
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_rel_advance_id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_invoice_prepayment
+#: code:addons/account_invoice_prepayment/models/account_invoice_rel_advance.py:12
+#: model:ir.model,name:account_invoice_prepayment.model_account_invoice
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_rel_advance_invoice_id
+#, python-format
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: account_invoice_prepayment
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_rel_advance___last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: account_invoice_prepayment
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_rel_advance_write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: account_invoice_prepayment
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_rel_advance_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: account_invoice_prepayment
+#: model:ir.model.fields,field_description:account_invoice_prepayment.field_account_invoice_note_applied
+msgid "Nota de Credito aplicada"
+msgstr "Nota de Credito aplicada"
+
+#. module: account_invoice_prepayment
+#: code:addons/account_invoice_prepayment/models/account_invoice.py:18
+#: model:ir.model.fields,help:account_invoice_prepayment.field_account_invoice_advance_applied
+#, python-format
+msgid "The advance has already been applied"
+msgstr "The advance has already been applied"
+
+#. module: account_invoice_prepayment
+#: model:ir.model,name:account_invoice_prepayment.model_account_invoice_rel_advance
+msgid "account.invoice.rel.advance"
+msgstr "account.invoice.rel.advance"

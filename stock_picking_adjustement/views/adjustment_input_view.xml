@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="action_adjustment_input_server" model="ir.actions.server">
+            <field name="name">Adjustment Input</field>
+            <field name="model_id" ref="model_stock_picking"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = model.dynamic_action_adjustment_input()
+            </field>
+        </record>
+
+
+		<menuitem action="action_adjustment_input_server" id="menu_action_adjustment_input" parent="stock.menu_stock_inventory_control"  sequence="40"/>
+    </data>
+</odoo>

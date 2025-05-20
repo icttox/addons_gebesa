@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_order_salesrep_form'>
+            <field name='name'>view.order.salesrep.form</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref="sale.view_order_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//sheet/group/group/field[@name='partner_shipping_id']" position="after">
+                    <field name="partner_salesrep_id" invisible="1"/>
+                    <field name="salesrep_ids" invisible="1"/>
+                    <field name="salesrep_id" domain="[('id', 'in', salesrep_ids)]" force_save="1"/> <!--attrs="{'readonly': [('partner_salesrep_id', '!=', False)]}"-->
+                    <field name="sales_person_id"/>
+                </xpath>
+                <xpath expr="//button[@name='action_unlock']" position="replace">
+                    <!-- Reemplazamos el botón por nada -->
+                </xpath> 
+            </field>
+        </record>
+    </data>
+</odoo>

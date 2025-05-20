@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lunch.product.category" id="categ_comedor">
+            <field name="name">Comedor</field>
+        </record>
+
+        <record model="res.partner" id="partner_comedor">
+            <field name="name">Comedor</field>
+            <field name="city">Gómez Palacio</field>
+            <field name="country_id" ref="base.mx"/>
+            <field name="street">Piedras Negras 220</field>
+            <field name="email">leticia.lopez@gebesa.com</field>
+        </record>
+
+        <record model="lunch.product" id="producto_platillo">
+            <field name="name">Platillo</field>
+            <field name="category_id" eval="str(ref('categ_comedor'))"/>
+            <field name="price">35</field>
+            <field name="supplier" eval="str(ref('partner_comedor'))"/>
+            <field name="description">Platillo comedor Gebesa</field>
+        </record>
+
+        <record id="paperformat_ticket" model="report.paperformat">
+            <field name="name">Ticket</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">70</field>
+            <field name="page_width">80</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">3</field>
+            <field name="margin_bottom">3</field>
+            <field name="margin_left">3</field>
+            <field name="margin_right">3</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">3</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <record model="hr.salary.rule" id="otras_retenciones">
+            <field name="name">Otras retenciones</field>
+            <field name="code">OTRE</field>
+            <field name="id_microsip">13629</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+        </record>
+
+        <record model="hr.salary.rule" id="prevision_social_comedor">
+            <field name="name">PREVISION SOCIAL COMEDOR</field>
+            <field name="code">PRSC</field>
+            <field name="id_microsip">13630</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+        </record>
+    </data>
+    <data noupdate="0">
+        <record id="paperformat_pvc_credential" model="report.paperformat">
+            <field name="name">PVC Credential</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">85</field>
+            <field name="page_width">54</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">0</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">100</field>
+        </record>
+    </data>
+</odoo>

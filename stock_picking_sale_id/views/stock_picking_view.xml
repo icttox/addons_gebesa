@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='stock_view_picking_form'>
+        	<field name='name'>stock_view_picking_form</field>
+        	<field name='model'>stock.picking</field>
+        	<field name='inherit_id' ref='stock.view_picking_form'/>
+        	<field name='arch' type='xml'>
+        		<field name='priority' position='after'>
+        			<field name='sale_id' readonly="True"/>
+                    <field name='cust_ven_id' readonly="True"/>
+                    <field name='client_order_ref' readonly="True"/>
+                    <field name="sale_cost_id"/>
+        		</field>
+        	</field>
+        </record>
+    </data>
+</odoo>

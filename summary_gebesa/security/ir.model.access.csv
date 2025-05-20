@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+summary_date_dim_user,summary_date_dim,model_summary_date_dim,,1,0,0,0
+summary_inventory_user,summary_inventory,model_summary_inventory,,1,0,0,0
+summary_purchase_user,summary_purchase,model_summary_purchase,,1,0,0,0

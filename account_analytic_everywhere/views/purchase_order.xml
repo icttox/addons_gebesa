@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='purchase_order_form'>
+            <field name='name'>analytic.everywhere.purchase.order.form</field>
+            <field name='model'>purchase.order</field>
+            <field name='inherit_id' ref="purchase_stock.purchase_order_view_form_inherit"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='picking_type_id']" position="after">
+                    <field name="account_analytic_id" required="True" attrs="{'readonly':[('state','in',('done','to approve'))]}" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

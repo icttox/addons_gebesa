@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='stock_location_form_view'>
+        	<field name='name'>stock.location.form.view</field>
+        	<field name='model'>stock.location</field>
+        	<field name='inherit_id' ref="stock.view_location_form"/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//group/group/field[@name='usage']" position="after">
+                    <!--field name="stock_warehouse_id" readonly="1"/>
+                    <field name="account_analytic_id" readonly="1"/-->
+                    <field name="stock_warehouse_id"/>
+                    <field name="account_analytic_id" readonly="1"/>
+                    <field name="type_stock_loc"/>
+                </xpath>        		
+        	</field>
+        </record>
+    </data>
+</odoo>

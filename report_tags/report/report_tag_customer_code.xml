@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="customer_code_production_tag"
+            model="mrp.segment"
+            string="Etiqueta Código del Cliente"
+            report_type="qweb-pdf"
+            name="report_tags.report_customer_code_tag"
+            file="report_tags.report_customer_code_tag"
+        />
+
+        <record id="report_tags.customer_code_production_tag" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag" />
+        </record>
+
+        <template id="report_customer_code_tag_document">
+            <div class="page" style="font-size: 7pt;">
+                <t t-foreach="range(int(doc.product_qty))" t-as="qty">
+                    <t t-foreach="cusmtomer_codes[doc.id]" t-as="line">
+                        <div style="border: 2px solid #000000; border-radius:16px 16px 16px 16px;height: 350px">
+                            <div style="font-size: 14pt;">
+                                <tr>
+                                    <td><b>&#160;&#160;(&#160;&#160;&#160;&#160;&#160;<span t-esc="line.qty"/>)</b></td>
+                                    <td><b><span t-esc="line.customer_code"/></b></td>
+                                    <td><b>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span t-esc="line.customer_description"/>&#160;</b></td>
+                                </tr>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <div align="center" style="font-size: 25pt;">
+                                    <t t-set="code" t-value="'*'+str(line.qty)+'  '+line.customer_code+'*'"/>
+                                    <div  style="font-family: CCode39;">
+                                        <span t-esc="code"/>
+                                        <br/>
+                                        <br/>
+                                    </div>
+                                    <span t-esc="code"/>
+                                    <!--<img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s' % ('Standard39', code, 540, 180, 1)"/>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div style="page-break-after: always;">
+                            Pàgina <span t-esc="qty + 1"/> de <span t-esc="'%.0f'%doc.product_qty"/>
+                        </div>
+                    </t>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_customer_code_tag">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-call="report_tags.report_customer_code_tag_document"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

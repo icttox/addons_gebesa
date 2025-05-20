@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_send_email_invoice_canceled_transporte_galbo" model="ir.cron">
+            <field name="name">Send Email Invoice Canceled Transportes Galbo</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="model_id" ref="model_account_invoice"/>
+            <!-- <field eval="'send_email_invoice_canceled_tgalbo'" name="function"/>
+            <field eval="" name="args"/> -->
+            <field name="state">code</field>
+            <field name="code">model.send_email_invoice_canceled_tgalbo()</field>
+            <field name="active" eval="False" />
+        </record>
+
+        <record id="email_cancelled_invoices_galbo" model="ir.config_parameter">
+            <field name="key">cancelled_invoices_galbo.receivers_email</field>
+            <field name="value"></field>
+        </record>
+
+    </data>
+</odoo>

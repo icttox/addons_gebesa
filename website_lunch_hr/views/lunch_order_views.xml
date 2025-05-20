@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="lunch_order_line_view_tree" model="ir.ui.view">
+            <field name="name">lunch.order.line.employee.tree</field>
+            <field name="model">lunch.order.line</field>
+            <field name="inherit_id" ref="lunch.lunch_order_line_view_tree"/>
+            <field name="arch" type="xml">
+                <field name='user_id' position='after'>
+                    <field name='employee_id'/> 
+                </field>
+            </field>
+        </record>
+
+        <record id="lunch_order_view_tree" model="ir.ui.view">
+            <field name="name">lunch.order.employee.tree</field>
+            <field name="model">lunch.order</field>
+            <field name="inherit_id" ref="lunch.lunch_order_view_tree"/>
+            <field name="arch" type="xml">
+                <field name='date' position='before'>
+                    <field name="employee_id" string="Empleado"/>
+                    <field name="department_id" string="Departamento"/>
+                    <field name="employee_comp_id" string="Compañia Empleado"/> 
+                </field>
+            </field>
+        </record>
+
+        <record id="lunch_order_view_form" model="ir.ui.view">
+            <field name="name">lunch.order.employee.form</field>
+            <field name="model">lunch.order</field>
+            <field name="inherit_id" ref="lunch.lunch_order_view_form"/>
+            <field name="arch" type="xml">
+                <field name='user_id' position='after'>
+                    <field name="employee_id" string="Empleado"/>
+                    <field name="department_id" string="Departamento"/>
+                    <field name="employee_comp_id" string="Compañia Empleado"/> 
+                </field>
+            </field>
+        </record>
+
+        <record id="lunch_orders_action_form" model="ir.actions.act_window">
+            <field name="name">Order</field>
+            <field name="res_model">lunch.order</field>
+            <field name="view_mode">tree</field>
+        </record>
+        <menuitem name="Order" parent="lunch.menu_lunch_title" id="lunch_orders_menu_form" action="website_lunch_hr.lunch_orders_action_form" sequence="5"/>
+
+    </data>
+</odoo>

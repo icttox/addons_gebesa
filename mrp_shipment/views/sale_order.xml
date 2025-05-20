@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_order_form'>
+            <field name='name'>view_order_shiptment_status_form</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref='sale.view_order_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//group/group/field[@name='pricelist_id']" position="before">
+                    <field name='shiptment_status' readonly="True"/>
+                </xpath>
+                <xpath expr="//notebook/page/field[@name='order_line']/tree/field[@name='qty_to_invoice']" position="before">
+                    <field name="quantity_shipped" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='view_order_tree'>
+            <field name='name'>view_order_shiptment_status_tree</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref='sale.view_order_tree'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='invoice_status']" position="before">
+                    <field name='shiptment_status' readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

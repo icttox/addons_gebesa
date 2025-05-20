@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="view_l10_mx_table_type_Action">
+            <field name="name">Tabla</field>
+            <field name="res_model">l10n.mx.immex.table.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Registrar datos
+                </p>
+            </field>
+        </record>
+
+         <menuitem id="immex_Table_type_menu" name="Tabla" parent="configuration_menu"
+                  action="view_l10_mx_table_type_Action"/>
+
+        <record model="ir.ui.view" id="view_l10_mx_Action_table_type_form">
+            <field name="name">Tipo de tabla.form</field>
+            <field name="model">l10n.mx.immex.table.type</field>
+            <field name="arch" type="xml">
+                <form string="Ruta Form" create ="false" edit="false" delete ="false">
+                    <sheet>
+                        <group>
+                            <field name='code'/>
+                            <field name='name'/>
+                            <field name='level'/>
+                            <field name='active'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_l10_mx_Action_table_type_view_tree">
+            <field name="name">Tipo de tabla.tree</field>
+            <field name="model">l10n.mx.immex.table.type</field>
+            <field name="arch" type="xml">
+                <tree string="Ruta Tree" create ="false" edit="false" delete ="false">
+                    <field name='code'/>
+                    <field name='name'/>
+                    <field name='level'/>
+                    <field name='active'/>
+                </tree>
+            </field>
+        </record>
+
+
+       
+    </data>
+</odoo>

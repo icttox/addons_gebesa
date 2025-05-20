@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_bom_wizard'>
+        	<field name='name'>mrp.bom.wizard</field>
+        	<field name='model'>mrp.bom</field>
+            <field name='inherit_id' ref='mrp.mrp_bom_form_view'/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button name="print_wizard" string="Print Cut Detail" type="object"/> 
+                    </header>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/div/field[@name='product_qty']" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/div/field[@name='product_uom_id']" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </xpath>
+        	</field>
+        </record>
+    </data>
+</odoo>

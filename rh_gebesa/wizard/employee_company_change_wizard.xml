@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='employee_company_change_form_wizard'>
+            <field name='name'>employee.company.change.form.wizard</field>
+            <field name='model'>employee.company.change.wizard</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <group>
+                        <field name='new_company_id' widget="selection"/>
+                    </group>
+                    <footer>
+                        <button name="change_company_id" string="Change" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

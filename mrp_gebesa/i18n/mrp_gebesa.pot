@@ -1,0 +1,610 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mrp_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-25 15:52+0000\n"
+"PO-Revision-Date: 2021-08-25 15:52+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_gebesa
+#: selection:mrp.bom,ready_to_produce:0
+msgid " When all components are available"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "<strong>Cantidad a producir:</strong><br/>"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "<strong>Centro de trabajo</strong>"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "<strong>Documento origen:</strong><br/>"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "<strong>Fecha de impresión:</strong><br/>"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "<strong>Fecha planificada:</strong><br/>"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "<strong>No. de minutos</strong>"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "<strong>Operación</strong>"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "<strong>Producto producido:</strong><br/>"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "<strong>Responsable:</strong><br/>"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "A consumir"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.gebesa_mrp_production_form_view
+msgid "Abastecer parcial"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_mrp_production__approved_to_produce
+msgid "Approved to produce"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.res_config_settings_skip_mo_view_form
+msgid "Automatically transfers manufactured products"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+msgid "Barcode"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model,name:mrp_gebesa.model_mrp_bom
+msgid "Bill of Material"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model,name:mrp_gebesa.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:res.groups,name:mrp_gebesa.group_change_widget_route
+msgid "Cambia Widget Route en Productos"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_mrp_production__cancellation_reason
+msgid "Cancellation reason"
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:mrp.production,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+msgid "Cantidad"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_sale_order__city_id
+#: model:ir.model.fields,field_description:mrp_gebesa.field_sale_order__deprecated_city_id
+msgid "City"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model,name:mrp_gebesa.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.gebesa_mrp_production_form_view
+msgid "Confirm"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:res.groups,name:mrp_gebesa.group_confirm_production
+msgid "Confirm production orders"
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:mrp.production,state:0
+msgid "Confirmed"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "Consumido"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_sale_order__country_id
+msgid "Country"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,help:mrp_gebesa.field_mrp_bom__ready_to_produce
+msgid "Defines when a Manufacturing Order is considered as ready to be started"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "Destino"
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:mrp.production,state:0
+msgid "Done"
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:mrp.production,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:mrp.production,state:0
+msgid "In Progress"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:87
+#: code:addons/mrp_gebesa/models/mrp_bom.py:130
+#, python-format
+msgid "Kit products should not have route production"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "Lista de Materiales (LdM)"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_mrp_bom_line__location_id
+msgid "Location"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+msgid "Lot/Serial barcode"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.geb_production_tree_view
+msgid "Manufacturing Orders"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_mrp_bom__ready_to_produce
+msgid "Manufacturing Readiness"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.gebesa_mrp_production_form_view
+msgid "Moves"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.gebesa_mrp_production_form_view
+msgid "Movimientos que abastecen"
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:sale.order,production_status:0
+msgid "No Production"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+msgid "No ha sido abastecida por completo esta orden de fabricación."
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:mrp.production,transfer_status:0
+msgid "Not transferred"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:189
+#: code:addons/mrp_gebesa/models/mrp_bom.py:242
+#, python-format
+msgid "One product cannot be detail of itself"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp.py:365
+#, python-format
+msgid "Only Administrator can cancel"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "Operaciones hechas"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "Operaciones planeadas"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "Orden de producción # :"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "Origen"
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:sale.order,production_status:0
+msgid "Partial Production"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_mrp_production__picking_move_prod_id
+#: model:ir.model.fields,field_description:mrp_gebesa.field_mrp_production__picking_move_prod_ids
+msgid "Picking Production"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_mrp_production__picking_raw_material_ids
+msgid "Picking Raw Material"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.gebesa_mrp_production_form_view
+msgid "Pickings"
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:mrp.production,state:0
+msgid "Planned"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model,name:mrp_gebesa.model_procurement_group
+msgid "Procurement Group"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:94
+#: code:addons/mrp_gebesa/models/mrp_bom.py:114
+#, python-format
+msgid "Product and template it does not match"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model,name:mrp_gebesa.model_mrp_production
+msgid "Production Order"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.actions.report,name:mrp_gebesa.action_report_production_order
+msgid "Production Order Gebesa"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_sale_order__production_status
+msgid "Production Status"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "Producto"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+msgid "Productos a consumir"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+msgid "Productos consumidos"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model,name:mrp_gebesa.model_mrp_product_produce
+msgid "Record Production"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model,name:mrp_gebesa.model_res_config_settings
+msgid "Res Config settings "
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder_geb
+msgid "Reserva"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_cfdi_config_settings__skip_handover_mo
+#: model:ir.model.fields,field_description:mrp_gebesa.field_res_company__skip_handover_mo
+#: model:ir.model.fields,field_description:mrp_gebesa.field_res_config_settings__skip_handover_mo
+msgid "Skip handover in MO"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_cfdi_config_settings__skip_supply_mo
+#: model:ir.model.fields,field_description:mrp_gebesa.field_res_company__skip_supply_mo
+#: model:ir.model.fields,field_description:mrp_gebesa.field_res_config_settings__skip_supply_mo
+msgid "Skip supply in MO"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.res_config_settings_skip_mo_view_form
+msgid "Skip supply picking on manufacturing orders"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp.py:368
+#, python-format
+msgid "Specify the reason for cancellation"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_mrp_production__state
+#: model:ir.model.fields,field_description:mrp_gebesa.field_sale_order__state_id
+msgid "State"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model,name:mrp_gebesa.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model,name:mrp_gebesa.model_stock_rule
+msgid "Stock Rule"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:79
+#, python-format
+msgid "The production route must be in the same warehouse than the bom"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:122
+#, python-format
+msgid "The production route mustbe in the same warehouse than the bom"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,help:mrp_gebesa.field_mrp_production__rule_id
+msgid "The stock rule that created this production"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/procurement.py:110
+#, python-format
+msgid "The total cost of this BoM:"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/procurement.py:126
+#, python-format
+msgid "The total cost of this BoM: %s is Not Equal to its Product cost!"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:29
+#, python-format
+msgid "This BOM has detail"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/procurement.py:134
+#: code:addons/mrp_gebesa/models/procurement.py:156
+#, python-format
+msgid "This BoM:"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/procurement.py:148
+#, python-format
+msgid "This BoM: %s  is for Manufacturing, but has not a Production Route!"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/procurement.py:170
+#, python-format
+msgid "This BoM: %s is a Kit, but it has a Production Route!"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:192
+#: code:addons/mrp_gebesa/models/mrp_bom.py:251
+#, python-format
+msgid "This product is already in this Bom"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:71
+#: code:addons/mrp_gebesa/models/mrp_bom.py:139
+#, python-format
+msgid "This product is raw material"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.view_mrp_production_filter
+msgid "To confirmed"
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:sale.order,production_status:0
+msgid "Total Production"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.geb_production_tree_view
+msgid "Total Qty"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.view_order_tree
+msgid "Total Tax Included"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.gebesa_mrp_production_form_view
+msgid "Transfer"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_mrp_production__transfer_status
+msgid "Transfer status"
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:mrp.production,transfer_status:0
+msgid "Transferred"
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:mrp.production,state:0
+msgid "Traspasado"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.gebesa_mrp_production_form_view
+msgid "Traspasar parcial"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model_terms:ir.ui.view,arch_db:mrp_gebesa.report_mrporder
+msgid "Ubicacion origen"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_mrp_bom__warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_mrp_bom__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,help:mrp_gebesa.field_mrp_bom__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: mrp_gebesa
+#: selection:mrp.bom,ready_to_produce:0
+msgid "When components for 1st operation are available"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:182
+#: code:addons/mrp_gebesa/models/mrp_bom.py:235
+#, python-format
+msgid "You can not add a MP detail with this product, it is made in this warehouse: %s"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:176
+#: code:addons/mrp_gebesa/models/mrp_bom.py:229
+#, python-format
+msgid "You can not add a PT detail if this is not a Kit: %s"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:172
+#: code:addons/mrp_gebesa/models/mrp_bom.py:225
+#, python-format
+msgid "You can not add a product that                         has no BOM: %s"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:179
+#: code:addons/mrp_gebesa/models/mrp_bom.py:232
+#, python-format
+msgid "You can not add a product with cost 0: %s"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/mrp_bom.py:185
+#: code:addons/mrp_gebesa/models/mrp_bom.py:238
+#, python-format
+msgid "You can not add a product without BoM in this location: %s"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/procurement.py:113
+#, python-format
+msgid "is Not Equal to its Product cost!"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/procurement.py:158
+#, python-format
+msgid "is a Kit, but it has a Production Route!"
+msgstr ""
+
+#. module: mrp_gebesa
+#: code:addons/mrp_gebesa/models/procurement.py:136
+#, python-format
+msgid "is for Manufacturing, but has not a Production Route!"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model,name:mrp_gebesa.model_sale_order
+msgid "sale.order"
+msgstr ""
+
+#. module: mrp_gebesa
+#: model:ir.model.fields,field_description:mrp_gebesa.field_mrp_production__rule_id
+msgid "stock Rule"
+msgstr ""
+

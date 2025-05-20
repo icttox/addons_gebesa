@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="tag_sol"
+            model="sale.order.line"
+            string="Etiqueta"
+            report_type="qweb-pdf"
+            name="sale_order_mrp_boost.report_tag_sol"
+            file="sale_order_mrp_boost.report_tag_sol"
+        />
+
+        <record id="sale_order_mrp_boost.tag_sol" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag" />
+        </record>
+
+        <template id="report_tag_sol_document">
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.order_id.partner_id.lang})"/>
+            <div class="page" style="font-size: small">
+                <t t-foreach="range(int(doc.product_uom_qty))" t-as="qty">
+                    <div class="row no-gutters" style="border: 1px solid #000000; border-radius:16px 16px 0px 0px;height: 55px">
+                        <div class="col-3">
+                            <img t-if="print_debrand" src="/report_tags/static/src/img/gebesa2.png" style="max-height: 26px;margin-top: 10px;margin-left: 5px;"/>
+                        </div>
+                        <div class="col-6 text-center">
+                          <strong t-if="print_debrand">
+                                www.gebesa.com<br/>01 800 8432 372
+                          </strong>
+                        </div>
+                        <div class="col-3 text-right">
+                            <img t-if="print_debrand" src="/report_tags/static/src/img/hecho_mexico.png" style="max-height: 43px;margin-top: 3px;margin-right: 5px;"/>
+                        </div>
+                    </div>
+                    <div class="row no-gutters" style="border-left: 1px solid #000000;border-right: 1px solid #000000;">
+                        <div class="col-4 m-2">
+                            <table width="100%" height="185px" style="border: 1px solid #000000;margin-top: 12px;">
+                                <tbody>
+                                    <tr >
+                                        <td height="15px" style="background: black;color: white;" align="center">CLAVE/CODE:</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:100px; word-wrap: break-word;" height="40px">
+                                            <span align="center" class="medium" style="font-size: 11pt" t-field="doc.product_id.default_code"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15px" style="background: black;color: white;" align="center">CANT./QTY.:</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="20px" align="center">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15px" style="background: black;color: white;" align="center">PAQ./PACK:</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="20px" align="center"><span t-esc="qty + 1"/> DE <span t-esc="'%.0f'%doc.product_uom_qty"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <strong>MO:</strong>
+                            <t t-set="production" t-value="doc.production_ids.filtered(lambda prod: prod.product_id.id == doc.product_id.id)"/>
+                            <span t-field="production[0].name"/>
+                            <br/>
+                            <strong>SEGMENTO:</strong>
+                            <br/>
+                            <t t-foreach="production[0].segment_line_ids" t-as="seg">
+                                <span t-field="seg.segment_id.folio"/>&#160;
+                            </t>
+                        </div>
+                        <div class="col-6 m-2">
+                            <table width="100%" style="border: 1px solid #000000;margin-top: 12px;">
+                                <tbody>
+                                    <tr>
+                                        <td style="background: black;color: white;" align="center">DESCRIPCION/DESCRIPTION:</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="110px">
+                                            <t t-set="trans" t-value="doc.with_context({'lang':'es_MX'})"/>
+                                            <t t-set="trans2" t-value="doc.with_context({'lang':'en_US'})"/>
+                                            <t t-if="doc.product_id.individual_name">
+                                                <t t-set="val" t-value="trans.product_id.individual_name"/>
+                                                <t t-set="val2" t-value="trans2.product_id.individual_name"/>
+                                            </t>
+                                            <t t-if="not doc.product_id.individual_name">
+                                                <t t-set="val" t-value="trans.product_id.name"/>
+                                                <t t-set="val2" t-value="trans2.product_id.name"/>
+                                            </t>
+                                            <strong>Spanish: </strong>
+                                            <span t-esc="val"/>
+                                            <t t-if="val != val2">
+                                                <br/><br/>
+                                                <strong>English: </strong>
+                                                <span t-esc="val2"/>
+                                            </t>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <t t-if="doc.order_id">
+                                <strong>PEDIDO/SALES ORDER:</strong>
+                                <span t-field="doc.order_id.name"/>
+                            </t>
+                            <br/>
+                            <strong>TAG LINE:</strong>
+                            <t t-if="doc.line_tag_number">
+                                <span t-esc="doc.line_tag_number"/>
+                            </t>
+                            <br/>                                
+                            <strong>TAG:</strong>
+                            <t t-if="not doc.order_id.general_tag_num">
+                                <br/>
+                            </t>
+                            <t t-if="doc.order_id.general_tag_num">
+                                <span t-esc="doc.order_id.general_tag_num"/>
+                            </t>
+                        </div>
+                        <div class="col-1 ml-4">
+                            <img src='/report_tags/static/src/img/orientacion.png' style="max-width: 30px;margin-top: 10px;margin-right:50px;"/>
+                        </div>
+                    </div>
+                    <div class="row no-gutters" style="border-left: 1px solid #000000;border-right: 1px solid #000000;height: 30px;">
+                        <div class="col-11 ml-2" style="font-size: 12pt;font-family: CCode39;">
+                            <t t-set="barcode39" t-value="'*'+doc.product_id.default_code+'*'"/>
+                            <span t-esc="barcode39"/>
+                        </div>
+                    </div>
+                    <div class="row no-gutters text-right" style="border: 1px solid #000000; border-radius:0px 0px 16px 16px;height: 25px;">
+                        <div class="col-12 mt-1" align="center" style="margin-right: 10px;">
+                            <sup>SEE ASSEMBLY INSTRUCTIONS</sup>
+                        </div>
+                    </div>
+                    <div class="row no-gutters mt-1" style="page-break-after:always;">
+                        <div class="col-3">
+                            <sub>Page:<span t-esc="qty + 1"/> of <span t-esc="'%.0f'%doc.product_uom_qty"/></sub>
+                        </div>
+                        <div class="col-6 text-center">
+                            <sub>HANDLE WITH CARE</sub>
+                        </div>
+                        <div class="col-2 text-right" style="font-size: 8px;">
+                            <sub><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d %B %Y')"/></sub>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_sol">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-set="print_debrand" t-value="True"/>
+                        <t t-call="sale_order_mrp_boost.report_tag_sol_document" t-lang="doc.order_id.partner_id.lang"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

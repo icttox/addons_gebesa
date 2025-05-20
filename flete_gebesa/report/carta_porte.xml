@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/flete_gebesa/static/src/css/travel_instructions.css"/>
+            </xpath>
+        </template>
+
+        <report
+            id="carta_porte"
+            model="tms.waybill"
+            string="Imprimir Carta Porte "
+            report_type="qweb-pdf"
+            name="flete_gebesa.report_carta_porte"
+            file="flete_gebesa.report_carta_porte"
+        />
+
+        <template id="report_carta_porte_document">
+            <div class="header">
+                <div id="cabezera">
+                </div>
+                <div width="100%">
+                    <div id="logo">
+                        <!--<img class="logo1" src='/flete_gebesa/static/img/gebesa.jpg'/> -->
+                        <!--<span class="logo1" t-esc="docs.company_id.logo"/> -->
+                        <img class="logo" t-if="docs.company_id.logo" t-att-src="'data:image/png;base64,%s' % docs.company_id.logo"/>
+                    </div>
+                    <div style="text-align:center;" id="titulo">
+                        CARTA PORTE
+                    </div>
+                </div>
+                <div id="departamento">
+                    DEPARTAMENTO DE TRAFICO
+                </div>
+                <div id="departamento">
+                    <span t-esc="docs.company_id.name"/>
+                </div>
+                <div style="text-align:center;" id="titulo">
+                        Fecha:&#160;<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                </div>
+            </div>
+            <div class="page">
+                <div id="primero">
+                    <div id="cobranza">
+                        DATOS CARTA PORTE
+                    </div>
+                    <table width="100%" id="tabla_datos">
+                        <tr>
+                            <td id="titulo_tabla" width="14%">Unida Operativa:</td>
+                            <td id="contorno" width="35%">&#160;
+                                <span t-esc="docs.operating_unit_id.name"/>
+                            </td>
+                            <td id="titulo_tabla" width="14%">Fecha:</td>
+                            <td id="contorno" width="35%">&#160;
+                                <span t-esc="docs.date_order"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="titulo_tabla">Moneda:</td>
+                            <td id="contorno">&#160;
+                                <span t-esc="docs.currency_id.name"/>
+                            </td>
+                            <td id="titulo_tabla">Orden Venta:</td>
+                            <td id="contorno">&#160;
+                                <span t-esc="docs.order_id.name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="titulo_tabla">Cliente:</td>
+                            <td id="contorno">
+                                <span t-field="docs.partner_id.name"/>
+                            </td>
+                            <td id="titulo_tabla">Contactos Ordenados:</td>
+                            <td id="contorno">
+                                <span t-field="docs.partner_invoice_id.name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="titulo_tabla">Dirección Facturación:</td>
+                            <td id="contorno">
+                                <span t-field="docs.partner_order_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                            </td>
+                            <td id="titulo_tabla"></td>
+                            <td id="contorno">
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="titulo_tabla">Dirección Salida:</td>
+                            <td id="contorno">
+                                <span t-field="docs.departure_address_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                            </td>
+                            <td id="titulo_tabla">Dirección Destino:</td>
+                            <td id="contorno">
+                                <span t-field="docs.arrival_address_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                            </td>
+                            
+                        </tr>
+                         <tr>
+                            <td id="titulo_tabla">Punto de Subida:</td>
+                                <td id="contorno" width="35%">&#160;
+                                    <span t-esc="docs.upload_point"/>
+                                </td>
+                            <td id="titulo_tabla">Punto de Descarga:</td>
+                                <td id="contorno" width="35%">&#160;
+                                    <span t-esc="docs.download_point"/>
+                                </td>                            
+                        </tr>
+                    </table>
+                </div>
+                <br/>
+                <div id="primero">
+                    <div id="cobranza">
+                        VIAJES
+                    </div>
+                    <table width="100%" class="tabla_datos">
+                        <tr>
+                            <td align="center" id="titulo_tabla" width="10%">Núm Viaje</td>
+                            <td align="center" id="titulo_tabla" width="12%">Fecha Registro</td>
+                            <td align="center" id="titulo_tabla" width="8%">Unidad</td>
+                            <td align="center" id="titulo_tabla" width="10%">Trailer 1</td>
+                            <td align="center" id="titulo_tabla" width="9%">Dolly</td>
+                            <td align="center" id="titulo_tabla" width="10%">Trailer2</td>
+                            <td align="center" id="titulo_tabla" width="24%">Conductor</td>
+                            <td align="center" id="titulo_tabla" width="10%">Carta Porte</td>
+                            <td align="center" id="titulo_tabla" width="20%">Ruta</td>
+                            <td align="center" id="titulo_tabla" width="10%">Estado</td>
+                        </tr>
+                        <t t-foreach="docs.travel_ids" t-as="trav">
+                            <tr>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trav.name"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trav.date"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trav.unit_id.name"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trav.trailer1_id.name"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t>
+                                       <span t-esc="trav.dolly_id.name"/>
+                                    </t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trav.trailer2_id.name"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trav.employee_id.name"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t t-foreach="trav.waybill_ids" t-as="way">
+                                        <span t-esc="way.name"/>
+                                    </t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trav.route_id.name"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trav.state"/></t>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                </div>
+                <br/>
+                <div id="primero">
+                    <div id="cobranza">
+                        CARGA
+                    </div>
+                    <table width="100%" class="tabla_datos">
+                        <tr>
+                            <td align="center" id="titulo_tabla" width="10%">Carga</td>
+                            <td align="center" id="titulo_tabla" width="15%">Descripción</td>
+                            <td align="center" id="titulo_tabla" width="15%">Cantidad</td>
+                            <td align="center" id="titulo_tabla" width="15%">Cantidad(UdM)</td>
+                            <td align="center" id="titulo_tabla" width="15%">Notas</td>
+                        </tr>
+                        <t t-foreach="docs.transportable_line_ids" t-as="trans">
+                            <tr>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trans.transportable_id.name"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trans.name"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trans.transportable_uom_id.name"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trans.quantity"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="trans.notes"/></t>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                </div>
+                <br/>
+                <div id="primero">
+                    <div id="cobranza">
+                        LINEAS DE LA CARTA PORTE
+                    </div>
+                    <table width="100%" class="tabla_datos">
+                        <tr>
+                            <td align="center" id="titulo_tabla" width="21%">Producto</td>
+                            <td align="center" id="titulo_tabla" width="25%">Descripción</td>
+                            <td align="center" id="titulo_tabla" width="8%">Cantidad</td>
+                            <td align="center" id="titulo_tabla" width="13%">Precio Unitario</td>
+                            <td align="center" id="titulo_tabla" width="13%">Descuento (%)</td>
+                            <td align="center" id="titulo_tabla" width="19%">Impuestos</td>
+                            <td align="center" id="titulo_tabla" width="15%">Subtotal</td>
+                        </tr>
+                        <t t-foreach="docs.waybill_line_ids" t-as="lines">
+                            <tr>
+                                <td id="contorno" align="center">
+                                    <t t-if="lines.product_id.default_code">[<span t-esc="lines.product_id.default_code"/>]<span t-esc="lines.product_id.name_template"/></t>
+                                    <t t-if="not lines.product_id.default_code"><span t-esc="lines.product_id.name_template"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="lines.name"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="lines.product_qty"/></t>
+                                </td>
+                                <td id="contorno" align="right">
+                                    <t>$<span t-esc="lines.unit_price"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t><span t-esc="lines.discount"/></t>
+                                </td>
+                                <td id="contorno" align="center">
+                                    <t t-foreach="lines.tax_ids" t-as="tax">
+                                        <span t-esc="tax.name"/>
+                                    </t>
+                                </td>
+                                <td id="contorno" align="right">
+                                    <t>$<span t-esc="lines.price_subtotal"/></t>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                </div>
+                <br/>
+                <t t-set="tp" t-value="0"/>
+                <div class="col-xs-14" id="primero">
+                    
+                    <div align="center" class="col-xs-6">
+                        <!--
+                        <table width="100%" class="tabla_datos_porte">
+                        <tr>
+                            <td align="center" id="titulo_tabla_porte" width="19%">Impuesto</td>
+                            <td align="center" id="titulo_tabla_porte" width="12%">Base</td>
+                            <td align="center" id="titulo_tabla_porte" width="12%">Impuesto</td>
+                        </tr>
+                        <t t-foreach="docs.tax_line_ids" t-as="taxs">
+                            <tr>
+                                <td id="contorno_porte" align="center">
+                                    <t><span t-esc="taxs.tax_id.name"/></t>
+                                </td>
+                                <td id="contorno_porte" align="center">
+                                    <t>$<span t-esc="taxs.base"/></t>
+                                </td>
+                                <td id="contorno_porte" align="right">$
+                                    <t t-esc="taxs.tax_amount"/>
+                                    <t t-set="tp" t-value=" tp + taxs.tax_amount"/>
+                                </td>
+                            </tr>
+                        </t>
+                        
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td  align="right">
+                                <t>
+                                    $<span t-esc="tp"/>
+                                </t>
+                            </td>
+                        </tr>
+                        </table>-->
+                    </div> 
+                    <div align="center" class="col-xs-6">
+                        <table width="100%" class="tabla_datos">
+                            <tr>
+                                <td align="right" id="titulo_tabla" width="29%">Flete:  </td>
+                                <td id="contorno" align="right">
+                                    <t>$<span t-esc="docs.amount_freight"/></t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="titulo_tabla">Movimientos:  </td>
+                                <td id="contorno" align="right">
+                                    <t>$<span t-esc="docs.amount_move"/></t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="titulo_tabla">Casetas:  </td>
+                                <td id="contorno" align="right">
+                                    <t>$<span t-esc="docs.amount_highway_tolls"/></t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="titulo_tabla">Seguro:  </td>
+                                <td id="contorno" align="right">
+                                    <t>$<span t-esc="docs.amount_insurance"/></t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="titulo_tabla">Otro:  </td>
+                                <td id="contorno" align="right">
+                                    <t>$<span t-esc="docs.amount_other"/></t>
+                                </td>
+                            </tr>
+                            <div style="background-color: black">
+                            </div>
+                            <tr>
+                                <td align="right" id="titulo_tabla">Subtotal:  </td>
+                                <td id="contorno" align="right">
+                                    <t><strong>$<span t-esc="docs.amount_untaxed"/></strong></t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="titulo_tabla">Impuestos:  </td>
+                                <td id="contorno" align="right">
+                                    <t>$<span t-esc="docs.amount_tax"/></t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" id="titulo_tabla">Total:  </td>
+                                <td id="contorno" align="right">
+                                    <t><strong>$<span t-esc="docs.amount_total"/></strong></t>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <!--
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div class="col-xs-14">
+                    <div align="center" class="col-xs-4">
+                        _______________________________
+                        <br/>
+                         Nombre y Firma del Operador
+                    </div>
+                    <div align="center" class="col-xs-4">
+                        _______________________________
+                        <br/>
+                        Nombre y Firma Depto. Embarques
+                    </div>
+                    <div align="center" class="col-xs-4">
+                        _______________________________
+                        <br/>
+                        Nombre y Firma Credito y Cobranza
+                    </div>
+                </div>-->
+                <div style="page-break-after: always;">&#160;</div>
+                <div id="primero">
+                    <div id="cobranza">
+                        CLAUSULAS
+                    </div>
+                    <br/>
+                    <div style="font-size:8pt;">
+                        <strong>PRIMERA.-</strong> Para los efectos del presente contrato de transporte se denomina "Porteador" al transportista y "Remitente" al usuario que contrate el servicio.
+                        <br/>
+                        <br/>
+                        <strong>SEGUNDA.-</strong> El "Remitente" es responsable de que la información proporcionada al "Porteador" sea veráz y que la documentación que entregue para efectos del transporte sea la correcta.
+                        <br/>
+                        <br/>
+                        <strong>TERCERA.-</strong> El "Remitente" debe declarar al "Porteador" el tipo de mercancía o efectos de que se trate, peso, medidas y/o número de la carga que entrega para su transporte y en su caso, el valor de la misma. La carga que se entregue a granel será pesada por el "Porteador" en el primer punto donde haya báscula apropiada o en su defecto, aforada en metros cúbicos con la conformidad del "Remitente".
+                        <br/>
+                        <br/>
+                        <strong>CUARTA.-</strong> Para efectos del transporte, el "Remitente" deberá entregar al "Porteador" los documentos que las leyes y reglamentos que exijan para llevar a cabo el servicio, en caso de no cumplirse con estos requisitos el "Porteador" está obligado a rehusar el transporte de las mercancías.
+                        <br/>
+                        <br/>
+                        <strong>QUINTA.-</strong> Si por sospecha de falsedad en la declaración del contenido de un bulto el "Porteador" deseare proceder a su reconocimiento, podrá hacerlo ante testigos y con asistencia del "Remitente" o del consignatario. Si este último no concurriere, se solicitará la presencia de un inspector de la Secretaría de Comunicaciones y Transportes y se levantará el acta correspondiente. El "Porteador" tendrá en todo caso la obligación de dejar los bultos en el estado en que se encontraban antes del reconocimiento.
+                        <br/>
+                        <br/>
+                        <strong>SEXTA.-</strong>  El "Porteador" deberá recoger y entregar la carga precisamente en los domicilios que señale el "Remitente", ajustándose a los términos y condiciones convenidos. El "Porteador" solo está obligado a llevar la carga al domicilio del consignatario para su entrega una sola vez. Si ésta no fuere recibida, se dejará aviso de que la mercancía queda a disposición del interesado en las bodegas que indique el "Porteador".
+                        <br/>
+                        <br/>
+                        <strong>SEPTIMA.-</strong> Si la carga no fuere retirada en los 30 días siguientes a aquel en que hubiere sido puesta a disposición del consignatario, el "Porteador" podrá solicitar la venta en pública subasta con arreglo a lo que dispone el Código de Comercio.
+                        <br/>
+                        <br/>
+                        <strong>OCTAVA.-</strong> El "Porteador" y el "Remitente" negociarán libremente el precio del servicio, tomando en cuenta su tipo, característicamente de los embarques, volumen, regularidad, clase de carga y sistema de pago.
+                        <br/>
+                        <br/>
+                        <strong>NOVENA.-</strong> Si el "Remitente" desea que el "Porteador" asuma la responsabilidad por el valor de las mercancías o efectos que él declare y que cubra toda clase de riesgos, inclusive los derivados de caso fortuito o de fuerza mayor, las partes deberán convenir un cargo adicional, equivalente al valor de la prima del seguro que se contrate, el cual se deberá expresar en la carta de porte.
+                        <br/>
+                        <br/>
+                        <strong>DECIMA.-</strong> Cuando el importe del flete no incluya el cargo adicional, la responsabilidad del "Porteador" queda expresamente limitada a la cantidad equivalente a 15 días del salario mínimo vigente en el Distrito Federal por tonelada o cuando se trate de embarques cuyo peso sea mayor a los 200Kg. Pero menor a los 1000Kg y a 4 días de salario mínimo por remesa cuando se trate de embarques con peso hasta de 200Kg.
+                        <br/>
+                        <br/>
+                        <strong>DECIMA PRIMERA.-</strong> El precio del transporte deberá pagarse en origen, salvo convenio entre las partes de pago en destino. Cuando el transporte se hubiera concertado "Flete por Cobrar", la entrega de las mercancías o efectos se hará contra el pago del flete y el "Porteador" tendrá derecho a retenerlos mientras no se le cubra el precio convenido.
+                        <br/>
+                        <br/>
+                        <strong>DECIMA SEGUNDA.-</strong> Si al momento de la entrega resultare algún faltante o avería, el consignatario deberá hacerla constar en ese acto en la carta de porte y formular su reclamación por escrito al "Porteador" dentro de las 24 Hrs. Siguientes.
+                        <br/>
+                        <br/>
+                        <strong>DECIMA TERCERA.-</strong> El "Porteador" queda eximido de la obligación de recibir mercancías o efectos para su transporte, en los siguientes casos:<br/> <strong>a)</strong> Cuando se trate de carga que por su naturaleza, peso, volumen, embalaje defectuoso o cualquier otra circunstancia no pueda transportarse sin destruirse o sin causar daño a los demás artículos o al material rodante, salvo que la empresa de que se trate tenga el equipo adecuado.
+                        <br/>
+                        <strong>b)</strong> Las mercancías cuyo transporte haya sido prohibido por disposiciones legales o reglamentarias. Cuando tales disposiciones no prohíban precisamente el transporte de determinadas mercancías, pero si ordenen la presentación de ciertos documentos para que puedan ser transportadas, el "Remitente" estará obligado a entregar al "Porteador" los documentos correspondientes.
+                        <br/>
+                        <br/>
+                        <strong>DECIMA CUARTA.-</strong> Los casos no previstos en las presentes condiciones y las quejas derivadas de su aplicación se someterán por la vía administrativa a la Secretaría de Comunicaciones y Transportes.
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div id="linea" class="col-xs-12">
+                </div>
+                <div class="col-xs-6">
+                    www.gebesa.com
+                </div>
+                <div class="col-xs-6" align="right">
+                    Página 1 de 1
+                </div>
+            </div>
+        </template>
+        <template id="report_carta_porte">
+            <t t-call="web.html_container">
+                <!--<t t-foreach="docs" t-as="doc"> -->
+                    <t t-call="flete_gebesa.report_carta_porte_document"/>
+                <!--</t> -->
+            </t>
+        </template>
+    </data>
+</odoo>

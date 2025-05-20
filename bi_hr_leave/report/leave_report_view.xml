@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+    <report id="leave_report_uniq_id"
+           name="bi_hr_leave.leave_report_template_document"
+           report_type="qweb-pdf"
+           model="hr.leave"
+           file="bi_hr_leave.leave_report_template_document"
+           string="Leave Report"
+           />
+     </data>
+</odoo>

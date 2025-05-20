@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <record model="ir.ui.view" id="view_res_bank_inherit_l10n_mx_base">
+        <field name="name">view.res.bank.inherit.l10n_mx_base</field>
+        <field name="model">res.bank</field>
+        <field name="inherit_id" ref="base.view_res_bank_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='bic']" position="after">
+                <field name="code"/>
+                <field name="social_reason"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_partner_bank_clabe_form_inh_xml">
+        <field name="name">view.partner.bank.clabe.form.inh.xml</field>
+        <field name="model">res.partner.bank</field>
+        <field name="inherit_id" ref="base.view_partner_bank_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='bank_id']" position="after">
+                <field name="clabe" colspan="2"/>
+            </xpath>
+            <xpath expr="//field[@name='acc_number']" position="after">
+                <field name="last_acc_number" colspan="2"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_partner_bank_clabe_tree_inh_xml">
+        <field name="name">view.partner.bank.clabe.form.inh.xml</field>
+        <field name="model">res.partner.bank</field>
+        <field name="inherit_id" ref="base.view_partner_bank_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='bank_name']" position="after">
+                <field name="clabe"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

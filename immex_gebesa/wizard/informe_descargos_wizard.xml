@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='informe_descargos_wizard_form'>
+            <field name='name'>informe.descargos.wizard.form</field>
+            <field name='model'>informe.descargos.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='Informe de descargos'>
+                    <group>
+                        <group>
+                            <field name='tipo_descargo'/>
+                        </group>
+                        <group>
+                            <field name='year'/>
+                            <field name='periodo'/>
+                        </group>
+                        
+                        
+                    </group>
+                    <footer>
+                        <button string="Imprimir" name="print_corrections_init_inventory" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_informe_descargos_wizard" model="ir.actions.act_window">
+            <field name="name"> Informe de descargos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">informe.descargos.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="informe_descargos_wizard_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_informe_descargos_wizard" name=" Informe de descargos" parent="immex_gebesa.immex_report_anexo31" action="action_informe_descargos_wizard" sequence="30"/>
+    </data>
+</odoo>

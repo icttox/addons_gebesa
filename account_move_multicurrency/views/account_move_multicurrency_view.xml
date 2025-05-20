@@ -1,0 +1,143 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+
+
+    <record model="ir.actions.act_window" id="account_move_mt_list_action">
+            <field name="name">Account Move Multicurrency</field>
+            <field name="res_model">account.move.multicurrency</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the first account move multicurrency
+                </p>
+            </field>
+        </record>
+
+        <!-- top level menu: no parent -->
+      
+        <!-- the following menuitem should appear *after*
+             its parent openacademy_menu and *after* its
+             action course_list_action -->
+        <menuitem id="courses_menu" name="Account Move Multicurrency" parent="account.menu_finance_entries_accounting_entries"
+                  action="account_move_mt_list_action"/>
+        <!-- Full id location:
+             action="openacademy.course_list_action"
+             It is not required when it is the same module -->
+        <record model="ir.ui.view" id="account_move_mt_form_view">
+            <field name="name">account.move.multicurrency.form</field>
+            <field name="model">account.move.multicurrency</field>
+            <field name="arch" type="xml">
+                <form string="Form Account Move Multicurrency">
+                    <header>
+                        <button name="action_validate" type="object" string="Validate" class="oe_highlight" attrs="{'invisible':[('state', '!=', 'draft')]}"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="consecutive" readonly="1" attrs="{'readonly':[('state','not in', ['draft', 'confirm'])]}"/>
+                                <field name="date" attrs="{'readonly':[('state','not in', ['draft', 'confirm'])]}"/>
+                                <field name="journal_id" attrs="{'readonly':[('state','not in', ['draft', 'confirm'])]}"/>
+                                <field name="partner_id" attrs="{'readonly':[('state','not in', ['draft', 'confirm'])]}"/>
+								<field name='company_id' required='1' readonly='1' attrs="{'readonly':[('state','not in', ['draft', 'confirm'])]}"/>
+                                <field name="account_move_id" readonly='1' attrs="{'readonly':[('state','not in', ['draft', 'confirm'])]}"/>
+                                <field name="ref" attrs="{'readonly':[('state','not in', ['draft', 'confirm'])]}"/>
+                            </group>
+                            <field name="account_move_multicurrency_line_ids" widget="one2many_list">
+                            <tree editable="bottom" string="Tree Account Move Multicurrency Line Tree">
+                                <field name="partner_id"/>
+                                <field name="account_account_id"/>
+                                <field name="account_analytic_id"/>
+                                <field name="name"/>
+                                <field name="debit" sum="Total Debit"/>
+                                <field name="credit" sum="Total Credit"/>
+                                <field name="currency_id"/>
+                                <field name="account_move_line_id" readonly="1"/>
+                            </tree>    
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>    
+
+        <record model="ir.ui.view" id="account_move_mt_tree_view">
+            <field name="name">account.move.multicurrency.tree</field>
+            <field name="model">account.move.multicurrency</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Account Move Multicurrency">
+                    <field name="date"/>
+                    <field name="consecutive" select="1"/>
+                    <field name="journal_id"/>
+                    <field name='company_id' required='1' readonly='1'/>
+                    <field name="account_move_id"/>
+                    <field name="partner_id"/>
+                    <field name="ref"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="account_move_mt_line_form_view">
+            <field name="name">account.move.multicurrency.line.form</field>
+            <field name="model">account.move.multicurrency.line</field>
+            <field name="arch" type="xml">
+                <form string="Form Account Move Multicurrency Line">
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+								<label for="name"/>
+							</div>
+                            <h2>
+                                <field name="name"/>    
+                            </h2>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_id"/>
+                                <field name="debit"/>
+                                <field name="credit"/>
+                            </group>
+                            <group>
+                                <field name="account_analytic_id"/>
+                                <field name="account_account_id"/>
+                                <field name="currency_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- <record model="ir.actions.act_window" id="Account_move_mt_line_list_action">
+            <field name="name">Account Move Multicurrency Line</field>
+            <field name="res_model">account.move.multicurrency.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="Account_move_mt_line_menu" name="Account Move Multicurrency Line"
+                  parent="account_move_mt_menu"
+                  action="Account_move_mt_line_list_action"/> -->
+
+        <!-- <record model="ir.ui.view" id="account_move_mt_line_course_tree_view">
+            <field name="name">account.move.multicurrency.line.tree</field>
+            <field name="model">account.move.multicurrency.line</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Account Move Multicurrency Line Tree">
+                    <field name="name"/>
+                    <field name="debit"/>
+                    <field name="credit"/>
+                    <field name="account_analytic_id"/>
+                    <field name="account_account_id"/>
+                    <field name="currency_id"/>
+                    <field name="account_move_multicurrency_id"/>
+                    <field name="account_move_line_id"/>
+                    <field name="partner_id"/>
+                </tree>
+            </field>
+        </record> -->
+    </data>
+</odoo>

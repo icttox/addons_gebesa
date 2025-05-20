@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="True">
+    	<record id="mpf_tipomov_E1" model="stock.move.type">
+        	<field name="code">E1</field>
+            <field name="name">Customer Returns</field>
+        	<field name="type">input</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="mpf_tipomov_S1" model="stock.move.type">
+            <field name="code">S1</field>
+            <field name="name">Product Sales</field>
+            <field name="type">output</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="mpf_tipomov_E2" model="stock.move.type">
+            <field name="code">E2</field>
+            <field name="name">Product Purchases</field>
+            <field name="type">input</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="mpf_tipomov_S2" model="stock.move.type">
+            <field name="code">S2</field>
+            <field name="name">Supplier Returns</field>
+            <field name="type">output</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="mpf_tipomov_E3" model="stock.move.type">
+            <field name="code">E3</field>
+            <field name="name">Incoming Transfers</field>
+            <field name="type">input</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="mpf_tipomov_S3" model="stock.move.type">
+            <field name="code">S3</field>
+            <field name="name">Outgoing Transfers</field>
+            <field name="type">output</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="mpf_tipomov_E4" model="stock.move.type">
+            <field name="code">E4</field>
+            <field name="name">Input Adjustments</field>
+            <field name="type">input</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="mpf_tipomov_S4" model="stock.move.type">
+            <field name="code">S4</field>
+            <field name="name">Output Adjustments</field>
+            <field name="type">output</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="mpf_tipomov_T1" model="stock.move.type">
+            <field name="code">T1</field>
+            <field name="name">Internal Procurements</field>
+            <field name="type">internal</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="mpf_tipomov_E5" model="stock.move.type">
+            <field name="code">E5</field>
+            <field name="name">Input for Manufacture</field>
+            <field name="type">input</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="mpf_tipomov_S5" model="stock.move.type">
+            <field name="code">S5</field>
+            <field name="name">Output For Manufacture</field>
+            <field name="type">output</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+    </data>
+</odoo>

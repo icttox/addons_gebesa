@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='account_invoice_factoraje_tree'>
+            <field name='name'>account.invoice.factoraje.tree</field>
+            <field name='model'>account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='origin']" position="after">
+                    <field name="factoring_customer_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='account_invoice_fac_supplier_tree'>
+            <field name='name'>account.invoice.fac.supplier.tree</field>
+            <field name='model'>account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_tree"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='origin']" position="after">
+                    <field name="factoring_supplier_id"/>
+                </xpath>
+                <xpath expr="//field[@name='currency_id']" position="replace">
+                    <field name="currency_id"/>
+                </xpath>
+            </field>
+        </record>       
+    </data>
+</odoo>

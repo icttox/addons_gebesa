@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='report_inventory_analysis_wizard'>
+            <field name='name'>report.inventory.analysis.wizard</field>
+            <field name='model'>report.inventory.analysis</field>
+            <field name='arch' type='xml'>
+                <form string='Inventory analysis'>
+                    <group>
+                        <group>
+                        	<field name='warehouse_id' required="True"/>
+                        	<field name='group_id'/>
+                        	<field name='line_id'/>
+                            <field name='year' required="True"/>
+                        	<field name='month' required="True"/>
+                            <field name='only_mp'/>
+                        </group>
+                        <group>
+                        	<field name='location_id' domain="[('stock_warehouse_id', '=', warehouse_id)]" required="True"/>
+                        	<field name='product_ini_id' domain="[('group_id', '=', group_id), ('line_id', '=', line_id)]"/>
+                        	<field name='product_end_id' domain="[('group_id', '=', group_id), ('line_id', '=', line_id)]"/>
+                            <field name='product_inactive'/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="action_report_inventory_analysis" model="ir.actions.act_window">
+            <field name="name">Inventory analysis</field>
+            <field name="res_model">report.inventory.analysis</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="report_inventory_analysis_wizard"/>
+            <field name="context">{}</field>
+            <field name="target">current</field>
+        </record>
+        <menuitem action="action_report_inventory_analysis" id="menu_report_inventory_analysis" name="Inventory analysis" parent="gebesa_reports.gebesa_report_inven_menu"/>
+
+        <record model='ir.ui.view' id='report_consumption_by_date'>
+            <field name='name'>report.consumption.by.date.wizard</field>
+            <field name='model'>report.consumption.date</field>
+            <field name='arch' type='xml'>
+                <form string='Consumption by date'>
+                    <group>
+                        <group>
+                            <field name='warehouse_id' required="True"/>
+                            <field name='group_id'/>
+                            <field name='line_id'/>
+                            <field name='date_ini' required="True"/>
+                            <field name='date_fin' required="True"/>
+                        </group>
+                        <group>
+                            <field name='location_id' domain="[('stock_warehouse_id', '=', warehouse_id)]" required="True"/>
+                            <field name='product_ini_id' domain="[('group_id', '=', group_id), ('line_id', '=', line_id)]"/>
+                            <field name='product_end_id' domain="[('group_id', '=', group_id), ('line_id', '=', line_id)]"/>
+                            <field name='product_inactive'/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="action_report_consumption_by_date" model="ir.actions.act_window">
+            <field name="name">Consumption by date</field>
+            <field name="res_model">report.consumption.date</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="report_consumption_by_date"/>
+            <field name="context">{}</field>
+            <field name="target">current</field>
+        </record>
+        <menuitem action="action_report_consumption_by_date" id="menu_report_consumption_by_date" name="Consumption by date" parent="gebesa_reports.gebesa_report_inven_menu"/>
+    </data>
+</odoo>

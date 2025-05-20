@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="wbl_stations_form_view">
+            <field name="name">l10n.mx.wbl.stations.form</field>
+            <field name="model">l10n.mx.wbl.stations</field>
+            <field name="arch" type="xml">
+                <form string="Form Waybill Stations">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/> 
+                            <field name="country_id"/>
+                            <field name="transport_id"/>
+                            <field name="active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wbl_stations_tree_view">
+            <field name="name">l10n.mx.wbl.stations.tree</field>
+            <field name="model">l10n.mx.wbl.stations</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Waybill Stations">
+                    <field name="code"/>
+                    <field name="name"/> 
+                    <field name="country_id"/>
+                    <field name="transport_id"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="wbl_stations_action">
+            <field name="name">Waybill Stations</field>
+            <field name="res_model">l10n.mx.wbl.stations</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the waybill stations
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="wbl_stations_action" id="menu_wbl_stations" name="Stations" parent="menu_wbl_complement" sequence="30"/>
+    </data>
+</odoo>
+    

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="gebesa_report_menu" name="Reportes Gebesa" web_icon="gebesa_reports,static/description/web_icon.png" icon="fa-usd" action="board.open_board_my_dash_action" groups="gebesa_reports.group_report_gebesa"/>
+        <menuitem id="gebesa_report_conta_menu" name="Contabilidad" parent="gebesa_report_menu"/>
+        <menuitem id="gebesa_report_pagos_menu" name="Pagos" parent="gebesa_report_menu"/>
+        <menuitem id="gebesa_report_credi_menu" name="Credito y Cobranza" parent="gebesa_report_menu"/>
+        <menuitem id="gebesa_report_factu_menu" name="Facturación" parent="gebesa_report_menu"/>
+        <menuitem id="gebesa_report_inven_menu" name="Inventarios" parent="gebesa_report_menu"/>
+        <menuitem id="gebesa_report_compr_menu" name="Compras" parent="gebesa_report_menu"/>
+        <menuitem id="gebesa_report_infor_menu" name="Informatica" parent="gebesa_report_menu"/>
+        <menuitem id="gebesa_report_logis_menu" name="Lógistica" parent="gebesa_report_menu"/>
+        <menuitem id="gebesa_report_produ_menu" name="Producción" parent="gebesa_report_menu"/>
+        <menuitem id="gebesa_report_clave_menu" name="Claves" parent="gebesa_report_menu"/>
+        <menuitem id="gebesa_report_venta_menu" name="Ventas" parent="gebesa_report_menu"/>
+        <menuitem id="gebesa_report_merca_menu" name="Mercadotecnia" parent="gebesa_report_menu"/>
+        <menuitem id="gebesa_report_fletera_menu" name="Fletera" parent="gebesa_report_menu"/>
+    </data>
+</odoo>

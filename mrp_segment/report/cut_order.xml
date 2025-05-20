@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/mrp_segment/static/src/css/cut_order.css"/>
+                <link rel="stylesheet" href="/mrp_segment/static/src/css/manufacturing_order.css"/>
+            </xpath>
+        </template>
+
+        <report
+            id="cut_order"
+            model="mrp.segment"
+            string="Cut order"
+            report_type="qweb-pdf"
+            name="mrp_segment.report_cut_order"
+            file="mrp_segment.report_cut_order"
+        />
+        <record id="mrp_segment.cut_order" model="ir.actions.report">
+            <field name="paperformat_id" ref="event.paperformat_euro_lowmargin" />
+        </record>
+
+        <template id="report_segment_layout_empty">
+            <div class="header">
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer">
+            </div>
+        </template>
+
+        <template id="report_cut_order_document">
+            <t t-call="mrp_segment.report_segment_layout_empty">
+                <div class="page">
+                    <t t-foreach="doc['products']" t-as="product">
+                        <div class="row text-center pt-3" style="font-size: 13pt;">
+                            <div class="col-12">
+                                <span t-esc="doc['folio']"/> <span t-esc="doc['name']"/>
+                            </div>
+                        </div>
+                        <div class="row text-center pt-2" style="font-size: 7pt;">
+                            <div class="col-12">
+                                <div class="row border-top border-left  border-right" style="border-color: #000 !important;">
+                                    <div class="col-7"/>
+                                    <div class="col-2 border-left" style="border-color: #000 !important;">
+                                        Cantidades
+                                    </div>
+                                    <div class="col-1 border-left" style="border-color: #000 !important;"/>
+                                    <div class="col-2 border-left" style="border-color: #000 !important;">
+                                        Clave
+                                    </div>
+                                </div>
+                                <div class="row border-top border-left border-right" style="border-color: #000 !important;">
+                                    <div class="col-7">
+                                        <span t-esc="doc['products'][product]['product_name']"/>
+                                    </div>
+                                    <div class="col-2 border-left" style="border-color: #000 !important;">
+                                        <span t-esc="doc['products'][product]['product_qty']"/>
+                                    </div>
+                                    <div class="col-1 border-left" style="border-color: #000 !important;"/>
+                                    <div class="col-2 border-left" style="border-color: #000 !important;">
+                                        <span t-esc="doc['products'][product]['product_code']"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 border-top border-left border-right" style="border-color: #000 !important; background-color: #000; color: white;">
+                                        Nota Importante
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 border" style="border-color: #000 !important; height: 120px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row text-center pt-3" style="font-size: 7pt;">
+                            <div class="col-12">
+                                <div class="row border-top border-left  border-right" style="border-color: #000 !important;">
+                                    <div class="col-9">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                COMPONENTE
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="row">
+                                                    <div class="col-3 border-left" style="border-color: #000 !important;">
+                                                        PRIORIDAD DE CORTE
+                                                    </div>
+                                                    <div class="col-3 border-left" style="border-color: #000 !important;">
+                                                        MEDIDA
+                                                    </div>
+                                                    <div class="col-3 border-left" style="border-color: #000 !important;">
+                                                        CALIBRE
+                                                    </div>
+                                                    <div class="col-3 border-left" style="border-color: #000 !important;">
+                                                        CANTIDAD
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="row">
+                                            <div class="col-3 border-left" style="border-color: #000 !important; color: white;">
+                                              12345 67890
+                                            </div>
+                                            <div class="col-3 border-left" style="border-color: #000 !important;"/>
+                                            <div class="col-3 border-left" style="border-color: #000 !important;"/>
+                                            <div class="col-3 border-left" style="border-color: #000 !important;"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row border" style="border-color: #000 !important;">
+                                    <div class="col-3">
+                                        LASER
+                                    </div>
+                                    <div class="col-3 border-left" style="border-color: #000 !important;">
+                                        PUNZO
+                                    </div>
+                                    <div class="col-3 border-left" style="border-color: #000 !important;">
+                                        TROQUEL
+                                    </div>
+                                    <div class="col-3 border-left" style="border-color: #000 !important;">
+                                        DOBLADO
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pt-2">
+                            <div class="col-12">
+                                <t t-set="total" t-value="0.0"/>
+                                <t t-foreach="doc['products'][product]['cut_line']" t-as="line">
+                                    <span t-esc="line"/><br />
+                                    <t t-set="subtotal" t-value="0.0"/>
+                                    <div class="row" style="font-size: 7pt;">
+                                        <div class="col-12 border" style="border-color: #000 !important;">
+                                            <t t-foreach="doc['products'][product]['cut_line'][line]" t-as="cut">
+                                                <div class="row border-bottom">
+                                                    <div class="col-9">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <span t-esc="cut['name']"/>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="row">
+                                                                    <div class="col-3 border-left" style="border-color: #000 !important;">
+                                                                        <span t-esc="cut['row']"/>
+                                                                    </div>
+                                                                    <div class="col-3 border-left" style="border-color: #000 !important;">
+                                                                        <span t-esc="cut['width']"/> X <span t-esc="cut['long']"/>
+                                                                    </div>
+                                                                    <div class="col-3 border-left" style="border-color: #000 !important;">
+                                                                        <span t-esc="cut['caliber'].key_caliber"/>
+                                                                    </div>
+                                                                    <div class="col-3 border-left" style="border-color: #000 !important;">
+                                                                         <span t-esc="cut['qty']"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="row">
+                                                            <div class="col-3 border-left" style="border-color: #000 !important; color: white;">
+                                                              1
+                                                            </div>
+                                                            <div class="col-3 border-left" style="border-color: #000 !important;"/>
+                                                            <div class="col-3 border-left" style="border-color: #000 !important;"/>
+                                                            <div class="col-3 border-left" style="border-color: #000 !important;"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <t t-set="subtotal" t-value="subtotal+cut['qty']"/>
+                                            </t>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <div class="row">
+                                                <div class="col-5"/>
+                                                <div class="col-7">
+                                                    <div class="row" style="font-size: 9pt;">
+                                                        <div class="col-9"/>
+                                                        <div class="col-3">
+                                                            <span t-esc="subtotal"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <t t-set="total" t-value="total+subtotal"/>
+                                    <div class="row pt-2" style="font-size: 7pt;">
+                                        <div class="col-12 border" style="border-color: #000 !important;">
+                                            <t t-foreach="doc['products'][product]['cut_line'][line]" t-as="cut">
+                                                <div class="row">
+                                                    <div class="col-3" style="color: white;">
+                                                        <span t-esc="cut['name']"/>
+                                                    </div>
+                                                    <div class="col-3 border-left" style="border-color: #000 !important;"/>
+                                                    <div class="col-3 border-left" style="border-color: #000 !important;"/>
+                                                    <div class="col-3 border-left" style="border-color: #000 !important;"/>
+                                                </div>
+                                            </t>
+                                        </div>
+                                    </div>
+                                </t>
+                                <div class="row pt-1" style="font-size: 9pt;">
+                                    <div class="col-10 text-right">
+                                        Total de piezas
+                                    </div>
+                                    <div class="col-2 border" style="border-color: #000 !important;">
+                                        <span t-esc="total"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="font-size: 1pt;page-break-after: always;">&#160;</div>
+                    </t>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_cut_order">
+            <t t-set="data_report_landscape" t-value="True"/>
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="mrp_segment.report_cut_order_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

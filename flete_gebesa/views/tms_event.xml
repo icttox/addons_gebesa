@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_tms_event_form'>
+            <field name='name'>view.tms.event.form</field>
+            <field name='model'>tms.event</field>
+            <field name='inherit_id' ref='tms.view_tms_event_form'/>
+            <field name='arch' type='xml'>
+            	<xpath expr="//form/sheet/group/field[@name='date']" position="after">
+                    <field name="type"/>
+                    <field name="amount"/>
+                    <field name="positive"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

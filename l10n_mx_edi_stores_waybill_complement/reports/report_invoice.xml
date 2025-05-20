@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="electronic_invoice_report_document" inherit_id="l10n_mx_base.electronic_invoice_report_document">
+            <xpath expr="//div[@class='page']/div[@id='concepts']" position="before">
+                <t t-if="o.unit_id and o.driver_id">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="row" style="font-size:9px">
+                                <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                    <strong><span>Unidad: </span></strong>
+                                </div>
+                            </div>
+                            <div class="row" style="font-size:9px">
+                                <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                    <span t-esc="o.unit_id.name"/> - <span t-esc="o.unit_id.license_plate"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row" style="font-size:9px">
+                                <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                    <strong><span>Remolque: </span></strong>
+                                </div>
+                            </div>
+                            <div class="row" style="font-size:9px">
+                                <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                    <span t-esc="o.trailer1_id.name"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row" style="font-size:9px">
+                            <div class="col-12" style="padding-left: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                <strong><span>Datos Adicionales:</span></strong>
+                            </div>
+                        </div>
+                        <div class="row" style="font-size:9px">
+                            <div class="col-4" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                <strong><span>Proveedor de Seguros</span></strong>
+                            </div>
+                            <div class="col-2" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                <strong><span>Poliza de Seguro</span></strong>
+                            </div>
+                            <div class="col-3" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                <strong><span>Modelo</span></strong>
+                            </div>
+                            <div class="col-1" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                <strong><span>Año</span></strong>
+                            </div>
+                            <div class="col-2" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                <strong><span>Distancia Recorrida</span></strong>
+                            </div>
+                        </div>
+                        <div class="row" style="font-size:9px">
+                            <div class="col-4" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                <span t-esc="o.insurance_supplier_id.name"/> 
+                            </div>
+                            <div class="col-2" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                <span t-esc="o.insurance_policy"/> 
+                            </div>
+                            <div class="col-3" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                <span t-esc="o.unit_id.model_id.name"/>
+                            </div>
+                            <div class="col-1" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                <span t-esc="o.unit_id.year_model"/>
+                            </div>
+                              <div class="col-2" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                <t t-set="distancias" t-value="o._l10n_mx_edi_waybill_distance()"/>
+                                <span t-esc="distancias['total']"/> km
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="row" style="font-size:9px">
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        <strong><span>Entregas:</span></strong>
+                                    </div>
+                                </div>
+                                <div class="row" style="font-size:9px">
+                                    <div class="col-6" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <strong><span>Fecha de entrega</span></strong>
+                                    </div>
+                                </div>
+                                    <div class="row" style="font-size:9px">
+                                        <div class="col-6" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                            <span t-esc="o.date_deliver"/> 
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="row" style="font-size:9px">
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                        <strong><span>Operador</span></strong>
+                                    </div>
+                                </div>
+                                <div class="row" style="font-size:9px">
+                                    <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <span t-esc="o.driver_id.name"/>
+                                    </div>
+                                </div>
+                                <div class="row" style="font-size:9px">
+                                    <div class="col-6" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <strong><span>Tipo de permiso</span></strong>
+                                    </div>
+                                    <div class="col-6" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                        <strong><span>Número de permiso</span></strong>
+                                    </div>
+                                </div>
+                                    <div class="row" style="font-size:9px">
+                                        <div class="col-6" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                            <span t-esc="o.company_id.stc_type_permit.name"/> 
+                                        </div>
+                                        <div class="col-6" style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                            <span t-esc="o.company_id.sct_reg"/> 
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row" style="font-size:9px">
+                            <div class="col-12" style="padding-top: 0.3em; padding-bottom: 0.3em;background-color: #848484;color: #ffffff;">
+                                <strong><span>Detalle de la Carga:&#160;&#160;&#160;&#160;&#160;&#160;&#160;Que el Remitente dice que contiene</span></strong>
+                            </div>
+                        </div>
+                        <div class="row no-gutters" style="font-size:9px">
+                            <div class="col-12">
+                                <table class="table">
+                                    <tr>
+                                        <th width="12%" class="text-left" style="padding-top: 0.3em; padding-bottom: 0.3em;"><strong><span>Clave producto<br/>servicio</span></strong></th>
+                                        <th width="15%" class="text-left" style="padding-top: 0.3em; padding-bottom: 0.3em;"><strong><span>Carga</span></strong></th>
+                                        <th width="15%" class="text-left" style="padding-top: 0.3em; padding-bottom: 0.3em;"><strong><span>Descripcion</span></strong></th>
+                                        <th width="15%" class="text-left" style="padding-top: 0.3em; padding-bottom: 0.3em;"><strong><span>Unidad de<br/>medida</span></strong></th>
+                                    </tr>
+                                    <t t-foreach="o.income_invoice_id.invoice_line_ids" t-as="line">
+                                        <tr>
+                                            <td style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                                <span t-esc="line.product_id.products_services_id.code"/> 
+                                            </td>
+                                            <td style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                                <span t-esc="line.product_id.default_code"/>
+                                            </td>
+                                            <td style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                                <span t-esc="line.product_id.name"/>
+                                            </td>
+                                            <td style="padding-top: 0.3em; padding-bottom: 0.3em;">
+                                                <span t-esc="line.product_id.uom_id.name"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>

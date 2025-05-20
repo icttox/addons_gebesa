@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_move_form'>
+            <field name='name'>view_move_button_unreserve_form</field>
+            <field name='model'>stock.move</field>
+            <field name='inherit_id' ref='stock.view_move_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/header/field[@name='state']" position="before">
+                    <button name="do_unreserve" states="assigned" string="Unreserve" type="object" groups="global_privilege_button.group_unreserve_moves"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

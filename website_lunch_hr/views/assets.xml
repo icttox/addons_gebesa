@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="assets_backend" name="website_lunch_hr assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/website_lunch_hr/static/src/js/lunch.js" />
+            <script type="text/javascript" src="/website_lunch_hr/static/src/js/show_password.js" />
+
+        </xpath>
+    </template>
+</odoo>

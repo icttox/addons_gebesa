@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='reporte_incidencias_tree'>
+        	<field name='name'>reporte.incidencias.tree</field>
+        	<field name='model'>sale.order.line</field>
+        	<field name='arch' type='xml'>
+        		<tree string='Incidencias'>
+                    <field name="date"/>
+                    <field name="nom"/>
+                    <field name="part"/>
+                    <field name="ref"/>
+                    <field name="code"/>
+                    <field name="produ"/>
+                    <field name="qty"/>
+                    <field name="amou"/>
+                    <field name="state"/>
+                    <field name="proj"/>
+                    <field name="ship"/>
+                    <field name="note"/>    
+                    <field name="team"/>
+                    <field name="repl"/>
+        		</tree>
+        	</field>
+        </record>
+
+        <record id='action_reporte_incidencias' model='ir.actions.act_window'>
+            <field name='name'>reporte.incidencias</field>
+            <field name='res_model'>sale.order.line</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree</field>
+            <field name="view_id" ref="reporte_incidencias_tree"/>
+            <field name="domain">[('order_id.priority','=','replenishment'),('closed', '!=', True)]</field>
+        </record>
+        <menuitem id="reporte_incidencias_menu" parent="sale.menu_sale_report" name="Reporte Incidencias" action="action_reporte_incidencias"/>
+    </data>
+</odoo>

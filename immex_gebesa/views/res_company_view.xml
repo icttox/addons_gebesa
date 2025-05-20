@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="company_action" model="ir.actions.act_window">
+            <field name="name">Compañias</field>
+            <field name="res_model">res.company</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('immex_num', '!=', False)]</field>
+        </record>
+        <menuitem id="menu_company" action="company_action" name="Compañias" parent="immex_gebesa.menu_l10n_mx_cat" sequence="90"/>
+    </data>
+</odoo>

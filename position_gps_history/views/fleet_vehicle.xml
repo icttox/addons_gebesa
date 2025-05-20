@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="fleet_vehicle_form_inherit_gps_history" model="ir.ui.view">
+            <field name="name">fleet.vehicle.tms.form</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="tms.fleet_vehicle_form_inherit_tms"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[3]" position="after">
+                    <page string="GPS position history">
+                        <field name="gps_history_ids" readonly="1"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

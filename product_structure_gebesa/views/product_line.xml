@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_line_tree'>
+        	<field name='name'>product.line.tree</field>
+        	<field name='model'>product.line</field>
+        	<field name='arch' type='xml'>
+        		<tree string='Product line'>
+        			<field name='product_family_id'/>
+        			<field name='code'/>
+        			<field name='name'/>
+                    <field name='mu_min'/>
+        		</tree>
+        	</field>
+        </record>
+
+        <record model='ir.ui.view' id='product_line_form'>
+        	<field name='name'>product.line.form</field>
+        	<field name='model'>product.line</field>
+        	<field name='arch' type='xml'>
+        		<form string='Product line'>
+        			<sheet>
+        				<div class="oe_title">
+        					<label for="code" class="oe_edit_only"/>
+        					<h1>
+        						<field name='code'/>
+        					</h1>
+        				</div>
+        				<group>
+        					<group>
+        						<field name='name'/>
+        						<field name='product_family_id'/>
+        					</group>
+        					<group>
+                                <field name='report_type'/>
+        						<field name='active'/>
+        					</group>
+                            <group>
+                                <field name='mu_min'/>
+                            </group>
+        				</group>
+        			</sheet>
+        		</form>
+        	</field>
+        </record>
+
+        <record id='action_product_line' model='ir.actions.act_window'>
+        	<field name='name'>Product Line</field>
+        	<field name='res_model'>product.line</field>
+        	<field name='view_type'>form</field>
+        	<field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="product_line_menu" name="Product Line" parent="product_strucutre_gebesa_menu" action="action_product_line"/>
+    </data>
+</odoo>

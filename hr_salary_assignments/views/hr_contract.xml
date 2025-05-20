@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hr_contract_form_inherit_salary_assignments" model="ir.ui.view">
+        <field name="name">hr.contract.form.inherit.salary.assignments</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <!-- <xpath expr="//field[@name='job_id']" position="after">
+                <field name="struct_id"/>
+            </xpath> -->
+            <xpath expr="//field[@name='advantages']" position="before">
+                <field name="salario_hora"/>
+                <field name="salario_integ"/>
+                <field name="pctjre_integ"/>
+                <separator string='INFONAVIT'/>
+                <field name="dto_infonavit_mensual"/>
+                <field name="dto_infonavit_diario"/>
+                <separator string='FONACOT'/>
+                <field name="dto_fonacot_mensual"/>
+                <field name="dto_fonacot_semanal"/>
+            </xpath>
+            <xpath expr="//notebook/page/group/group[@name='salary_and_advantages']" position="after">
+                <group>
+                    <field name="zona_salmin"/>
+                    <field name="ptu"/>
+                    <field name="imss"/>
+                    <field name="cas"/>
+                    <field name="pensionado"/>
+                    <field name="deshab_imptos"/>
+                    <field name="calc_isr_anual"/>
+                    <field name="periodicidad_pago"/>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='job_id']" position="after">
+                <field name="riesgo_puesto"/>
+                    <field name="regimen"/>
+                    <field name="contrato"/>
+                    <field name="jornada"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

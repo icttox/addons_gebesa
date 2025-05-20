@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_massive_delete'>
+        	<field name='name'>view.massive.delete</field>
+        	<field name='model'>mrp.bom.line.massive.delete</field>
+        	<field name='arch' type='xml'>
+        		<form string='Massive Delete'>
+    				<group>
+                        <field name='product_id'/>
+        			</group>
+                    <footer>
+                        <button name="process" string="Process" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+
+
+        <record id='action_massive_delete_wizard' model='ir.actions.act_window'>
+        	<field name='name'>Massive Delete</field>
+        	<field name='res_model'>mrp.bom.line.massive.delete</field>
+        	<field name='key2'>client_action_multi_delete</field>
+        	<field name='multi'>True</field>
+        	<field name='view_type'>form</field>
+        	<field name='view_mode'>form</field>
+        	<field name='target'>new</field>
+        </record>
+
+        <menuitem id="massive_delete_wizard_menu" name="Massive Delete" parent="mrp.menu_mrp_bom" action="action_massive_delete_wizard"/>
+    </data>
+</odoo>

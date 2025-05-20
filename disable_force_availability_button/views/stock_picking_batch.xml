@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='stock_picking_batch_force_availability_form'>
+        	<field name='name'>stock.picking.batch.force.availability.form'</field>
+        	<field name='model'>stock.picking.batch</field>
+        	<field name='inherit_id' ref='stock_picking_batch.stock_picking_batch_form'/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//button[@name='cancel_picking']" position="before">
+                    <button name="force_assign" states="in_progress" string="Force Availability" type="object" groups="disable_force_availability_button.group_force_availability"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

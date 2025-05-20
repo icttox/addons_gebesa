@@ -1,0 +1,36 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_analytic_parent
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-06 21:30+0000\n"
+"PO-Revision-Date: 2016-04-06 16:31-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: account_analytic_parent
+#: model:ir.model,name:account_analytic_parent.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "Cuenta analitica"
+
+#. module: account_analytic_parent
+#: code:addons/account_analytic_parent/models/account_analytic_account.py:14
+#: model:ir.model.fields,help:account_analytic_parent.field_account_analytic_account_parent_id
+#, python-format
+msgid "Analytic account parent"
+msgstr "Cuenta analitica padre"
+
+#. module: account_analytic_parent
+#: code:addons/account_analytic_parent/models/account_analytic_account.py:13
+#: model:ir.model.fields,field_description:account_analytic_parent.field_account_analytic_account_parent_id
+#, python-format
+msgid "Parent"
+msgstr "Padre"

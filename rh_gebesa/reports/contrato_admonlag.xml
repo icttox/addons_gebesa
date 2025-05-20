@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="contrato_admonlag"
+            model="hr.contract"
+            string="Contrato Admonlag"
+            report_type="qweb-pdf"
+            name="rh_gebesa.report_contrato_admonlag"
+            file="rh_gebesa.report_contrato_admonlag"
+            paperformat="base.paperformat_batch_deposit"
+        />
+
+        <template id="report_contrato_admonlag_document">
+            <div class="page">
+                <div class="row no-gutters"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        <br/>
+                        <strong>CONTRATO INDIVIDUAL DE TRABAJO POR TIEMPO INDETERMINADO SUJETO A PRUEBA </strong>SEGÚN LO ESTIPULADO POR EL ARTICULO 39-A QUE CELEBRAN POR UNA PARTE LA EMPRESA <strong>"ADMONLAG, S.C."</strong> CON DOMICILIO EN CALLE PIEDRAS NEGRAS NUMERO 220 DEL PARQUE INDUSTRIAL CARLOS A HERRERA ARALUCE DE LA CIUDAD DE GOMEZ PALACIO, DURANGO, REPRESENTADA POR EL <strong>C. BOYARDO SALMON ABRAHAM</strong> EN SU CARÁCTER DE REPRESENTANTE LEGAL, A QUIEN EN LO SUCESIVO SE LE DENOMINARA COMO <strong>LA EMPRESA</strong> Y POR LA OTRA EL <strong>C. <span t-field="doc.employee_id.name" style="text-transform: uppercase;"></span></strong> POR SU PROPIO DERECHO, A QUIEN SE LE DENOMINARA <strong>EL EMPLEADO</strong> MISMO QUE SUJETAN AL TENOR DE LAS CLAUSULAS QUE VAN PRECEDIDAS DE LAS SIGUIENTES:
+                    </div>
+                </div>
+                <br/>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center" style="text-align:center;">
+                        <strong>ANTECEDENTES.</strong>
+                    </div>
+                </div>
+                <br/>
+                <div class="row no-gutters my-2"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        1.- DECLARA "EL PATRÓN":
+                        <br/><br/>
+                        I.1 Que es una Sociedad Anónima de Capital Variable legalmente constituida conforme a las leyes mexicanas, según Escritura Pública número 17 de fecha 10 DE ENERO DEL 2014, otorgada ante la fe del Notaria Pública número 49 con ejercicio judicial en el Distrito Notarial de Viesca, Torreón Coahuila, Licenciado HECTOR AUGUSTO GORAY VALDEZ.
+                        <br/><br/>
+                        I.2 Que es una Empresa que como objeto social se dedica entre otras cosas de manera habitual y profesional a la prestación de servicios profesionales de tipo administrativo, contables, fiscales, auditoria interna y consultoría administrativa tales como administración de empresas, diseño y manejo de sistemas contables y asesoría, computación, desarrollo organizacional, diseño de sistemas electrónicos, promoción financiera, mercadotecnia, aspectos legales y de ingeniería, informática, auditoria, capacitación, planeación y desarrollo de recursos humanos, cualquier otro servicio no mencionado relativo al manejo operacional de cualquier otro tipo de empresas.
+                        <br/><br/>
+                        I.3 Que el apoderando que se identifica al calce del presente contrato, es su Representante Legal y está facultado en forma suficiente y bastante para suscribir el presente contrato en nombre de su representada, facultades que no le han sido revocadas ni en forma algunas limitadas, acreditando su personalidad en los términos de la Escritura Pública cuyos datos se incluyen al calce de este instrumento.
+                        <br/><br/>
+                        I.4 Que su clave de Registro Federal de Contribuyentes es <strong>ADM1401103R8</strong> y su registro patronal <strong>B2833186102</strong>, y que para efectos de presente contrato y para oír y recibir toda clase de notificaciones relacionadas con el mismo señala como su domicilio el ubicado en CALLE PIEDRAS NEGRAS NUMERO 220 DEL PARQUE INDUSTRIAL CARLOS A HERRERA ARALUCE DE LA CIUDAD DE GOMEZ PALACIO, DURANGO.
+                        <br/><br/>
+                        I.5 Declaran las partes que en el centro de trabajo las actividades preponderantes son: La compra venta, distribución, importación y exportación de muebles de oficina, artículos para el hogar, línea blanca, administración de personal, reclutamiento y selección, evaluaciones psicométricas, consultoría en recursos humanos, capacitación y estudios socioeconómicos de personas físicas y morales, así como la prestación de servicios de personal temporal administración de nómina, celebración de los contratos, suscripción y aceptación de los documentos crediticios y ejecución de los actos que sean necesarios conexos o relativos.
+                        <br/><br/>
+                        I.6 Que <strong> "EL EMPLEADO"</strong> será responsable frente a <strong> "EL PATRÓN"</strong> a la tramitación, calidad y legitimidad de los documentos de reportes, ventas y la difusión de las promociones y de todos los actos por él cometidos que constituye una infracción a las leyes en materia Civil o Penal.
+                        <br/><br/><br/>
+                        <strong>2.- DECLARA "EL EMPLEADO":</strong>
+                        <br/><br/>
+                        2.1 - Que su nombre es <strong><span t-field="doc.employee_id.name"/></strong>, nacionalidad <strong><span t-field="doc.employee_id.country_id.name"/></strong>, edad <strong><span t-field="doc.employee_id.age"/></strong> años, lugar de nacimiento 
+                        <strong><span t-field="doc.employee_id.place_of_birth"/></strong>, fecha de nacimiento <strong><span t-field="doc.employee_id.birthday"/></strong>, estado civil <strong><span t-field="doc.employee_id.marital"/></strong>, número de afiliación al Instituto Mexicano del Seguro Social Nss. <strong><span t-field="doc.employee_id.imss"/></strong>, número de inscripción al Registro Federal de Contribuyentes RFC <strong><span t-field="doc.employee_id.rfc"/></strong> y domicilio <strong><span t-field="doc.employee_id.address_home_id.street"/>, COL. <span t-field="doc.employee_id.address_home_id.l10n_mx_edi_colony"/>, <span t-field="doc.employee_id.address_home_id.city_id.name"/>, <span t-field="doc.employee_id.address_home_id.state_id.name"/></strong>
+                        <br/><br/>
+                        En caso de cambiar de domicilio "EL EMPLEADO" manifiesta estar de acuerdo en que si no notifica por escrito a "EL PATRÓN" dicho cambio, subsistirá el que aquí se señala para cualquier notificación posterior que lleve a cabo "EL PATRÓN", o cualquier otra persona o autoridad en relación con el presente contrato incluyendo sus modificaciones y adiciones, con la salvedad de los establecido en la Declaración II.7 de este instrumento para efectos de lo cual el domicilio ahí señalado no podrá ser modificado por "EL EMPLEADO".
+                        <br/><br/>
+                        II.2 Que cuenta con la experiencia necesaria y con los conocimientos suficientes para prestar los servicios para los que ha sido contratado.
+                        <br/><br/>
+                        II.3 Que se compromete a obtener las metas que se fijen de acuerdo al puesto que fue contratado por ¨EL PATRON¨.
+                        <br/><br/>
+                        II.4 Que conoce y entiende el alcance legal de la Ley así como a todas aquellas aplicables y vigentes al presente contrato.
+                        <br/><br/>
+                        II.5 Que ¨EL PATRON¨ otorgara gastos médicos menores al trabajador, por la cantidad de $1,500.00 mensuales no siendo estos acumulables.
+                        <br/><br/><br/>
+                        <strong>III DECLARAN AMBAS PARTES:</strong>
+                        <br/><br/>
+                        Que es su voluntad celebrar el presente contrato en los mismos términos y condiciones en que aquí aparece, sin existir dolo, violencia, lesión, error ni cualquier otro vicio del consentimiento de conformidad con las siguientes:
+                        <br/><br/>
+                    </div>
+                </div>
+                
+                <div class="row no-gutters">
+                    <div class="col-12 text-center" style="text-align:center;">
+                        <br/>
+                        <strong>CLÁUSULAS</strong>
+                    </div>
+                </div>
+                <div class="row no-gutters my-2"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        <br/>
+                        <strong>PRIMERA. - OBJETO DEL CONTRATO.</strong> Las partes convienen que las labores que desempeñará el EMPLEADO consistirán, de manera enunciativa y no limitativa, en el puesto de <strong><span t-field="doc.job_id.name"/></strong>. El EMPLEADO tendrá las obligaciones derivadas de este contrato, de la ley, de las costumbres de <strong>"ADMONLAG, S.C."</strong> y de todas aquellas que no contravengan la naturaleza de los servicios que va a prestar. La zona o sectores en los cuales el EMPLEADO deberá realizar sus funciones podrán variar según las necesidades de "EL PATRÓN". 
+                        <br/><br/>
+                        El EMPLEADO desempeñará sus servicios bajo la dirección y dependencia de "EL PATRÓN", quedando obligado a observar y cumplir con todas las instrucciones, políticos, reglamentos o manuales, así como con el Programa de Integridad, Código de Conducta y los Protocolos para prevenir la discriminación por razones de género y atención de casos de violencia, acoso y/u hostigamiento sexual y para erradicar el trabajo forzoso e infantil y cualquier modificación a los mismos o cualquier otro que, de tiempo en tiempo, se emita y se publique por "EL PATRÓN" ya sea en su domicilio o se les envíe vía correo electrónico, así como vigilar que éstos sean cumplidos por el personal a su cargo.
+                        <br/><br/>
+                        Asimismo, el EMPLEADO manifiesta que ha sido informado por "EL PATRÓN" y tiene conocimiento del contenido de la Política de Prevención de Riesgos Psicosociales, bajo la cual debe conducirse durante el desempeño de sus servicios, ratificando que se adhiere a la misma a través de la firma del presente contrato y el “Anexo D”. Las partes acuerdan que el EMPLEADO podrá consultar la mencionada política o aquella que en su momento la sustituya vía correo electrónico que en su momento se le hará llegar.
+                        <br/><br/>
+                        <strong>SEGUNDA. - CALIDAD DEL TRABAJO</strong> ,INFORMES, EXCLUSIVIDAD E IDENTIFICACIÓN "EL EMPLEADO" se obliga a desempeñar el trabajo que se le asigne en todo tiempo y lugar, con la intensidad, cuidado y esmero apropiados, así como a desempeñar cualquier labor que se le asigne, compatible con sus fuerzas y aptitudes "EL EMPLEADO" se obliga a rendir los informes escritos semanales de sus actividades así como los informes verbales que solicite "EL PATRÓN", así como a acudir a todas y cada una de las juntas y citas de trabajo que al afecto determine y concrete "EL PATRÓN" igualmente consiguiente a no prestar sus servicios personales subordinados a ninguna otra persona física o moral mientras subsista la relación de trabajo, ni a ninguna otra EMPRESA distinta a "ADMONLAG, S.C., ¨ de igual manera durante la vigencia del presente contrato, el EMPLEADO se abstendrá de fungir como accionista, socio o inversionista de otra u otras personas físicas o morales que realicen actividades que tengan relación directa con el objeto social de <strong>"ADMONLAG, S.C.".</strong>  Cualquier violación del EMPLEADO a esta cláusula será causa justificada para que <strong>"ADMONLAG, S.C."</strong> rescinda el contrato individual de trabajo sin responsabilidad legal para <strong>"ADMONLAG, S.C."</strong> esto con la finalidad de que "EL EMPLEADO" pueda desempeñar legal y adecuadamente las labores a que se refiere el presente instrumento, "EL EMPLEADO" en este acto manifiesta que conoce plenamente las responsabilidades de carácter administrativo, civil y aun las penales en que pueden incurrir las personas que en perjuicio de "EL PATRÓN" dispongan para sí, de cualquier cosa ajena mueble de la que se le haya transmitido la tenencia y no el dominio, por lo que "EL EMPLEADO" acepta que los documentos e instrumentos de trabajo que se le asignen es de la total y exclusiva propiedad de “EL PATRÓN" y se obliga a devolverla al "EL PATRÓN".
+                        <br/><br/>
+                        <strong>TERCERA. - LUGAR DE PRESTACIÓN DEL SERVICIO.</strong> El EMPLEADO desempeñará los servicios contratados en los términos del presente contrato, en Torreón, Coahuila, México, o en los lugares que "EL PATRÓN"  le señale, dentro de México o en el extranjero, donde "EL PATRÓN" tenga o pudiere llegar a tener filiales, así como en los departamentos, sucursales o plantas.
+                        <br/><br/>
+                        Sin perjuicio de lo anterior, el EMPLEADO se obliga a prestar sus servicios en cualquiera de los lugares que le sea asignado de acuerdo con las necesidades de "EL PATRÓN”  por lo que podrá ser cambiado de sucursal, domicilio o cargo a otro donde se requieran sus servicios sin menoscabo de sus percepciones o dignidad.
+                        <br/><br/>
+                        <strong>CUARTA. -</strong> Este “CONTRATO” se celebra por tiempo indeterminado sujeto a prueba  según lo establece el artículo <strong>35, 39 y 39-A  de “LA LEY”. Por un periodo de 30 días  <u>a partir de la firma del presente pero de acuerdo a la naturaleza del puesto a desempeñar por “EL TRABAJADOR” se podrá prorrogar hasta por 180 días</u></strong>, <u>y una vez concluido tal periodo la empresa junto con la comisión mixta determinaran si el trabajador paso dicho periodo de prueba  y en caso de ser positivo dicho resultado continuara con la prestación del servicio en los términos estipulados en el presente contrato, caso contrario de ser negativo el resultado se le dará por terminada la relación laboral sin responsabilidad para el patrón tal y como lo dispone el artículo 39-A de la “Ley”.</u>
+                        <br/><br/>
+                        <strong>QUINTA. - MODIFICACIONES.</strong> "EL EMPLEADO" Conviene y acepta expresamente que "EL PATRÓN" podrá, de acuerdo a sus necesidades, modificar su horario, lugar de trabajo y día de descanso, sin perjuicio de su salario expresando su conformidad con la firma de este contrato, incluyendo la facultad de "EL PATRÓN" de cambiarle de lugar y de prestación de los servicios, en forma temporal o definitiva.
+                        <br/><br/>
+                        <t t-set="result" t-value="doc.calcular_sueldo()"/>
+                        <strong>SEXTA. - SALARIO</strong> "EL PATRÓN" pagará a "EL EMPLEADO" semanalmente por la prestación de los servicios a que se refiere este contrato, la cantidad total de: <strong>$ <t t-esc="round(result[0], 2)"/> brutos semanales</strong>, <strong>(<t t-esc="result[1].upper()"/>, M.N.)</strong> cantidad que se cobrará, los días Miercoles, en el cual se encuentra incluida la proporción correspondiente al séptimo dia, le será pagado mediante deposito que realice  “la empresa”, en una institución bancaria, mediante cuenta de nómina. Y si cualquiera de estos días fuera no laborable el pago correspondiente se realizará en el primer día laboral inmediato anterior a aquel en que debió haberse efectuado. 
+                        <br/><br/>
+                        <strong>SÉPTIMA. - DEDUCCIONES.</strong> "EL EMPLEADO" manifiesta su conformidad en que nominalmente se le hagan las deducciones correspondientes por concepto de impuestos, cuotas del Instituto Mexicano del Seguro Social, aportaciones al Sistema de Ahorro para el Retiro y otras similares que establezcan las leyes correspondientes, así como las que pacte "EL EMPLEADO" en forma verbal y/o escrita con "EL PATRÓN".
+                        <br/><br/>
+                        <strong>OCTAVA. - RECIBOS DE PAGO.</strong> "EL EMPLEADO" se obliga a otorgar recibo de favor de "EL PATRÓN" por la totalidad del sueldo, prestaciones, ordinarios y/o extraordinarios, devengados hasta la fecha de expedición del recibo, conviniéndose que la firma de este implicará un finiquito total por los salarios y otros pagos por los servicios prestados a la fecha del recibo correspondiente. Observándose lo dispuesto en el artículo 109 de la Ley Federal del Trabajo.
+                        <br/><br/>
+                        Las partes convienen que el pago del sueldo se podrá hacer mediante depósitos bancarios en la cuenta de cheque o de tarjeta de débito que "EL EMPLEADO" y "EL PATRÓN" convengan. Queda entendido que el simple depósito ante la Institución de Crédito correspondiente hará las veces de comprobante de pago en términos de lo dispuesto por el artículo 804 de la Ley Federal del Trabajo aun cuando no conste la firma de "EL EMPLEADO".
+                        <br/><br/>
+                        "EL PATRÓN" se obliga a enviarle vía correo electrónico un recibo timbrado (CFDI) que contendrá el detalle de las percepciones y las deducciones relacionadas con el salario, así como el monto neto a recibir en cada semana por "EL EMPLEADO" los días Jueves, mismo que "EL EMPLEADO" se obliga a consultar dentro de los cinco días hábiles siguientes a la fecha de pago, a fin de solicitar por escrito al área de Recursos Humanos cualquier aclaración que considere aplicable. Las partes están de acuerdo que transcurrido el término señalado anteriormente y en caso de no haber ninguna aclaración por parte de "EL EMPLEADO" significará su plena conformidad con la información contenida en dicho documento imprimiéndolo haciendo él envió del mismo con la firma autógrafa de ¨EL EMPLEADO¨ a las oficinas de la EMPRESA.
+                        <br/><br/>
+                        <strong>NOVENA. - JORNADA DE TRABAJO.</strong> La jornada laboral tendrá como duración 48 horas semanales diurnas la cual bajo ninguna circunstancia podrá excederse, que podrá ser o no distribuida por "EL PATRÓN" en términos de lo dispuesto en el artículo 59 de la Ley Federal del Trabajo, de acuerdo a las necesidades del trabajo, lo que oportunamente hará del conocimiento de "EL EMPLEADO".
+                        <br/><br/>
+                        Ambas partes están de acuerdo en que "EL EMPLEADO" gozará por cada jornada de trabajo diaria de una hora para tomar sus alimentos y descansar fuera de las instalaciones de la empresa.
+                        <br/><br/>
+                        <strong>DÉCIMA. - TIEMPO EXTRA Y CONTROL DE ASISTENCIA.</strong> "EL EMPLEADO" conviene y acepta que tiene prohibido laborar tiempo extraordinario salvo que exista previamente una orden escrita de su jefe inmediato superior, requisito sin el cual ni "EL EMPLEADO" prestará sus servicios, ni "EL PATRÓN" queda obligado a pagar cantidad alguna por este concepto.
+                        <br/><br/>
+                        Para el caso que "EL EMPLEADO" labore tiempo extraordinario en términos de lo previsto en el párrafo precedente, "EL PATRÓN" pagará el tiempo extraordinario que se labore en términos de lo dispuesto en el artículo 67 de la Ley Federal del Trabajo.
+                        <br/><br/>
+                        En el caso de que "EL PATRÓN" determine que "EL EMPLEADO" preste sus servicios, parcial o totalmente fuera del centro de trabajo que al efecto tiene establecido "EL PATRÓN", "EL EMPLEADO" desde este momento se obliga a que no laborará tiempo extraordinario y que en el caso previsto en el presente párrafo, distribuirá las horas diarias de trabajo de tal forma que no labore tiempo extraordinario, ya que su jomada laboral en dicho caso quedará bajo su más estricta responsabilidad.
+                        <br/><br/>
+                        <strong>DÉCIMA PRIMERA. - CONSTANCIA DE ASISTENCIA.</strong> En caso de implantar "EL PATRÓN" un control de asistencia y puntualidad "EL EMPLEADO" estará obligado a registrar su asistencia a la entrada y salida de sus labores a través de él o los sistemas de control, ya sean estos manuales o magnéticos, electrónicos y/o cualquier otro medio que al efecto establezca "EL PATRÓN". El incumplimiento del registro al que se refiere esta cláusula será suficiente para demostrar la falta injustificada de "EL EMPLEADO" a sus labores para todos los efectos legales a que haya lugar.
+                        <br/><br/>
+                        Igualmente, en caso de que "EL PATRÓN" implante un control de asistencia y puntualidad para, "EL EMPLEADO" podrá registrar su asistencia hasta diez minutos después de la hora de entrada o de salida de sus labores se computara como falta injustificada de "EL EMPLEADO" cuando se presente a laborar fuera de la tolerancia antes referida, salvo que por las necesidades propias del servicio "EL PATRÓN" le permita la entrada referida, fuera de la tolerancia mencionada.
+                        <br/><br/>
+                        <strong>DÉCIMA SEGUNDA. - DIAS DE DESCANSO SEMANAL.</strong> Por cada cinco días de trabajo consecutivos, "EL EMPLEADO" disfrutará de dos dias de descanso con goce de salario íntegro pudiendo ser este variado por 'EL PATRÓN" según sus necesidades.
+                        <br/><br/>
+                        <strong>DÉCIMA TERCERA. - DIAS DE DESCANSO OBLIGATORIO.</strong> "EL EMPLEADO" tendrá como días de descanso obligatorio percibiendo salario íntegro, los previstos en el artículo 74 de la Ley Federal del Trabajo. "EL EMPLEADO" se obliga a prestar sus servicios en los días de descanso obligatorio cuando lo requiera por escrito "EL PATRÓN", quien pagará salario doble por el servicio prestado, independientemente del salario que corresponda por el descanso.  "EL EMPLEADO" solamente percibirá salario sencillo cuando no lo trabaje.
+                        <br/><br/>
+                        <strong>DÉCIMA CUARTA. - VACACIONES.</strong> "EL EMPLEADO" después de un año de servicio continuo, disfrutará de un periodo anual de vacaciones pagadas de 12 días laborables que aumentarán en dos días laborables hasta llegar a 20 días por cada año subsecuente de servicios; después del quinto año, el periodo de vacaciones se aumentará en dos días por cada cinco de servicio igualmente "EL EMPLEADO" tendrá derecho a que se le pague una prima vacacional por el equivalente al 25% del importe total de las vacaciones. En caso de que el presente contrato tenga una duración menor de un año, al término de la relación de trabajo "EL PATRON" cubrirá a "EL EMPLEADO" la parte proporcional equivalente a 12 días por año de vacaciones.
+                        <br/><br/>
+                        <strong>DÉCIMA QUINTA. - AGUINALDO.</strong> "EL EMPLEADO" percibirá un aguinaldo anual equivalente a 15 días de salario que deberá pagarse antes del día 20 de diciembre de cada año; cuando "EL EMPLEADO" no haya cumplido el año de servicios o la relación de trabajo termine antes de que cumpla el año de servicios "EL PATRON" le pagará la parte proporcional correspondiente al tiempo trabajado.
+                        <br/><br/>
+                        <strong>DÉCIMA SEXTA. - CAPACITACIÓN Y ADIESTRAMIENTO.</strong> "EL EMPLEADO" recibirá capacitación y adiestramiento de conformidad con los planes y programas aprobados por la Secretaria del Trabajo y Previsión Social y en términos de Ley. "EL EMPLEADO" se obliga a cumplir con todos los programas, cursos, sesiones de grupo y demás y demás actividades que formen parte de los planes de capacitación y adiestramiento, así como a presentar los exámenes de evaluación de conocimientos y aptitudes que sean requeridos y/o aplicados por "EL PATRÓN" y/o capacitador respectivo.
+                        <br/><br/>
+                        <strong>DÉCIMA SEPTIMA. - EXAMENES MÉDICOS.</strong> Cuando "EL PATRÓN" lo estime pertinente, "EL EMPLEADO" deberá someterse a los exámenes médicos que se efectúen por médicos que "EL PATRÓN" designe.
+                        <br/><br/>
+                        <strong>DÉCIMA OCTAVA. - CONFIDENCIALIDAD.</strong> "EL EMPLEADO" se obliga a no divulgar ningún tipo de información de la que tenga conocimiento en virtud de la prestación de los servicios a <strong>"ADMONLAG, S.C.",</strong> ni proporcionar a tercera persona verbalmente o por escrito, directa o indirectamente, información y/o documentación alguna sobre los negocios, sistemas, secretos y actividades de cualquier clase que observe <strong>"ADMONLAG, S.C."</strong> en el desarrollo de sus negocios.
+                        <br/><br/>
+                        También se obliga a no revelar a persona alguna ni por ningún motivo, la tecnología, mercadotecnia, sistemas, documentación y en general toda información propiedad de "EL PATRÓN" contratante, así como de la empresa a la que llegara a estar asignado o que con motivo de sus labores conozca; a no usar las Marcas Registradas, sin el consentimiento por escrito de su titular, en productos o servicios iguales o similares a los que las marcas se apliquen.
+                        <br/><br/>
+                        La violación de lo pactado en esta cláusula se considerará como falta de probidad por parte de "EL EMPLEADO", siéndole aplicable en este caso lo dispuesto por la fracción II del Artículo 47 de la Ley Federal del Trabajo, y el incumplimiento de esta obligación conllevará el que "EL PATRÓN" ejercite las acciones legales que correspondan en contra de "EL EMPLEADO".
+                        <br/><br/>
+                        <strong>DÉCIMA NOVENA. - NO COMPETENCIA.</strong> "EL EMPLEADO" se obliga a no cooperar con nadie que compita con <strong>"ADMONLAG, S.C."</strong>  por si o por interpuesta persona en el área económico productiva en que   la misma se desenvuelva ni a ninguna otra similar o conexa, ni a promover los productos de otra EMPRESA distinta a <strong>"ADMONLAG, S.C."</strong> mientras dure la rotación de trabajo y aún después de concluida la misma hasta por tiempo igual al que haya durado la relación de trabajo.
+                        <br/><br/>
+                        <strong>VIGÉSIMA. - PROPIEDAD DE DOCUMENTACIÓN E INFORMACIÓN.</strong> "EL EMPLEADO" reconoce la propiedad exclusiva de <strong>"ADMONLAG, S.C."</strong> en todo tiempo, sobre los artículos, estudios, publicaciones, manuales, sistemas de administración, ventas, bases de datos y en general todos los documentos e información verbal a que tenga acceso con motivo de la relación de trabajo, así como los que "EL EMPLEADO" prepare o formule en relación o conexión con sus servicios por lo que "EL EMPLEADO" se obliga a conservarlos en buen estado y a no sustraerlos del lugar de trabajo, salvo por necesidad del servicio y con autorización previa, expresa y por escrito de "EL PATRÓN", debiendo entregarlos en el momento en que "EL PATRÓN" lo requiera, o bien al terminar la relación de trabajo, cualquiera que fuera el motivo de dicha terminación. "EL EMPLEADO" acepta y está de acuerdo en que la propiedad y exploración de las invenciones, programas, sistemas o mejoras a los mismos realizadas en el desempeño de las labores para "EL PATRÓN" corresponderán en todo caso a "EL PATRÓN", así como el derecho a la exploración de la patente o a los derechos correspondientes ya que dichas actividades están incluidas en la remuneración y prestaciones que las partes han pactado como contraprestación por los servicios contratados.
+                        <br/><br/>
+                        En virtud de lo anterior, el EMPLEADO se obliga a mantener confidencialidad y a guardar estricta reserva sobre la Información Confidencial. En este sentido, el EMPLEADO se obliga a utilizar la Información Confidencial exclusivamente en beneficio de <strong>"ADMONLAG, S.C."</strong> y se obliga a abstenerse en todo momento de utilizarla en su beneficio, o en beneficio de terceras personas, ya sea directa o indirectamente, la Información Confidencial, actos y demás hechos que sean de su conocimiento en especial toda aquella información, procedimientos, secretos comerciales, industriales, que se encuentran protegidos por la Ley.
+                        <br/><br/>
+                        La obligación a cargo del EMPLEADO conforme a los términos de esta cláusula, subsistirá a la terminación del presente contrato por un plazo de 10 (diez) años contados a partir de la fecha de terminación del mismo.
+                        <br/><br/>
+                        Las partes convienen que en caso que el EMPLEADO incumpla con la obligación que asume en términos de esta cláusula, quedará obligado al pago de daños y perjuicios en un monto equivalente a la multa más alta que la Ley de Propiedad Industrial vigente establezca al momento de darse dicho incumplimiento y será responsable por los delitos de Revelación de Secretos contenidos en la Ley de la Propiedad Industrial.
+                        <br/><br/>
+                        El EMPLEADO acepta que lo señalada en el presente contrato es total y absolutamente confidencial, por lo tanto, se compromete a no divulgar ni total ni parcialmente lo contenido en el mismo a ninguna persona ya sea de <strong>"ADMONLAG, S.C."</strong> misma o de cualquier otra parte.
+                        <br/><br/>
+                        <strong>VIGÉSIMA PRIMERA. -</strong> OBLIGACIONES, PROHIBICIONES, MEDIDAS DISCIPLINARIAS Y CAUSAS DE RESCISIÓN.
+                        <br/><br/>
+                        EL EMPLEADO" tendrá, además de las obligaciones previstas en el presente contrato, las siguientes que se señalan de manera enunciativa:
+                        <br/><br/>
+                        a).- Atender y obedecer las órdenes de sus superiores.
+                        <br/>
+                        b).- Cuidar y utilizar debidamente las instalaciones que le proporcione "EL PATRÓN"
+                        <br/>
+                        c).- No utilizará en beneficio propio, ni divulgará directa o indirectamente a cualquier persona física o moral, sin consentimiento previo y por escrito de "EL PATRÓN" ningún conocimiento o información que adquiera con motivo de su trabajo.
+                        <br/>
+                        d).- Cuando por cualquier motivo termine su relación de trabajo, deberá entregar a "EL PATRÓN" con anticipación que ésta determine, todos los materiales y documentación que le pertenezcan y que se encuentren directa o indirectamente bajo su control.
+                        <br/>
+                        e).- No utilizar software que no sea autorizado por "EL PATRÓN"
+                        <br/>
+                        f).- Las demás que señala la Ley Federal del Trabajo, PROHIBICIONES. -"EL EMPLEADO" tendrá entre otras prohibiciones, las siguientes:
+                        <br/>
+                        a).- Las que determine el artículo 135 de la Ley Federal del Trabajo
+                        <br/>
+                        b).- Divulgar la política operacional y administrativa de "EL PATRÓN"
+                        <br/><br/>
+                        MEDIDAS DISCIPLINARIAS Y CAUSAS DE  RESCISIÓN.-Cuando "EL EMPLEADO" incumpla alguna de las obligaciones previstas en la Ley Federal del Trabajo, en este contrato y/o en el Reglamento Interior de Trabajo, "EL PATRÓN", sus representantes podrán disciplinar sus fallas con suspensiones sin goce de sueldo dentro de los límites legales o en su defecto la rescisión de su contrato y/o relación individual de trabajo dependiendo de la gravedad de la falta y a juicio y sin responsabilidad del "EL PATRÓN", "EL EMPLEADO" conviene y acepta que será causal especial de la rescisión de la relación y contrato de trabajo la prevista en el artículo 291 de la Ley Federal del Trabajo consistente en la disminución importante y reiterada del volumen de las operaciones conforme a las políticas de "EL PATRON", salvo que concurran circunstancias justificativas.
+                        <br/><br/>
+                        <strong>VIGÉSIMA SEGUNDA. -</strong> SEGURIDAD SOCIAL "EL PATRÓN" se obliga a inscribir a "EL EMPLEADO" en el INSTITUTO MEXICANO DEL SEGURO SOCIAL, por lo que las partes se sujetarán en lo relativo a riesgos profesionales, enfermedades no profesionales y además prestaciones relativas a las disposiciones de la Ley del Seguro Social, quedando en consecuencia liberado "EL PATRÓN" de todas las responsabilidades que por riesgos profesionales le impone la Ley Federal del Trabajo.
+                        <br/><br/>
+                        <strong>VIGÉSIMA TERCERA. -</strong> INSTRUMENTOS DE TRABAJO.-"EL EMPLEADO" se obliga a hacer uso de las herramientas de trabajo, programas de cómputo o cualquier otro, propiedad de "EL PATRÓN" exclusivamente para el desempeño del trabajo encomendado, quedando estrictamente prohibido hacer mal uso de ellas, así como copiar, rentar, vender, adicionar, conectar o proporcionar de cualquier forma a terceros, las herramientas de trabajo mencionadas, programas, claves, manuales o instructivos.
+                        <br/><br/>
+                        "EL PATRÓN" no acepta ninguna excusa ni pretexto por la pérdida de útiles de trabajo siendo responsable "EL EMPLEADO" de su valor.
+                        <br/><br/>
+                        "EL PATRÓN" reconoce que "EL EMPLEADO" no será responsable del desgaste natural de los útiles y herramientas debido al uso normal de ellas. Si resulta alguna responsabilidad para "EL EMPLEADO", los cuales se pondrán de acuerdo para fijar el descuento adecuado, de no llegar a un acuerdo, se conviene en deducir del salario de "EL EMPLEADO" hasta el 30% sobre el excedente del salario mínimo, sucesivamente hasta liquidar el adeudo respecto del bien averiado.
+                        <br/><br/>
+                        <strong>VIGÉSIMA CUARTA. -</strong> De conformidad a lo establecido en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares su Reglamento y los Lineamientos del Aviso de Privacidad (en lo sucesivo, la “LFPDPPP”), los datos personales y personales sensibles que el EMPLEADO proporciona directamente a <strong>"ADMONLAG, S.C."</strong>, en su carácter de responsable y con motivo de la relación laboral que los vinculará a partir de la firma del presente contrato, han sido recabados y serán tratados por <strong>"ADMONLAG, S.C."</strong> y sus encargados, bajo los principios de licitud, consentimiento, información, calidad, finalidad, lealtad, proporcionalidad y responsabilidad.
+                        <br/><br/>
+                        La información concerniente al EMPLEADO que estará bajo resguardo de <strong>"ADMONLAG, S.C."</strong> incluirá los siguientes datos personales: nombre, domicilio, edad, teléfono, Registro Federal de Contribuyentes, Clave Única de Registro de Población, número de afiliación al Instituto Mexicano del Seguro Social, fecha de nacimiento, idioma, sexo, estado civil, número de hijos, fecha de inicio y fin de estudios, nombre y clase de institución de realización de estudios, grado obtenido y número de cédula profesional; y. los siguientes datos personales sensibles: nacionalidad, salario, lugar y país de nacimiento, estado de salud, peso, estatura, tipo de sangre, antecedentes médicos familiares, nombres y apellidos completos de los padres, fechas y lugares de nacimiento de los padres, nombres y apellidos completos de la pareja, lugar y fecha de nacimiento de la pareja, nombres y apellidos completos de los hijos, lugar y fecha de nacimiento de los hijos.
+                        <br/><br/>
+                        <strong>"ADMONLAG, S.C."</strong> utilizará los datos personales y personales sensibles proporcionados con la finalidad de cumplir las obligaciones derivadas de la relación laboral que vinculará a las partes en virtud del presente contrato. <strong>"ADMONLAG, S.C."</strong> se obliga a resguarda los datos personales y personales sensibles a través de medidas de seguridad, físicas, tecnológicas y administrativas, previniendo el mal uso e indebido tratamiento de los mismos.
+                        <br/><br/>
+                        El EMPLEADO podrá ejercer sus derechos de Acceso, Rectificación, Cancelación y Oposición enviando un correo electrónico a la siguiente dirección: <strong>"rh@gebesa.com".</strong>
+                        <br/><br/>
+                        El EMPLEADO otorga sus consentimientos a efecto que <strong>"ADMONLAG, S.C."</strong> realice modificaciones a la presente cláusula, con el objeto de alinearla a las políticas de privacidad de <strong>"ADMONLAG, S.C."</strong>, bastando para ello la notificación de dichos cambios a través del siguiente correo electrónico: <strong>"<span t-field="doc.employee_id.address_home_id.email"/>".</strong>
+                        <br/><br/>
+                        El EMPLEADO en su carácter de responsable bajo los términos de la LFPDPPP se obliga con respecto a los datos personales y datos personales sensibles de los clientes y demás empleados de <strong>"ADMONLAG, S.C."</strong>a: (i) Respetar y salvaguardar los principios de licitud, consentimiento, información, calidad, finalidad, lealtad, proporcionalidad y responsabilidad: (ii) respetar y cumplir las políticas de privacidad de ADMONLAG, S.C.: (ii) mantener la confidencialidad de los datos personales y datos personales sensibles y tratarlos exclusivamente para las finalidades para los que fueron obtenidos; (iv) abstenerse de descargar bases de datos que contengan datos personales y/o datos personales sensibles ; y, (vi) notificar al Encargado de Privacidad sobre todo acto u omisión de cualquier empleado o tercero que pudiera resultar violatorio de las políticas de privacidad de ADMONLAG, S.C..
+                        <br/><br/>
+                        Cualquier violación a la LFPDPPP y a las obligaciones contraídas bajo la presente cláusula, harán directamente responsable al EMPLEADO de los daños y perjuicios que se causen a <strong>"ADMONLAG, S.C."</strong>.
+                        <br/><br/>
+                        <strong>VIGÉSIMA QUINTA. -</strong> En caso de fallecimiento de "EL EMPLEADO", la o las personas designadas por el mismo, tendrán derecho a las prestaciones derivadas de la relación laboral, por lo que al efecto, el empleado designa como beneficiarios a las siguientes personas.
+                        <br/><br/>
+                    </div>
+                </div>
+                <br/><br/>
+                <div class="row no-gutters">
+                    <div class="col-12"  style="text-align:center;">
+                        <table width="100%" class="table table-sm table-bordered" style="border-collapse:collapse;align:center;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 1px solid black; align: center;">NOMBRE</th>
+                                    <th style="border: 1px solid black; align: center;">PARENTESCO</th>
+                                    <th style="border: 1px solid black; align: center;">PORCENTAJE</th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-if="doc.employee_id.beneficio_1">
+                                    <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.beneficio_1"/></td>
+                                    <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.beneficio_1"/></td>
+                                    <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.porcentaje_1"/></td>
+                                </tr>
+                                <tr t-if="doc.employee_id.beneficio_2">
+                                    <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.beneficio_2"/></td>
+                                    <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.beneficio_2"/></td>
+                                    <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.porcentaje_2"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br/><br/>
+                <div class="row no-gutters my-2"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        <br/>
+                        <strong>VIGÉSIMA SEXTA. - PACTOS PREVIOS Y DISPOSICIONES SUPLETORIAS.</strong> Ambas partes convienen en que, además de la Ley Federal del Trabajo, sus reglamentos y el Reglamento Interior de Trabajo,  el presente contrato regirá la relación individual de trabajo de "EL EMPLEADO" con "EL PATRÓN" y, en consecuencia, dejan sin efectos cualquier otro pacto previo, verbal o escrito, debiendo estarse en lo futuro a lo aquí pactado y las disposiciones legales y reglamentarias antes mencionadas. Para todo lo no estipulado o previsto en el presente documento y sus anexos, las partes se sujetarán a las disposiciones contenidas en la Ley Federal del Trabajo, así como a lo previsto en la reglamentación aplicable.
+                        <br/><br/>
+                        <strong>VIGÉSIMA SEXTA. -</strong> Ambas partes convienen que en todo aquello no previsto en el presente Contrato se estará a lo establecido por la Ley Federal del Trabajo.
+                        <br/><br/>
+                        Para la interpretación, ejecución y cumplimiento del presente contrato, las partes se someten expresamente a la jurisdicción y competencia del <strong>TRIBUNAL LABORAL REGION LAGUNA DEL ESTADO DE DURANGO</strong>, competente.
+                        <br/><br/>
+                        DATOS DE "EL EMPLEADO"
+                    </div>
+                </div>
+                <br/><br/>
+                <div style="text-align: left;">
+                    <table width="80%" class="table table-sm table-bordered" style="border-collapse:collapse;align:center;">
+                        <tr>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><strong>Nombre:</strong></td>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><strong>Nacionalidad:</strong></td>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.country_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><strong>Edad:</strong></td>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.age"/></td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><strong>Lugar y Entidad de Nacimiento:</strong></td>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.place_of_birth"/></td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><strong>Fecha de Nacimiento:</strong></td>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.birthday"/></td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><strong>Estado Civil:</strong></td>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.marital"/></td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><strong>Número IMSS:</strong></td>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.imss"/></td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><strong>R.F.C.:</strong></td>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.rfc"/></td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><strong>CURP:</strong></td>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.curp"/></td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><strong>Domicilio:</strong></td>
+                            <td style="border: 1px solid black; align: center; text-align:center;"><span t-field="doc.employee_id.address_home_id.street"/></td>
+                        </tr>
+                    </table>
+                </div>
+                <br/><br/>
+                <div class="row no-gutters my-2"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        <strong>VIGÉSIMA SEPTIMA. -</strong> La "EMPRESA" le reconoce a "EL EMPLEADO" una antigüedad desde <strong><span t-field="doc.date_start"/></strong> reconociendo todos los derechos contraídos desde el inicio de la relación laboral.
+                        <br/><br/>
+                        <strong>VIGÉSIMA OCTAVA. -</strong> "EL EMPLEADO" Manifiesta haber recibido copia del reglamento interior de trabajo y se obliga a observar lo establecido en su contenido.
+                        <br/><br/>
+                        Leído que fue por ambas partes este documento e impuestas de las obligaciones y derechos que por virtud de él contraen, así como las que la ley de la materia les impone, lo celebran en el lugar y fecha abajo señalada y firman de conformidad por duplicado quedando un ejemplar en poder de cada parte.
+                    </div>
+                </div>
+                <br/><br/>
+                <div class="row">
+                    <div class="col-12">
+                        <table width="100%" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                    <br/><br/><br/>
+                                    ____________________________________<br/>
+                                    
+                                    </th>
+                                    <th>
+                                    <br/><br/><br/>
+                                    ____________________________________</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align:center;">
+                                        <strong>C. BOYARDO SALMON ABRAHAM</strong><br/>
+                                        <strong>REPRESENTANTE LEGAL DE ADMONLAG, S.C.</strong>
+                                    </td>
+                                    <td style="text-align:center;">
+                                        <strong><span t-field="doc.employee_id.name" style="text-transform: uppercase;"></span></strong><br/>
+                                        <strong>NOMBRE DEL EMPLEADO</strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br/><br/>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center" style="text-align:center;">
+                        <strong>TESTIGOS</strong>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-12">
+                        <table width="100%" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                    <br/><br/>
+                                    ____________________________________<br/>
+                                    
+                                    </th>
+                                    <th>
+                                    <br/><br/>
+                                    ____________________________________</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align:center;"><span t-field="doc.witness_rh"/></td>
+                                    <td style="text-align:center;"><span t-field="doc.witness"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_contrato_admonlag">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="rh_gebesa.report_contrato_admonlag_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

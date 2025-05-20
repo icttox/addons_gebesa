@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="invoice_form" model="ir.ui.view">
+            <field name="name">invoice_form_petition_number_needed</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="foreign_commerce_complement.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='petition_number']" position="replace">
+                    <field name="petition_number" attrs="{'readonly':[('no_petition_needed','=', True)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='petition_number']" position="after">
+                    <field name="no_petition_needed"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="invoice_supplier_petition_numberform" model="ir.ui.view">
+            <field name="name">invoice.supplier.form.petition.number.needed</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page/group/group/field[@name='name']" position="after">
+                    <field name="petition_number"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

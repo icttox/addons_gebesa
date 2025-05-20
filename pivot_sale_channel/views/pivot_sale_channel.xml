@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Nodo requerido-->
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='pivot_channel_tree'>
+        	<field name='name'>pivot.channel.tree</field>
+        	<field name='model'>sale.order</field>
+        	<field name='arch' type='xml'>
+        		<tree string='Sale'>   
+                    <field name='name' string='Pedido de Venta'/>
+        			<field name='date_validator' string='Fecha de Pedido' interval="week"/>
+                    <field name='team_id' string='Canal de Venta'/>
+                    <field name="net_sale_rate_mex"/>
+                    <field name='total_net_sale' string='Vta Neta Total'/>
+                    <field name='state'/>                               
+        		</tree>
+        	</field>
+            <!--Cierre de Registro-->
+        </record>
+
+        <record id="sale_order_pivot_channel" model="ir.ui.view">
+            <field name="name">sale.order.pivot_channel</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <pivot string="Sale Orders">
+                    <field name="team_id" type="row" ref="pivot_channel_tree"/>
+                    <field name='date_validator' type="col" interval="month" ref="pivot_channel_tree"/>
+                    <field name="net_sale_rate_mex" type="measure" ref="pivot_channel_tree"/> 
+                </pivot>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_sale_order_channel_graph">
+            <field name="name">sale.order.channel.graph</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <graph string="Sales Orders">
+                    <field name="team_id"/>
+                    <field name="net_sale_rate_mex" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id='action_pivot_channel' model='ir.actions.act_window'>
+            <field name='name'>Captura Pedidos Por Canal de Venta</field>
+            <field name='res_model'>sale.order</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>pivot,tree,graph</field>
+            <!--Verificar domain, la ref es a pivot, checar el tree -->
+            <field name="view_id" ref="sale_order_pivot_channel"/>
+            <field name="domain">[('state', 'not in', ('cancel','sent','draft')), '|', ('campaign_id', '!=', 36), ('campaign_id', '=', False)]</field>
+        </record>
+        <menuitem id="pivot_channel_menu" parent="sale.menu_sale_report" name="Captura Pedidos Por Canal de Venta" action="action_pivot_channel"/>
+    </data>
+</odoo>

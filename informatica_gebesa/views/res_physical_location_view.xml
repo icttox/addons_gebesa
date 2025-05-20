@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="view_ubicacion_fisica_Action">
+            <field name="name">Ubicacion fisica</field>
+            <field name="res_model">res.physical.location</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Ubicacion Fisica
+                </p>
+            </field>
+        </record>
+
+
+         <menuitem id="ubicacion_fisica_menu" name="Ubicacion Fisica" parent="maintenance.menu_maintenance_configuration" action="view_ubicacion_fisica_Action"/>
+
+        <record model="ir.ui.view" id="view_ubicacion_fisica_form">
+            <field name="name">ubicacion.fisica.form</field>
+            <field name="model">res.physical.location</field>
+            <field name="arch" type="xml">
+                <form string="Ubicacion fisica Form">
+                    <sheet>
+                        <group>
+                            <field name='code'/>
+                            <field name='name'/>
+                            <field name='parent_id'/>
+                        </group>
+                    </sheet>
+                </form> 
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_ubicacion_fisica_view_tree">
+            <field name="name">immex.mercancias.tree</field>
+            <field name="model">res.physical.location</field>
+            <field name="arch" type="xml">
+                <tree string="ubicacion fisica Tree">
+                            <field name='code'/>
+                            <field name='name'/>
+                            <field name='parent_id'/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

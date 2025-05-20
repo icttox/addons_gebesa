@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id='sale_order_dealer_tree' model='ir.ui.view'>
+            <field name='name'>sale.order.dealer.tree</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref="sale.view_order_tree"/>
+            <field name='arch' type='xml'>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="supplier_ref"/>
+            </xpath>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='sale_order_form_dealer'>
+            <field name='name'>sales_order_dealer.saleorder</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref='sale.view_order_form'/>
+            <field name='arch' type='xml'>
+            <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                <field name="supplier_ref" readonly="1" /> 
+                <field name="requires_dealer" invisible="1" /> 
+                <field name="partner_dealer_id" domain="[('partner_id','=',partner_id)]" attrs="{'required': [('requires_dealer','=', True)]}"/>
+                <!--field name="dealer_id" domain="[('parent_id', '=', partner_id)]" attrs="{'required': [('requires_dealer','=', True)]}"/--> 
+            </xpath>   
+            <xpath expr="//field[@name='effective_date']" position="after">
+                <field name="shipment_date"/>
+                <field name="customer_delivery_date"/>  
+            </xpath>   
+            </field>
+        </record>
+        <record model='ir.ui.view' id='sale_order_invoive_status'>
+            <field name='name'>sale.order.invoive_status</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref='sale.view_order_form'/>
+            <field name='arch' type='xml'>
+            <xpath expr="//field[@name='fiscal_position_id']" position="after">
+                <field name="geb_invoice_status"/> 
+            </xpath>   
+            </field>
+        </record>
+    </data>
+</odoo>

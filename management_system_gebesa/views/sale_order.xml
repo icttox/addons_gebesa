@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_order_form" model="ir.ui.view">
+            <field name="name">view_sale_order_incidents_form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="groups_id" eval="[(6,0, [ref('management_system_gebesa.group_sale_order_incidents')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/notebook/page/field[@name='order_line']/tree/field[@name='customer_lead']" position="after">
+                    <field name="order_id" invisible="1"/>
+                    <button attrs="{'invisible': [('parent.priority', '!=', 'replenishment')]}" icon="fa-warning" name="%(action_sale_order_incidents)d" string="Incidents" type="action" context="{'default_product_id': product_id, 'default_order_id': order_id, 'default_product_uom_qty': product_uom_qty, 'default_net_sale': net_sale}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

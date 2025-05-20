@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--
+        <record model='ir.ui.view' id='view_order_form'>
+            <field name='name'>view_order_shiptment_status_form</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref='sale.view_order_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//group/group/field[@name='pricelist_id']" position="before">
+                    <field name='geb_invoice_status' readonly="True"/>
+                </xpath>
+            </field>
+        </record> -->
+<!-- OCULTAR EL ESTATUS DE FACTURACION EN LA VISTA DE ARBOL-->
+    <!--
+    <record model="ir.ui.view" id="view_status_inovice_invisible">
+        <field name="name">status.invoice.invisible</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/> 
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='invoice_status']" position="attributes">
+            <attribute name="invisible">True</attribute>
+            </xpath>
+        </field>
+    </record> -->
+    
+</data>
+</odoo>

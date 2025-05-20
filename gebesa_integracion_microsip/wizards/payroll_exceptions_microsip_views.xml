@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='wizard_prepayroll_open_microsip'>
+        	<field name='name'>prepayroll.open.microsip.wizards</field>
+        	<field name='model'>prepayroll.open.microsip</field>
+        	<field name='arch' type='xml'>
+        		<form>
+                    <group>
+                        <group>
+                            <field name="date_start"/>
+                        </group>
+                        <group>
+                            <field name="date_end"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="union_dues"/>
+                    </group>
+        			<footer>
+                        <button name="open_prepayroll_microsip" string="Export prepayroll" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+
+        <record id="action_prepayroll_open_microsip" model="ir.actions.act_window">
+            <field name="name">Export Prepayroll to Microsip</field>
+            <field name="res_model">prepayroll.open.microsip</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="microsip_payroll_submenu" name="Microsip" sequence="7" parent="hr_payroll.menu_hr_payroll_root" groups="hr_payroll.group_hr_payroll_user"/>
+
+        <menuitem id="prepayroll_open_microsip_menu" name="Export Prepayroll to Microsip" parent="gebesa_integracion_microsip.microsip_payroll_submenu" action="action_prepayroll_open_microsip" groups="hr_payroll.group_hr_payroll_user"/>
+    </data>
+</odoo>

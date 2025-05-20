@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="price_list"
+            model="product.line"
+            string="Pricelist Report"
+            report_type="qweb-pdf"
+            name="report_price_list.report_price_list"
+            file="report_price_list.report_price_list"
+        />
+
+        <record id="report_price_list.price_list" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_price_list.paperformat_price_list" />
+        </record>
+
+        <template id="report_price_list_portada">
+            <div class="page">
+                <br/>
+                <img src="http://127.0.0.2:8069/report_price_list/static/src/img/Gebesa.png"/>
+                <br/><br/><br/><br/>
+                <div style="background-color: rgb(43, 199, 206);">
+                    <p style="font-size: 90px; text-align: center;"><font style="font-size: 90px; text-align: center;"></font><font style="text-align: center; color:white; font-size: 90px; text-transform: uppercase;"><span t-field="doc.name"/></font></p>
+                </div>
+                <p style="text-align: right;"></p>
+                <p style="text-align: right;"> <font style="font-size: 43px; color: black;">LISTA DE PRECIOS<span style="color:#a7cc4b;"> 2021</span></font></p>
+                <br/> <br/> <br/> <br/> <br/> <br/>
+                 <br/> <br/> <br/> <br/> <br/> <br/><br/> <br/>  <br/> <br/> 
+                <div style="text-align: right;">
+                    <p><font style="font-size: 34px; color:black; text-align: right;">gebesa.com</font></p>
+                    <br/>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_price_list_header">
+            <div>
+                <span style="text-transform: uppercase;font-size: 18pt;background-color: rgb(0,0,0);padding: 5px;font-family: Century Gothic;color: rgb(255,255,255);" t-esc="doc.name" /><br/><br/>
+                <div style="font-size: 10pt;">
+                <t t-if="langu == 'es_MX'">
+                    <strong>LISTA DE PRECIOS</strong> Versión 2.6 (<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>)<strong>________________________________________________________________________</strong>
+                </t>
+                <t t-if="langu != 'es_MX'">
+                    <strong>LISTA DE PRECIOS</strong> Versión 2.6 (<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%m/%d/%Y')"/>)<strong>________________________________________________________________________</strong>
+                </t></div>
+            </div>
+        </template>
+
+        <template id="report_price_list_footer">
+            <table width="100%" style="border-top: 1px solid black;font-family: Century Gothic;">
+                <tbody>
+                    <tr>
+                        <td width="35%" style="font-size: 9pt;">
+                            Terms and conditions:<br/>
+                            *Prices are subject to authorized discounts<br/>
+                            *Prices subject to change<br/>
+                            *Nominal dimensions shown
+                        </td>
+                        <td width="60%" >
+                        </td>
+                        <td width="15%" align="right" valign="bottom" style="font-size: 12p;">
+                            <br/>
+                            <img src='http://127.0.0.2:8069/report_price_list/static/src/img/logo.jpg' style="max-height: 25px;"/><br/>gebesa.com
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </template>
+
+        <template id="report_price_list_iso">
+            <t t-foreach="docs" t-as="doc">
+                <div class="col-xs-12">
+                    <!-- <th style="text-transform: uppercase;"><strong>TIPO </strong><span t-esc="tipo.name"/></th> -->
+                    <table width="100%" style="border-collapse:collapse;">
+                        <br/>
+                        <tr style="font-size: 13pt;background-color: rgb(0,0,0);" height="10px" >
+                            <th width="20%" align="center" style="color: rgb(255,255,255);"><strong>DESCRIPCIÓN</strong></th>
+                            <th width="30%" align="center" style="color: rgb(255,255,255);"><strong>ISOMÉTRICO</strong></th>
+                            <th width="15%" align="center" style="color: rgb(255,255,255);"><strong>CLAVE</strong></th>
+                            <th width="15%" align="center" style="color: rgb(255,255,255);"><strong>PRECIO</strong></th>
+                            <th width="20%" align="center" style="color: rgb(255,255,255);"><strong>DIMENSIONES</strong></th>
+                        </tr>
+                        <!-- <t t-foreach="products" t-as="p"> -->
+                            <t t-foreach="categorias" t-as="c">
+                                <tbody>
+                                        <tr height="157px" style="font-size: 10.5pt;">
+                                            <td width="20%" style="font-size: 10.5pt;">
+                                                <span t-field="c.name"/>
+                                            </td>
+                                            <td width="30%" style="font-size: 10.5pt;">
+                                                <img t-att-src="image_data_uri(c.isometric)" style="max-width: 180px; max-height: 120px;"/>
+                                            </td>
+                                            <td width="15%" style="font-size: 10.5pt;">
+                                                <t t-foreach="claves_categoria" t-as="cc">
+                                                    <t t-if="c.name == cc.pricelist_categ_id.name">
+                                                        <ul>
+                                                            <span t-field="cc.reference_mask"/>
+                                                        </ul>
+                                                    </t>
+                                                </t>
+                                            </td>
+                                            <td width="15%" style="font-size: 10.5pt;">
+                                                <t t-foreach="claves_categoria" t-as="cc">
+                                                    <t t-if="c.name == cc.pricelist_categ_id.name">
+                                                        <ul>
+                                                            <span t-field="cc.list_price"/><br/>
+                                                        </ul>
+                                                    </t>
+                                                </t>
+                                            </td>
+                                            <td width="20%" style="font-size: 10.5pt;">
+                                                <t t-foreach="claves_categoria" t-as="cc">
+                                                    <t t-if="c.name == cc.pricelist_categ_id.name">
+                                                        <ul>
+                                                            <span t-field="cc.length"/> x <span t-field="cc.width"/> x <span t-field="cc.height"/><br/>
+                                                        </ul>
+                                                    </t>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </t>
+                            <!-- </t> -->
+                        <!-- </t> -->
+                    </table>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_price_list_normales">
+            <t t-foreach="docs" t-as="doc">
+                <div class="col-xs-12">
+                    <t t-foreach="groups" t-as="grupo">
+                            <!-- <th style="text-transform: uppercase;"><strong>GRUPO </strong><span t-esc="grupo.name"/></th> -->
+                            <!-- <th style="text-transform: uppercase;"><strong>TIPO </strong><span t-esc="tipo.name"/></th> -->
+                            <t t-if="not products">
+                                <table width="100%" style="border-collapse:collapse;">
+                                    <tr style="font-size: 13pt;background-color: rgb(0,0,0);" height="10px" >
+                                        <th width="20%" align="center" style="color: rgb(255,255,255);"><strong>DESCRIPCIÓN</strong></th>
+                                        <th width="30%" align="center" style="color: rgb(255,255,255);"><strong>ISOMÉTRICO</strong></th>
+                                        <th width="15%" align="center" style="color: rgb(255,255,255);"><strong>CLAVE</strong></th>
+                                        <th width="15%" align="center" style="color: rgb(255,255,255);"><strong>PRECIO</strong></th>
+                                        <th width="20%" align="center" style="color: rgb(255,255,255);"><strong>DIMENSIONES</strong></th>
+                                    </tr>
+                                </table>
+                            </t>
+                                <t t-foreach="products" t-as="pro">
+                                        <t t-foreach="tipos" t-as="tipo">
+                                            <table>
+                                                <t t-set="prod" t-value="pro.filtered(lambda x: x.group_id == grupo)"/>
+                                                    <t t-foreach="prod" t-as="pp">
+                                                        <t t-if="pp.type_id.name == tipo.name and pp.group_id.name == grupo.name">
+                                                            <t t-if="not pp.pricelist_categ_id.name">
+                                                                <tbody>
+                                                                    <tr height="157px" style="font-size: 10.5pt;">
+                                                                        <td width="20%" style="font-size: 10.5pt;">
+                                                                            <t>
+                                                                                <span t-field="pp.name"/>
+                                                                            </t>
+                                                                        </td>
+                                                                        <td width="30%">
+                                                                            <img t-att-src="image_data_uri(pp.isometric_medium)" style="max-width: 150px; max-height: 120px; width: 100%; display:block;margin:auto;"/>
+                                                                        </td>
+                                                                        <!-- <td width="22%">
+                                                                            <img t-att-src="'data:image/png;base64,%s' % pag[num].isometric_medium" t-if="pag[num].isometric_medium" style="max-width: 180px; max-height: 120px;"/>
+                                                                        </td> -->
+                                                                        <td width="15%" align="center">
+                                                                            <span t-field="pp.reference_mask"/>
+                                                                            <!-- <span t-esc="claves_p"/> -->
+                                                                        </td>
+                                                                        <td width="15%" align="center">
+                                                                            <span t-field="pp.list_price" t-options='{"widget": "monetary", "currency_field": "pp.currency_id"}'/>
+                                                                        </td>
+                                                                        <td width="20%" align="center">
+                                                                            <span t-field="pp.length"/> x <span t-field="pp.width"/> x <span t-field="pp.height"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </t>
+                                                        </t>
+                                                    </t>
+                                            </table>
+                                        </t>
+                                </t>
+                    </t>
+                </div>
+                    <!-- <div style="font-size: 1pt;page-break-after: always;">&#160;</div> -->
+                <table width="100%">
+                    <tbody>
+                        <tr height="525px">
+                            <td valign="top">
+                                <span style="text-transform: uppercase;" t-field="doc.acabados_html"/>
+                            </td>
+                        </tr>
+                        <tr height="155px">
+                            <td valign="top">
+                                <span t-field="doc.notas_html"/>
+                            </td>
+                        </tr>
+                        <tr height="175px">
+                            <td valign="top">
+                                <span t-field="doc.composiciones_html"/>
+                            </td>
+                        </tr>
+                        <tr height="150px">
+                            <td>
+                                <img src='http://127.0.0.1:8069/report_price_list/static/src/img/formato.jpg' style="max-width:100%;"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </t>
+        </template>
+
+        <template id="report_modular">
+            <t t-foreach="docs" t-as="doc">
+                <br/>
+                <h3>SYNERGY MAMPARAS (ESPESOR DE 5.5 CM)</h3>
+                <div class="row">
+                    <div  class="col-2">
+                        <img src='http://127.0.0.1:8069/report_price_list/static/src/img/modulares1.jpg' style="max-height: 600px;"/>
+                    </div>
+                    <div class="col-10 text-right">
+                        <table style="border-collapse:collapse;">
+                            <tr style="font-size: 13pt;background-color: rgb(0,0,0);" >
+                                <!-- <th width="15%" align="center" style="color: rgb(255,255,255);"><strong>DESCRIPCIÓN</strong></th> -->
+                                <th style="color: rgb(255,255,255);"><strong>ALTURA</strong></th>
+                                <th style="color: rgb(255,255,255);"><strong>1 DUCTO</strong></th>
+                                <th style="color: rgb(255,255,255);"><strong>MIXTAS</strong></th>
+                                <th style="color: rgb(255,255,255);"><strong>FRENTES</strong></th>
+                            </tr>
+                            <tr style="font-size: 10.5pt;">
+                                <!-- <td width="15%" style="font-size: 10.5pt;">
+                                    <img src='http://127.0.0.1:8069/report_price_list/static/src/img/modulares1.jpg' style="max-height: 800px;"/>
+                                </td> -->
+                                <td style="font-size: 10.5pt;">
+                                    <t t-foreach="mod_tp" t-as="type" >
+                                        <t t-if="type.name == type.name">
+                                            <ul>
+                                                <span t-esc="type.name"/>
+                                            </ul>
+                                        </t>
+                                    </t>
+                                </td>
+                                <td style="font-size: 10.5pt;">
+                                    <t t-foreach="mod_tp" t-as="type" >
+                                        <t t-if="type.name == type.name">
+                                            <ul>
+                                                <span t-esc="type.name"/>
+                                            </ul>
+                                        </t>
+                                    </t>
+                                </td>
+                                <td style="font-size: 10.5pt;">
+
+                                </td>
+                                <td style="font-size: 10.5pt;">
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- <table width="100%" style="border-collapse:collapse;">
+                    <br/>
+                    <tr style="font-size: 13pt;background-color: rgb(0,0,0);" height="10px" >
+                        <th width="15%" align="center" style="color: rgb(255,255,255);"><strong>DESCRIPCIÓN</strong></th>
+                        <th width="30%" align="center" style="color: rgb(255,255,255);"><strong>ALTURA</strong></th>
+                        <th width="15%" align="center" style="color: rgb(255,255,255);"><strong>1 DUCTO</strong></th>
+                        <th width="15%" align="center" style="color: rgb(255,255,255);"><strong>MIXTAS</strong></th>
+                        <th width="20%" align="center" style="color: rgb(255,255,255);"><strong>FRENTES</strong></th>
+                    </tr>
+                    <tr height="157px" style="font-size: 10.5pt;">
+                        <td width="15%" style="font-size: 10.5pt;">
+                            <img src='http://127.0.0.1:8069/report_price_list/static/src/img/modulares1.jpg' style="max-height: 800px;"/>
+                        </td>
+                        <td width="30%" style="font-size: 10.5pt;">
+                            <t t-foreach="mod_tp" t-as="type" >
+                                <t t-if="type.name == type.name">
+                                    <ul>
+                                        <span t-esc="type.name"/>
+                                    </ul>
+                                </t>
+                            </t>
+                        </td>
+                        <td width="15%" style="font-size: 10.5pt;">
+                            <t t-foreach="mod_tp" t-as="type" >
+                                <t t-if="type.name == type.name">
+                                    <ul>
+                                        <span t-esc="type.name"/>
+                                    </ul>
+                                </t>
+                            </t>
+                        </td>
+                        <td width="15%" style="font-size: 10.5pt;">
+
+                        </td>
+                        <td width="20%" style="font-size: 10.5pt;">
+
+                        </td>
+                    </tr>
+                </table> -->
+            </t>
+        </template>
+
+        <template id="report_price_list_document">
+            <div class="header not-first-page">
+                <t t-call="report_price_list.report_price_list_header"/>
+            </div>
+            <div class="page">
+                <t t-if="doc.report_type =='normal'">
+                    <t t-call="report_price_list.report_price_list_iso"/>
+                    <t t-call="report_price_list.report_price_list_normales"/>
+                </t>
+                <t t-if="doc.report_type =='modulares'">
+                    <t t-call="report_price_list.report_modular"/>
+                </t>
+            </div>
+            <br/><br/> <br/>
+            <div class="footer not-first-page">
+                <t t-call="report_price_list.report_price_list_footer"/>
+            </div>
+        </template>
+
+        <template id="report_price_list">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc" style="font-family: Century Gothic;">
+                    <t t-call="report_price_list.report_price_list_portada"/>
+                    <t t-call="report_price_list.report_price_list_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="ir_property_view_selection" model="ir.ui.view">
+            <field name="name">ir.property.selection.form</field>
+            <field name="model">ir.property</field>
+            <field name="inherit_id" ref="base.ir_property_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/field[@name='value_text']" position="replace">
+                    <field name="value_text"  attrs="{'invisible' : [('type', 'not in', ('char', 'selection', 'text'))]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

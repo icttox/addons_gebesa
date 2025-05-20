@@ -1,0 +1,79 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="tms_travel_t_form">
+      <field name="name">tms.travel.t.form</field>
+      <field name="model">tms.travel</field>
+      <field name="inherit_id" ref="tms.view_tms_travel_form"/>
+      <field name="arch" type="xml">
+          <xpath expr="//form/header/button[@name='action_progress']" position="before">
+                 <button name="validation_trafico" attrs="{'invisible': [('date_evidence_traf', '!=', False)]}" string="Validar Evidencias Tráfico" type="object" groups="tlm_gebesa.group_manager_validation_trafico"/>
+                 <button name="validation_ventas" attrs="{'invisible': [('date_evidence_ventas', '!=', False)]}" string="Validar Evidencias Ventas" type="object" groups="tlm_gebesa.group_manager_validation_ventas"/>
+                 <button name="validation_fact" attrs="{'invisible': [('date_evidence_facturacion', '!=', False)]}" string="Validar Evidencias Facturación" type="object" groups="tlm_gebesa.group_manager_validation_facturacion"/>
+          </xpath>
+          <xpath expr="//notebook/page[2]" position="after">
+            <page string="Travel Life Magnament">
+              <br/>
+              <field name="file_name" invisible="1" class="oe_inline oe_right"/>
+              <label for="evidencias"/>
+              <field name="evidencias" attrs="{'readonly': [('date_evidence_traf', '!=', False)]}" string="Evidencias" filename="file_name" nolabel="1" />
+              <group>
+              <group>  
+                      <separator string="Tráfico"/>
+                      <newline/>       
+                      <field name="date_evidence_traf" readonly="1"/>
+                      <field name="user_val_trafico_id" readonly="1"/>           
+                  </group>
+                  <group>
+                      <separator string="Ventas"/>
+                      <newline/> 
+                      <field name="date_evidence_ventas" readonly="1"/>
+                      <field name="user_val_ventas_id" readonly="1"/>
+                  </group>
+                  <group>
+                      <separator string="Facturación"/>
+                      <newline/>          
+                      <field name="date_evidence_facturacion" readonly="1"/>
+                      <field name="user_val_fact_id" readonly="1"/>
+                  </group>
+              </group>
+            </page>  
+          </xpath>
+      </field>
+  </record>
+
+    
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="tml_gebesa.action_server">
+      <field name="name">tml_gebesa server</field>
+      <field name="model_id" ref="model_tml_gebesa_tml_gebesa"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="tml_gebesa" id="tml_gebesa.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="tml_gebesa.menu_1" parent="tml_gebesa.menu_root"/>
+    <menuitem name="Menu 2" id="tml_gebesa.menu_2" parent="tml_gebesa.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="tml_gebesa.menu_1_list" parent="tml_gebesa.menu_1"
+              action="tml_gebesa.action_window"/>
+    <menuitem name="Server to list" id="tml_gebesa" parent="tml_gebesa.menu_2"
+              action="tml_gebesa.action_server"/>
+    -->
+  </data>
+</odoo>

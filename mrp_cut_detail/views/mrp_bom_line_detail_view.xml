@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_bom_line_detail_tree'>
+            <field name='name'>mrp.bom.line.detail.tree</field>
+            <field name='model'>mrp.bom.line.detail</field>
+            <field name='arch' type='xml'>
+                <tree string='BoM Line Detail'>
+                    <field name='name' readonly="1"/>
+                    <field name='material' readonly="1"/>
+                    <field name='routing_id' readonly="1"/>
+                    <field name='row' readonly="1"/>
+                    <field name="side" readonly="1"/>
+                    <field name='width_cut' readonly="1"/>
+                    <field name='long_cut' readonly="1"/>
+                    <field name="thickness" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mrp_bom_line_detail_form_view">
+            <field name="name">mrp.bom.line.detail.form.view</field>
+            <field name="model">mrp.bom.line.detail</field>
+            <field name="arch" type="xml">
+                <form string='BoM Line Detail'>
+                    <sheet>
+                        <h4>
+                            <separator string='BoM Line Detail'/>
+                        </h4>
+                        <group>
+                            <group>
+                                <field name="bom_line_id" readonly="1"/>
+                            </group>
+                            <group>
+                                <!-- <field name="product_id" readonly="1"/> -->
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="row"/>
+                                <label for="width_cut"/>
+                                <div class="o_row">
+                                    <field name="width_cut"/>
+                                    <span> cms.</span>
+                                </div>
+                                <field name="thickness"/>
+                                <field name="name"/>
+                                <field name="material"/>
+                                <field name='routing_id'/>
+                                <field name='production_line_id'/>
+                            </group>
+                            <group>
+                                <field name="color_id"/>
+                                <field name="caliber_id"/>
+                                <field name="quantity"/>
+                                <label for="long_cut"/>
+                                <div class="o_row">
+                                    <field name="long_cut"/>
+                                    <span> cms.</span>
+                                </div>
+                                <field name="side"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="meters2" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="kilos" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Variants">
+                                <field name="attribute_ids" widget="one2many_list" context="{'show_attribute': False}" readonly="1">
+                                    <tree string="Variants" editable="bottom">
+                                        <field name="attribute_id"/>
+                                        <field name="value_ids" widget="many2many_tags" options="{'no_create_edit': True}" domain="[('attribute_id', '=', attribute_id)]" context="{'default_attribute_id': attribute_id}"/>
+                                    </tree>
+                                    <form>
+                                        <field name="attribute_id"/>
+                                        <field name="value_ids" widget="many2many_tags" options="{'no_create_edit': True}" domain="[('attribute_id', '=', attribute_id)]" context="{'default_attribute_id': attribute_id}"/>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>   
+
+        <record id='action_mrp_bom_line_detail' model='ir.actions.act_window'>
+            <field name='name'>BoM Line Detail</field>
+            <field name='res_model'>mrp.bom.line.detail</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="mrp_bom_line_detail_menu" name="BoM Line Detail" parent="mrp.menu_mrp_bom" action="action_mrp_bom_line_detail"/>
+    </data>
+</odoo>

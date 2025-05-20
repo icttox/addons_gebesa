@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="segment_production_tag"
+            model="mrp.segment"
+            string="Etiqueta"
+            report_type="qweb-pdf"
+            name="report_tags.report_tag_segment"
+            file="report_tags.report_tag_segment"
+        />
+        <record id="report_tags.segment_production_tag" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag" />
+        </record>
+
+        <template id="report_tag_segment">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-call="report_tags.report_tag1_document"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="wbl_unit_weight_form_view">
+            <field name="name">l10n.mx.wbl.unit.weight.form</field>
+            <field name="model">l10n.mx.wbl.unit.weight</field>
+            <field name="arch" type="xml">
+                <form string="Form Waybill Unit Weight">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="flag"/>
+                            <field name="active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wbl_unit_weight_tree_view">
+            <field name="name">l10n.mx.wbl.unit.weight.tree</field>
+            <field name="model">l10n.mx.wbl.unit.weight</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Waybill Unit Weight">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="flag"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="wbl_unit_weight_action">
+            <field name="name">Waybill Unit Weight</field>
+            <field name="res_model">l10n.mx.wbl.unit.weight</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the waybill unit weight
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="wbl_unit_weight_action" id="menu_wbl_unit_weight" name="Unit Weight" parent="menu_wbl_complement" sequence="40"/>
+    </data>
+</odoo>
+    

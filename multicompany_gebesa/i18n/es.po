@@ -1,0 +1,370 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* multicompany_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20210330\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-01 19:50+0000\n"
+"PO-Revision-Date: 2021-12-01 15:12-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_order_line__auto_purchase_order_line_id
+msgid "Auto Purchase Order Line"
+msgstr ""
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_purchase_order__businness_partner_id
+msgid "Business partner"
+msgstr ""
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_purchase_order__businness_partner_ids
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_res_company__partner_ids
+msgid "Business partners"
+msgstr ""
+
+#. module: multicompany_gebesa
+#: model_terms:ir.ui.view,arch_db:multicompany_gebesa.update_price_po_so_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: multicompany_gebesa
+#: model_terms:ir.actions.act_window,help:multicompany_gebesa.action_sale_salesrep
+msgid "Click to start a Sales REP."
+msgstr "Haga clic para crear un REP de ventas."
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep_commission__commission
+msgid "Commission"
+msgstr "Comisión"
+
+#. module: multicompany_gebesa
+#: model_terms:ir.ui.view,arch_db:multicompany_gebesa.res_config_settings_view_form_multicompany_gebesa
+msgid "Commission percentage for warehouses"
+msgstr "Porcentaje de comisión para almacenes"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep__Commission_ids
+#: model_terms:ir.ui.view,arch_db:multicompany_gebesa.sale_salesrep_form
+msgid "Commissions"
+msgstr "Comisiones"
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_res_company
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_stock_location_route__company_ids
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/purchase_order.py:94
+#, python-format
+msgid "Configure correct warehouse for company(%s) from Menu: Settings/Users/Companies"
+msgstr "Configure el almacén correcto para la empresa (%s) desde Menú: Configuración / Usuarios / Empresas"
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep__create_uid
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep_commission__create_uid
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_update_price_po_so_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep__create_date
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep_commission__create_date
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_update_price_po_so_wizard__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep__display_name
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep_commission__display_name
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_update_price_po_so_wizard__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep_commission__end_date
+msgid "End Date"
+msgstr "Fecha final"
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/purchase_order.py:142
+#, python-format
+msgid "Family %s has more than one production route assigned"
+msgstr "La familia %s tiene más de una ruta de producción asignada"
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/purchase_order.py:140
+#, python-format
+msgid "Family %s has not assigned a production route"
+msgstr "La familia %s no ha asignado una ruta de producción"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_purchase_order__has_businness_partner
+msgid "Has a business partner"
+msgstr ""
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep__id
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep_commission__id
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_update_price_po_so_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/purchase_order.py:51
+#, python-format
+msgid "Inter company user of company %s doesn't have enough access rights"
+msgstr "El usuario entre empresas de la empresa %s no tiene suficientes permisos de acceso"
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_stock_location_route
+msgid "Inventory Routes"
+msgstr "Rutas de inventario"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep____last_update
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep_commission____last_update
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_update_price_po_so_wizard____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep__write_uid
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep_commission__write_uid
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_update_price_po_so_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep__write_date
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep_commission__write_date
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_update_price_po_so_wizard__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_purchase_order_line__line_tag_number
+msgid "Line item tag number"
+msgstr ""
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_update_price_po_so_wizard__new_price
+msgid "New Price"
+msgstr "Nuevo precio"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_order__partner_salesrep_id
+msgid "Partner REP"
+msgstr ""
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_res_company__negative_existence
+msgid "Permitir existencia negativa"
+msgstr ""
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/purchase_order.py:136
+#, python-format
+msgid "Product %s has no family assigned"
+msgstr "El producto %s no tiene una familia asignada"
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/purchase_order.py:48
+#, python-format
+msgid "Provide at least one user for inter company relation for %s"
+msgstr "Proporcione al menos un usuario para la relación entre empresas para %s"
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_purchase_order
+msgid "Purchase Order"
+msgstr "Orden de Compra"
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Línea pedido de compra"
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_stock_quant
+msgid "Quants"
+msgstr ""
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_res_partner__salesrep_id
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_res_users__salesrep_id
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_order__salesrep_id
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep_commission__salesrep_id
+msgid "REP"
+msgstr ""
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_res_config_settings
+msgid "Res Config settings "
+msgstr ""
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea pedido de venta"
+
+#. module: multicompany_gebesa
+#: model:ir.actions.act_window,name:multicompany_gebesa.action_sale_salesrep
+#: model:ir.ui.menu,name:multicompany_gebesa.menu_sale_salesrep
+#: model_terms:ir.ui.view,arch_db:multicompany_gebesa.sale_salesrep_form
+#: model_terms:ir.ui.view,arch_db:multicompany_gebesa.sale_salesrep_tree
+msgid "Sales REP"
+msgstr ""
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_sale_salesrep_commission__start_date
+msgid "Start date"
+msgstr "Fecha de inicio"
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento bursátil"
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/sale_salesrep.py:54
+#, python-format
+msgid ""
+"The date range of this commission overlaps the range of                     another commission,\n"
+"please check the dates"
+msgstr ""
+"El rango de fecha de esta comisión se sobrepone al rango de otra comisión,\n"
+"por favor verifique la fechas"
+
+#. module: multicompany_gebesa
+#: model_terms:ir.ui.view,arch_db:multicompany_gebesa.update_price_po_so_wizard
+msgid "Update"
+msgstr "Actualizar"
+
+#. module: multicompany_gebesa
+#: model_terms:ir.ui.view,arch_db:multicompany_gebesa.purchase_order_business_partner_form
+#: model_terms:ir.ui.view,arch_db:multicompany_gebesa.update_price_po_so_wizard
+msgid "Update Price"
+msgstr "Actualizar precio"
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_res_users
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: multicompany_gebesa
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_cfdi_config_settings__warehouse_commission
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_res_company__warehouse_commission
+#: model:ir.model.fields,field_description:multicompany_gebesa.field_res_config_settings__warehouse_commission
+msgid "Warehouse commission "
+msgstr "Comisión de almacén "
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/sale_order.py:121
+#, python-format
+msgid "You cannot add lines to an intercompany Sale Order."
+msgstr "No puede agregar líneas a una orden de venta intercompañía."
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/sale_order.py:36
+#, python-format
+msgid "You cannot change the Customer of an intercompany Sale Order."
+msgstr "No puede cambiar el Cliente de una orden de venta intercompañía."
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/sale_order.py:47
+#, python-format
+msgid "You cannot change the Invoice partner of an intercompany Sale Order."
+msgstr "No puede cambiar el socio de facturación de una orden de venta intercompañía."
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/sale_order.py:41
+#, python-format
+msgid "You cannot change the Pricelist of an intercompany Sale Order."
+msgstr "No puede cambiar la lista de precios de una orden de venta intercompañía."
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/sale_order.py:113
+#, python-format
+msgid "You cannot change the price unit of an intercompany Sale Order."
+msgstr "No puede cambiar el precio unitario de una orden de venta intercompañía."
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/sale_order.py:100
+#, python-format
+msgid "You cannot change the product of an intercompany Sale Order."
+msgstr "No puede cambiar el producto de una orden de venta intercompañía."
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/sale_order.py:105
+#, python-format
+msgid "You cannot change the quantity of an intercompany Sale Order."
+msgstr "No puede cambiar la cantidad de una orden de venta intercompañía."
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/purchase_order.py:55
+#, python-format
+msgid "You cannot create SO from PO because sale price list currency is different than purchase price list currency."
+msgstr "No puede crear SO a partir de la orden de compra porque la moneda de la lista de precios de venta es diferente a la moneda de la lista de precios de compra."
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/sale_order.py:128
+#, python-format
+msgid "You cannot delete lines of an intercompany Sale Order."
+msgstr "No puede eliminar líneas de una orden de venta intercompañía."
+
+#. module: multicompany_gebesa
+#: code:addons/multicompany_gebesa/models/stock_quant.py:23
+#, python-format
+msgid "You cannot validate this stock operation because the stock level of the product '%s' would become negative on the stock location '%s' and negative stock is not allowed for this product."
+msgstr "No puede validar esta operación de stock porque el nivel de stock del producto '% s' se volvería negativo en la ubicación del stock '% s' y no se permite stock negativo para este producto."
+
+#. module: multicompany_gebesa
+#: model_terms:ir.ui.view,arch_db:multicompany_gebesa.update_price_po_so_wizard
+msgid "or"
+msgstr "ó"
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_sale_order
+msgid "sale.order"
+msgstr "sale.order"
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_sale_salesrep
+msgid "sale.salesrep"
+msgstr "sale.salesrep"
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_sale_salesrep_commission
+msgid "sale.salesrep.commission"
+msgstr "sale.salesrep.commission"
+
+#. module: multicompany_gebesa
+#: model:ir.model,name:multicompany_gebesa.model_update_price_po_so_wizard
+msgid "update.price.po.so.wizard"
+msgstr "update.price.po.so.wizard"

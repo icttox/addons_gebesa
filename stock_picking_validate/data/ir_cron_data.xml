@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_validate_batch" model="ir.cron">
+            <field name="name">Validate batch</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="model_id" ref="model_stock_picking_batch"/>
+            <field name="state">code</field>
+            <field name="code">model.validate_batch_done()</field>
+            <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 20:10:00')" />
+            <field name="active" eval="True" />
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='sale_goal_tree'>
+        	<field name='name'>sale.goal.tree</field>
+        	<field name='model'>sale.goal</field>
+        	<field name='arch' type='xml'>
+        		<tree string='Goal'>
+        			<field name='year'/>
+        			<field name='sales_channel_id'/>
+        			<field name='partner_ids'/>
+        		</tree>
+        	</field>
+        </record>
+        <record model='ir.ui.view' id='sale_goal_form'>
+        	<field name='name'>sale.goal.form</field>
+        	<field name='model'>sale.goal</field>
+        	<field name='arch' type='xml'>
+        		<form string='Goal'>
+        			<sheet>
+        				<div class="oe_title">
+        					<label for="name" class="oe_edit_only"/>
+        					<h1>
+        						<field name='name' readonly='1'/>
+        					</h1>
+        				</div>
+        				<group>
+        					<group>
+                                <field name='year' required='1'/>
+        						<field name='sales_channel_id'/>
+        					</group>
+        					<group>
+        						<field name='goal_id'/>
+        					</group>
+        				</group>
+        				<notebook>
+        					<page string="Customer">
+        						<field name='partner_ids' />
+        					</page>
+        					<page string="Week">
+        						<field name='goal_weekly_ids' widget="one2many_list">
+        							<tree editable="bottom">
+        								<field name='week'/>
+        								<field name='amount'/>
+        							</tree>
+        						</field>
+        					</page>
+        					<page string="Month">
+        						<field name='goal_monthly_ids' widget="one2many_list">
+        							<tree editable="bottom">
+	        							<field name='month'/>
+	        							<field name='amount'/>
+	        						</tree>
+        						</field>
+        					</page>
+        					<page string="quarter">
+        						<field name='goal_quarterly_ids' widget="one2many_list">
+        							<tree editable="bottom">
+	        							<field name='quarter'/>
+	        							<field name='amount'/>
+	        						</tree>
+        						</field>
+        					</page>
+        				</notebook>
+        			</sheet>
+        		</form>
+        	</field>
+        </record>
+        <record id='action_sale_goal' model='ir.actions.act_window'>
+        	<field name='name'>Goal</field>
+        	<field name='res_model'>sale.goal</field>
+        	<field name='view_type'>form</field>
+        	<field name='view_mode'>tree,form</field>
+        </record>
+        <menuitem id="sale_goal_menu" name="Goal" parent="sale.menu_sale_config" action="action_sale_goal"/>
+    </data>
+</odoo>

@@ -1,0 +1,71 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="wbl_autotransport_conf_form_view">
+            <field name="name">l10n.mx.wbl.autotransport.conf.form</field>
+            <field name="model">l10n.mx.wbl.autotransport.conf</field>
+            <field name="arch" type="xml">
+                <form string="Form Waybill Autotransport Configuration">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" type="object" name="toggle_active" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="code"/>
+                            </div>
+                            <h2>
+                                <field name="code"/>    
+                            </h2>
+                        </div>
+                        <group>
+                            <label for="name"/>
+                            <field name="name"/>
+                            <group>
+                                <field name="axles"/>
+                                <field name="carry_trailer"/>
+                            </group>
+                            <group>
+                                <field name="tire"/>
+                                <field name="gvwr"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wbl_autotransport_conf_tree_view">
+            <field name="name">l10n.mx.wbl.autotransport.conf.tree</field>
+            <field name="model">l10n.mx.wbl.autotransport.conf</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Waybill Autotransport Configuration">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="axles"/>
+                    <field name="tire"/>
+                    <field name="gvwr"/>
+                    <field name="carry_trailer"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="wbl_autotransport_conf_action">
+            <field name="name">Waybill Autotransport Configuration</field>
+            <field name="res_model">l10n.mx.wbl.autotransport.conf</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the waybill autotransport configuration
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="wbl_autotransport_conf_action" id="menu_wbl_autotransport_conf" name="Autotransport Configuration" parent="menu_wbl_complement" sequence="80"/>
+    </data>
+</odoo>
+    

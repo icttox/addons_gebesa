@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_bom_form_button_form_approve'>
+            <field name='name'>mrp.button.button.form.approve</field>
+            <field name='model'>mrp.bom</field>
+            <field name='inherit_id' ref='mrp.mrp_bom_form_view'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//header/button" position="before">
+                    <button name="approved_check" string="Approve" type="object" class="oe_highlight" attrs="{'invisible': [('approved', '=', True)]}" groups="mrp_bom_validate.group_mrp_bom_button_gebesa"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[2]/group/group/field[@name='sequence']" position="after">
+                    <field name='approved' readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

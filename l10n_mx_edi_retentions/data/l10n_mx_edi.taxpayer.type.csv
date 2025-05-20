@@ -1,0 +1,10 @@
+id,code,name
+l10n_mx_edi_taxpayer_type_1,1,"Artistas, deportistas y espectáculos públicos"
+l10n_mx_edi_taxpayer_type_2,2,Otras personas físicas
+l10n_mx_edi_taxpayer_type_3,3,Persona moral
+l10n_mx_edi_taxpayer_type_4,4,Fideicomiso
+l10n_mx_edi_taxpayer_type_5,5,Asociación en participación
+l10n_mx_edi_taxpayer_type_6,6,Organizaciones Internacionales o de gobierno
+l10n_mx_edi_taxpayer_type_7,7,Organizaciones exentas
+l10n_mx_edi_taxpayer_type_8,8,Agentes pagadores
+l10n_mx_edi_taxpayer_type_9,9,Otros

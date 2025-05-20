@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<data>
+	<record model="ir.ui.view" id="shipper_information">
+		<field name="name">shipper.information.id</field>
+		<field name="model">mrp.shipment</field>
+		<field name="inherit_id" ref="mrp_shipment.mrp_shipment_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//form/sheet/notebook/page[2]" position="after">
+				 <page string="Shipper Information">
+				 	<group>
+				 		<group>
+					 		<field name="partner_id"/>
+							<field name="date_positioning"/>
+							<field name="time_positioning"/>
+							<field name="team"/>
+							<field name="mercancia"/>
+							<field name="maniobras"/>
+						</group>
+						<label for="special_delivery_instructions" string="Special Delivery Instructions"/>
+ 				 		<field name="special_delivery_instructions"/>
+ 				 		<label for="seal" string="Seal"/>
+ 				 		<field name="seal"/>
+ 				 		<label for="carrier_name" string="Carrier name"/>	
+ 						<field name="carrier_name"/>
+ 						<label for="trailer_number" string="Trailer number"/>
+ 						<field name="trailer_number"/>
+					</group>
+				</page>
+			</xpath>
+		</field>
+	</record>
+</data>
+</odoo>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/fletera_externa/static/src/css/fletera_externa.css"/>
+            </xpath>
+        </template>
+
+        <report
+            id="fletera_externa"
+            model="mrp.shipment"
+            string="Imprimir Fletera Externa"
+            report_type="qweb-pdf"
+            name="fletera_externa.report_fletera_externa"
+            file="fletera_externa.report_fletera_externa"
+        />
+
+        <template id="fletera_externa_layout">
+            <div class="header">
+                <div id="cabezera">
+                </div>
+                <div width="100%">
+                    <div id="logo">
+                        <img class="logo1" src='/fletera_externa/static/img/gebesa.jpg'/>
+                    </div>
+                    <div style="text-align:center;" id="titulo">
+                        FLETERA EXTERNA
+                    </div>
+                </div>
+                <div id="departamento">
+                    DEPARTAMENTO EMBARQUES
+                </div>
+                <div id="departamento">
+                    Manufacturas Post Form S.A de C.V.
+                </div>
+                <div style="text-align:center;" id="titulo">
+                        Fecha:&#160;<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                </div>
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer">
+                <div id="linea" class="col-xs-12">
+                </div>
+                <div class="col-xs-6">
+                    www.gebesa.com
+                </div>
+                <div class="col-xs-6" align="right">
+                    Página 1 de 1
+                </div>
+            </div>
+        </template>
+
+        <template id="report_fletera_externa_document">
+            <t t-call="fletera_externa.fletera_externa_layout">
+                <div class="page">
+                    <div id="primero">
+                        <div id="cobranza2">
+                            INSTRUCCIONES A FLETERA EXTERNA
+                        </div>
+                        <table width="100%" id="tabla_datos">
+                            <tr>
+                                <td id="primer_tabla" width="12%">FOLIO:</td>
+                                <td id="contorno" width="35%">&#160;
+                                    <span t-esc="doc.folio"/>
+                                </td>
+                                <td id="primer_tabla" width="12%">FECHA:</td>
+                                <td id="contorno" width="35%">&#160;
+                                    <span t-esc="doc.departure_date"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">OPERADOR:</td>
+                                <td id="contorno">&#160;
+                                    <span t-esc="doc.operator"/>
+                                </td>
+                                <td id="primer_tabla">DESTINO:</td>
+                                <td id="contorno">&#160;
+                                    <span t-esc="doc.linea_citys"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">CAMION:</td>
+                                <td id="contorno">&#160;
+                                    <span t-esc="doc.truck"/>
+                                </td>
+                                <td id="primer_tabla">CAJA:</td>
+                                <td id="contorno">&#160;
+                                    <span t-esc="doc.trailer_number"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">FLETERA:</td>
+                                <td id="contorno">&#160;
+                                    <span t-esc="doc.carrier_name"/>
+                                </td>
+                                <td id="primer_tabla">REPARTOS:</td>
+                                <td id="contorno">&#160;
+                                    <span t-esc="doc.deliveries"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="primer_tabla">PLACAS:</td>
+                                <td id="contorno">&#160;
+                                    <span t-esc="doc.plaque"/>
+                                </td>
+                                <td id="primer_tabla">Sello</td>
+                                <td id="contorno">&#160;
+                                    <span t-esc="doc.seal"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br/>
+                    <div id="primero">
+                        <div id="cobranza2">
+                            COBRANZA
+                        </div>
+                        <table width="100%" class="tabla_datos">
+                            <tr>
+                                <td align="center" id="titulo_tabla" width="6%">Orden</td>
+                                <td align="center" id="titulo_tabla" width="24%">Cliente</td>
+                                <td align="center" id="titulo_tabla" width="10%">Importe</td>
+                                <td align="center" id="titulo_tabla" width="40%">Ins. Cobranza</td>
+                                <td align="center" id="titulo_tabla" width="20%">Imp. Flete</td>
+                            </tr>
+                            <t t-foreach="clientes[doc.id]" t-as="partner">
+                                <tr>
+                                    <td id="contorno" align="center">
+                                        <t><span t-esc="doc.order"/></t>
+                                    </td>
+                                    <td id="contorno" align="center">
+                                        <t><span t-esc="partner.name"/></t>
+                                    </td>
+                                    <td id="contorno" align="center">
+                                        <t><span t-esc="doc.importe"/></t>
+                                    </td>
+                                    <td id="contorno" align="center">
+                                        <t><span t-esc="doc.cobranza"/></t>
+                                    </td>
+                                    <td id="contorno" align="center">
+                                        <t>
+                                            
+                                        </t>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div id="primero">
+                        <div id="cobranza2">
+                            INSTRUCCIONES DEL VIAJE PARA EL OPERADOR
+                        </div>
+                        <table width="100%" class="tabla_datos">
+                            <tr>
+                                <td align="center" id="titulo_tabla" width="6%">Orden</td>
+                                <td align="center" id="titulo_tabla" width="41%">Cliente</td>
+                                <td align="center" id="titulo_tabla" width="41%">Instrucción</td>
+                            </tr>
+                            <t t-foreach="clientes[doc.id]" t-as="partner">
+                                <tr>
+                                    <td id="contorno" align="center">
+                                        <t><span t-esc="doc.order"/></t>
+                                    </td>
+                                    <td id="contorno" align="center">
+                                        <t><span t-esc="doc.linea_partner"/></t>
+                                    </td>
+                                    <td id="contorno" align="center">
+                                        <t><span t-esc="doc.instruction"/></t>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div id="devolu">
+                        DEVOLUCIONES: NO
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="col-xs-12" id="fech">
+                        <b>Fecha de Regreso:</b> ____________________
+                    </div>
+                    <br/>
+                    <br/>
+                    <!-- FIN DE LAS TABLAS-->
+                    <div class="col-xs-12" id="obser">
+                        <b>Observaciones:</b> 
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div class="col-xs-14">
+                        <div align="center" class="col-xs-4">
+                            _______________________________
+                            <br/>
+                             Nombre y Firma del Operador
+                        </div>
+                        <div align="center" class="col-xs-4">
+                            _______________________________
+                            <br/>
+                            Nombre y Firma Depto. Embarques
+                        </div>
+                        <div align="center" class="col-xs-4">
+                            _______________________________
+                            <br/>
+                            Nombre y Firma Credito y Cobranza
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <template id="report_fletera_externa">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="fletera_externa.report_fletera_externa_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

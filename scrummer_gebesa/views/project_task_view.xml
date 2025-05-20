@@ -1,0 +1,86 @@
+<odoo>
+  <data>
+    <record model='ir.ui.view' id='project_task_inherit_form'>
+            <field name='name'>project.task.inherit.form</field>
+            <field name='model'>project.task</field>
+            <field name='inherit_id' ref="project.view_task_form2"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='date_deadline']" position="after">
+                    <field name="project_agile_method" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='validation_ip']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='validation_time_ip']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='user_val_id']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='validation_diseno']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='validation_time_diseno']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='user_val_diseno_id']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='validation_aip']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='validation_time_aip']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='user_val_aip_id']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='validation_sc']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='validation_time_sc']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='user_val_sc_id']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//page[6]" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//page[7]" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//page[8]" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//page[9]" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//page[@id='stage_history']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//page[@id='history']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('project_agile_method','!=',False)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+  </data>
+</odoo>

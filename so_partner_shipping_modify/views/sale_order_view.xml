@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='so_parter_shipping_view_form'>
+            <field name='name'>so.parter.shipping.view.form</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref="sale.view_order_form"/>
+            <field name="groups_id" eval="[(6,0,[ref('so_partner_shipping_modify.group_so_partner_shipping_modify')])]"/>
+            <field eval="60" name="priority"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='partner_shipping_id']" position="attributes">
+                    <attribute name="attrs">{'readonly':['|',('state','not in',['draft','sent','done']),('shiptment_status','!=','no_shipment') ]}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_order_form" model="ir.ui.view">
+            <field name="name">view_order_product_data_validator_form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_done']" position="after">
+                    <button name="product_data_validation2" string="Verificar Excepción" type="object" attrs="{'invisible': [('state', 'in', ('done','closed','cancel'))]}"/>
+                </xpath>
+
+                <xpath expr="//field[@name='commitment_date']" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

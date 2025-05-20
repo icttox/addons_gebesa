@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="mrp_plm_gebesa_variant_default" model="ir.ui.view">
+            <field name="name">mrp.plm.gebesa.variant.default</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product_variant_default_code.product_normal_form_view_inh_variantdefaultcode_dos"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="attributes">
+                    <attribute name="attrs">{'invisible':[ ('type','in',('cotiza'))]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='default_code']" position="after">
+                    <field name="consecutive_id" invisible="True"/>
+                </xpath>
+                <xpath expr="//field[@name='default_code']" position="after">
+                    <field name="plm_project_id" readonly="True"/>
+                </xpath>
+                <xpath expr="//field[@name='plm_project_id']" position="after">
+                    <field name="plm_project_related"/>
+                </xpath>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='product_template_quotation_view'>
+            <field name='name'>product.template.quotation.view</field>
+            <field name='model'>product.template</field>
+            <field name='inherit_id' ref='product.product_template_only_form_view'/>
+            <field name='arch' type='xml'>
+                <header>
+                    <button name="transformacion" class="oe_highlight" string="PLM Start" type="object" groups="mrp_plm_gebesa.group_mrp_plm_cotizacion" attrs="{'invisible':[('type', '!=', 'cotiza')]}"/>
+                </header>
+            </field>
+        </record>
+    </data>
+</odoo>

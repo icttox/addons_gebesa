@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='account_invoice_view_netsuite_form'>
+            <field name='name'>account.invoice.view.netsuite.form</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_form'/>
+            <field name='arch' type='xml'>
+                <field name="state" position="before">
+                    <!-- <button name="actualiza_ns" string="Update Netsuite" type="object" attrs="{'invisible':['|',('state','==', 'draft'),('netsuite_ok', '==', True)]}"/> -->
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

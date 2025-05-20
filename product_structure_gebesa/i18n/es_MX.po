@@ -1,0 +1,371 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_structure_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-05 18:06+0000\n"
+"PO-Revision-Date: 2020-11-05 12:15-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family__active
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_group__active
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line__active
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_type__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: product_structure_gebesa
+#: model:ir.model,name:product_structure_gebesa.model_product_template
+msgid "Add Multiple Image in Product"
+msgstr "Agregar Varias Imágenes en el Producto"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family__analytic_id
+msgid "Analítica"
+msgstr "Analítica"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_family_update_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line__code
+msgid "Code"
+msgstr "Código"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_product__company_ids
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_normal_cost_tree_view
+msgid "Costo Producto"
+msgstr "Costo Producto"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_kanban_view_complete_cost
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_normal_cost_kanban_view
+msgid "Costo:"
+msgstr "Costo:"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family__create_uid
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family_update_wizard__create_uid
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_group__create_uid
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line__create_uid
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_type__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family__create_date
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family_update_wizard__create_date
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_group__create_date
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line__create_date
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_type__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family__display_name
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family_update_wizard__display_name
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_group__display_name
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line__display_name
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_type__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_product__family_id
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_template__family_id
+msgid "Family"
+msgstr "Familia"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,help:product_structure_gebesa.field_product_family__name
+msgid "Family name product"
+msgstr "Nombre de la familia del producto"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_product__group_id
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_template__group_id
+msgid "Group"
+msgstr "Grupo"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,help:product_structure_gebesa.field_product_group__name
+msgid "Group name product"
+msgstr "Nombre de la grupo del producto"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family__id
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family_update_wizard__id
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_group__id
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line__id
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_type__id
+msgid "ID"
+msgstr "Id"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_product__individual_name
+msgid "Individual name"
+msgstr "Nombre individual"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family____last_update
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family_update_wizard____last_update
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_group____last_update
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line____last_update
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_type____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family__write_uid
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family_update_wizard__write_uid
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_group__write_uid
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line__write_uid
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_type__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family__write_date
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family_update_wizard__write_date
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_group__write_date
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line__write_date
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_type__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_product__line_id
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_template__line_id
+msgid "Line"
+msgstr "Linea"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_product__is_line
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_template__is_line
+msgid "Line Product"
+msgstr "Lineas del producto"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,help:product_structure_gebesa.field_product_line__code
+msgid "Line code product"
+msgstr "Clave de la linea del producto"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,help:product_structure_gebesa.field_product_line__name
+msgid "Line name product"
+msgstr "Nombre de la linea del producto"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_group__mu_min
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line__mu_min
+msgid "M.U. Minimum"
+msgstr "M.U. Mínimo"
+
+#. module: product_structure_gebesa
+#: selection:product.line,report_type:0
+msgid "MODULARES"
+msgstr "MODULARES"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_product__multi_variant
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_template__multi_variant
+msgid "Multi Variant"
+msgstr "Variante múltiple"
+
+#. module: product_structure_gebesa
+#: selection:product.line,report_type:0
+msgid "NORMAL"
+msgstr "NORMAL"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family__name
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_group__name
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line__name
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_type__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family__parent_id
+msgid "Padre"
+msgstr "Padre"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_normal_form_view
+msgid "Price"
+msgstr "Precio"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_normal_form_view
+msgid "Pricelist"
+msgstr "Tarifa"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_normal_form_view
+msgid "Pricelist Items"
+msgstr "Lista de precios de artículos"
+
+#. module: product_structure_gebesa
+#: model:ir.model,name:product_structure_gebesa.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: product_structure_gebesa
+#: model:ir.actions.act_window,name:product_structure_gebesa.action_product_family
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family_update_wizard__family_id
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line__product_family_id
+#: model:ir.ui.menu,name:product_structure_gebesa.product_family_menu
+msgid "Product Family"
+msgstr "Familia del producto"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_family_update_wizard_form
+msgid "Product Family Update Wizard"
+msgstr "Asistente de actualización de la familia de productos"
+
+#. module: product_structure_gebesa
+#: model:ir.actions.act_window,name:product_structure_gebesa.action_product_group
+#: model:ir.ui.menu,name:product_structure_gebesa.product_group_menu
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_group_form
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_group_tree
+msgid "Product Group"
+msgstr "Grupo del producto"
+
+#. module: product_structure_gebesa
+#: model:ir.actions.act_window,name:product_structure_gebesa.action_product_line
+#: model:ir.ui.menu,name:product_structure_gebesa.product_line_menu
+msgid "Product Line"
+msgstr "Linea del producto"
+
+#. module: product_structure_gebesa
+#: model:ir.actions.act_window,name:product_structure_gebesa.action_product_type
+#: model:ir.ui.menu,name:product_structure_gebesa.product_type_menu
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_type_form
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_type_tree
+msgid "Product Type"
+msgstr "Tipo de producto"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_template_form_view
+msgid "Product classification"
+msgstr "Clasificacion del producto"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_family_form
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_family_tree
+msgid "Product family"
+msgstr "Familia del producto"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_line_form
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_line_tree
+msgid "Product line"
+msgstr "Linea del producto"
+
+#. module: product_structure_gebesa
+#: model:ir.ui.menu,name:product_structure_gebesa.product_strucutre_gebesa_menu
+msgid "Product structure gebesa"
+msgstr "Estructura producto gebesa"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_normal_form_view
+msgid "Propagar peso y volumen a variantes"
+msgstr "Propagar peso y volumen a variantes"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_product__quotation_product
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_normal_form_view
+#: model:res.groups,name:product_structure_gebesa.group_quotation_product
+msgid "Quotation Product"
+msgstr "Producto de Cotización"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_product__cutting_detail
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_template__cutting_detail
+msgid "Requires cutting detail"
+msgstr "Requiere detalle de corte"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_product__name_template
+msgid "Template Name"
+msgstr "Nombre Plantilla"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_product__type_id
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_template__type_id
+msgid "Type"
+msgstr "Tipo"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_line__report_type
+msgid "Type Report"
+msgstr "Tipo de reporte"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,help:product_structure_gebesa.field_product_type__name
+msgid "Type name product"
+msgstr "Nombre del tipo de producto"
+
+#. module: product_structure_gebesa
+#: model:ir.actions.act_window,name:product_structure_gebesa.action_product_family_update_wizard
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_family_update_wizard_form
+msgid "Update Family"
+msgstr "Actualizar familia"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_normal_cost_kanban_view
+msgid "Variants"
+msgstr "Variantes"
+
+#. module: product_structure_gebesa
+#: model:ir.model.fields,field_description:product_structure_gebesa.field_product_family__warehouse_id
+msgid "Warehouse"
+msgstr "Almacen"
+
+#. module: product_structure_gebesa
+#: model_terms:ir.ui.view,arch_db:product_structure_gebesa.product_family_update_wizard_form
+msgid "or"
+msgstr "ó"
+
+#. module: product_structure_gebesa
+#: model:ir.model,name:product_structure_gebesa.model_product_family
+msgid "product.family"
+msgstr "familia.producto"
+
+#. module: product_structure_gebesa
+#: model:ir.model,name:product_structure_gebesa.model_product_family_update_wizard
+msgid "product.family.update.wizard"
+msgstr "asistente.actualización .familia.productos"
+
+#. module: product_structure_gebesa
+#: model:ir.model,name:product_structure_gebesa.model_product_group
+msgid "product.group"
+msgstr "grupo.producto"
+
+#. module: product_structure_gebesa
+#: model:ir.model,name:product_structure_gebesa.model_product_line
+msgid "product.line"
+msgstr "línea.producto"
+
+#. module: product_structure_gebesa
+#: model:ir.model,name:product_structure_gebesa.model_product_type
+msgid "product.type"
+msgstr "tipo.producto"

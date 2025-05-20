@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="group_review" model="res.groups">
+            <field name="name">Review Warehouse / Manager</field>
+        </record>
+
+        <record id="group_po_lines_masive_editor" model="res.groups">
+            <field name="name">Can edit PO lines massively</field>
+        </record>
+
+        <record id="group_validation_the_po_lines_unit_price" model="res.groups">
+            <field name="name">Precio unitario lineas po</field>
+        </record>
+    </data>
+</odoo>

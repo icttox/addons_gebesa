@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_segment_form" model="ir.ui.view">
+            <field name="name">mrp.segment.button.all.processes.form</field>
+            <field name="model">mrp.segment</field>
+            <field name='inherit_id' ref='mrp_segment.view_segment_form'/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='process_segment']" position="after">
+                    <button name="production_all_processes" states="confirm" string="All processes" type="object" groups="stock_move_batch_validator.group_mrp_production_all_processes" attrs="{'invisible':['|', ('schedule_all_processes', '!=', False)]}"/>
+                </xpath>
+                <xpath expr="//button[@name='process_segment']" position="attributes">
+                    <attribute name="attrs">{'invisible': ['|', ('schedule_all_processes', '!=', False)]}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='reverse_in_construction']" position="attributes">
+                    <attribute name="attrs">{'invisible': ['|', ('schedule_all_processes', '!=', False)]}</attribute>
+                </xpath>
+                <xpath expr="//sheet/div[@class='oe_title']" position="before">
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_schedule_all_processes" type="object" class="oe_stat_button" icon="fa-moon-o" states="confirm" style="width: 20% !important;" groups="stock_move_batch_validator.group_mrp_production_all_processes">
+                            <span class="o_stat_text">Schedule<br/>all processes</span>
+                            <field name="schedule_all_processes" widget="boolean_button"/>
+                        </button>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

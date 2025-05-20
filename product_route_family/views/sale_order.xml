@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_order_route_required_form'>
+            <field name='name'>sale.order.form.sale.stock</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref='sale_stock.view_order_form_inherit_sale_stock'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='route_id']" position="attributes">
+                    <attribute name="attrs">{'required': [('display_type', '=', False)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

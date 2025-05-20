@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_bom_line_tree_geb'>
+            <field name='name'>mrp.bom.line.tree.geb</field>
+            <field name='model'>mrp.bom.line</field>
+            <field name='arch' type='xml'>
+                <tree string='Operation'>
+                    <field name="bom_id" readonly="1"/>
+                    <!--field name="location_id"/-->
+                    <field name="product_id" readonly="1"/>
+                    <field name="product_qty" readonly="1"/>
+                    <field name="sequence" readonly="1"/>
+                    <!--field name="date_start" readonly="1"/>
+                    <field name="date_stop" readonly="1"/-->
+                    <field name="product_uom_id" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mrp_bom_line_form_view">
+            <field name="name">mrp.bom.line.form.view</field>
+            <field name="model">mrp.bom.line</field>
+            <field name="arch" type="xml">
+                <form string='BoM Line'>
+                    <sheet>
+                        <h4>
+                            <separator string='BoM Line' />
+                        </h4>           
+                        <group>
+                            <!-- <field name='bom_id' readonly="0"/> -->
+                            <group>
+                                <!--field name="product_rounding" groups="mrp.group_rounding_efficiency"/-->
+                                <field name="id" invisible="1"/>
+                                <field name="product_id" on_change="onchange_product_id(product_id)"/>
+                                <field name="sequence"/>
+                                <!--field name="product_rounding" groups="mrp.group_rounding_efficiency"/-->
+                                <field name="attribute_value_ids" widget="many2many_tags" domain="[('product_ids.product_tmpl_id', '=', parent.product_tmpl_id)]" groups="product.group_product_variant"/>
+                                <!--field name="property_ids" widget="many2many_tags" groups="product.group_mrp_properties"/-->
+                                <field name="bom_id" required="False" readonly="True"/> 
+                            </group>
+                            <group>
+                                <!--field name="date_stop"/-->
+                                <field name="product_uom_id" options="{'no_open':True,'no_create':True}" on_change="onchange_uom(product_id, product_uom)" groups="product.group_uom" readonly="True"/>
+                                <!--field name="date_start"/-->
+                                <field name="product_qty"/>
+                                <!--field name="product_efficiency"/-->
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="BoM Line Details">
+                                <field name="bom_line_detail_ids" widget="one2many_list" context="{'default_bom_line_id': id}">
+                                    <tree string="List Details">
+                                        <field name="name"/>
+                                        <field name="material"/>
+                                        <field name="routing_id"/>
+                                        <field name="row"/>
+                                        <field name="quantity"/>
+                                        <field name="side"/>
+                                        <field name="width_cut"/>
+                                        <field name="long_cut"/>
+                                        <field name="color_id"/>
+                                        <field name="thickness"/>
+                                        <field name="caliber_id"/>
+                                        <field name='production_line_id'/>
+                                        <field name='attribute_ids'/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id='action_mrp_bom_line' model='ir.actions.act_window'>
+            <field name='name'>BoM Lines</field>
+            <field name='res_model'>mrp.bom.line</field>
+            <field name='view_type'>form</field>
+            <field name="view_id" ref="mrp_cut_detail.mrp_bom_line_tree_geb"/>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="mrp_bom_line_menu" name="BoM Lines" parent="mrp.menu_mrp_bom" action="action_mrp_bom_line"/>
+    </data>
+</odoo>

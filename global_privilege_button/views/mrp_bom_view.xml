@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='inactive_mrp_bom_form_view'>
+            <field name='name'>inactive.mrp.bom.form.view</field>
+            <field name='model'>mrp.bom</field>
+            <field name='inherit_id' ref='mrp.mrp_bom_form_view'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//button[@name='toggle_active']" position='replace'>
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive" groups="global_privilege_button.group_manager_inactive_mrp_bom">
+                        <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

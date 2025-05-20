@@ -1,0 +1,41 @@
+.manufacturing_order_table{
+    border-collapse: collapse;
+    border: 0.5px solid black;
+    font-size: 7pt;
+    margin-top: 10px;
+}
+.manufacturing_order_table td{
+    border-left: 0.5px solid black;
+    padding-left: 2px;
+    padding-right: 2px
+}
+.manufacturing_order_table th{
+    border-bottom: 0.5px solid black;
+    border-left: 0.5px solid black;
+    font-weight: bold;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+}
+.manufacturing_order_table tr:nth-child(even){
+    background: #E6E6E6
+}
+.manufacturing_order_div{
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+}
+.manufacturing_order_table_order{
+    border-collapse: collapse;
+    border: 0.5px solid black;
+    font-size: 7pt;
+}
+.manufacturing_order_table_order td{
+    padding-left: 2px;
+}
+.manufacturing_order_table_order th{
+    background-color: #E6E6E6;
+    border-bottom: 0.5px solid black;
+    font-weight: bold;
+    padding-left: 2px;
+}

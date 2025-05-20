@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='import_data_stage_form'>
+            <field name='name'>import.data.stage.form</field>
+            <field name='model'>import.data.stage</field>
+            <field name='arch' type='xml'>
+                <form string='Importar desde datastage'>
+                    <group>
+                        <field name='zip_file'/>
+                    </group>
+                    <footer>
+                        <button string="Buscar" name="import_data_stage_wz_m" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_import_data_stage" model="ir.actions.act_window">
+            <field name="name">Importar Datastage</field>
+            <field name="res_model">import.data.stage</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="import_data_stage_form"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+    
+        <menuitem id="immex_menu" name="A24-IMMEX" web_icon="immex_gebesa,static/description/web_icon.png" icon="fa-usd" groups="group_immex_manager"/>
+
+        <menuitem id="wizard_menu" name="Procesos" parent="immex_menu" sequence="40"/>
+
+        <menuitem id="menu_account_config" name="Importar datastage" action="action_import_data_stage" parent="wizard_menu"/>
+
+
+    </data>
+</odoo>

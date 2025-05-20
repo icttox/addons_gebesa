@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_account_voucher_payment_user,AccountVoucherPayUser,model_account_voucher_payment,group_account_voucher_payment_user,1,1,1,1
+access_account_voucher_payment_line_user,AccountVoucherPayLineUser,model_account_voucher_payment_line,group_account_voucher_payment_user,1,1,1,1
+access_account_voucher_payment_line_all,AccountVoucherPayLineAll,model_account_voucher_payment_line,,1,0,0,0

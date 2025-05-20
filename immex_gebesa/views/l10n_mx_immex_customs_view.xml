@@ -1,0 +1,48 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="l10n_mx_immex_customs_form_view">
+            <field name="name">l10n.mx.immex.customs.form</field>
+            <field name="model">l10n.mx.immex.customs</field>
+            <field name="arch" type="xml">
+                <form string="Form IMMEX Customs">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="section"/>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="l10n_mx_immex_customs_tree_view">
+            <field name="name">l10n.mx.immex.customs.tree</field>
+            <field name="model">l10n.mx.immex.customs</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Tree IMMEX Customs">
+                    <field name="code"/>
+                    <field name="section"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="l10n_mx_immex_customs_action">
+            <field name="name">IMMEX Customs</field>
+            <field name="res_model">l10n.mx.immex.customs</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the immex customs
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_l10n_mx_cat" name="Catálogos" parent="immex_menu" sequence="70"/>
+        <menuitem action="l10n_mx_immex_customs_action" id="menu_l10n_mx_immex_customs" name="IMMEX Customs" parent="menu_l10n_mx_cat" sequence="70"/>
+    </data>
+</odoo>
+    

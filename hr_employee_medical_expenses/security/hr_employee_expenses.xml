@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="group_hr_employee_medical_expense" model="res.groups">
+            <field name="name">Medical Expenses / Manager</field>
+        </record>
+        <record id="ir_rule_hr_employee_medical_expense" model="ir.rule">
+            <field name="name">Medical Expenses</field>
+            <field name="model_id" ref="model_hr_employee_medical_expense"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+            <field eval="False" name="global"/>
+            <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+        </record>
+        <record id="group_medical_expense_validated" model="res.groups">
+            <field name="name">Medical Expenses / Validated</field>
+        </record>
+        <record id="group_medical_expense_refund" model="res.groups">
+            <field name="name">Medical Expenses / Refund</field>
+        </record>
+    </data>
+</odoo>

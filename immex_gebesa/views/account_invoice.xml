@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="pediment_code_invoice_form" model="ir.ui.view">
+            <field name="name">pediment_code_invoice_form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/header/button[@name='action_invoice_draft']" position="after">
+                    <button name="immex_descargue" states="open,paid" string="Immex Descargue" type="object" groups="system_administrator.group_system_administrator_gebesa"/>
+                    <button name="immex_remove_descargue" string="Immex Remove Descargue" type="object" attrs="{'invisible': [('state', 'in', ['open', 'paid']), ('descargue_ids', '=', False)]}" groups="system_administrator.group_system_administrator_gebesa"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='journal_id']" position="before">
+                    <field name="country_fiscal_code" attrs="{'invisible':True}"/>
+                    <field name="patente_aduanal"/>
+                    <field name="entry_date"/>
+                    <field name="clave_aduanal"/>
+                    <field name="clave_pedimento"/>
+                    <field name="descargue_ids" attrs="{'invisible':True}"/>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page string="IMMEX">
+                        <field name="factura_ids">
+                            <tree editable="bottom">
+                                    <field name='fecha_facturacion'/>
+                                    <field name='num_factura'/>
+                                    <field name='moneda_factura'/>
+                                    <field name='monto_usd'/>
+                                    <field name='monto_extranjera'/>
+                                    <field name='id_fiscal_proveedor'/>
+                                    <field name='nombre_proveedor'/>
+                                    <field name='fecha_real_pago'/>
+                                    <field name='clave_documento'/>
+                                    <field name='resumen_id'/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>       
+            </field>
+        </record>
+
+        <record id="pediment_code_invoice_supplier_form" model="ir.ui.view">
+            <field name="name">pediment_entry_supplier_form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='journal_id']" position="before">
+                    <field name="country_fiscal_code" attrs="{'invisible':True}"/>
+                    <field name="company_country_code" attrs="{'invisible':True}"/>
+                    <field name="patente_aduanal" attrs="{'required': [('country_fiscal_code', '!=', 'MEX'),('company_country_code','=','MX')]}"/>
+                    <field name="entry_date"/>
+                    <field name="clave_aduanal" attrs="{'required': [('country_fiscal_code', '!=', 'MEX'),('company_country_code','=','MX')]}"/>
+                    <field name="cove" attrs="{'required': [('country_fiscal_code', '!=', 'MEX'),('company_country_code','=','MX')]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

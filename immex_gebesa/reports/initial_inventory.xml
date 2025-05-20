@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="immex_initial_inventory"
+            model="l10n.mx.immex.partida"
+            string="Inventario inicial"
+            report_type="qweb-text"
+            name="immex_gebesa.report_initial_inventory" 
+            file="immex_gebesa.report_initial_inventory"
+            menu="False"
+        />
+
+        <template id="report_initial_inventory"><t t-foreach="docs" t-as="partida"><t t-translation="off">01|<t t-esc="partida.patente"/>|<t t-esc="partida.num_pedimento"/>|<t t-esc="partida.clave_aduana"/>|<t t-esc="partida.fecha_pago_real.strftime('%Y-%m-%d')"/>|<t t-esc="partida.fraccion_arancelaria"/>|<t t-esc="partida.saldo_mxn_pendiente"/>|<t t-if="partida.clave_documento!='AF'">N</t><t t-if="partida.clave_documento=='AF'">S</t>
+</t></t>
+        </template>
+
+        <record id="action_immex_initial_inventory" model="ir.actions.server">
+            <field name="name">Inventario inicial</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_l10n_mx_immex_partida"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = model.print_initial_inventory()
+            </field>
+        </record>
+
+        <menuitem id="menu_immex_initial_inventory" name="Inventario inicial" parent="immex_gebesa.immex_report_anexo31" sequence="20" action="action_immex_initial_inventory"/>
+    </data>
+</odoo>

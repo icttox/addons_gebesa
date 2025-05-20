@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="supplier_attachment"
+            model="res.partner"
+            string="Ultimos Adjuntos Proveedores"
+            report_type="qweb-pdf"
+            name="report_last_attachment.last_supplier_attachment"
+            file="report_last_attachment.last_supplier_attachment"
+        />
+
+        <template id="report_last_attachments_document">
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <h1 style="text-align:center;">
+                        Ultimos Adjuntos de Proveedor
+                    </h1>
+                    <br/>
+                     <div style="text-align:left;" id="titulo">
+                        Fecha:&#160;<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                    </div>
+                    <br/>
+                    <div>
+                        <table class="table table-condensed" style="width=100%;">
+                            <tr>
+                                <th style="font-size: 14pt; width: 60%; border-bottom: 3px solid #000;">Proveedor</th>
+                                <th style="font-size: 14pt; width: 35%; border-bottom: 3px solid #000;">Adjunto</th>
+                                <th style="font-size: 14pt; width: 35%; border-bottom: 3px solid #000;">Fecha Creación</th>
+                            </tr>
+                            <t t-foreach="results" t-as="res" style="font-size: 10pt;">
+                                <tr>
+                                    <td style="border-bottom: 2px solid #000;"><span t-esc="res[1]"/></td>
+                                    <td style="border-bottom: 2px solid #000;"><span t-esc="res[2]"/></td>
+                                    <td style="border-bottom: 2px solid #000;"><span t-esc="res[3]"/></td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="last_supplier_attachment">
+            <t t-call="web.html_container">
+                <t t-call="report_last_attachment.report_last_attachments_document"/>
+            </t>
+        </template>
+    </data>
+</odoo>

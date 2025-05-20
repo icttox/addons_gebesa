@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_segment_mp_concentrate_wizard'>
+        	<field name='name'>mrp.segment.mp.concentrate.wizard</field>
+        	<field name='model'>segment.send.armed.wizard</field>
+        	<field name='arch' type='xml'>
+        		<form>
+        			<field name='segment_ids'/>
+        			<footer>
+                        <button name="print_report_mp_concentrado" string="Export" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+        <record id="action_export_mp_concentrate_view" model="ir.actions.act_window">
+            <field name="name">Export MP Concentrate</field>
+            <field name="res_model">segment.send.armed.wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="mrp_segment_mp_concentrate_wizard"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+       <!--<menuitem  id="gebesa_export_armed" name="Export Armed" parent="gebesa_reports.gebesa_report_produ_menu"/>-->
+        <menuitem action="action_export_mp_concentrate_view" id="menu_mp_concentrate" name="Export MP Concentrate" parent="gebesa_reports.gebesa_report_inven_menu"/>
+        </data>
+</odoo>

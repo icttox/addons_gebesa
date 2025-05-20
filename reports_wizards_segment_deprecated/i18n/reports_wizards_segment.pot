@@ -1,0 +1,111 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* reports_wizards_segment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-02 16:49+0000\n"
+"PO-Revision-Date: 2017-05-02 16:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: reports_wizards_segment
+#: model:ir.ui.view,arch_db:reports_wizards_segment.mrp_segment_armed_wizard
+#: model:ir.ui.view,arch_db:reports_wizards_segment.mrp_segment_mp_concentrate_wizard
+#: model:ir.ui.view,arch_db:reports_wizards_segment.mrp_segment_order_wood
+msgid "Cancel"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.model.fields,field_description:reports_wizards_segment.field_segment_send_armed_wizard_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.model.fields,field_description:reports_wizards_segment.field_segment_send_armed_wizard_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.ui.menu,name:reports_wizards_segment.menu_order_wood
+msgid "Detail Cut Wood"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.model.fields,field_description:reports_wizards_segment.field_segment_send_armed_wizard_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.ui.view,arch_db:reports_wizards_segment.mrp_segment_armed_wizard
+#: model:ir.ui.view,arch_db:reports_wizards_segment.mrp_segment_mp_concentrate_wizard
+#: model:ir.ui.view,arch_db:reports_wizards_segment.mrp_segment_order_wood
+msgid "Export"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.actions.act_window,name:reports_wizards_segment.action_export_order_wood_view
+msgid "Export Detail Cut Wood"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.actions.act_window,name:reports_wizards_segment.action_export_mp_concentrate_view
+#: model:ir.ui.menu,name:reports_wizards_segment.menu_mp_concentrate
+msgid "Export MP Concentrate"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.actions.act_window,name:reports_wizards_segment.action_export_segment_armed_view
+#: model:ir.ui.menu,name:reports_wizards_segment.menu_export_armed
+msgid "Export Segment Armed"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.model.fields,field_description:reports_wizards_segment.field_segment_send_armed_wizard_id
+msgid "ID"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.model.fields,field_description:reports_wizards_segment.field_segment_send_armed_wizard___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.model.fields,field_description:reports_wizards_segment.field_segment_send_armed_wizard_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.model.fields,field_description:reports_wizards_segment.field_segment_send_armed_wizard_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.model.fields,field_description:reports_wizards_segment.field_segment_send_armed_wizard_segment_ids
+msgid "Seleccionar Segmentos"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: code:addons/reports_wizards_segment/wizard/export_segment_armed.py:13
+#, python-format
+msgid "Select Segments"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.ui.view,arch_db:reports_wizards_segment.mrp_segment_armed_wizard
+#: model:ir.ui.view,arch_db:reports_wizards_segment.mrp_segment_mp_concentrate_wizard
+#: model:ir.ui.view,arch_db:reports_wizards_segment.mrp_segment_order_wood
+msgid "or"
+msgstr ""
+
+#. module: reports_wizards_segment
+#: model:ir.model,name:reports_wizards_segment.model_segment_send_armed_wizard
+msgid "segment.send.armed.wizard"
+msgstr ""
+

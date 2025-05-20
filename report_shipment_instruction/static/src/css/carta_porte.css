@@ -1,0 +1,68 @@
+#titulo_tabla_porte{
+    background-color: #a5a8a4;
+    color: white;
+    border:1pt solid black;
+    font-weight: bold;
+}
+
+#cabezera_porte{
+	background-color: black;
+	border-radius: 20pt;
+	height: 20pt;
+}
+
+#logo_porte{
+	height: 15px; 
+	width: 55px; 
+	margin: 0px 0px 0px 10px;
+	padding: 0px 0px 0px 0px;
+}
+
+.logo_porte{
+	padding: 0pt;
+	height: 25pt;
+}
+
+#contorno_porte{
+	border:1pt solid black;
+}
+
+#cabezera{
+	background-color: black;
+	border-radius: 20pt;
+	height: 20pt;
+}
+
+#titulo_porte{
+    text-align: right;
+}
+
+#departamento_porte{
+	top:10pt;
+	text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+#cobranza_porte{
+	top:-10pt;
+    height: 19.5pt;
+    background-color: #616360;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+#tabla_datos{
+	padding: 0pt;
+}
+
+#tabla_datos_porte{
+	padding: 0pt;
+}
+
+#linea{
+	height: 2pt;
+	background-color: black;
+}

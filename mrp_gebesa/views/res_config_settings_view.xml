@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='res_config_settings_skip_mo_view_form'>
+            <field name='name'>res.config.settings.skip.mo.view.form</field>
+            <field name='model'>res.config.settings</field>
+            <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//div[@class='app_settings_block']/h2[@id='schedule_info']" position="before">
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="skip_supply_mo"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="skip_supply_mo"/>
+                                <div class="text-muted">
+                                    Skip supply picking on manufacturing orders
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="skip_handover_mo"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="skip_handover_mo"/>
+                                <div class="text-muted">
+                                    Automatically transfers manufactured products
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

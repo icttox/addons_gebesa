@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="bal1_ini_product_view_form" model="ir.ui.view">
+            <field name="name">bal1.ini.product.view.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='options']" position="inside">
+                    <div>
+                        <field name="bal_ini_prod" nolabel="1"/>
+                        <label for="bal_ini_prod"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>       
+    </data>
+</odoo>

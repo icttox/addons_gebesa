@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_crm_team_parent_form'>
+        	<field name='name'>crm_team_parent_view_form</field>
+        	<field name='model'>crm.team</field>
+        	<field name='inherit_id' ref='sales_team.crm_team_view_form'/>
+        	<field name='arch' type='xml'>
+        		<xpath expr="///field[@name='user_id']" position="before">
+        			<field name='parent_id'/>
+        		</xpath>       		
+        	</field>
+        </record>
+    </data>
+</odoo>

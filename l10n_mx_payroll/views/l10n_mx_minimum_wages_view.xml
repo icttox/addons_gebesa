@@ -1,0 +1,47 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="l10n_mx_minimum_wages_tree">
+      <field name="name">l10n.mx.minimum.wages.tree</field>
+      <field name="model">l10n.mx.minimum.wages</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="type_wages" />
+          <field name="default"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="l10n_mx_minimum_wages_form">
+      <field name="name">Minimum.wages.form</field>
+      <field name="model">l10n.mx.minimum.wages</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="type_wages" required="1"/>
+              <field name="default"/>
+            </group>
+            <notebook>
+              <page string="Details">
+                <field name="minimum_wages_line_ids"/>
+              </page>
+            </notebook>
+          </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div> 
+        </form>
+      </field>
+    </record>
+    
+    <record model="ir.actions.act_window" id="l10n_mx_minimum_wages_action">
+      <field name="name">Minimum wages</field>
+      <field name="res_model">l10n.mx.minimum.wages</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="l10n_mx_minimum_wages_menu_action" name="Minimum wages" parent="hr_payroll.menu_hr_payroll_configuration"
+              action="l10n_mx_payroll.l10n_mx_minimum_wages_action"/>
+  </data>
+</odoo>

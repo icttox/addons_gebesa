@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_l10n_mx_edi_waybill_complement_form" model="ir.ui.view">
+        <field name="name">l10n_mx_edi_waybill_complement_form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='other_info']" position="inside">
+                <group>
+                    <group string="Waybill Complement">
+                        <field name="l10n_mx_edi_waybill_complement"/>
+                        <field name="l10n_mx_edi_skip_waybill"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//button[@name='l10n_mx_edi_check_cancel_status']" position="after">
+                <button name="call_transportable_weights" string="Calculate Weights" type="object"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

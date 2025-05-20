@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_order_mrp_bost_form'>
+            <field name='name'>sale.order.mrp.bost.form</field>
+            <field name='model'>sale.order</field>
+            <field name='inherit_id' ref="sale.view_order_form"/>
+            <field name='arch' type='xml'>
+                <!--xpath expr="//button[@name='action_done']" position="after">
+                    <button name="validate_alternative" string="Confirm alternative" type="object" attrs="{'invisible': ['|', ('state', 'not in', ['sent', 'draft']), ('approve','in',('not_approved','suggested'))]}" groups="system_administrator.group_system_administrator_gebesa"/>
+                </xpath-->
+                <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
+                    <attribute name="name">validate_alternative</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_confirm'][1]" position="attributes">
+                    <attribute name="name">validate_alternative</attribute>
+                </xpath>
+                <xpath expr="//sheet/notebook/page/field[@name='order_line']/form/field[@name='display_type']" position="before">
+                    <div class="oe_button_box" name="button_box" groups="base.group_user">
+                        <button name="print_report_tag_sol" type="object" class="btn-dark" string="Etiqueta" icon="fa-tag"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

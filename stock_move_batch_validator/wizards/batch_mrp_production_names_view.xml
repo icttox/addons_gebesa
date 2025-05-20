@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="batch_production_names_view" model="ir.ui.view">
+        <field name="name">Procure batch mrp production by names</field>
+        <field name="model">batch.mrp.production.names</field>
+        <field name="arch" type="xml">
+            <form string="Procure MOs">
+                <separator string="MOs for procure"/>
+                <label for="mo_names" string="Enter the names of the mrp productions you want to procure."/>
+                <!--group col="4"-->
+                <field name="mo_names"/>
+                <!--/group-->
+                <footer>
+                    <button class="oe_highlight" default_focus="1" name="action_procure_all" string="Procure" type="object"/>
+                    
+                    <button class="oe_link" special="cancel" string="Cancel"/></footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_batch_mo_names_view" model="ir.actions.act_window">
+        <field name="name">Procure batch mrp production by names</field>
+        <field name="res_model">batch.mrp.production.names</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="batch_production_names_view"/>
+        <field name="context">{}</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem action="action_batch_mo_names_view" id="menu_procure_mrp_production_batch" name="Procure batch mrp production by names" parent="inventory_special_process"/>
+</odoo>

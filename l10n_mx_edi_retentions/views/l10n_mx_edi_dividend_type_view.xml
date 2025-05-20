@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="l10n_mx_edi_dividend_form">
+            <field name="name">l10n_mx_edi.dividend.or.profitableness.type.form</field>
+            <field name="model">l10n_mx_edi.dividend.or.profitableness.type</field>
+            <field name="arch" type="xml">
+                <form string="Dividend or Profitable type">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>    
+
+        <record model="ir.ui.view" id="l10n_mx_edi_dividend_tree">
+            <field name="name">l10n_mx_edi.dividend.or.profitableness.type.tree</field>
+            <field name="model">l10n_mx_edi.dividend.or.profitableness.type</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Dividends or Profitable types" editable="bottom">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="l10n_mx_edi_dividend_action">
+                <field name="name">Dividends or Profitable types</field>
+                <field name="res_model">l10n_mx_edi.dividend.or.profitableness.type</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <field name="help" type="html">
+                    <p class="o_view_nocontent_smiling_face">Create the first dividend type
+                    </p>
+                </field>
+        </record>
+
+        <menuitem id="l10n_mx_edi_dividend_menu" name="Dividends or Profitable types" parent="l10n_mx_edi_retentions_conf" action="l10n_mx_edi_dividend_action"/>
+    </data>
+</odoo>

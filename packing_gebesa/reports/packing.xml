@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="shipping_label"
+            model="mrp.shipment"
+            string="Shipping Label"
+            report_type="qweb-pdf"
+            name="packing_gebesa.report_shipping_label"
+            file="packing_gebesa.report_shipping_label"
+        />
+        <record id="packing_gebesa.shipping_label" model="ir.actions.report">
+            <field name="paperformat_id" ref="packing_gebesa.paperformat_tag" />
+        </record>
+
+        <template id="shipping_label_empty">
+            <div class="header">
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer">
+            </div>
+
+        </template>
+
+        <template id="report_shipping_label_document">
+            <t t-set="pag_n" t-value="1"/>
+            <t t-foreach="docs[o]" t-as="doc2">
+                <t t-call="packing_gebesa.shipping_label_empty">
+                    <div class="page" style="font-size: 10pt;">
+                        <div style="border-left: 1px solid #000000;border-right: 1px solid #000000; border-top: 1px solid #000000; border-radius:16px 16px 0px 0px;height: 30px;padding:0px;top:5px;">
+                            <div class="col-xs-12">
+                                <div class="col-xs-7" style="margin-top: 1px; height: 28px; overflow: hidden;">
+                                    <img t-if="doc2['linea'].sale_order_id.company_id.logo_invoice" t-att-src="'data:image/png;base64,%s' % doc2['linea'].sale_order_id.company_id.logo_invoice" style="max-height: 95px; margin-top: -33px; margin-bottom: -20px;"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="border-left: 1px solid #000000;border-right: 1px solid #000000;height: 310px; padding:0px;">
+                            <div class="col-xs-12">
+                                <div class="col-xs-8">
+                                    <table width="100%" height="125px" style="max-height: 135px; border: 1px solid #000000;margin-top: 12px;">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div style="margin-left: 5px; margin-top: 3px;">
+                                                        <strong>Sold To:</strong>
+                                                        <br/>
+                                                        <span t-field="doc2['linea'].sale_order_id.partner_shipping_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-xs-4" align="right">
+                                    <table width="90%" style="border: 1px solid #000000;margin-top: 12px;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="background: black;color: white;" align="center">Quantity:</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><span t-esc="doc2['cantidad']"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="background: black;color: white;" align="center">Bingo:</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <span t-esc="doc2['numero_etiqueta']"/>
+                                                    of
+                                                    <span t-esc="doc2['total']"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="background: black;color: white;" align="center">Order:</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><span t-esc="doc2['linea'].sale_order_id.name"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="background: black;color: white;" align="center">Line:</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><span t-field="doc2['linea'].order_line_id.dealer_order_line"/></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-xs-12" style="height: 110px; max-height: 110px;">
+                                <div class="col-xs-12">
+                                    <strong>PO#:</strong> <span t-field="doc2['linea'].sale_order_id.client_order_ref"/>
+                                    <br/>
+                                    <strong>Tag:</strong> <span t-esc="doc2['linea'].sale_order_id.general_tag_num"/>
+                                    <br/>
+                                    <strong>Tag Line:</strong> <span t-esc="doc2['linea'].order_line_id.line_tag_number"/>
+                                    <br/>
+                                    <strong>Code:</strong> <span t-esc="doc2['product'].default_code"/>
+                                    <t t-if="doc2['linea'].order_line_id.options">
+                                        (<span t-esc="doc2['linea'].order_line_id.options"/>)
+                                    </t>
+                                    <br/>
+                                    <strong>Product:</strong>
+                                    <t t-set="trans" t-value="doc2['product'].with_context({'lang':'es_MX'})"/>
+                                    <t t-set="trans2" t-value="doc2['product'].with_context({'lang':'en_US'})"/>
+                                    <t t-if="doc2['product'].individual_name">
+                                        <t t-set="val" t-value="trans.individual_name"/>
+                                        <t t-set="val2" t-value="trans2.individual_name"/>
+                                    </t>
+                                    <t t-if="not doc2['product'].individual_name">
+                                        <t t-set="val" t-value="trans.name"/>
+                                        <t t-set="val2" t-value="trans2.name"/>
+                                    </t>
+                                    &#160;
+                                    <span t-esc="val"/>
+                                    <t t-if="doc2['description']!=''">
+                                        [<span t-esc="doc2['description']"/>]
+                                    </t>
+                                </div>
+                            </div>
+                            <div class="col-xs-12" style="margin-top: 0px;font-size: 16pt;font-family: CCode39; text-align: center;">
+                                <t t-set="barcode39" t-value="'*'+doc2['product'].default_code+'*'"/>
+                                <span t-esc="barcode39"/>
+                            </div>
+                        </div>
+                        <div style="border-left: 1px solid #000000;border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-radius:0px 0px 16px 16px;height: 20px;">
+                            <table width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td align="center"><sub>Page: <span t-value="pag_n+1" t-esc="pag_n"/></sub></td>
+                                        <td align="center"><sub>HANDLE WITH CARE</sub></td>
+                                        <td align="center"><sub><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d %B %Y')"/></sub></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+                <t t-set="pag_n" t-value="pag_n+1"/>
+            </t>
+        </template>
+
+        <template id="report_shipping_label">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="packing_gebesa.report_shipping_label_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

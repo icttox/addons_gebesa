@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_account_journal_factoraje_from'>
+            <field name='name'>view.account.journal.factoraje.from</field>
+            <field name='model'>account.journal</field>
+            <field name='inherit_id' ref='account.view_account_journal_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//group/group/field[@name='journal_user']" position="after">
+                    <field name="factoring_percentage" attrs="{'invisible': [('type', '!=', 'bank')]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

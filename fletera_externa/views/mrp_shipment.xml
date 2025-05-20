@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_shipment_fletera_externa'>
+        	<field name='name'>mrp.shipment.fletera.externa</field>
+        	<field name='model'>mrp.shipment</field>
+        	<field name='inherit_id' ref="paperwork_usa.shipper_information"/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//page/group/field[@name='trailer_number']" position="after">
+                    <group>
+                        <field name="operator"/>
+                        <field name="deliveries"/>
+                        <field name="order"/>
+                    </group>
+                    <group>
+                        <field name="truck"/>
+                        <field name="plaque"/>
+                        <field name="importe"/>
+                    </group>
+                    <label for="cobranza" string="Ins. de Cobranza"/>
+                    <field name="cobranza"/>
+                    <label for="instruction" string="Instrucción"/>
+                    <field name="instruction"/>
+                </xpath>
+        	</field>
+        </record>
+    </data>
+</odoo>

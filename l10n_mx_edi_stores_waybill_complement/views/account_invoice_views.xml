@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model='ir.ui.view' id='invoice_form_waybill_stores'>
+        <field name='name'>account.invoice.waybill.stores</field>
+        <field name='model'>account.invoice</field>
+        <field name='inherit_id' ref='account.invoice_form'/>
+        <field name='arch' type='xml'>
+            <xpath expr="//form/sheet/notebook" position="inside">
+                <page string="Waybill complement">
+                    <group>
+                        <field name="income_invoice_id" domain="[('partner_id','=', partner_id)]"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="unit_id"/>
+                            <field name="trailer1_id"/>
+                            <field name="driver_id"/>
+                            <field name="departure_address_id"/>
+                            <field name="date_departure"/>
+                            <field name="date_deliver"/>
+                            <field name="insurance_policy"/>
+                            <field name="insurance_supplier_id"/>
+                        </group>
+                        <group>
+                            <field name="dolly_id"/>
+                            <field name="trailer2_id"/>
+                            <field name="driver_two_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

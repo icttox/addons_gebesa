@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="nonconforming_product_xlsx"
+        model="quality.alert"
+        string="Reporte Interno de Producto No Conforme"
+        report_type="xlsx"
+        name="management_system_gebesa.nonconforming_product_xlsx"
+        file="nonconforming_product_xlsx"
+        attachment_use="False"
+    />
+</odoo>

@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* gebesa_integracion_microsip
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20211011\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 22:34+0000\n"
+"PO-Revision-Date: 2022-11-04 16:35-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: gebesa_integracion_microsip
+#: model_terms:ir.ui.view,arch_db:gebesa_integracion_microsip.hr_employee_form
+msgid "Compartir a microsip"
+msgstr ""
+
+#. module: gebesa_integracion_microsip
+#: model:ir.model,name:gebesa_integracion_microsip.model_hr_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: gebesa_integracion_microsip
+#: model:ir.model,name:gebesa_integracion_microsip.model_hr_department
+msgid "HR Department"
+msgstr ""
+
+#. module: gebesa_integracion_microsip
+#: model:ir.model,name:gebesa_integracion_microsip.model_hr_job
+msgid "Job Position"
+msgstr "Cargo"
+
+#. module: gebesa_integracion_microsip
+#: model:ir.model.fields,field_description:gebesa_integracion_microsip.field_hr_department__id_microsip
+#: model:ir.model.fields,field_description:gebesa_integracion_microsip.field_hr_employee__id_microsip
+#: model:ir.model.fields,field_description:gebesa_integracion_microsip.field_hr_job__id_microsip
+#: model:ir.model.fields,field_description:gebesa_integracion_microsip.field_hr_payroll_structure__id_microsip
+#: model:ir.model.fields,field_description:gebesa_integracion_microsip.field_hr_payslip_line__id_microsip
+#: model:ir.model.fields,field_description:gebesa_integracion_microsip.field_hr_salary_rule__id_microsip
+msgid "Microsip id"
+msgstr ""
+
+#. module: gebesa_integracion_microsip
+#: model:ir.model,name:gebesa_integracion_microsip.model_prepayroll_open_microsip
+msgid "Opens a new payroll in Microsip"
+msgstr ""
+
+#. module: gebesa_integracion_microsip
+#: model:ir.model,name:gebesa_integracion_microsip.model_hr_salary_rule
+msgid "Salary Rule"
+msgstr ""
+
+#. module: gebesa_integracion_microsip
+#: model:ir.model,name:gebesa_integracion_microsip.model_hr_salary_rule_category
+msgid "Salary Rule Category"
+msgstr "Categoría de regla salarial"
+
+#. module: gebesa_integracion_microsip
+#: model:ir.model,name:gebesa_integracion_microsip.model_hr_payroll_structure
+msgid "Salary Structure"
+msgstr "Estructura salarial"
+
+#. module: gebesa_integracion_microsip
+#: model:res.groups,name:gebesa_integracion_microsip.send_employee_to_microsip_button
+msgid "Send employee to microsip button"
+msgstr "Boton para enviar empleado a microsip"

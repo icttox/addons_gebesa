@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_purchase_receipt_form" model="ir.ui.view">
+            <field name="name">account.voucher.purchase.payment.form</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_purchase_receipt_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page/group/group/field[@name='amount']" position="after">
+                    <field name="amount_pending" widget="monetary" options="{'currency_field': 'currency_id'}" readonly="1"/>
+                </xpath>
+                <xpath expr="//notebook/page[1]" position="after">
+                    <page string="Payments">
+                        <field name="payment_ids" readonly="1">
+                            <tree string="Paymnets">
+                                <field name="name" readonly="1"/>
+                                <field name="communication" readonly="1"/>
+                                <field name="payment_date" readonly="1"/>
+                                <field name="journal_id" readonly="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_sale_receipt_form" model="ir.ui.view">
+            <field name="name">account.voucher.sale.payment.form</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_sale_receipt_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page/group/group/field[@name='amount']" position="after">
+                    <field name="amount_pending" widget="monetary" options="{'currency_field': 'currency_id'}" readonly="1"/>
+                </xpath>
+                <xpath expr="//notebook/page[1]" position="after">
+                    <page string="Payments">
+                        <field name="payment_ids" readonly="1">
+                            <tree string="Paymnets">
+                                <field name="name" readonly="1"/>
+                                <field name="communication" readonly="1"/>
+                                <field name="payment_date" readonly="1"/>
+                                <field name="journal_id" readonly="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_voucher_tree_purchase" model="ir.ui.view">
+            <field name="name">account.voucher.tree.supplier.payment</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_voucher_tree_purchase"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='amount']" position="after">
+                    <field name='amount_pending' widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_voucher_tree" model="ir.ui.view">
+            <field name="name">account.voucher.tree.payment</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_voucher_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='amount']" position="after">
+                    <field name='amount_pending' widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

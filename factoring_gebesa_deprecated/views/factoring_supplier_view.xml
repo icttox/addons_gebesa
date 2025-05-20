@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="action_factoring_supplier" model="ir.actions.act_window">
+			<field name="name">Gebesa Factoring Supplier</field>
+			<field name="res_model">factoring.supplier</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form,graph</field>
+			<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
+				Click to register a Factoring
+			</p><p>
+				Make your first Factoring Supplier.
+			</p>
+			</field>
+		</record>
+
+		<menuitem action="action_factoring_supplier" id="menu_action_factoring_supplier_gebesa" parent="account.menu_finance_payables"  sequence="50"/>
+
+    	<record model="ir.ui.view" id="factoring_supplier_tree">
+            <field name="name">factoring.supplier.tree</field>
+            <field name="model">factoring.supplier</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Factoring Supplier">
+                	<field name="consecutive" select="1"/>
+                   	<field name="reference" select="1"/>
+                   	<field name="partner_id" select="1"/>
+                   	<field name="journal_id" select="1"/>
+                   	<field name="date" select="1"/> 
+                   	<field name="state" select="1"/>                  
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="factoring_supplier_form">
+            <field name="name">factoring.supplier.form</field>
+            <field name="model">factoring.supplier</field>
+            <field name="arch" type="xml">
+                <form string='Factoring'>
+	                 <header>
+	                 	<button string="Factoring" name="integrated_factoring" type="object" states="draft" class="oe_highlight"/>	                    
+	                    <field name="state" widget="statusbar" statusbar_visible="draft,done" statusbar_colors='{"draft":"blue","approved":"blue"}'/>
+	                </header>				
+					<sheet>
+						<div class="oe_title">
+							<h2>
+								<field name='consecutive' readonly="1"/>
+							</h2>
+							<br />
+							<div class="oe_edit_only">
+								<label for="reference"/>
+							</div>
+							<h2>
+								<field name="reference" default_focus="1" placeholder="Enter some reference..." required='1' attrs="{'readonly':[('state','!=','draft')]}"/>
+							</h2>
+						</div>
+						<group>
+							<group>
+								<field name='partner_id' required='1' attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name='journal_id' required='1' attrs="{'readonly':[('state','!=','draft')]}"/>
+								<field name='date_bank' required='1' attrs="{'readonly':[('state','!=','draft')]}"/>
+							</group>
+							<group>
+								<field name='company_id' required='1' readonly='1'/>
+								<field name='date' required='1' readonly='1'/>   
+							</group>
+						</group>
+						<notebook>
+							<page string='Invoices'>
+								<separator string='Invoices'/>
+								<field name='invoice_ids' domain="[('state','=','open'),
+									('type','=','in_invoice'),
+									('partner_id','=',partner_id),
+									('factoring_supplier_id', '=', False)]" nolabel='1' attrs="{'readonly':[('state','!=','draft')]}"/>
+							</page>                             
+						</notebook>						
+					</sheet>
+					<div class="oe_chatter">
+	                    <field name="message_follower_ids" widget="mail_followers"/>
+	                    <field name="message_ids" widget="mail_thread"/>
+	                </div>	
+                </form>
+            </field>
+        </record>	
+    </data>
+</odoo>

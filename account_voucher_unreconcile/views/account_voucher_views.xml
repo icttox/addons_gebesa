@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_purchase_receipt_form" model="ir.ui.view">
+            <field name="name">account.voucher.purchase.unreconcile.form</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher_payment.view_purchase_receipt_form"/>
+            <field name="arch" type="xml">
+                <!--xpath expr="//notebook/page/field[@name='payment_ids']" position="attributes">
+                    <attribute name="context">{'def_voucher_id': active_id}</attribute>
+                </xpath-->
+                <xpath expr="//notebook/page/field[@name='payment_ids']/tree/field[@name='journal_id']" position="after">
+                    <field name="id" invisible="1"/>
+                    <button icon="fa-chain-broken" name="%(action_account_voucher_unreconcile)d" string="Unreconcile" type="action" context="{'default_payment_id': id}" groups="system_administrator.group_system_administrator_gebesa"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_sale_receipt_form" model="ir.ui.view">
+            <field name="name">account.voucher.sale.unreconcile.form</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher_payment.view_sale_receipt_form"/>
+            <field name="arch" type="xml">
+                <!--xpath expr="//notebook/page/field[@name='payment_ids']" position="attributes">
+                    <attribute name="context">{'def_voucher_id': active_id}</attribute>
+                </xpath-->
+                <xpath expr="//notebook/page/field[@name='payment_ids']/tree/field[@name='journal_id']" position="after">
+                    <field name="id" invisible="1"/>
+                    <button icon="fa-chain-broken" name="%(action_account_voucher_unreconcile)d" string="Unreconcile" type="action" context="{'default_payment_id': id}" groups="system_administrator.group_system_administrator_gebesa"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

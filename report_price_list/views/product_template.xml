@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+     <data>
+        <record model='ir.ui.view' id='product_template_form_view'>
+            <field name='name'>product_template_isometri_form_view</field>
+            <field name='model'>product.template</field>
+            <field name='inherit_id' ref="product.product_template_form_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook/page[4]" position="after">
+                    <page string="Isometric">
+                        <group>
+                            <field name='pricelist'/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name='length'/>
+                                <field name='height'/>
+                            </group>
+                            <group>
+                                <field name='width'/>
+                            </group>
+                        </group>      
+                        <group>
+                            <group>
+                                <!--field name='weight'/-->
+                                <field name='product_mix_id'/>
+                            </group>
+                            <group>
+                                <!--field name='volume'/-->
+                                <field name='vias'/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name='note_pricelist'/>
+                            <field name='isometric_medium' widget='image'/>
+                        </group>
+                        <group>
+                            <field name="acabados_html"/>
+                            <field name="notas_html"/>
+                            <field name="composiciones_html"/>
+                            <field name="pricelist_categ_id"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='variants_tree_view'>
+          <field name='name'>variants_number_tree_view</field>
+          <field name='model'>product.attribute.value</field>
+          <field name='inherit_id' ref="product.variants_tree_view"/>
+          <field name='arch' type='xml'>
+            <xpath expr="//field[@name='name']" position="after">
+              <field name='number'/>
+            </xpath>
+          </field>
+        </record>
+
+        <record model='ir.ui.view' id='product_line_finished_form'>
+          <field name='name'>product.line.finished.form</field>
+          <field name='model'>product.line</field>
+          <field name='inherit_id' ref="product_structure_gebesa.product_line_form"/>
+          <field name='arch' type='xml'>
+            <xpath expr="//group" position="after">
+              <notebook>
+                  <page string="Textures and Finishes">
+                  <field name='acabados_html' widget="html"/>
+                </page>
+                  <page string="Extra information">
+                  <label for='notas_html' string="Notes"/>
+                  <field name='notas_html' widget="html"/>
+                  <label for='composiciones_html' string="Composition"/>
+                  <field name='composiciones_html' widget="html"/>
+                  <label for='portada_html' string="Portada"/>
+                  <field name='portada_html' widget="html"/>
+                </page>
+              </notebook>
+            </xpath>
+          </field>
+        </record>
+    </data>
+</odoo>

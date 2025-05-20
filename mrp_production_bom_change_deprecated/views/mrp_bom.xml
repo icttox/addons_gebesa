@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_bom_view_form_inherit_plm'>
+            <field name='name'>mrp.bom.form.inherit.plm.production.active.view</field>
+            <field name='model'>mrp.bom</field>
+            <field name='inherit_id' ref='mrp_plm.mrp_bom_view_form_inherit_plm'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//button[@name='button_mrp_eco']" position="before">
+                    <button class="oe_stat_button" name="cancel_production_active" string="Cancel Production" type="object" icon="fa-times-circle" groups="system_administrator.group_system_administrator_gebesa"/>
+                    <button class="oe_stat_button" name="run_procurement_in_review" string="Run Production" type="object" icon="fa-repeat" groups="system_administrator.group_system_administrator_gebesa"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="view_l10_mx_pedimento_destinatarios_Action">
+            <field name="name">Pedimento destinatarios</field>
+            <field name="res_model">l10n.mx.immex.pedimento.destinatarios</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('clave_documento', 'in', ['IN', 'V1', 'AF', 'RT'])]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Pedimento Destinatarios
+                </p>
+            </field>
+        </record>
+
+
+         <menuitem id="pedimento_destinatarios_menu" name="Pedimento Destinatarios" parent="pedimento_menu" action="view_l10_mx_pedimento_destinatarios_Action"/>
+
+        <record model="ir.ui.view" id="view_l10_mx_Action_pedimento_destinatarios_form">
+            <field name="name">pedimento.destinatarios.form</field>
+            <field name="model">l10n.mx.immex.pedimento.destinatarios</field>
+            <field name="arch" type="xml">
+                <form string="destinatarios Form" create ="false" edit="false" delete ="false">
+                    <sheet>
+                        <group col="6" colspan="2">
+                            <field name='patente'/>
+                            <field name='num_pedimento'/>
+                            <field name='clave_aduana'/>
+                            <field name='pedimento_num'/>
+                            <field name='id_fiscal_destinatario'/>
+                            <field name='nombre_destinatario'/>
+                            <field name='calle_destinatario'/>
+                            <field name='num_interior_destinatario'/>
+                            <field name='num_exterior_destinatario'/>
+                            <field name='cp_destinatario'/>
+                            <field name='ciudad_destinatario'/>
+                            <field name='pais_destinatario'/>
+                            <field name='fecha_pago_real'/>
+                            <field name='clave_documento'/>
+                            <field name='pedimento_id'/>
+                            <field name='resumen_id'/>
+                        </group>
+                    </sheet>
+                </form> 
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_l10_mx_Action_pedimento_destinatarios_view_tree">
+            <field name="name">Pedimento.destinatarios.tree</field>
+            <field name="model">l10n.mx.immex.pedimento.destinatarios</field>
+            <field name="arch" type="xml">
+                <tree string="destinatarios Tree" create ="false" edit="false" delete ="false">
+                            <field name='patente'/>
+                            <field name='num_pedimento'/>
+                            <field name='clave_aduana'/>
+                            <field name='pedimento_num'/>
+                            <field name='id_fiscal_destinatario'/>
+                            <field name='nombre_destinatario'/>
+                            <field name='calle_destinatario'/>
+                            <field name='num_interior_destinatario'/>
+                            <field name='num_exterior_destinatario'/>
+                            <field name='cp_destinatario'/>
+                            <field name='ciudad_destinatario'/>
+                            <field name='pais_destinatario'/>
+                            <field name='fecha_pago_real'/>
+                            <field name='clave_documento'/>
+                            <field name='resumen_id'/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

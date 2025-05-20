@@ -1,0 +1,111 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* gebesa_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-18 16:59+0000\n"
+"PO-Revision-Date: 2021-11-18 11:01-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_shpment_backorder
+msgid "City"
+msgstr "Ciudad"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_shpment_backorder
+msgid "Code"
+msgstr "Código"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_shpment_backorder
+msgid "Date"
+msgstr "Fecha"
+
+#. module: gebesa_portal
+#: code:addons/gebesa_portal/controllers/portal.py:33
+#, python-format
+msgid "Departure Date"
+msgstr "Fecha de embarque"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_shpment_backorder
+msgid "Departure date"
+msgstr "Fecha de embarque"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_shpment_backorder
+msgid "Number"
+msgstr "Folio"
+
+#. module: gebesa_portal
+#: code:addons/gebesa_portal/controllers/portal.py:32
+#, python-format
+msgid "Order Date"
+msgstr "Fecha de pedido"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_shpment_backorder
+msgid "PO"
+msgstr "Orden Compra"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_shpment_backorder
+msgid "Pending qty"
+msgstr "Cant. Pendiente"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_shpment_backorder
+msgid "Product"
+msgstr "Producto"
+
+#. module: gebesa_portal
+#: code:addons/gebesa_portal/controllers/portal.py:34
+#, python-format
+msgid "Product Code"
+msgstr "Clave de prod"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_shpment_backorder
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_shpment_backorder
+msgid "Shipment"
+msgstr "Envío"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_home_menu_shipment_backorder
+msgid "Shipment Backorder"
+msgstr "Backorder de ventas"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_home_shipment_backorder
+msgid "Shipment backorder"
+msgstr "Backorder de ventas"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_shpment_backorder
+msgid "Shipments backorder"
+msgstr "Backorder de ventas"
+
+#. module: gebesa_portal
+#: model_terms:ir.ui.view,arch_db:gebesa_portal.portal_my_shpment_backorder
+msgid "Week"
+msgstr "Semana"
+
+#. module: gebesa_portal
+#: model:ir.model,name:gebesa_portal.model_sale_order
+msgid "sale.order"
+msgstr ""

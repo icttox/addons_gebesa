@@ -1,0 +1,66 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="wbl_tms_transportable_form_view">
+            <field name="name">tms.transportable.form</field>
+            <field name="model">tms.transportable</field>
+            <field name="arch" type="xml">
+                <form string="Form Transportable">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name='name'/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="uom_id" required="1"/>
+                                <field name="products_services_id" required="1"/>
+                                <field name="l10n_mx_edi_tariff_fraction_id"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Dangerous material" modifiers="{}">
+                                <field name="threatening" invisible="1"/>
+                                <field name="dangerous" attrs="{'invisible':[('threatening', '!=', 'quantum')]}"/>
+                                <field name="dangerous_material_id"  attrs="{'required':[ ('dangerous','=', True)], 'invisible': [('dangerous', '!=', True)]}"/>
+                                <field name="packing_type_id" attrs="{'required':[ ('dangerous','=',True)]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wbl_tms_transportable_tree_view">
+            <field name="name">tms.transportable.tree</field>
+            <field name="model">tms.transportable</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="tms.tms_transportable_tree_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='uom_id']" position="after">
+                        <field name="dangerous" invisible="1"/>
+                        <field name="packing_type_id"/>
+                        <field name="products_services_id"/>
+                        <field name="dangerous_material_id"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="wbl_tms_transportable_action">
+            <field name="name">Waybill Transportable</field>
+            <field name="res_model">tms.transportable</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the Transportable
+                </p>
+            </field>
+        </record>
+        <menuitem action="wbl_tms_transportable_action" id="menu_wbl_tms_transportable" name="Transportable" parent="tms.menu_tms_settings" sequence="300" />
+    </data>
+</odoo>
+    

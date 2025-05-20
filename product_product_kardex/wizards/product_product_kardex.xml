@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_product_kardex_wizard'>
+        	<field name='name'>product.product.kardex.wizard</field>
+        	<field name='model'>product.product.kardex.wizard</field>
+        	<field name='arch' type='xml'>
+        		<form>
+        			<group>
+                        <field name='product_id' readonly="True"/>
+        				<field name='location_id' required="True"/>
+        				<field name='fecha_inicial' required="True"/>
+                        <field name='fecha_final' required="True"/>
+        			</group>
+        		</form>
+        	</field>
+        </record>
+    </data>
+</odoo>

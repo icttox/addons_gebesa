@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='sale_order_backorder_tree'>
+        	<field name='name'>sale.order.backorder</field>
+        	<field name='model'>sale.order.backorder</field>
+        	<field name='arch' type='xml'>
+        		<tree string='Partidas'>
+                    <field name="segment_status"/>
+                    <field name="shipment_status"/>
+                    <field name="week" interval="week"/>
+                    <field name="order_id"/>
+                    <field name="datee"/>
+                    <field name="partner_id"/>
+                    <field name="date_reception"/>
+                    <field name="warehouse_id"/>
+                    <field name="family_id"/>
+                    <field name="product_id"/>
+                    <field name="subtotalpesos" widget="monetary"/>
+                    <field name="fletepesos" widget="monetary"/>
+                    <field name="importepesos" widget="monetary"/>
+                    <field name="netpesos" widget="monetary"/>
+                    <field name="margen"/>
+                    <field name="costo_surtir" widget="monetary"/>
+                    <field name="cantidad_surtir"/>
+                    <field name="surtirpesos" widget="monetary"/>
+                    <field name="pricetotal" widget="monetary"/>
+                    <field name="moneda"/>
+                    <field name="company_id" invisible="1"/>
+        		</tree>
+        	</field>
+        </record>
+
+        <record model="ir.ui.view" id="sale_order_backorder_form">
+            <field name="name">sale.order.backorder.form</field>
+            <field name="model">sale.order.backorder</field>
+            <field name="arch" type="xml">
+                <form string="Datos de la Partida">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="segment_status"/>
+                            <field name="shipment_status"/>
+                            <field name="week" interval="week"/>
+                            <field name="order_id"/>
+                            <field name="datee"/>
+                            <field name="partner_id"/>
+                            <field name="date_reception"/>
+                            <field name="warehouse_id"/>
+                            <field name="family_id"/>
+                            <field name="product_id"/>
+                            <field name="subtotalpesos" widget="monetary"/>
+                            <field name="fletepesos" widget="monetary"/>
+                            <field name="importepesos" widget="monetary"/>
+                            <field name="netpesos" widget="monetary"/>
+                            <field name="margen"/>
+                            <field name="costo_surtir" widget="monetary"/>
+                            <field name="cantidad_surtir"/>
+                            <field name="surtirpesos" widget="monetary"/>
+                            <field name="pricetotal" widget="monetary"/>
+                            <field name="moneda"/>
+                            <field name="company_id" invisible="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="backorder_family_search_view">
+            <field name="name">backorder.family.search</field>
+            <field name="model">sale.order.backorder</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="order_id"  string="Pedido"/>
+                    <field name="partner_id" string="Cliente"/>
+                    <field name="product_id" string="Producto"/>
+                    <field name="warehouse_id" string="Warehouse"/>
+                    <field name="family_id" string="Familia"/>
+                </search>
+            </field>
+        </record>
+
+        <record id='action_sale_order_backorder' model='ir.actions.act_window'>
+            <field name='name'>Backorder Por Familia</field>
+            <field name='res_model'>sale.order.backorder</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+            <field name="search_view_id" ref="backorder_family_search_view"/>
+            <field name="view_id" ref="sale_order_backorder_tree"/>
+        </record>
+        <menuitem id="sale_order_backorder_menu" parent="sale.menu_sale_report" name="Backorder Por Familia" action="action_sale_order_backorder"/>
+    </data>
+</odoo>

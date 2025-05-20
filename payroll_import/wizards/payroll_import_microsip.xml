@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='wizard_payroll_import_microsip'>
+        	<field name='name'>payroll.import.microsip.wizards</field>
+        	<field name='model'>payroll.import.microsip</field>
+        	<field name='arch' type='xml'>
+        		<form>
+                    <group>
+                        <group>
+                            <field name="date_start"/>
+                            <field name="journal_id"/>
+                        </group>
+                        <group>
+                            <field name="date_end"/>
+                        </group>
+                    </group>
+        			<footer>
+                        <button name="import_payroll_microsip" string="Import" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+
+        <record id="action_payroll_import_microsip" model="ir.actions.act_window">
+            <field name="name">Import Payroll Microsip</field>
+            <field name="res_model">payroll.import.microsip</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="payroll_import_microsip_menu" name="Import Payroll Microsip" parent="account.menu_finance_payables" action="action_payroll_import_microsip" groups="payroll_import.group_payroll_import_microsip_user"/>
+    </data>
+</odoo>

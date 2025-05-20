@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--record model='ir.ui.view' id='product_normal_form_view'>
+        	<field name='name'>product.normal.send.netsuite.form.view</field>
+        	<field name='model'>product.product</field>
+            <field name='inherit_id' ref='product.product_normal_form_view'/>
+        	<field name='arch' type='xml'>
+                <header>
+                    <button name="send_netsuite" string="send NetSuite" type="object" groups="gebesa_integracion_netsuite.group_send_product_netsuite"/>
+                </header>
+
+        	</field>
+        </record-->
+    </data>
+</odoo>

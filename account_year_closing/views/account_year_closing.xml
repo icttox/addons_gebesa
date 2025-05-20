@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Nodo requerido-->
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_account_journal_form'>
+            <field name='name'>account_journal_fiscal_closing_form</field>
+            <field name='model'>account.journal</field>
+            <field name='inherit_id' ref='account.view_account_journal_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook/page[3]/group/group[3]/field[@name='post_at_bank_rec']" position="after">
+                    <field name='closing_year_journal'/>
+                </xpath>            
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='view_company_form'>
+            <field name='name'>view.company.form</field>
+            <field name='model'>res.company</field>
+            <field name='inherit_id' ref="base.view_company_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//div[@class='oe_title']" position="after">
+                    <group>
+                        <field name="main_analytic_id" groups="base.group_multi_company"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='account_year_closing_tree'>
+        	<field name='name'>account.year.closing.tree</field>
+        	<field name='model'>account.year.closing</field>
+        	<field name='arch' type='xml'>
+        		<tree string='Account Year Closing'>
+                    <field name='description'/>   
+                    <field name='date'/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="account_result_id"/>
+                    <field name="state"/>                             
+        		</tree>
+        	</field>
+            <!--Cierre de Registro-->
+        </record>
+
+        <record id="account_year_closing_form" model="ir.ui.view">
+            <field name="name">account.year.closing.form</field>
+            <field name="model">account.year.closing</field>
+            <field name="arch" type="xml">
+                <form string="Account Year Closing">
+                    <header>
+                        <button name="generate_policy" class="oe_highlight" string="Generate policy" type="object" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                        <button name="cancel_year_closing" string="Cancel" type="object" attrs="{'invisible': [('state', '=', 'cancel')]}"/>
+                        <button name="draft_year_closing" string="Set draft" type="object" attrs="{'invisible': [('state', '!=', 'cancel')]}"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="description" class="oe_edit_only"/>
+                            <h1>
+                                <field name='description' attrs="{'readonly':[('state','=', 'done')]}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="company_id" readonly="True"/>
+                                <field name="year" attrs="{'readonly':[('state','=', 'done')]}"/>
+                                <field name="date" attrs="{'readonly':[('state','=', 'done')]}"/>
+                                <field name="account_result_id" required="True" attrs="{'readonly':[('state','=', 'done')]}"/>
+                            </group>
+                            <group>
+                                <field name="journal_id" required="True" readonly="True"/>
+                                <field name="analytic_account_id" required="True" readonly="True"/>
+                                <field name="move_id" readonly="True"/>
+                                <field name="date_start" invisible="True"/>
+                                <field name="date_end" invisible="True"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page>
+                                <field name='account_acc_ids' widget="one2many_list" attrs="{'readonly':[('state','in', ('draft','done','cancel'))]}">
+                                    <tree string="Accounts" editable="bottom">
+                                        <field name="account_type"/>
+                                        <field name='account_account_closing_id' widget="many2many_tags" options="{'no_create_edit': True}"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id='action_account_year_closing' model='ir.actions.act_window'>
+            <field name='name'>Configuración Cierre Anual</field>
+            <field name='res_model'>account.year.closing</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+        <menuitem id="account_year_closing_menu" parent="account.menu_analytic_accounting" name="Configuración Cierre Anual" action="action_account_year_closing"/>
+    </data>
+</odoo>

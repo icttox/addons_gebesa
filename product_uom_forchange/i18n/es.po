@@ -1,0 +1,99 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_uom_forchange
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-07 20:50+0000\n"
+"PO-Revision-Date: 2017-04-07 20:50+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_uom_forchange
+#: model:ir.ui.view,arch_db:product_uom_forchange.product_uom_forchange_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: product_uom_forchange
+#: code:addons/product_uom_forchange/wizard/product_uom_forchange.py:13
+#: model:ir.model.fields,field_description:product_uom_forchange.field_product_uom_forchange_wizard_uom_id_15281
+#, python-format
+msgid "Change Unit"
+msgstr "Cambiar Unidad"
+
+#. module: product_uom_forchange
+#: model:ir.model.fields,field_description:product_uom_forchange.field_product_uom_forchange_wizard_create_uid_15277
+msgid "Created by"
+msgstr "Creado por:"
+
+#. module: product_uom_forchange
+#: model:ir.model.fields,field_description:product_uom_forchange.field_product_uom_forchange_wizard_create_date_15278
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: product_uom_forchange
+#: model:ir.model.fields,field_description:product_uom_forchange.field_product_uom_forchange_wizard_display_name_15283
+msgid "Display Name"
+msgstr "Desplegar Nombre"
+
+#. module: product_uom_forchange
+#: model:ir.ui.view,arch_db:product_uom_forchange.product_uom_forchange_wizard
+msgid "Force"
+msgstr "Forzar"
+
+#. module: product_uom_forchange
+#: model:ir.ui.view,arch_db:product_uom_forchange.product_template_uom_form_view
+msgid "Force Change Uom"
+msgstr "Forzar Cambio de Unidad"
+
+#. module: product_uom_forchange
+#: model:ir.model.fields,field_description:product_uom_forchange.field_product_uom_forchange_wizard_id_15284
+msgid "ID"
+msgstr ""
+
+#. module: product_uom_forchange
+#: model:ir.model.fields,field_description:product_uom_forchange.field_product_uom_forchange_wizard___last_update_15279
+msgid "Last Modified on"
+msgstr "Ultima modificación el"
+
+#. module: product_uom_forchange
+#: model:ir.model.fields,field_description:product_uom_forchange.field_product_uom_forchange_wizard_write_uid_15280
+msgid "Last Updated by"
+msgstr "Ultima Actualización por"
+
+#. module: product_uom_forchange
+#: model:ir.model.fields,field_description:product_uom_forchange.field_product_uom_forchange_wizard_write_date_15282
+msgid "Last Updated on"
+msgstr "Ultima Actualización el"
+
+#. module: product_uom_forchange
+#: model:ir.model,name:product_uom_forchange.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: product_uom_forchange
+#: code:addons/product_uom_forchange/models/product_template.py:14
+#, python-format
+msgid "Product Uom Forchange"
+msgstr "Cambiar Unidad del Producto"
+
+#. module: product_uom_forchange
+#: model:ir.ui.view,arch_db:product_uom_forchange.product_uom_forchange_wizard
+msgid "or"
+msgstr "o"
+
+#. module: product_uom_forchange
+#: model:ir.model,name:product_uom_forchange.model_product_uom_forchange_wizard
+msgid "product_uom_forchange_wizard"
+msgstr ""
+
+#. module: product_uom_forchange
+#: model:res.groups,name:product_uom_forchange.group_inactivate_change_uom
+msgid "Product Change Uom Button"
+msgstr "Botón Cambiar Unidad del Producto"

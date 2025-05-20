@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="product_packing_line_tree" model="ir.ui.view">
+            <field name="name">product.packing.line.tree</field>
+            <field name="model">product.packing.list.line</field> 
+            <field name="arch" type="xml">
+                <tree string="Product Packing List Line">
+                    <field name="packing_id"/>
+                    <field name="quantity"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="product_packing_line_form" model="ir.ui.view">
+            <field name="name">product.packing.line.form</field>
+            <field name="model">product.packing.list.line</field>
+            <field name="arch" type="xml">
+                <form string="Product Packing List Line" version="9.0">
+                    <sheet>
+                        <group col="4" colspan="4">
+                            <field name="packing_id" required="1"/>
+                            <field name="quantity" required="1"/>
+                            <field name="description" required="1"/>
+                            <field name="unit_type_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_product_packing_line_gebesa_form" model="ir.actions.act_window">
+            <field name="name">Product Packing List Line</field>
+            <field name="res_model">product.packing.list.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="action_product_packing_line_gebesa_form" id="menu_product_packing_line_gebesa_form" name="Product Packing List Line" parent="menu_mrp_packing" sequence="10"/>
+    </data>
+</odoo>

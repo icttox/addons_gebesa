@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="tag_assembly_instructions"
+            model="mrp.production"
+            string="Etiqueta instrucciones de armado"
+            report_type="qweb-pdf"
+            name="report_tags.report_tag_assembly_instructions"
+            file="report_tags.report_tag_assembly_instructions"
+        />
+
+        <record id="report_tags.tag_assembly_instructions" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag_vertical" />
+        </record>
+
+        <template id="report_tag_assembly_instructions_document">
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})"/>
+            <div class="page" style="font-size: 25px">
+                <t t-foreach="range(int(doc.product_qty))" t-as="qty">
+                    <br/>
+                    <div class="row no-gutters">
+                        <div class="col-12 text-center">
+                            <strong>Scan me for</strong>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12 text-center">
+                            <t t-set="dropbox_url" t-value="doc.product_id.product_tmpl_id.product_document_ids.filtered(lambda doc_link: doc_link.product_type == 'manual')[0].link"/>
+                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR_quiet', dropbox_url, 600, 600)" style="width:250px;height:250px"/>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12 text-center">
+                            <strong>assembly instructions</strong>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <div class="row no-gutters" style="page-break-after:always;">
+                        <div class="col-12 text-center" style="font-size: 16px">
+                            <strong>
+                                [<span t-esc="doc.product_id.default_code"/>]
+                                <br/>
+                                <span t-esc="doc.product_id.name"/>
+                            </strong>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_tag_assembly_instructions">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-call="report_tags.report_tag_assembly_instructions_document" t-lang="doc.sale_id.partner_id.lang"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

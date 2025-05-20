@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<report
+            id="cut_order_production_consolidado"
+            model="mrp.production"
+            string="Cut order consolidated"
+            report_type="qweb-pdf"
+            name="mrp_segment.report_cut_order_production_consolidado"
+            file="mrp_segment.report_cut_order_production_consolidado"
+        />
+        <record id="mrp_segment.cut_order_production_consolidado" model="ir.actions.report">
+            <field name="paperformat_id" ref="event.paperformat_euro_lowmargin" />
+        </record>
+        <template id="report_cut_order_production_consolidado">
+            <t t-set="data_report_landscape" t-value="True"/>
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="mrp_segment.report_cut_order_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

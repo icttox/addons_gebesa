@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+        <record id="view_incident_search_form" model="ir.ui.view">
+            <field name="name">supplier.incident.search.form</field>
+            <field name="model">supplier.incident</field>
+            <field name="arch" type="xml">
+               <search string="Supplier Incident">
+                    <field name="consecutive" string="Folio"/>
+                    <field name="description"/>
+                    <field name="partner_id"/>
+                    <field name="date"/>
+                    <field name="user_id"/>
+                    <filter string="My Incidents" name="myIncidents" domain="[('user_id','=',uid)]"/>
+                    <filter string="Unassigned" name="unassigned" domain="[('user_id', '=', False)]"/>
+                    <separator/>
+                    <filter string="Unread Messages" name="message_needaction" domain="[('message_needaction','=',True)]"/>
+                    <filter string="Closed" name="Close" domain="[('state','=','close')]"/>
+                    <filter string="New" name="New" domain="[('state', '=','open')]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Assigned to" name="User" context="{'group_by':'user_id'}"/>
+                        <filter string="Status" name="Status" context="{'group_by':'state'}"/>
+                        <filter string="Partner" name="partner" context="{'group_by':'partner_id'}"/>
+                        <separator/>
+                        <filter string="Last Message" name="group_message_last_post" context="{'group_by':'message_last_post:week'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+		<record id='action_supplier_incident' model='ir.actions.act_window'>
+            <field name='name'>Suppliers Incidents</field>
+            <field name='res_model'>supplier.incident</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form,calendar,pivot</field>
+            <field name="search_view_id" ref="view_incident_search_form"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to register an Incident with the Supplier.
+                </p><p>
+                    Any Problem or Incident that is presented with your Supplier you can record what happened to use as a reference in some future.
+                </p>
+            </field>            
+        </record>
+
+        <menuitem id="supplier_incident_menu" name="Suppliers Incidents" parent="purchase.menu_procurement_management" action="action_supplier_incident"/>
+
+        <record model="ir.ui.view" id="supplier_incident_tree">
+            <field name="name">supplier.incident.tree</field>
+            <field name="model">supplier.incident</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Suppliers Incidents">
+                    <field name="date" select="1"/>
+                    <field name="consecutive" select="1"/>
+                    <field name="description" select="1"/>
+                    <field name="user_id" select="1"/>
+                    <field name="partner_id" select="1"/>                     
+                    <field name="state" select="1"/>                  
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="supplier_incident_form">
+            <field name="name">supplier.incident.form</field>
+            <field name="model">supplier.incident</field>
+            <field name="arch" type="xml">
+                <form string='Incidents'>
+                    <header>
+                        <field name="state" widget="statusbar" clickable="True"/>
+                    </header>
+                    <sheet string="Supplier Incident">
+                        <div class="oe_button_box" name="button_box" groups="base.group_user">
+                            <button name="action_closed" type="object"
+                                confirm="You want to automatically close an incident. Do you want to proceed?"
+                                class="oe_stat_button" icon="fa-archive"
+                                string="Close" states="open">
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h2>
+                                <field name='consecutive' readonly="1"/>
+                            </h2>
+                        </div>
+                        <group>
+                            <group>
+                                <field name='partner_id' required='1' 
+                                    attrs="{'readonly':[('state','!=','open')]}" 
+                                    domain="[('customer', '=', False), ('active', '=', True)]"/>
+                                <field name='user_id' required='1' readonly='1'/>                     
+                            </group>
+                            <group>
+                                <field name='date' required='1' attrs="{'readonly':[('state','!=','open')]}"/>
+                                <field name='company_id' required='1' readonly='1'/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <field name='description' required='1' attrs="{'readonly':[('state','!=','open')]}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div> 
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

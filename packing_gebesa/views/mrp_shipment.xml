@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="mrp_shipment_packing_gebesa" model="ir.ui.view">
+            <field name="name">mrp.shipment.packing.gebesa</field>
+            <field name="model">mrp.shipment</field>
+            <field name="inherit_id" ref="mrp_shipment.mrp_shipment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page[2]/field/tree/field[@name='quantity_shipped']" position="after">
+                    <field name="packing_id" domain="[('product_tmpl_id', '=', product_tmpl_id)]"/>
+                    <field name="product_tmpl_id" invisible="True"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

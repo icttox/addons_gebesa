@@ -1,0 +1,163 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_payment_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20181126\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-18 15:27+0000\n"
+"PO-Revision-Date: 2021-05-18 10:29-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.account_payment_pivot
+msgid "Account Payments"
+msgstr "Pagos de cuenta"
+
+#. module: account_payment_report
+#: model:ir.model.fields,field_description:account_payment_report.field_account_payment__amount_currency
+msgid "Amount in currency"
+msgstr "Monto en moneda"
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Asiento<br/>Contable"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Cliente:"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Cuenta Analitica:"
+msgstr ""
+
+#. module: account_payment_report
+#: model:ir.ui.menu,name:account_payment_report.pivot_menu
+msgid "Customer Payments for Week "
+msgstr "Pagos al cliente por semana "
+
+#. module: account_payment_report
+#: model:ir.actions.act_window,name:account_payment_report.action_pivot
+msgid "Customer pay for week"
+msgstr "Pago del cliente por la semana"
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Descripcion"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Facturas"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Fecha"
+msgstr "Fecha"
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Fecha de pago:"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Fecha<br/>Vencimiento"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Memo:"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Metodo de pago:"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Monto"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Monto Pagado:"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Monto Pendiente:"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Monto<br/>Original"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Origen"
+msgstr ""
+
+#. module: account_payment_report
+#: model:ir.actions.report,name:account_payment_report.account_payment_report
+msgid "Payment"
+msgstr "Pago"
+
+#. module: account_payment_report
+#: model:ir.model,name:account_payment_report.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Proveedor:"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Referencia"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Responsable:"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Saldo<br/>Pendiente"
+msgstr ""
+
+#. module: account_payment_report
+#: model:ir.ui.menu,name:account_payment_report.pivot_menu_purchase
+msgid "Supplier Payments for Week "
+msgstr "Pagos a proveedores por semana "
+
+#. module: account_payment_report
+#: model:ir.actions.act_window,name:account_payment_report.action_pivot_purchase
+msgid "Supplier pay for week"
+msgstr "Pago de proveedores por semana"
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Tipo de pago:"
+msgstr ""
+
+#. module: account_payment_report
+#: model_terms:ir.ui.view,arch_db:account_payment_report.report_account_payment
+msgid "Tipo:"
+msgstr ""

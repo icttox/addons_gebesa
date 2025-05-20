@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='mrp_production_procura_form'>
+            <field name='name'>mrp.production.procure.form</field>
+            <field name='model'>mrp.production.procure</field>
+            <field name='arch' type='xml'>
+                <form string='Production Procurement'>
+                    <group>
+                        <field name='include_rm'/>
+                        <field name='include_wip'/>
+                    </group>
+                    <p class="oe_grey">
+                        *It works only with production orders in state "Awaiting Raw Materials".
+                    </p>
+                    <footer>
+                        <button string="Procure to produce MO" name="mrp_production_procure" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_production_procure"
+            multi="True"
+            key2="client_action_multi" name="Production Procure"
+            res_model="mrp.production.procure" src_model="mrp.production"
+            view_mode="form" target="new" view_type="form" />
+    </data>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="purchase_order_form">
+        	<field name="name">mrp.production.state.his.form</field>
+        	<field name="model">mrp.production</field>
+        	<field name='inherit_id' ref="mrp.mrp_production_form_view"/>
+            <!--Heredamos de la vista de mrp production-->
+        	<field name="arch" type="xml">
+                <notebook position="inside">
+        			<page string="Status History">
+        				<field name="state_hist_ids" readonly="1"/> 
+        			</page>
+                </notebook>
+        	</field>
+        </record>
+     </data>
+</odoo>

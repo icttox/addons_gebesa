@@ -1,0 +1,36 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sales_team_parent
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-30 21:38+0000\n"
+"PO-Revision-Date: 2016-09-30 21:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sales_team_parent
+#: code:addons/sales_team_parent/models/crm_team.py:13
+#: model:ir.model.fields,field_description:sales_team_parent.field_crm_team_parent_id
+#, python-format
+msgid "Parent Team"
+msgstr "Equipo Padre"
+
+#. module: sales_team_parent
+#: model:ir.model,name:sales_team_parent.model_crm_team
+msgid "Sales Team"
+msgstr "Equipo de Ventas"
+
+#. module: sales_team_parent
+#: code:addons/sales_team_parent/models/crm_team.py:14
+#: model:ir.model.fields,help:sales_team_parent.field_crm_team_parent_id
+#, python-format
+msgid "Sales Team Parent"
+msgstr "Equipo de Ventas Padre"
+

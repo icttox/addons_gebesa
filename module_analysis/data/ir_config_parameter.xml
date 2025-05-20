@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+    <record id="parameter_exclude_directories" model="ir.config_parameter">
+        <field name="key">module_analysis.exclude_directories</field>
+        <field name="value">lib,demo,test,tests,doc,description</field>
+    </record>
+
+    <record id="parameter_exclude_files" model="ir.config_parameter">
+        <field name="key">module_analysis.exclude_files</field>
+        <field name="value">__openerp__.py,__manifest__.py</field>
+    </record>
+
+</odoo>

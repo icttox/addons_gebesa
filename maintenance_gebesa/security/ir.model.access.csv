@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_it_software_equipment_rel_user,it.software.equipment.rel.user,model_it_software_equipment_rel,,1,0,0,0
+access_it_software_equipment_rel_manager,it.software.equipment.rel.manager,model_it_software_equipment_rel,,1,1,1,1

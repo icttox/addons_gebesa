@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_packing_list_user,product.packing.list.user,model_product_packing_list,group_packing_gebesa_user,1,0,0,0
+access_product_packing_list_manager,product.packing.list.manager,model_product_packing_list,group_packing_gebesa_manager,1,1,1,1
+access_product_packing_list_line_user,product.packing.list.line.user,model_product_packing_list_line,group_packing_gebesa_user,1,0,0,0
+access_product_packing_list_line_manager,product.packing.list.line.manager,model_product_packing_list_line,group_packing_gebesa_manager,1,1,1,1
+access_logistic_unit_type_user,logistic.unit.type.user,model_logistic_unit_type,group_packing_gebesa_user,1,0,0,0
+access_logistic_unit_type_manager,logistic.unit.type.manager,model_logistic_unit_type,group_packing_gebesa_manager,1,1,1,1

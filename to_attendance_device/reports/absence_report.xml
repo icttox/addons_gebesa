@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="absence_report"
+            model="attendance.reports.wizard"
+            string="Reporte de ausencias"
+            report_type="qweb-pdf"
+            name="to_attendance_device.report_absence_report"
+            file="to_attendance_device.report_absence_report"
+        />
+
+        <template id="report_absence_report_document">
+            <t t-set="title_report" t-value="'Reporte de ausencias'"/>
+            <t t-call="to_attendance_device.to_attendance_device_layout">
+                <div class="page">
+                    <t t-set="absence_total" t-value="0"/>
+                    <t t-foreach="departments" t-as="dep">
+                        <div t-if="dep.id in absence" class="border-bottom" style="font-size: 14pt; page-break-inside: avoid;">
+                            <t t-set="dep_id" t-value="dep.id"/>
+                            <div class="row" style="font-size: 14pt;">
+                                <div class="col-6">
+                                    <strong>Departamento: <span t-field="dep.name"/></strong>
+                                </div>
+                                <div class="col-3">
+                                    <strong>Empleados: <span t-esc="len(absence[dep_id])"/></strong>
+                                </div>
+                                <div class="col-3">
+                                    <t t-set="absence_dep" t-value="0"/>
+                                    <t t-foreach="absence[dep_id]" t-as="emp">
+                                        <t t-set="absence_dep" t-value="absence_dep + len(absence[dep_id][emp]) - 1"/>
+                                    </t>
+                                    <strong>Ausencias: <span t-esc="absence_dep"/></strong>
+                                </div>
+                                <t t-set="absence_total" t-value="absence_total + absence_dep"/>
+                            </div>
+                            <t t-foreach="sorted(absence[dep_id])" t-as="emp">
+                                <div>
+                                    <div class="row" style="font-size: 12pt;">
+                                        <div class="col-2">
+                                            <span t-field="absence[dep_id][emp]['emp'].consecutive_id"/>
+                                        </div>
+                                        <div class="col-7">
+                                            <span t-field="absence[dep_id][emp]['emp'].name"/>
+                                        </div>
+                                        <div class="col-3">
+                                            <span>Ausencias: <t t-esc="len(absence[dep_id][emp]) - 1"/></span>
+                                        </div>
+                                    </div>
+                                    <!-- <t t-foreach="absence[dep_id][emp]" t-as="dat"> -->
+                                    <t t-foreach="dates" t-as="dat">
+                                        <div class="row" t-if="dat in absence[dep_id][emp]" style="font-size: 10pt;">
+                                            <div class="col-2"/>
+                                            <div class="col-10">
+                                                 <div class="row">
+                                                    <div class="col-1"/>
+                                                    <div class="col-1">
+                                                        <span t-esc="dat.strftime('%a')"/>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <span t-esc="dat.strftime('%d/%m/%Y')"/>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <span t-esc="absence[dep_id][emp][dat]"/>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <span t-if="absence[dep_id][emp]['emp'].unamapped_attendance_device_ids" t-field="absence[dep_id][emp]['emp'].unamapped_attendance_device_ids[0].name"/>
+                                                    </div>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </div>
+                                <br />
+                            </t>
+                        </div>
+                    </t>
+                    <div class="row" style="font-size: 14pt;">
+                        <div class="col-10">
+                            <strong><span>Total de usencias</span></strong>
+                        </div>
+                        <div class="col-2">
+                            <strong><span t-esc="absence_total"/></strong>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_absence_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="to_attendance_device.report_absence_report_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

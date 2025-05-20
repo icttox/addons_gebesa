@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_frontend" inherit_id="website.assets_frontend">
+            <xpath expr="script[last()]" position="after">
+                <script type="text/javascript" src="/website_quality/static/src/js/website_alert_quality.js"></script>
+            </xpath>
+        </template>
+
+        <template id="Quality">
+            <t t-call="web.basic_layout">
+                <div class="container">
+                    <t t-call-assets="web.assets_frontend" t-js="false"/>
+                    <t t-call-assets="web.assets_frontend" t-css="false"/>
+                    <title>Quality</title>
+                    <form t-attf-action="/alert_quality-submit" method="post" data-success_page="/alert_quality-thanks" enctype="multipart/form-data" style="font-size: 25pt">
+                        <div class="form-group form-field o_website_form_required_custom col-md-offset-2 col-sm-offset-3">
+                            <br/>
+                            <p style="font-size: 30pt">
+                                <b>Quality Alert </b>
+                            </p>
+                        </div>
+
+                        <div class="form-group form-field o_website_form_required_custom">
+                            <label class="col-md-5 col-sm-6" for="subject">Title</label>
+                            <div class="col-lg-9 col-md-10">
+                                <input type="text" class="form-control form-control-lg o_website_form_input" name="subject"/>
+                            </div>
+
+                            <label class="col-md-5 col-sm-6" for="from">Date</label>
+                            <div class="col-lg-9 col-md-10">
+                                <input type="date" class="form-control form-control-lg o_website_form_input" name="date" t-att-value="default_date"/>
+                            </div>
+
+                            <label class="col-md-5 col-sm-6" for="from">Sale Order</label>
+                             <div class="col-lg-9 col-md-10">
+                                <input type="text" class="form-control form-control-lg o_website_form_input" name="order" id="order_id"/>
+                                <!-- select class="form-control form-control-lg" id="order_id" name="orders">
+                                    <option value="">Select Sale Order</option>
+                                    <t t-foreach="so_selection" t-as="order">
+                                        <option t-att-value="order['id']">
+                                            <t t-esc="order['name']"/>
+                                        </option>
+                                    </t>
+                                </select -->
+                            </div>
+
+                            <label class="col-md-5 col-sm-6 control-label" for="to">Product</label>
+                            <div class="col-lg-9 col-md-10">
+                                <!--input type="text" class="form-control form-control-lg  o_website_form_input" name="product" required=""/-->
+                                <select class="form-control form-control-lg o_website_form_input" id="product_id" name="product" required="">
+                                    <option value="">Select Product</option>
+                                    <t t-foreach="product_selection" t-as="product">
+                                        <option t-att-value="product['id']">
+                                            <t t-esc="product['name']"/>
+                                        </option>
+                                    </t>
+                                </select>
+                            </div>
+
+                            <label class="col-md-5 col-sm-6" for="oven">Horno</label>
+                            <div class="col-lg-9 col-md-10">
+                                <input type="text" class="form-control form-control-lg o_website_form_input" name="oven"/>
+                            </div>
+
+                            <label class="col-md-5 col-sm-6" for="color">Color</label>
+                            <div class="col-lg-9 col-md-10">
+                                <input type="text" class="form-control form-control-lg o_website_form_input" name="color"/>
+                            </div>
+
+                            <label class="col-md-5 col-sm-6 control-label" for="to">Workcenter</label>
+                            <div class="col-lg-9 col-md-10">
+                                <select class="form-control form-control-lg o_website_form_input" id="workcenter_id" name="workcenter" required="">
+                                    <option value="">Select Workcenter</option>
+                                    <t t-foreach="workcenter_selection" t-as="workcenter">
+                                        <option t-att-value="workcenter['id']">
+                                            <t t-esc="workcenter['name']"/>
+                                        </option>
+                                    </t>
+                                </select>
+                            </div>
+
+                            <label class="col-md-5 col-sm-6 control-label" for="rev_qty">Revised Quantity</label>
+                            <div class="col-lg-7 col-md-8">
+                                <input type="number" class="form-control form-control-lg o_website_form_input" name="rev_qty" required="" onwheel="return false" style="-moz-appearance: textfield;"/>
+                            </div>
+
+                            <label class="col-md-5 col-sm-6 control-label" for="rej_qty">Rejected Quantity</label>
+                            <div class="col-lg-7 col-md-8">
+                                <input type="number" class="form-control form-control-lg o_website_form_input" name="rej_qty" required="" onwheel="return false" style="-moz-appearance: textfield;"/>
+                            </div>
+
+                            <label class="col-md-5 col-sm-6 control-label" for="to">Flaw</label>
+                            <div class="col-lg-9 col-md-10">
+                                <select class="form-control form-control-lg o_website_form_input" id="flaw_id" name="flaw" required="">
+                                    <option value="">Select flaw</option>
+                                    <t t-foreach="flaw_selection" t-as="flaw">
+                                        <option t-att-value="flaw['id']">
+                                            <t t-esc="flaw['name']"/>
+                                        </option>
+                                    </t>
+                                </select>
+                            </div>
+
+                            <label class="col-md-5 col-sm-6 control-label" for="provision">Provision</label>
+                            <div class="col-lg-9 col-md-10">
+                                <select class="form-control form-control-lg o_website_form_input" id="provision_id" name="provision" required="">
+                                    <option value="">Select Provision</option>
+                                    <option value="repair">Repair</option>
+                                    <option value="scrap">Scrap</option>
+                                    <option value="released">Liberado</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-field o_website_form_required_custom">
+                                <label class="col-md-3 col-sm-4 control-label" for="descripcion">Descripción</label>
+                                <div class="col-md-9 col-sm-10">
+                                    <textarea class="form-control form-control-lg" rows="4" name="descripcion"/>
+                                </div>
+                            </div>
+
+                            <label class="col-md-5 col-sm-6" for="provision">Picture</label>
+                            <div class="col-lg-9 col-md-10">
+                                <input type="file" name="warning_evidence" class="form-control form-control-lg o_website_form_input"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="row"  style="height: 5rem;">
+                            <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5">
+                                <button type="submit" class="btn btn-primary btn-lg w-100 h-100 o_website_form_send">Submit</button>
+                                <span id="o_website_form_result">
+                                </span>
+                            </div>
+                            <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5">
+                                <a href="/production_floor">
+                                    <button type="button" class="btn btn-danger btn-lg w-100 h-100 o_website_form_send">Cancel</button>
+                                </a>
+                            </div>
+                          </div>
+                        </div>
+                        <br/>
+                    </form>
+                </div>
+            </t>
+        </template>
+
+        <record id="quality_thanks" model="website.page">
+            <field name="name">Thanks</field>
+            <field name="type">qweb</field>
+            <field name="url">/alert_quality-thanks</field>
+            <field name="website_published">True</field>
+            <field name="arch" type="xml">
+                <t name="Thanks" t-name="alert_quality.thanks">
+                    <t t-call="web.basic_layout">
+                        <div id="wrap">
+                            <t t-call-assets="web.assets_frontend" t-js="false"/>
+                            <div class="oe_structure"/>
+                            <div class="container">
+                                <br/><br/><br/>
+                                <h1>Thank You</h1>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="alert alert-success" role="status" style="font-size: 25pt">
+                                            Your quality alert has been submitted successfully.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt5">
+                                    <div class="col-lg-8" style="height: 3rem;">
+                                        <a href="/alert_quality">
+                                            <button type="button" class="btn btn-success btn-lg w-100 h-100 o_website_form_send">Return</button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <br/>
+                                <!--div class="row mt5">
+                                    <div class="col-lg-8" style="height: 3rem;">
+                                        <a href="/alert_quality">
+                                            <button type="button" class="btn btn-secondary btn-lg w-100 h-100 o_website_form_send">New alert</button>
+                                        </a>
+                                    </div>
+                                </div-->
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <template id="quality_error">
+            <t t-call="web.basic_layout">
+                <div class="container">
+                    <t t-call-assets="web.assets_frontend" t-js="false"/>
+                    <t t-call-assets="web.assets_frontend" t-css="false"/>
+                    <title>Quality Error</title>
+                    <form style="font-size: 25pt">
+                        <br/><br/>
+                        <div class="alert alert-danger" role="status">
+                            <strong t-esc="msg_error"/>
+                        </div>
+                        <br/><br/>
+                        <div class="form-group">
+                            <div class="row"  style="height: 5rem;">
+                                <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5">
+                                    <a href="/alert_quality">
+                                        <button type="button" class="btn btn-info btn-lg w-100 h-100 o_website_form_send">Return</button>
+                                    </a>
+                                </div>
+                                <div class="col-md-offset-1 col-sm-offset-1 col-sm-5 col-md-5">
+                                    <a href="/production_floor">
+                                        <button type="button" class="btn btn-danger btn-lg w-100 h-100 o_website_form_send">Cancel</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </t>
+        </template>
+
+        <record id="quality_nouser" model="website.page">
+            <field name="name">No User</field>
+            <field name="type">qweb</field>
+            <field name="url">/alert_quality-nouser</field>
+            <field name="website_published">True</field>
+            <field name="arch" type="xml">
+                <t name="No User Found" t-name="alert_quality.nouser">
+                    <t t-call="web.basic_layout">
+                        <div id="wrap">
+                            <t t-call-assets="web.assets_frontend" t-js="false"/>
+                            <div class="oe_structure"/>
+                            <div class="container">
+                                <br/><br/><br/>
+                                <h1>We're Sorry.!</h1>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="alert alert-warning" role="status" style="font-size: 25pt">
+                                            You cannot send quality alert to us since you are not a registered employee.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt5">
+                                    <div class="col-lg-8" style="height: 3rem;">
+                                        <a href="/production_floor">
+                                            <button type="button" class="btn btn-danger btn-lg w-100 h-100 o_website_form_send">Return</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <record id="group_manager_transfer_requirements" model="res.groups">
+            <field name="name">Transfer Requirements/ Manager</field>
+        </record>
+        <record id="ir_rule_transfer_requirements" model="ir.rule">
+            <field name="name">TransferRequirements</field>
+            <field name="model_id" ref="model_transfer_requirements"/>
+            <field name="groups" eval="[(4,ref('transfer_requirements.group_manager_transfer_requirements'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field eval="False" name="global"/>
+            <field name="domain_force">[('company_id','=',user.company_id.id)]</field> 
+        </record>
+    </data>
+</odoo>

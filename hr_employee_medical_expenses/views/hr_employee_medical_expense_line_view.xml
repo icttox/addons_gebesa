@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?> 
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="employee_medical_exp_line_form_view">
+            <field name="name">hr.employee.medical.expense.line.form</field>
+            <field name="model">hr.employee.medical.expense.line</field>
+            <field name="arch" type="xml">
+                <form string="Form Employee Medical Expense Line">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="product_sat_code_id"/>
+                                <field name="description"/>
+                                <field name="unit"/>
+                                <field name="quantity"/>
+                            </group>
+                            <group>
+                                <field name="price_unit"/>
+                                <field name="total"/>
+                                <field name="authorized" invisible="1"/>
+                                <field name="refund"  invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

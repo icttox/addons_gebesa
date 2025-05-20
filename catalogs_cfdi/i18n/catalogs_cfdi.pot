@@ -1,0 +1,264 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* catalogs_cfdi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-14 18:02+0000\n"
+"PO-Revision-Date: 2017-07-14 18:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:45
+#: selection:catalog.product.service,include_complement:0
+#, python-format
+msgid "Airlines"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.actions.act_window,name:catalogs_cfdi.catalog_product_service_action
+#: model:ir.model,name:catalogs_cfdi.model_catalog_product_service
+#: model:ir.ui.menu,name:catalogs_cfdi.catalog_product_service_menu
+#: model:ir.ui.view,arch_db:catalogs_cfdi.catalog_product_service_tree
+msgid "Catalog Product Service"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.actions.act_window,help:catalogs_cfdi.catalog_product_service_action
+msgid "Click to register a Product / Service for CFDI"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:16
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_code
+#, python-format
+msgid "Code"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,help:catalogs_cfdi.field_catalog_product_service_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:22
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_description
+#, python-format
+msgid "Description"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:46
+#: selection:catalog.product.service,include_complement:0
+#, python-format
+msgid "Foreign Exchange"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_id
+msgid "ID"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:47
+#: selection:catalog.product.service,include_complement:0
+#, python-format
+msgid "IEDU"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,help:catalogs_cfdi.field_catalog_product_service_message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,help:catalogs_cfdi.field_catalog_product_service_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:51
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_include_complement
+#, python-format
+msgid "Include Complement"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:39
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_include_ieps
+#, python-format
+msgid "Include IEPS Transferred"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:30
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_include_iva
+#, python-format
+msgid "Include IVA Transferred"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_message_last_post
+msgid "Last Message Date"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.actions.act_window,help:catalogs_cfdi.catalog_product_service_action
+msgid "Make your first record."
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:28
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:37
+#: selection:catalog.product.service,include_ieps:0
+#: selection:catalog.product.service,include_iva:0
+#, python-format
+msgid "Not"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,help:catalogs_cfdi.field_catalog_product_service_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,help:catalogs_cfdi.field_catalog_product_service_message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:29
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:38
+#: selection:catalog.product.service,include_ieps:0
+#: selection:catalog.product.service,include_iva:0
+#, python-format
+msgid "Optional"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:48
+#: selection:catalog.product.service,include_complement:0
+#, python-format
+msgid "Optional:Airlines"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:49
+#: selection:catalog.product.service,include_complement:0
+#, python-format
+msgid "Optional:Donat"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:50
+#: selection:catalog.product.service,include_complement:0
+#, python-format
+msgid "Optional:Obrasarte"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.ui.view,arch_db:catalogs_cfdi.catalog_product_service_form
+msgid "Product Service"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,field_description:catalogs_cfdi.field_catalog_product_service_website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: model:ir.model.fields,help:catalogs_cfdi.field_catalog_product_service_website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: catalogs_cfdi
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:27
+#: code:addons/catalogs_cfdi/models/catalog_product_service.py:36
+#: selection:catalog.product.service,include_ieps:0
+#: selection:catalog.product.service,include_iva:0
+#, python-format
+msgid "Yes"
+msgstr ""
+

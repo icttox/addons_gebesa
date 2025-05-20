@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='project_git_gitlab_wizards_form'>
+            <field name='name'>project.git.gitlab.wizards.form</field>
+            <field name='model'>project.git.gitlab.wizards</field>
+            <field name='arch' type='xml'>
+                <form string='Creación de Commits'>
+                    <group>
+                        <field name='fecha_ini' required="True"/>
+                        <field name='fecha_fin' required="True"/>
+                    </group>
+                    <footer>
+                        <button string="Aceptar" name="action_get_commits" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancelar" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_project_git_gitlab_wizards"
+            multi="True"
+            key2="client_action_multi" name="Crear Commits"
+            res_model="project.git.gitlab.wizards" src_model="project.git.repository"
+            view_mode="form" target="new" view_type="form" />
+    </data>
+</odoo>

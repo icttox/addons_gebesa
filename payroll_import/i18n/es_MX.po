@@ -1,0 +1,466 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payroll_import
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-25 18:12+0000\n"
+"PO-Revision-Date: 2020-11-25 12:24-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line__account_id
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: payroll_import
+#: code:addons/payroll_import/wizards/payroll_import_microsip.py:173
+#, python-format
+msgid "Account Entries"
+msgstr "Entradas de cuenta"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_needaction
+msgid "Action Needed"
+msgstr "Accion necesaria"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line__analytic_account_id
+msgid "Analytic"
+msgstr "Centro de costos"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_attachment_count
+msgid "Attachment Count"
+msgstr "Archivos adjuntos"
+
+#. module: payroll_import
+#: model_terms:ir.ui.view,arch_db:payroll_import.wizard_payroll_import_microsip
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__name
+msgid "Code"
+msgstr "Código"
+
+#. module: payroll_import
+#: model:ir.model,name:payroll_import.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: payroll_import
+#: model_terms:ir.ui.view,arch_db:payroll_import.payroll_import_form
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__create_uid
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line__create_uid
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_microsip__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__create_date
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line__create_date
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_microsip__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__credit
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line__credit
+msgid "Credit"
+msgstr "Haber"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_res_company__db_microsip
+msgid "DB Microsip"
+msgstr ""
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_microsip__date_end
+msgid "Date end"
+msgstr "Fecha de Finalización"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_microsip__date_start
+msgid "Date start"
+msgstr "Fecha inicio"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__debit
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line__debit
+msgid "Debit"
+msgstr "Debe"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__display_name
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line__display_name
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_microsip__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: payroll_import
+#: selection:payroll.import,state:0
+msgid "Done"
+msgstr "Hecho"
+
+#. module: payroll_import
+#: selection:payroll.import,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Partners)"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_res_company__host_microsip
+msgid "Host Microsip"
+msgstr ""
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__id
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line__id
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_microsip__id
+msgid "ID"
+msgstr "Id"
+
+#. module: payroll_import
+#: model:ir.model.fields,help:payroll_import.field_payroll_import__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si se marca, los nuevos mensajes requieren su atención"
+
+#. module: payroll_import
+#: model:ir.model.fields,help:payroll_import.field_payroll_import__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención"
+
+#. module: payroll_import
+#: model:ir.model.fields,help:payroll_import.field_payroll_import__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: payroll_import
+#: model_terms:ir.ui.view,arch_db:payroll_import.wizard_payroll_import_microsip
+msgid "Import"
+msgstr "Importar"
+
+#. module: payroll_import
+#: model:ir.actions.act_window,name:payroll_import.action_payroll_import_microsip
+#: model:ir.ui.menu,name:payroll_import.payroll_import_microsip_menu
+msgid "Import Payroll Microsip"
+msgstr "Importar Nomina de Microsip"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__journal_id
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_microsip__journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__move_id
+msgid "Journal Entry"
+msgstr "Poliza contable"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import____last_update
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line____last_update
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_microsip____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__write_uid
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line__write_uid
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_microsip__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__write_date
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line__write_date
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_microsip__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_ids
+msgid "Messages"
+msgstr "Mensages"
+
+#. module: payroll_import
+#: model_terms:ir.ui.view,arch_db:payroll_import.view_company_form
+msgid "Microsip"
+msgstr "Microsip"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Siguiente plazo de actividad"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la Siguiente Actividad"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero de Acciones"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_has_error_counter
+msgid "Number of error"
+msgstr "Número de error"
+
+#. module: payroll_import
+#: model:ir.model.fields,help:payroll_import.field_payroll_import__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: payroll_import
+#: model:ir.model.fields,help:payroll_import.field_payroll_import__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: payroll_import
+#: model:ir.model.fields,help:payroll_import.field_payroll_import__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes sin leer"
+
+#. module: payroll_import
+#: selection:payroll.import,activity_state:0
+msgid "Overdue"
+msgstr "Atrasada"
+
+#. module: payroll_import
+#: model_terms:ir.ui.view,arch_db:payroll_import.payroll_import_form
+msgid "PRUEBAS"
+msgstr ""
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_res_company__pass_microsip
+msgid "Password Microsip"
+msgstr "Contraseña de Microsip"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import_line__payroll_id
+#: model_terms:ir.ui.view,arch_db:payroll_import.payroll_import_form
+msgid "Payroll"
+msgstr "Nomina"
+
+#. module: payroll_import
+#: model:ir.actions.act_window,name:payroll_import.action_payroll_import
+#: model:ir.model,name:payroll_import.model_payroll_import
+#: model:ir.ui.menu,name:payroll_import.payroll_import_menu
+#: model_terms:ir.ui.view,arch_db:payroll_import.payroll_import_tree
+msgid "Payroll import"
+msgstr "Importar nomina"
+
+#. module: payroll_import
+#: model:ir.model,name:payroll_import.model_payroll_import_line
+msgid "Payroll import line"
+msgstr "Importar lineas de nomina"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__lines_ids
+msgid "Payroll lines"
+msgstr "Lineas de nomina"
+
+#. module: payroll_import
+#: selection:payroll.import,activity_state:0
+msgid "Planned"
+msgstr "Planificada"
+
+#. module: payroll_import
+#: code:addons/payroll_import/wizards/payroll_import_microsip.py:38
+#, python-format
+msgid "Please specify a microsip database                     for the company"
+msgstr "Especifique una base de datos microsip para la empresa"
+
+#. module: payroll_import
+#: code:addons/payroll_import/wizards/payroll_import_microsip.py:47
+#, python-format
+msgid "Please specify a microsip host                     for the company"
+msgstr "Especifique un host microsip para la empresa"
+
+#. module: payroll_import
+#: code:addons/payroll_import/wizards/payroll_import_microsip.py:44
+#, python-format
+msgid "Please specify a microsip password                     for the company"
+msgstr "Especifique una contraseña microsip para la empresa"
+
+#. module: payroll_import
+#: code:addons/payroll_import/wizards/payroll_import_microsip.py:50
+#, python-format
+msgid "Please specify a microsip port                     for the company"
+msgstr "Especifique un puerto microsip para la empresa"
+
+#. module: payroll_import
+#: code:addons/payroll_import/wizards/payroll_import_microsip.py:41
+#, python-format
+msgid "Please specify a microsip user                     for the company"
+msgstr "Especifique un usuario de microsip para la empresa"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_res_company__port_microsip
+msgid "Port Microsip"
+msgstr "Puerto Microsip"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__state
+msgid "State"
+msgstr "Status"
+
+#. module: payroll_import
+#: model:ir.model.fields,help:payroll_import.field_payroll_import__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencida: la fecha tope ya ha pasado\n"
+"Hoy: La fecha tope es hoy\n"
+"Planificada: futuras actividades."
+
+#. module: payroll_import
+#: model:res.groups,name:payroll_import.group_payroll_import_manager
+msgid "Superuser payroll import"
+msgstr "Super-usuario importar  nomina"
+
+#. module: payroll_import
+#: selection:payroll.import,activity_state:0
+msgid "Today"
+msgstr "Hoy"
+
+#. module: payroll_import
+#: code:addons/payroll_import/wizards/payroll_import_microsip.py:129
+#: code:addons/payroll_import/wizards/payroll_import_microsip.py:141
+#, python-format
+msgid "Una línea de la nomina no se ha importado por falta de información del lado de Microsip."
+msgstr ""
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_unread
+msgid "Unread Messages"
+msgstr "Los mensajes no leídos"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Los mensajes no leídos Contador"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_res_company__user_microsip
+msgid "User Microsip"
+msgstr "Usuario de Microsip"
+
+#. module: payroll_import
+#: model:res.groups,name:payroll_import.group_payroll_import_user
+msgid "User payroll import"
+msgstr "Usuario importar  nomina"
+
+#. module: payroll_import
+#: model:res.groups,name:payroll_import.group_payroll_import_microsip_user
+msgid "User payroll import microsip"
+msgstr "Microsip de importación de nómina de usuario"
+
+#. module: payroll_import
+#: model:ir.model.fields,field_description:payroll_import.field_payroll_import__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes de sitios web"
+
+#. module: payroll_import
+#: model:ir.model.fields,help:payroll_import.field_payroll_import__website_message_ids
+msgid "Website communication history"
+msgstr "Sitio Web historial de comunicación"
+
+#. module: payroll_import
+#: model_terms:ir.ui.view,arch_db:payroll_import.payroll_import_form
+msgid "lines"
+msgstr "Lineas"
+
+#. module: payroll_import
+#: model_terms:ir.ui.view,arch_db:payroll_import.wizard_payroll_import_microsip
+msgid "or"
+msgstr "ó"
+
+#. module: payroll_import
+#: model:ir.model,name:payroll_import.model_payroll_import_microsip
+msgid "payroll.import.microsip"
+msgstr ""

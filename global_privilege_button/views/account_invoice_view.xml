@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='manager_date_supplier_form'>
+            <field name='name'>manager.date.supplier.form</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_supplier_form'/>
+            <field name="groups_id" eval="[(6,0,[ref('global_privilege_button.group_manager_date_supplier')])]" />
+            <field eval="20" name="priority"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='date_invoice']" position="attributes">
+                   <attribute name="readonly">0</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='manager_date1_supplier_form'>
+            <field name='name'>manager.date1.supplier.form</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_supplier_form'/>
+            <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]" />
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='date_invoice']" position="attributes">
+                   <attribute name="readonly">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='manager_date_customer_form'>
+            <field name='name'>manager.date.customer.form</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_form'/>
+            <field name="groups_id" eval="[(6,0,[ref('global_privilege_button.group_manager_date_supplier')])]" />
+            <field eval="20" name="priority"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='date_invoice']" position="attributes">
+                   <attribute name="readonly">0</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='account_invoice_refund_view'>
+        	<field name='name'>account.invoice.refund.view</field>
+        	<field name='model'>account.invoice.refund</field>
+        	<field name="inherit_id" ref="account.view_account_invoice_refund"/>
+        	<field name='arch' type='xml'>
+        		<field name="description" position="before">
+        			<field name="replacement"/>
+        			<field name="responsible_id" attrs="{'required':[('replacement', '==', True)]}"/>
+        		</field>        		
+        	</field>
+        </record>
+    </data>
+</odoo>

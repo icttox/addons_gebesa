@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="stock_revaluation_line_tree" model="ir.ui.view">
+            <field name="name">stock.revaluation.line.tree</field>
+            <field name="model">stock.revaluation.line</field>
+            <field name="arch" type="xml">
+                <tree string="Stock Revaluation Lines">
+                    <field name="product_id"/>
+                    <field name="product_cost"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_revaluation_filter" model="ir.ui.view">
+            <field name="name">stock.revaluation.filter</field>
+            <field name="model">stock.revaluation</field>
+            <field name="arch" type="xml">
+                <search string="Search Revaluation">
+                    <field name="name" string="Revaluation Reference"/>
+                    <field name="date"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Status" name="status" domain="[]" context="{'group_by':'state'}"/>
+                        <filter string="Revaluation Month" name="revmonth" domain="[]" context="{'group_by':'date'}" help="Revaluations by Month"/>
+                    </group>
+                </search>
+
+            </field>
+        </record>
+
+        <record id="view_revaluation_tree" model="ir.ui.view">
+            <field name="name">stock.revaluation.tree</field>
+            <field name="model">stock.revaluation</field>
+            <field name="arch" type="xml">
+                <tree string="Revaluations" decoration-muted="state == 'cancel'">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_revaluation_form" model="ir.ui.view">
+            <field name="name">stock.revaluation.form</field>
+            <field name="model">stock.revaluation</field>
+            <field name="arch" type="xml">
+                <form string="Cost Revaluation">
+                <header>
+                    <button name="prepare_revaluation" states="draft" string="Proceed" type="object" class="oe_highlight" groups="stock.group_stock_user"/>
+                    <button name="action_done" states="confirm" string="Perform revaluation" type="object" class="oe_highlight" groups="stock.group_stock_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1><field name="name" placeholder="e.g. Monthly revaluation"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="location_id" domain="[('usage','not in', ['supplier','production'])]"/>
+                            <!--field name="prod_category_id"/-->
+                            <field name='prod_group_id'/>
+                            <field name='prod_line_id'/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+                    <notebook attrs="{'invisible':[('state','=','draft')]}">
+                        <page string="Revaluation Details" >
+                            <button name="reset_real_cost" states="confirm" string="⇒ Reset costs" type="object" class="oe_link oe_right" groups="stock.group_stock_user"/>
+                            <field name="line_ids" string="Revaluation Details" >
+                                <tree string="Revaluation Details" editable="bottom" create="false" delete="false" decoration-info="product_cost != actual_cost" decoration-danger="actual_cost &lt; 0">
+                                    <field name="product_id" readonly="1"/>
+                                    <field name="product_cat_id" string="Category"  readonly="1"/>
+                                    <field name="actual_cost" readonly="1"/>
+                                    <field name="product_cost" string="New Cost"/>
+                                    <field name="difference" readonly="1"/>
+                                    <field name="comments" attrs="{'required':[('difference', '&lt;&gt;', 0.00)]}"/>
+                                </tree>
+                            </field>
+                            <p></p>
+                            <h3 class="oe_grey">Notes</h3>
+                            <ul class="oe_grey"><li>Cost Revaluations will be made by comparing the actual cost and the new cost.</li>
+                            </ul>
+                        </page>
+                    </notebook>
+                </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_revaluation_form" model="ir.actions.act_window">
+            <field name="name">Cost Revaluations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.revaluation</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_revaluation_tree"/>
+            <field name="search_view_id" ref="view_revaluation_filter"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a revaluation.
+              </p><p>
+                Periodical Revaluations are used to update the standard cost of products. You can use it whenever you need it, to adapt the
+                current cost of a product.
+              </p>
+            </field>
+        </record>
+        <menuitem action="action_revaluation_form" id="menu_action_revaluation_form" parent="stock.menu_stock_inventory_control" sequence="30"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,1329 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_mx_edi_waybill_complement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-23 21:20+0000\n"
+"PO-Revision-Date: 2021-11-23 16:04-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_autotransport_conf__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_car_type__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_container_type__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_dangerous_material__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_figure_transport__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_load_type__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_conf__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_containers__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_packing_type__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_permit_type__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_products_services__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_service_type__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_shipping_agent_consignee__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stations__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stcc_products_services__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_trailer_type__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport_part__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_type_station__active
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_unit_weight__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_fleet_vehicle__conf_vehicle
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_autotransport_conf
+msgid "Autotransport Configuration"
+msgstr "Configuración de Autotransporte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_autotransport_conf__axles
+msgid "Axles"
+msgstr "Ejes"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.view_l10n_mx_edi_waybill_complement_form
+msgid "Calculate Weights"
+msgstr "Calcular pesos"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_car_type
+msgid "Car Type"
+msgstr "Tipo de Auto"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_car_type
+msgid "Car Type configuration catalog"
+msgstr "Catálogo de configuración de tipo de coche"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,help:l10n_mx_edi_waybill_complement.field_res_partner__l10n_mx_edi_skip_waybill
+#: model:ir.model.fields,help:l10n_mx_edi_waybill_complement.field_res_users__l10n_mx_edi_skip_waybill
+msgid "Check this box to add by default the skip waybill complement in invoices for this customer."
+msgstr "Marque esta casilla para omitir de forma predeterminada el complemento de carta porte en las facturas de este cliente."
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_autotransport_conf__code
+msgid "Code Autotransport Conf"
+msgstr "Código Configuración de Autotransporte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_car_type__code
+msgid "Code Car Type"
+msgstr "Código Tipo de Carro"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_container_type__code
+msgid "Code Container Type"
+msgstr "Código Tipo de Contenedor"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_dangerous_material__code
+msgid "Code Dangerous Material"
+msgstr "Código Material Peligroso"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_figure_transport__code
+msgid "Code Figure Transport"
+msgstr "Código Figura de Transporte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_load_type__code
+msgid "Code Load Type"
+msgstr "Código Tipo de Carga"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_conf__code
+msgid "Code Maritime Configuration"
+msgstr "Código de Configuración Marítima"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_containers__code
+msgid "Code Maritime Containers"
+msgstr "Código de Contenedores Marítimos"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_packing_type__code
+msgid "Code Packing Type"
+msgstr "Código Tipo de Embalaje"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_permit_type__code
+msgid "Code Permit Type"
+msgstr "Código Tipo de Permiso"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_transportable__products_services_id
+msgid "Code Products Services"
+msgstr "Código Productos y  Servicios"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stcc_products_services__code
+msgid "Code STCC Products Services"
+msgstr "Código STCC Productos y Servicios"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_service_type__code
+msgid "Code Service Type"
+msgstr "Código Tipo de Servicio"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stations__code
+msgid "Code Station"
+msgstr "Código de Estación"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_trailer_type__code
+msgid "Code Trailer Type"
+msgstr "Código Tipo de Remolque"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport__code
+msgid "Code Transport"
+msgstr "Código de Transporte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport_part__code
+msgid "Code Transport Part"
+msgstr "Código de Partes del Transporte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_type_station__code
+msgid "Code Type Station"
+msgstr "Código Tipo de Estación"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_unit_weight__code
+msgid "Code Unit Weight"
+msgstr "Código Unidad Peso"
+
+#. module: l10n_mx_edi_waybill_complement
+#: sql_constraint:tms.travel.transportable.line:0
+msgid "Combination Transportable - Delivery must be unique!"
+msgstr "Combinación transportable: ¡La entrega debe ser única!"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_container_type
+msgid "Container Type"
+msgstr "Tipo de Contenedor"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_container_type
+msgid "Container Type configuration catalog"
+msgstr "Catálogo de configuración de tipo de contenedor"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stations__country_id
+msgid "Country"
+msgstr "Pais"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_tms_transportable_action
+msgid "Create the Transportable"
+msgstr "Crear Transportable"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_autotransport_conf_action
+msgid "Create the waybill autotransport configuration"
+msgstr "Crear Configuración de Autotransporte de la Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_car_type_action
+msgid "Create the waybill car type"
+msgstr "Crear el Tipo de Carro de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_container_type_action
+msgid "Create the waybill container type"
+msgstr "Crear el Tipo de Contenedor de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_dangerous_material_action
+msgid "Create the waybill dangerous material"
+msgstr "Crea Material Peligroso de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_figure_transport_action
+msgid "Create the waybill figure transport"
+msgstr "Crea Figuras de transporte de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_load_type_action
+msgid "Create the waybill load type"
+msgstr "Crear Tipo de Carga de Carta de Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_maritime_conf_action
+msgid "Create the waybill maritime configuration"
+msgstr "Crear la Configuración Marítima de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_maritime_containers_action
+msgid "Create the waybill maritime containers"
+msgstr "Crea los Contenedores Marítimos de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_packing_type_action
+msgid "Create the waybill packing type"
+msgstr "Crear Tipo de Embalaje de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_permit_type_action
+msgid "Create the waybill permit type"
+msgstr "Crear Tipo de Permiso de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_products_services_action
+msgid "Create the waybill products services"
+msgstr "Crear Productos y  Servicios de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_service_type_action
+msgid "Create the waybill service type"
+msgstr "Crear Tipo de Servicio de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_shipping_agent_consignee_action
+msgid "Create the waybill shipping agent consignee"
+msgstr "Crear Agente Consignatario de Envío de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_stations_action
+msgid "Create the waybill stations"
+msgstr "Crear Estaciones de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_stcc_products_services_action
+msgid "Create the waybill stcc products services"
+msgstr "Crear Productos y  Servicios de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_trailer_type_action
+msgid "Create the waybill trailer type"
+msgstr "Crear Tipo de Remolque de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_transport_action
+msgid "Create the waybill transport"
+msgstr "Crear Transporte de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_transport_part_action
+msgid "Create the waybill transport part"
+msgstr "Crear Partes del Transporte Rentadas o Prestadas de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_type_station_action
+msgid "Create the waybill type.station"
+msgstr "Crear Tipo de Estación de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.actions.act_window,help:l10n_mx_edi_waybill_complement.wbl_unit_weight_action
+msgid "Create the waybill unit weight"
+msgstr "Crear Peso de la Unidad de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_autotransport_conf__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_car_type__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_container_type__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_dangerous_material__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_figure_transport__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_load_type__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_conf__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_containers__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_packing_type__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_permit_type__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_products_services__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_service_type__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_shipping_agent_consignee__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stations__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stcc_products_services__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_trailer_type__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport_part__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_type_station__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_unit_weight__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_delivery__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_autotransport_conf__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_car_type__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_container_type__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_dangerous_material__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_figure_transport__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_load_type__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_conf__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_containers__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_packing_type__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_permit_type__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_products_services__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_service_type__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_shipping_agent_consignee__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stations__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stcc_products_services__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_trailer_type__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport_part__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_type_station__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_unit_weight__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_delivery__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_products_services__dangerous
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_transportable__dangerous
+msgid "Dangerous"
+msgstr "Peligroso"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_transportable__dangerous_material_id
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_dangerous_material
+msgid "Dangerous Material"
+msgstr "Material Peligroso"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_dangerous_material
+msgid "Dangerous Material configuration catalog"
+msgstr "Catálogo de configuración de materiales peligrosos"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel__dangerous_material
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_tms_transportable_form_view
+msgid "Dangerous material"
+msgstr "Material Peligroso"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.freight_travel_form
+msgid "Deliveries"
+msgstr "Entregas"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_delivery__date_time_delivery
+msgid "Delivery date"
+msgstr "Fecha de Entrega"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel__delivery_ids
+msgid "Deliverys"
+msgstr "Entregas"
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:180
+#, python-format
+msgid "Departure address city is missing."
+msgstr "Falta la ciudad de la dirección de salida."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:177
+#, python-format
+msgid "Departure address country and state is missing."
+msgstr "Falta el país y el estado de la dirección de salida."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:174
+#, python-format
+msgid "Departure address location and street is missing."
+msgstr "Falta la ubicación y la calle de la dirección de salida."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:186
+#, python-format
+msgid "Departure address place is missing."
+msgstr "Falta el lugar de la dirección de salida."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:183
+#, python-format
+msgid "Departure address postal code is missing."
+msgstr "Falta el código postal de la dirección de salida."
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_car_type__description
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_container_type__description
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_products_services__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_unit_weight__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_autotransport_conf__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_car_type__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_container_type__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_dangerous_material__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_figure_transport__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_load_type__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_conf__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_containers__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_packing_type__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_permit_type__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_products_services__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_service_type__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_shipping_agent_consignee__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stations__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stcc_products_services__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_trailer_type__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport_part__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_type_station__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_unit_weight__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_delivery__display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_dangerous_material__division
+msgid "Division"
+msgstr "División"
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:191
+#, python-format
+msgid "Each delivery must have its own location, and you cannot repeat a delivery."
+msgstr "Cada dirección de entrega debe tener un lugar distinto y no se debe repetir una misma dirección de entrega."
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel__environmental_insurance_policy
+msgid "Environmental Insurance Policy"
+msgstr "Póliza de seguro ambiental"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel__environmental_insurance_supplier_id
+msgid "Environmental Insurance Supplier"
+msgstr "Proveedor de seguros ambientales"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_figure_transport
+msgid "Figure Transport"
+msgstr "Figura Transporte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_figure_transport
+msgid "Figure Transport Configuration Catalog"
+msgstr "Catálogo de Configuración Figura Transporte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_unit_weight__flag
+msgid "Flag"
+msgstr "Bandera"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_tms_transportable_form_view
+msgid "Form Transportable"
+msgstr "Transportable"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_autotransport_conf_form_view
+msgid "Form Waybill Autotransport Configuration"
+msgstr "Configuración de Autotransporte de la Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_car_type_form_view
+msgid "Form Waybill Car Type"
+msgstr "Tipo de Carro de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_container_type_form_view
+msgid "Form Waybill Container Type"
+msgstr "Tipo de Contenedor de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_dangerous_material_form_view
+msgid "Form Waybill Dangerous Material"
+msgstr "Material Peligroso de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_figure_transport_form_view
+msgid "Form Waybill Figure Transport"
+msgstr "Figura Transporte de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_load_type_form_view
+msgid "Form Waybill Load Type"
+msgstr "Tipo de Carga de Carta de Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_maritime_conf_form_view
+msgid "Form Waybill Maritime Configuration"
+msgstr "Configuración Marítima de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_maritime_containers_form_view
+msgid "Form Waybill Maritime Containers"
+msgstr "Contenedores Marítimos de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_packing_type_form_view
+msgid "Form Waybill Packing Type"
+msgstr "Tipo de Embalaje de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_permit_type_form_view
+msgid "Form Waybill Permit Type"
+msgstr "Tipo de Permiso de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_products_services_form_view
+msgid "Form Waybill Products Services"
+msgstr "Productos y  Servicios de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_stcc_products_services_form_view
+msgid "Form Waybill STCC Products Services"
+msgstr "Productos y  Servicios STCC de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_service_type_form_view
+msgid "Form Waybill Service Type"
+msgstr "Tipo de Servicio de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_shipping_agent_consignee_form_view
+msgid "Form Waybill Shipping Agent Consignee"
+msgstr "Agente Consignatario de Envío de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_stations_form_view
+msgid "Form Waybill Stations"
+msgstr "Estaciones de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_trailer_type_form_view
+msgid "Form Waybill Trailer Type"
+msgstr "Tipo Remolque de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_transport_form_view
+msgid "Form Waybill Transport"
+msgstr "Transporte de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_transport_part_form_view
+msgid "Form Waybill Transport Part"
+msgstr "Parte del Transporte Rentada o Prestada de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_unit_weight_form_view
+msgid "Form Waybill Unit Weight"
+msgstr "Peso de la Unidad de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_type_station_form_view
+msgid "Form Waybill type.station"
+msgstr "Tipo de Estación de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,help:l10n_mx_edi_waybill_complement.field_tms_travel_delivery__sequence
+msgid "Gives the sequence order."
+msgstr "Da el Orden de la Secuencia."
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_transportable_line__gross_weight
+msgid "Gross Unit Weight"
+msgstr "Peso unitario bruto"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_autotransport_conf__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_car_type__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_container_type__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_dangerous_material__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_figure_transport__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_load_type__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_conf__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_containers__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_packing_type__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_permit_type__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_products_services__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_service_type__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_shipping_agent_consignee__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stations__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stcc_products_services__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_trailer_type__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport_part__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_type_station__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_unit_weight__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_delivery__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,help:l10n_mx_edi_waybill_complement.field_account_invoice__l10n_mx_edi_skip_waybill
+msgid "If this field is active, the CFDI that generate this invoice will to include the complement \"Skip Waybill\"."
+msgstr "Si este campo está activo, el CFDI que genere esta factura no incluirá el complemento \"Carta Porte\"."
+
+#. module: l10n_mx_edi_waybill_complement
+#: selection:tms.travel,in_out:0
+msgid "In"
+msgstr "Dentro"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel__in_out
+msgid "In/Out"
+msgstr "Dentro/Fuera"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel__insurance_policy
+msgid "Insurance Policy"
+msgstr "Póliza de Seguro"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel__insurance_supplier_id
+msgid "Insurance Supplier"
+msgstr "Proveedor de Seguros"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel__international
+msgid "International"
+msgstr "Internacional"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_autotransport_conf____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_car_type____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_container_type____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_dangerous_material____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_figure_transport____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_load_type____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_conf____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_containers____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_packing_type____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_permit_type____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_products_services____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_service_type____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_shipping_agent_consignee____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stations____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stcc_products_services____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_trailer_type____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport_part____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_type_station____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_unit_weight____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_delivery____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_autotransport_conf__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_car_type__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_container_type__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_dangerous_material__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_figure_transport__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_load_type__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_conf__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_containers__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_packing_type__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_permit_type__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_products_services__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_service_type__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_shipping_agent_consignee__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stations__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stcc_products_services__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_trailer_type__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport_part__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_type_station__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_unit_weight__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_delivery__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_autotransport_conf__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_car_type__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_container_type__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_dangerous_material__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_figure_transport__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_load_type__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_conf__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_containers__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_packing_type__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_permit_type__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_products_services__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_service_type__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_shipping_agent_consignee__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stations__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stcc_products_services__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_trailer_type__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport_part__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_type_station__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_unit_weight__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_delivery__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_load_type
+msgid "Load Type"
+msgstr "Tipo de Carga"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_load_type
+msgid "Load Type configuration catalog"
+msgstr "Catálogo de Configuración de Tipo de Carga"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_maritime_containers
+msgid "Maritime Cointainers configuration catalog"
+msgstr "Catálogo de Configuración de Contenedores Marítimos"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_maritime_conf
+msgid "Maritime Configuration"
+msgstr "Configuración Marítima"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_maritime_containers
+msgid "Maritime Containers"
+msgstr "Contenedores Marítimos"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_maritime_conf
+msgid "Maritime configuration catalog"
+msgstr "Catálogo de Configuración Marítima"
+
+#. module: l10n_mx_edi_waybill_complement
+#: selection:l10n.mx.wbl.unit.weight,flag:0
+msgid "Mass"
+msgstr "Masa"
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:195
+#, python-format
+msgid "Must have the transportable have a type of product or service."
+msgstr "Debe tener el transportable un tipo de producto o servicio."
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_autotransport_conf__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_car_type__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_container_type__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_dangerous_material__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_figure_transport__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_load_type__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_conf__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_maritime_containers__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_packing_type__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_permit_type__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_service_type__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_shipping_agent_consignee__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stations__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stcc_products_services__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_trailer_type__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_transport_part__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_type_station__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_unit_weight__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_res_partner__l10n_mx_edi_skip_waybill
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_res_users__l10n_mx_edi_skip_waybill
+msgid "Need Skip Waybill?"
+msgstr "¿Necesita omitir Carta Porte?"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_account_invoice__l10n_mx_edi_waybill_complement
+msgid "Need Waybill Complement"
+msgstr "Necesita Complemento de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: selection:tms.travel,in_out:0
+msgid "Out"
+msgstr "Fuera"
+
+#. module: l10n_mx_edi_waybill_complement
+#: selection:l10n.mx.wbl.unit.weight,flag:0
+msgid "Packaging"
+msgstr "Embalaje"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_transportable__packing_type_id
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_packing_type
+msgid "Packing Type"
+msgstr "Tipo de Embalaje"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_packing_type
+msgid "Packing Type Catalog"
+msgstr "Catálogo Tipos de Embalaje"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_delivery__partner_id
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_permit_type
+msgid "Permit Type"
+msgstr "Tipo de Permiso"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_permit_type
+msgid "Permit Type Catalog"
+msgstr "Catálogo Tipos de Permisos"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_products_services
+msgid "Product service configuration catalog"
+msgstr "Catálogo de Configuración de Servicio de Producto"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_products_services__code
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_products_services
+msgid "Products Services"
+msgstr "Productos y Servicios"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_autotransport_conf
+msgid "SAT federal motor transport configuration catalog"
+msgstr "Catálogo de Configuración de Transporte Motorizado Federal SAT"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_res_company__stc_type_permit
+msgid "SCT Type Permit"
+msgstr "Tipo de Permiso de STC"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_res_company__sct_reg
+msgid "STC Reg"
+msgstr "Número de Permiso de STC"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_stcc_products_services
+msgid "STCC Product Service configuration catalog"
+msgstr "Catálogo de configuración del servicio de productos STCC"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_stcc_products_services
+msgid "STCC Products Services"
+msgstr "Productos y  Servicios STCC"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_delivery__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_service_type
+msgid "Service Type"
+msgstr "Tipo de Servicio"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_service_type
+msgid "Service Type configuration catalog"
+msgstr "Catálogo de Configuración de Tipo de Servicio"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_tms_travel_transportable_line
+msgid "Shipped Product"
+msgstr "Producto Envíado"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_shipping_agent_consignee
+msgid "Shipping Agent Consignee"
+msgstr "Agente Consignatario de Envío de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_shipping_agent_consignee
+msgid "Shipping Agent catalog"
+msgstr "Catálogo de Agente Consignatario de Envío"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_account_invoice__l10n_mx_edi_skip_waybill
+msgid "Skip Waybill?"
+msgstr "¿Omitir Carta de Porte?"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_stations
+msgid "Station Catalog"
+msgstr "Catálogo de Estaciones"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_stations
+msgid "Stations"
+msgstr "Estaciones"
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:217
+#, python-format
+msgid "The city of the delivery company %s is missing."
+msgstr "La ciudad de la empresa de entrega %s no se encuentra."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:153
+#, python-format
+msgid "The company must have a permit type and permit number."
+msgstr "La empresa debe tener un tipo de permiso y un número de permiso."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:214
+#, python-format
+msgid "The country and state of the delivery company %s is missing."
+msgstr "El país y el estado de la empresa de entrega %s no se encuentra."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:211
+#, python-format
+msgid "The locaty and street of the delivery company %s is missing."
+msgstr "Falta la ubicación y la calle de la empresa de entrega %s."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:208
+#, python-format
+msgid "The place of the delivery company %s is missing."
+msgstr "Falta el lugar de la empresa de entrega %s."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:220
+#, python-format
+msgid "The postal code of the delivery company %s is missing."
+msgstr "Falta el código postal de la empresa de envío%s."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:198
+#, python-format
+msgid "The travel must have a loading address."
+msgstr "El viaje debe tener una dirección de carga."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:204
+#, python-format
+msgid "The travel must have a loading quantity."
+msgstr "El viaje debe tener una cantidad de carga."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:201
+#, python-format
+msgid "The travel must have a loading weight."
+msgstr "El viaje debe tener un peso de carga."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:165
+#, python-format
+msgid "The travel must have at least one delivery."
+msgstr "El viaje debe tener al menos una entrega."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:168
+#, python-format
+msgid "The travel must have departure address."
+msgstr "El viaje debe tener dirección de salida."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:171
+#, python-format
+msgid "The travel must have transportable line."
+msgstr "El viaje debe tener una línea transportable."
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:162
+#, python-format
+msgid "The unit must have a transport configuration."
+msgstr "La unidad debe tener una configuración de transporte."
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_autotransport_conf__tire
+msgid "Tire"
+msgstr "Llanta"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_fleet_vehicle__sub_type_rem
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_trailer_type
+msgid "Trailer Type"
+msgstr "Tipo de Trailer"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_trailer_type
+msgid "Trailer Type configuration catalog"
+msgstr "Catálogo de Configuración de Tipo de Remolque"
+
+#. module: l10n_mx_edi_waybill_complement
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:156
+#: code:addons/l10n_mx_edi_waybill_complement/models/account_invoice.py:159
+#, python-format
+msgid "Trailers must have a trailer subtype."
+msgstr "Los remolques deben tener un subtipo de remolque."
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_permit_type__transport_id
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_l10n_mx_wbl_stations__transport_id
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_transport
+msgid "Transport"
+msgstr "Transporte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_transport
+msgid "Transport Catalog"
+msgstr "Catálogo de transporte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_transport_part
+msgid "Transport Part"
+msgstr "Partes del Transporte Rentadas"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_transport_part
+msgid "Transport Part Configuration Catalog"
+msgstr "Catálogo de configuración Partes del Transporte Rentadas"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_tms_transportable
+msgid "Transportable"
+msgstr "Carga"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_tms_transportable
+msgid "Transportable Product"
+msgstr "Producto de Carga"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_tms_travel
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_delivery__travel_id
+msgid "Travel"
+msgstr "Viaje"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_transportable_line__delivery_id
+msgid "Travel Delivery"
+msgstr "Entrega de Viajes"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_autotransport_conf_tree_view
+msgid "Tree Waybill Autotransport Configuration"
+msgstr "Configuración de Autotransporte de la Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_car_type_tree_view
+msgid "Tree Waybill Car Type"
+msgstr "Tipo de Carro de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_container_type_tree_view
+msgid "Tree Waybill Container Type"
+msgstr "Tipo de Contenedor de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_dangerous_material_tree_view
+msgid "Tree Waybill Dangerous Material"
+msgstr "Material Peligroso de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_figure_transport_tree_view
+msgid "Tree Waybill Figure Transport"
+msgstr "Figuras de transporte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_load_type_tree_view
+msgid "Tree Waybill Load Type"
+msgstr "Tipo de Carga de Carta de Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_maritime_conf_tree_view
+msgid "Tree Waybill Maritime Configuration"
+msgstr "Configuración Marítima de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_maritime_containers_tree_view
+msgid "Tree Waybill Maritime Containers"
+msgstr "Contenedores Marítimos de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_packing_type_tree_view
+msgid "Tree Waybill Packing Type"
+msgstr "Tipo de Embalaje de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_permit_type_tree_view
+msgid "Tree Waybill Permit Type"
+msgstr "Tipo de Permiso de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_products_services_tree_view
+msgid "Tree Waybill Products Services"
+msgstr "Productos y  Servicios de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_stcc_products_services_tree_view
+msgid "Tree Waybill STCC Products Services"
+msgstr "Productos y  Servicios STCC de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_service_type_tree_view
+msgid "Tree Waybill Service Type"
+msgstr "Tipo de Servicio de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_shipping_agent_consignee_tree_view
+msgid "Tree Waybill Shipping Agent Consignee"
+msgstr "Agente Consignatario de Envío de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_stations_tree_view
+msgid "Tree Waybill Stations"
+msgstr "Estaciones de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_trailer_type_tree_view
+msgid "Tree Waybill Trailer Type"
+msgstr "Tipo Remolque de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_transport_tree_view
+msgid "Tree Waybill Transport"
+msgstr "Transporte de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_transport_part_tree_view
+msgid "Tree Waybill Transport Part"
+msgstr "Partes del Transporte rentadas o prestadas"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_type_station_tree_view
+msgid "Tree Waybill Type Station"
+msgstr "Tipo de Estación de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.wbl_unit_weight_tree_view
+msgid "Tree Waybill Unit Weight"
+msgstr "Unidad de Peso de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_type_station
+msgid "Type Station"
+msgstr "Tipo de Estación"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_type_station
+msgid "Type Station Catalog"
+msgstr "Catálogo Tipos de estaciones"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel_transportable_line__weight
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_unit_weight
+msgid "Unit Weight"
+msgstr "Peso unitario"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_l10n_mx_wbl_unit_weight
+msgid "Unit Weight Catalog"
+msgstr "Catálogo Unidad de Meida"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_fleet_vehicle
+msgid "Vehicle"
+msgstr "Vehículo"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model.fields,field_description:l10n_mx_edi_waybill_complement.field_tms_travel__via_in_out_id
+msgid "Via in out"
+msgstr "Via de Salida"
+
+#. module: l10n_mx_edi_waybill_complement
+#: selection:l10n.mx.wbl.unit.weight,flag:0
+msgid "Volume"
+msgstr "Volumen"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_autotransport_conf_action
+msgid "Waybill Autotransport Configuration"
+msgstr "Configuración de Autotransporte de la Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_car_type_action
+msgid "Waybill Car Type"
+msgstr "Tipo de Carro de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.ui.menu,name:l10n_mx_edi_waybill_complement.menu_wbl_complement
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_waybill_complement.view_l10n_mx_edi_waybill_complement_form
+msgid "Waybill Complement"
+msgstr "Complemento de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_container_type_action
+msgid "Waybill Container Type"
+msgstr "Tipo de Contenedor de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_dangerous_material_action
+msgid "Waybill Dangerous Material"
+msgstr "Material Peligroso de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_figure_transport_action
+msgid "Waybill Figure Transport"
+msgstr "Figura de Transporte de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_load_type_action
+msgid "Waybill Load Type"
+msgstr "Tipo de Carga de Carta de Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_maritime_conf_action
+msgid "Waybill Maritime Configuration"
+msgstr "Configuración Marítima de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_maritime_containers_action
+msgid "Waybill Maritime Containers"
+msgstr "Contenedores Marítimos de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_packing_type_action
+msgid "Waybill Packing Type"
+msgstr "Tipo de Embalaje de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_permit_type_action
+msgid "Waybill Permit Type"
+msgstr "Tipo de Permiso de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_products_services_action
+msgid "Waybill Products Services"
+msgstr "Productos y  Servicios de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_stcc_products_services_action
+msgid "Waybill STCC Products Services"
+msgstr "Productos y  Servicios de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_service_type_action
+msgid "Waybill Service Type"
+msgstr "Tipo de Servicio de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_shipping_agent_consignee_action
+msgid "Waybill Shipping Agent Consignee"
+msgstr "Agente Consignatario de Envío de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_stations_action
+msgid "Waybill Stations"
+msgstr "Estaciones de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_trailer_type_action
+msgid "Waybill Trailer Type"
+msgstr "Tipo Remolque de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_transport_action
+msgid "Waybill Transport"
+msgstr "Transporte de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_transport_part_action
+msgid "Waybill Transport Part"
+msgstr "Partes del Transporte de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_tms_transportable_action
+msgid "Waybill Transportable"
+msgstr "Transportable de Carta porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_type_station_action
+msgid "Waybill Type Station"
+msgstr "Tipo de Estación de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.actions.act_window,name:l10n_mx_edi_waybill_complement.wbl_unit_weight_action
+msgid "Waybill Unit Weight"
+msgstr "Peso de la Unidad de Carta Porte"
+
+#. module: l10n_mx_edi_waybill_complement
+#: model:ir.model,name:l10n_mx_edi_waybill_complement.model_tms_travel_delivery
+msgid "tms.travel.delivery"
+msgstr "tms.travel.delivery"

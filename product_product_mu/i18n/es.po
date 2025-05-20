@@ -1,0 +1,127 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_product_mu
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-27 23:08+0000\n"
+"PO-Revision-Date: 2017-02-27 17:25-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: product_product_mu
+#: code:addons/product_product_mu/models/product_product_mu.py:15
+#: code:addons/product_product_mu/models/product_product_mu.py:16
+#: model:ir.model.fields,field_description:product_product_mu.field_product_product_mu_code
+#: model:ir.model.fields,help:product_product_mu.field_product_product_mu_code
+#, python-format
+msgid "Code"
+msgstr "Còdigo"
+
+#. module: product_product_mu
+#: code:addons/product_product_mu/models/product_product_mu.py:31
+#: code:addons/product_product_mu/models/product_product_mu.py:32
+#: model:ir.model.fields,field_description:product_product_mu.field_product_product_mu_company_id
+#: model:ir.model.fields,help:product_product_mu.field_product_product_mu_company_id
+#, python-format
+msgid "Company"
+msgstr "Compañia"
+
+#. module: product_product_mu
+#: model:ir.model.fields,field_description:product_product_mu.field_product_product_mu_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: product_product_mu
+#: model:ir.model.fields,field_description:product_product_mu.field_product_product_mu_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: product_product_mu
+#: model:ir.model.fields,field_description:product_product_mu.field_product_product_mu_display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: product_product_mu
+#: model:ir.model.fields,field_description:product_product_mu.field_product_product_mu_id
+msgid "ID"
+msgstr "ID"
+
+#. module: product_product_mu
+#: model:ir.model.fields,field_description:product_product_mu.field_product_product_mu___last_update
+msgid "Last Modified on"
+msgstr "Modificado por última vez el"
+
+#. module: product_product_mu
+#: model:ir.model.fields,field_description:product_product_mu.field_product_product_mu_write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualización por"
+
+#. module: product_product_mu
+#: model:ir.model.fields,field_description:product_product_mu.field_product_product_mu_write_date
+msgid "Last Updated on"
+msgstr "Actualizado por última vez el"
+
+#. module: product_product_mu
+#: code:addons/product_product_mu/models/product_product_mu.py:28
+#: model:ir.model.fields,help:product_product_mu.field_product_product_mu_limit_mu
+#, python-format
+msgid "Limit"
+msgstr "Limite"
+
+#. module: product_product_mu
+#: code:addons/product_product_mu/models/product_product_mu.py:19
+#: model:ir.model.fields,field_description:product_product_mu.field_product_product_mu_mu_dist
+#, python-format
+msgid "M.U.Dist"
+msgstr ""
+
+#. module: product_product_mu
+#: model:ir.model.fields,field_description:product_product_mu.field_product_product_mu_mu_may
+msgid "M.U.May"
+msgstr ""
+
+#. module: product_product_mu
+#: code:addons/product_product_mu/models/product_product_mu.py:20
+#: model:ir.model.fields,help:product_product_mu.field_product_product_mu_mu_dist
+#, python-format
+msgid "Process Dist"
+msgstr ""
+
+#. module: product_product_mu
+#: code:addons/product_product_mu/models/product_product_mu.py:24
+#: model:ir.model.fields,help:product_product_mu.field_product_product_mu_mu_may
+#, python-format
+msgid "Process may"
+msgstr ""
+
+#. module: product_product_mu
+#: model:res.groups,name:product_product_mu.group_product_product_mu
+msgid "Product Product MU / Manager"
+msgstr ""
+
+#. module: product_product_mu
+#: model:ir.actions.act_window,name:product_product_mu.product_product_mu_action
+#: model:ir.ui.menu,name:product_product_mu.product_product_mu_menu
+#: model:ir.ui.view,arch_db:product_product_mu.product_product_mu_form
+#: model:ir.ui.view,arch_db:product_product_mu.product_product_mu_tree
+msgid "Table of margin of utility"
+msgstr "Tabla de margen de utilidad"
+
+#. module: product_product_mu
+#: model:ir.model,name:product_product_mu.model_product_product_mu
+msgid "Type move of product"
+msgstr "Tipo de movimiento del producto"
+
+#. module: product_product_mu
+#: model:ir.model.fields,field_description:product_product_mu.field_product_product_mu_limit_mu
+msgid "limit.Mu"
+msgstr "limite.mu"

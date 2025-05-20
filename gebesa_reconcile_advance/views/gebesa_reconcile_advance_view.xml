@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record model="ir.ui.view" id="gebesa_reconcile_advance_supplier_customer_form">
+    		<field name="name">account.reconcile.advance.supplier.customer.form</field>
+    		<field name="model">gebesa.reconcile.advance</field>
+    		<field name="arch" type="xml">
+    			<form string='Account Reconcile Advance' version='9.0'>
+    				<header>
+    					<button string="Reconcile" name="payment_reconcile" type="object" states="draft" class="oe_highlight"/>
+                        <button string="Cancel Advance" name="action_draft_advance" type="object" states="done" class="oe_highlight"/>
+    					<field name="state" widget="statusbar" statusbar_visible="draft,done" statusbar_colors='{"draft":"blue","approved":"blue"}'/>
+    					<field name='type' invisible="1"/>
+    				</header>
+                    <sheet>
+        				<div class="oe_title">
+        					<div class="oe_edit_only">
+        						<label for="name"/>
+        					</div>
+        					<h1>
+        						<field name="name" default_focus="1" placeholder="Name" required='1' attrs="{'readonly':[('state','!=','draft')]}"/>
+        					</h1>
+        				</div>
+        				<group>
+        					<group>
+        						<field name='partner_id' required='1' attrs="{'readonly':[('state','!=','draft')]}"/>
+        						<field name='date' required='1' attrs="{'readonly':[('state','!=','draft')]}"/>
+        					</group>
+        					<group>
+        						<field name='date_post' required='1' attrs="{'readonly':[('state','!=','draft')]}"/>
+        						<field name='journal_id' required='1' domain="[('type','=','general')]" readonly='1'/>
+        						<field name='account_analytic_id' required='1' attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+        						<field name='move_id' readonly='1' attrs="{'readonly':[('state','!=','draft')]}"/>
+        					</group>
+        				</group>
+        				<notebook>
+        					<page string='Invoices &amp; Debts'>
+        						<separator string='Customer Invoices' attrs='{"invisible":[("type","!=","rec")]}'/>
+        						<separator string='Supplier Invoices' attrs='{"invisible":[("type","!=","pay")]}'/>
+        						<field name='invoice_ids' domain="[('type','=', type == 'pay' and 'in_invoice' or 'out_invoice'),('state','=','open'),('partner_id','=',partner_id)]" nolabel='1'
+                                attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <separator string='Customer Debts' attrs='{"invisible":[("type","!=","rec")]}'/>
+                                <separator string='Supplier Debts' attrs='{"invisible":[("type","!=","pay")]}'/>
+                                <field name='ai_aml_ids' nolabel='1' invisible='1' domain="[('partner_id','=',partner_id), ('account_id.type','=', type == 'pay' and 'payable' or 'receivable'), ('reconcile_id','=',False), ('state','=','valid'), (type == 'pay' and 'credit' or 'debit','>',0.0),]" attrs="{'readonly':[('state','!=','draft')]}" context="{'has_invoice_ids':invoice_ids}"/>
+                            </page>
+                            <page string='Advances'>
+                            	<separator string='Customer Payments' attrs='{"invisible":[("type","!=","rec")]}'/>
+                            	<separator string='Supplier Payments' attrs='{"invisible":[("type","!=","pay")]}'/>
+                            	<field name='payment_ids' domain="[('state','=','posted'),('partner_id','=',partner_id),('prepayment_type','=','advance'),('pending_amount','&lt;&gt;',0)]" nolabel='1' attrs="{'readonly':[('state','!=','draft')]}"/>
+                            	<separator string='Receipt Entry Lines' attrs='{"invisible":[("type","!=","rec")]}'/>
+                            	<separator string='Payment Entry Lines' attrs='{"invisible":[("type","!=","pay")]}'/>
+                            	<field name='av_aml_ids' nolabel='1' invisible='1' domain="[('partner_id','=',partner_id), ('account_id.type','=', type == 'pay' and 'payable' or 'receivable'), ('reconcile_id','=',False), ('state','=','valid'), (type == 'pay' and 'debit' or 'credit','>',0.0),]"
+                                attrs="{'readonly':[('state','!=','draft')]}" context="{'has_payment_ids':payment_ids}"/>
+                            </page>
+                            <page string='Other Info'>
+                            	<group col='4'>
+                            		<field name='company_id' required='1' readonly='1'/>
+                            	</group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>  
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="gebesa_advance_tree">
+            <field name="name">gebesa.advance.tree</field>
+            <field name="model">gebesa.reconcile.advance</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Gebesa Reconcile Advance">
+                    <field name="name" select="1"/>
+                    <field name="partner_id" select="1"/>
+                    <field name="move_id" select="1"/>
+                    <field name="date_post" select="1"/>
+                    <field name="state" select="1"/>                  
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

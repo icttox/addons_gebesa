@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="group_mrp_bom_copy" model="res.groups">
+            <field name="name">Boton Copiar Sin Detalle Corte</field>
+        </record>
+    </data>
+</odoo>

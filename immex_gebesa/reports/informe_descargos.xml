@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="immex_informe_descargos"
+            model="informe.descargos.wizard"
+            string="Informe de descargos"
+            report_type="qweb-text"
+            name="immex_gebesa.report_informe_descargos" 
+            file="immex_gebesa.report_informe_descargos"
+            menu="False"
+        />
+
+        <template id="report_informe_descargos"><t t-foreach="docs" t-as="wiz"><t t-translation="off">02|<t t-esc="wiz.tipo_descargo"/>|<t t-esc="wiz.year"/>|<t t-esc="wiz.periodo"/>
+<t t-foreach="fracciones" t-as="fracc">03|<t t-esc="fracc[0]"/>|<t t-esc="fracc[1]"/>|N
+</t><t t-if="wiz.tipo_descargo not in ['DES', 'DON', 'CFDI', 'CTM']"><t t-foreach="detalles" t-as="partida">04|<t t-esc="partida[1]"/>|<t t-esc="partida[2]"/>|<t t-esc="partida[0]"/>
+</t></t></t></t></template>
+    </data>
+</odoo>

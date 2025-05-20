@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='invoice_supplier_form'>
+        	<field name='name'>invoice.payment.auth.form</field>
+        	<field name='model'>account.invoice</field>
+        	<field name='inherit_id' ref='account.invoice_supplier_form'/>
+        	<field name='arch' type='xml'>
+        		<xpath expr="//button[@name='action_invoice_draft']" position="after">
+        			<button name="action_payment_auth_request" string="Payment authorization request" type="object" class="oe_highlight" groups="account_payment_auth.group_aut_pagos_user" attrs="{'invisible': [('aut_estatus_pago', 'in', ('proposed', 'authorized'))]}"/>
+        			<button name="action_payment_auth" string="Authorization request" type="object" class="oe_highlight" groups="account_payment_auth.group_aut_pagos_super" attrs="{'invisible': [('aut_estatus_pago', '!=', 'proposed')]}"/>
+        			<button name="action_refuse_payment" string="Refuse payment" type="object" groups="account_payment_auth.group_aut_pagos_super" attrs="{'invisible': [('aut_estatus_pago', '!=', 'proposed')]}"/>
+        		</xpath>
+        		<xpath expr="//group/group/field[@name='currency_id']" position="after">
+        			<field name='aut_estatus_pago' readonly="True"/>
+                    <field name='authorizes_id' attrs="{'required':[('aut_estatus_pago', '==', 'proposed')]}" widget="selection"/>
+        		</xpath>
+        	</field>
+        </record>
+    </data>
+</odoo>

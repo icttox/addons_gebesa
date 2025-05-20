@@ -1,0 +1,1379 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mrp_plm_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-29 22:25+0000\n"
+"PO-Revision-Date: 2019-08-29 22:25+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_plm_gebesa
+#: model:mail.template,body_html:mrp_plm_gebesa.email_template_task_notification
+msgid "\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"    <p>A new task was assigned to you: </p>\n"
+"    \n"
+"    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong>REFERENCES</strong><br/>\n"
+"       &nbsp;&nbsp;Name: <strong>${object.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Project: <strong>${object.project_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Product: <strong>${object.product_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Customer: <strong>${object.partner_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Assigned to: <strong>${object.user_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Deadline: <strong>${object.date_deadline}</strong><br/>\n"
+"       &nbsp;&nbsp;Sale Order: <strong>${object.order_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Warehouse: <strong>${object.warehouse_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Muestra: <strong>${object.muestra}</strong><br/>\n"
+"       &nbsp;&nbsp;Clave: <strong>${object.clave}</strong><br/>\n"
+"       &nbsp;&nbsp;Costo: <strong>${object.costo}</strong><br/>\n"
+"       &nbsp;&nbsp;Sembrado: <strong>${object.planted}</strong><br/>\n"
+"       &nbsp;&nbsp;Render: <strong>${object.render}</strong><br/>\n"
+"    </p>  \n"
+"\n"
+"    <p>You can check more details <a href=\"http://erp.portalgebesa.com/web?debug=#id=${object.id}&view_type=form&model=project.task&action=203&active_id=219&menu_id=164\">here</a></p>\n"
+"    \n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"            <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"            ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}\n"
+"        </span>\n"
+"        % if object.company_id.phone:\n"
+"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                Phone:&nbsp; ${object.company_id.phone}\n"
+"            </div>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            <div>\n"
+"                Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"            </div>\n"
+"        %endif\n"
+"        <p></p>\n"
+"    </div>\n"
+"</div>\n"
+"            "
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:mail.template,body_html:mrp_plm_gebesa.email_template_finish_task_notification
+msgid "\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"    <p>The next Task is already finished: </p>\n"
+"    \n"
+"    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong>REFERENCES</strong><br/>\n"
+"       &nbsp;&nbsp;Name: <strong>${object.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Project: <strong>${object.project_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Product: <strong>${object.product_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Customer: <strong>${object.partner_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Assigned to: <strong>${object.user_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Deadline: <strong>${object.date_deadline}</strong><br/>\n"
+"       &nbsp;&nbsp;Sale Order: <strong>${object.order_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Warehouse: <strong>${object.warehouse_id.name}</strong><br/>\n"
+"       &nbsp;&nbsp;Muestra: <strong>${object.muestra}</strong><br/>\n"
+"       &nbsp;&nbsp;Clave: <strong>${object.clave}</strong><br/>\n"
+"       &nbsp;&nbsp;Costo: <strong>${object.costo}</strong><br/>\n"
+"       &nbsp;&nbsp;Sembrado: <strong>${object.planted}</strong><br/>\n"
+"       &nbsp;&nbsp;Render: <strong>${object.render}</strong><br/>\n"
+"    </p>  \n"
+"\n"
+"    <p>You can check more details <a href=\"http://erp.portalgebesa.com/web?debug=#id=${object.id}&view_type=form&model=project.task&action=203&active_id=219&menu_id=164\">here</a></p>\n"
+"    \n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"            <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"            ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}\n"
+"        </span>\n"
+"        % if object.company_id.phone:\n"
+"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                Phone:&nbsp; ${object.company_id.phone}\n"
+"            </div>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            <div>\n"
+"                Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"            </div>\n"
+"        %endif\n"
+"        <p></p>\n"
+"    </div>\n"
+"</div>\n"
+"            "
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.report_codigo_barras_document
+msgid "<strong>01 800 8432 372</strong>"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "<strong>Opciones 8Trac</strong>\n"
+"                                    <br/>\n"
+"                                        -Para Synergy y Optimus utilice BE08065-3-A1C (2\" panels)\n"
+"                                        <br/>\n"
+"                                        -Para Elite y G-Bench utilice BE08065-3-F1C (3.25\" panels)\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    <strong>Opciones Phase 3</strong>\n"
+"                                    <br/>\n"
+"                                        -Para Synergy y Optimus utilice BE52426-3-C-1-C (2\" panels)\n"
+"                                        <br/>\n"
+"                                        -Para Elite y G-Bench utilice BE52426-3-G-1-C (3.25\" panels)"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.report_codigo_barras_document
+msgid "<strong>www.gebesa.com</strong>"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.report_codigo_barras_document
+msgid "<sub>MANEJESE CON CUIDADO</sub>"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.report_codigo_barras_document
+msgid "<sup>CONSULTE EL INSTRUCTIVO PARA SU ENSAMBLE</sup>"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_key_d
+msgid "ACABADOS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_special_b
+msgid "ACLARAR CORRECTAMENTE SI ES SEMI-ESPECIAL O ESPECIAL"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.mrp_plm_gebesa_wizard
+msgid "Accept"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:res.groups,name:mrp_plm_gebesa.group_manager_validation_task_aip
+msgid "Admin Validar Tarea AIP"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:res.groups,name:mrp_plm_gebesa.group_manager_validation_task_diseno
+msgid "Admin Validar Tarea Diseño"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:res.groups,name:mrp_plm_gebesa.group_manager_validation_task_ip
+msgid "Admin Validar Tarea IP"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:res.groups,name:mrp_plm_gebesa.group_manager_validation_task_sc
+msgid "Admin Validar Tarea Servicio al Cliente"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:731
+#, python-format
+msgid "An error has occurred"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_project_use_salesorder
+msgid "Analytic available for sales order"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:94
+#: code:addons/mrp_plm_gebesa/models/project_task.py:103
+#: code:addons/mrp_plm_gebesa/models/project_task.py:112
+#: code:addons/mrp_plm_gebesa/models/project_task.py:560
+#: selection:project.task,validation_aip:0
+#: selection:project.task,validation_diseno:0
+#: selection:project.task,validation_ip:0
+#: selection:project.task,validation_sc:0
+#, python-format
+msgid "Aprobado"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_user_id
+msgid "Asignado"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/wizards/wizard_plm.py:15
+#, python-format
+msgid "Assigned"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_c
+msgid "CAJA"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_show_b
+msgid "CANTIDAD"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_flat_d
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_wood_d
+msgid "CANTIDAD DE COMPONENTES Y HERRAJES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_flat_j
+msgid "CANTIDAD DE PIEZAS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_show_e
+msgid "CARAS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_k
+msgid "CFDI"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_station_b
+msgid "CHECAR CANTIDADES DE GAJOS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_general_g
+msgid "CHECAR CON EL CLIENTE QUE EL CRISTAL QUE SOLICITA ES EL MISMO QUE LE OFRECEMOS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_free_e
+msgid "CHECAR CON EL CLIENTE SI NECESITA QUE EL PEDESTAL ARCHIVE OFICIO"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_station_i
+msgid "CHECAR LOS HERRAJES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_special_c
+msgid "CHECAR QUE EL CAMBIO EN EL PRECIO ESTE APLICADO"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_free_c
+msgid "CHECAR QUE EL PEDESTAL/ARCHIVERO NO INTERFIERA CON LA UBICACION DEL PASACABLE"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_station_f
+msgid "CHECAR QUE ESTE BIEN ESPECIFICADO CUANTOS MODULOS SE DEBEN CARGAR"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_station_a
+msgid "CHECAR QUE LOS ANCHOS DE LAS MAMPARAS EN LAS DESCRIPCIONES COINCIDAN CON LOS ANCHOS DE LOS GAJOS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_free_b
+msgid "CHECAR QUE LOS LADOS DE ESCRITORIOS, HERRAJES Y CREDENZAS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_free_d
+msgid "CHECAR QUE SE HAYA ESPECIFICADO COLOR DE LOS PASACABLES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_station_h
+msgid "CHECAR QUE SE HAYA ESPECIFICADO COLOR Y POSICION DE LOS PASACABLES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_station_g
+msgid "CHECAR QUE SE HAYA ESPECIFICADO SI LAS CUBIERAS SON HORIZONTALES O VERTICALES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_station_d
+msgid "CHECAR QUE SE INCLUYA LAS CONFIGURACIONES DE LAS MAMPARAS (PANEL BUILDER)"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_show_i
+msgid "CINTILLA"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_f
+msgid "COINCIDE DETALLE DE CORTE CON PLANO"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_show_d
+msgid "COLOR"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/ir_model.py:17
+#, python-format
+msgid "Can't create quickly. Opening create form"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.mrp_plm_gebesa_wizard
+msgid "Cancel"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "Checklist AIP"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "Checklist DISEÑO"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "Checklist IP"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_clave
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_clave
+msgid "Clave"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:707
+#: code:addons/mrp_plm_gebesa/models/project_task.py:763
+#, python-format
+msgid "Compose task Email"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/product_template.py:13
+#, python-format
+msgid "Consecutive Name"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:45
+#: code:addons/mrp_plm_gebesa/wizards/wizard_plm.py:32
+#, python-format
+msgid "Cost"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/product_template.py:75
+#, python-format
+msgid "Cost is required and must be at least 0.001 in stockable products, please verify..."
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_costo
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_costo
+msgid "Costo"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_create_uid
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_stage_hist_create_uid
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_hist_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_create_date
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_stage_hist_create_date
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_hist_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_partner_id
+msgid "Customer"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_n
+msgid "DESCRIPCION CORRESPONDE A LOS ACABADOS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "DESPIECE"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_e
+msgid "DETALLE DE CORTE"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task_stage_hist.py:24
+#: code:addons/mrp_plm_gebesa/models/project_task_user_hist.py:24
+#, python-format
+msgid "Date"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_project_journal_sale_id
+msgid "Default sale journal"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,help:mrp_plm_gebesa.field_project_project_journal_sale_id
+msgid "Default sale journal for this analytic"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_project_warehouse_id
+msgid "Default warehouse"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_description
+msgid "Description"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_display_name
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_stage_hist_display_name
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_hist_display_name
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_report_mrp_plm_gebesa_report_codigo_barras_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_j
+msgid "EMPAQUE"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "ESPECIALES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_key_b
+msgid "ESPECIFICACIONES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_station_c
+msgid "ESPECIFICAR CORRECTAMENTE SI EL GAJO ES PINCHABLE O TAPIZADO"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_station_e
+msgid "ESPECIFICAR CUANDO UNA MAMPARA LLEVA CLAMPS (PERFORADA/NO PERFORADA)"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_special_e
+msgid "ESPECIFICAR LA JALADERA QUE SE UTILIZARA Y CHECAR EL COLOR"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_general_d
+msgid "ESPECIFICAR MEDIDAS DE LAS PERFORACIONES EN LAS CUBIERTAS DEPENDIENDO DEL MULTICONTACTO (CHECAR QUE SE INCLUYA PLANO DE BYRNE)"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_special_a
+msgid "ESPECIFICAR QUE ES ESPECIAL Y POR QUE"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_free_a
+msgid "ESPECIFICAR SI UN ARCHIVERO/PEDESTAL DEBE O NO LLEVAR CUBIERTA"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_show_f
+msgid "ESPESOR"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "ESTACIONES CON MAMPARAS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_flat_b
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_wood_b
+msgid "EXPLOSIONADO (MOSTRAR COMPONENTES)"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "Email Finish Task"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_stage_hist_status_new
+msgid "Estado actual"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_stage_hist_status_old
+msgid "Estado pasado"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:106
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_validation_aip
+#, python-format
+msgid "Estatus de Validación AIP"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:115
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_validation_diseno
+#, python-format
+msgid "Estatus de Validación Diseño"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:97
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_validation_ip
+#, python-format
+msgid "Estatus de Validación IP"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:563
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_validation_sc
+#, python-format
+msgid "Estatus de Validación Servicio al Cliente"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.actions.report.xml,name:mrp_plm_gebesa.codigo_barras
+msgid "Etiqueta Código Barras"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "FREE-STANDING"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_stage_hist_date
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_hist_date
+msgid "Fecha"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_date_finished
+msgid "Fecha Finalizado"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_validation_time_aip
+msgid "Fecha de Validación AIP"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_validation_time_diseno
+msgid "Fecha de Validación Diseño"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_validation_time_ip
+msgid "Fecha de Validación IP"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_validation_time_sc
+msgid "Fecha de Validación Servicio al Cliente"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_date_deadline
+msgid "Fecha limite"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:mail.template,subject:mrp_plm_gebesa.email_template_finish_task_notification
+msgid "Finish Task (Ref ${object.name or 'n/a'}) Customer: ${object.partner_id.name or 'n/a'} Project: ${object.project_id.name or 'n/a'} Sale order: ${object.order_id.name or 'n/a'} Product: ${object.product_id.name or 'n/a'}"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "GENERAL"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_render
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_render
+msgid "Generar"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_g
+msgid "HERRAJES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_id
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_stage_hist_id
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_hist_id
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_report_mrp_plm_gebesa_report_codigo_barras_id
+msgid "ID"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_general_a
+msgid "INCLUIR CLAVE Y DESCRIPCION COMPLETA CON ACABADOS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_o
+msgid "INVENTARIO"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model,name:mrp_plm_gebesa.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:41
+#: code:addons/mrp_plm_gebesa/wizards/wizard_plm.py:28
+#, python-format
+msgid "Key"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_m
+msgid "LA CLAVE CORRESPONDE A LO SOLICITADO"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_flat_c
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_wood_c
+msgid "LISTADO DE COMPONENTES Y HERRAJES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard___last_update
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_stage_hist___last_update
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_hist___last_update
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_report_mrp_plm_gebesa_report_codigo_barras___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task_stage_hist.py:18
+#, python-format
+msgid "Last Status"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_write_uid
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_stage_hist_write_uid
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_hist_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_write_date
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_stage_hist_write_date
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_hist_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task_user_hist.py:18
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_hist_user_old
+#, python-format
+msgid "Last User"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_show_c
+msgid "MATERIAL"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_flat_g
+msgid "MATERIAL Y CALIBRE"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_key_c
+msgid "MATERIALES Y ESPESORES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_show_g
+msgid "MEDIDAS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_flat_h
+msgid "MEDIDAS DE CORTE"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_flat_a
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_key_a
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_wood_a
+msgid "MEDIDAS GENERALES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model,name:mrp_plm_gebesa.model_ir_model
+msgid "Models"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_note_aip
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_note_diseno
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_note_ip
+msgid "Motivo de Revisión"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:res.groups,name:mrp_plm_gebesa.group_mrp_plm_cotizacion
+msgid "Mrp Plm Cotizacion"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_muestra
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_muestra
+msgid "Muestra"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_show_a
+msgid "NOMBRE DE LA PIEZA"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task_stage_hist.py:21
+#, python-format
+msgid "New Status"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:mail.template,subject:mrp_plm_gebesa.email_template_task_notification
+msgid "New Task (Ref ${object.name or 'n/a'}), Customer: ${object.partner_id.name or 'n/a'}, Project: ${object.project_id.name or 'n/a'}, Sale order: ${object.order_id.name or 'n/a'}, Product: ${object.product_id.name or 'n/a'}"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task_user_hist.py:21
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_hist_user_new
+#, python-format
+msgid "New User"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:95
+#: code:addons/mrp_plm_gebesa/models/project_task.py:104
+#: code:addons/mrp_plm_gebesa/models/project_task.py:113
+#: code:addons/mrp_plm_gebesa/models/project_task.py:561
+#: selection:project.task,validation_aip:0
+#: selection:project.task,validation_diseno:0
+#: selection:project.task,validation_ip:0
+#: selection:project.task,validation_sc:0
+#, python-format
+msgid "No Aprobado"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:656
+#: code:addons/mrp_plm_gebesa/models/project_task.py:662
+#: code:addons/mrp_plm_gebesa/models/project_task.py:668
+#, python-format
+msgid "No puede cambiar de etapa esta tarea si no esta aprobada o marcada la opción de Revisión."
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:674
+#, python-format
+msgid "No puede cambiar de etapa esta tarea si no esta aprobada."
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:744
+#, python-format
+msgid "No puede enviar el correo si la tarea no esta en la etapa FINALIZADA."
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:658
+#: code:addons/mrp_plm_gebesa/models/project_task.py:664
+#: code:addons/mrp_plm_gebesa/models/project_task.py:670
+#: code:addons/mrp_plm_gebesa/models/project_task.py:676
+#, python-format
+msgid "No puede finalizar esta tarea si no esta aprobada."
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:786
+#: code:addons/mrp_plm_gebesa/models/project_task.py:807
+#: code:addons/mrp_plm_gebesa/models/project_task.py:827
+#, python-format
+msgid "No puede validar la tarea debe seleccionar al menos una opción del Cheklist."
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:783
+#: code:addons/mrp_plm_gebesa/models/project_task.py:822
+#, python-format
+msgid "No puede validar la tarea que tiene asignada."
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:820
+#, python-format
+msgid "No puedes Aprobar esta tarea, no esta en la etapa DISEÑO."
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:840
+#, python-format
+msgid "No puedes Aprobar esta tarea, no esta en la etapa SERVICIO AL CLIENTE."
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:799
+#, python-format
+msgid "No puedes Aprobar esta tarea, no esta en las etapas AIP / SEMBRADO / RENDER."
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:781
+#, python-format
+msgid "No puedes Aprobar esta tarea, no esta en las etapas CLAVE / COSTO."
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_product_template_consecutive_id
+msgid "Nombre Consecutivo"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task_type.py:16
+#, python-format
+msgid "Only Administrator can create"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task_type.py:31
+#, python-format
+msgid "Only admin can delete"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task_type.py:24
+#, python-format
+msgid "Only administrator can edit"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_order_id
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_order_id
+msgid "Orden de Venta"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "Order"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_l
+msgid "PARTIDA ARANCELARIA"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_show_k
+msgid "PASACABLES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_show_l
+msgid "PERFORACIONES ESPECIALES (MEDIDA Y UBICACION)"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_flat_i
+msgid "PERFORACIONES PARA DESAGUE"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_flat_f
+msgid "PIEZAS CON COTAS Y DOBLECES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_d
+msgid "PINTURA Y QUIMICOS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "PLANOS MADERA"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "PLANOS METAL"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_b
+msgid "PLANOS/DESPIECE"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.product_template_quotation_view
+msgid "PLM Start"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_flat_k
+msgid "POSICION SOLDADURA"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.report_codigo_barras_document
+msgid "Pagina"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:57
+#: code:addons/mrp_plm_gebesa/wizards/wizard_plm.py:44
+#, python-format
+msgid "Planes"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_planos
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_planos
+msgid "Planos"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_project_id
+msgid "Planta Responsable"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:49
+#: code:addons/mrp_plm_gebesa/wizards/wizard_plm.py:36
+#, python-format
+msgid "Planted"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:18
+#, python-format
+msgid "Product"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model,name:mrp_plm_gebesa.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_product_id
+msgid "Producto"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/wizards/wizard_plm.py:63
+#: model:ir.model,name:mrp_plm_gebesa.model_project_project
+#, python-format
+msgid "Project"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/product_template.py:22
+#, python-format
+msgid "Project Task"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/product_template.py:27
+#, python-format
+msgid "Project Task Related"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_stage_hist_form
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_stage_hist_tree
+msgid "Project Task Stage History"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_user_hist_form
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_user_hist_tree
+msgid "Project Task User History"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.mrp_plm_gebesa_wizard
+msgid "Proyecto"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/product_template.py:33
+#, python-format
+msgid "Quotation"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_a
+msgid "REQUIERE PLANOS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_general_c
+msgid "REVISAR QUE EL RENDER COINCIDA CON LO SOLICITADO (MUEBLES Y ACABADOS)"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_h
+msgid "RUTAS DE PRODUCCION"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:53
+#: code:addons/mrp_plm_gebesa/wizards/wizard_plm.py:40
+#, python-format
+msgid "Render"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "Revisión"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_review_aip
+msgid "Revisión AIP"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_review_diseno
+msgid "Revisión Diseño"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_review_ip
+msgid "Revisión IP"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_show_h
+msgid "SENTIDO DE VENA"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_special_f
+msgid "SI EL PASACABLE / RESAQUE VA EN UNA POSICION ESPECIAL, INCLUIR PLANO"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_general_j
+msgid "SI INCLUYE ELECTRIFICACION CHECAR:"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_general_k
+msgid "SI INCLUYE EXTENSION PARA ELECTRIFICACION PONER LA MEDIDA FINAL Y CHECAR QUE ESTE EN LA SECCION DE MAMPARAS Y NO EN POWER PLAN PARA QUE CLAVES LO VEA"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_special_g
+msgid "SI NOS PIDEN MEDIDAS ESPECIALES EN CUBIERTAS, VERIFICAR QUE SE INCLUYAN LOS HERRAJES NECESARIOS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_general_f
+msgid "SI SE COMBINAN LINEAS, ESPECIFICAR QUE JALADERA SE UTILIZARA, CHECAR COLOR"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_general_e
+msgid "SI SE UTILIZA FORMICA ESPECIAL, CHECAR QUE LA IMAGEN Y EL LINK DE LA PAGINA ESTEN INCLUIDOS. TAMBIEN ESPECIFICAR QUE TIPO DE CUBRE CANTOS SE UTILIZARA"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "SOLICITUD DE CLAVE"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_special_d
+msgid "SUBRAYAR EN AMARILLO LO QUE ES ESPECIAL"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:25
+#: code:addons/mrp_plm_gebesa/wizards/wizard_plm.py:20
+#, python-format
+msgid "Sale Order"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model,name:mrp_plm_gebesa.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:37
+#: code:addons/mrp_plm_gebesa/wizards/wizard_plm.py:24
+#, python-format
+msgid "Sample"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_planted
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_planted
+msgid "Sembrado"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "Stage History"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task_stage_hist.py:14
+#: code:addons/mrp_plm_gebesa/models/project_task_user_hist.py:14
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_stage_hist_task_id
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_hist_task_id
+#, python-format
+msgid "State Task"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_show_j
+msgid "TALADROS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_flat_e
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_wood_e
+msgid "TORNILLERIA (CANTIDAD/DESCRIPCION/CLAVE)"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_cost_i
+msgid "TRADUCCION (EXPORTACION)"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_task_state_hist_ids
+msgid "Tarea"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_product_template_plm_project_id
+msgid "Tarea de Proyecto"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_product_template_plm_project_related
+msgid "Tarea de Proyecto Relacionado"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:582
+#: model:ir.model,name:mrp_plm_gebesa.model_project_task
+#, python-format
+msgid "Task"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:588
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_task_user_hist_ids
+#, python-format
+msgid "Task User"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: sql_constraint:product.template:0
+msgid "This field must be unique!"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/product_template.py:97
+#, python-format
+msgid "This product have a Project Task"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/account_invoice.py:18
+#, python-format
+msgid "This product is type quotation: %s,  not cant Validate this Invoice"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/sale_order.py:18
+#, python-format
+msgid "This product is type quotation: %s,  not cant Validate this Sale Order"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/product_template.py:99
+#, python-format
+msgid "Transformation"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "User History"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_general_b
+msgid "VERIFICAR LA POSICION Y EL COLOR DE LOS PASACABLES CON EL CLIENTE Y CHECAR SI ES DE LINEA O SEMI ESPECIAL"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_station_j
+msgid "VERIFICAR QUE EL CLIENTE CONOCE LA UBICACION DE LOS KNOCKOUTS O SI REQUIERE MAS"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_general_i
+msgid "VERIFICAR QUE EL CLIENTE SEPA CUANDO LA PROFUNDIDAD DE UN ARCHIVERO / PEDESTAL NO ES LA MISMA A LA DE LA CUBIERTA"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_general_h
+msgid "VERIFICAR UBICACION DE LAS VENTNAS CUANDO SE UTILIZAN LIBREROS A MURO O HUTCHES"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_val_aip_id
+msgid "Validado por AIP:"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:74
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_val_diseno_id
+#, python-format
+msgid "Validado por Diseño:"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_val_id
+msgid "Validado por IP:"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_user_val_sc_id
+msgid "Validado por Servicio al Cliente:"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "Validar Tarea AIP"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "Validar Tarea Diseño"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "Validar Tarea IP"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.project_task_view_product
+msgid "Validar Tarea Servicio al Cliente"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/product_template.py:17
+#, python-format
+msgid "Version"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_product_template_version
+msgid "Versión"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_mrp_plm_gebesa_wizard_warehouse_id
+#: model:ir.model.fields,field_description:mrp_plm_gebesa.field_project_task_warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model.fields,help:mrp_plm_gebesa.field_project_project_warehouse_id
+msgid "Warehouse for the sales order"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/project_task.py:731
+#, python-format
+msgid "Warning"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: code:addons/mrp_plm_gebesa/models/product_template.py:55
+#, python-format
+msgid "You cannot turn a Non quotation product into a quotation product"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.report_codigo_barras_document
+msgid "de"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model,name:mrp_plm_gebesa.model_mrp_plm_gebesa_wizard
+msgid "mrp.plm.gebesa.wizard"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.ui.view,arch_db:mrp_plm_gebesa.mrp_plm_gebesa_wizard
+msgid "or"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model,name:mrp_plm_gebesa.model_project_task_stage_hist
+msgid "project.task.stage.hist"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model,name:mrp_plm_gebesa.model_project_task_user_hist
+msgid "project.task.user.hist"
+msgstr ""
+
+#. module: mrp_plm_gebesa
+#: model:ir.model,name:mrp_plm_gebesa.model_report_mrp_plm_gebesa_report_codigo_barras
+msgid "report.mrp_plm_gebesa.report_codigo_barras"
+msgstr ""
+

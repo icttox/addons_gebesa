@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='corrections_init_inventory_wz_form'>
+            <field name='name'>corrections.initial.inventory.wizard.form</field>
+            <field name='model'>corrections.initial.inventory.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='Correcciones al inventario inicial'>
+                    <group>
+                        <field name='report_replace'/>
+                    </group>
+                    <footer>
+                        <button string="Imprimir" name="print_corrections_init_inventory" type="object" default_focus="1" class="btn-primary"/>
+                        or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_corrections_init_inventory_wz" model="ir.actions.act_window">
+            <field name="name">name</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">corrections.initial.inventory.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="corrections_init_inventory_wz_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_corrections_init_inventory_wz" name="Correcciones al inventario inicial" parent="immex_gebesa.immex_report_anexo31" action="action_corrections_init_inventory_wz" sequence="40"/>
+    </data>
+</odoo>

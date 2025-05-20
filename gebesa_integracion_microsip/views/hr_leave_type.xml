@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_leave_type_code_form">
+            <field name="name">hr.leave.type.form</field>
+            <field name="model">hr.leave.type</field>
+            <field name="inherit_id" ref="hr_holidays.edit_holiday_status_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='unpaid']" position="before">
+                    <field name="code" required="1"/>
+                    <field name="working_days"/>
+                </xpath>
+                <xpath expr="//field[@name='sequence']" position="attributes">
+                      <attribute name="groups" eval=""/>
+                </xpath>
+                <xpath expr="//field[@name='time_type']" position="attributes">
+                      <attribute name="groups" eval=""/>
+                </xpath>
+                <xpath expr="//group[@name='calendar']" position="attributes">
+                    <attribute name="groups" eval=""/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

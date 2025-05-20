@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record model='ir.ui.view' id='account_invoice_prepayments_view_form'>
+        	<field name='name'>account.invoice.prepayments.view.form</field>
+        	<field name='model'>account.invoice</field>
+        	<field name='inherit_id' ref='account.invoice_form'/>
+        	<field name='arch' type='xml'>
+                <xpath expr="//notebook/page[2]" position="after">
+                    <page string="Prepayments Invoices">
+                        <field name='prepayment_move_ids' readonly="True"/>
+                    </page>
+                </xpath>
+        	</field>
+        </record>
+    </data>
+</odoo>

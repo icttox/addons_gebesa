@@ -1,0 +1,106 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mrp_production_action_transfer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-23 22:31+0000\n"
+"PO-Revision-Date: 2020-07-23 22:31+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_production_action_transfer
+#: model:ir.ui.view,arch_db:mrp_production_action_transfer.mrp_production_transfer_form
+msgid "*It works only with production orders in state \"Done\" and it transfer the produced products totally, if you want to transfer partially, you have to enter to the MO, go to extra information and click in the picking production link, finally locate the produt to transfer and set the desired quantity then validate the picking."
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: code:addons/mrp_production_action_transfer/wizards/mrp_production_transfer.py:105
+#, python-format
+msgid "Back order <em>%s</em> <b>created</b>."
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.ui.view,arch_db:mrp_production_action_transfer.mrp_production_transfer_form
+msgid "Cancel"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.model.fields,field_description:mrp_production_action_transfer.field_mrp_production_transfer_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.model.fields,field_description:mrp_production_action_transfer.field_mrp_production_transfer_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.model.fields,field_description:mrp_production_action_transfer.field_mrp_production_transfer_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.model.fields,field_description:mrp_production_action_transfer.field_mrp_production_transfer_id
+msgid "ID"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.model.fields,field_description:mrp_production_action_transfer.field_mrp_production_transfer___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.model.fields,field_description:mrp_production_action_transfer.field_mrp_production_transfer_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.model.fields,field_description:mrp_production_action_transfer.field_mrp_production_transfer_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.model,name:mrp_production_action_transfer.model_mrp_production
+msgid "Manufacturing Order"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.actions.act_window,name:mrp_production_action_transfer.action_production_transfer
+#: model:ir.ui.view,arch_db:mrp_production_action_transfer.mrp_production_transfer_form
+msgid "Production Transfer"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.model,name:mrp_production_action_transfer.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.ui.view,arch_db:mrp_production_action_transfer.mrp_production_transfer_form
+msgid "Transfer produced products"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: code:addons/mrp_production_action_transfer/models/mrp_production.py:13
+#: model:ir.model.fields,field_description:mrp_production_action_transfer.field_mrp_production_transfered_qty
+#, python-format
+msgid "Transfered quantity"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.model,name:mrp_production_action_transfer.model_mrp_production_transfer
+msgid "mrp.production.transfer"
+msgstr ""
+
+#. module: mrp_production_action_transfer
+#: model:ir.ui.view,arch_db:mrp_production_action_transfer.mrp_production_transfer_form
+msgid "or"
+msgstr ""
+

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="packing_list_layout">
+            <!-- Multicompany -->
+            <t t-if="not o and doc">
+                <t t-set="o" t-value="doc"/>
+            </t> 
+            
+            <t t-if="o.sale_ids[0].sale_id and 'company_id' in o.sale_ids[0].sale_id">
+                <t t-set="company" t-value="o.sale_ids[0].sale_id.company_id"></t>
+            </t>
+            
+            <t t-if="not o.sale_ids[0].sale_id or not 'company_id' in o.sale_ids[0].sale_id">
+                <t t-set="company" t-value="res_company"></t>
+            </t>
+
+            <t t-call="paperwork_usa.packing_list_header" />
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <t t-call="paperwork_usa.paperwork_usa_layout_footer" />
+        </template>
+
+        <template id="packing_list_header">
+            <div class="header">
+                <div    id="logo">
+                    <img src='/paperwork_usa/static/img/gebesa2.jpg' style="max-height: 40px;margin: 60px 0px 0px 10px; float: left; pading: 20px 0px 0px 10px;"/>
+                </div>
+                <div style="background-color:black; border: 0.5pt solid black; height:10px; padding:0px 0px 0px 0px;">
+                </div>
+                <div width="20%">
+                    <div align="center" style="float: center; margin-left:-50px;left:-120px !importante; text-align:center;font-weight: bold;font-size: 17pt;margin: 0px 170px 0px 20px;">
+                        Packing List
+                    </div>
+                </div>
+                <br/>
+                <div width="80%">
+                    <div align="right"    id="titulo" style="text-align:right;">
+                        <span t-field="company.partner_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}' />
+                    </div>
+                </div>
+                <table width="100%">
+                    <tr>
+                        <th width="5%">
+                            <h6 class="small-1">Ship to</h6>
+                        </th>
+                        <th width="61%">
+                            <t t-if="data[o.id][partner]['ship_line'][0].partner_shipping_id.parent_id">
+                                <span t-field="data[o.id][partner]['ship_line'][0].partner_shipping_id.parent_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                            </t>
+                            <t t-if="not data[o.id][partner]['ship_line'][0].partner_shipping_id.parent_id">
+                                <span t-field="data[o.id][partner]['ship_line'][0].partner_shipping_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                            </t>
+                        </th>
+                        <th width="25%">
+                            <strong>Packing List Number</strong>
+                             <h6 t-field="o.folio"/>
+                            <strong>Date: </strong>
+                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                        </th>
+                    </tr>
+                </table>
+                <br/>
+                <table width="100%">
+                    <tr>
+                        <th align="center" width="37%">
+                            Special Delivery Instructions
+                            <br/>
+                            <h6 class="medium" t-field="o.special_delivery_instructions"/>
+                        </th>
+                        <th align="center" width="37%">
+                            Carrier Name
+                            <br/>
+                            <h6 class="medium" t-field="o.carrier_name"/>
+                        </th>
+                        <th align="center" width="35%">
+                            Trailer Number
+                            <br/>
+                            <h6 class="medium" t-field="o.trailer_number"/>
+                        </th>
+                    </tr>
+                </table>
+                <br/>
+                <br/>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+        </template>
+    </data>
+</odoo>

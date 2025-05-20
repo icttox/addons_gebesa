@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="shipment_tag_3"
+            model="mrp.shipment"
+            string="Etiqueta Embarque 3"
+            report_type="qweb-pdf"
+            name="report_tags.report_shipment_tag_3"
+            file="report_tags.report_shipment_tag_3"
+        />
+        <record id="report_tags.shipment_tag_3" model="ir.actions.report">
+            <field name="paperformat_id" ref="report_tags.paperformat_tag" />
+        </record>
+
+        <template id="report_shipment_tag_3">
+            <t t-call="web.html_container">
+                <t t-call="report_tags.report_tag_layout_empty">
+                    <div class="page" style="font-size: small">
+                        <t t-foreach="docs" t-as="doc">
+                            <t t-foreach="doc.line_ids" t-as="line">
+                                <div style="border: 1px solid #000000;height: 340px">
+                                    <strong>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="text-light bg-dark mt-1">
+                                                    PEDIDO/S.O.:
+                                                </div>
+                                                <div style="height: 70px;font-size: 45px;">
+                                                    <span t-field="line.sale_order_id.name"/>
+                                                </div>
+                                                <div class="text-light bg-dark mt-1">
+                                                    O.C./P.O.:
+                                                </div>
+                                                <div style="height: 70px;font-size: 34px;">
+                                                    <span t-field="line.city"/>, <span t-field="line.sale_order_id.client_order_ref"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </strong>
+                                </div>
+                                <p style="page-break-after:always;">   </p>
+                            </t>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

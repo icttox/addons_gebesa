@@ -1,0 +1,78 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_move_utilities
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-10 18:17+0000\n"
+"PO-Revision-Date: 2021-09-10 13:21-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: account_move_utilities
+#: model:ir.model,name:account_move_utilities.model_account_account
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: account_move_utilities
+#: model:ir.actions.act_window,name:account_move_utilities.account_move_reconcile_action
+#: model:ir.ui.menu,name:account_move_utilities.account_partial_menu
+#: model_terms:ir.ui.view,arch_db:account_move_utilities.account_partial_reconcile_tree_view
+msgid "Account Partial Reconcile"
+msgstr "Conciliación parcial de la cuenta"
+
+#. module: account_move_utilities
+#: code:addons/account_move_utilities/models/account_move.py:63
+#, python-format
+msgid "Esta cuenta requiere partner"
+msgstr ""
+
+#. module: account_move_utilities
+#: model:ir.model,name:account_move_utilities.model_account_move
+msgid "Journal Entries"
+msgstr "Entradas de Diario"
+
+#. module: account_move_utilities
+#: model:ir.model,name:account_move_utilities.model_account_partial_reconcile
+msgid "Partial Reconcile"
+msgstr "Conciliación Parcial"
+
+#. module: account_move_utilities
+#: model:ir.model.fields,field_description:account_move_utilities.field_account_account__required_partner
+msgid "Requiere partner"
+msgstr "Requiere socio"
+
+#. module: account_move_utilities
+#: model:ir.actions.server,name:account_move_utilities.aprs_act_serv_invoice
+msgid "Show me the APRs for invoices"
+msgstr "Mostrar las APRs conciliadas para facturas"
+
+#. module: account_move_utilities
+#: model:ir.actions.server,name:account_move_utilities.amls_act_serv_invoice
+msgid "Show me the reconciled AMLs for Invoices"
+msgstr "Mostrar las AMMLs conciliadas para facturas"
+
+#. module: account_move_utilities
+#: code:addons/account_move_utilities/models/account_move.py:67
+#, python-format
+msgid "The lines of the accounting policy                         have different currencies"
+msgstr "Las líneas de la política contable tienen diferentes monedas"
+
+#. module: account_move_utilities
+#: model_terms:ir.ui.view,arch_db:account_move_utilities.view_account_line_tree
+msgid "Total"
+msgstr ""
+
+#. module: account_move_utilities
+#: code:addons/account_move_utilities/models/account_move.py:22
+#, python-format
+msgid "You cannot have two moves with the same name!"
+msgstr "¡No puedes tener dos movimientos con el mismo nombre!"

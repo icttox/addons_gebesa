@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="view_l10_mx_pedimento_cuentas_Action">
+            <field name="name">Pedimento cuentas</field>
+            <field name="res_model">l10n.mx.immex.pedimento.cuentas</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('clave_documento', 'in', ['IN', 'V1', 'AF', 'RT'])]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Llenar Pedimento Cuentas
+                </p>
+            </field>
+        </record>
+
+
+         <menuitem id="pedimento_cuentas_menu" name="Pedimento Cuentas" parent="pedimento_menu" action="view_l10_mx_pedimento_cuentas_Action"/>
+
+        <record model="ir.ui.view" id="view_l10_mx_Action_pedimento_cuentas_form">
+            <field name="name">pedimento.cuentas.form</field>
+            <field name="model">l10n.mx.immex.pedimento.cuentas</field>
+            <field name="arch" type="xml">
+                <form string="Cuentas Form" create ="false" edit="false" delete ="false">
+                    <sheet>
+                        <group col="6" colspan="2">
+                            <field name='patente'/>
+                            <field name='num_pedimento'/>
+                            <field name='clave_aduana'/>
+                            <field name='pedimento_num'/>
+                            <field name='clave_institucion'/>
+                            <field name='numero_cuenta'/>
+                            <field name='folio_constancia'/>
+                            <field name='fecha_constancia'/>
+                            <field name='tipo_cuenta'/>
+                            <field name='clave_garantia'/>
+                            <field name='valor_unitario_titulo'/>
+                            <field name='total_garantia'/>
+                            <field name='cantidad'/>
+                            <field name='titulos'/>
+                            <field name='fecha_pago_real'/>
+                            <field name='clave_documento'/>
+                            <field name='pedimento_id'/>
+                            <field name='resumen_id'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_l10_mx_Action_pedimento_cuentas_view_tree">
+            <field name="name">Pedimento.cuentas.tree</field>
+            <field name="model">l10n.mx.immex.pedimento.cuentas</field>
+            <field name="arch" type="xml">
+                <tree string="Cuentas Tree" create ="false" edit="false" delete ="false">
+                            <field name='patente'/>
+                            <field name='num_pedimento'/>
+                            <field name='clave_aduana'/>
+                            <field name='pedimento_num'/>
+                            <field name='clave_institucion'/>
+                            <field name='numero_cuenta'/>
+                            <field name='folio_constancia'/>
+                            <field name='fecha_constancia'/>
+                            <field name='tipo_cuenta'/>
+                            <field name='clave_garantia'/>
+                            <field name='valor_unitario_titulo'/>
+                            <field name='total_garantia'/>
+                            <field name='cantidad'/>
+                            <field name='titulos'/>
+                            <field name='fecha_pago_real'/>
+                            <field name='clave_documento'/>
+                            <field name='resumen_id'/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

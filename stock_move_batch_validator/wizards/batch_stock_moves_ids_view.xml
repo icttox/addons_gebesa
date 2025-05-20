@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="batch_moves_ids_view" model="ir.ui.view">
+        <field name="name">Validate Stock Moves by Ids</field>
+        <field name="model">batch.stock.moves.ids</field>
+        <field name="arch" type="xml">
+            <form string="Validate moves">
+                <separator string="Ids for validate"/>
+                <label for="sm_ids" string="Enter the ids of the stock moves you want to validate."/>
+                <!--group col="4"-->
+                <field name="sm_ids"/>
+                <!--/group-->
+                <footer>
+                    <button class="oe_highlight" default_focus="1" name="action_validate_all" string="Validate" type="object"/>
+                    
+                    <button class="oe_link" special="cancel" string="Cancel"/></footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_batch_moves_ids_view" model="ir.actions.act_window">
+        <field name="name">Validate Stock Moves by Ids</field>
+        <field name="res_model">batch.stock.moves.ids</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="batch_moves_ids_view"/>
+        <field name="context">{}</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem groups="stock.group_stock_manager,stock.group_stock_user" id="inventory_special_process" name="Special process" parent="stock.menu_stock_root"/>
+    <menuitem action="action_batch_moves_ids_view" id="menu_validate_stock_moves_batch" name="Validate stock moves by ids" parent="inventory_special_process"/>
+</odoo>

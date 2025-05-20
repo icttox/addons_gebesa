@@ -1,0 +1,62 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_analytic_everywhere
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-23 18:16+0000\n"
+"PO-Revision-Date: 2016-02-23 12:17-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: account_analytic_everywhere
+#: code:addons/account_analytic_everywhere/models/account_invoice.py:13
+#: code:addons/account_analytic_everywhere/models/mrp_production.py:13
+#: code:addons/account_analytic_everywhere/models/purchase_order.py:13
+#: code:addons/account_analytic_everywhere/models/stock_move.py:13
+#: code:addons/account_analytic_everywhere/models/stock_picking.py:13
+#: model:ir.model.fields,field_description:account_analytic_everywhere.field_account_invoice_account_analytic_id
+#: model:ir.model.fields,field_description:account_analytic_everywhere.field_mrp_production_account_analytic_id
+#: model:ir.model.fields,field_description:account_analytic_everywhere.field_purchase_order_account_analytic_id
+#: model:ir.model.fields,field_description:account_analytic_everywhere.field_stock_move_account_analytic_id
+#: model:ir.model.fields,field_description:account_analytic_everywhere.field_stock_picking_account_analytic_id
+#, python-format
+msgid "Analytic Account"
+msgstr "Centro de Costos"
+
+#. module: account_analytic_everywhere
+#: model:ir.model,name:account_analytic_everywhere.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: account_analytic_everywhere
+#: model:ir.model,name:account_analytic_everywhere.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Orden de fabricación"
+
+#. module: account_analytic_everywhere
+#: model:ir.model,name:account_analytic_everywhere.model_purchase_order
+msgid "Purchase Order"
+msgstr "Orden de Compra"
+
+#. module: account_analytic_everywhere
+#: model:ir.model,name:account_analytic_everywhere.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de Almacén"
+
+#. module: account_analytic_everywhere
+#: model:ir.model,name:account_analytic_everywhere.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"
+
+#. module: account_analytic_everywhere
+#: model:ir.model,name:account_analytic_everywhere.model_mrp_production_workcenter_line
+msgid "Work Order"
+msgstr "Orden de Trabajo"

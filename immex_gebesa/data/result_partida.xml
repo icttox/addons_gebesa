@@ -1,0 +1,125 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Header>
+      <wsse:Security S:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsu:Timestamp xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsu:Created>2019-10-25T16:57:53Z</wsu:Created>
+            <wsu:Expires>2019-10-25T16:58:53Z</wsu:Expires>
+         </wsu:Timestamp>
+      </wsse:Security>
+   </S:Header>
+   <S:Body>
+      <ns9:consultarPartidaRespuesta xmlns="http://www.ventanillaunica.gob.mx/common/ws/oxml/respuesta" xmlns:ns2="http://www.ventanillaunica.gob.mx/common/ws/oxml/resolucion" xmlns:ns3="http://www.ventanillaunica.gob.mx/common/ws/oxml/respuestatra" xmlns:ns4="http://www.ventanillaunica.gob.mx/common/ws/oxml/dictamen" xmlns:ns5="http://www.ventanillaunica.gob.mx/common/ws/oxml/observacion" xmlns:ns6="http://www.ventanillaunica.gob.mx/common/ws/oxml/requisito" xmlns:ns7="http://www.ventanillaunica.gob.mx/common/ws/oxml/opinion" xmlns:ns8="http://www.ventanillaunica.gob.mx/pedimentos/ws/oxml/comunes" xmlns:ns9="http://www.ventanillaunica.gob.mx/pedimentos/ws/oxml/consultarpartida">
+         <tieneError>false</tieneError>
+         <ns9:partida>
+            <ns8:numeroPartida>2</ns8:numeroPartida>
+            <ns8:fraccionArancelaria>72091701</ns8:fraccionArancelaria>
+            <ns8:descripcionMercancia>ROLLO DE ACERO ROLADO EN FRIO</ns8:descripcionMercancia>
+            <ns8:unidadMedidaTarifa>
+               <ns8:clave>1</ns8:clave>
+               <ns8:descripcion>KILO</ns8:descripcion>
+            </ns8:unidadMedidaTarifa>
+            <ns8:cantidadUnidadMedidaTarifa>111530.00000</ns8:cantidadUnidadMedidaTarifa>
+            <ns8:unidadMedidaComercial>
+               <ns8:clave>14</ns8:clave>
+               <ns8:descripcion>TONELADA</ns8:descripcion>
+            </ns8:unidadMedidaComercial>
+            <ns8:cantidadUnidadMedidaComercial>111.530</ns8:cantidadUnidadMedidaComercial>
+            <ns8:precioUnitario>13615.44876</ns8:precioUnitario>
+            <ns8:valorComercial>1518531.00</ns8:valorComercial>
+            <ns8:valorAduana>1525451.00</ns8:valorAduana>
+            <ns8:valorDolares>79645.59</ns8:valorDolares>
+            <ns8:valorAgregado>0.00</ns8:valorAgregado>
+            <ns8:metodoValoracion>VALOR DE TRANSACCION DE LAS MERCANCIAS</ns8:metodoValoracion>
+            <ns8:vinculacion>NO EXISTE VINCULACION</ns8:vinculacion>
+            <ns8:paisOrigenDestino>
+               <ns8:clave>CHN</ns8:clave>
+               <ns8:descripcion>CHINA (REPUBLICA POPULAR)</ns8:descripcion>
+            </ns8:paisOrigenDestino>
+            <ns8:paisVendedorComprador>
+               <ns8:clave>USA</ns8:clave>
+               <ns8:descripcion>ESTADOS UNIDOS DE AMERICA</ns8:descripcion>
+            </ns8:paisVendedorComprador>
+            <ns8:identificadores>
+               <ns8:claveIdentificador>
+                  <ns8:clave>XP</ns8:clave>
+                  <ns8:descripcion>EXENCION AL CUMPLIMIENTO DE REGULACIONES Y RESTRICCIONES NO ARANCELARIAS (PERMISOS) CONTENIDOS EN EL APENDICE 9 DEL ANEXO 22 DE LA PRESENTE RESOLUCION</ns8:descripcion>
+               </ns8:claveIdentificador>
+               <ns8:complemento1>C1</ns8:complemento1>
+               <ns8:complemento2>U</ns8:complemento2>
+            </ns8:identificadores>
+            <ns8:identificadores>
+               <ns8:claveIdentificador>
+                  <ns8:clave>EC</ns8:clave>
+                  <ns8:descripcion>EXCEPCION DE CUOTA COMPENSATORIA</ns8:descripcion>
+               </ns8:claveIdentificador>
+               <ns8:complemento1>1</ns8:complemento1>
+            </ns8:identificadores>
+            <ns8:identificadores>
+               <ns8:claveIdentificador>
+                  <ns8:clave>ES</ns8:clave>
+                  <ns8:descripcion>ESTADO DE LA MERCANCIA</ns8:descripcion>
+               </ns8:claveIdentificador>
+               <ns8:complemento1>N</ns8:complemento1>
+            </ns8:identificadores>
+            <ns8:identificadores>
+               <ns8:claveIdentificador>
+                  <ns8:clave>UM</ns8:clave>
+                  <ns8:descripcion>USO DE LA MERCANCIA</ns8:descripcion>
+               </ns8:claveIdentificador>
+               <ns8:complemento1>O</ns8:complemento1>
+            </ns8:identificadores>
+            <ns8:identificadores>
+               <ns8:claveIdentificador>
+                  <ns8:clave>PM</ns8:clave>
+                  <ns8:descripcion>PRESENTACION DE LA MERCANCIA</ns8:descripcion>
+               </ns8:claveIdentificador>
+               <ns8:complemento1>G</ns8:complemento1>
+            </ns8:identificadores>
+            <ns8:gravamenes>
+               <ns8:claveGravamen>
+                  <ns8:clave>6</ns8:clave>
+                  <ns8:descripcion>IGI/IGE</ns8:descripcion>
+               </ns8:claveGravamen>
+               <ns8:tasas>
+                  <ns8:clave>
+                     <ns8:clave>1</ns8:clave>
+                     <ns8:descripcion>PORCENTUAL</ns8:descripcion>
+                  </ns8:clave>
+                  <ns8:tasaAplicable>15.0000000000</ns8:tasaAplicable>
+               </ns8:tasas>
+               <ns8:importes>
+                  <ns8:formaPago>
+                     <ns8:clave>6</ns8:clave>
+                     <ns8:descripcion>PAGO PENDIENTE</ns8:descripcion>
+                  </ns8:formaPago>
+                  <ns8:importe>228818.00</ns8:importe>
+               </ns8:importes>
+            </ns8:gravamenes>
+            <ns8:gravamenes>
+               <ns8:claveGravamen>
+                  <ns8:clave>3</ns8:clave>
+                  <ns8:descripcion>IVA</ns8:descripcion>
+               </ns8:claveGravamen>
+               <ns8:tasas>
+                  <ns8:clave>
+                     <ns8:clave>1</ns8:clave>
+                     <ns8:descripcion>PORCENTUAL</ns8:descripcion>
+                  </ns8:clave>
+                  <ns8:tasaAplicable>16.0000000000</ns8:tasaAplicable>
+               </ns8:tasas>
+               <ns8:importes>
+                  <ns8:formaPago>
+                     <ns8:clave>6</ns8:clave>
+                     <ns8:descripcion>PAGO PENDIENTE</ns8:descripcion>
+                  </ns8:formaPago>
+                  <ns8:importe>282742.00</ns8:importe>
+               </ns8:importes>
+            </ns8:gravamenes>
+            <ns8:observaciones>BM-214192-63143-2             19184.87 USD                 27.29-14                                                     
+BM-214192-63144-2             29508.27 USD                40.645-14                                                     
+BM-214192-63144-1             30952.45 USD                43.595-14                                                     
+NO.FACTURA-PARTIDA              VALOR M.E.  CANTIDAD-UNIDAD FACTURA</ns8:observaciones>
+         </ns9:partida>
+      </ns9:consultarPartidaRespuesta>
+   </S:Body>
+</S:Envelope>

@@ -1,0 +1,9 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_mrp_bom_line_detail,mrp.bom.line.detail,model_mrp_bom_line_detail,mrp.group_mrp_user,1,0,0,0
+access_mrp_bom_line_detai_manager,mrp.bom.line.detail.manager,model_mrp_bom_line_detail,mrp.group_mrp_manager,1,1,1,1
+access_mrp_production_line,mrp.production.line,model_mrp_production_line,mrp.group_mrp_user,1,0,0,0
+access_mrp_production_line_manager,mrp.production.line.manage,model_mrp_production_line,mrp.group_mrp_manager,1,1,1,1
+access_mrp_bom_line_detail_attribute,mrp.bom.line.detail.attribute,model_mrp_bom_line_detail_attribute,mrp.group_mrp_user,1,0,0,0
+access_mrp_bom_line_detai_attribute_manager,mrp.bom.line.detail.attribute.manager,model_mrp_bom_line_detail_attribute,mrp.group_mrp_manager,1,1,1,1
+access_mrp_operation_user,mrp.operation.user,model_mrp_operation,mrp.group_mrp_user,1,0,0,0
+access_mrp_operation_manager,mrp.operation.manage,model_mrp_operation,mrp.group_mrp_manager,1,1,1,1

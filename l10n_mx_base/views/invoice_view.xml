@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_account_invoice_form_l10n_mx_base">
+        <field name="name">view.account.invoice.form.l10n_mx_base</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <div class="oe_form_box_info oe_text_center" attrs="{'invisible':['|', ('cert_msg','=',False), ('pac_id','=',False)]}" groups="l10n_mx_base.group_l10n_mx_base_manager,l10n_mx_base.group_l10n_mx_base_user">
+                    <b><field name='cert_msg' readonly="1"/></b>
+                </div>
+            </xpath>
+            <xpath expr="//form/header" position="inside">
+                <!--div class="oe_button_box" name="button_box"-->
+                <button class="oe_stat_button" name="button_payment"
+                    string="Payments" type="object"
+                    groups="account.group_account_manager"
+                    attrs="{'invisible':[('payment_ids','=',[])]}" icon="fa-bars"/>
+                <field name="payment_ids" invisible="1"/>
+                <!--/div-->
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Technical CFDI Information" groups="base.group_system">
+                    <field name="pac_id" readonly="True"/>
+                    <button name="get_record_size" type="object" string="Get Record Size" class="oe_link oe_inline"
+                            help="Compute the size of this record for auditory purpose"/>
+                    <field name="record_size" readonly="1"/>
+                    <div>
+                        <label for="xml"/>
+                        <field name="xml" nolabel="1" readonly="True"/>
+                    </div>
+                    <field name="json" nolabel="1" invisible="1"/>
+                    <separator/>
+                    <div>
+                        <label for="xml_signed"/>
+                        <field name="xml_signed" nolabel="1" readonly="True"/>
+                    </div>
+                    <group>
+                        <field name="date_stamped" readonly="True"/>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//button[@name='action_invoice_sent']" position="attributes">
+                <attribute name="attrs">{'invisible':['|',('sent','=',True), '|', ('state', '!=', 'open'), '|', ('pac_id', '!=', False), ('xml_signed', '=', False)]}</attribute>
+            </xpath>
+            <!--xpath expr="//button[@name='invoice_print']" position="attributes">
+                <attribute name="attrs">{'invisible':['|',('sent','=',True), '|', ('state', '!=', 'open')]}</attribute>
+            </xpath-->
+            <!--xpath expr="//button[@name='invoice_cancel']" position="after"-->
+                <!--button name="regenerate_xml" attrs="{'invisible':['|', ('state', 'in', ('draft','cancel')), ('cfdi_uuid', '!=', False)]}" string="Regenerate XML" type="object"/>
+                <button name="cancel_xml" attrs="{'invisible':[('state', '!=', 'cancel')]}" string="Re-Cancel XML" type="object"/-->
+                <!--button name="cancel_xml" attrs="{'invisible':['|', ('state', '!=', 'cancel'), ('cfdi_uuid', '!=', False), ('validate_uuid_sat', '!=', 'Vigente')]}" string="Re-Cancel XML" type="object"/-->
+            <!--/xpath-->
+            <xpath expr="//field[@name='comment']" position="after">
+                <group string="Fiscal Information" col="4">
+                    <field name="cfdi_uuid" readonly="True" attrs="{'invisible':[('xml_signed', '=', False)]}"/>
+                    <field name="validate_uuid_sat" invisible="1"></field>
+                    <div>
+                        <label for="validate_uuid_sat"/>
+                        <i class="fa fa-check text-success fa-1x" attrs="{'invisible':[('validate_uuid_sat','!=','Vigente')]}"> Validated</i>
+                        <i class="fa fa-times text-danger fa-1x" attrs="{'invisible':[('validate_uuid_sat','!=','Cancelado')]}"> Cancelled</i>
+                        <i class="fa fa-file-excel-o text-warning fa-1x" attrs="{'invisible':[('validate_uuid_sat','!=','No Encontrado')]}"> Not Found</i>
+                    </div>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                <!--field name="l10n_mx_payment_method_id" groups="l10n_mx_base.group_l10n_mx_base_user" attrs="{'required':[('pac_id','!=',False)]}"/-->
+                <field name="commercial_partner_id" invisible="True"/>
+                <field name="account_payment_id" groups="l10n_mx_base.group_l10n_mx_base_user" domain="['|', ('partner_id', '=', commercial_partner_id), ('partner_id', '=', partner_id)]"
+                    context="{'default_partner_id': commercial_partner_id}"/>
+            </xpath>
+            <!--xpath expr="//field[@name='date_due']" position="after">
+                <field name="l10n_mx_payment_terms"/>
+            </xpath-->
+            <!--xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='account_id']" position="after">
+                <field name="l10n_mx_edi_customs_number" groups="l10n_mx_base.res_group_l10n_mx_edi_customs_number"/>
+            </xpath-->
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_account_invoice_form_l10n_mx_landing_customs_number">
+        <field name="name">view.account.invoice.form.l10n_mx_landing.customs_number</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="l10n_mx_edi_customs.view_account_invoice_form_l10n_mx_landing"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='l10n_mx_edi_customs_number']" position="replace">
+                <field name="l10n_mx_edi_customs_number" groups="l10n_mx_base.res_group_l10n_mx_edi_customs_number"/>
+            </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_account_invoice_supplier_form_inh_l10n_mx_base">
+        <field name="name">view.account.invoice.supplier.form.inh.l10n_mx_base</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <!--xpath expr="//button[@name='invoice_open']" position="after">
+                <button name="action_invoice_document_supplier" type="action" string="Attach Fiscal Documents"/>
+            </xpath-->
+            <xpath expr="//field[@name='comment']" position="after">
+                <group string="Fiscal Information" col="4">
+                    <field name="cfdi_uuid" readonly="True" attrs="{'invisible':[('xml_signed', '=', False)]}"/>
+                    <field name="validate_uuid_sat" invisible="1"></field>
+                    <div>
+                        <label for="validate_uuid_sat"/>
+                        <i class="fa fa-check text-success fa-1x" attrs="{'invisible':[('validate_uuid_sat','!=','Vigente')]}"> Validated</i>
+                        <i class="fa fa-times text-danger fa-1x" attrs="{'invisible':[('validate_uuid_sat','!=','Cancelado')]}"> Cancelled</i>
+                        <i class="fa fa-file-excel-o text-warning fa-1x" attrs="{'invisible':[('validate_uuid_sat','!=','No Encontrado')]}"> Not Found</i>
+                    </div>
+                    <field name="xml_signed" invisible="1"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <!--record model="ir.ui.view" id="view_account_invoice_search_inh_l10n_mx_base">
+        <field name="name">view.account.invoice.search.inh.l10n_mx_base</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='refunds']" position="after">
+                <filter name="not_sent" string="Not Sent" domain="[('sent','=',False)]"/>
+            </xpath>
+        </field>
+    </record-->
+    <record model='ir.ui.view' id='view_account_invoice_line_custom_form'>
+        <field name='name'>view.account.invoice.line.custom.form</field>
+        <field name='model'>account.invoice.line</field>
+        <field name='inherit_id' ref="account.view_invoice_line_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='account_id']" position="after">
+                <field name="l10n_mx_edi_customs_number" groups="l10n_mx_base.res_group_l10n_mx_edi_customs_number"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

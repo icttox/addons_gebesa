@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="res.groups" id="group_bom_massive_import_user">
+            <field name='name'>User bom massive import</field>
+        </record>
+        <record model="res.groups" id="group_bom_massive_import_manager">
+            <field name='name'>Superuser bom massive import</field>
+        </record>
+    <!--    <record id="payroll_import_comp_rule" model="ir.rule">
+            <field name="name">Payroll import</field>
+            <field name="model_id" ref="model_payroll_import"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('company_id', '=', user.company_id.id)]</field>
+        </record> -->
+    </data>
+</odoo>

@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_sale_order_qty
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-19 23:46+0000\n"
+"PO-Revision-Date: 2017-06-19 18:59-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: stock_picking_sale_order_qty
+#: code:addons/stock_picking_sale_order_qty/models/stock_picking.py:60
+#, python-format
+msgid "Missing %s %s"
+msgstr "Faltan %s %s"
+
+#. module: stock_picking_sale_order_qty
+#: code:addons/stock_picking_sale_order_qty/models/stock_picking.py:54
+#, python-format
+msgid "The BOM %s is not the same as when the                             order was captured"
+msgstr "La lista de materiales de %s no es igual que cuando se valido el pedido"
+
+#. module: stock_picking_sale_order_qty
+#: code:addons/stock_picking_sale_order_qty/models/stock_picking.py:46
+#, python-format
+msgid "The BOM %s is not the same as when the                         order was captured"
+msgstr "La lista de materiales de %s no es igual que cuando se valido el pedido"
+
+#. module: stock_picking_sale_order_qty
+#: model:ir.model,name:stock_picking_sale_order_qty.model_stock_picking
+msgid "Transfer"
+msgstr ""

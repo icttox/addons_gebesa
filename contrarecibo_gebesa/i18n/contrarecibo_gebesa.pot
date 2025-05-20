@@ -1,0 +1,235 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* contrarecibo_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-24 18:32+0000\n"
+"PO-Revision-Date: 2016-11-24 18:32+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.actions.act_window,help:contrarecibo_gebesa.action_contrarecibo_supplier
+msgid "Click to register a Contrarecibo"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: code:addons/contrarecibo_gebesa/models/contrarecibo.py:36
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_company_id
+#, python-format
+msgid "Company"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.ui.view,arch_db:contrarecibo_gebesa.contrarecibo_supplier_form
+msgid "Contrarecibo"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:res.groups,name:contrarecibo_gebesa.group_contrarecibo
+msgid "Contrarecibo / Manager"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.ui.view,arch_db:contrarecibo_gebesa.contrarecibo_supplier_tree
+msgid "Contrarecibo Supplier"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: code:addons/contrarecibo_gebesa/models/contrarecibo.py:42
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_date
+#, python-format
+msgid "Date"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,help:contrarecibo_gebesa.field_contrarecibo_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.ui.view,arch_db:contrarecibo_gebesa.contrarecibo_supplier_form
+msgid "Enter some name..."
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: code:addons/contrarecibo_gebesa/models/contrarecibo.py:16
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_consecutive
+#, python-format
+msgid "Folio"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.actions.act_window,name:contrarecibo_gebesa.action_contrarecibo_supplier
+#: model:ir.ui.menu,name:contrarecibo_gebesa.menu_action_contrarecibo_supplier_gebesa
+msgid "Gebesa Contrarecibo Proveedor"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_id
+msgid "ID"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,help:contrarecibo_gebesa.field_contrarecibo_message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,help:contrarecibo_gebesa.field_contrarecibo_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.ui.view,arch_db:contrarecibo_gebesa.contrarecibo_supplier_form
+msgid "Invoices"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.ui.view,arch_db:contrarecibo_gebesa.contrarecibo_supplier_form
+msgid "Invoices for Review"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_message_last_post
+msgid "Last Message Date"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.actions.act_window,help:contrarecibo_gebesa.action_contrarecibo_supplier
+msgid "Make your first Contrarecibo Supplier."
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: code:addons/contrarecibo_gebesa/models/contrarecibo.py:25
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_name
+#, python-format
+msgid "Name"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,help:contrarecibo_gebesa.field_contrarecibo_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,help:contrarecibo_gebesa.field_contrarecibo_message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: code:addons/contrarecibo_gebesa/models/contrarecibo.py:31
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_partner_id
+#, python-format
+msgid "Supplier"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model,name:contrarecibo_gebesa.model_contrarecibo
+msgid "Supplier Contrarecibo"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: code:addons/contrarecibo_gebesa/models/contrarecibo.py:48
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_invoice_ids
+#, python-format
+msgid "Supplier Invoices"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: sql_constraint:contrarecibo:0
+msgid "This field must be unique!"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,field_description:contrarecibo_gebesa.field_contrarecibo_website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: contrarecibo_gebesa
+#: model:ir.model.fields,help:contrarecibo_gebesa.field_contrarecibo_website_message_ids
+msgid "Website communication history"
+msgstr ""
+

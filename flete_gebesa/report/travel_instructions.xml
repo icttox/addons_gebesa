@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--
+        <template id="assets_specific" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/flete_gebesa/static/src/css/travel_instructions.css"/>
+            </xpath>
+        </template> -->
+
+        <report
+            id="travel_instructions"
+            model="tms.travel"
+            string="Travel Instructions"
+            report_type="qweb-pdf"
+            name="flete_gebesa.report_travel_instructions"
+            file="flete_gebesa.report_travel_instructions"
+        />
+
+        <template id="report_travel_instructions_document">
+            <t t-set="cont" t-value="1"/>
+            <t t-call="report.internal_layout">
+                <!--
+                <div class="encabezado">
+                    <div class="header">
+                        <h6 class="frist">KHE</h6>
+                    </div>
+                </div> -->
+                <div class="page" style="margin-top: 0px; background: black;color: white; 7pt; text-align:left; border: 1pt solid white; position:relative;">
+                    <div class="col-xs-12" style="border-left: 1px solid #000000;border-right: 0px solid #000000;border-bottom: 0px solid #000000;height: 15px; position:absolute; left:0pt; ">
+                        <!--INICIO DEL PRIMER RENGLON DEL ENCABEZADO -->
+                        
+
+                        <div class="col-xs-12" style="background: white;border: 1pt solid white; position:absolute; left:0pt; top:115pt; text-align:center; width:1050pt; height:55pt">
+                            <!--INICIA PRIMER BLOQUE-->
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black; left:-11pt;">
+                                Fólio:
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;background: white;color: black; font-size:9pt; height:14pt; text-align:left; border: 1pt solid black; left:-11pt;">
+                                <span t-esc="trav.name" style="margin-top: 0px; font-size: 9pt; text-align:left; line-height:-2;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left;border: 1pt solid black; left:-11pt;">
+                                Fecha:
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;background: white;color: black; font-size:9pt; height:14pt; border: 1pt solid black; text-align:left; left:-11pt;">
+                                <span t-esc="trav.date" style="margin-top: 0px;font-size: 9pt; text-align:left;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black; left:-11pt;">
+                                Tabulador:
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;background: white;color: black; font-size:9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.route_id.normal_box" style="margin-top: 0px;font-size: 9pt; text-align:left;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left;border: 1pt solid black;left:-11pt;">
+                                Repartos:
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;ackground: white;color: black; font-size:9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                0
+                            </div>
+                            <!--TERMINA PRIMER BLOQUE-->
+                            <!--INICIA SEGUNDO BLOQUE-->
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                Camión:
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;background: white;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.unit_id.name" style="margin-top: 0px; font-size: 9pt; text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left;border: 1pt solid black;left:-11pt;">
+                                Operador:
+                            </div>
+                            <div class="col-xs-4" style="margin-top: 0px;background: white;color: black;font-size: 9pt; height:14pt; border: 1pt solid black; text-align:left;left:-11pt;">
+                                <span t-esc="trav.employee_id.name" style="margin-top: 0px;font-size: 9pt;text-align:left; vertical-top:text-center;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                Celular:
+                            </div>
+                            <div class="col-xs-3" style="margin-top: 0px;background: white;color: black;font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.employee_id.work_phone" style="margin-top: 0px;font-size: 9pt;text-align:left;top:"/>
+                            </div>
+                            <!-- TERMINA LO SEGUNDO-->
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                Caja:
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: white;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.unit_id.load_capacity" style="margin-top: 0px;font-size: 9pt;text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;background: white;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.unit_id.load_capacity" style="margin-top: 0px;font-size: 8pt;text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                Placas:
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;background: white;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.unit_id.license_plate" style="margin-top: 0px;font-size: 9pt;text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt;height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                Destino:
+                            </div>
+                            <div class="col-xs-4" style="margin-top: 0px;background: white;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.route_id.name" style="margin-top: 0px;font-size: 9pt;text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <!-- TERMINA LO TERCERO-->
+                            <!-- INICIA EL CUARTO BLOQUE-->
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black; left:-11pt;">
+                                Kms:
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: white;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.route_id.distance" style="margin-top: 0px;font-size: 9pt;text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt;height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                Fletera:
+                            </div>
+                            <div class="col-xs-3" style="margin-top: 0px;background: white;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.user_id.company_id.name" style="margin-top: 0px;font-size: 9pt; text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt;height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                Fecha Sal:
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;background: white;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.date_start" style="margin-top: 0px;font-size: 9pt;text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt;height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                Embarque:
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;background: white;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.shipment_id.folio" style="margin-top: 0px;font-size: 9pt; text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <!-- TERMINA CUARTO BLOQUE-->
+                            <!-- INICIA EL QUINTO BLOQUE-->
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                Waybill:
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;background: white;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.waybill_ids.name" style="margin-top: 0px;font-size: 9pt; text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                Deliver Date:
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;background: white;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.date_end" style="margin-top: 0px;font-size: 9pt;text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                Origin:
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;background: white;color: black; font-size: 8pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.departure_id.name" style="margin-top: 0px;font-size: 9pt;text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <div class="col-xs-1" style="margin-top: 0px;background: #BDBDBD;color: black; font-size: 9pt;height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                Destination:
+                            </div>
+                            <div class="col-xs-2" style="margin-top: 0px;background: white;color: black; font-size: 9pt; height:14pt; text-align:left; border: 1pt solid black;left:-11pt;">
+                                <span t-esc="trav.arrival_id.name" style="margin-top: 0px; font-size: 9pt;text-align:left;vertical-top:text-center;"/>
+                            </div>
+                            <!-- TERMINA EL QUINTO BLOQUE-->
+                        </div>
+                        <!-- INICIA DIV COBRANZA-->
+                        <div class="col-xs-12" style="background: black;color;white;border: 1pt solid white; font-size: 15pt;position:absolute; left:0pt; top:186pt; text-align:center; width:1029pt; height:28pt">
+                            <strong>COBRANZA</strong>
+                        </div>
+                        <!-- TERMINA DIV COBRANZA-->
+                        <!-- INICIA DIV TABLA-->
+                        <div class="col-xs-12" style="background: black;color;white;border: 1pt solid blue; font-size: 10pt;position:absolute; left:0pt; top:216pt; text-align:center; width:1029pt; height:95pt">
+                            <!--TABLAAAAA -->
+                            <table class="table" width="130%" style="position:relative;color:white;left:-11pt;width:1026pt;">
+                                <tr style="position:relative;border: 1pt solid black;font-size: 12pt; padding:0pt; left:-30pt;">
+                                    <td width="4%" style="border: 1pt solid black;font-size: 12pt; padding:0pt;background: #BDBDBD;color: black;">
+                                        <h6 class="small-1"># Part</h6>
+                                    </td>
+                                    <td width="10%" style="border: 1pt solid black;font-size: 12pt; padding:0pt;background: #BDBDBD;color: black; left:-10%;text-align:center;">
+                                        <div>
+                                            <h6 class="small-1">Fecha/Hora Entrega</h6>
+                                        </div>
+                                    </td>
+                                    <td width="31%" style="border: 1pt solid black;font-size: 12pt; padding:0pt;background: #BDBDBD;color: black;text-align:center;">
+                                        <div>
+                                            <h6 class="small-1">Cliente</h6>
+                                        </div>
+                                    </td>
+                                    <td width="35%" style="border: 1pt solid black;font-size: 12pt; padding:0pt;background: #BDBDBD;color: black;text-align:center;">
+                                        <div>
+                                            <h6 class="small-1">Ins. De Cobr</h6>
+                                        </div>
+                                    </td>
+                                    <td width="7%" style="border: 1pt solid black;font-size: 12pt; padding:0pt;background: #BDBDBD;color: black;text-align:center;">
+                                        <div>
+                                            <h6 class="small-1">Recibo</h6>
+                                        </div>
+                                    </td>
+                                    <td width="7%" style="border: 1pt solid black;font-size: 12pt; padding:0pt;background: #BDBDBD;color: black;text-align:center;">
+                                        <div>
+                                            <h6 class="small-1">Imp Rec</h6>
+                                        </div>
+                                    </td>
+                                    <td width="7%" style="border: 1pt solid black;font-size: 10pt; padding:0pt;background: #BDBDBD;color: black;text-align:center;">
+                                        <div>
+                                            <h6 class="small-1">Flete Rec</h6>
+                                        </div>
+                                    </td> 
+                                </tr>
+                                <!--TERMINA SECCION DE ENCABEZADOS -->
+                                <t t-foreach="part" t-as="par">                                    
+                                    <tr><!--
+                                        <td width="4%" style="border: 1pt solid black;font-size: 12pt; padding:0pt;background: #BDBDBD;color: black;">
+                                            <div>
+                                                <h6 class="small-1">Fecha/Hora Entrega</h6>
+                                            </div>
+                                        </td>
+                                        <td width="10%" style="border: 1pt solid black;font-size: 12pt; padding:0pt;background: #BDBDBD;color: black; left:-10%;text-align:center;">
+                                            <div>
+                                                <h6 class="small-1">Fecha/Hora Entrega</h6>
+                                            </div>
+                                        </td>
+                                        <td width="31%" style="border: 1pt solid black;font-size: 12pt; padding:0pt;background: #BDBDBD;color: black;text-align:center;">
+                                            <t t-foreach="part" t-as="par">
+                                                <td width="4%" style="border: 1pt solid black;font-size: 8pt; padding:0pt;background: #BDBDBD;color: black;">
+                                                    <span t-esc="par"/>
+                                                </td>
+                                            </t>
+                                        </td> -->
+                                        <td width="4%" style="border: 1pt solid black;font-size: 8pt; padding:0pt;background: #BDBDBD;color: black;">
+                                            <span t-esc="par"/>
+                                        </td>
+                                        <td width="4%" style="border: 1pt solid black;font-size: 8pt; padding:0pt;background: #BDBDBD;color: black;">
+                                            <span t-esc="par"/>
+                                        </td>
+                                        <td width="4%" style="border: 1pt solid black;font-size: 8pt; padding:0pt;background: #BDBDBD;color: black;">
+                                            <span t-esc="par"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+
+                        </div>
+                    </div> <!--DIV COL-12 -->
+                </div> <!--PAGE -->               
+            </t>
+        </template>
+
+        <template id="report_travel_instructions">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="flete_gebesa.report_travel_instructions_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='helpdesk_ticket_view'>
+            <field name='name'>helpdesk.ticket.view</field>
+            <field name='model'>helpdesk.ticket</field>
+            <field name='inherit_id' ref='helpdesk.helpdesk_ticket_view_form'/>
+            <field name='arch' type='xml'>
+                <header>
+                    <button name="create_request_maintenance" class="oe_highlight" string="Request Maintenance" type="object" attrs="{'invisible':[('maintenance_id', '!=', False)]}"/>
+                    <button name="create_request_task" class="oe_highlight" string="Create Task" type="object"/>
+                </header>
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name='maintenance_id' readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

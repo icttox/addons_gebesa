@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='include_parent_invoice_form'>
+            <field name='name'>include.parent.invoice.form</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref="invoice_apply_advance_invoice.invoice_apply_advance_form_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='advance_id']" position="attributes">
+                   <attribute name="context">{'include_padre': True, 'partner_id': partner_id}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

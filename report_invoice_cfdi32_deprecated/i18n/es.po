@@ -1,0 +1,194 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* report_invoice_cfdi32
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-06 16:12+0000\n"
+"PO-Revision-Date: 2017-10-06 11:27-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "$ 0.00"
+msgstr "$ 0.00"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Account payment:</strong>"
+msgstr "<strong>Cuenta de pago:</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Amount in words:</strong>"
+msgstr "<strong>Importe con letra</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Certification Date:</strong>"
+msgstr "<strong>Fecha de certificación</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Digital Seal:</strong>"
+msgstr "<strong>Sello digital:</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Discounts</strong>"
+msgstr "<strong>Descuentos</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Emissor certificate:</strong>"
+msgstr "<strong>Certificado emisor:</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Fiscal ID:</strong>"
+msgstr "<strong>Id Fiscal:</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Fiscal Position Remark:</strong>"
+msgstr "<strong>Observación posición fiscal:</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Fiscal Regime:</strong>"
+msgstr "<strong>Regimen Fiscal:</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Original String:</strong>"
+msgstr "<strong>Cadena Original:</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Payment method:</strong>"
+msgstr "<strong>Metodo de pago:</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Payment way:</strong>"
+msgstr "<strong>Forma de pago:</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>SAT Stamp:</strong>"
+msgstr "<strong>Sello SAT:</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>SAT certificate:</strong>"
+msgstr "<strong>Certificado SAT:</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>Subtotal</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>Total</strong>"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "Amount"
+msgstr "Importe"
+
+#. module: report_invoice_cfdi32
+#: code:addons/report_invoice_cfdi32/models/account_invoice.py:33
+#, python-format
+msgid "An error has occurred while accessing report template"
+msgstr "Se ha producido un error al acceder a la plantilla de informe"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "Code"
+msgstr "Código"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "Description"
+msgstr "Descripción"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "Disc.(%)"
+msgstr "Desct.(%)"
+
+#. module: report_invoice_cfdi32
+#: model:ir.model.fields,field_description:report_invoice_cfdi32.field_report_report_invoice_cfdi32_report_cfdi_display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: report_invoice_cfdi32
+#: model:ir.model.fields,field_description:report_invoice_cfdi32.field_report_report_invoice_cfdi32_report_cfdi_id
+msgid "ID"
+msgstr "ID"
+
+#. module: report_invoice_cfdi32
+#: model:ir.model,name:report_invoice_cfdi32.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: report_invoice_cfdi32
+#: model:ir.actions.report.xml,name:report_invoice_cfdi32.account_invoices
+msgid "Invoices CFDi Personalized"
+msgstr "Facturas CFDi personalizadas"
+
+#. module: report_invoice_cfdi32
+#: model:ir.model.fields,field_description:report_invoice_cfdi32.field_report_report_invoice_cfdi32_report_cfdi___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "Price"
+msgstr "Precio"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "Rate"
+msgstr "Tasa"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "Retained"
+msgstr "Retenido"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: report_invoice_cfdi32
+#: model:ir.ui.view,arch_db:report_invoice_cfdi32.report_cfdi_document
+msgid "Unit Price"
+msgstr "Precio unitario"
+
+#. module: report_invoice_cfdi32
+#: model:ir.model,name:report_invoice_cfdi32.model_report_report_invoice_cfdi32_report_cfdi
+msgid "report.report_invoice_cfdi32.report_cfdi"
+msgstr "report.report_invoice_cfdi32.report_cfdi"

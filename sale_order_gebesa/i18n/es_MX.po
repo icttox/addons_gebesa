@@ -1,0 +1,626 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_gebesa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20211011\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-04 19:28+0000\n"
+"PO-Revision-Date: 2023-07-04 13:32-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:350
+#: code:addons/sale_order_gebesa/models/sale_order.py:360
+#, python-format
+msgid "%s %s %s"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,help:sale_order_gebesa.field_product_product__type
+#: model:ir.model.fields,help:sale_order_gebesa.field_product_template__type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+"Un producto almacenable es un producto para el que gestiona stock. La aplicación de inventario debe estar instalada.\n"
+"Un producto consumible es un producto para el que no se gestionan las existencias.\n"
+"Un servicio es un producto no material."
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__freight_expense
+msgid "Actual Freight Expense"
+msgstr "Gastos de flete reales"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__sale_picking_adm
+msgid "Admin Sale Picking"
+msgstr "Admin Pedido - Picking"
+
+#. module: sale_order_gebesa
+#: model:ir.model,name:sale_order_gebesa.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "Cuenta analítica"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_account_analytic_account__use_salesorder
+msgid "Analytic available for sales order"
+msgstr "Analítica disponible para pedido de cliente"
+
+#. module: sale_order_gebesa
+#: model:res.groups,name:sale_order_gebesa.group_approve_button
+msgid "Approve Button"
+msgstr "Botón Aprobar"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__approve
+msgid "Approve Status"
+msgstr "Estatus de Aprobación"
+
+#. module: sale_order_gebesa
+#: selection:sale.order,approve:0
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: sale_order_gebesa
+#: model_terms:ir.ui.view,arch_db:sale_order_gebesa.view_order_form
+msgid "Aprobar"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: model_terms:ir.ui.view,arch_db:sale_order_gebesa.view_order_form
+msgid "Asigned Warehouse"
+msgstr "Planta Responsable"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order_line__low_mu
+msgid "Bajo M.U."
+msgstr ""
+
+#. module: sale_order_gebesa
+#: model_terms:ir.ui.view,arch_db:sale_order_gebesa.view_order_form
+msgid "Calcular margen"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_product_product__sale_product_quantity
+msgid "Cantidad a vender"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__webiste_operator
+msgid "Captured by Operator"
+msgstr "Capturado por el operador"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__closing_reason
+msgid "Closing Reason"
+msgstr "Razones para cerrar"
+
+#. module: sale_order_gebesa
+#: selection:sale.order,credit_status:0
+msgid "Conditioned"
+msgstr "Condicionado"
+
+#. module: sale_order_gebesa
+#: selection:product.template,type:0
+msgid "Consumable"
+msgstr "Consumible"
+
+#. module: sale_order_gebesa
+#: model:ir.model,name:sale_order_gebesa.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order_line__purchase_price_geb
+msgid "Cost"
+msgstr "Coste"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__date_approved
+msgid "Credit Release Date"
+msgstr "Fecha Liberación por Crédito"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,help:sale_order_gebesa.field_sale_order__date_approved
+msgid "Credit Release Date."
+msgstr "Fecha Liberación por Crédito"
+
+#. module: sale_order_gebesa
+#: model_terms:ir.ui.view,arch_db:sale_order_gebesa.view_order_form
+msgid "Credit and collection"
+msgstr "Credito y cobranza"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__credit_status
+msgid "Credit status"
+msgstr "Estatus Crédito"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__date_delivery
+msgid "Date delivery"
+msgstr "Fecha de entrega"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__date_production
+msgid "Date of Production Termination"
+msgstr "Fecha de Terminación de Producción"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__date_reception
+msgid "Date reception"
+msgstr "Fecha de recepción O.C."
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_account_analytic_account__warehouse_id
+msgid "Default warehouse"
+msgstr "Almacen por defecto"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__partner_shipping_id
+msgid "Delivery Address"
+msgstr "Dirección de entrega"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,help:sale_order_gebesa.field_sale_order__partner_shipping_id
+msgid "Delivery address for current sales order."
+msgstr "Dirección de entrega para este pedido"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,help:sale_order_gebesa.field_sale_order__complement_saleorder_id
+msgid "Displays a list of sales orders"
+msgstr "Muestra una lista con los Pedidos de Venta"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:377
+#: code:addons/sale_order_gebesa/models/sale_order.py:383
+#, python-format
+msgid "Este no es un Pedido de Reposición solicita                     la aprobación de Credito y Cobranza."
+msgstr ""
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/product_product_sale.py:46
+#, python-format
+msgid "Este producto solo puede vender multiplos de %s"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__executive
+msgid "Executive"
+msgstr "Ejecutivo"
+
+#. module: sale_order_gebesa
+#: selection:sale.order,priority:0
+msgid "Express"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/stock_picking.py:27
+#, python-format
+msgid ""
+"Favor de contactar al admistador del sistema. \n"
+"                 Esta tansferencia creara movimientos extras"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order_line__freight_amount
+msgid "Freight amount"
+msgstr "Importe de flete"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__perc_freight
+msgid "Freight percentage"
+msgstr "% de flete"
+
+#. module: sale_order_gebesa
+#: selection:sale.order,priority:0
+msgid "High"
+msgstr "Alta"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__complement_saleorder_id
+msgid "In complement:"
+msgstr "En complemento de:"
+
+#. module: sale_order_gebesa
+#: selection:sale.order,manufacture:0
+msgid "Line"
+msgstr "Linea"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__manufacture
+msgid "Manufacture"
+msgstr "Manufactura"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__priority
+msgid "Manufacturing priority"
+msgstr "Prioridad Fabricación"
+
+#. module: sale_order_gebesa
+#: selection:product.template,type:0
+msgid "Material"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order_line__net_sale
+msgid "Net sales"
+msgstr "Venta Neta"
+
+#. module: sale_order_gebesa
+#: model_terms:ir.ui.view,arch_db:sale_order_gebesa.view_order_form
+msgid "No Entregar"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__no_facturar
+msgid "No Facturar"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: selection:sale.order,credit_status:0
+msgid "Normal"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: selection:sale.order,approve:0
+msgid "Not Approved"
+msgstr "No Aprobado"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__credit_note
+msgid "Note Credit and Collections"
+msgstr "Nota de Crédito y Cobranza"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_res_partner__notify_approval
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_res_users__notify_approval
+#: model_terms:ir.ui.view,arch_db:sale_order_gebesa.view_res_partner_np_form
+msgid "Notify Sale Approval"
+msgstr "Notificar Aprobación de Venta"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__notify_approval
+msgid "Notify approval"
+msgstr "Notificar Aprobación"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__manufacturing_observations
+msgid "Observations Manufacturing"
+msgstr "Observaciones de Fabricación"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order_line__margin_justification
+msgid "P. M. justification"
+msgstr "Jistificacion M.B."
+
+#. module: sale_order_gebesa
+#: model:ir.model,name:sale_order_gebesa.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: sale_order_gebesa
+#: model:ir.model,name:sale_order_gebesa.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_product_product__type
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_product_template__type
+msgid "Product Type"
+msgstr "Tipo de producto"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:308
+#, python-format
+msgid "Product line %s does not have a route assigned"
+msgstr "Línea de productos %s no tiene una ruta asignada"
+
+#. module: sale_order_gebesa
+#: model_terms:ir.ui.view,arch_db:sale_order_gebesa.view_order_form
+msgid "Production data"
+msgstr "Datos de produccion"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__profit_margin
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order_line__profit_margin
+msgid "Profit margin"
+msgstr "Margen de Contribucion"
+
+#. module: sale_order_gebesa
+#: selection:sale.order,priority:0
+msgid "Quick Ship"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: selection:product.template,type:0
+msgid "Quotation"
+msgstr "Cotización"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__replenishing_motif
+msgid "Reason for the replenishment"
+msgstr "Motivo de la Reposición"
+
+#. module: sale_order_gebesa
+#: selection:sale.order,manufacture:0 selection:sale.order,priority:0
+msgid "Replenishment"
+msgstr "Reposición"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__respo_reple
+msgid "Responsible of replenishment"
+msgstr "Responsable de reposición"
+
+#. module: sale_order_gebesa
+#: model:ir.model,name:sale_order_gebesa.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Ventas. Anticipo pago factura"
+
+#. module: sale_order_gebesa
+#: model:ir.model,name:sale_order_gebesa.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea pedido de venta"
+
+#. module: sale_order_gebesa
+#: model_terms:ir.ui.view,arch_db:sale_order_gebesa.view_order_form
+msgid "Sales data"
+msgstr "Datos ventas"
+
+#. module: sale_order_gebesa
+#: selection:sale.order,priority:0
+msgid "Sample"
+msgstr "Muestra"
+
+#. module: sale_order_gebesa
+#: selection:sale.order,manufacture:0
+msgid "Semi special"
+msgstr "Semiespecial"
+
+#. module: sale_order_gebesa
+#: selection:product.template,type:0
+msgid "Service"
+msgstr "Servicio"
+
+#. module: sale_order_gebesa
+#: selection:sale.order,manufacture:0
+msgid "Special"
+msgstr "Especial o chapa"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order_line__standard_cost
+msgid "Standard cost"
+msgstr "Costo estandar"
+
+#. module: sale_order_gebesa
+#: selection:product.template,type:0
+msgid "Storable Product"
+msgstr "Almacenable"
+
+#. module: sale_order_gebesa
+#: model_terms:ir.ui.view,arch_db:sale_order_gebesa.view_order_form
+msgid "Suggest Approval"
+msgstr "Sugerir aprobación"
+
+#. module: sale_order_gebesa
+#: model:res.groups,name:sale_order_gebesa.group_suggested_button
+msgid "Suggested Approve Button"
+msgstr "Botón de Aprobación Sugerida"
+
+#. module: sale_order_gebesa
+#: selection:sale.order,approve:0
+msgid "Suggested for Approval"
+msgstr "Sugerir Para Aprobación"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__date_suggested
+msgid "Suggestion Date Approval"
+msgstr "Fecha de Sugerencia para Aprobación"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,help:sale_order_gebesa.field_sale_order__date_suggested
+msgid "Suggestion Date Approval."
+msgstr "Fecha de Sugerencia para Aprobación"
+
+#. module: sale_order_gebesa
+#: selection:sale.order,credit_status:0
+msgid "Suspended for Collection"
+msgstr "Suspendido por Cobranza"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:299
+#, python-format
+msgid ""
+"The following field is not invalid:\n"
+"Analytic Account"
+msgstr ""
+"El siguiente campo no es válido:\n"
+"Cuenta analítica"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:289
+#, python-format
+msgid ""
+"The following field is not invalid:\n"
+"Delivery Address"
+msgstr ""
+"El siguiente campo no es inválido:\n"
+"Dirección de entrega"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:286
+#, python-format
+msgid ""
+"The following field is not invalid:\n"
+"Manufacture"
+msgstr ""
+"El siguiente campo no es válido:\n"
+"Manufactura"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:295
+#, python-format
+msgid ""
+"The following field is not invalid:\n"
+"Manufacturing                           priority"
+msgstr ""
+"El siguiente campo no es válido:\n"
+"Prioridad Fabricación"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:283
+#, python-format
+msgid ""
+"The following field is not invalid:\n"
+"Notify approval"
+msgstr ""
+"El siguiente campo no es válido:\n"
+"Notificar Aprobación"
+
+#. module: sale_order_gebesa
+#: sql_constraint:sale.order:0
+msgid "The order name must be unique"
+msgstr "El nombre del pedido debe ser unico"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,help:sale_order_gebesa.field_sale_order_line__volume
+msgid "The volume in m3."
+msgstr "El volumen en m3."
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:399
+#, python-format
+msgid "This Sale Order is already Suggested for Approval"
+msgstr "Esta Orden de Venta ya está Sugerida para la Aprobación"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:373
+#, python-format
+msgid "This Sale Order is already approved"
+msgstr "Esta Orden de Venta ya está Aprobada"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_make_invoice_advance.py:17
+#, python-format
+msgid "This Sale Order is not be invoiced"
+msgstr "Esta Orden de Venta no se Facturará"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:303
+#, python-format
+msgid "This Sale Order not has Date Reception"
+msgstr "Esta orden de venta no tiene fecha de recepción"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:401
+#, python-format
+msgid "This Sale Order not has Products Captured"
+msgstr "Esta Orden de Venta no tiene Productos Capturados"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:301
+#: code:addons/sale_order_gebesa/models/sale_order.py:403
+#, python-format
+msgid "This Sales Order does not have the reference of the customer captured"
+msgstr "Esta orden de venta no tiene la referencia del cliente capturado"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/stock_picking.py:21
+#, python-format
+msgid "This Sales Order is not invoiced"
+msgstr "Esta Orden de Venta no está Facturada"
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:387
+#, python-format
+msgid "This customer has or will have soon an over credit                     please review the partner terms."
+msgstr "Este cliente tiene o tendrá pronto un exceso de crédito, revise los términos del socio."
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__total_freight
+msgid "Total Freight"
+msgstr "Total flete"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__total_cost
+msgid "Total cost"
+msgstr "Costo total"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__total_installation
+msgid "Total installation"
+msgstr "Total instalacion"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__total_net_sale
+msgid "Total net sale"
+msgstr "Vta neta total"
+
+#. module: sale_order_gebesa
+#: model:ir.model,name:sale_order_gebesa.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order_line__volume
+msgid "Volume"
+msgstr "Volumen"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,help:sale_order_gebesa.field_account_analytic_account__warehouse_id
+msgid "Warehouse for the sales order"
+msgstr "Almacén para el pedido de cliente"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order_line__installation_amount
+msgid "installation amount"
+msgstr "Importe de instalación"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__perc_installation
+msgid "installation percentage"
+msgstr "% de instalación"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,help:sale_order_gebesa.field_sale_order_line__margin_justification
+msgid "low-margin justification for the sales order"
+msgstr "Justificacion margen bajo para el pedido de venta"
+
+#. module: sale_order_gebesa
+#: model:ir.model.fields,field_description:sale_order_gebesa.field_sale_order__not_be_billed
+msgid "not be billed"
+msgstr "No facturar"
+
+#. module: sale_order_gebesa
+#: model:ir.model,name:sale_order_gebesa.model_sale_order
+msgid "sale.order"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:325
+#, python-format
+msgid "sale_order_gebesa fin: %s"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/sale_order.py:279
+#, python-format
+msgid "sale_order_gebesa inicio: %s"
+msgstr ""
+
+#. module: sale_order_gebesa
+#: code:addons/sale_order_gebesa/models/product_product_sale.py:34
+#: code:addons/sale_order_gebesa/models/product_product_sale.py:48
+#, python-format
+msgid "sale_order_gebesa_product_product_sale ini: %s"
+msgstr ""

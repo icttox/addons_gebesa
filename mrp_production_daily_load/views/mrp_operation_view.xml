@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_operation_view_form_inherit" model="ir.ui.view">
+        <field name="name">mrp.operation.form.inherit</field>
+        <field name="model">mrp.operation</field>
+        <field name="inherit_id" ref="mrp_cut_detail.mrp_operation_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <div>
+                    <label for="daily_load_available_op"/>
+                    <field name="daily_load_available_op"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

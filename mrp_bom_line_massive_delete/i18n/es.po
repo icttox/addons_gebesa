@@ -1,0 +1,84 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mrp_bom_line_massive_delete
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-18 21:59+0000\n"
+"PO-Revision-Date: 2017-10-18 21:59+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.ui.view,arch_db:mrp_bom_line_massive_delete.view_massive_delete
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_delete.field_mrp_bom_line_massive_delete_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_delete.field_mrp_bom_line_massive_delete_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_delete.field_mrp_bom_line_massive_delete_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_delete.field_mrp_bom_line_massive_delete_id
+msgid "ID"
+msgstr ""
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_delete.field_mrp_bom_line_massive_delete___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_delete.field_mrp_bom_line_massive_delete_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_delete.field_mrp_bom_line_massive_delete_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.actions.act_window,name:mrp_bom_line_massive_delete.action_massive_delete_wizard
+#: model:ir.ui.menu,name:mrp_bom_line_massive_delete.massive_delete_wizard_menu
+#: model:ir.ui.view,arch_db:mrp_bom_line_massive_delete.view_massive_delete
+msgid "Massive Delete"
+msgstr "Borrado Masivo"
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.ui.view,arch_db:mrp_bom_line_massive_delete.view_massive_delete
+msgid "Process"
+msgstr "Proceso"
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.model.fields,field_description:mrp_bom_line_massive_delete.field_mrp_bom_line_massive_delete_product_id
+msgid "Product Origin"
+msgstr "Producto Origen:"
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.model,name:mrp_bom_line_massive_delete.model_mrp_bom_line_massive_delete
+msgid "mrp.bom.line.massive.delete"
+msgstr ""
+
+#. module: mrp_bom_line_massive_delete
+#: model:ir.ui.view,arch_db:mrp_bom_line_massive_delete.view_massive_delete
+msgid "or"
+msgstr "o"
+

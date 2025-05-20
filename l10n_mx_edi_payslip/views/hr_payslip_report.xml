@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id='l10n_mx_edi_report_payslip_document'>
+        <t t-set="o" t-value="o.with_context({'lang':o.employee_id.address_home_id.lang})"/>
+        <t t-call="l10n_mx_edi_payslip.external_layout">
+            <div class="page">
+                <t t-set="xml_data" t-value="get_xml_data(o)"></t>
+                <t t-set="xml_emitter" t-value="xml_data.Emisor"></t>
+                <t t-set="xml_receiver" t-value="xml_data.Receptor"></t>
+                <t t-set="payroll" t-value="get_payroll_data(xml_data)"></t>
+                <t t-set="emitter" t-value="payroll.Emisor"></t>
+                <t t-set="receiver" t-value="payroll.Receptor"></t>
+                <div class="container" style="font-size:10px;">
+                    <div class="col-xs-6">
+                        <div class="well" style="background-color: #E0E0E0;">
+                             <div class="row">
+                                <div class="col-xs-3"><strong>Fiscal Folio</strong></div>
+                                <div class="col-xs-9 text-right"><span t-esc="invoice_obj.l10n_mx_edi_get_tfd_etree(xml_data).get('UUID', 'No identificado')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>SAT Certificate</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="invoice_obj.l10n_mx_edi_get_tfd_etree(xml_data).get('NoCertificadoSAT', 'No identificado')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Date and Time Certification</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="invoice_obj.l10n_mx_edi_get_tfd_etree(xml_data).get('FechaTimbrado', 'No identificado')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Fiscal Regime</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="xml_emitter.get('RegimenFiscal', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Expedition Place</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="xml_data.get('LugarExpedicion', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Folio/Serie</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="xml_data.get('Folio', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Date and Time of Issue</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="xml_data.get('Fecha', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Payment Conditions</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="o.number"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Payment Method</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="xml_data.get('FormaPago','NA')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Currency</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="xml_data.get('Moneda', 'NA')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Employer registration</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="emitter.get('RegistroPatronal', 'NA')"/></div>
+                            </div>
+                        </div>
+                        <div class="well">
+                            <div>
+                                <strong>Employer</strong><br/>
+                                <span t-esc="xml_emitter.get('Rfc', '')"/>
+                                <span t-esc="xml_emitter.get('Nombre', '')"/><br/><br/>
+                                <t t-set="company" t-value="o.company_id.address_parent_company_id"></t>
+                                <strong>Issued in:</strong><br/>
+                                <span t-esc="company.street_name or ''"/>
+                                <span t-esc="company.street2 or ''"/>
+                                <span t-esc="company.zip or ''"/><br/>
+                                <span t-esc="company.city or ''"/>,
+                                <span t-esc="company.state_id.name or ''"/>,
+                                <span t-esc="company.country_id.name or ''"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="well" style="background-color: #E0E0E0;">
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Employee Number</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="receiver.get('NumEmpleado', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Regimen Type</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="receiver.get('TipoRegimen', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4"><strong>Department</strong></div>
+                                <div class="col-xs-8 text-right"><span t-esc="receiver.get('Departamento', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3"><strong>Workstation</strong></div>
+                                <div class="col-xs-9 text-right"><span t-esc="receiver.get('Puesto', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Risk of Job</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="receiver.get('RiesgoPuesto', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Contract Type</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="receiver.get('TipoContrato', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Working hours</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="receiver.get('TipoJornada', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Antiquity</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="receiver.get(u'Antigüedad', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Start of Employment</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="receiver.get('FechaInicioRelLaboral', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Payment Period</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="receiver.get('PeriodicidadPago', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Base Salary</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="receiver.get('SalarioBaseCotApor', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Salary Integrated</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="receiver.get('SalarioDiarioIntegrado', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Payment Date</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="payroll.get('FechaPago', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>From</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="payroll.get('FechaInicialPago', '')"/></div>
+                                </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>To</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="payroll.get('FechaFinalPago', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Payment Days</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="payroll.get('NumDiasPagados', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Bank</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="receiver.get('Banco', '')"/></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Clabe</strong></div>
+                                <div class="col-xs-6 text-right"><span t-esc="receiver.get('CuentaBancaria', '')"/></div>
+                            </div>
+                        </div>
+                        <div class="well">
+                            <div>
+                                <strong>Employee</strong><br/>
+                                <span t-esc="xml_receiver.get('Rfc', '')"/>
+                                <span t-esc="xml_receiver.get('Nombre', '')"/><br/>
+                                <strong>C.U.R.P.</strong><br/>
+                                <span t-esc="receiver.get('Curp', '')"/><br/>
+                                <strong>N.S.S</strong><br/>
+                                <span t-esc="receiver.get('NumSeguridadSocial', '')"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="font-size:10px;">
+                    <div class="col-xs-6">
+                        <strong><span style="font-size:12px;">Perceptions</span></strong>
+                        <div class="row" style="border:1px solid #cecece;">
+                            <div class="col-xs-2"><strong><span>Type</span></strong></div>
+                            <div class="col-xs-2"><strong><span>Code</span></strong></div>
+                            <div class="col-xs-4"><strong><span>Perception Concept</span></strong></div>
+                            <div class="col-xs-2 text-right"><strong><span>Amount Taxed</span></strong></div>
+                            <div class="col-xs-2 text-right"><strong><span>Amount Exempt</span></strong></div>
+                        </div>
+                        <t t-foreach="[p for p in payroll.Percepciones.Percepcion]" t-as="perception">
+                            <div class="row">
+                                <div class="col-xs-2"><span t-esc="perception.get('TipoPercepcion', '')"/></div>
+                                <div class="col-xs-2"><span t-esc="perception.get('Clave', '')"/></div>
+                                <div class="col-xs-4"><span t-esc="perception.get('Concepto', '')"/></div>
+                                <div class="col-xs-2 text-right"><span t-esc="perception.get('ImporteGravado', '')"/></div>
+                                <div class="col-xs-2 text-right"><span t-esc="perception.get('ImporteExento', '')"/></div>
+                            </div>
+                        </t>
+                        <t t-set="extras" t-value="get_overtime_data(payroll)"></t>
+                        <t t-if="extras">
+                            <div class="row" style="border:1px solid #cecece;">
+                                <div class="col-xs-3"><strong><span>Days</span></strong></div>
+                                <div class="col-xs-3"><strong><span>Overtimes</span></strong></div>
+                                <div class="col-xs-3"><strong><span>Type Hours</span></strong></div>
+                                <div class="col-xs-3 text-right"><strong><span>Amount</span></strong></div>
+                            </div>
+                            <t t-foreach="[e for e in extras]" t-as="extra">
+                                <div class="row">
+                                    <div class="col-xs-3"><span t-esc="extra.get('Dias', '')"/></div>
+                                    <div class="col-xs-3"><span t-esc="extra.get('HorasExtra', '')"/></div>
+                                    <div class="col-xs-3"><span t-esc="extra.get('TipoHoras', '')"/></div>
+                                    <div class="col-xs-3 text-right"><span t-esc="extra.get('ImportePagado', '')"/></div>
+                                </div>
+                            </t>
+                        </t>
+                        <t t-set="other_p" t-value="get_other_payment_data(payroll)"></t>
+                        <t t-if="other_p">
+                            <div class="row" style="border:1px solid #cecece;">
+                                <div class="col-xs-2"><strong><span>Code</span></strong></div>
+                                <div class="col-xs-2"><strong><span>Type</span></strong></div>
+                                <div class="col-xs-5"><strong><span>Concept Other Payment</span></strong></div>
+                                <div class="col-xs-3 text-right"><strong><span>Amount</span></strong></div>
+                            </div>
+                            <t t-foreach="[e for e in other_p[0].OtroPago]" t-as="payment">
+                                <div class="row">
+                                    <div class="col-xs-2"><span t-esc="payment.get('Clave', '')"/></div>
+                                    <div class="col-xs-2"><span t-esc="payment.get('TipoOtroPago', '')"/></div>
+                                    <div class="col-xs-5"><span t-esc="payment.get('Concepto', '')"/></div>
+                                    <div class="col-xs-3 text-right"><span t-esc="payment.get('Importe', '')"/></div>
+                                </div>
+                            </t>
+                        </t>
+                        <div class="row" style="border:1px solid #cecece;">
+                            <div class="col-xs-8"><strong><span>Total Perceptions</span></strong></div>
+                            <div class="col-xs-2 text-right"><strong><span t-esc="payroll.Percepciones.get('TotalGravado', '')"/></strong></div>
+                            <div class="col-xs-2 text-right"><strong><span t-esc="payroll.Percepciones.get('TotalExento', '')"/></strong></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6" style="font-size:10px;">
+                        <strong><span style="font-size:12px;">Deductions</span></strong>
+                        <div class="row" style="border:1px solid #cecece;">
+                            <div class="col-xs-2"><strong><span>Type</span></strong></div>
+                            <div class="col-xs-2"><strong><span>Code</span></strong></div>
+                            <div class="col-xs-6"><strong><span>Deduction Concept</span></strong></div>
+                            <div class="col-xs-2 text-right"><strong><span>Amount</span></strong></div>
+                        </div>
+                        <t t-foreach="[d for d in payroll.Deducciones.Deduccion]" t-as="deduction">
+                            <div class="row">
+                                <div class="col-xs-2"><span t-esc="deduction.get('TipoDeduccion', '')"/></div>
+                                <div class="col-xs-2"><span t-esc="deduction.get('Clave', '')"/></div>
+                                <div class="col-xs-6"><span t-esc="deduction.get('Concepto', '')"/></div>
+                                <div class="col-xs-2 text-right"><span t-esc="deduction.get('Importe', '')"/></div>
+                            </div>
+                        </t>
+                        <div class="row" style="border:1px solid #cecece;">
+                            <div class="col-xs-4"><strong><span>Days Disability</span></strong></div>
+                            <div class="col-xs-4"><strong><span>Disability Type</span></strong></div>
+                            <div class="col-xs-4 text-right"><strong><span>Discount</span></strong></div>
+                        </div>
+                        <t t-foreach="[i for i in payroll.Incapacidades.Incapacidad]" t-as="inc">
+                            <div class="row">
+                                <div class="col-xs-4"><span t-esc="inc.get('DiasIncapacidad', '')"/></div>
+                                <div class="col-xs-4"><span t-esc="inc.get('TipoIncapacidad', '')"/></div>
+                                <div class="col-xs-4 text-right"><span t-esc="inc.get('ImporteMonetario', '')"/></div>
+                            </div>
+                        </t>
+                        <div class="row" style="border:1px solid #cecece;">
+                            <div class="col-xs-10"><strong><span>Total Deductions</span></strong></div>
+                            <div class="col-xs-2 text-right"><strong><span t-esc="payroll.get('TotalDeducciones', '')"/></strong></div>
+                        </div>
+                    </div>
+                </div><br/>
+                <div class="row" style="font-size:10px">
+                    <div class="col-xs-2"><strong><span>Total in letters</span></strong></div>
+                    <div class="col-xs-7"><span t-esc="'*( %s  )*' % ( amount_to_text(xml_data.get('Total'), xml_data.get('Moneda'), o.employee_id.address_home_id.lang))"></span></div>
+                    <div class="col-xs-3" id="totals">
+                        <table class="table" style="font-size:10px">
+                            <tr>
+                                <th class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;"><span>Sub Total</span></th>
+                                <td class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;"><span t-esc="xml_data.get('SubTotal', '0.0')"/></td>
+                            </tr>
+                            <tr>
+                                <th class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;"><span>Discount</span></th>
+                                <td class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;"><span t-esc="xml_data.get('Descuento', '0.0')"/></td>
+                            </tr>
+                            <tr>
+                                <th class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;"><span>Total</span></th>
+                                <td class="text-right" style="padding-top: 0.3em; padding-bottom: 0.3em;"><span t-esc="xml_data.get('Total', '0.0')"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id='complement'>
+                    <div class='row'>
+                        <div class="col-xs-3" style="float:left; padding-top: 0.3em; padding-bottom: 0.3em;">
+                            <t t-set="img" t-value="create_qrcode(xml_data)"/>
+                            <img t-if="img" t-att-src="'data:image/png;base64,%s' % img" style="max-height: 180; max-width: 180;"/>
+                        </div>
+                        <div class="col-xs-9" style="font-size:9px">
+                            <div style="padding-top: 2em;">
+                                <strong><span>Digital stamp of the emitter</span></strong>
+                            </div>
+                            <div>
+                                <span t-esc="split_string(xml_data.get('Sello', ''))"/>
+                            </div>
+                            <div style="padding-top: 0.5em;">
+                                <strong><span>Digital stamp SAT</span></strong>
+                            </div>
+                            <div>
+                                <span t-esc="split_string(invoice_obj.l10n_mx_edi_get_tfd_etree(xml_data).get('SelloSAT', ''))"/>
+                            </div>
+                            <div style="padding-top: 0.5em;">
+                                <strong><span>Original chain complement of digital certification SAT</span></strong>
+                            </div>
+                            <div>
+                                <span t-esc="split_string(o.l10n_mx_edi_cfdi_string)"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="l10n_mx_edi_payslip.external_layout">
+        <!-- Multicompany -->
+        <t t-if="not o and doc">
+            <t t-set="o" t-value="doc"/>
+        </t>
+        <t t-if="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id"/>
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+            <t t-set="company" t-value="res_company"/>
+        </t>
+
+        <t t-call="l10n_mx_edi_payslip.external_layout_header"/>
+        <t t-raw="0"/>
+        <t t-call="l10n_mx_edi_payslip.external_layout_footer"/>
+    </template>
+
+    <template id="l10n_mx_edi_payslip.external_layout_header">
+        <div class="header">
+            <div align="right" style="font-size:14px;">
+                <strong>Payroll receipt</strong>
+            </div>
+        </div>
+    </template>
+
+    <template id="l10n_mx_edi_payslip.external_layout_footer">
+        <div class="footer">
+            <div class="col-xs-6" style="font-size:10px;">
+                <span>THIS IS A PRINTED REPRESENTATION OF A CFDI</span>
+            </div>
+            <div class="col-xs-6 text-right" style="font-size:10px;">
+                <ul class="list-inline hidden-md hidden-lg hidden-sm">
+                    <li>Page:</li>
+                    <li><span class="page"/></li>
+                    <li>/</li>
+                    <li><span class="topage"/></li>
+                </ul>
+            </div>
+        </div>
+    </template>
+
+    <template id='l10n_mx_edi_report_payslip' inherit_id="hr_payroll.report_payslip">
+        <xpath expr="//t[@t-call='report.external_layout']" position="replace">
+            <t t-call="l10n_mx_edi_payslip.l10n_mx_edi_report_payslip_document" t-lang="o.employee_id.address_home_id.lang"/>
+        </xpath>
+    </template>
+
+    <record id="hr_payroll.action_report_payslip" model="ir.actions.report.xml">
+        <field name="paperformat_id" ref="l10n_mx_edi_payroll_paperformat"/>
+    </record>
+</odoo>

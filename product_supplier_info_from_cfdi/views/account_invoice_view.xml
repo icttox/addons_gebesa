@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='invoice_supplier_form'>
+            <field name='name'>invoice_supplier_get_suppinfo_cfdi_form</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_supplier_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//button[last()]" position="after">
+                    <button name="get_product_supplierinfo_cfdi" string="Get Supplier Inf" type="object" icon="fa-code" groups="system_administrator.group_system_administrator_gebesa"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

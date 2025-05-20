@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="product_purchase_gebesa_form">
+            <field name="name">product.purchase.gebesa.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page/group/group/field[@name='uom_id']" position="before">
+                    <field name='int_buyer'/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_normal_preferred_supplier_form_view" model="ir.ui.view">
+            <field name="name">product.normal.preferred.supplier.form_view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/notebook/page[@name='purchase']/group[@name='purchase']" position="before">
+                    <group>
+                       <group>
+                            <field name="product_origin"/>
+                            <field name="rawmat_rotation"/>
+                       </group>
+                       <group>
+                            <field name="preferred_supplier_id" domain="[('supplier', '=', True)]"/>
+                            <field name="import_preference"/>
+                       </group>
+                   </group>
+                </xpath>
+                <!--xpath expr="//form/sheet/notebook/page/group/group/field[@name='uom_id']" position="after">
+                    
+                </xpath-->
+            </field>
+        </record>
+    </data>
+</odoo>

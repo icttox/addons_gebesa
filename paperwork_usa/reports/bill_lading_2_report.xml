@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- QWeb Reports -->
+        <report 
+            id="bill_lading_2"
+            model="mrp.shipment"
+            string="Bill Lading Por Entrega"
+            report_type="qweb-pdf"
+            name="paperwork_usa.report_bill_lading_2"
+        />
+	</data>
+</odoo>

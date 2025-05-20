@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='account_invoice_reference_travel'>
+            <field name='name'>account.invoice.reference.travel</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/sheet/group/group/div" position="after">
+                    <field name='travel_id'/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook" position="inside">
+                    <page string="Travels">
+                        <field name="travel_ids"/>
+                    </page>
+                </xpath>
+                <xpath expr="//form/header/button[@name='action_invoice_sent']" position="before">
+                    <button name="print_travel_instruction" string="Instrucciones de viaje" type="object" attrs="{'invisible':[('travel_id', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='account_invoice_reference'>
+            <field name='name'>account.invoice.reference</field>
+            <field name='model'>account.invoice</field>
+            <field name='inherit_id' ref='account.invoice_supplier_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='reference']" position="after">
+                    <field name='travel_id'/>
+                    <field name='shipment_id'/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

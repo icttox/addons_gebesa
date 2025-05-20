@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="manufacturing_order"
+            model="mrp.segment"
+            string="Manufacturing order"
+            report_type="qweb-pdf"
+            name="mrp_segment.report_manufacturing_order"
+            file="mrp_segment.report_manufacturing_order"
+        />
+
+        <template id="manufacturing_order_layout">
+            <t t-if="doc and 'company_id' in doc">
+                <t t-set="company" t-value="doc.company_id"/>
+            </t>
+            <t t-if="not doc or not 'company_id' in doc">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+            <div class="header">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td height="15px"></td>
+                        </tr>
+                        <tr style="font-size: 7pt;">
+                            <td width="20%" >
+                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y %H:%M')"/>
+                            </td>
+                            <td width="60%" align="center" style="font-size: 8pt;">
+                                <span t-esc="company.name"/><br/>
+                                <span t-esc="company.name"/><br/>
+                                Solicitud para Orden de Fabricacion
+                            </td>
+                            <td width="20%">
+                            </td>
+                        </tr>
+                        <tr style="font-size: 6pt;">
+                            <td>
+                            </td>
+                            <td align="right" >
+                                Pagina: <span class="page"/> de <span class="topage"/>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr style="font-size: 6pt;">
+                            <td>
+                                Folio: <span t-esc="doc['folio']"/>
+                            </td>
+                            <td>
+                            </td>
+                            <td align="right">
+                                Fecha: <span t-esc="doc['date']"/>
+                            </td>
+                        </tr>
+                        <tr style="font-size: 6pt;">
+                            <td>
+                                Destino: <span t-esc="doc['location_dest_id']"/>
+                            </td>
+                            <td>
+                            </td>
+                            <td align="right">
+                                Estatus: <span t-esc="doc['state']"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="15px"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+
+            <div class="footer">
+                <table width="100%" style="font-size: 7pt;">
+                    <tr>
+                        <td height="25px"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%">
+                        </td>
+                        <td width="30%" align="center" style="border-top: 0.5px solid black;">
+                            SOLICITA
+                        </td>
+                        <td width="20%">
+                        </td>
+                        <td width="30%" align="center" style="border-top: 0.5px solid black;">
+                            AUTORIZA
+                        </td>
+                        <td width="10%">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"> R-00-23-02-2009</td>
+                        <td colspan="2" align="right">M-PR-003-F</td>
+                    </tr>
+                </table>
+            </div>
+        </template>
+
+        <template id="report_manufacturing_order_document">
+            <t t-call="mrp_segment.manufacturing_order_layout">
+                <div class="page">
+                    <t t-foreach="doc['lines']" t-as="line">
+                        <div class="manufacturing_order_div">
+                            LINEA: <span t-esc="line.code"/>-<span t-esc="line.name"/>
+                        </div>
+                        <t t-foreach="doc['groups'][line.id]" t-as="group">
+                            <div class="manufacturing_order_div">
+                                GRUPO: <span t-esc="group.name"/>
+                            </div>
+                            <table width="100%" class="manufacturing_order_table">
+                                <tr>
+                                    <th width="13%">Clave</th>
+                                    <th width="48%">Descripcion</th>
+                                    <th width="13%">Cost. Uni.</th>
+                                    <th width="13%">Cant.</th>
+                                    <th width="13%">Cost. Tot.</th>
+                                </tr>
+                                <t t-set="line_group" t-value="str(line.id)+'-'+str(group.id)"/>
+                                <t t-set="cost" t-value="0.0"/>
+                                <t t-set="total" t-value="0.0"/>
+                                <t t-set="total_cost" t-value="0.0"/>
+                                <t t-foreach="doc['products'][line_group]" t-as="product">
+                                    <t t-set="cost" t-value="cost+product['standard_cost']"/>
+                                    <t t-set="total" t-value="product['standard_cost']*product['product_qty']"/>
+                                    <t t-set="total_cost" t-value="total_cost+total"/>
+                                    <tr>
+                                        <td width="13%"><span t-esc="product['product_code']"/></td>
+                                        <!--<td width="48%"><span t-esc="product['product_name']"/>-->
+
+                                        <td width="48%">
+                                        <t t-if="product['individual_name']">
+                                         <t t-esc="product['individual_name']"/>
+                                        </t>
+                                        <t t-if="not product['individual_name']">
+                                         <t t-esc="product['product_name']"/>
+                                        </t></td>
+
+                                        <td width="13%" align="right"><span t-esc="product['standard_cost']"/></td>
+                                        <td width="13%" align="right"><span t-esc="product['product_qty']"/></td>
+                                        <td width="13%" align="right"><span t-esc="total"/></td>
+                                    </tr>
+                                </t>
+                            </table>
+                            <table width="100%" style="font-size: 7pt;">
+                                <tr>
+                                    <td width="61%">Total</td>
+                                    <td width="13%" align="right"><span t-esc="cost"/></td>
+                                    <td width="13%"></td>
+                                    <td width="13%" align="right"><span t-esc="total_cost"/></td>
+                                </tr>
+                            </table>  
+                        </t>
+                    </t>
+                    <div class="manufacturing_order_div">
+                        PEDIDOS
+                        <table width="100%" class="manufacturing_order_table_order">
+                            <tr>
+                                <th width="20%">Pedido</th>
+                                <th width="80%">Cliente</th>
+                            </tr>
+                            <t t-foreach="doc['pedidos']" t-as="pedido">
+                                <tr>
+                                    <td width="20%"><span t-esc="pedido.name"/></td>
+                                    <td width="80%"><span t-esc="pedido.partner_id.name"/></td>
+                                </tr>
+                            </t>
+                        </table>  
+                    </div>
+                    <div class="manufacturing_order_div mt16">
+                        ORDENES DE FABRICACIÓN
+                        <table width="100%" class="mt8" style="font-size: 9pt;">
+                            <tr>
+                                <td>
+                                    <span t-esc="doc['fabricacion']"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="page-break-after: always;">&#160;</div>
+                    <!-- -->
+                    <t t-foreach="doc['mp_lines']" t-as="mp_line">
+                        <div class="manufacturing_order_div">
+                            LINEA: <span t-esc="mp_line.code"/>-<span t-esc="mp_line.name"/>
+                        </div>
+                        <t t-foreach="doc['mp_groups'][mp_line.id]" t-as="mp_group">
+                            <div class="manufacturing_order_div">
+                                GRUPO: <span t-esc="mp_group.name"/>
+                            </div>
+                            <table width="100%" class="manufacturing_order_table">
+                                <tr>
+                                    <th width="8%">Depto</th>
+                                    <th width="13%">Clave</th>
+                                    <th width="30%">Descripcion</th>
+                                    <th width="13%">Cost. Uni.</th>
+                                    <th width="13%">Cant.</th>
+                                    <th width="10%">Unidad</th>
+                                    <th width="13%">Cost. Tot.</th>
+                                </tr>
+                                <t t-set="mp_line_group" t-value="str(mp_line.id)+'-'+str(mp_group.id)"/>
+                                <t t-set="cost" t-value="0.0"/>
+                                <t t-set="total" t-value="0.0"/>
+                                <t t-set="total_cost" t-value="0.0"/>
+                                <t t-foreach="doc['mp_products'][mp_line_group]" t-as="mp_product">
+                                    <t t-set="cost" t-value="cost+mp_product['standard_cost']"/>
+                                    <t t-set="total" t-value="mp_product['standard_cost']*mp_product['product_qty']"/>
+                                    <t t-set="total_cost" t-value="total_cost+total"/>
+                                    <tr>
+                                        <td width="8%"><span t-esc="mp_product['location']"/></td>
+                                        <td width="13%"><span t-esc="mp_product['product_code']"/></td>
+                                        <!--<td width="30%"><span t-esc="mp_product['product_name']"/></td>-->
+
+                                        <td width="30%">
+                                        <t t-if="mp_product['individual_name']">
+                                         <t t-esc="mp_product['individual_name']"/>
+                                        </t>
+                                        <t t-if="not mp_product['individual_name']">
+                                         <t t-esc="mp_product['product_name']"/>
+                                        </t></td>
+                                        
+                                        <td width="13%" align="right"><span t-esc="mp_product['standard_cost']"/></td>
+                                        <td width="13%" align="right"><span t-esc="mp_product['product_qty']"/></td>
+                                        <td width="10%"><span t-esc="mp_product['uom']"/></td>
+                                        <td width="13%" align="right"><span t-esc="total"/></td>
+                                    </tr>
+                                </t>
+                            </table>
+                        </t>
+                    </t>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_manufacturing_order">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="mrp_segment.report_manufacturing_order_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

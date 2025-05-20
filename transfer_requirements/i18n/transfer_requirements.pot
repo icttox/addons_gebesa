@@ -1,0 +1,197 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* transfer_requirements
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-10 13:58+0000\n"
+"PO-Revision-Date: 2018-09-10 13:58+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.view_transfer_kanban
+msgid "<br/>\n"
+"                                    Cheque:"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.view_transfer_kanban
+msgid "<br/>\n"
+"                                    Solicitud de:"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_emp_ven_id
+msgid "A favor de:"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_quantity_fac
+msgid "Amount to invoice"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_bank_id
+msgid "Bank:"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_name_cheke
+msgid "Check:"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_color
+msgid "Color"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.transfer_req_form_view
+msgid "Company"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_company_id
+msgid "Company:"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_con_obs
+msgid "Concept y Obs:"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.actions.act_window,help:transfer_requirements.transfer_req_list_action
+msgid "Create your first transfer"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: transfer_requirements
+#: code:addons/transfer_requirements/models/transfer_req.py:27
+#, python-format
+msgid "Date"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.view_transfer_kanban
+msgid "Delete"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_spending_id
+msgid "Expense for: "
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_checkin_a
+msgid "FCheckin:"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_date
+msgid "Fecha"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.transfer_req_form_view
+msgid "General"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_id
+msgid "ID"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.transfer_req_form_view
+msgid "Observations"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_responsible_id
+msgid "Request:"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_Transfer
+msgid "Transfer"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.transfer_req_view
+msgid "Transfer Tree"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.transfer_req_form_view
+msgid "Transfer from"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.ui.view,arch_db:transfer_requirements.view_transfer_kanban
+msgid "Transferencia:"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.actions.act_window,name:transfer_requirements.transfer_req_list_action
+#: model:ir.ui.menu,name:transfer_requirements.transfer_menu
+#: model:ir.ui.menu,name:transfer_requirements.transferencia_menu
+msgid "Transferencias"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.ui.menu,name:transfer_requirements.main_transfer_req_menu
+msgid "Transferencias "
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model.fields,field_description:transfer_requirements.field_transfer_req_name
+msgid "Transferencias:"
+msgstr ""
+
+#. module: transfer_requirements
+#: model:ir.model,name:transfer_requirements.model_transfer_req
+msgid "transfer"
+msgstr ""
+

@@ -1,0 +1,381 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* report_tags
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-22 19:00+0000\n"
+"PO-Revision-Date: 2018-03-22 19:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag_2
+msgid "01 800 8432 372"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "<br/>\n"
+"                                <strong>SEGMENTO:</strong>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "<br/>\n"
+"                                <strong>TAG:</strong>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag_customizable_order_document
+msgid "<br/>\n"
+"                                Manufactured for / Manufacturado para / Fabriqué pour<br/>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag_customizable_document
+msgid "<br/>\n"
+"                        Manufactured for / Manufacturado para / Fabriqué pour<br/>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag
+#: model:ir.ui.view,arch_db:report_tags.report_so_shipment_tag_document
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "<strong>01 800 8432 372</strong>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag
+#: model:ir.ui.view,arch_db:report_tags.report_so_shipment_tag_document
+msgid "<strong>CLIENTE/CUSTOMER:</strong>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag
+#: model:ir.ui.view,arch_db:report_tags.report_so_shipment_tag_document
+msgid "<strong>DESTINO/DESTINATION:</strong>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag
+#: model:ir.ui.view,arch_db:report_tags.report_so_shipment_tag_document
+msgid "<strong>O.C./P.O.:</strong>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "<strong>ORDEN DE FAB:</strong>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "<strong>PEDIDO:</strong>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "<strong>TAG LINE:</strong>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag
+#: model:ir.ui.view,arch_db:report_tags.report_so_shipment_tag_document
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "<strong>www.gebesa.com</strong>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "<sub>HANDLE WITH CARE</sub>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "<sup>SEE ASSEMBLY INSTRUCTIONS</sup>"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "CANT./QTY.:"
+msgstr ""
+
+#. module: report_tags
+#: selection:res.partner,type_barcode:0
+msgid "CCode39"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "CLAVE/CODE:"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag_2
+msgid "CLIENTE/CUSTOMER:"
+msgstr ""
+
+#. module: report_tags
+#: selection:res.partner,type_barcode:0
+msgid "Code128bWin"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag_2
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "DE"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "DESCRIPCION/DESCRIPTION:"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag_2
+msgid "DESTINO/DESTINATION:"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_customer_code_tag_display_name
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_shipment_tag_2_display_name
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_shipment_tag_display_name
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_so_shipment_tag_display_name
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag1_display_name
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag_customizable_display_name
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag_customizable_order_display_name
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag_customizable_segment_display_name
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag_segment_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.actions.report.xml,name:report_tags.segment_production_tag
+#: model:ir.actions.report.xml,name:report_tags.tag1
+msgid "Etiqueta"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.actions.report.xml,name:report_tags.customer_code_production_tag
+msgid "Etiqueta Código del Cliente"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.actions.report.xml,name:report_tags.shipment_tag
+#: model:ir.actions.report.xml,name:report_tags.shipment_tag_so
+msgid "Etiqueta Embarque"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.actions.report.xml,name:report_tags.shipment_tag_2
+msgid "Etiqueta Embarque 2"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.actions.report.xml,name:report_tags.tag_customizable
+#: model:ir.actions.report.xml,name:report_tags.tag_customizable_order
+#: model:ir.actions.report.xml,name:report_tags.tag_customizable_segment
+msgid "Etiqueta Personalizable"
+msgstr ""
+
+#. module: report_tags
+#: code:addons/report_tags/models/product_product_customer.py:14
+#: code:addons/report_tags/models/product_product_customer.py:20
+#: model:ir.model.fields,field_description:report_tags.field_product_product_customer_code_128_bina
+#: model:ir.model.fields,field_description:report_tags.field_product_product_customer_code_128c
+#, python-format
+msgid "Filed Label"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_customer_code_tag_id
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_shipment_tag_2_id
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_shipment_tag_id
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_so_shipment_tag_id
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag1_id
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag_customizable_id
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag_customizable_order_id
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag_customizable_segment_id
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag_segment_id
+msgid "ID"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_customer_code_tag___last_update
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_shipment_tag_2___last_update
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_shipment_tag___last_update
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_so_shipment_tag___last_update
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag1___last_update
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag_customizable___last_update
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag_customizable_order___last_update
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag_customizable_segment___last_update
+#: model:ir.model.fields,field_description:report_tags.field_report_report_tags_report_tag_segment___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag_customizable_document
+#: model:ir.ui.view,arch_db:report_tags.report_tag_customizable_order_document
+msgid "Made in Mexico / Hecho en México / Fabriqué au Mexique"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag_2
+msgid "O.C./P.O.:"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag_2
+msgid "PAQ./PACK"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "PAQ./PAQCK:"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag_2
+#: model:ir.ui.view,arch_db:report_tags.report_so_shipment_tag_document
+msgid "PEDIDO/S.O.:"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "Page:"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag_2
+#: model:ir.ui.view,arch_db:report_tags.report_so_shipment_tag_document
+msgid "Pagina"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model,name:report_tags.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_customer_code_tag_document
+msgid "Pàgina"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag_customizable_document
+#: model:ir.ui.view,arch_db:report_tags.report_tag_customizable_order_document
+msgid "Página"
+msgstr ""
+
+#. module: report_tags
+#: selection:res.partner,template_label:0
+msgid "Template 1"
+msgstr ""
+
+#. module: report_tags
+#: selection:res.partner,template_label:0
+msgid "Template 2"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.res_partner_type
+msgid "Type Barcode"
+msgstr ""
+
+#. module: report_tags
+#: code:addons/report_tags/models/res_partner.py:21
+#: model:ir.model.fields,field_description:report_tags.field_res_partner_type_barcode
+#, python-format
+msgid "Type Of Barcode"
+msgstr ""
+
+#. module: report_tags
+#: code:addons/report_tags/models/res_partner.py:14
+#: model:ir.model.fields,field_description:report_tags.field_res_partner_template_label
+#, python-format
+msgid "Type Of Label"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_customer_code_tag_document
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag_2
+#: model:ir.ui.view,arch_db:report_tags.report_so_shipment_tag_document
+#: model:ir.ui.view,arch_db:report_tags.report_tag_customizable_document
+#: model:ir.ui.view,arch_db:report_tags.report_tag_customizable_order_document
+msgid "de"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_tag1_document
+msgid "of"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model,name:report_tags.model_product_product_customer
+msgid "product.product.customer"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model,name:report_tags.model_report_report_tags_report_customer_code_tag
+msgid "report.report_tags.report_customer_code_tag"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model,name:report_tags.model_report_report_tags_report_shipment_tag
+msgid "report.report_tags.report_shipment_tag"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model,name:report_tags.model_report_report_tags_report_shipment_tag_2
+msgid "report.report_tags.report_shipment_tag_2"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model,name:report_tags.model_report_report_tags_report_so_shipment_tag
+msgid "report.report_tags.report_so_shipment_tag"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model,name:report_tags.model_report_report_tags_report_tag1
+msgid "report.report_tags.report_tag1"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model,name:report_tags.model_report_report_tags_report_tag_customizable
+msgid "report.report_tags.report_tag_customizable"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model,name:report_tags.model_report_report_tags_report_tag_customizable_order
+msgid "report.report_tags.report_tag_customizable_order"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model,name:report_tags.model_report_report_tags_report_tag_customizable_segment
+msgid "report.report_tags.report_tag_customizable_segment"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model,name:report_tags.model_report_report_tags_report_tag_segment
+msgid "report.report_tags.report_tag_segment"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.model,name:report_tags.model_report_report_tags_so_shipment_tag
+msgid "report.report_tags.so_shipment_tag"
+msgstr ""
+
+#. module: report_tags
+#: model:ir.ui.view,arch_db:report_tags.report_shipment_tag_2
+msgid "www.gebesa.com"
+msgstr ""
+

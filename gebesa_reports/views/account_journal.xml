@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='view_account_journal_form'>
+        	<field name='name'>account_journal_foreign_currency_form</field>
+        	<field name='model'>account.journal</field>
+        	<field name='inherit_id' ref='account.view_account_journal_form'/>
+        	<field name='arch' type='xml'>
+        		<xpath expr="//notebook/page[3]/group/group[3]/field[@name='post_at_bank_rec']" position="after">
+        			<field name='foreign_currency'/>
+        		</xpath>       		
+        	</field>
+        </record>
+    </data>
+</odoo>

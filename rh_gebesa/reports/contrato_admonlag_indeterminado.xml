@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="contrato_indeterminado_ad"
+            model="hr.contract"
+            string="Contrado Tiempo Indeterminado ADMONLAG"
+            report_type="qweb-pdf"
+            name="rh_gebesa.report_contrato_indeterminado_ad"
+            file="rh_gebesa.report_contrato_indeterminado_ad"
+            paperformat="base.paperformat_batch_deposit"
+        />
+
+        <template id="report_contrato_indeterminado_ad_document">
+            <div class="page">
+                <div class="row no-gutters"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        <br/>
+                        CONTRATO INDIVIDUAL DE TRABAJO <strong>POR TIEMPO INDETERMINADO</strong> QUE CELEBRAN POR UNA PARTE
+                        LA EMPRESA ADMONLAG, S.C. CON DOMICILIO EN <strong style="text-transform: uppercase;"><span t-field="doc.company_id.street"/> C.P. <span t-field="doc.company_id.zip"/> </strong>REPRESENTADA POR EL C. MAYTE VALDES ABRAHAM
+                        EN SU CARACTER DE REPRESENTANTE LEGAL, Y POR LA OTRA EL <strong>C. <span t-field="doc.employee_id.name"/></strong>
+                        AL TENOR DE LOS SIGUIENTES ANTECEDENTES Y CLÁUSULAS:
+                    </div>
+                </div>
+                <br/>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center" style="text-align:center;">
+                        <strong>A N T E C E D E N T E S</strong>
+                    </div>
+                </div>
+                <div class="row no-gutters my-2"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        <br/>
+                        I.- La Empresa denominada <span t-field="doc.company_id.name"/> es una sociedad civil representada por C. MAYTE VALDES ABRAHAM, con domicilio en,
+                        <strong><span t-field="doc.company_id.street"/> C.P. <span t-field="doc.company_id.zip"/>  RFC: <span t-field="doc.company_id.vat"/>.</strong>
+                        <br/><br/>
+                        II.- El Trabajador <strong>C. <span t-field="doc.employee_id.name"/></strong>, manifiesta bajo protesta de decir
+                        verdad ser los siguientes datos personales:
+                    </div>
+                </div>
+                <div class="row no-gutters my-2"> 
+                    <div class="col-12 text-left">
+                        <br/>
+                        1. LLAMARSE: <strong>C. <span t-field="doc.employee_id.name"/></strong><br/>
+                        2. NACIONALIDAD: <strong><span t-field="doc.employee_id.country_id.name"/></strong><br/>
+                        3. CON DOMICILIO EN: <strong><span t-field="doc.employee_id.address_home_id.street"/></strong><br/>
+                        4. COLONIA: <strong><span t-field="doc.employee_id.address_home_id.l10n_mx_edi_colony"/></strong><br/>
+                        5. CIUDAD: <strong><span t-field="doc.employee_id.address_home_id.city_id.name"/></strong><br/>
+                        6. FECHA DE NACIMIENTO: <strong><span t-field="doc.employee_id.birthday"/></strong><br/>
+                        7. SEXO: <strong><span t-field="doc.employee_id.gender"/></strong><br/>
+                        8. REG. IMSS: <strong><span t-field="doc.employee_id.imss"/></strong><br/>
+                        9. R.F.C.: <strong><span t-field="doc.employee_id.rfc"/></strong><br/>
+                        10. CURP: <strong><span t-field="doc.employee_id.curp"/></strong><br/>
+                    </div>
+                </div>
+                <div class="row no-gutters my-2"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        <br/><br/>
+                        III.- Declaran las partes que en el centro de trabajo las actividades preponderantes son: LA PRESTACION DE SERVICIOS PROFESIONALES EN AREAS ADMINISTRATIVAS, DESARROLLO ORGANIZACIONAL, CONTABILIDAD, AUDITORIA, PROMOCION FINANCIERA, MERCADOTECNIA, VENTAS, RECUPREACION Y NEGOCIACION DE CARTERA VENCIDA.
+                        <br/><br/>
+                        IV.- El Trabajador <strong>C. <span t-field="doc.employee_id.name"/></strong>, manifiesta que tiene la capacidad y aptitudes para desarrollar las actividades indicadas en el antecedente que precede.
+                        <br/><br/>
+                        V.- LA empresa <strong><span t-field="doc.company_id.name"/></strong> requiere de los servicios del personal apto para el desarrollo de sus actividades,
+                        y de modo especial para el puesto o funciones de <span t-field="doc.employee_id.job_id.name"/>.
+                        <br/><br/>
+                        VI.- El Trabajador <strong>C. <span t-field="doc.employee_id.name"/></strong>, está conforme en desempeñar  los  requerimientos del Patrón y en plasmar las condiciones de trabajo sobre las cuales prestará sus servicios personales.
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center" style="text-align:center;">
+                        <br/>
+                        <strong>C L Á U S U L A S</strong>
+                    </div>
+                </div>
+                <div class="row no-gutters my-2"> 
+                    <div class="col-12 text-justify" style="text-align:justify;">
+                        <br/>
+                        <strong>PRIMERA.-</strong> Para efectos de mayor brevedad se denominará en lo sucesivo ADMONLAG, S.C.  Como “LA EMPRESA” al <strong>C. <span t-field="doc.employee_id.name"/></strong> “EL TRABAJADOR”; a la Ley Federal del Trabajo como “LA LEY”, al referirse al presente documento como “EL CONTRATO”, y a los que suscriben como “LAS PARTES”.
+                        <br/><br/>
+                        <strong>SEGUNDA.-</strong> Este “CONTRATO” se celebra por tiempo indeterminado según lo establece el artículo 35 de “LA LEY”.
+                        <br/><br/>
+                        <strong>TERCERA.-</strong> La prestación de los servicios de “EL TRABAJADOR” consistirá de acuerdo a la definición de su puesto de <strong>C. <span t-field="doc.employee_id.name"/></strong>.
+                        <br/><br/>
+                        <strong>CUARTA.-</strong> El lugar de prestación  de los servicios de “EL TRABAJADOR” será el domicilio de “DE LA EMPRESA”. Asimismo “LAS PARTES” convienen y acepta “EL TRABAJADOR” que cuando por razones administrativas o de desarrollo de la actividad o prestación de servicios contratados haya necesidad de removerlo, podrá trasladarse al lugar que “LA EMPRESA” le asigne, siempre y cuando no se vea menoscabado su salario.
+                        <br/>
+                        En este caso “LA EMPRESA” le comunicará con anticipación la remoción del lugar de prestación de servicios indicándole el nuevo asignado.
+                        <br/>
+                        Para el caso que en el nuevo lugar de prestación de servicios que le fuera asignado variara el horario de labores, “EL TRABAJADOR”  acepta allanarse a dicha modalidad.
+                        <br/><br/>
+                        <strong>QUINTA.-</strong> La duración de la jornada de trabajo será de 48 horas semanales, y en términos del artículo 59 de “LA LEY”, para que “EL TRABAJADOR” disfrute de un descanso semanal mayor al comúnmente establecido, se amplía el horario diario de labores quedando poder distribuida como sigue:
+                        <br/><br/>
+                        <u><strong>LUNES A VIERNES: DE 8:30 A 18:30 HORAS CON UNA HORA PARA TOMAR SUS ALIMENTOS DE LAS 14:00 A LAS 15:00.
+                        DESCANSANDO LOS SABADOS Y DOMINGOS DE CADA SEMANA.</strong> </u>
+                        <br/><br/>
+                        “EL TRABAJADOR” únicamente podrá laborar tiempo extraordinario cuando “LA EMPRESA” se lo indique y medie orden por escrito, la que señalará el día o los días y el horario en el cual se desempeñará el mismo. Para el caso de computar el tiempo extraordinario laborado deberá “EL TRABAJADOR” recabar y conservar la orden referida a fin de que en su momento quede debidamente pagado el tiempo extra laborado; la falta de presentación de esa orden solo es imputable a “EL TRABAJADOR”. 
+                        <br/><br/>
+                        <strong>SEXTA.-</strong> “EL TRABAJADOR” percibirá un salario por cuota diaria de <strong><span t-field="doc.salario_diario"/></strong> más la cantidad de <strong><span t-field="doc.premio_puntualidad"/></strong> por concepto de premio por puntualidad más la cantidad de <strong><span t-field="doc.premio_asistencia"/></strong> de premio por asistencia los que percibirá el trabajador en forma constante y permanente por lo que de conformidad con el artículo 84 de la ley federal del trabajo.
+                        <br/><br/>
+                        El cual será cubierto los días miércoles de cada semana en el cual se encuentra incluida la proporción correspondiente a los séptimos días y días de descanso obligatorio, y le será pagado mediante deposito que realice  “la empresa”, en una institución bancaria, mediante cuenta de nómina.
+                        <br/><br/>
+                        Del salario anterior, “LA EMPRESA” hará por cuenta de “el trabajador” las deducciones legales correspondientes, particularmente las que se refieren a Impuestos Sobre La Renta, Seguro Social, Cuota Sindical en su caso etc. asimismo, se harán las aportaciones y altas al IMSS, INFONAVIT, SAR Y HACIENDA en los términos de las legislaciones respectivas. 
+                        <br/><br/>
+                        <strong>“LA EMPRESA”</strong> otorgara gastos médicos menores al trabajador, por la cantidad de $1,500.00 mensuales no siendo estos acumulables.
+                        <br/><br/>
+                        <strong>SÉPTIMA.-</strong> “EL TRABAJADOR” recibirá el pago de su salario en el domicilio del lugar de la prestación del servicio. “LA EMPRESA” pagará su salario a “EL TRABAJADOR” los días DIAS MIERCOLES, POR MEDIO DE TARJETA BANCARIA NOMINAL EN BANCO <strong>BAJIO</strong>.
+                        <br/><br/>
+                        <strong>OCTAVA.-</strong> “EL TRABAJADOR” tendrá derecho por cada cinco días de labores a descansar dos con el pago del salario diario correspondiente. Queda establecido preferentemente como días de descanso semanal los días sábado y domingo de cada semana, pudiendo ser cambiado el mismo.
+                        <br/><br/>
+                        <strong>NOVENA.-</strong> Cuando “EL TRABAJADOR” por razones administrativas tenga que laborar el día domingo, “LA EMPRESA” le pagará, además de su salario ordinario, un 25 % (VEINTICINCO POR CIENTO) como prima dominical sobre el salario ordinario devengado, Independientemente del día de descanso semanal, al que tendrá derecho.
+                        <br/><br/>
+                        <strong>DÉCIMA.-</strong> Quedan establecidos como días de descanso obligatorios los señalados en el artículo 74 de “LA LEY”.
+                        <br/><br/>
+                        <strong>DÉCIMA PRIMERA.-</strong> “EL TRABAJADOR” tendrá derecho a disfrutar de un período anual de vacaciones según lo establecido en el artículo 76 de “LA LEY” tomando en consideración la antigüedad en el trabajador así  como a disfrutar del salario que le corresponda. De igual modo recibirá la Prima de Vacacional respectiva, equivalente al 25% del importe pagado por concepto de vacaciones, prestación que se pagara de acuerdo al salario diario integrado percibido.
+                        <br/><br/>
+                        <strong>DÉCIMA SEGUNDA.-</strong> “EL TRABAJADOR” tendrá derecho a recibir por parte de 
+                        “LA EMPRESA” antes del día 20 de diciembre de cada año, el importe correspondiente a veinte días de salario como pago de aguinaldo a que se refiere el artículo 87 de “LA LEY”, o su parte proporcional por fracción de año, prestación que se pagara de acuerdo al salario diario integrado percibido.
+                        <br/><br/>
+                        <strong>DÉCIMA TERCERA.-</strong> “EL TRABAJADOR” acepta someterse a los exámenes médicos que periódicamente establezca “LA EMPRESA” en los términos del artículo 134 fracción X de “LA LEY”, a fin de mantener en forma óptima sus facultades físicas e intelectuales, para el mejor desempeño de sus funciones. El médico que practique los reconocimientos será designado y retribuido por “LA EMPRESA”.
+                        <br/><br/>
+                        <strong>DÉCIMA CUARTA.-</strong> “EL TRABAJADOR” deberá de integrarse a los Planes, Programas y Comisiones Mixtas de Capacitación y Adiestramiento así  como a los de Seguridad e Higiene en el Trabajo que tiene constituidos “LA EMPRESA”, tomando parte activa dentro de los mismos según los cursos establecidos y medidas preventivas de riesgos de trabajo.
+                        <br/><br/>
+                        <strong>DÉCIMA QUINTA.-</strong> “EL TRABAJADOR”, deberá observar y cumplir todo lo contenido en el Reglamento Interior de Trabajo con que cuenta “LA EMPRESA” y que tiene fijado en las áreas de mayor visibilidad.
+                        <br/><br/>
+                        <strong>DÉCIMA SEXTA.-</strong> “EL TRABAJADOR” acepta y por ende queda establecido que cuando por razones convenientes para “LA EMPRESA” éste modifique el horario de trabajo, podrá desempeñar su jornada en el que quede establecido ya que sus actividades al servicio de “LA EMPRESA” son prioritarias y no se contraponen a otras que pudiere llegar a desarrollar.
+                        <br/><br/>
+                        <strong>DÉCIMA SÉPTIMA.-</strong> “EL TRABAJADOR” deberá dar fiel cumplimiento a las disposiciones contenidas en el artículo134 de “LA LEY” y que corresponden a las obligaciones de los trabajadores en el desempeño de sus labores al servicio de “LA EMPRESA”.
+                        <br/><br/>
+                        <strong>DÉCIMA OCTAVA.-</strong> “EL TRABAJADOR” deberá presentarse puntualmente a sus labores en el horario de trabajo establecido y firmar las listas de asistencias acostumbradas o checar su tarjeta de asistencia del reloj-checador diariamente. En caso de retraso o falta de asistencia injustificada podrá “LA EMPRESA” imponerle cualquier corrección disciplinaria de las que contempla el reglamento Interior de Trabajo o “LA LEY”.
+                        <br/><br/>
+                        <strong>DÉCIMA NOVENA.-</strong> Para todo lo no previsto en el presente “CONTRATO” se estará a lo contenido en la “LEY”, así como el Reglamento Interior de Trabajo.
+                        <br/><br/>
+                        <strong>VIGÉSIMA.-</strong> “LAS PARTES” reconocen como fecha de antigüedad o inicio de prestación de servicios de “EL TRABAJADOR” a partir del día <strong><span t-field="doc.date_start"/></strong>.
+                        <br/><br/>
+                        Leído que fue el presente contrato por quienes en el intervienen lo ratifican e impuestos de su contenido lo suscriben por duplicado quedando el original en poder de la empresa y la copia para el trabajador. En la ciudad de Gómez palacio, Durango, al <strong><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/></strong>.
+
+                    </div>
+                </div>
+                <br/><br/>
+                <div class="row">
+                    <div class="col-12">
+                        <table width="100%" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th><br/>
+                                    <br/><br/><br/><br/>
+                                    ____________________________________<br/>
+                                    
+                                    </th>
+                                    <th><br/>
+                                    <br/><br/><br/><br/>
+                                    ____________________________________</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align:center;">MAYTE VALDES ABRAHAM<br/>ADMONLAG S. C.</td>
+                                    <td style="text-align:center;">C. <span t-field="doc.employee_id.name"/><br/>TRABAJADOR</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br/><br/>
+                <div class="row">
+                    <div class="col-12">
+                        <table width="100%" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                    <br/><br/>
+                                    ____________________________________<br/>
+                                    
+                                    </th>
+                                    <th>
+                                    <br/><br/>
+                                    ____________________________________</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align:center;">TESTIGO</td>
+                                    <td style="text-align:center;">TESTIGO</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- <div class="row no-gutters pt-5">
+                    <div class="col-12">
+                        <div class="col-6 text-center" style="text-align:left;">
+                            <strong>"El Trabajador"</strong><br/>
+                            _______________________________
+                            <br/>
+                            FIRMA AUTORIZACION
+                        </div>
+                        <div class="col-6 text-center" style="text-align:right;">
+                            <strong>"La Empresa"</strong><br/>
+                            _______________________________
+                            <br/>
+                            FIRMA RECIBIDO NOMINAS
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </template>
+
+        <template id="report_contrato_indeterminado_ad">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="rh_gebesa.report_contrato_indeterminado_ad_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

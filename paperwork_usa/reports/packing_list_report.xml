@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- QWeb Reports -->
+        <report 
+            id="packing_list"
+            model="mrp.shipment"
+            string="Packing List"
+            report_type="qweb-pdf"
+            name="paperwork_usa.report_packing_list"
+        />
+
+        <record id="paperwork_usa.packing_list" model="ir.actions.report">
+            <field name="paperformat_id" ref="paperwork_usa.paperformat_packing_list" />
+        </record>
+	</data>
+</odoo>

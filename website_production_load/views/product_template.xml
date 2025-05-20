@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_template_workcenter_form_view'>
+            <field name='name'>product_template_workcenter_view</field>
+            <field name='model'>product.template</field>
+            <field name='inherit_id' ref="product.product_template_form_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook/page[@name='inventory']/group/group/div[@name='volume']" position="after">
+                    <field name='workcenter_id'/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

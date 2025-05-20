@@ -1,0 +1,288 @@
+# -*- coding: utf-8 -*-
+# Copyright 2016, Jarsa Sistemas, S.A. de C.V.
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
+from datetime import datetime
+from datetime import timedelta
+from odoo import _, api, exceptions, fields, models
+
+
+class VmsOrderLine(models.Model):
+    _name = 'vms.order.line'
+    _description = 'VMS Order Line'
+
+    task_id = fields.Many2one(
+        'vms.task', string='Task',
+        required=True)
+    start_date = fields.Datetime(
+        default=fields.Datetime.now,
+        string='Schedule start',
+        required=True)
+    end_date = fields.Datetime(
+        string='Schedule end',
+        store=True,
+        readonly=True)
+    start_date_real = fields.Datetime(
+        string='Real start date', readonly=True)
+    end_date_real = fields.Datetime(
+        string='Real Finishing', readonly=True)
+    duration = fields.Float(store=True)
+    supplier_id = fields.Many2one(
+        'res.partner',
+        string='Supplier',
+        domain=[('supplier', '=', True)])
+    external = fields.Boolean()
+    product_id = fields.Many2one(
+        'product.product',
+        string="Product",
+        domain=[('type', '=', 'service'), ('purchase_ok', '=', True)])
+    qty_product = fields.Float(string="Quantity", default="1.0")
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('process', 'Process'),
+        ('done', 'Done'),
+        ('cancel', 'Cancel')],
+        default='draft')
+    real_duration = fields.Float(readonly=True)
+    spare_part_ids = fields.One2many(
+        'vms.product.line',
+        'order_line_id',
+        string='Spare Parts',
+        help='You must save the order to select the mechanic(s).')
+    responsible_ids = fields.Many2many(
+        'hr.employee',
+        string='Mechanics',
+        domain=[('mechanic', '=', True)])
+    purchase_order_id = fields.Many2one(
+        'purchase.order',
+        string='Purchase Order',
+        readonly=True)
+    purchase_state = fields.Boolean(
+        string="Purchase Order State Done",
+        compute='_compute_purchase_state')
+    order_id = fields.Many2one('vms.order', string='Order', readonly=True)
+    real_time_total = fields.Integer()
+    stock_picking_ids = fields.Many2many(
+        'stock.picking',
+        string="Stock Picking",
+        readonly=True,
+    )
+    activity_ids = fields.One2many(
+        'vms.activity',
+        'order_line_id', string="Activities", readonly=True)
+
+    # stock_location_id = fields.Many2one(
+    #     'stock.location',
+    #     required=True,
+    #     string='Stock Location')
+
+    name = fields.Char(
+        related='task_id.name',
+        string="Task"
+    )
+
+    # @api.onchange('start_date')
+    # def _onchange_start_date(self):
+    #     for order_line in self:
+    #         if order_line.start_date < order_line.order_id.start_date:
+    #             raise UserError(_("The start date of your task cannot be less than the scheduled start date of your order."))
+
+    # @api.onchange('end_date')
+    # def _onchange_end_date(self):
+    #     for order_line in self:
+    #         if order_line.end_date < order_line.start_date:
+    #             raise UserError(_("Your task's scheduled finish date cannot be less than your order's scheduled start date."))
+
+    @api.multi
+    def unlink(self):
+        self.spare_part_ids.unlink()
+        self.activity_ids.unlink()
+        return super().unlink()
+
+    @api.onchange('external')
+    def _onchange_external(self):
+        for rec in self:
+            if rec.external:
+                rec.spare_part_ids = False
+            else:
+                for spare_part in rec.task_id.spare_part_ids:
+                    spare = rec.spare_part_ids.new({
+                        'product_id': spare_part.product_id.id,
+                        'product_qty': spare_part.product_qty,
+                        'product_uom_id': spare_part.product_uom_id.id,
+                        'stock_location_id': spare_part.stock_location_id.id,
+                        'state': 'draft'})
+                    rec.spare_part_ids += spare
+
+    @api.onchange('task_id')
+    def _onchange_task(self):
+        for rec in self:
+            rec.duration = rec.task_id.duration
+            rec.start_date = rec.order_id.start_date
+            if rec.start_date:
+                strp_date = datetime.strptime(
+                    str(rec.start_date), "%Y-%m-%d %H:%M:%S")
+                rec.end_date = strp_date + timedelta(hours=rec.duration)
+            rec.spare_part_ids = [(2, line.id) for line in rec.spare_part_ids]
+            for spare_part in rec.task_id.spare_part_ids:
+                spare = rec.spare_part_ids.new({
+                    'product_id': spare_part.product_id.id,
+                    'product_qty': spare_part.product_qty,
+                    'product_uom_id': spare_part.product_uom_id.id,
+                    'stock_location_id': spare_part.stock_location_id.id,
+                    'state': 'draft'})
+                rec.spare_part_ids += spare
+
+    @api.onchange('duration')
+    def _onchange_duration(self):
+        for rec in self:
+            rec.start_date = rec.order_id.start_date
+            if rec.start_date:
+                strp_date = datetime.strptime(
+                    str(rec.start_date), "%Y-%m-%d %H:%M:%S")
+                rec.end_date = strp_date + timedelta(hours=rec.duration)
+
+    @api.depends('start_date_real', 'end_date_real')
+    def _compute_real_time_total(self):
+        for rec in self:
+            start_date = datetime.strptime(str(rec.start_date_real), '%Y-%m-%d')
+            end_date = datetime.strptime(str(rec.end_date_real), '%Y-%m-%d')
+            total_days = start_date - end_date
+            rec.real_time_total = total_days.days
+
+    @api.depends('purchase_order_id')
+    def _compute_purchase_state(self):
+        for rec in self:
+            rec.purchase_state = (rec.purchase_order_id.id and
+                                  rec.purchase_order_id.state == 'done')
+
+    @api.multi
+    def action_process(self):
+        for rec in self:
+            if rec.order_id.state != 'open':
+                raise exceptions.ValidationError(
+                    _('The order must be open.'))
+            if not rec.external:
+                if not rec.responsible_ids:
+                    raise exceptions.ValidationError(
+                        _('The tasks must have almost one mechanic.'))
+                #     for mechanic in rec.responsible_ids:
+                #         self.env['vms.activity'].create({
+                #             'order_id': rec.order_id.id,
+                #             'task_id': rec.task_id.id,
+                #             'name': rec.task_id.name,
+                #             'unit_id': rec.order_id.unit_id.id,
+                #             'order_line_id': rec.id,
+                #             'responsible_id': mechanic.id
+                #         })
+                rec.state = 'process'
+                rec.start_date_real = fields.Datetime.now()
+                if rec.spare_part_ids:
+                    for product in rec.spare_part_ids:
+                        product.state = 'pending'
+                    # rec.stock_picking_ids = (
+                    #     rec.spare_part_ids.
+                    #     _create_stock_picking())
+                rec.state = 'process'
+                # else:
+                #     raise exceptions.ValidationError(
+                #         _('The tasks must have almost one mechanic.'))
+
+    @api.multi
+    def action_done(self):
+        for rec in self:
+            if rec.external:
+                if not rec.purchase_state:
+                    raise exceptions.ValidationError(_(
+                        'Verify that purchase order are in '
+                        'done state to continue'))
+            else:
+                for mechanic in rec.responsible_ids:
+                    # activity = self.env['vms.activity'].search(
+                    #     [('order_line_id', '=', rec.id),
+                    #      ('task_id', '=', rec.task_id.id),
+                    #      ('responsible_id', '=', mechanic.id)])
+                    # if activity:
+                    #     activity.state = 'draft'
+                    # else:
+                    self.env['vms.activity'].create({
+                        'order_id': rec.order_id.id,
+                        'task_id': rec.task_id.id,
+                        'name': rec.task_id.name,
+                        'unit_id': rec.order_id.unit_id.id,
+                        'order_line_id': rec.id,
+                        'responsible_id': mechanic.id
+                    })
+
+                if rec.spare_part_ids:
+                    rec.stock_picking_ids = (
+                        rec.spare_part_ids.
+                        _create_stock_picking())
+
+                for picking in rec.stock_picking_ids:
+                    if picking.state != 'done':
+                        picking.action_confirm()
+                        # if picking.state != 'assigned':
+                        #     picking.action_assign()
+                        #     if picking.state != 'assigned':
+                        #         raise exceptions.ValidationError(_("Could not reserve all requested products. Please use the \'Mark as Todo\' button to handle the reservation manually."))
+                    if picking.state != 'done':
+                        picking.force_assign()
+                        # for move in picking.move_ids_without_package.filtered(lambda m: m.state not in ['done', 'cancel']):
+                        #     for move_line in move.move_line_ids:
+                        #         move_line.qty_done = move_line.product_uom_qty
+                        ctx = self._context.copy()
+                        picking.with_context(ctx).action_done()
+                        # rec.stock_picking_id.do_transfer()
+                    if picking.state != 'done':
+                        raise exceptions.ValidationError(
+                            _('The stock picking is not in done state'
+                                ' maybe one product has not availability.'
+                                ' Check the picking of the following task.'
+                                '\n\n *Task: %s') % rec.task_id.name)
+                for spare in rec.spare_part_ids:
+                    spare.state = 'delievered'
+            rec.end_date_real = fields.Datetime.now()
+            rec.state = 'done'
+
+    @api.multi
+    def action_cancel(self):
+        for rec in self:
+            if not rec.external:
+                rec.stock_picking_ids.action_cancel()
+                for spare in rec.spare_part_ids:
+                    spare.state = 'cancel'
+            else:
+                rec.purchase_order_id.unlink()
+                if rec.spare_part_ids:
+                    for spare in rec.spare_part_ids:
+                        # if spare.stock_move_id:
+                        #     spare.stock_move_id.state = 'cancel'
+                        spare.state = 'cancel'
+            rec.state = 'cancel'
+            rec.start_date_real = False
+
+    @api.multi
+    def action_cancel_draft(self):
+        for rec in self:
+            rec.stock_picking_ids.unlink()
+            rec.state = 'draft'
+
+    @api.multi
+    def create_po(self):
+        purchase_order_id = self.env['purchase.order'].create({
+            'partner_id': self.supplier_id.id,
+            'partner_ref': self.order_id.name,
+            'order_line': [(0, 0, {
+                'product_id': self.product_id.id,
+                'product_qty': self.qty_product,
+                'date_planned': fields.Datetime.now(),
+                'product_uom': self.product_id.uom_po_id.id,
+                'price_unit': self.product_id.standard_price,
+                'taxes_id': [(
+                    6, 0,
+                    [x.id for x in (
+                        self.product_id.supplier_taxes_id)]
+                )],
+                'name': self.product_id.name})]})
+        self.write({'purchase_order_id': purchase_order_id.id})

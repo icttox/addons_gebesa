@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+            id="ingreso_personal"
+            model="hr.employee"
+            string="Imprimir Ingreso Personal"
+            report_type="qweb-pdf"
+            name="rh_gebesa.report_ingreso_personal"
+            file="rh_gebesa.report_ingreso_personal"
+        />
+
+        <template id="report_ingreso_personal_layout">
+            <div class="header">
+                <div class="row no-gutters">
+                    <div class="col-12">
+                        <img t-if="doc.company_id" t-att-src="image_data_uri(doc.company_id.logo)" style="max-height: 30px;max-width: 100px;margin-top: 10px;margin-left: 3px;" alt="Logo"/>
+                        <img t-if="not doc.company_id" t-att-src="image_data_uri(user.company_id.logo)" style="max-height: 30px;max-width: 100px;margin-top: 10px;margin-left: 3px;" alt="Logo"/>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center">
+                        <strong>INGRESO DE PERSONAL</strong>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center">
+                        <strong>DEPARTAMENTO RECURSOS HUMANOS GEBESA</strong>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center">
+                        <span t-field="doc.department_id.company_id.name"/>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center">
+                        Fecha:&#160;<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                    </div>
+                </div>
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer">
+                <div class="row">
+                    <div class="col-6">
+                        www.gebesa.com
+                    </div>
+                    <div class="col-6" align="right">
+                        Página 1 de 1
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="report_ingreso_personal_document">
+            <t t-call="rh_gebesa.report_ingreso_personal_layout">
+                <div class="page">
+                    <div class="row no-gutters">
+                        <table class="table table-bordered mb32" style="font-size:12px">
+                            <tr>
+                                <th><img src='/rh_gebesa/static/img/gebesa.jpg' style="max-height: 35px; "/></th>
+                                <th class="py-1 text-center">INGRESO DE PERSONAL</th>
+                                <th class="py-1">Revisión: 0</th>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Código: F-RH-31</th>
+                                <th class="py-1">Código: P-RH-01 / P-RH-03</th>
+                                <th class="py-1">Fecha de revisión: 22/09/2021</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12 text-center" style="background-color: #848484;color: #ffffff;">
+                            DATOS DEL EMPLEADO
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table class="table table-bordered mb32" style="font-size:12px">
+                            <tr>
+                                <th>Empresa Destino:</th>
+                                <td class="py-1" colspan="3"><span t-field="doc.company_id.name"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Nombre:</th>
+                                <td class="py-1" colspan="3"><span t-field="doc.name"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">R.F.C.:</th>
+                                <td class="py-1"><span t-field="doc.rfc"/></td>
+                                <th class="py-1">C.U.R.P:</th>
+                                <td class="py-1"><span t-field="doc.curp"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Escolaridad:</th>
+                                <td class="py-1"><span t-field="doc.escolaridad"/></td>
+                                <th class="py-1">Sexo:</th>
+                                <td class="py-1"><span t-field="doc.gender"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Fecha Nacimiento:</th>
+                                <td class="py-1"><span t-field="doc.birthday"/></td>
+                                <th class="py-1">Lugar Nacimiento:</th>
+                                <td class="py-1"><span t-field="doc.place_of_birth"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Estado Civil:</th>
+                                <td class="py-1"><span t-field="doc.marital"/></td>
+                                <th class="py-1">Número Hijos:</th>
+                                <td class="py-1"><span t-field="doc.children"/></td>
+                            </tr>
+                            <tr>
+                                <th>Conyuge:</th>
+                                <td><span t-field="doc.spouse"/></td>
+                                <th>Antiguedad Vivienda:</th>
+                                <td><span t-field="doc.antiguedad_vivienda"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Padre:</th>
+                                <td class="py-1" colspan="3"><span t-field="doc.father"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Madre:</th>
+                                <td class="py-1" colspan="3"><span t-field="doc.mother"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12 text-center" style="background-color: #848484;color: #ffffff;">
+                            DIRECCION DEL EMPLEADO
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table class="table table-bordered mb32" style="font-size:12px">
+                            <tr>
+                                <th class="py-1">Dirección:</th>
+                                <td class="py-1"><span t-field="doc.address_home_id.street"/></td>
+                                <th class="py-1">Número:</th>
+                                <td class="py-1"><span t-field="doc.address_home_id.external_num"/></td>
+                                <th class="py-1">Colonia:</th>
+                                <td class="py-1"><span t-field="doc.address_home_id.l10n_mx_edi_colony"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Ciudad:</th>
+                                <td class="py-1"><span t-field="doc.address_home_id.city"/></td>
+                                <th class="py-1">Estado:</th>
+                                <td class="py-1"><span t-field="doc.address_home_id.state_id.name"/></td>
+                                <th class="py-1">Código Postal:</th>
+                                <td class="py-1"><span t-field="doc.address_home_id.zip"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12 text-center" style="background-color: #848484;color: #ffffff;">
+                            DATOS DEL PUESTO
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <table class="table table-bordered mb32" style="font-size:12px">
+                            <tr>
+                                <th class="py-1">No. IMSS:</th>
+                                <td class="py-1"><span t-field="doc.imss"/></td>
+                                <th class="py-1">No. Trabajador:</th>
+                                <td class="py-1"><span t-field="doc.consecutive_id"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Salario Diario:</th>
+                                <td class="py-1"><span t-field="doc.contract_id.wage"/></td>
+                                <th class="py-1">Fecha Ingreso:</th>
+                                <td class="py-1"><span t-field="doc.contract_id.date_start"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Categoria:</th>
+                                <td class="py-1">
+                                    <t t-foreach="doc.category_ids" t-as="category">
+                                        <span t-field="category.name"/>,
+                                    </t>
+                                </td>
+                                <th class="py-1">UMF:</th>
+                                <td class="py-1"><span t-field="doc.umf"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Puesto:</th>
+                                <td class="py-1"><span t-field="doc.job_id.name"/></td>
+                                <th class="py-1">Telefono Personal:</th>
+                                <td class="py-1"><span t-field="doc.address_home_id.phone"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Centro Costo:</th>
+                                <td class="py-1"><span t-field="doc.department_id.sudo().analytic_id.name"/></td>
+                                <th class="py-1">Telefono Trabajo:</th>
+                                <td class="py-1"><span t-field="doc.mobile_phone"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Departamento:</th>
+                                <td class="py-1"><span t-field="doc.department_id.name"/></td>
+                                <th class="py-1">Credito Fonacot:</th>
+                                <td class="py-1"><span t-field="doc.contract_id.credito_fonacot"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Premio Puntualidad:</th>
+                                <td class="py-1"><span t-field="doc.contract_id.premio_puntualidad"/></td>
+                                <th class="py-1">Credito Infonavit:</th>
+                                <td class="py-1"><span t-field="doc.contract_id.credito_infonavit"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Premio Asistencia:</th>
+                                <td class="py-1"><span t-field="doc.contract_id.premio_asistencia"/></td>
+                                <th class="py-1">Beneficiario 1:</th>
+                                <td class="py-1"><span t-field="doc.beneficio_1"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Incentivo:</th>
+                                <td class="py-1"><span t-field="doc.contract_id.incentivo"/></td>
+                                <th class="py-1">Porcentaje:</th>
+                                <td class="py-1"><span t-field="doc.porcentaje_1" t-options='{"widget": "percentpie"}'/>&#160;%</td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Reingreso:</th>
+                                <td class="py-1"><span t-field="doc.reingreso"/></td>
+                                <th class="py-1">Beneficiario 2:</th>
+                                <td class="py-1"><span t-field="doc.beneficio_2"/></td>
+                            </tr>
+                            <tr>
+                                <th class="py-1">Sidicalizado:</th>
+                                <td class="py-1"><span t-field="doc.sindicalizado"/></td>
+                                <th class="py-1">Porcentaje:</th>
+                                <td class="py-1"><span t-field="doc.porcentaje_2"/>&#160;%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row no-gutters pt-5">
+                        <div class="col-6 text-center">
+                            _______________________________
+                            <br/>
+                            FIRMA AUTORIZACION
+                        </div>
+                        <div class="col-6 text-center">
+                            _______________________________
+                            <br/>
+                            FIRMA RECIBIDO NOMINAS
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12 text-center">
+                            C.C.P.NOMINAS
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_ingreso_personal">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="rh_gebesa.report_ingreso_personal_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

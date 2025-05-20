@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_type_tree'>
+            <field name='name'>product.type.tree</field>
+            <field name='model'>product.type</field>
+            <field name='arch' type='xml'>
+                <tree string='Product Type'>
+                    <field name='name'/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='product_type_form'>
+            <field name='name'>product.type.form</field>
+            <field name='model'>product.type</field>
+            <field name='arch' type='xml'>
+                <form string='Product Type'>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name='name'/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name='active'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id='action_product_type' model='ir.actions.act_window'>
+            <field name='name'>Product Type</field>
+            <field name='res_model'>product.type</field>
+            <field name='view_type'>form</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem id="product_type_menu" name="Product Type" parent="product_strucutre_gebesa_menu" action="action_product_type"/>
+    </data>
+</odoo>

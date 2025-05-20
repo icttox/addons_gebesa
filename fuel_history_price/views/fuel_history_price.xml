@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="action_fuel_history_price" model="ir.actions.act_window">
+			<field name="name">Fuel History Price</field>
+			<field name="res_model">fuel.history.price</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to Register.
+				</p>
+				<p>
+					Make your first Fuel History Price.
+				</p>
+			</field>
+		</record>
+
+		<menuitem action="action_fuel_history_price" id="menu_action_fuel_history_price" name="Fuel History Price" parent="tms.menu_tms_settings_routes"  sequence="20"/>
+
+		<record model="ir.ui.view" id="fuel_history_price_tree">
+			<field name="name">fuel.history.price.tree</field>
+			<field name="model">fuel.history.price</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Fuel History Price">
+					<field name="fuel_type"/>
+					<field name="date"/>	
+					<field name="price"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fuel_history_price_form">
+			<field name="name">fuel.history.price.form</field>
+			<field name="model">fuel.history.price</field>
+			<field name="arch" type="xml">
+				<form string='Fuel History Price'>
+					<sheet>
+						<group>
+							<group>
+								<field name='fuel_type' required='1'/>
+								<field name='date' required='1'/>
+							</group>
+							<group>								
+								<field name='price' required='1'/>								
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>

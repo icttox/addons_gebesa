@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='product_uom_forchange_wizard'>
+        	<field name='name'>product.uom.forchange.wizard</field>
+        	<field name='model'>product.uom.forchange.wizard</field>
+        	<field name='arch' type='xml'>
+        		<form>
+        			<group>
+        				<field name='uom_id'/>
+        			</group>
+        			<footer>
+                        <button name="change_uom_id" string="Force" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+        		</form>
+        	</field>
+        </record>
+    </data>
+</odoo>

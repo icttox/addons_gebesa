@@ -1,0 +1,1106 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_segment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-13 23:54+0000\n"
+"PO-Revision-Date: 2019-02-13 17:56-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.mrp_production_segment_form
+msgid "*Do not take into account production orders that are not in the states \"Awaiting Raw Materials\" or \"Ready to Produce\"."
+msgstr "*Do not take into account production orders that are not in the states \"Awaiting Raw Materials\" or \"Ready to Produce\"."
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+msgid ""
+"<br/>\n"
+"                            Description:"
+msgstr ""
+"<br/>\n"
+"                            Description:"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+msgid ""
+"<br/>\n"
+"                            Estatus:"
+msgstr ""
+"<br/>\n"
+"                            Estatus:"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_footer
+msgid "AUTORIZA"
+msgstr "AUTORIZA"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_message_needaction
+msgid "Action Needed"
+msgstr "Accion necesaria"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.mrp_segment_add_production_form
+msgid "Add"
+msgstr "Agregar"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_form
+msgid "Add production"
+msgstr "Add production"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+msgid "Ancho"
+msgstr "Ancho"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:315
+#, python-format
+msgid "Awaiting Raw Materials"
+msgstr "En espera de materiales"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Lista de material"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_document
+msgid "CALIBRE"
+msgstr "CALIBRE"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_document
+msgid "CANTIDAD"
+msgstr "CANTIDAD"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_document
+msgid "COMPONENTE"
+msgstr "COMPONENTE"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:416
+#, python-format
+msgid "Can only be removed in the                     construction state of the segment"
+msgstr "Can only be removed in the                     construction state of the segment"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.mrp_production_segment_form
+#: model:ir.ui.view,arch_db:mrp_segment.mrp_segment_add_production_form
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:314
+#: selection:mrp.segment,state:0
+#, python-format
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "Cant."
+msgstr "Cant."
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+msgid "Cantidad"
+msgstr "Cantidad"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_document
+msgid "Cantidades"
+msgstr "Cantidades"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+msgid "Caras"
+msgstr "Caras"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_document
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "Clave"
+msgstr "Clave"
+
+#. module: mrp_segment
+#: model:ir.actions.act_window,help:mrp_segment.action_segment_form
+msgid "Click to start a segment."
+msgstr "Click para iniciar un segmento."
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "Cliente"
+msgstr "Cliente"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:331
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_product_code
+#, python-format
+msgid "Code Product"
+msgstr "Código del Producto"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+msgid "Color"
+msgstr "Color"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:102
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_commitment_date
+#, python-format
+msgid "Commitment Date"
+msgstr "Fecha Compromiso"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:107
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_commitment_week_number
+#, python-format
+msgid "Commitment Week Number"
+msgstr "Semana de Fecha Compromiso"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:73
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_company_id
+#, python-format
+msgid "Company"
+msgstr "Compañía"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "Cost. Tot."
+msgstr "Cost. Tot."
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "Cost. Uni."
+msgstr "Cost. Uni."
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.mrp_production_segment_form
+msgid "Create Segment"
+msgstr "Crear Segmento"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_segment_create_uid
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_add_production_create_uid
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_segment_create_date
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_add_production_create_date
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_partner_id
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: mrp_segment
+#: model:ir.actions.report.xml,name:mrp_segment.cut_order
+#: model:ir.actions.report.xml,name:mrp_segment.cut_order_production
+msgid "Cut order"
+msgstr "Detalle de corte"
+
+#. module: mrp_segment
+#: model:ir.actions.report.xml,name:mrp_segment.cut_order_production_consolidado
+msgid "Cut order consolidated"
+msgstr "Detalle de corte Consolidado"
+
+#. module: mrp_segment
+#: model:ir.actions.report.xml,name:mrp_segment.cut_order_wood
+msgid "Cut order wood"
+msgstr "Detalle de corte madera"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_document
+msgid "DOBLADO"
+msgstr "DOBLADO"
+
+#. module: mrp_segment
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr "Fecha del último mensaje publicado en el registro."
+
+#. module: mrp_segment
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_line_product_uom
+msgid "Default Unit of Measure used for all stock operation."
+msgstr "Unidad de medida por defecto utilizada para todas las operaciones de stock."
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "Depto"
+msgstr "Depto"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "Descripcion"
+msgstr "Descripcion"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+msgid "Descripción"
+msgstr "Descripción"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_header
+msgid "Destino:"
+msgstr "Destino:"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_segment_display_name
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_add_production_display_name
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_display_name
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_display_name
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_cut_order_display_name
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_cut_order_production_consolidado_display_name
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_cut_order_production_display_name
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_cut_order_wood_display_name
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_manufacturing_order_display_name
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_manufacturing_order_production_display_name
+msgid "Display Name"
+msgstr "Nombre desplegado"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:318
+#: code:addons/mrp_segment/models/mrp_segment.py:386
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_quantity
+#, python-format
+msgid "Done"
+msgstr "Hecho"
+
+#. module: mrp_segment
+#: selection:mrp.segment,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+msgid "Espesor"
+msgstr "Espesor"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_header
+msgid "Estatus:"
+msgstr "Estatus:"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_express
+msgid "Expres"
+msgstr "Expres"
+
+#. module: mrp_segment
+#: model:res.groups,name:mrp_segment.group_express_mrp_segment
+msgid "Express Mrp Segment"
+msgstr "Express Mrp Segment"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_header
+msgid "Fecha:"
+msgstr "Fecha:"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_folio
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_filter
+msgid "Folio"
+msgstr "Folio"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_header
+msgid "Folio:"
+msgstr "Folio:"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Partners)"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "GRUPO:"
+msgstr "GRUPO:"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_filter
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_segment_id
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_add_production_id
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_id
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_cut_order_id
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_cut_order_production_consolidado_id
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_cut_order_production_id
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_cut_order_wood_id
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_manufacturing_order_id
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_manufacturing_order_production_id
+msgid "ID"
+msgstr "ID"
+
+#. module: mrp_segment
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si se marca nuevos mensajes requieren su atención."
+
+#. module: mrp_segment
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si se marca, nuevos mensajes requieren su atención"
+
+#. module: mrp_segment
+#: selection:mrp.segment,state:0
+msgid "In Construction"
+msgstr "En contruccion"
+
+#. module: mrp_segment
+#: selection:mrp.segment,state:0
+msgid "In Progress"
+msgstr "En progreso"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_document
+msgid "LASER"
+msgstr "LASER"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "LINEA:"
+msgstr "LINEA:"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+msgid "Largo"
+msgstr "Largo"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_message_last_post
+msgid "Last Message Date"
+msgstr "Fecha de Ultimo Mensaje"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_segment___last_update
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment___last_update
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_add_production___last_update
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line___last_update
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_cut_order___last_update
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_cut_order_production___last_update
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_cut_order_production_consolidado___last_update
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_cut_order_wood___last_update
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_manufacturing_order___last_update
+#: model:ir.model.fields,field_description:mrp_segment.field_report_mrp_segment_report_manufacturing_order_production___last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion realizada"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_segment_write_uid
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_add_production_write_uid
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_segment_write_date
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_add_production_write_date
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización realizada"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_footer
+msgid "M-PR-003-F"
+msgstr "M-PR-003-F"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_document
+msgid "MEDIDA"
+msgstr "MEDIDA"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_mrp_segment
+msgid "MRP Segment"
+msgstr "MRP Segmento"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_header
+msgid ""
+"Manufactura Post-Form S.A. de C.V.<br/>\n"
+"                            MANUFACTUAS POST-FORM S.A. DE C.V.<br/>\n"
+"                            Solicitud para Orden de Fabricacion"
+msgstr ""
+"Manufactura Post-Form S.A. de C.V.<br/>\n"
+"                            MANUFACTUAS POST-FORM S.A. DE C.V.<br/>\n"
+"                            Solicitud para Orden de Fabricacion"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:308
+#: model:ir.model,name:mrp_segment.model_mrp_production
+#, python-format
+msgid "Manufacturing Order"
+msgstr "Orden de Manufactura"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:83
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_ids
+#, python-format
+msgid "Manufacturing Order Line"
+msgstr "Línea de Orden Manufactura"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_form
+msgid "Manufacturing Orders Details"
+msgstr "Detalles Orden Manufactura"
+
+#. module: mrp_segment
+#: model:ir.actions.report.xml,name:mrp_segment.manufacturing_order
+#: model:ir.actions.report.xml,name:mrp_segment.manufacturing_order_production
+msgid "Manufacturing order"
+msgstr "Orden de fabricación"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_message_ids
+msgid "Messages"
+msgstr "Mensages"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:337
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_product_name
+#, python-format
+msgid "Name Product"
+msgstr "Nombre Producto"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_form
+msgid "Name for Segment"
+msgstr "Nombre para el Segmento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:313
+#, python-format
+msgid "New"
+msgstr "New"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/sale_order.py:25
+#, python-format
+msgid "No Production"
+msgstr "No Production"
+
+#. module: mrp_segment
+#: selection:stock.picking,review:0
+msgid "No Revisado"
+msgstr "No Revisado"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/sale_order.py:12
+#, python-format
+msgid "No Segment"
+msgstr "No Segmentado"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_document
+msgid "Nota Importante"
+msgstr "Nota Importante"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero de Acciones"
+
+#. module: mrp_segment
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requiere una acción"
+
+#. module: mrp_segment
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "ORDENES DE FABRICACIÓN"
+msgstr "ORDENES DE FABRICACIÓN"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+msgid "Order"
+msgstr "Pedidos"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "PEDIDOS"
+msgstr "PEDIDOS"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_document
+msgid "PUNZO"
+msgstr "PUNZO"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_header
+msgid "Pagina: <span class=\"page\"/> de <span class=\"topage\"/>"
+msgstr "Pagina: <span class=\"page\"/> de <span class=\"topage\"/>"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/sale_order.py:26
+#, python-format
+msgid "Partial Production"
+msgstr "Partial Production"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/sale_order.py:13
+#, python-format
+msgid "Partial Segment"
+msgstr "Segmentado Parcial"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "Pedido"
+msgstr "Pedido"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_form
+msgid "Proceed"
+msgstr "Proceder"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_form
+msgid "Process"
+msgstr "Procesar"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_procurement_order
+msgid "Procurement"
+msgstr "Abastecimiento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:326
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_product_id
+#, python-format
+msgid "Product"
+msgstr "Producto"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:374
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_product_qty
+#, python-format
+msgid "Product quantity"
+msgstr "Cantidad de producto"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_add_production_production_ids
+msgid "Production"
+msgstr "Producción"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_mrp_production_product_line
+msgid "Production Scheduled Product"
+msgstr "Fabricación planificada producto"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:317
+#, python-format
+msgid "Production Started"
+msgstr "Comienzo de la producción"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/sale_order.py:28
+#, python-format
+msgid "Production Status"
+msgstr "Production Status"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:112
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_progress_date
+#, python-format
+msgid "Progress Date"
+msgstr "Progress Date"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_purchase_order
+msgid "Purchase Order"
+msgstr "Orden de Compra"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Línea pedido de compra"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.mrp_production_form_view
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_form
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:380
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_manufacture_qty
+#, python-format
+msgid "Quantity to manufacture"
+msgstr "Cantidad a fabricar"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_footer
+msgid "R-00-23-02-2009"
+msgstr "R-00-23-02-2009"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:316
+#, python-format
+msgid "Ready to Produce"
+msgstr "Listo para producir"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_procurement_order_related_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_purchase_order_line_related_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_purchase_order_related_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_sale_order_related_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_stock_move_related_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_stock_picking_related_segment
+msgid "Relatad Segment"
+msgstr "Segmento Relacionado"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_stock_picking_review
+#: selection:stock.picking,review:0
+msgid "Revisar"
+msgstr "Revisar"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_footer
+msgid "SOLICITA"
+msgstr "SOLICITA"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:369
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_sale_name
+#, python-format
+msgid "Sale Order"
+msgstr "Orden de Venta"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_sale_id
+msgid "Sale order"
+msgstr "Orden de venta"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea pedido de venta"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_product_lines_ids
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_form
+msgid "Scheduled goods"
+msgstr "Bienes planificados"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_filter
+msgid "Search Segment"
+msgstr "Buscar Segmento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_production.py:17
+#: code:addons/mrp_segment/wizards/mrp_production_segment.py:54
+#: model:ir.actions.act_window,name:mrp_segment.action_production_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_segment
+#: model:ir.ui.view,arch_db:mrp_segment.mrp_production_form_view
+#: model:ir.ui.view,arch_db:mrp_segment.mrp_production_segment_form
+#: model:ir.ui.view,arch_db:mrp_segment.mrp_segment_add_production_form
+#, python-format
+msgid "Segment"
+msgstr "Segmento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:43
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_date
+#, python-format
+msgid "Segment Date"
+msgstr "Fecha del Segmento"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_form
+msgid "Segment Details"
+msgstr "Detalles del Segmento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/sale_order_line.py:13
+#, python-format
+msgid "Segment Line"
+msgstr "Líneas del Segmento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:86
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_line_ids
+#, python-format
+msgid "Segment Lines."
+msgstr "Líneas del Segmento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:64
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_location_id
+#, python-format
+msgid "Segment Location"
+msgstr "Localización Segmento"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_filter
+msgid "Segment Month"
+msgstr "Mes del Segmento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:31
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_name
+#, python-format
+msgid "Segment Name."
+msgstr "Nombre del Segmento."
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:26
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_segment_name
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_name
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_filter
+#, python-format
+msgid "Segment Reference"
+msgstr "Referencia del Segmento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/sale_order.py:15
+#, python-format
+msgid "Segment Status"
+msgstr "Estado del Segmento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/wizards/mrp_segment_add_production.py:13
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_segment_location_id
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_add_production_location_id
+#, python-format
+msgid "Segment location"
+msgstr "Ubicación del segmento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:300
+#: model:ir.ui.menu,name:mrp_segment.menu_mrp_segment_action
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_form
+#, python-format
+msgid "Segmentation"
+msgstr "Segmentación"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_mrp_segment_line
+msgid "Segmentation Line"
+msgstr "\"Línea de Segmentació"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_sale_order_line_segment_qty
+msgid "Segmented quantity"
+msgstr "Cantidad segmentada"
+
+#. module: mrp_segment
+#: model:ir.actions.act_window,name:mrp_segment.action_segment_form
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_tree
+msgid "Segments"
+msgstr "Segmentos"
+
+#. module: mrp_segment
+#: model:ir.actions.act_window,help:mrp_segment.action_segment_form
+msgid "Segments are useful for grouping Manufacturing Orders that will be dealt with within a certain time span, could be a week."
+msgstr "Los Segmentos son útiles para agrupar las Órdenes de Fabricación que se atenderán dentro de un cierto período de tiempo, podría ser una semana."
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_filter
+msgid "Segments by Month"
+msgstr "Segmentos por Mes"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_production.py:14
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_segment_line_ids
+#, python-format
+msgid "Segments line"
+msgstr "Lineas de segmento"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_product_line_location_id
+msgid "Source location"
+msgstr "Ubicación de la fuente"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_production.py:36
+#: code:addons/mrp_segment/models/mrp_segment.py:355
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_production_product_line_standard_cost
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_standard_cost
+#, python-format
+msgid "Standard Cost"
+msgstr "Costo estándar"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:55
+#: code:addons/mrp_segment/models/mrp_segment.py:319
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_state
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_state
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_filter
+#, python-format
+msgid "Status"
+msgstr "Estado"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento bursátil"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_document
+msgid "TROQUEL"
+msgstr "TROQUEL"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:47
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_date
+#, python-format
+msgid "The date that will be used for the segment."
+msgstr "La fecha que será utilizado para el segmento."
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/wizards/mrp_production_segment.py:35
+#, python-format
+msgid "The production order %s does not                                       belong to the selected location"
+msgstr "La orden de fabricación %s no pertenece a la ubicación seleccionada"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:394
+#, python-format
+msgid ""
+"The quantity available is less than \n"
+"the quantity segmented"
+msgstr "La cantidad disponible es inferior a la cantidad segmentado"
+
+#. module: mrp_segment
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_line_product_volume
+msgid "The volume in m3."
+msgstr "El volumen en m3."
+
+#. module: mrp_segment
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_line_product_weight
+msgid "The weight of the contents in Kg, not including any packaging, etc."
+msgstr "El peso del contenido en Kg, sin incluir empaquetado, etc..."
+
+#. module: mrp_segment
+#: sql_constraint:mrp.segment:0
+msgid "This field must be unique!"
+msgstr "¡Este campo debe ser único!"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/report/cut_order_production_consolidado.py:20
+#, python-format
+msgid "Todas las ordernes de fabricacion tienen                 que tener el mismo producto"
+msgstr "Todas las ordernes de fabricacion tienen                 que tener el mismo producto"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "Total"
+msgstr "Total"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/sale_order.py:27
+#, python-format
+msgid "Total Production"
+msgstr "Total Production"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/sale_order.py:14
+#, python-format
+msgid "Total Segment"
+msgstr "Segmentado Total"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_document
+msgid "Total de piezas"
+msgstr "Total de piezas"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_cut_order_wood_document
+msgid "Ubicacion:"
+msgstr "Ubicacion:"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.report_manufacturing_order_document
+msgid "Unidad"
+msgstr "Unidad"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_product_uom
+#: model:ir.ui.view,arch_db:mrp_segment.mrp_production_form_view
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_form
+msgid "Unit of Measure"
+msgstr "Unidad de medida"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_message_unread
+msgid "Unread Messages"
+msgstr "Los mensajes no leídos"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Los mensajes no leídos Contador"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.view_segment_form
+msgid "Validate"
+msgstr "Validar"
+
+#. module: mrp_segment
+#: selection:mrp.segment,state:0
+msgid "Validated"
+msgstr "Validado"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:349
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_product_volume
+#, python-format
+msgid "Volume Product"
+msgstr "Volumen Producto"
+
+#. module: mrp_segment
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes de sitios web"
+
+#. module: mrp_segment
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_website_message_ids
+msgid "Website communication history"
+msgstr "Historia de la comunicación sitio web"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:343
+#: model:ir.model.fields,field_description:mrp_segment.field_mrp_segment_line_product_weight
+#, python-format
+msgid "Weight Product"
+msgstr "Peso Producto"
+
+#. module: mrp_segment
+#: model:ir.model.fields,help:mrp_segment.field_mrp_segment_line_state
+msgid ""
+"When the production order is created the status is set to 'Draft'.\n"
+"If the order is confirmed the status is set to 'Waiting Goods.\n"
+"If any exceptions are there, the status is set to 'Picking Exception.\n"
+"If the stock is available then the status is set to 'Ready to Produce.\n"
+"When the production gets started then the status is set to 'In Production.\n"
+"When the production is over, the status is set to 'Done'."
+msgstr ""
+"Cuando se crea la orden de producción del estado se establece en ' Borrador'.\n"
+"Si se confirma la orden el estado está en ' Esperando materiales.'\n"
+"Si las excepciones están ahí, el estado está en ' Excepcion.'\n"
+"Si la acción está disponible, el estado está en ' Listo para Producir'\n"
+"Cuando la producción se inicia entonces el estado se establece en ' En Produccion'.\n"
+"Cuando la producción es más, el estado está en ' Realizado '."
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:162
+#, python-format
+msgid "You can not delete this segment"
+msgstr "No puedes eliminar este segmento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:147
+#, python-format
+msgid "You can not modify this segment"
+msgstr "No puedes modificar este segmento"
+
+#. module: mrp_segment
+#: code:addons/mrp_segment/models/mrp_segment.py:407
+#, python-format
+msgid "You can not segment because order %s has exceptions"
+msgstr "No se puede segmentar porque la orden %s tiene excepciones"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_mrp_production_segment
+msgid "mrp.production.segment"
+msgstr "mrp.production.segment"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_mrp_segment_add_production
+msgid "mrp.segment.add.production"
+msgstr "mrp.segment.add.production"
+
+#. module: mrp_segment
+#: model:ir.ui.view,arch_db:mrp_segment.mrp_production_segment_form
+#: model:ir.ui.view,arch_db:mrp_segment.mrp_segment_add_production_form
+msgid "or"
+msgstr "ó"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_report_mrp_segment_report_cut_order
+msgid "report.mrp_segment.report_cut_order"
+msgstr "report.mrp_segment.report_cut_order"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_report_mrp_segment_report_cut_order_production
+msgid "report.mrp_segment.report_cut_order_production"
+msgstr "report.mrp_segment.report_cut_order_production"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_report_mrp_segment_report_cut_order_production_consolidado
+msgid "report.mrp_segment.report_cut_order_production_consolidado"
+msgstr "report.mrp_segment.report_cut_order_production_consolidado"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_report_mrp_segment_report_cut_order_wood
+msgid "report.mrp_segment.report_cut_order_wood"
+msgstr "report.mrp_segment.report_cut_order_wood"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_report_mrp_segment_report_manufacturing_order
+msgid "report.mrp_segment.report_manufacturing_order"
+msgstr "report.mrp_segment.report_manufacturing_order"
+
+#. module: mrp_segment
+#: model:ir.model,name:mrp_segment.model_report_mrp_segment_report_manufacturing_order_production
+msgid "report.mrp_segment.report_manufacturing_order_production"
+msgstr "report.mrp_segment.report_manufacturing_order_production"
