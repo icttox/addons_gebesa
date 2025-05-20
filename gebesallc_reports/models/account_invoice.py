@@ -4,7 +4,7 @@ from odoo import models, fields
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     terms = fields.Char(
         string='Terminos')

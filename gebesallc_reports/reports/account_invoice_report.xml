@@ -3,7 +3,7 @@
     <data>
         <report
             id="ac1"
-            model="account.invoice"
+            model="account.move"
             string="Account Invoice Gebesa LLC Report"
             name="gebesallc_reports.report_account1"
             file="gebesallc_reports.report_account1"
@@ -24,22 +24,22 @@
                                 <img src="/gebesallc_reports/static/img/duraboxx.png" style="width: 260px; height: 105px; margin-top: 20px;margin-right: 5px;"/>
                             </div>
                             <div class="col-4">
-                                <h2 t-if="doc.type == 'out_invoice'" style="font-weight: bold;">INVOICE</h2>
-                                <h2 t-if="doc.type == 'out_refund'" style="font-weight: bold;">CREDIT NOTE</h2>
-                                <h2 t-if="doc.type == 'in_refund'" style="font-weight: bold;">VENDOR CREDIT NOTE</h2>
-                                <h2 t-if="doc.type == 'in_invoice'" style="font-weight: bold;">VENDOR BILL</h2>
+                                <h2 t-if="doc.move_type == 'out_invoice'" style="font-weight: bold;">INVOICE</h2>
+                                <h2 t-if="doc.move_type == 'out_refund'" style="font-weight: bold;">CREDIT NOTE</h2>
+                                <h2 t-if="doc.move_type == 'in_refund'" style="font-weight: bold;">VENDOR CREDIT NOTE</h2>
+                                <h2 t-if="doc.move_type == 'in_invoice'" style="font-weight: bold;">VENDOR BILL</h2>
                                 <table width="100%" class="table table-bordered">
                                     <thead>
                                         <tr>
                                             <th>Date</th>
-                                            <th t-if="doc.type == 'out_invoice' or doc.type == 'in_invoice'">Invoice</th>
-                                            <th t-if="doc.type == 'out_refund' or doc.type == 'in_refund'">Credit Note</th>
+                                            <th t-if="doc.move_type == 'out_invoice' or doc.move_type == 'in_invoice'">Invoice</th>
+                                            <th t-if="doc.move_type == 'out_refund' or doc.move_type == 'in_refund'">Credit Note</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><span t-field="doc.date_invoice"/></td>
-                                            <td><span t-field="doc.number"/></td>
+                                            <td><span t-field="doc.invoice_date"/></td>
+                                            <td><span t-field="doc.name"/></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -72,7 +72,7 @@
         <template id="report_account1_invoice">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="doc">
-                    <t t-set="lang" t-value="doc.user_id.sudo().lang if doc.type in ('in_invoice', 'in_refund') else doc.partner_id.lang"/>
+                    <t t-set="lang" t-value="doc.user_id.sudo().lang if doc.move_type in ('in_invoice', 'in_refund') else doc.partner_id.lang"/>
                     <t t-set="doc" t-value="doc.with_context(lang=lang)" />
                     <t t-call="gebesallc_reports.account_invoice_layout">
                         <div class="page">
