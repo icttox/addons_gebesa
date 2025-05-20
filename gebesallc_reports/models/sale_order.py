@@ -15,7 +15,6 @@ class SaleOrder(models.Model):
         string='% SPIFF',
     )
 
-    @api.multi
     def print_shipment_label_crossover(self):
         self.ensure_one()
         order_cross = self.env['sale.order'].sudo().search([
@@ -35,7 +34,7 @@ class SaleOrder(models.Model):
 
         data_attach = {
             'name': namepdf,
-            'datas': base64.encodestring(pdf or ''),
+            'datas': base64.b64encode(pdf or b''),
             'datas_fname': namepdf,
             'res_model': 'sale.order',
             'res_id': self.id,
